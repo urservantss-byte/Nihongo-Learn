@@ -883,11 +883,11 @@ const app = createApp({
 `,
 });
 
-// ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) - BISECT4: test ternary bersarang =====
+// ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) - BISECT5: test svg+v-for =====
 app.component('StrokeOrder', {
   props: ['ch'],
-  data: () => ({ paths: [], idx: 0, playing: false, timer: null, error: false, loading: true }),
-  template: '<div class="stroke-wrap"><button class="btn sm">{{ playing ? \'Jeda\' : (idx>0 ? \'Lanjut\' : \'Putar\') }}</button></div>'
+  data: () => ({ paths: ['M10 10 L90 90', 'M90 10 L10 90'], idx: 1, playing: false, timer: null, error: false, loading: false }),
+  template: '<div class="stroke-wrap"><svg viewBox="0 0 109 109" class="stroke-svg"><path v-for="(d,i) in paths" :key="i" :d="d" :class="{done: i < idx}" pathLength="1" fill="none" /></svg><p>Goresan {{ Math.min(idx, paths.length) }} / {{ paths.length }}</p></div>'
 });
 
 // ===== Isi pelajaran: pola Jelas -> Contoh -> Review (Bunpo/LingoDeer) =====
