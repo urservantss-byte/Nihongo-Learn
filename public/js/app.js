@@ -790,5 +790,7 @@ app.config.globalProperties.toast = toast;
 app.config.globalProperties.speak = speak;
 app.config.globalProperties.illus = illus;
 app.config.globalProperties.LV_ICON = LV_ICON;
+app.config.globalProperties.ALL_LESSONS = ALL_LESSONS;
+app.config.globalProperties.LEVEL_ORDER = LEVEL_ORDER;
 app.mount('#app');
 
