@@ -883,31 +883,11 @@ const app = createApp({
 `,
 });
 
-// ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) - BISECT3: template penuh, JS minimal =====
+// ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) - BISECT4: test ternary bersarang =====
 app.component('StrokeOrder', {
   props: ['ch'],
   data: () => ({ paths: [], idx: 0, playing: false, timer: null, error: false, loading: true }),
-  methods: {
-    step() {}, play() {}, replay() {}
-  },
-  template: `
-    <div class="stroke-wrap">
-      <div v-if="loading" class="muted small center">Memuat animasi…</div>
-      <div v-else-if="error" class="muted small center">Animasi goresan belum tersedia untuk kanji ini.</div>
-      <div v-else>
-        <svg viewBox="0 0 109 109" class="stroke-svg" aria-label="Animasi urutan goresan">
-          <path v-for="(d,i) in paths" :key="i" :d="d" :class="{done: i < idx}" pathLength="1" fill="none" />
-        </svg>
-        <p class="muted small center" style="margin:6px 0">Goresan {{ Math.min(idx, paths.length) }} / {{ paths.length }}</p>
-        <div class="btn-row center">
-          <button class="mini-btn" @click="step(-1)" :disabled="idx<=0" title="Mundur">‹</button>
-          <button class="btn sm" @click="play()">{{ playing ? 'Jeda' : (idx>0 && idx<paths.length ? 'Lanjut' : 'Putar') }}</button>
-          <button class="mini-btn" @click="step(1)" :disabled="idx>=paths.length" title="Maju">›</button>
-          <button class="mini-btn" @click="replay()" title="Ulangi">↺</button>
-        </div>
-        <p class="muted small center" style="margin-top:6px">Urutan goresan: KanjiVG (CC BY-SA)</p>
-      </div>
-    </div>`
+  template: '<div class="stroke-wrap"><button class="btn sm">{{ playing ? \'Jeda\' : (idx>0 ? \'Lanjut\' : \'Putar\') }}</button></div>'
 });
 
 // ===== Isi pelajaran: pola Jelas -> Contoh -> Review (Bunpo/LingoDeer) =====
