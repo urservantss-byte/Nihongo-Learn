@@ -38,9 +38,9 @@ body { font-family: var(--font-d); background: var(--bg); color: var(--ink); min
 .nav button .ic { font-size: 19px; }
 .nav button.on { color: var(--pri); background: color-mix(in srgb, var(--pri) 10%, transparent); font-weight: 700; }
 
-/* ===== Desktop: sidebar kiri ala Duolingo + konten lebar ===== */
+/* ===== Desktop & HP mode desktop: sidebar kiri ala Duolingo + konten lebar ===== */
 .nav-logo { display: none; }
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   #app { max-width: 1180px; padding: 0 40px 60px 304px; }
   .hdr { padding: 16px 2px; }
   .nav {
