@@ -342,7 +342,7 @@ const app = createApp({
         <div v-if="secQs[qIdx].passage" class="passage">{{ secQs[qIdx].q.split('質問')[0] }}</div>
         <h3 style="margin:12px 0">{{ secQs[qIdx].passage ? '質問：' + secQs[qIdx].q.split('質問：')[1] : secQs[qIdx].q }}</h3>
         <button v-if="secQs[qIdx].audio" class="btn ghost" @click="playAudio(secQs[qIdx].audio)">🔊 Putar audio</button>
-        <button v-for="(o,i) in secQs[qIdx].opts" :key="i" class="opt"
+        <button v-for="(o,i) in secQs[qIdx].o" :key="i" class="opt"
           :class="{pick: qAns[qAns.length-1]?.q===secQs[qIdx] && qAns[qAns.length-1].pick===i, right: qAns[qAns.length-1]?.q===secQs[qIdx] && i===secQs[qIdx].a, wrong: qAns[qAns.length-1]?.q===secQs[qIdx] && qAns[qAns.length-1].pick===i && i!==secQs[qIdx].a}"
           @click="answer(i)">{{ ['A','B','C','D'][i] }}. {{ o }}</button>
       </div>
