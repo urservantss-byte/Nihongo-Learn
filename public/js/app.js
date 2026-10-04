@@ -710,8 +710,8 @@ const app = createApp({
 app.component('LessonView', {
   props: ['les', 'done'],
   emits: ['done', 'savecard'],
-  data: () => ({ reviewIdx: 0, reviewAns: [], reviewDone: false, reviewQCache: null }),
-  watch: { les() { this.reviewIdx = 0; this.reviewAns = []; this.reviewDone = false; this.reviewQCache = null; } },
+  data: () => ({ reviewIdx: 0, reviewAns: [], reviewDone: false, reviewQCache: null, reviewLock: false }),
+  watch: { les() { this.reviewIdx = 0; this.reviewAns = []; this.reviewDone = false; this.reviewQCache = null; this.reviewLock = false; } },
   methods: {
     kana() {
       const base = this.les.kanaType === 'hiragana' ? KANA.hiragana : KANA.katakana;
@@ -734,11 +734,15 @@ app.component('LessonView', {
       return this.reviewQCache;
     },
     reviewPick(o, i) {
+      if (this.reviewLock) return;
+      this.reviewLock = true;
       this.reviewAns.push({ ok: o.ok, pick: i });
+      toast(o.ok ? 'Benar! ✓' : 'Kurang tepat ✗');
       setTimeout(() => {
+        this.reviewLock = false;
         if (this.reviewIdx + 1 < this.reviewQs().length) this.reviewIdx++;
         else this.reviewDone = true;
-      }, 600);
+      }, 1000);
     },
     speak, toast,
   },
@@ -781,9 +785,9 @@ app.component('LessonView', {
         <p class="muted small">Pilih contoh yang TEPAT untuk tiap pola:</p>
         <div v-if="!reviewDone && reviewQs()[reviewIdx]">
           <p><b>{{ reviewQs()[reviewIdx].t }}</b></p>
-          <button v-for="(o,i) in reviewQs()[reviewIdx].opts" :key="i" class="opt"
-            :class="{right: reviewAns[reviewIdx] && o.ok, wrong: reviewAns[reviewIdx] && !o.ok && reviewAns[reviewIdx].pick===i}"
-            @click="!reviewAns[reviewIdx] && reviewPick(o, i)">{{ o.j }}<br><span class="muted small">{{ o.i }}</span></button>
+          <button v-for="(o,i) in reviewQs()[reviewIdx].opts" :key="'r'+reviewIdx+'-'+i" class="opt"
+            :class="{right: reviewLock && o.ok, wrong: reviewLock && !o.ok && reviewAns[reviewIdx] && reviewAns[reviewIdx].pick===i}"
+            @click="reviewPick(o, i)">{{ o.j }}<br><span class="muted small">{{ o.i }}</span></button>
         </div>
         <div v-else-if="reviewDone" class="pop">
           <b>Review: {{ reviewAns.filter(a=>a.ok).length }}/{{ reviewAns.length }} benar {{ reviewAns.filter(a=>a.ok).length===reviewAns.length ? '🎉' : '💪' }}</b>
