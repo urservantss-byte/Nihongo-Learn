@@ -227,17 +227,6 @@ app.get('/api/kanji/search', (req, res) => {
   res.json({ results: rows.map(k => ({ ...k, onyomi: JSON.parse(k.onyomi || '[]'), kunyomi: JSON.parse(k.kunyomi || '[]') })) });
 });
 
-app.get('/api/kanji/:ch', (req, res) => {
-  if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
-  const k = kdb.prepare('SELECT * FROM kanji WHERE ch = ?').get(req.params.ch);
-  if (!k) return res.status(404).json({ error: 'Tidak ketemu' });
-  k.onyomi = JSON.parse(k.onyomi || '[]'); k.kunyomi = JSON.parse(k.kunyomi || '[]');
-  const ch = String(req.params.ch).slice(0, 1);
-  const words = kdb.prepare('SELECT id, keb, reb, gloss FROM words WHERE keb LIKE ? LIMIT 12').all(`%${ch}%`)
-    .map(w => ({ id: w.id, keb: JSON.parse(w.keb || '[]'), reb: JSON.parse(w.reb || '[]'), gloss: w.gloss }));
-  res.json({ kanji: k, words });
-});
-
 // ---- XP / koin (pola Duolingo) ----
 function awardXP(uid, amount, reason) {
   if (!amount) return;
@@ -291,7 +280,89 @@ app.delete('/api/srs/:id', auth, (req, res) => {
   res.json({ ok: true });
 });
 
-// ---- Statistik per soal (pola Renshuu: review adaptif) ----
+// ---- Quiz acak: soal baru tiap main (dibuat dari materi, yang sudah dikerjakan disingkirkan dulu) ----
+let LESSONS_SRV = null;
+try {
+  const src = require('fs').readFileSync(path.join(__dirname, 'public', 'js', 'data-lessons.js'), 'utf8');
+  LESSONS_SRV = new Function(src + '\nreturn LESSONS;')();
+  console.log('[quiz] pool materi dimuat');
+} catch (e) { console.log('[quiz] pool gagal:', e.message); }
+
+function shuf(a) {
+  const x = a.slice();
+  for (let i = x.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[x[i], x[j]] = [x[j], x[i]]; }
+  return x;
+}
+function firstReading(k) {
+  const r = ((k.on || '').split(/[・、]/)[0] || (k.kun || '').split(/[・、]/)[0] || '').trim();
+  return r;
+}
+// bangun satu kandidat soal dari materi (dipakai /gen dan /regen)
+function buildCandidate(level, type, i) {
+  const L = (LESSONS_SRV || {})[level] || {};
+  const kotoba = L.kotoba || [], kanji = L.kanji || [];
+  const KJ = (w) => (w.kj && w.kj !== w.jp) ? w.kj : w.jp;
+  if (type === 'kr' && kotoba[i]) { const w = kotoba[i]; return { qid: `gen:${level}:kr:${i}`, s: 'goi', q: `「${KJ(w)}」の読み方は？`, correct: w.r, pool: kotoba.map(x => x.r) }; }
+  if (type === 'km' && kotoba[i]) { const w = kotoba[i]; return { qid: `gen:${level}:km:${i}`, s: 'goi', q: `「${w.jp}」の意味は？`, correct: w.id, pool: kotoba.map(x => x.id) }; }
+  if (type === 'kk' && kotoba[i]) { const w = kotoba[i]; return { qid: `gen:${level}:kk:${i}`, s: 'goi', q: `「${w.r}」の正しい漢字は？`, correct: KJ(w), pool: kotoba.map(KJ) }; }
+  if (type === 'jm' && kanji[i]) { const k = kanji[i]; return { qid: `gen:${level}:jm:${i}`, s: 'goi', q: `「${k.kj}」の意味は？`, correct: k.id, pool: kanji.map(x => x.id) }; }
+  if (type === 'jr' && kanji[i]) { const k = kanji[i]; const rd = firstReading(k); if (!rd) return null; return { qid: `gen:${level}:jr:${i}`, s: 'goi', q: `「${k.kj}」の読み方は？`, correct: rd, pool: kanji.map(x => firstReading(x)).filter(Boolean) }; }
+  return null;
+}
+function finalizeCandidate(c) {
+  const distract = shuf([...new Set(c.pool.filter(p => p && p !== c.correct))]).slice(0, 3);
+  const opts = shuf([c.correct, ...distract]);
+  return { qid: c.qid, s: c.s, q: c.q, o: opts, a: opts.indexOf(c.correct) };
+}
+app.get('/api/quiz/gen', auth, (req, res) => {
+  if (!LESSONS_SRV) return res.status(503).json({ error: 'Bank soal belum siap' });
+  const level = ['n5', 'n4', 'n3', 'n2', 'n1'].includes(req.query.level) ? req.query.level : 'n5';
+  const count = Math.min(Math.max(parseInt(req.query.count) || 20, 5), 40);
+  const L = LESSONS_SRV[level] || {};
+  const seen = new Set(db.prepare('SELECT qid FROM quiz_item_stats WHERE user_id = ? AND asked > 0').all(req.user.id).map(r => r.qid));
+  const cand = [];
+  const kotoba = L.kotoba || [], kanji = L.kanji || [];
+  kotoba.forEach((w, i) => { for (const t of ['kr', 'km', 'kk']) { const c = buildCandidate(level, t, i); if (c) cand.push(c); } });
+  kanji.forEach((k, i) => { for (const t of ['jm', 'jr']) { const c = buildCandidate(level, t, i); if (c) cand.push(c); } });
+  const fresh = shuf(cand.filter(c => !seen.has(c.qid) && c.correct));
+  const used = shuf(cand.filter(c => seen.has(c.qid) && c.correct));
+  const picked = fresh.concat(used).slice(0, count);
+  res.json({ questions: picked.map(finalizeCandidate), fresh: fresh.length });
+});
+// buat ulang satu soal generated dari qid-nya (untuk Review Cerdas)
+app.get('/api/quiz/regen', auth, (req, res) => {
+  const m = String(req.query.qid || '').match(/^gen:(n5|n4|n3|n2|n1):(kr|km|kk|jm|jr):(\d+)$/);
+  if (!m || !LESSONS_SRV) return res.status(400).json({ error: 'qid tidak valid' });
+  const c = buildCandidate(m[1], m[2], parseInt(m[3]));
+  if (!c) return res.status(404).json({ error: 'Soal tidak ketemu' });
+  res.json({ question: finalizeCandidate(c), level: m[1] });
+});
+app.get('/api/quiz/seen', auth, (req, res) => {
+  const level = String(req.query.level || 'n5');
+  const rows = db.prepare('SELECT qid FROM quiz_item_stats WHERE user_id = ? AND asked > 0 AND qid LIKE ?').all(req.user.id, `${level}:%`);
+  res.json({ seen: rows.map(r => r.qid) });
+});
+
+// ---- Kanji per level JLPT (dari KANJIDIC2; skala lama 4=N5 … 1=N1) ----
+app.get('/api/kanji/by-jlpt', (req, res) => {
+  if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
+  const map = { 5: 4, 4: 3, 3: 2, 2: 2, 1: 1 };
+  const n = parseInt(req.query.n);
+  if (!map[n]) return res.status(400).json({ error: 'n harus 1-5' });
+  const rows = kdb.prepare('SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes FROM kanji WHERE jlpt = ? ORDER BY freq LIMIT 400').all(map[n]);
+  res.json({ results: rows.map(k => ({ ...k, onyomi: JSON.parse(k.onyomi || '[]'), kunyomi: JSON.parse(k.kunyomi || '[]') })) });
+});
+
+app.get('/api/kanji/:ch', (req, res) => {
+  if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
+  const k = kdb.prepare('SELECT * FROM kanji WHERE ch = ?').get(req.params.ch);
+  if (!k) return res.status(404).json({ error: 'Tidak ketemu' });
+  k.onyomi = JSON.parse(k.onyomi || '[]'); k.kunyomi = JSON.parse(k.kunyomi || '[]');
+  const ch = String(req.params.ch).slice(0, 1);
+  const words = kdb.prepare('SELECT id, keb, reb, gloss FROM words WHERE keb LIKE ? LIMIT 12').all(`%${ch}%`)
+    .map(w => ({ id: w.id, keb: JSON.parse(w.keb || '[]'), reb: JSON.parse(w.reb || '[]'), gloss: w.gloss }));
+  res.json({ kanji: k, words });
+});
 app.post('/api/quiz/items', auth, (req, res) => {
   const { items } = req.body || {};
   if (!Array.isArray(items)) return res.status(400).json({ error: 'items harus array' });
