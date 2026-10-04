@@ -359,7 +359,9 @@ app.get('/api/kanji/:ch', (req, res) => {
   if (!k) return res.status(404).json({ error: 'Tidak ketemu' });
   k.onyomi = JSON.parse(k.onyomi || '[]'); k.kunyomi = JSON.parse(k.kunyomi || '[]');
   const ch = String(req.params.ch).slice(0, 1);
-  const words = kdb.prepare('SELECT id, keb, reb, gloss FROM words WHERE keb LIKE ? LIMIT 12').all(`%${ch}%`)
+  // contoh kata: prioritaskan yang diawali kanji ini, yang pendek dulu (lebih umum)
+  const words = kdb.prepare(`SELECT id, keb, reb, gloss FROM words WHERE keb LIKE ?
+    ORDER BY CASE WHEN keb LIKE '["' || ? || '%' THEN 0 ELSE 1 END, LENGTH(keb) LIMIT 12`).all(`%${ch}%`, ch)
     .map(w => ({ id: w.id, keb: JSON.parse(w.keb || '[]'), reb: JSON.parse(w.reb || '[]'), gloss: w.gloss }));
   res.json({ kanji: k, words });
 });

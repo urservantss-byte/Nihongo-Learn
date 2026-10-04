@@ -906,7 +906,7 @@ app.component('LessonView', {
       <div class="card tip"><span v-html="ic('sparkles',15)"></span> <b>Tips:</b> Tulis berulang di kertas. Bunyi ぢ/づ dan じ/ず sama — ikuti konteks!</div>
     </div>
     <div v-if="les.type==='kotoba'">
-      <p class="muted small">Klik 🔊 untuk dengar, 🃏 untuk simpan ke flashcard.</p>
+      <p class="muted small">Klik <span v-html="ic('volume',13)"></span> untuk dengar, <span v-html="ic('plus',13)"></span> untuk simpan ke flashcard.</p>
       <div v-for="w in (LESSONS[les.level].kotoba||[])" :key="w.jp" class="lvl">
         <div class="lvl-body" @click="speak(w.jp)"><b class="big">{{ w.jp }}</b> <span class="muted small">{{ w.kj }}</span><div class="muted small">{{ w.r }} — {{ w.id }}</div></div>
         <button class="mini-btn" @click="speak(w.jp)"><span v-html="ic('volume')"></span></button>
