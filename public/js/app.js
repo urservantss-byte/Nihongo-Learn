@@ -160,7 +160,7 @@ const app = createApp({
     gTab: 'match', mCards: [], mOpen: [], mHits: 0, mMoves: 0,
     sprintQ: null, sprintScore: 0, sprintTime: 60, sprintTimer: null, sprintOn: false, sprintStreak: 0,
     // kamus
-    kamusQ: '', kamusTab: 'kotoba', kamusJlpt: 0, kamusResults: [], kamusLoading: false, kamusDetail: null, kamusTimer: null, kamusId: '', translating: false,
+    kamusQ: '', kamusTab: 'kotoba', kamusJlpt: 0, kamusResults: [], kamusLoading: false, kamusDetail: null, kamusTimer: null, kamusId: '', kamusKanjiId: '', translating: false,
     // srs
     srsDue: [], srsTotal: 0, srsIdx: 0, srsShow: false, srsTyped: '', srsDone: 0,
     // saya
@@ -481,9 +481,20 @@ const app = createApp({
       catch (e) { toast(e.message); }
     },
     async openKanji(ch) {
-      try { const d = await api(`/api/kanji/${encodeURIComponent(ch)}`); this.kamusDetail = { type: 'kanji', ...d.kanji, words: d.words }; }
+      try {
+        const d = await api(`/api/kanji/${encodeURIComponent(ch)}`);
+        this.kamusDetail = { type: 'kanji', ...d.kanji, words: d.words };
+        this.kamusKanjiId = ''; this.translating = true;
+        try {
+          const t = await api(`/api/kanji/${encodeURIComponent(ch)}/translate`);
+          if (this.kamusDetail && this.kamusDetail.type === 'kanji' && this.kamusDetail.ch === ch && t.meaning_id) this.kamusKanjiId = t.meaning_id;
+        } catch {}
+        this.translating = false;
+      }
       catch (e) { toast(e.message); }
     },
+    splitKanji(s) { return [...(s || '')].map(c => ({ c, k: /[\u4e00-\u9faf\u3400-\u4dbf]/.test(c) })); },
+    openKanjiChar(e, c) { e.stopPropagation(); this.openKanji(c); },
     async saveCard(kind, front, back, reading) {
       try {
         await api('/api/srs', { method: 'POST', body: JSON.stringify({ kind, front, back, reading }) });
@@ -784,15 +795,21 @@ const app = createApp({
         <div v-if="kamusDetail.type==='kanji'">
           <div class="kanji-big">{{ kamusDetail.ch }}</div>
           <p class="center"><span class="chip" v-if="kamusDetail.jlpt">{{ jlptLabel(kamusDetail.jlpt) }}</span> <span class="chip">{{ kamusDetail.strokes }} goresan</span></p>
-          <div class="passage">{{ kamusDetail.meaning }}</div>
+          <div class="step-tag"><span v-html="ic('book',12)"></span> Arti Bahasa Indonesia</div>
+          <div class="passage" v-if="kamusKanjiId">{{ kamusKanjiId }}</div>
+          <div class="passage muted" v-else-if="translating">Menerjemahkan…</div>
+          <div class="passage muted" v-else>Belum tersedia. <button class="mini-btn" @click="openKanji(kamusDetail.ch)">Coba lagi</button></div>
+          <div class="step-tag" style="margin-top:8px"><span v-html="ic('book',12)"></span> Arti Bahasa Inggris</div>
+          <div class="passage muted small">{{ kamusDetail.meaning }}</div>
           <p><b>On:</b> {{ (kamusDetail.onyomi||[]).join('、') || '—' }}</p>
           <p><b>Kun:</b> {{ (kamusDetail.kunyomi||[]).join('、') || '—' }}</p>
           <div class="step-tag"><span v-html="ic('pen',12)"></span> Cara Menulis · {{ kamusDetail.strokes }} goresan</div>
           <stroke-order :ch="kamusDetail.ch" :key="kamusDetail.ch"></stroke-order>
           <div class="btn-row"><button class="btn ghost sm" @click="saveCard('kanji', kamusDetail.ch, kamusDetail.meaning.slice(0,120), (kamusDetail.onyomi[0]||kamusDetail.kunyomi[0]||''))"><span v-html="ic('plus',15)"></span> Flashcard</button></div>
           <h3>Contoh kata</h3>
+          <p class="muted small">Ketuk karakter kanji untuk melihat cara menulisnya.</p>
           <div v-for="w in kamusDetail.words" :key="w.id" class="lvl" @click="openWord(w.id)">
-            <div class="lvl-body"><b>{{ w.keb[0]||w.reb[0] }}</b> <span class="muted small">{{ w.reb[0] }}</span><div class="muted small">{{ w.gloss.slice(0,80) }}</div></div>
+            <div class="lvl-body"><b><span v-for="(kc,ki) in splitKanji(w.keb[0]||w.reb[0])" :key="ki" :class="{'kj-link': kc.k}" @click="kc.k ? openKanjiChar($event, kc.c) : null">{{ kc.c }}</span></b> <span class="muted small">{{ w.reb[0] }}</span><div class="muted small">{{ w.gloss.slice(0,80) }}</div></div>
           </div>
         </div>
       </div>

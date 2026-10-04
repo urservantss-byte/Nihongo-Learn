@@ -202,3 +202,4 @@ h2.ttl + .muted, h2.ttl + p { margin-bottom: 8px; }
 .petal { position: fixed; top: -20px; z-index: 1; pointer-events: none; animation: petal linear infinite; }
 [data-theme="zen"] .petal { display: none; }
 .toast { position: fixed; top: 14px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 11px 18px; border-radius: 999px; z-index: 99; font-size: 13.5px; animation: pop .25s; max-width: 90vw; }
+.kj-link { color: var(--pri-d); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }

@@ -216,6 +216,8 @@ app.get('/api/dict/word/:id', (req, res) => {
 
 // ---- Terjemahan kamus EN -> ID (on-demand + cache di DB) ----
 db.exec(`CREATE TABLE IF NOT EXISTS translations (word_id INTEGER PRIMARY KEY, gloss_id TEXT, updated_at TEXT DEFAULT (datetime('now')))`);
+// terjemahan arti kanji EN -> ID (on-demand + cache di DB)
+db.exec(`CREATE TABLE IF NOT EXISTS kanji_translations (ch TEXT PRIMARY KEY, meaning_id TEXT, updated_at TEXT DEFAULT (datetime('now')))`);
 // seed terjemahan awal (dibangun offline dari kata populer)
 try {
   const seedPath = path.join(__dirname, 'data', 'translations-seed.json');
@@ -271,6 +273,21 @@ app.get('/api/dict/translate/:id', async (req, res) => {
     if (!t) return res.json({ gloss_id: null, error: 'Terjemahan gagal, coba lagi nanti' });
     db.prepare('INSERT OR REPLACE INTO translations (word_id, gloss_id) VALUES (?, ?)').run(id, t);
     res.json({ gloss_id: t, cached: false });
+  } catch (e) { res.status(500).json({ error: 'Gagal menerjemahkan' }); }
+});
+app.get('/api/kanji/:ch/translate', async (req, res) => {
+  if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
+  const ch = String(req.params.ch).slice(0, 1);
+  if (!ch) return res.status(400).json({ error: 'Kanji tidak valid' });
+  try {
+    const cached = db.prepare('SELECT meaning_id FROM kanji_translations WHERE ch = ?').get(ch);
+    if (cached && cached.meaning_id) return res.json({ meaning_id: cached.meaning_id, cached: true });
+    const k = kdb.prepare('SELECT meaning FROM kanji WHERE ch = ?').get(ch);
+    if (!k) return res.status(404).json({ error: 'Tidak ketemu' });
+    const t = await translateGlossEN2ID(k.meaning);
+    if (!t) return res.json({ meaning_id: null, error: 'Terjemahan gagal, coba lagi nanti' });
+    db.prepare('INSERT OR REPLACE INTO kanji_translations (ch, meaning_id) VALUES (?, ?)').run(ch, t);
+    res.json({ meaning_id: t, cached: false });
   } catch (e) { res.status(500).json({ error: 'Gagal menerjemahkan' }); }
 });
 
