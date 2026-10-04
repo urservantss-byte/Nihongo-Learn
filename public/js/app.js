@@ -789,7 +789,7 @@ const app = createApp({
           <p><b>On:</b> {{ (kamusDetail.onyomi||[]).join('、') || '—' }}</p>
           <p><b>Kun:</b> {{ (kamusDetail.kunyomi||[]).join('、') || '—' }}</p>
           <div class="step-tag"><span v-html="ic('pen',12)"></span> Cara Menulis · {{ kamusDetail.strokes }} goresan</div>
-          <stroke-order :ch="kamusDetail.ch" :key="kamusDetail.ch"></stroke-order>
+          <!-- stroke-order sementara dinonaktifkan untuk diagnosa bug -->
           <div class="btn-row"><button class="btn ghost sm" @click="saveCard('kanji', kamusDetail.ch, kamusDetail.meaning.slice(0,120), (kamusDetail.onyomi[0]||kamusDetail.kunyomi[0]||''))"><span v-html="ic('plus',15)"></span> Flashcard</button></div>
           <h3>Contoh kata</h3>
           <div v-for="w in kamusDetail.words" :key="w.id" class="lvl" @click="openWord(w.id)">
