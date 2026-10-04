@@ -468,4 +468,5 @@ app.config.globalProperties.LEVELS = LEVELS;
 app.config.globalProperties.LESSONS = LESSONS;
 app.config.globalProperties.toast = toast;
 app.config.globalProperties.speak = speak;
+app.config.globalProperties.illus = illus;
 app.mount('#app');
