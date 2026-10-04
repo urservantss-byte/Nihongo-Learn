@@ -148,6 +148,7 @@ const LIB_TYPES = [
 ];
 
 const app = createApp({
+  errorCaptured(err) { try { toast('ERR: ' + (err && err.message || err)); } catch {} console.error(err); return false; },
   data: () => ({
     mode: 'login', fName: '', fEmail: '', fPass: '', fLevel: 'hiragana', fIntensity: 'sedang',
     tab: 'home',
