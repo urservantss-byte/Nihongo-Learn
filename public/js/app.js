@@ -1059,5 +1059,6 @@ app.config.globalProperties.LIB_TYPES = LIB_TYPES;
 app.config.globalProperties.TYPE_ICON = TYPE_ICON;
 app.config.globalProperties.ALL_LESSONS = ALL_LESSONS;
 app.config.globalProperties.LEVEL_ORDER = LEVEL_ORDER;
+app.config.errorHandler = (err) => { try { toast('ERR2: ' + (err && err.message || err)); } catch {} console.error(err); };
 app.mount('#app');
 
