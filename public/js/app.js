@@ -883,12 +883,12 @@ const app = createApp({
 `,
 });
 
-// ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) - BISECT6: test tombol + ternary && =====
+// ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) - FIX: spasi di sekitar < =====
 app.component('StrokeOrder', {
   props: ['ch'],
   data: () => ({ paths: ['a','b','c'], idx: 1, playing: false, timer: null, error: false, loading: false }),
   methods: { step() {}, play() {}, replay() {} },
-  template: `<div class="stroke-wrap"><div class="btn-row center"><button class="mini-btn" @click="step(-1)" :disabled="idx<=0" title="Mundur">‹</button><button class="btn sm" @click="play()">{{ playing ? 'Jeda' : (idx>0 && idx<paths.length ? 'Lanjut' : 'Putar') }}</button><button class="mini-btn" @click="step(1)" :disabled="idx>=paths.length" title="Maju">›</button><button class="mini-btn" @click="replay()" title="Ulangi">↺</button></div></div>`
+  template: `<div class="stroke-wrap"><div class="btn-row center"><button class="mini-btn" @click="step(-1)" :disabled="idx<=0" title="Mundur">‹</button><button class="btn sm" @click="play()">{{ playing ? 'Jeda' : (idx > 0 && idx < paths.length ? 'Lanjut' : 'Putar') }}</button><button class="mini-btn" @click="step(1)" :disabled="idx>=paths.length" title="Maju">›</button><button class="mini-btn" @click="replay()" title="Ulangi">↺</button></div></div>`
 });
 
 // ===== Isi pelajaran: pola Jelas -> Contoh -> Review (Bunpo/LingoDeer) =====
