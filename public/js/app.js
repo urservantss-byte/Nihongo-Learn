@@ -495,6 +495,32 @@ const app = createApp({
     },
     splitKanji(s) { return [...(s || '')].map(c => ({ c, k: /[\u4e00-\u9faf\u3400-\u4dbf]/.test(c) })); },
     openKanjiChar(e, c) { e.stopPropagation(); this.openKanji(c); },
+    posLabel(pos) {
+      const M = { 'n': 'kata benda', 'n-pref': 'kata benda (awalan)', 'n-suf': 'kata benda (akhiran)', 'exp': 'ungkapan',
+        'adj-na': 'kata sifat-na', 'adj-no': 'kata sifat-no', 'adj-i': 'kata sifat-i', 'adj-f': 'kata sifat',
+        'adj-t': 'kata sifat-taru', 'adj-ix': 'kata sifat-i', 'adj-ku': 'kata sifat-ku', 'adj-nari': 'kata sifat-nari',
+        'adj-pn': 'kata sifat', 'adj-shiku': 'kata sifat-shiku', 'adv': 'kata keterangan', 'adv-to': 'kata keterangan',
+        'v1': 'kata kerja ichidan', 'v1-s': 'kata kerja ichidan', 'vz': 'kata kerja ichidan',
+        'v5aru': 'kata kerja godan', 'v5b': 'kata kerja godan', 'v5g': 'kata kerja godan', 'v5k': 'kata kerja godan',
+        'v5k-s': 'kata kerja godan', 'v5m': 'kata kerja godan', 'v5n': 'kata kerja godan', 'v5r': 'kata kerja godan',
+        'v5r-i': 'kata kerja godan', 'v5s': 'kata kerja godan', 'v5t': 'kata kerja godan', 'v5u': 'kata kerja godan', 'v5u-s': 'kata kerja godan',
+        'v4b': 'kata kerja lampau', 'v4g': 'kata kerja lampau', 'v4h': 'kata kerja lampau', 'v4k': 'kata kerja lampau',
+        'v4m': 'kata kerja lampau', 'v4r': 'kata kerja lampau', 'v4s': 'kata kerja lampau', 'v4t': 'kata kerja lampau',
+        'vs': 'kata kerja suru', 'vs-c': 'kata kerja suru', 'vs-i': 'kata kerja suru', 'vs-s': 'kata kerja suru',
+        'vk': 'kata kerja kuru', 'vn': 'kata kerja', 'vr': 'kata kerja', 'v-unspec': 'kata kerja',
+        'vi': 'intransitif', 'vt': 'transitif', 'aux': 'kata bantu', 'aux-v': 'kata kerja bantu', 'aux-adj': 'kata sifat bantu',
+        'cop': 'kopula', 'prt': 'partikel', 'conj': 'kata sambung', 'pref': 'awalan', 'suf': 'akhiran',
+        'ctr': 'kata bantu bilangan', 'num': 'angka', 'pn': 'kata ganti' };
+      ['v2a-s','v2b-k','v2d-s','v2g-k','v2g-s','v2h-k','v2h-s','v2k-k','v2k-s','v2m-s','v2n-s','v2r-k','v2r-s','v2s-s','v2t-k','v2t-s','v2w-s','v2y-k','v2y-s','v2z-s'].forEach(t => M[t] = 'kata kerja nidan');
+      if (!pos) return '';
+      const out = [];
+      String(pos).split(',').forEach(t => {
+        const k = t.trim();
+        const label = M[k] || k;
+        if (label && !out.includes(label)) out.push(label);
+      });
+      return out.join(' · ');
+    },
     async saveCard(kind, front, back, reading) {
       try {
         await api('/api/srs', { method: 'POST', body: JSON.stringify({ kind, front, back, reading }) });
@@ -786,7 +812,7 @@ const app = createApp({
           <div class="passage muted" v-else>Tidak tersedia. <button class="mini-btn" @click="openWord(kamusDetail.id)">Coba lagi</button></div>
           <div class="step-tag" style="margin-top:8px"><span v-html="ic('book',12)"></span> Arti Bahasa Inggris</div>
           <div class="passage muted small">{{ kamusDetail.gloss }}</div>
-          <p class="muted small">{{ kamusDetail.pos }}</p>
+          <p class="muted small" v-if="kamusDetail.pos">{{ posLabel(kamusDetail.pos) }}</p>
           <div class="btn-row">
             <button class="btn sm" @click="speak(kamusDetail.reb[0])"><span v-html="ic('volume',15)"></span> Dengarkan</button>
             <button class="btn ghost sm" @click="saveCard('word', kamusDetail.keb[0]||kamusDetail.reb[0], kamusDetail.gloss.slice(0,120), kamusDetail.reb[0])"><span v-html="ic('plus',15)"></span> Flashcard</button>
