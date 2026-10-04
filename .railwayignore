@@ -1,4 +1,5 @@
 node_modules
-*.db*
+nihongo.db*
 *.log
 .env
+data/*.gz

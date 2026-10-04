@@ -76,7 +76,9 @@ const app = createApp({
     qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0,
     // games
     gTab: 'match', mCards: [], mOpen: [], mHits: 0, mMoves: 0,
-    sprintQ: null, sprintScore: 0, sprintTime: 60, sprintTimer: null, sprintOn: false,
+    sprintQ: null, sprintScore: 0, sprintTime: 60, sprintTimer: null, sprintOn: false, sprintStreak: 0,
+    // kamus
+    kamusQ: '', kamusTab: 'kotoba', kamusResults: [], kamusLoading: false, kamusDetail: null, kamusTimer: null,
   }),
   computed: {
     user() { return store.user; },
@@ -217,7 +219,7 @@ const app = createApp({
       }
     },
     startSprint() {
-      this.sprintScore = 0; this.sprintTime = 60; this.sprintOn = true;
+      this.sprintScore = 0; this.sprintStreak = 0; this.sprintTime = 60; this.sprintOn = true;
       this.nextSprint();
       clearInterval(this.sprintTimer);
       this.sprintTimer = setInterval(() => { this.sprintTime--; if (this.sprintTime <= 0) { clearInterval(this.sprintTimer); this.sprintOn = false; toast(`Waktu habis! Skor: ${this.sprintScore} 🎯`); api('/api/game/score', { method: 'POST', body: JSON.stringify({ game: 'sprint', score: this.sprintScore }) }).catch(() => {}); } }, 1000);
@@ -231,8 +233,29 @@ const app = createApp({
     },
     sprintPick(o) {
       if (!this.sprintOn) return;
-      if (o === this.sprintQ.ans) { this.sprintScore += 10; speak(this.sprintQ.k); } else this.sprintScore = Math.max(0, this.sprintScore - 5);
+      if (o === this.sprintQ.ans) { this.sprintScore += 10; this.sprintStreak++; speak(this.sprintQ.k); }
+      else { this.sprintScore = Math.max(0, this.sprintScore - 5); this.sprintStreak = 0; }
       this.nextSprint();
+    },
+    // ---- kamus ----
+    kamusType() { clearTimeout(this.kamusTimer); this.kamusTimer = setTimeout(() => this.searchKamus(), 400); },
+    async searchKamus() {
+      const q = this.kamusQ.trim();
+      if (q.length < 1) { this.kamusResults = []; return; }
+      this.kamusLoading = true;
+      try {
+        const d = await api(`/api/${this.kamusTab === 'kotoba' ? 'dict' : 'kanji'}/search?q=${encodeURIComponent(q)}&limit=20`);
+        this.kamusResults = d.results || [];
+      } catch { this.kamusResults = []; }
+      this.kamusLoading = false;
+    },
+    async openWord(id) {
+      try { const d = await api(`/api/dict/word/${id}`); this.kamusDetail = { type: 'word', ...d.word }; }
+      catch (e) { toast(e.message); }
+    },
+    async openKanji(ch) {
+      try { const d = await api(`/api/kanji/${encodeURIComponent(ch)}`); this.kamusDetail = { type: 'kanji', ...d.kanji, words: d.words }; }
+      catch (e) { toast(e.message); }
     },
   },
   mounted() {
@@ -284,14 +307,23 @@ const app = createApp({
             <div class="card" style="margin:0;text-align:center"><div style="font-size:28px;font-weight:800">{{ store.stats?.quiz_avg || 0 }}%</div><div class="muted">Rata-rata quiz</div></div>
           </div>
         </div>
-        <h2 class="ttl">🗓️ Materi hari ini</h2>
-        <div v-if="!dailyLessons.length" class="card">🎉 Semua materi tuntas! Istirahat atau main quiz yuk.</div>
-        <div v-for="l in dailyLessons" :key="l.key" class="lvl" @click="learnLevel=l.level;openLesson=l.key;tab='learn'">
+        <h2 class="ttl">🗓️ Materi Harian</h2>
+        <p class="muted">Daftar belajar hari ini sesuai levelmu ({{ user.level.toUpperCase() }}). Selesaikan semuanya biar streak jalan terus! 🔥</p>
+        <div v-if="!dailyLessons.length" class="card">🎉 Materi harian tuntas! Istirahat atau main quiz yuk.</div>
+        <div v-for="l in dailyLessons" :key="'d-'+l.key" class="lvl" @click="learnLevel=l.level;openLesson=l.key;tab='learn'">
           <div class="badge">{{ LEVELS.find(x=>x.id===l.level).icon }}</div>
           <div style="flex:1"><b>{{ l.title }}</b><div class="muted">{{ LEVELS.find(x=>x.id===l.level).name }}</div></div>
           <div>▶️</div>
         </div>
-        <h2 class="ttl">🛤️ Jalur belajar</h2>
+        <h2 class="ttl">📚 Materi Utama</h2>
+        <p class="muted">Bebas pilih materi apa aja, tanpa urutan. Mau loncat-loncat silakan!</p>
+        <div v-for="lv in ['hiragana','katakana','n5','n4','n3','n2','n1']" :key="'m-'+lv"
+             class="lvl" @click="learnLevel=lv;openLesson=null;tab='learn'">
+          <div class="badge">{{ ({hiragana:'あ',katakana:'ア',n5:'5',n4:'4',n3:'3',n2:'2',n1:'1'})[lv] }}</div>
+          <div style="flex:1"><b>{{ lv.toUpperCase() }}</b><div class="bar"><i :style="{width: Math.round(levelProgress[lv]*100)+'%'}"></i></div></div>
+          <div>{{ Math.round(levelProgress[lv]*100) }}%</div>
+        </div>
+        <h2 class="ttl">🛤️ Jalur Level <span class="muted" style="font-weight:400">(buka level berikutnya dengan menuntaskan level sebelumnya)</span></h2>
         <div v-for="lv in ['hiragana','katakana','n5','n4','n3','n2','n1']" :key="lv"
              class="lvl" :class="{locked: levelLocked[lv]}" @click="!levelLocked[lv] && (learnLevel=lv,tab='learn')">
           <div class="badge">{{ ['hiragana','katakana','n5','n4','n3','n2','n1'].find(x=>x===lv) ? ({hiragana:'あ',katakana:'ア',n5:'5',n4:'4',n3:'3',n2:'2',n1:'1'})[lv] : '' }}</div>
@@ -364,22 +396,69 @@ const app = createApp({
         </div>
         <div v-if="gTab==='match'" class="card">
           <div v-html="illus('game')"></div>
-          <p class="muted">Cocokkan kana dengan romaji-nya! Langkah: {{ mMoves }}</p>
+          <div class="passage">🃏 <b>Cara main Kana Match:</b><br>1. Klik kartu untuk membukanya<br>2. Cocokkan <b>huruf kana</b> dengan <b>cara bacanya</b> (romaji)<br>3. Temukan semua 8 pasang dengan langkah sesedikit mungkin!</div>
+          <p><b>Pasang ketemu: {{ mHits }}/8</b> · <span class="muted">Langkah: {{ mMoves }}</span></p>
           <div class="game-board">
             <div v-for="c in mCards" :key="c.k" class="gcard" :class="{open:c.open,hit:c.hit}" @click="flip(c)">{{ c.open||c.hit ? c.t : '❓' }}</div>
           </div>
-          <button class="btn" style="margin-top:10px" @click="startMatch">🔄 Ulangi</button>
+          <button class="btn" style="margin-top:10px;width:100%" @click="startMatch">🔄 Main lagi</button>
         </div>
         <div v-if="gTab==='sprint'" class="card" style="text-align:center">
-          <p class="muted">Pilih romaji yang benar secepatnya! 60 detik.</p>
+          <div class="passage" style="text-align:left">⚡ <b>Cara main Kana Sprint:</b><br>1. Lihat huruf kana yang muncul<br>2. Pilih <b>cara baca (romaji)</b> yang benar secepat mungkin<br>3. Benar = <b>+10</b>, salah = <b>-5</b><br>4. Kumpulkan skor tertinggi dalam <b>60 detik</b>!</div>
           <button v-if="!sprintOn && sprintTime!==0" class="btn" @click="startSprint">Mulai ⚡</button>
-          <div v-if="sprintOn || sprintTime===0 && false"></div>
           <div v-if="sprintQ && sprintOn">
             <div style="font-size:64px;margin:10px">{{ sprintQ.k }}</div>
-            <div class="timer">⏱️ {{ sprintTime }}s · Skor: {{ sprintScore }}</div>
-            <button v-for="o in sprintQ.opts" :key="o" class="opt" style="text-align:center" @click="sprintPick(o)">{{ o }}</button>
+            <div class="timer">⏱️ {{ sprintTime }}s</div>
+            <div style="margin:6px 0"><b>Skor: {{ sprintScore }}</b> <span class="streak" v-if="sprintStreak>=3">🔥 x{{ sprintStreak }}</span></div>
+            <button v-for="o in sprintQ.opts" :key="o" class="opt" style="text-align:center;font-size:20px" @click="sprintPick(o)">{{ o }}</button>
           </div>
-          <div v-if="!sprintOn && sprintTime===0">Skor akhir: <b>{{ sprintScore }}</b> <button class="btn" @click="startSprint">Main lagi</button></div>
+          <div v-if="!sprintOn && sprintTime===0" class="pop"><h2>Skor akhir: {{ sprintScore }} 🎯</h2><button class="btn" @click="startSprint">Main lagi ⚡</button></div>
+        </div>
+      </div>
+
+      <!-- KAMUS -->
+      <div v-if="tab==='kamus'">
+        <h2 class="ttl">🔍 Kamus</h2>
+        <p class="muted">Cari 218rb+ kosakata & 13rb kanji. Bisa pakai kanji, kana, romaji, atau arti bahasa Inggris.</p>
+        <div class="grid2">
+          <button class="btn" :class="{ghost: kamusTab!=='kotoba'}" @click="kamusTab='kotoba';searchKamus()">📝 Kotoba</button>
+          <button class="btn" :class="{ghost: kamusTab!=='kanji'}" @click="kamusTab='kanji';searchKamus()">🈁 Kanji</button>
+        </div>
+        <input v-model="kamusQ" @input="kamusType" :placeholder="kamusTab==='kotoba' ? 'Cari kata… (cth: 食べる / taberu / to eat)' : 'Cari kanji… (cth: 食 / eat)'">
+        <div v-if="kamusLoading" class="muted">Mencari…</div>
+        <div v-if="!kamusDetail">
+          <div v-for="r in kamusResults" :key="r.id||r.ch" class="lvl" @click="kamusTab==='kotoba'?openWord(r.id):openKanji(r.ch)">
+            <div style="flex:1">
+              <b style="font-size:18px">{{ kamusTab==='kotoba' ? (r.keb[0]||r.reb[0]) : r.ch }}</b>
+              <span class="muted">{{ kamusTab==='kotoba' ? r.reb.join('、') : r.meaning }}</span>
+              <div class="muted" v-if="kamusTab==='kotoba'">{{ r.gloss.slice(0,120) }}</div>
+              <div v-if="kamusTab==='kanji'"><span class="chip" v-if="r.jlpt">N{{ r.jlpt }}</span><span class="muted">{{ r.strokes }} goresan</span></div>
+            </div>
+            <div>🔊</div>
+          </div>
+          <div v-if="kamusQ && !kamusLoading && !kamusResults.length" class="card muted">Tidak ketemu. Coba kata lain.</div>
+        </div>
+        <div v-else class="card pop">
+          <button class="btn ghost" @click="kamusDetail=null">← Hasil cari</button>
+          <div v-if="kamusDetail.type==='word'">
+            <h2>{{ kamusDetail.keb[0] || kamusDetail.reb[0] }}</h2>
+            <p class="muted">{{ kamusDetail.reb.join('、') }}</p>
+            <p v-if="kamusDetail.keb.length>1" class="muted">Kanji lain: {{ kamusDetail.keb.slice(1).join('、') }}</p>
+            <div class="passage">{{ kamusDetail.gloss }}</div>
+            <p class="muted">{{ kamusDetail.pos }}</p>
+            <button class="btn" @click="speak(kamusDetail.reb[0])">🔊 Dengarkan</button>
+          </div>
+          <div v-if="kamusDetail.type==='kanji'">
+            <div style="font-size:72px;text-align:center">{{ kamusDetail.ch }}</div>
+            <p style="text-align:center"><span class="chip" v-if="kamusDetail.jlpt">JLPT N{{ kamusDetail.jlpt }}</span> <span class="chip">{{ kamusDetail.strokes }} goresan</span></p>
+            <div class="passage">{{ kamusDetail.meaning }}</div>
+            <p><b>On:</b> {{ (kamusDetail.onyomi||[]).join('、') || '—' }}</p>
+            <p><b>Kun:</b> {{ (kamusDetail.kunyomi||[]).join('、') || '—' }}</p>
+            <h3 style="margin-top:12px">Contoh kata</h3>
+            <div v-for="w in kamusDetail.words" :key="w.id" class="lvl" @click="openWord(w.id)">
+              <div style="flex:1"><b>{{ w.keb[0]||w.reb[0] }}</b> <span class="muted">{{ w.reb[0] }}</span><div class="muted">{{ w.gloss.slice(0,80) }}</div></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -405,6 +484,7 @@ const app = createApp({
         <button :class="{on:tab==='learn'}" @click="tab='learn'"><span class="ic">📖</span>Belajar</button>
         <button :class="{on:tab==='quiz'||tab==='quizrun'}" @click="tab='quiz'"><span class="ic">⏱️</span>Quiz</button>
         <button :class="{on:tab==='games'}" @click="tab='games'"><span class="ic">🎮</span>Game</button>
+        <button :class="{on:tab==='kamus'}" @click="tab='kamus'"><span class="ic">🔍</span>Kamus</button>
         <button :class="{on:tab==='progress'}" @click="tab='progress'"><span class="ic">📊</span>Progres</button>
       </nav>
     </div>

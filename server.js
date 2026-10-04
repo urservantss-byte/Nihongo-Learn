@@ -140,7 +140,66 @@ app.get('/api/game/best', auth, (req, res) => {
   res.json({ best: rows });
 });
 
-// ---- Stats ----
+// ---- Kamus (JMdict + KANJIDIC2, read-only) ----
+let kdb = null;
+try {
+  const kpath = path.join(__dirname, 'data', 'kamus.db');
+  if (require('fs').existsSync(kpath)) { kdb = new Database(kpath, { readonly: true }); console.log('[kamus] loaded'); }
+} catch (e) { console.log('[kamus] tidak tersedia:', e.message); }
+
+function ftsQ(q) {
+  // sanitasi untuk FTS5 MATCH: ambil token aman
+  const toks = (q || '').toLowerCase().split(/[\s　]+/).filter(Boolean).slice(0, 4)
+    .map(t => t.replace(/["*:^()\-+]/g, '').slice(0, 30)).filter(t => t.length > 0);
+  if (!toks.length) return null;
+  return toks.map(t => `"${t}"*`).join(' ');
+}
+
+app.get('/api/dict/search', (req, res) => {
+  if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
+  const mq = ftsQ(req.query.q);
+  if (!mq) return res.json({ results: [] });
+  const lim = Math.min(parseInt(req.query.limit) || 20, 50);
+  try {
+    const rows = kdb.prepare(`
+      SELECT w.id, w.keb, w.reb, w.gloss, w.pos, rank
+      FROM words_fts f JOIN words w ON w.id = f.rowid
+      WHERE words_fts MATCH ? ORDER BY rank LIMIT ?`).all(mq, lim);
+    res.json({ results: rows.map(r => ({ id: r.id, keb: JSON.parse(r.keb || '[]'), reb: JSON.parse(r.reb || '[]'), gloss: r.gloss, pos: r.pos })) });
+  } catch (e) { res.json({ results: [] }); }
+});
+
+app.get('/api/dict/word/:id', (req, res) => {
+  if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
+  const w = kdb.prepare('SELECT * FROM words WHERE id = ?').get(req.params.id);
+  if (!w) return res.status(404).json({ error: 'Tidak ketemu' });
+  w.keb = JSON.parse(w.keb || '[]'); w.reb = JSON.parse(w.reb || '[]');
+  res.json({ word: w });
+});
+
+app.get('/api/kanji/search', (req, res) => {
+  if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
+  const q = (req.query.q || '').trim().slice(0, 20);
+  if (!q) return res.json({ results: [] });
+  let rows;
+  if (/[\u4e00-\u9faf]/.test(q)) {
+    rows = kdb.prepare('SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes FROM kanji WHERE ch = ? LIMIT 5').all(q[0]);
+  } else {
+    rows = kdb.prepare('SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes FROM kanji WHERE meaning LIKE ? ORDER BY freq LIMIT 20').all(`%${q}%`);
+  }
+  res.json({ results: rows.map(k => ({ ...k, onyomi: JSON.parse(k.onyomi || '[]'), kunyomi: JSON.parse(k.kunyomi || '[]') })) });
+});
+
+app.get('/api/kanji/:ch', (req, res) => {
+  if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
+  const k = kdb.prepare('SELECT * FROM kanji WHERE ch = ?').get(req.params.ch);
+  if (!k) return res.status(404).json({ error: 'Tidak ketemu' });
+  k.onyomi = JSON.parse(k.onyomi || '[]'); k.kunyomi = JSON.parse(k.kunyomi || '[]');
+  const ch = String(req.params.ch).slice(0, 1);
+  const words = kdb.prepare('SELECT id, keb, reb, gloss FROM words WHERE keb LIKE ? LIMIT 12').all(`%${ch}%`)
+    .map(w => ({ id: w.id, keb: JSON.parse(w.keb || '[]'), reb: JSON.parse(w.reb || '[]'), gloss: w.gloss }));
+  res.json({ kanji: k, words });
+});
 app.get('/api/stats', auth, (req, res) => {
   const lessons = db.prepare('SELECT COUNT(*) c FROM progress WHERE user_id = ?').get(req.user.id).c;
   const quizzes = db.prepare('SELECT COUNT(*) c, AVG(CASE WHEN total > 0 THEN score * 100.0 / total ELSE 0 END) avg FROM quiz_results WHERE user_id = ?').get(req.user.id);
