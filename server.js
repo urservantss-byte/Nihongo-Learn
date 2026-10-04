@@ -201,7 +201,7 @@ app.get('/api/dict/search', (req, res) => {
       SELECT w.id, w.keb, w.reb, w.gloss, w.pos, rank
       FROM words_fts f JOIN words w ON w.id = f.rowid
       WHERE words_fts MATCH ? ORDER BY rank LIMIT ?`).all(mq, lim);
-    res.json({ results: rows.map(r => ({ id: r.id, keb: JSON.parse(r.keb || '[]'), reb: JSON.parse(r.reb || '[]'), gloss: r.gloss, pos: r.pos })) });
+    res.json({ results: rows.map(r => ({ id: r.id, keb: JSON.parse(r.keb || '[]'), reb: JSON.parse(r.reb || '[]'), gloss: r.gloss, pos: [...new Set((r.pos || '').split(',').filter(Boolean))].join(', ') })) });
   } catch (e) { res.json({ results: [] }); }
 });
 
@@ -210,6 +210,7 @@ app.get('/api/dict/word/:id', (req, res) => {
   const w = kdb.prepare('SELECT * FROM words WHERE id = ?').get(req.params.id);
   if (!w) return res.status(404).json({ error: 'Tidak ketemu' });
   w.keb = JSON.parse(w.keb || '[]'); w.reb = JSON.parse(w.reb || '[]');
+  w.pos = [...new Set((w.pos || '').split(',').filter(Boolean))].join(', ');
   res.json({ word: w });
 });
 

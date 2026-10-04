@@ -44,6 +44,21 @@ function illus(kind) {
   return m[kind] || m.study;
 }
 
+// kana -> romaji (untuk cek jawaban flashcard kanji)
+const RM_F = { 'あ':'a','い':'i','う':'u','え':'e','お':'o','か':'ka','き':'ki','く':'ku','け':'ke','こ':'ko','さ':'sa','し':'shi','す':'su','せ':'se','そ':'so','た':'ta','ち':'chi','つ':'tsu','て':'te','と':'to','な':'na','に':'ni','ぬ':'nu','ね':'ne','の':'no','は':'ha','ひ':'hi','ふ':'fu','へ':'he','ほ':'ho','ま':'ma','み':'mi','む':'mu','め':'me','も':'mo','や':'ya','ゆ':'yu','よ':'yo','ら':'ra','り':'ri','る':'ru','れ':'re','ろ':'ro','わ':'wa','を':'wo','ん':'n','が':'ga','ぎ':'gi','ぐ':'gu','げ':'ge','ご':'go','ざ':'za','じ':'ji','ず':'zu','ぜ':'ze','ぞ':'zo','だ':'da','ぢ':'ji','づ':'zu','で':'de','ど':'do','ば':'ba','び':'bi','ぶ':'bu','べ':'be','ぼ':'bo','ぱ':'pa','ぴ':'pi','ぷ':'pu','ぺ':'pe','ぽ':'po','きゃ':'kya','きゅ':'kyu','きょ':'kyo','しゃ':'sha','しゅ':'shu','しょ':'sho','ちゃ':'cha','ちゅ':'chu','ちょ':'cho','にゃ':'nya','にゅ':'nyu','にょ':'nyo','ひゃ':'hya','ひゅ':'hyu','ひょ':'hyo','みゃ':'mya','みゅ':'myu','みょ':'myo','りゃ':'rya','りゅ':'ryu','りょ':'ryo','ぎゃ':'gya','ぎゅ':'gyu','ぎょ':'gyo','じゃ':'ja','じゅ':'ju','じょ':'jo','びゃ':'bya','びゅ':'byu','びょ':'byo','ぴゃ':'pya','ぴゅ':'pyu','ぴょ':'pyo','ぁ':'a','ぃ':'i','ぅ':'u','ぇ':'e','ぉ':'o','っ':'','ゃ':'ya','ゅ':'yu','ょ':'yo','ー':'-' };
+function kanaToRomaji(kana) {
+  const hira = kana.replace(/[\u30a1-\u30f6]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60)).replace(/\./g, '');
+  let out = '', i = 0;
+  while (i < hira.length) {
+    const two = hira.slice(i, i + 2);
+    if (RM_F[two]) { out += RM_F[two]; i += 2; continue; }
+    const c = hira[i];
+    if (c === 'っ') { const nx = RM_F[hira.slice(i+1, i+3)] || RM_F[hira[i+1]] || ''; out += nx[0] || ''; i++; continue; }
+    out += RM_F[c] || ''; i++;
+  }
+  return out.toLowerCase();
+}
+
 // maskot berkembang sesuai XP (pola cozy Renshuu/Kanshudo)
 function mascotFor(xp) {
   xp = xp || 0;
@@ -306,6 +321,7 @@ const app = createApp({
     kamusType() { clearTimeout(this.kamusTimer); this.kamusTimer = setTimeout(() => this.searchKamus(), 400); },
     async searchKamus() {
       const q = this.kamusQ.trim();
+      this.kamusDetail = null; // BUGFIX: jangan tampilkan detail lama saat cari baru
       if (q.length < 1) { this.kamusResults = []; return; }
       this.kamusLoading = true;
       try {
@@ -334,14 +350,17 @@ const app = createApp({
     srsCheck() {
       const c = this.srsDue[this.srsIdx];
       if (!c) return;
-      let ok;
       if (c.kind === 'kanji') {
-        ok = this.srsTyped.trim().toLowerCase() === (c.reading || '').toLowerCase();
-      } else {
-        ok = this.srsShow; // mode lihat-jawab: user nilai sendiri via tombol
+        // cek otomatis: terima kana maupun romaji
+        const typed = this.srsTyped.trim().toLowerCase();
+        const reading = (c.reading || '').toLowerCase();
+        const romaji = kanaToRomaji(c.reading || '');
+        const ok = typed !== '' && (typed === reading || typed === romaji);
+        toast(ok ? 'Benar! 🎉' : `Kurang tepat. Jawaban: ${c.reading}${romaji && romaji !== reading ? ' (' + romaji + ')' : ''}`);
+        this.srsGrade(ok);
         return;
       }
-      this.srsGrade(ok);
+      // mode lihat-jawab: user nilai sendiri via tombol
     },
     async srsGrade(ok) {
       const c = this.srsDue[this.srsIdx];
@@ -560,8 +579,8 @@ const app = createApp({
       <h2 class="ttl">🔍 Kamus</h2>
       <p class="muted small">218rb+ kosakata & 13rb kanji. Cari pakai kanji, kana, romaji, atau arti.</p>
       <div class="mode-grid">
-        <div class="mode" :class="{on: kamusTab==='kotoba'}" @click="kamusTab='kotoba';searchKamus()"><div class="mode-e">📝</div><b>Kotoba</b></div>
-        <div class="mode" :class="{on: kamusTab==='kanji'}" @click="kamusTab='kanji';searchKamus()"><div class="mode-e">🈁</div><b>Kanji</b></div>
+        <div class="mode" :class="{on: kamusTab==='kotoba'}" @click="kamusTab='kotoba';kamusDetail=null;searchKamus()"><div class="mode-e">📝</div><b>Kotoba</b></div>
+        <div class="mode" :class="{on: kamusTab==='kanji'}" @click="kamusTab='kanji';kamusDetail=null;searchKamus()"><div class="mode-e">🈁</div><b>Kanji</b></div>
       </div>
       <input v-model="kamusQ" @input="kamusType" :placeholder="kamusTab==='kotoba' ? 'cth: 食べる / taberu / to eat' : 'cth: 食 / eat'">
       <div v-if="kamusLoading" class="muted small">Mencari…</div>
@@ -691,7 +710,8 @@ const app = createApp({
 app.component('LessonView', {
   props: ['les', 'done'],
   emits: ['done', 'savecard'],
-  data: () => ({ reviewIdx: 0, reviewAns: [], reviewDone: false }),
+  data: () => ({ reviewIdx: 0, reviewAns: [], reviewDone: false, reviewQCache: null }),
+  watch: { les() { this.reviewIdx = 0; this.reviewAns = []; this.reviewDone = false; this.reviewQCache = null; } },
   methods: {
     kana() {
       const base = this.les.kanaType === 'hiragana' ? KANA.hiragana : KANA.katakana;
@@ -700,16 +720,18 @@ app.component('LessonView', {
       const [a,b] = rows[idx];
       return base.slice(a,b);
     },
-    // review bunpou: pilih contoh yang tepat untuk pola ini
+    // review bunpou: pilih contoh yang tepat untuk pola ini (di-cache biar tidak reshuffle)
     reviewQs() {
+      if (this.reviewQCache) return this.reviewQCache;
       const items = LESSONS[this.les.level].bunpou || [];
-      return items.slice(0, 3).map((b, i) => {
+      this.reviewQCache = items.slice(0, 3).map((b, i) => {
         const others = items.filter((_, j) => j !== i).slice(0, 2);
         const opts = [{ j: b.x[0].j, i: b.x[0].i, ok: true }]
           .concat(others.map(o => ({ j: o.x[0].j, i: o.x[0].i, ok: false })))
           .sort(() => Math.random() - .5);
         return { t: b.t, opts };
       });
+      return this.reviewQCache;
     },
     reviewPick(o, i) {
       this.reviewAns.push({ ok: o.ok, pick: i });
