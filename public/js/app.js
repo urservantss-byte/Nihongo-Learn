@@ -148,7 +148,6 @@ const LIB_TYPES = [
 ];
 
 const app = createApp({
-  errorCaptured(err) { try { toast('ERR: ' + (err && err.message || err)); } catch {} console.error(err); return false; },
   data: () => ({
     mode: 'login', fName: '', fEmail: '', fPass: '', fLevel: 'hiragana', fIntensity: 'sedang',
     tab: 'home',
@@ -883,12 +882,67 @@ const app = createApp({
 `,
 });
 
-// ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) - FIX: spasi di sekitar < =====
+// ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) =====
 app.component('StrokeOrder', {
   props: ['ch'],
-  data: () => ({ paths: ['a','b','c'], idx: 1, playing: false, timer: null, error: false, loading: false }),
-  methods: { step() {}, play() {}, replay() {} },
-  template: `<div class="stroke-wrap"><div class="btn-row center"><button class="mini-btn" @click="step(-1)" :disabled="idx<=0" title="Mundur">‹</button><button class="btn sm" @click="play()">{{ playing ? 'Jeda' : (idx > 0 && idx < paths.length ? 'Lanjut' : 'Putar') }}</button><button class="mini-btn" @click="step(1)" :disabled="idx>=paths.length" title="Maju">›</button><button class="mini-btn" @click="replay()" title="Ulangi">↺</button></div></div>`
+  data: () => ({ paths: [], idx: 0, playing: false, timer: null, error: false, loading: true }),
+  computed: {
+    url() { return 'https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/' + this.ch.codePointAt(0).toString(16).padStart(5, '0') + '.svg'; }
+  },
+  mounted() { this.load(); },
+  watch: { ch() { this.reset(); this.load(); } },
+  beforeUnmount() { clearTimeout(this.timer); },
+  methods: {
+    ic(n, s) { return window.__icons ? window.__icons(n, s) : ''; },
+    reset() { clearTimeout(this.timer); this.paths = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
+    async load() {
+      try {
+        const r = await fetch(this.url);
+        const t = await r.text();
+        if (!r.ok || !t.includes('<svg')) throw 0;
+        const doc = new DOMParser().parseFromString(t, 'image/svg+xml');
+        const ps = [...doc.querySelectorAll('path')].filter(p => /-s\d+$/.test(p.id || ''));
+        ps.sort((a, b) => parseInt(a.id.match(/-s(\d+)$/)[1]) - parseInt(b.id.match(/-s(\d+)$/)[1]));
+        this.paths = ps.map(p => p.getAttribute('d')).filter(Boolean);
+        if (!this.paths.length) this.error = true;
+      } catch { this.error = true; }
+      this.loading = false;
+    },
+    play() {
+      if (this.playing) { this.playing = false; clearTimeout(this.timer); return; }
+      if (this.idx >= this.paths.length) this.idx = 0;
+      this.playing = true;
+      const tick = () => {
+        if (!this.playing) return;
+        if (this.idx >= this.paths.length) { this.playing = false; return; }
+        this.idx++;
+        this.timer = setTimeout(tick, 650);
+      };
+      tick();
+    },
+    step(d) { this.playing = false; clearTimeout(this.timer); this.idx = Math.max(0, Math.min(this.paths.length, this.idx + d)); },
+    replay() { this.playing = false; clearTimeout(this.timer); this.idx = 0; this.$nextTick(() => this.play()); },
+    playLabel() { return this.playing ? 'Jeda' : (this.idx > 0 && this.idx < this.paths.length ? 'Lanjut' : 'Putar'); },
+    shownStroke() { return Math.min(this.idx, this.paths.length); }
+  },
+  template: `
+    <div class="stroke-wrap">
+      <div v-if="loading" class="muted small center">Memuat animasi…</div>
+      <div v-else-if="error" class="muted small center">Animasi goresan belum tersedia untuk kanji ini.</div>
+      <div v-else>
+        <svg viewBox="0 0 109 109" class="stroke-svg" aria-label="Animasi urutan goresan">
+          <path v-for="(d,i) in paths" :key="i" :d="d" :class="{ done: i < idx }" pathLength="1" fill="none" />
+        </svg>
+        <p class="muted small center" style="margin:6px 0">Goresan {{ shownStroke() }} / {{ paths.length }}</p>
+        <div class="btn-row center">
+          <button class="mini-btn" @click="step(-1)" :disabled="idx <= 0" title="Mundur">‹</button>
+          <button class="btn sm" @click="play()">{{ playLabel() }}</button>
+          <button class="mini-btn" @click="step(1)" :disabled="idx >= paths.length" title="Maju">›</button>
+          <button class="mini-btn" @click="replay()" title="Ulangi">↺</button>
+        </div>
+        <p class="muted small center" style="margin-top:6px">Urutan goresan: KanjiVG (CC BY-SA)</p>
+      </div>
+    </div>`
 });
 
 // ===== Isi pelajaran: pola Jelas -> Contoh -> Review (Bunpo/LingoDeer) =====
@@ -1006,6 +1060,5 @@ app.config.globalProperties.LIB_TYPES = LIB_TYPES;
 app.config.globalProperties.TYPE_ICON = TYPE_ICON;
 app.config.globalProperties.ALL_LESSONS = ALL_LESSONS;
 app.config.globalProperties.LEVEL_ORDER = LEVEL_ORDER;
-app.config.errorHandler = (err) => { try { toast('ERR2: ' + (err && err.message || err)); } catch {} console.error(err); };
 app.mount('#app');
 
