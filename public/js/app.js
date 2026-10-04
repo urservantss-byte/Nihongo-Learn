@@ -521,6 +521,13 @@ const app = createApp({
       });
       return out.join(' · ');
     },
+    wordKanji() {
+      if (!this.kamusDetail || this.kamusDetail.type !== 'word') return [];
+      const s = this.kamusDetail.keb[0] || this.kamusDetail.reb[0] || '';
+      const seen = [];
+      for (const c of s) { if (/[\u4e00-\u9faf\u3400-\u4dbf]/.test(c) && !seen.includes(c)) seen.push(c); }
+      return seen;
+    },
     async saveCard(kind, front, back, reading) {
       try {
         await api('/api/srs', { method: 'POST', body: JSON.stringify({ kind, front, back, reading }) });
@@ -816,6 +823,13 @@ const app = createApp({
           <div class="btn-row">
             <button class="btn sm" @click="speak(kamusDetail.reb[0])"><span v-html="ic('volume',15)"></span> Dengarkan</button>
             <button class="btn ghost sm" @click="saveCard('word', kamusDetail.keb[0]||kamusDetail.reb[0], kamusDetail.gloss.slice(0,120), kamusDetail.reb[0])"><span v-html="ic('plus',15)"></span> Flashcard</button>
+          </div>
+          <div v-if="wordKanji().length" style="margin-top:10px">
+            <div class="step-tag"><span v-html="ic('pen',12)"></span> Cara Menulis</div>
+            <div v-for="kc in wordKanji()" :key="'wk'+kc">
+              <p class="center" style="font-size:26px;margin:8px 0 0"><b>{{ kc }}</b></p>
+              <stroke-order :ch="kc" :key="kc"></stroke-order>
+            </div>
           </div>
         </div>
         <div v-if="kamusDetail.type==='kanji'">
