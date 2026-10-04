@@ -160,7 +160,7 @@ const app = createApp({
     gTab: 'match', mCards: [], mOpen: [], mHits: 0, mMoves: 0,
     sprintQ: null, sprintScore: 0, sprintTime: 60, sprintTimer: null, sprintOn: false, sprintStreak: 0,
     // kamus
-    kamusQ: '', kamusTab: 'kotoba', kamusJlpt: 0, kamusResults: [], kamusLoading: false, kamusDetail: null, kamusTimer: null,
+    kamusQ: '', kamusTab: 'kotoba', kamusJlpt: 0, kamusResults: [], kamusLoading: false, kamusDetail: null, kamusTimer: null, kamusId: '', translating: false,
     // srs
     srsDue: [], srsTotal: 0, srsIdx: 0, srsShow: false, srsTyped: '', srsDone: 0,
     // saya
@@ -468,7 +468,16 @@ const app = createApp({
       this.kamusLoading = false;
     },
     async openWord(id) {
-      try { const d = await api(`/api/dict/word/${id}`); this.kamusDetail = { type: 'word', ...d.word }; }
+      try {
+        const d = await api(`/api/dict/word/${id}`);
+        this.kamusDetail = { type: 'word', ...d.word };
+        this.kamusId = ''; this.translating = true;
+        try {
+          const t = await api(`/api/dict/translate/${id}`);
+          if (this.kamusDetail && this.kamusDetail.id === id && t.gloss_id) this.kamusId = t.gloss_id;
+        } catch {}
+        this.translating = false;
+      }
       catch (e) { toast(e.message); }
     },
     async openKanji(ch) {
@@ -760,7 +769,12 @@ const app = createApp({
         <div v-if="kamusDetail.type==='word'">
           <h2>{{ kamusDetail.keb[0] || kamusDetail.reb[0] }}</h2>
           <p class="muted">{{ kamusDetail.reb.join('、') }}</p>
-          <div class="passage">{{ kamusDetail.gloss }}</div>
+          <div class="step-tag"><span v-html="ic('book',12)"></span> Arti Bahasa Indonesia</div>
+          <div class="passage" v-if="kamusId">{{ kamusId }}</div>
+          <div class="passage muted" v-else-if="translating">Menerjemahkan…</div>
+          <div class="passage muted" v-else>Tidak tersedia. <button class="mini-btn" @click="openWord(kamusDetail.id)">Coba lagi</button></div>
+          <div class="step-tag" style="margin-top:8px"><span v-html="ic('book',12)"></span> Arti Bahasa Inggris</div>
+          <div class="passage muted small">{{ kamusDetail.gloss }}</div>
           <p class="muted small">{{ kamusDetail.pos }}</p>
           <div class="btn-row">
             <button class="btn sm" @click="speak(kamusDetail.reb[0])"><span v-html="ic('volume',15)"></span> Dengarkan</button>
@@ -773,6 +787,8 @@ const app = createApp({
           <div class="passage">{{ kamusDetail.meaning }}</div>
           <p><b>On:</b> {{ (kamusDetail.onyomi||[]).join('、') || '—' }}</p>
           <p><b>Kun:</b> {{ (kamusDetail.kunyomi||[]).join('、') || '—' }}</p>
+          <div class="step-tag"><span v-html="ic('pen',12)"></span> Cara Menulis · {{ kamusDetail.strokes }} goresan</div>
+          <stroke-order :ch="kamusDetail.ch" :key="kamusDetail.ch"></stroke-order>
           <div class="btn-row"><button class="btn ghost sm" @click="saveCard('kanji', kamusDetail.ch, kamusDetail.meaning.slice(0,120), (kamusDetail.onyomi[0]||kamusDetail.kunyomi[0]||''))"><span v-html="ic('plus',15)"></span> Flashcard</button></div>
           <h3>Contoh kata</h3>
           <div v-for="w in kamusDetail.words" :key="w.id" class="lvl" @click="openWord(w.id)">
@@ -864,6 +880,67 @@ const app = createApp({
 </div>
 
 `,
+});
+
+// ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) =====
+app.component('StrokeOrder', {
+  props: ['ch'],
+  data: () => ({ paths: [], idx: 0, playing: false, timer: null, error: false, loading: true }),
+  computed: {
+    url() { return 'https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/' + this.ch.codePointAt(0).toString(16).padStart(5, '0') + '.svg'; }
+  },
+  mounted() { this.load(); },
+  watch: { ch() { this.reset(); this.load(); } },
+  beforeUnmount() { clearTimeout(this.timer); },
+  methods: {
+    ic(n, s) { return window.__icons ? window.__icons(n, s) : ''; },
+    reset() { clearTimeout(this.timer); this.paths = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
+    async load() {
+      try {
+        const r = await fetch(this.url);
+        const t = await r.text();
+        if (!r.ok || !t.includes('<svg')) throw 0;
+        const doc = new DOMParser().parseFromString(t, 'image/svg+xml');
+        const ps = [...doc.querySelectorAll('path')].filter(p => /-s\d+$/.test(p.id || ''));
+        ps.sort((a, b) => parseInt(a.id.match(/-s(\d+)$/)[1]) - parseInt(b.id.match(/-s(\d+)$/)[1]));
+        this.paths = ps.map(p => p.getAttribute('d')).filter(Boolean);
+        if (!this.paths.length) this.error = true;
+      } catch { this.error = true; }
+      this.loading = false;
+    },
+    play() {
+      if (this.playing) { this.playing = false; clearTimeout(this.timer); return; }
+      if (this.idx >= this.paths.length) this.idx = 0;
+      this.playing = true;
+      const tick = () => {
+        if (!this.playing) return;
+        if (this.idx >= this.paths.length) { this.playing = false; return; }
+        this.idx++;
+        this.timer = setTimeout(tick, 650);
+      };
+      tick();
+    },
+    step(d) { this.playing = false; clearTimeout(this.timer); this.idx = Math.max(0, Math.min(this.paths.length, this.idx + d)); },
+    replay() { this.playing = false; clearTimeout(this.timer); this.idx = 0; this.$nextTick(() => this.play()); }
+  },
+  template: `
+    <div class="stroke-wrap">
+      <div v-if="loading" class="muted small center">Memuat animasi…</div>
+      <div v-else-if="error" class="muted small center">Animasi goresan belum tersedia untuk kanji ini.</div>
+      <div v-else>
+        <svg viewBox="0 0 109 109" class="stroke-svg" aria-label="Animasi urutan goresan">
+          <path v-for="(d,i) in paths" :key="i" :d="d" :class="{done: i < idx}" pathLength="1" fill="none" />
+        </svg>
+        <p class="muted small center" style="margin:6px 0">Goresan {{ Math.min(idx, paths.length) }} / {{ paths.length }}</p>
+        <div class="btn-row center">
+          <button class="mini-btn" @click="step(-1)" :disabled="idx<=0" title="Mundur">‹</button>
+          <button class="btn sm" @click="play()">{{ playing ? 'Jeda' : (idx>0 && idx<paths.length ? 'Lanjut' : 'Putar') }}</button>
+          <button class="mini-btn" @click="step(1)" :disabled="idx>=paths.length" title="Maju">›</button>
+          <button class="mini-btn" @click="replay()" title="Ulangi">↺</button>
+        </div>
+        <p class="muted small center" style="margin-top:6px">Urutan goresan: KanjiVG (CC BY-SA)</p>
+      </div>
+    </div>`
 });
 
 // ===== Isi pelajaran: pola Jelas -> Contoh -> Review (Bunpo/LingoDeer) =====

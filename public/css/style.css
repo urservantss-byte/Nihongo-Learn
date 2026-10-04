@@ -70,6 +70,12 @@ body { font-family: var(--font-d); background: var(--bg); color: var(--ink); min
   .daily-grid, .lib-grid, .kamus-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
+/* ===== Animasi urutan goresan kanji ===== */
+.stroke-wrap { margin: 6px 0 4px; }
+.stroke-svg { width: 190px; height: 190px; margin: 0 auto; display: block; background: var(--bg2); border: 1px solid var(--line); border-radius: 18px; }
+.stroke-svg path { stroke: var(--ink); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .5s ease, opacity .3s; }
+.stroke-svg path.done { stroke-dashoffset: 0; opacity: .32; }
+
 /* ikon SVG */
 .svg-ic { width: 20px; height: 20px; vertical-align: -4px; flex-shrink: 0; }
 h2.ttl .svg-ic { width: 21px; height: 21px; color: var(--pri); }

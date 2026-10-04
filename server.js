@@ -214,6 +214,66 @@ app.get('/api/dict/word/:id', (req, res) => {
   res.json({ word: w });
 });
 
+// ---- Terjemahan kamus EN -> ID (on-demand + cache di DB) ----
+db.exec(`CREATE TABLE IF NOT EXISTS translations (word_id INTEGER PRIMARY KEY, gloss_id TEXT, updated_at TEXT DEFAULT (datetime('now')))`);
+// seed terjemahan awal (dibangun offline dari kata populer)
+try {
+  const seedPath = path.join(__dirname, 'data', 'translations-seed.json');
+  if (require('fs').existsSync(seedPath)) {
+    const seed = JSON.parse(require('fs').readFileSync(seedPath, 'utf8'));
+    const keys = Object.keys(seed);
+    const cnt = db.prepare('SELECT COUNT(*) c FROM translations').get().c;
+    if (keys.length && cnt < keys.length) {
+      const ins = db.prepare('INSERT OR IGNORE INTO translations (word_id, gloss_id) VALUES (?, ?)');
+      db.transaction((ks) => { for (const k of ks) ins.run(parseInt(k), seed[k]); })(keys);
+      console.log(`[seed] translations dimuat: ${keys.length} kata`);
+    }
+  }
+} catch (e) { console.log('[seed] translations:', e.message); }
+async function fetchWithTimeout(url, ms) {
+  const c = new AbortController();
+  const t = setTimeout(() => c.abort(), ms);
+  try { const r = await fetch(url, { signal: c.signal }); return r; }
+  finally { clearTimeout(t); }
+}
+async function translateGlossEN2ID(text) {
+  const src = (text || '').slice(0, 450).trim();
+  if (!src) return null;
+  const q = encodeURIComponent(src);
+  // 1) MyMemory (gratis)
+  try {
+    const r = await fetchWithTimeout(`https://api.mymemory.translated.net/get?q=${q}&langpair=en|id`, 9000);
+    const d = await r.json();
+    const t = d && d.responseData && d.responseData.translatedText;
+    if (t && !/QUERY LENGTH LIMIT|INVALID EMAIL|MYMEMORY WARNING/i.test(t)) return t;
+  } catch {}
+  // 2) fallback Google gtx (unofficial)
+  try {
+    const r = await fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=id&dt=t&q=${q}`, 9000);
+    const d = await r.json();
+    if (Array.isArray(d) && Array.isArray(d[0])) {
+      const t = d[0].map(x => x && x[0]).filter(Boolean).join('');
+      if (t) return t;
+    }
+  } catch {}
+  return null;
+}
+app.get('/api/dict/translate/:id', async (req, res) => {
+  if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
+  const id = parseInt(req.params.id);
+  if (!id) return res.status(400).json({ error: 'ID tidak valid' });
+  try {
+    const cached = db.prepare('SELECT gloss_id FROM translations WHERE word_id = ?').get(id);
+    if (cached && cached.gloss_id) return res.json({ gloss_id: cached.gloss_id, cached: true });
+    const w = kdb.prepare('SELECT gloss FROM words WHERE id = ?').get(id);
+    if (!w) return res.status(404).json({ error: 'Tidak ketemu' });
+    const t = await translateGlossEN2ID(w.gloss);
+    if (!t) return res.json({ gloss_id: null, error: 'Terjemahan gagal, coba lagi nanti' });
+    db.prepare('INSERT OR REPLACE INTO translations (word_id, gloss_id) VALUES (?, ?)').run(id, t);
+    res.json({ gloss_id: t, cached: false });
+  } catch (e) { res.status(500).json({ error: 'Gagal menerjemahkan' }); }
+});
+
 app.get('/api/kanji/search', (req, res) => {
   if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
   const q = (req.query.q || '').trim().slice(0, 20);
