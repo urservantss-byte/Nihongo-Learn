@@ -38,6 +38,38 @@ body { font-family: var(--font-d); background: var(--bg); color: var(--ink); min
 .nav button .ic { font-size: 19px; }
 .nav button.on { color: var(--pri); background: color-mix(in srgb, var(--pri) 10%, transparent); font-weight: 700; }
 
+/* ===== Desktop: sidebar kiri ala Duolingo + konten lebar ===== */
+.nav-logo { display: none; }
+@media (min-width: 1024px) {
+  #app { max-width: 1180px; padding: 0 40px 60px 304px; }
+  .hdr { padding: 16px 2px; }
+  .nav {
+    top: 0; bottom: 0; left: 0; right: auto;
+    width: 264px; flex-direction: column; align-items: stretch;
+    justify-content: flex-start; gap: 4px;
+    padding: 22px 16px;
+    border-top: 0; border-right: 1px solid var(--line);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 800; padding: 4px 12px 22px; }
+  .nav-logo .jp { background: var(--pri); color: #fff; border-radius: 10px; padding: 3px 9px; font-size: 14px; }
+  .nav button { flex-direction: row; gap: 13px; max-width: none; width: 100%; font-size: 15px; padding: 13px 16px; border-radius: 14px; justify-content: flex-start; }
+  .nav button .svg-ic { width: 22px; height: 22px; }
+  .daily-grid, .lib-grid, .kamus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: start; }
+  .daily-grid .lvl, .lib-grid .lvl, .kamus-grid .lvl { margin: 0; height: 100%; }
+  .kana-grid { grid-template-columns: repeat(10, 1fr); }
+  .game-board { max-width: 560px; margin-left: auto; margin-right: auto; }
+  section.card.pop { max-width: 780px; margin-left: auto; margin-right: auto; }
+  .hero { padding: 24px; }
+  h2.ttl { font-size: 19px; }
+  .stat-row { gap: 14px; }
+  .hdr .logo { display: none; }
+  .hdr { justify-content: flex-end; }
+}
+@media (min-width: 1400px) {
+  #app { max-width: 1280px; }
+  .daily-grid, .lib-grid, .kamus-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
 /* ikon SVG */
 .svg-ic { width: 20px; height: 20px; vertical-align: -4px; flex-shrink: 0; }
 h2.ttl .svg-ic { width: 21px; height: 21px; color: var(--pri); }

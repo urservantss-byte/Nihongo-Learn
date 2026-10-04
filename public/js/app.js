@@ -568,6 +568,7 @@ const app = createApp({
 
       <h2 class="ttl"><span v-html="ic('calendar')"></span> Materi Harian</h2>
       <p class="muted small">Disusun sesuai level & porsimu. Selesai → lanjut ke materi baru berikutnya.</p>
+      <div class="daily-grid">
       <div v-if="!dailyLessons.length" class="card center">
         <div v-html="ic('check',34)"></div>
         <p><b>Semua materi harian tuntas!</b></p>
@@ -578,6 +579,7 @@ const app = createApp({
         <div class="badge">{{ LV_ICON[l.level] }}</div>
         <div class="lvl-body"><b>{{ l.title }}</b><div class="muted small">{{ l.level.toUpperCase() }} · +20 XP</div></div>
         <span v-html="ic('play')"></span>
+      </div>
       </div>
     </section>
 
@@ -590,10 +592,12 @@ const app = createApp({
         <div v-if="libQ.trim().length > 1">
           <div v-for="g in libSearch" :key="g.type">
             <h3 class="ttl-sm">{{ g.label }} <span class="muted">({{ g.items.length }})</span></h3>
+            <div class="lib-grid">
             <div v-for="it in g.items" :key="g.type+it.key" class="lvl" @click="learnLevel=it.level;openLesson=it.key;libQ=''">
               <div class="badge sm"><span v-html="ic(TYPE_ICON[it.type],18)"></span></div>
               <div class="lvl-body"><b>{{ it.title }}</b><div class="muted small">{{ it.sub }} · {{ it.level.toUpperCase() }}</div></div>
               <span v-html="ic('play',16)"></span>
+            </div>
             </div>
           </div>
           <div v-if="!libSearch.length" class="card center muted small">Tidak ditemukan. Coba kata kunci lain.</div>
@@ -606,10 +610,12 @@ const app = createApp({
             <button v-for="t in LIB_TYPES" :key="'lt-'+t.id" class="pill" :class="{on: libType===t.id}" @click="libType=t.id"><span v-html="ic(t.icon,14)"></span> {{ t.label }} · {{ libCount(t.id) }}</button>
           </div>
           <div class="bar" style="margin:4px 0 8px"><i :style="{width: Math.round(levelProgress[learnLevel]*100)+'%'}"></i></div>
+          <div class="lib-grid">
           <div v-for="l in libLessons" :key="l.key" class="lvl" @click="openLesson=l.key">
             <div class="badge" :class="{done: doneSet.has(l.key)}"><span v-html="ic(doneSet.has(l.key) ? 'check' : TYPE_ICON[l.type],20)"></span></div>
             <div class="lvl-body"><b>{{ l.title }}</b><div class="muted small">{{ libLessonSub(l) }} · +20 XP</div></div>
             <span v-html="ic('play',16)"></span>
+          </div>
           </div>
         </div>
       </div>
@@ -736,6 +742,7 @@ const app = createApp({
       <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="kamusQ" @input="kamusType" :placeholder="kamusTab==='kotoba' ? 'cth: 食べる / taberu / to eat' : 'cth: 食 / eat'"></div>
       <div v-if="kamusLoading" class="muted small">Mencari…</div>
       <div v-if="!kamusDetail">
+        <div class="kamus-grid">
         <div v-for="r in kamusResults" :key="r.id||r.ch" class="lvl" @click="kamusTab==='kotoba'?openWord(r.id):openKanji(r.ch)">
           <div class="lvl-body">
             <b class="big">{{ kamusTab==='kotoba' ? (r.keb[0]||r.reb[0]) : r.ch }}</b>
@@ -744,6 +751,7 @@ const app = createApp({
             <div v-if="kamusTab==='kanji'"><span class="chip" v-if="r.jlpt">{{ jlptLabel(r.jlpt) }}</span> <span class="muted small">{{ r.strokes }} goresan</span></div>
           </div>
           <span v-html="ic('volume',17)"></span>
+        </div>
         </div>
         <div v-if="kamusQ && !kamusLoading && !kamusResults.length" class="card muted small center">Tidak ketemu. Coba kata lain.</div>
       </div>
@@ -844,6 +852,7 @@ const app = createApp({
     </section>
 
     <nav class="nav">
+      <div class="nav-logo"><span class="jp">日本語</span> NihongoLearn</div>
       <button :class="{on:tab==='home'}" @click="tab='home'"><span v-html="ic('home')"></span>Beranda</button>
       <button :class="{on:tab==='library'}" @click="tab='library'"><span v-html="ic('layers')"></span>Materi</button>
       <button :class="{on:['quiz','quizrun','adaptiverun'].includes(tab)}" @click="tab='quiz'"><span v-html="ic('clock')"></span>Quiz</button>
