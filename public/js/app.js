@@ -151,7 +151,7 @@ const LIB_TYPES = [
 const app = createApp({
   data: () => ({
     mode: 'login', fName: '', fEmail: '', fPass: '', fLevel: 'hiragana', fIntensity: 'sedang',
-    tab: 'home',
+    tab: ['home','library','quiz','kamus','games','saya'].includes(localStorage.getItem('nl_tab')) ? localStorage.getItem('nl_tab') : 'home',
     learnLevel: 'hiragana', openLesson: null,
     libQ: '', libType: 'all',
     // quiz
@@ -239,7 +239,9 @@ const app = createApp({
       return this.secScores.filter(s => s.pct < 60);
     },
   },
+  watch: { tab() { this.saveTab(); } },
   methods: {
+    saveTab() { const m = { quizrun: 'quiz', quizdone: 'quiz', adaptiverun: 'quiz', srsrun: 'saya' }; localStorage.setItem('nl_tab', m[this.tab] || this.tab); },
     lvName(lv) { const l = LEVELS.find(x => x.id === lv); return l ? l.name : lv.toUpperCase(); },
     libCount(t) { return ALL_LESSONS.filter(l => l.level === this.learnLevel && (t === 'all' || l.type === t)).length; },
     libLessonSub(l) {
