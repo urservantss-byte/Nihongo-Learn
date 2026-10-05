@@ -1555,6 +1555,7 @@ app.component('StrokeOrder', {
   watch: { ch() { this.reset(); this.load(); } },
   beforeUnmount() { clearTimeout(this.timer); },
   methods: {
+    reset() { clearTimeout(this.timer); this.strokes = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
     async load() {
       try {
       for (const u of this.urls()) {
