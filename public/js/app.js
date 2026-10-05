@@ -351,6 +351,25 @@ const app = createApp({
       }
       return out.join('\n').replace(/\n{3,}/g, '\n\n').replace(/^\n+|\n+$/g, '');
     },
+    kvgHex(kj) { return kj.codePointAt(0).toString(16).padStart(5, '0'); },
+    async toggleKvg(k) {
+      const kj = k.kj || k.ch;
+      if (!kj) return;
+      if (!k._kvgPaths && !k._kvgErr) {
+        try {
+          const txt = await (await fetch('kanjivg/' + this.kvgHex(kj) + '.svg')).text();
+          if (!txt || txt.indexOf('<path') < 0) throw 0;
+          const grp = txt.match(/<g id="kvg:StrokePaths[^"]*"[^>]*>([\s\S]*?)<\/g>/);
+          const body = grp ? grp[1] : txt;
+          const paths = [...body.matchAll(/<path[^>]*d="([^"]+)"[^>]*>/g)].map(m => m[1]);
+          if (!paths.length) throw 0;
+          k._kvgPaths = paths;
+        } catch (e) { k._kvgErr = true; }
+      }
+      k._kvgOpen = !k._kvgOpen;
+      if (k._kvgOpen) this.$nextTick(() => this.playKvg(k));
+    },
+    playKvg(k) { k._kvgKey = (k._kvgKey || 0) + 1; },
     saveTab() { const m = { quizrun: 'quiz', quizdone: 'quiz', adaptiverun: 'quiz', srsrun: 'saya' }; localStorage.setItem('nl_tab', m[this.tab] || this.tab); },
     saveQuizProgress() {
       if (!['quizrun', 'adaptiverun'].includes(this.tab) || this.qDone) return;
@@ -1143,6 +1162,17 @@ const app = createApp({
                     <div style="font-size:42px;line-height:1.1">{{ k.kj || k.ch }}</div>
                     <div style="flex:1"><div><b>{{ k.id }}</b></div><div class="muted small">kun: {{ k.kun || '-' }} &middot; on: {{ k.on || '-' }}</div></div>
                     <button class="mini-btn" @click="speak(k.kj||k.ch)">&#128266;</button>
+                    <button class="mini-btn" @click="toggleKvg(k)" title="Cara tulis">&#9997;</button>
+                  </div>
+                  <div v-if="k._kvgOpen" class="kvg-box">
+                    <div v-if="k._kvgErr" class="muted small">Animasi cara tulis belum tersedia.</div>
+                    <div v-else>
+                      <svg viewBox="0 0 109 109" class="kvg-svg" :key="'kvgsvg-'+(k._kvgKey||0)">
+                        <path v-for="(d, di) in k._kvgPaths" :key="'kvg-'+(k._kvgKey||0)+'-'+di" :d="d" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" class="kvg-stroke" :style="{ animationDelay: (di*0.65)+'s' }"/>
+                      </svg>
+                      <div class="muted small" style="margin:4px 0">{{ k._kvgPaths ? k._kvgPaths.length : 0 }} goresan</div>
+                      <button class="btn ghost sm" @click="playKvg(k)">&#9654; Putar ulang</button>
+                    </div>
                   </div>
                   <div v-if="k.ex && k.ex.length" style="margin-top:8px;border-top:1px solid var(--line);padding-top:6px">
                     <div class="muted small" style="margin-bottom:2px">Anak kanji:</div>

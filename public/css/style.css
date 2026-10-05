@@ -327,3 +327,8 @@ h2.ttl + .muted, h2.ttl + p { margin-bottom: 8px; }
 .pnum.on { border-color: var(--acc); background: color-mix(in srgb, var(--acc) 18%, var(--card)); font-weight: bold; }
 .pnum.done { border-color: var(--ok); }
 .opt.pick { border-color: var(--acc); background: color-mix(in srgb, var(--acc) 10%, var(--card)); }
+/* Animasi cara tulis kanji (KanjiVG) */
+.kvg-box { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 8px; text-align: center; }
+.kvg-svg { width: 148px; height: 148px; background: #fff; border-radius: 12px; border: 1px solid var(--line); color: var(--ink); }
+.kvg-stroke { stroke-dasharray: 1; stroke-dashoffset: 1; animation: kvgdraw .55s ease-out forwards; }
+@keyframes kvgdraw { to { stroke-dashoffset: 0; } }
