@@ -140,6 +140,23 @@ const ALL_LESSONS = buildLessons();
 const LEVEL_ORDER = ['hiragana','katakana','n5','n4','n3','n2','n1'];
 const LV_ICON = { hiragana: 'あ', katakana: 'ア', n5: '5', n4: '4', n3: '3', n2: '2', n1: '1' };
 const TYPE_ICON = { kana: 'star', kotoba: 'filetext', kanji: 'pen', bunpou: 'book', choukai: 'headphones' };
+// ---- Modul (pusat materi) ----
+const MODUL_CATS = [
+  { id: 'bunpou', icon: '📖', name: 'Bunpou JLPT', desc: 'Pola grammar N5–N1 · bisa dicari' },
+  { id: 'kotoba', icon: '📝', name: 'Kosakata', desc: 'Kotoba per level & bab' },
+  { id: 'kanji', icon: '🈁', name: 'Kanji', desc: 'Kanji per level & bab' },
+  { id: 'bank', icon: '📚', name: 'Bank Soal JLPT', desc: 'Soal tahun 2018–2024' },
+  { id: 'jft', icon: '🗣️', name: 'JFT-Basic', desc: 'Info & contoh soal' },
+  { id: 'ssw', icon: '💼', name: 'SSW', desc: 'Per bidang pekerjaan' },
+];
+const SSW_FIELDS = [
+  { id: 'kaigo', name: 'Kaigo', sub: '介護 · Perawat lansia' },
+  { id: 'restoran', name: 'Restoran', sub: '外食 · Food service' },
+  { id: 'pabrik', name: 'Pabrik Makanan', sub: '飲食料品製造業' },
+  { id: 'cleaning', name: 'Building Cleaning', sub: 'ビルクリーニング' },
+  { id: 'manufaktur', name: 'Manufaktur', sub: '製造業' },
+];
+const BANK_YEARS = ['2024', '2023', '2022', '2021', '2020', '2019', '2018'];
 const LIB_TYPES = [
   { id: 'all', label: 'Semua', icon: 'layers' },
   { id: 'kotoba', label: 'Kotoba', icon: 'filetext' },
@@ -154,6 +171,8 @@ const app = createApp({
     tab: ['home','library','quiz','kamus','games','saya'].includes(localStorage.getItem('nl_tab')) ? localStorage.getItem('nl_tab') : 'home',
     learnLevel: 'hiragana', openLesson: null,
     libQ: '', libType: 'all',
+    // modul (pusat materi)
+    modulQ: '', modulCat: null, modulLevel: 'n5', modulSub: null, modulCh: null, modulPat: null,
     // quiz
     quizMode: 'acak', qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0, secScores: [],
     genQs: [], shuffledQs: [], quizResume: null,
@@ -172,7 +191,7 @@ const app = createApp({
   }),
   computed: {
     pageTitle() {
-      const t = { home: 'Beranda', library: 'Materi', quiz: 'Quiz', quizrun: 'Quiz', adaptiverun: 'Quiz Adaptif', kamus: 'Kamus', games: 'Game', saya: 'Saya', srsrun: 'Review' };
+      const t = { home: 'Beranda', library: 'Modul', quiz: 'Quiz', quizrun: 'Quiz', adaptiverun: 'Quiz Adaptif', kamus: 'Kamus', games: 'Game', saya: 'Saya', srsrun: 'Review' };
       return t[this.tab] || '';
     },
     user() { return store.user; },
@@ -232,6 +251,36 @@ const app = createApp({
       for (const g of groups) g.items = g.items.slice(0, 12);
       return groups.filter(g => g.items.length);
     },
+    // ---- Modul: cari & jelajahi bunpou/kotoba/kanji ----
+    modulChapters() { return CHAPTERS[this.modulLevel] || []; },
+    modulChItems() {
+      const ch = this.modulChapters.find(c => c.id === this.modulCh);
+      if (!ch) return [];
+      const s = ch.sections.find(x => x.type === this.modulCat);
+      return (s && s.items) || [];
+    },
+    modulPatterns() {
+      const out = [];
+      for (const ch of this.modulChapters) {
+        const b = ch.sections.find(s => s.type === 'bunpou');
+        const k = ch.sections.find(s => s.type === 'kaiwa');
+        for (const it of (b ? b.items : [])) out.push(this._modPat(ch, it, k));
+      }
+      return out;
+    },
+    modulSearchRes() {
+      const q = this.modulQ.trim().toLowerCase();
+      if (q.length < 2) return [];
+      const out = [];
+      for (const lv of ['n5', 'n4', 'n3', 'n2', 'n1'])
+        for (const ch of (CHAPTERS[lv] || [])) {
+          const b = ch.sections.find(s => s.type === 'bunpou');
+          const k = ch.sections.find(s => s.type === 'kaiwa');
+          for (const it of (b ? b.items : []))
+            if ((it.pattern + ' ' + (it.arti || '')).toLowerCase().includes(q)) out.push(this._modPat(ch, it, k, lv));
+        }
+      return out.slice(0, 60);
+    },
     quizQs() {
       if (this.quizMode === 'acak') return this.genQs;
       return this.shuffledQs.length ? this.shuffledQs : (QUIZ[this.qLevel] || []);
@@ -262,6 +311,13 @@ const app = createApp({
       } catch {}
     },
     clearQuizProgress() { localStorage.removeItem('nl_quiz'); this.quizResume = null; },
+    _modPat(ch, it, k, lv) {
+      return { level: lv || this.modulLevel, bab: ch.bab, chTitle: ch.title, pattern: it.pattern, arti: String(it.arti || '').replace(/<[^>]+>/g, ''), item: it, kaiwa: k ? k.lines : [] };
+    },
+    modulSecCount(ch) {
+      const s = ch.sections.find(x => x.type === this.modulCat);
+      return (s && s.items ? s.items.length : 0);
+    },
     // ---- posisi baca bab & quiz bab: tetap stay saat refresh ----
     saveChapterState() {
       try {
@@ -876,45 +932,141 @@ const app = createApp({
       </div>
     </section>
 
-    <!-- ============ PERPUSTAKAAN ============ -->
+    <!-- ============ MODUL ============ -->
     <section v-if="tab==='library'" class="tabsec">
-      <h2 class="ttl"><span v-html="ic('layers')"></span> Perpustakaan Materi</h2>
-      <p class="muted small">Koleksi lengkap kotoba, kanji, bunpou & choukai. Cari atau jelajahi per level.</p>
-      <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="libQ" placeholder="Cari materi… cth: taberu, 食, te-form"></div>
-      <div v-if="!openLesson">
-        <div v-if="libQ.trim().length > 1">
-          <div v-for="g in libSearch" :key="g.type">
-            <h3 class="ttl-sm">{{ g.label }} <span class="muted">({{ g.items.length }})</span></h3>
-            <div class="lib-grid">
-            <div v-for="it in g.items" :key="g.type+it.key" class="lvl" @click="learnLevel=it.level;openLesson=it.key;libQ=''">
-              <div class="badge sm"><span v-html="ic(TYPE_ICON[it.type],18)"></span></div>
-              <div class="lvl-body"><b>{{ it.title }}</b><div class="muted small">{{ it.sub }} · {{ it.level.toUpperCase() }}</div></div>
+      <div v-if="!modulPat">
+        <h2 class="ttl"><span v-html="ic('layers')"></span> Modul</h2>
+        <p class="muted small">Pusat materi: bunpou, kosakata, kanji, bank soal & info ujian. Bebas dibuka tanpa batas level.</p>
+        <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="modulQ" placeholder="Cari bunpou&hellip; cth: おく, potensial, ば"></div>
+
+        <div v-if="modulQ.trim().length > 1">
+          <h3 class="ttl-sm">Hasil pencarian <span class="muted">({{ modulSearchRes.length }})</span></h3>
+          <div v-if="!modulSearchRes.length" class="card center muted small">Tidak ditemukan. Coba kata kunci lain.</div>
+          <div class="lib-grid">
+            <div v-for="(p, pi) in modulSearchRes" :key="'ms'+pi" class="lvl" @click="modulPat=p">
+              <div class="badge sm"><b>{{ p.level.toUpperCase() }}</b></div>
+              <div class="lvl-body"><b>{{ p.pattern }}</b><div class="muted small">{{ p.arti }} &middot; Bab {{ p.bab }}</div></div>
               <span v-html="ic('play',16)"></span>
             </div>
+          </div>
+        </div>
+
+        <div v-else-if="!modulCat">
+          <div class="lib-grid">
+            <div v-for="c in MODUL_CATS" :key="c.id" class="lvl" @click="modulCat=c.id;modulSub=null;modulCh=null;modulLevel='n5';modulQ=''">
+              <div class="badge"><span style="font-size:22px">{{ c.icon }}</span></div>
+              <div class="lvl-body"><b>{{ c.name }}</b><div class="muted small">{{ c.desc }}</div></div>
+              <span v-html="ic('play',16)"></span>
             </div>
           </div>
-          <div v-if="!libSearch.length" class="card center muted small">Tidak ditemukan. Coba kata kunci lain.</div>
         </div>
+
         <div v-else>
-          <div class="pill-row">
-            <button v-for="lv in LEVEL_ORDER" :key="'lp-'+lv" class="pill" :class="{on: learnLevel===lv}" @click="learnLevel=lv;libType='all'">{{ lvName(lv) }}</button>
+          <button class="btn ghost sm" @click="modulCat=null;modulSub=null;modulCh=null"><span v-html="ic('back',15)"></span> Modul</button>
+
+          <div v-if="modulCat==='bunpou'">
+            <div class="pill-row">
+              <button v-for="lv in ['n5','n4','n3','n2','n1']" :key="'mb-'+lv" class="pill" :class="{on: modulLevel===lv}" @click="modulLevel=lv">{{ lv.toUpperCase() }}</button>
+            </div>
+            <div class="lib-grid">
+              <div v-for="(p, pi) in modulPatterns" :key="'mp'+pi" class="lvl" @click="modulPat=p">
+                <div class="badge sm"><b>{{ p.bab }}</b></div>
+                <div class="lvl-body"><b>{{ p.pattern }}</b><div class="muted small">{{ p.arti }}</div></div>
+                <span v-html="ic('play',16)"></span>
+              </div>
+            </div>
           </div>
-          <div class="pill-row">
-            <button v-for="t in LIB_TYPES" :key="'lt-'+t.id" class="pill" :class="{on: libType===t.id}" @click="libType=t.id"><span v-html="ic(t.icon,14)"></span> {{ t.label }} · {{ libCount(t.id) }}</button>
+
+          <div v-if="modulCat==='kotoba' || modulCat==='kanji'">
+            <div class="pill-row">
+              <button v-for="lv in ['n5','n4','n3','n2','n1']" :key="'mk-'+lv" class="pill" :class="{on: modulLevel===lv}" @click="modulLevel=lv;modulCh=null">{{ lv.toUpperCase() }}</button>
+            </div>
+            <div v-if="!modulCh" class="lib-grid">
+              <div v-for="ch in modulChapters" :key="ch.id" class="lvl" @click="modulCh=ch.id">
+                <div class="badge"><b>{{ ch.bab }}</b></div>
+                <div class="lvl-body"><b>{{ ch.title }}</b><div class="muted small">{{ modulSecCount(ch) }} {{ modulCat==='kotoba' ? 'kosakata' : 'kanji' }}</div></div>
+                <span v-html="ic('play',16)"></span>
+              </div>
+            </div>
+            <div v-else>
+              <button class="btn ghost sm" @click="modulCh=null"><span v-html="ic('back',15)"></span> Daftar bab</button>
+              <div v-if="modulCat==='kotoba'">
+                <div v-for="w in modulChItems" :key="w.id" class="rowline" style="align-items:flex-start"><div><b>{{ w.kj || w.jp }}</b> <span class="muted small">{{ w.r }}</span><div class="muted small">{{ w.id }}</div><div v-if="w.note" class="small" style="color:var(--pri-d)">&#128161; {{ w.note }}</div></div><button class="mini-btn" @click="speak(w.jp)">&#128266;</button></div>
+              </div>
+              <div v-if="modulCat==='kanji'" class="lib-grid" style="margin-top:8px">
+                <div v-for="k in modulChItems" :key="k.ch" class="card small center">
+                  <div style="font-size:34px">{{ k.ch }}</div>
+                  <div class="small"><b>{{ k.id }}</b></div>
+                  <div class="muted small">kun: {{ k.kun }}</div>
+                  <div class="muted small">on: {{ k.on }}</div>
+                  <div class="small">{{ k.note }}</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="bar" style="margin:4px 0 8px"><i :style="{width: Math.round(levelProgress[learnLevel]*100)+'%'}"></i></div>
-          <div class="lib-grid">
-          <div v-for="l in libLessons" :key="l.key" class="lvl" @click="openLesson=l.key">
-            <div class="badge" :class="{done: doneSet.has(l.key)}"><span v-html="ic(doneSet.has(l.key) ? 'check' : TYPE_ICON[l.type],20)"></span></div>
-            <div class="lvl-body"><b>{{ l.title }}</b><div class="muted small">{{ libLessonSub(l) }} · +20 XP</div></div>
-            <span v-html="ic('play',16)"></span>
+
+          <div v-if="modulCat==='bank'">
+            <div v-if="!modulSub" class="lib-grid">
+              <div v-for="y in BANK_YEARS" :key="'by'+y" class="lvl" @click="modulSub=y">
+                <div class="badge"><span style="font-size:22px">&#128218;</span></div>
+                <div class="lvl-body"><b>JLPT {{ y }}</b><div class="muted small">N5&ndash;N1 &middot; Juli &amp; Desember</div></div>
+                <span v-html="ic('play',16)"></span>
+              </div>
+            </div>
+            <div v-else>
+              <button class="btn ghost sm" @click="modulSub=null"><span v-html="ic('back',15)"></span> Pilih tahun</button>
+              <div class="card center pop"><div style="font-size:40px">&#128269;</div><b>Soal JLPT {{ modulSub }} segera hadir</b><p class="muted small">Soal tahun {{ modulSub }} sedang diriset &amp; diverifikasi dari berbagai sumber. Sabar ya! &#128591;</p></div>
+            </div>
           </div>
+
+          <div v-if="modulCat==='jft'">
+            <div class="card pop">
+              <b>&#128483;&#65039; JFT-Basic (Japan Foundation Test)</b>
+              <div class="small" style="margin-top:6px">Ujian CBT &plusmn;50 soal, 60 menit: huruf &amp; kosakata, percakapan &amp; ekspresi, listening, reading. Lulus: 200/250 poin. Dibutuhkan untuk visa SSW (Specified Skilled Worker).</div>
+            </div>
+            <div class="card center"><div style="font-size:40px">&#128269;</div><b>Bank soal JFT-Basic segera hadir</b><p class="muted small">Soal-soal real JFT-Basic sedang diriset &amp; diverifikasi. &#128591;</p></div>
+          </div>
+
+          <div v-if="modulCat==='ssw'">
+            <div v-if="!modulSub" class="lib-grid">
+              <div v-for="f in SSW_FIELDS" :key="f.id" class="lvl" @click="modulSub=f.id">
+                <div class="badge"><span style="font-size:22px">&#128188;</span></div>
+                <div class="lvl-body"><b>{{ f.name }}</b><div class="muted small">{{ f.sub }}</div></div>
+                <span v-html="ic('play',16)"></span>
+              </div>
+            </div>
+            <div v-else>
+              <button class="btn ghost sm" @click="modulSub=null"><span v-html="ic('back',15)"></span> Pilih bidang</button>
+              <div class="card center pop"><div style="font-size:40px">&#128269;</div><b>Materi {{ (SSW_FIELDS.find(f=>f.id===modulSub)||{}).name }} segera hadir</b><p class="muted small">Materi &amp; soal bidang ini sedang diriset &amp; diverifikasi. &#128591;</p></div>
+            </div>
           </div>
         </div>
       </div>
+
       <div v-else class="card pop">
-        <button class="btn ghost sm" @click="openLesson=null"><span v-html="ic('back',15)"></span> Semua materi</button>
-        <LessonView :les="ALL_LESSONS.find(l=>l.key===openLesson)" :done="doneSet.has(openLesson)" @done="completeLesson(openLesson);openLesson=null" @savecard="saveCard" />
+        <button class="btn ghost sm" @click="modulPat=null"><span v-html="ic('back',15)"></span> Kembali</button>
+        <div class="step-tag">&#128214; {{ modulPat.level.toUpperCase() }} &middot; Bab {{ modulPat.bab }}</div>
+        <h3 style="margin:6px 0">{{ modulPat.pattern }}</h3>
+        <p class="muted small">{{ modulPat.arti }}</p>
+        <div class="small" v-html="modulPat.item.explain"></div>
+        <div v-if="modulPat.item.tabel && modulPat.item.tabel.length" class="bp-table" style="margin-top:8px">
+          <div v-for="(t, ti) in modulPat.item.tabel" :key="ti" class="bp-trow">
+            <div class="bp-tk">{{ t.k }}</div>
+            <div class="bp-tv"><span class="bp-teq">=</span> {{ t.v }}</div>
+          </div>
+        </div>
+        <div v-if="modulPat.item.examples && modulPat.item.examples.length" style="margin-top:10px">
+          <b>Contoh kalimat:</b>
+          <div v-for="(ex, ei) in modulPat.item.examples" :key="ei" class="ex-box">
+            <div class="ex-jp">{{ ex.jp }}</div>
+            <div v-if="ex.rd" class="ex-rd">{{ ex.rd }}</div>
+            <div class="ex-id">{{ ex.id }}</div>
+          </div>
+        </div>
+        <div v-if="modulPat.kaiwa && modulPat.kaiwa.length" style="margin-top:10px">
+          <b>&#128172; Kaiwa:</b>
+          <div class="passage kaiwa-lines" style="margin-top:6px"><div v-for="(ln, li) in modulPat.kaiwa" :key="li" style="margin-bottom:10px"><b>{{ ln.sp }}:</b> {{ ln.jp }}<br><span class="muted small">{{ ln.id }}</span></div></div>
+        </div>
       </div>
     </section>
 
@@ -991,7 +1143,7 @@ const app = createApp({
         <div v-if="weakSpots.length" class="card warn">
           <b><span v-html="ic('target',16)"></span> Perlu ditingkatkan:</b>
           <div v-for="s in weakSpots" :key="s.name" class="muted small">• {{ s.name }} ({{ s.pct }}%)</div>
-          <button class="btn ghost sm" @click="learnLevel=qLevel;openLesson=null;tab='library'">Pelajari materi {{ qLevel.toUpperCase() }}</button>
+          <button class="btn ghost sm" @click="modulCat='bunpou';modulLevel=qLevel;modulQ='';modulPat=null;tab='library'">Pelajari materi {{ qLevel.toUpperCase() }}</button>
         </div>
         <div v-else class="card ok-card"><b><span v-html="ic('sparkles',16)"></span> Semua seksi lolos! Pertahankan!</b></div>
       </div>
@@ -1171,7 +1323,7 @@ const app = createApp({
     <nav class="nav">
       <div class="nav-logo"><span class="jp">日本語</span> NihongoLearn</div>
       <button :class="{on:tab==='home'}" @click="tab='home'"><span v-html="ic('home')"></span>Beranda</button>
-      <button :class="{on:tab==='library'}" @click="tab='library'"><span v-html="ic('layers')"></span>Materi</button>
+      <button :class="{on:tab==='library'}" @click="tab='library'"><span v-html="ic('layers')"></span>Modul</button>
       <button :class="{on:['quiz','quizrun','adaptiverun'].includes(tab)}" @click="tab='quiz'"><span v-html="ic('clock')"></span>Quiz</button>
       <button :class="{on:tab==='kamus'}" @click="tab='kamus'"><span v-html="ic('search')"></span>Kamus</button>
       <button :class="{on:tab==='games'}" @click="tab='games'"><span v-html="ic('gamepad')"></span>Game</button>
@@ -1481,6 +1633,9 @@ app.config.globalProperties.illus = illus;
 app.config.globalProperties.LV_ICON = LV_ICON;
 app.config.globalProperties.LIB_TYPES = LIB_TYPES;
 app.config.globalProperties.TYPE_ICON = TYPE_ICON;
+app.config.globalProperties.MODUL_CATS = MODUL_CATS;
+app.config.globalProperties.SSW_FIELDS = SSW_FIELDS;
+app.config.globalProperties.BANK_YEARS = BANK_YEARS;
 app.config.globalProperties.ALL_LESSONS = ALL_LESSONS;
 app.config.globalProperties.LEVEL_ORDER = LEVEL_ORDER;
 app.config.globalProperties.CHAPTERS = CHAPTERS;
