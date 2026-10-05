@@ -937,6 +937,33 @@ const app = createApp({
 });
 
 // ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) =====
+// Sebar posisi angka urutan goresan agar tidak bertabrakan (tolak-menolak sederhana)
+function spreadNums(strokes) {
+  const pts = strokes.map(s => ({ x: s.x, y: s.y }));
+  const MIN = 10;
+  for (let it = 0; it < 24; it++) {
+    let moved = false;
+    for (let i = 0; i < pts.length; i++) {
+      for (let j = i + 1; j < pts.length; j++) {
+        const dx = pts[j].x - pts[i].x, dy = pts[j].y - pts[i].y;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 0.01) { pts[j].x += 5; pts[j].y += 3; moved = true; }
+        else if (d < MIN) {
+          const push = (MIN - d) / 2, ux = dx / d, uy = dy / d;
+          pts[i].x -= ux * push; pts[i].y -= uy * push;
+          pts[j].x += ux * push; pts[j].y += uy * push;
+          moved = true;
+        }
+      }
+    }
+    if (!moved) break;
+  }
+  pts.forEach((p, k) => {
+    strokes[k].nx = Math.max(3, Math.min(106, p.x));
+    strokes[k].ny = Math.max(3, Math.min(106, p.y));
+  });
+  return strokes;
+}
 app.component('StrokeOrder', {
   props: ['ch'],
   data: () => ({ strokes: [], idx: 0, playing: false, timer: null, error: false, loading: true }),
@@ -958,11 +985,11 @@ app.component('StrokeOrder', {
         const doc = new DOMParser().parseFromString(t, 'image/svg+xml');
         const ps = [...doc.querySelectorAll('path')].filter(p => /-s\d+$/.test(p.id || ''));
         ps.sort((a, b) => parseInt(a.id.match(/-s(\d+)$/)[1]) - parseInt(b.id.match(/-s(\d+)$/)[1]));
-        this.strokes = ps.map(p => {
+        this.strokes = spreadNums(ps.map(p => {
           const d = p.getAttribute('d') || '';
           const pt = this.strokeStart(d);
           return { d, x: pt.x, y: pt.y };
-        }).filter(s => s.d);
+        }).filter(s => s.d));
         if (!this.strokes.length) this.error = true;
       } catch { this.error = true; }
       this.loading = false;
@@ -992,7 +1019,7 @@ app.component('StrokeOrder', {
         <svg viewBox="0 0 109 109" class="stroke-svg" aria-label="Animasi urutan goresan">
           <path v-for="(s,i) in strokes" :key="'g'+i" :d="s.d" class="ghost" fill="none" />
           <path v-for="(s,i) in strokes" :key="i" :d="s.d" class="trace" :class="{ done: i < idx }" pathLength="1" fill="none" />
-          <text v-for="(s,i) in strokes" :key="'n'+i" :x="s.x" :y="s.y" class="snum">{{ i + 1 }}</text>
+          <text v-for="(s,i) in strokes" :key="'n'+i" :x="s.nx" :y="s.ny" class="snum">{{ i + 1 }}</text>
         </svg>
         <p class="muted small center" style="margin:6px 0">Goresan {{ shownStroke() }} / {{ strokes.length }}</p>
         <div class="btn-row center">
@@ -1036,11 +1063,11 @@ app.component('WordStrokeOrder', {
             const doc = new DOMParser().parseFromString(t, 'image/svg+xml');
             const ps = [...doc.querySelectorAll('path')].filter(p => /-s\d+$/.test(p.id || ''));
             ps.sort((a, b) => parseInt(a.id.match(/-s(\d+)$/)[1]) - parseInt(b.id.match(/-s(\d+)$/)[1]));
-            const strokes = ps.map(p => {
+            const strokes = spreadNums(ps.map(p => {
               const d = p.getAttribute('d') || '';
               const m = /M([0-9.]+),([0-9.]+)/.exec(d);
               return { d, x: m ? +m[1] : 0, y: m ? +m[2] : 0 };
-            }).filter(s => s.d);
+            }).filter(s => s.d));
             return { ch, strokes };
           } catch { return { ch, strokes: [] }; }
         }));
@@ -1078,7 +1105,7 @@ app.component('WordStrokeOrder', {
             <svg viewBox="0 0 109 109" class="stroke-svg wsm" aria-label="Animasi urutan goresan">
               <path v-for="(st, j) in s.strokes" :key="'g'+j" :d="st.d" class="ghost" fill="none" />
               <path v-for="(st, j) in s.strokes" :key="j" :d="st.d" class="trace" :class="{ done: j < shownFor(i) }" pathLength="1" fill="none" />
-              <text v-for="(st, j) in s.strokes" :key="'n'+j" :x="st.x" :y="st.y" class="snum">{{ j + 1 }}</text>
+              <text v-for="(st, j) in s.strokes" :key="'n'+j" :x="st.nx" :y="st.ny" class="snum">{{ j + 1 }}</text>
             </svg>
           </div>
         </div>
