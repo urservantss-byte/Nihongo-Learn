@@ -203,3 +203,8 @@ h2.ttl + .muted, h2.ttl + p { margin-bottom: 8px; }
 [data-theme="zen"] .petal { display: none; }
 .toast { position: fixed; top: 14px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 11px 18px; border-radius: 999px; z-index: 99; font-size: 13.5px; animation: pop .25s; max-width: 90vw; }
 .kj-link { color: var(--pri-d); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.wstroke-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.wstroke-item { text-align: center; padding: 8px 6px 4px; border-radius: 14px; border: 2px solid transparent; transition: border-color .3s, background .3s; }
+.wstroke-item.active { border-color: var(--pri); background: color-mix(in srgb, var(--pri) 10%, transparent); }
+.wstroke-ch { font-size: 24px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+.stroke-svg.wsm { width: 118px; height: 118px; }

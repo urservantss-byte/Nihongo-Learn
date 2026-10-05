@@ -826,10 +826,7 @@ const app = createApp({
           </div>
           <div v-if="wordKanji().length" style="margin-top:10px">
             <div class="step-tag"><span v-html="ic('pen',12)"></span> Cara Menulis</div>
-            <div v-for="kc in wordKanji()" :key="'wk'+kc">
-              <p class="center" style="font-size:26px;margin:8px 0 0"><b>{{ kc }}</b></p>
-              <stroke-order :ch="kc" :key="kc"></stroke-order>
-            </div>
+            <word-stroke-order :kanjis="wordKanji()" :key="wordKanji().join('')"></word-stroke-order>
           </div>
         </div>
         <div v-if="kamusDetail.type==='kanji'">
@@ -995,6 +992,87 @@ app.component('StrokeOrder', {
           <button class="mini-btn" @click="step(-1)" :disabled="idx <= 0" title="Mundur">‹</button>
           <button class="btn sm" @click="play()">{{ playLabel() }}</button>
           <button class="mini-btn" @click="step(1)" :disabled="idx >= paths.length" title="Maju">›</button>
+          <button class="mini-btn" @click="replay()" title="Ulangi">↺</button>
+        </div>
+        <p class="muted small center" style="margin-top:6px">Urutan goresan: KanjiVG (CC BY-SA)</p>
+      </div>
+    </div>`
+});
+
+// ===== Animasi goresan gabungan: semua kanji dalam satu kata, sejajar, satu tombol play =====
+app.component('WordStrokeOrder', {
+  props: ['kanjis'],
+  data: () => ({ sets: [], idx: 0, playing: false, timer: null, error: false, loading: true }),
+  computed: {
+    total() { return this.sets.reduce((a, s) => a + s.paths.length, 0); },
+    activeIdx() {
+      let acc = 0;
+      for (let i = 0; i < this.sets.length; i++) {
+        acc += this.sets[i].paths.length;
+        if (this.idx < acc) return i;
+      }
+      return Math.max(0, this.sets.length - 1);
+    }
+  },
+  mounted() { this.load(); },
+  beforeUnmount() { clearTimeout(this.timer); },
+  methods: {
+    reset() { clearTimeout(this.timer); this.sets = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
+    svgUrl(ch) { return 'https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/' + ch.codePointAt(0).toString(16).padStart(5, '0') + '.svg'; },
+    async load() {
+      try {
+        const arr = await Promise.all((this.kanjis || []).map(async (ch) => {
+          try {
+            const r = await fetch(this.svgUrl(ch));
+            const t = await r.text();
+            if (!r.ok || t.indexOf('<svg') < 0) return { ch, paths: [] };
+            const doc = new DOMParser().parseFromString(t, 'image/svg+xml');
+            const ps = [...doc.querySelectorAll('path')].filter(p => /-s\d+$/.test(p.id || ''));
+            ps.sort((a, b) => parseInt(a.id.match(/-s(\d+)$/)[1]) - parseInt(b.id.match(/-s(\d+)$/)[1]));
+            return { ch, paths: ps.map(p => p.getAttribute('d')).filter(Boolean) };
+          } catch { return { ch, paths: [] }; }
+        }));
+        this.sets = arr.filter(s => s.paths.length);
+        if (!this.sets.length) this.error = true;
+      } catch { this.error = true; }
+      this.loading = false;
+    },
+    offset(i) { let a = 0; for (let k = 0; k < i; k++) a += this.sets[k].paths.length; return a; },
+    shownFor(i) { return Math.max(0, Math.min(this.sets[i].paths.length, this.idx - this.offset(i))); },
+    play() {
+      if (this.playing) { this.playing = false; clearTimeout(this.timer); return; }
+      if (this.idx >= this.total) this.idx = 0;
+      this.playing = true;
+      const tick = () => {
+        if (!this.playing) return;
+        if (this.idx >= this.total) { this.playing = false; return; }
+        this.idx++;
+        this.timer = setTimeout(tick, 650);
+      };
+      tick();
+    },
+    step(d) { this.playing = false; clearTimeout(this.timer); this.idx = Math.max(0, Math.min(this.total, this.idx + d)); },
+    replay() { this.playing = false; clearTimeout(this.timer); this.idx = 0; this.$nextTick(() => this.play()); },
+    playLabel() { return this.playing ? 'Jeda' : (this.idx > 0 && this.idx < this.total ? 'Lanjut' : 'Putar'); }
+  },
+  template: `
+    <div class="stroke-wrap">
+      <div v-if="loading" class="muted small center">Memuat animasi…</div>
+      <div v-else-if="error" class="muted small center">Animasi goresan belum tersedia untuk kata ini.</div>
+      <div v-else>
+        <div class="wstroke-row">
+          <div v-for="(s, i) in sets" :key="s.ch" class="wstroke-item" :class="{ active: activeIdx === i }">
+            <div class="wstroke-ch">{{ s.ch }}</div>
+            <svg viewBox="0 0 109 109" class="stroke-svg wsm" aria-label="Animasi urutan goresan">
+              <path v-for="(d, j) in s.paths" :key="j" :d="d" :class="{ done: j < shownFor(i) }" pathLength="1" fill="none" />
+            </svg>
+          </div>
+        </div>
+        <p class="muted small center" style="margin:6px 0">Goresan {{ idx }} / {{ total }}</p>
+        <div class="btn-row center">
+          <button class="mini-btn" @click="step(-1)" :disabled="idx <= 0" title="Mundur">‹</button>
+          <button class="btn sm" @click="play()">{{ playLabel() }}</button>
+          <button class="mini-btn" @click="step(1)" :disabled="idx >= total" title="Maju">›</button>
           <button class="mini-btn" @click="replay()" title="Ulangi">↺</button>
         </div>
         <p class="muted small center" style="margin-top:6px">Urutan goresan: KanjiVG (CC BY-SA)</p>
