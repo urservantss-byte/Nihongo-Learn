@@ -352,10 +352,11 @@ const app = createApp({
       return out.join('\n').replace(/\n{3,}/g, '\n\n').replace(/^\n+|\n+$/g, '');
     },
     toggleKvgBox(k) {
-      const kj = k.kj || k.ch;
+      const kj = (k && typeof k === 'object') ? (k.kj || k.ch) : k;
       if (!kj) return;
       this.kvgOpen[kj] = !this.kvgOpen[kj];
     },
+    kanjisOf(j) { const m = String(j || '').match(/[一-鿿]/g); return m || []; },
 
     saveTab() { const m = { quizrun: 'quiz', quizdone: 'quiz', adaptiverun: 'quiz', srsrun: 'saya' }; localStorage.setItem('nl_tab', m[this.tab] || this.tab); },
     saveQuizProgress() {
@@ -1156,7 +1157,7 @@ const app = createApp({
                   </div>
                   <div v-if="k.ex && k.ex.length" style="margin-top:8px;border-top:1px solid var(--line);padding-top:6px">
                     <div class="muted small" style="margin-bottom:2px">Anak kanji:</div>
-                    <div v-for="(e, ei) in k.ex" :key="ei" class="rowline" style="align-items:flex-start"><div><b>{{ e.j }}</b> <span class="muted small">{{ e.r }}</span><div class="muted small">{{ e.i }}</div></div><button class="mini-btn" @click="speak(e.j)">&#128266;</button></div>
+                    <div v-for="(e, ei) in k.ex" :key="ei" class="rowline" style="align-items:flex-start"><div><b>{{ e.j }}</b> <span class="muted small">{{ e.r }}</span><div class="muted small">{{ e.i }}</div><div v-if="kvgOpen['ex:'+(k.kj||k.ch)+':'+ei]" style="margin-top:6px"><WordStrokeOrder :kanjis="kanjisOf(e.j)" /></div></div><div style="display:flex;gap:6px;flex-shrink:0"><button v-if="kanjisOf(e.j).length" class="mini-btn" @click="toggleKvgBox('ex:'+(k.kj||k.ch)+':'+ei)" title="Cara tulis">&#9997;</button><button class="mini-btn" @click="speak(e.j)">&#128266;</button></div></div>
                   </div>
                 </div>
               </div>
@@ -1545,7 +1546,8 @@ app.component('StrokeOrder', {
   data: () => ({ strokes: [], idx: 0, playing: false, timer: null, error: false, loading: true }),
   computed: {
     urls() {
-      const hex = this.ch.codePointAt(0).toString(16).padStart(5, '0');
+      if (!this.ch) return [];
+      const hex = String(this.ch).codePointAt(0).toString(16).padStart(5, '0');
       return ['kanjivg/' + hex + '.svg', 'https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/' + hex + '.svg'];
     },
   },
@@ -1554,12 +1556,14 @@ app.component('StrokeOrder', {
   beforeUnmount() { clearTimeout(this.timer); },
   methods: {
     async load() {
+      try {
       for (const u of this.urls()) {
         try {
           const r = await fetch(u);
           const t = await r.text();
           if (!r.ok || !t.includes('<svg')) continue;
           const doc = new DOMParser().parseFromString(t, 'image/svg+xml');
+          if (doc.querySelector('parsererror')) continue;
           const ps = [...doc.querySelectorAll('path')].filter(p => /-s\d+$/.test(p.id || ''));
           ps.sort((a, b) => parseInt(a.id.match(/-s(\d+)$/)[1]) - parseInt(b.id.match(/-s(\d+)$/)[1]));
           const st = spreadNums(ps.map(p => {
@@ -1570,7 +1574,8 @@ app.component('StrokeOrder', {
           if (st.length) { this.strokes = st; this.loading = false; return; }
         } catch (e) {}
       }
-      this.error = true;
+      } catch (e) {}
+      if (!this.strokes.length) this.error = true;
       this.loading = false;
     },
     play() {
@@ -1631,15 +1636,17 @@ app.component('WordStrokeOrder', {
   beforeUnmount() { clearTimeout(this.timer); },
   methods: {
     reset() { clearTimeout(this.timer); this.sets = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
-    svgUrl(ch) { return 'https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/' + ch.codePointAt(0).toString(16).padStart(5, '0') + '.svg'; },
+    svgUrls(ch) { const hex = String(ch).codePointAt(0).toString(16).padStart(5, '0'); return ['kanjivg/' + hex + '.svg', 'https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/' + hex + '.svg']; },
     async load() {
       try {
         const arr = await Promise.all((this.kanjis || []).map(async (ch) => {
+          for (const u of this.svgUrls(ch)) {
           try {
-            const r = await fetch(this.svgUrl(ch));
+            const r = await fetch(u);
             const t = await r.text();
-            if (!r.ok || t.indexOf('<svg') < 0) return { ch, strokes: [] };
+            if (!r.ok || t.indexOf('<svg') < 0) continue;
             const doc = new DOMParser().parseFromString(t, 'image/svg+xml');
+            if (doc.querySelector('parsererror')) continue;
             const ps = [...doc.querySelectorAll('path')].filter(p => /-s\d+$/.test(p.id || ''));
             ps.sort((a, b) => parseInt(a.id.match(/-s(\d+)$/)[1]) - parseInt(b.id.match(/-s(\d+)$/)[1]));
             const strokes = spreadNums(ps.map(p => {
@@ -1647,8 +1654,10 @@ app.component('WordStrokeOrder', {
               const m = /M([0-9.]+),([0-9.]+)/.exec(d);
               return { d, x: m ? +m[1] : 0, y: m ? +m[2] : 0 };
             }).filter(s => s.d));
-            return { ch, strokes };
-          } catch { return { ch, strokes: [] }; }
+            if (strokes.length) return { ch, strokes };
+          } catch {}
+          }
+          return { ch, strokes: [] };
         }));
         this.sets = arr.filter(s => s.strokes.length);
         if (!this.sets.length) this.error = true;
