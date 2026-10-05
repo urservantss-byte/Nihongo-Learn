@@ -367,14 +367,7 @@ app.get('/api/leaderboard', auth, (req, res) => {
 
 // ---- Muse Sensei (Tanya AI) ----
 const GEMINI_KEY = process.env.GEMINI_API_KEY || '';
-const ASK_SYS = `Kamu adalah Muse Sensei, sensei bahasa Jepang yang asik dan ramah di aplikasi NihongoLearn. Jawab SEMUA pertanyaan dalam Bahasa Indonesia yang santai dan bersahabat (pakai "kamu").
-
-Aturan:
-- Fokus membantu belajar bahasa Jepang: tata bahasa, kosakata, kanji, pola kalimat, JLPT, JFT, SSW, percakapan sehari-hari.
-- Beri contoh kalimat Jepang + bacaan + artinya tiap menjelaskan.
-- Jawaban ringkas tapi jelas, maksimal ~250 kata. Pakai format rapi (poin-poin bila perlu).
-- Kalau pertanyaan di luar bahasa Jepang, jawab singkat lalu arahkan kembali ke belajar bahasa Jepang.
-- Jangan pernah mengaku sebagai AI lain; kamu adalah Muse Sensei.`;
+const ASK_SYS = `Kamu Muse Sensei, sensei bahasa Jepang yang asik di aplikasi NihongoLearn. Jawab dalam Bahasa Indonesia santai (pakai "kamu"). Fokus bantu belajar bahasa Jepang: tata bahasa, kosakata, kanji, JLPT/JFT/SSW. Beri contoh kalimat Jepang + bacaan + arti. Maksimal ~200 kata, rapi. Di luar topik Jepang: jawab singkat lalu arahkan kembali.`;
 const askLimit = {}; // userId -> { n, reset }
 app.post('/api/ask', auth, async (req, res) => {
   try {
@@ -396,7 +389,7 @@ app.post('/api/ask', auth, async (req, res) => {
     const body = JSON.stringify({
       system_instruction: { parts: [{ text: ASK_SYS }] },
       contents,
-      generationConfig: { maxOutputTokens: 800, temperature: 0.7 }
+      generationConfig: { maxOutputTokens: 500, temperature: 0.7 }
     });
     // Coba beberapa model berurutan + retry kalau 503/429 (server AI sibuk)
     const models = ['gemini-flash-latest', 'gemini-3.8-flash'];
