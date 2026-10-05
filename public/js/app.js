@@ -1021,7 +1021,7 @@ const app = createApp({
         </div>
 
         <div v-else>
-          <button class="btn ghost sm" @click="closeSim();modulCat=null;modulSub=null;modulCh=null"><span v-html="ic('back',15)"></span> Modul</button>
+          <button class="btn ghost sm" style="margin-bottom:10px" @click="closeSim();modulCat=null;modulSub=null;modulCh=null"><span v-html="ic('back',15)"></span> Modul</button>
 
           <div v-if="sim">
             <div class="card pop">
@@ -1035,7 +1035,7 @@ const app = createApp({
                 <div v-if="simCur">
                   <div class="muted small">Soal {{ sim.qPos+1 }}/{{ simSecQs.length }}</div>
                   <div v-if="simCur.q.img"><img :src="simCur.q.img" style="max-width:100%;border-radius:8px;margin:8px 0"></div>
-                  <h3 class="q-text" style="white-space:pre-line">{{ simCur.q.q }}</h3>
+                  <h3 class="q-text">{{ simCur.q.q }}</h3>
                   <div v-if="simCur.q.rd" class="muted small">{{ simCur.q.rd }}</div>
                   <button v-for="(o, oi) in simCur.q.o" :key="oi" class="opt" :class="{pick: sim.ans[simCur.i]===oi}" @click="simAnswer(oi)">{{ o }}</button>
                 </div>
@@ -1059,7 +1059,7 @@ const app = createApp({
                 <p class="muted small">{{ sim.pkg.source }} &middot; {{ sim.pkg.note }}</p>
                 <div style="text-align:left;margin-top:12px"><b>Pembahasan:</b>
                   <div v-for="(qq, qi) in sim.pkg.questions" :key="qi" class="card small" style="margin:8px 0">
-                    <b>{{ qi+1 }}. <span style="white-space:pre-line">{{ qq.q }}</span></b>
+                    <b>{{ qi+1 }}. {{ qq.q }}</b>
                     <div v-if="qq.a===null || qq.a===undefined" class="muted small">Kunci menyusul</div>
                     <div v-else class="small" :style="{color: sim.ans[qi]===qq.a ? 'var(--ok)' : 'var(--bad)'}">{{ sim.ans[qi]===qq.a ? '&#10003; Benar' : '&#10007; Kurang tepat &mdash; jawaban: ' + qq.o[qq.a] }}</div>
                     <div v-if="qq.ex" class="muted small">&#128161; {{ qq.ex }}</div>
@@ -1110,7 +1110,7 @@ const app = createApp({
               </div>
             </div>
             <div v-else>
-              <button class="btn ghost sm" @click="modulCh=null"><span v-html="ic('back',15)"></span> Daftar bab</button>
+              <button class="btn ghost sm" style="margin-bottom:10px" @click="modulCh=null"><span v-html="ic('back',15)"></span> Daftar bab</button>
               <div v-if="modulCat==='kotoba'">
                 <div v-for="w in modulChItems" :key="w.id" class="rowline" style="align-items:flex-start"><div><b>{{ w.kj || w.jp }}</b> <span class="muted small">{{ w.r }}</span><div class="muted small">{{ w.id }}</div><div v-if="w.note" class="small" style="color:var(--pri-d)">&#128161; {{ w.note }}</div></div><button class="mini-btn" @click="speak(w.jp)">&#128266;</button></div>
               </div>
@@ -1135,7 +1135,7 @@ const app = createApp({
               </div>
             </div>
             <div v-else>
-              <button class="btn ghost sm" @click="modulSub=null"><span v-html="ic('back',15)"></span> Pilih tahun</button>
+              <button class="btn ghost sm" style="margin-bottom:10px" @click="modulSub=null"><span v-html="ic('back',15)"></span> Pilih tahun</button>
               <div class="pill-row">
                 <button v-for="lv in ['n5','n4','n3','n2','n1']" :key="'bl-'+lv" class="pill" :class="{on: modulLevel===lv}" @click="modulLevel=lv">{{ lv.toUpperCase() }}</button>
               </div>
@@ -1174,7 +1174,7 @@ const app = createApp({
               </div>
             </div>
             <div v-else>
-              <button class="btn ghost sm" @click="modulSub=null"><span v-html="ic('back',15)"></span> Pilih bidang</button>
+              <button class="btn ghost sm" style="margin-bottom:10px" @click="modulSub=null"><span v-html="ic('back',15)"></span> Pilih bidang</button>
               <div v-if="sswPkgs.length" class="lib-grid">
                 <div v-for="p in sswPkgs" :key="p.id" class="lvl" @click="simPkg=p">
                   <div class="badge"><span style="font-size:22px">&#127919;</span></div>
@@ -1188,7 +1188,7 @@ const app = createApp({
         </div>
       </div>
       <div v-else class="card pop">
-        <button class="btn ghost sm" @click="modulPat=null"><span v-html="ic('back',15)"></span> Kembali</button>
+        <button class="btn ghost sm" style="margin-bottom:10px" @click="modulPat=null"><span v-html="ic('back',15)"></span> Kembali</button>
         <div class="step-tag">&#128214; {{ modulPat.level.toUpperCase() }} &middot; Bab {{ modulPat.bab }}</div>
         <h3 style="margin:6px 0">{{ modulPat.pattern }}</h3>
         <p class="muted small">{{ modulPat.arti }}</p>
