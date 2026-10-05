@@ -245,7 +245,7 @@ const app = createApp({
       return this.secScores.filter(s => s.pct < 60);
     },
   },
-  watch: { tab() { this.saveTab(); } },
+  watch: { tab() { this.saveTab(); window.scrollTo({ top: 0, behavior: 'smooth' }); } },
   methods: {
     saveTab() { const m = { quizrun: 'quiz', quizdone: 'quiz', adaptiverun: 'quiz', srsrun: 'saya' }; localStorage.setItem('nl_tab', m[this.tab] || this.tab); },
     saveQuizProgress() {
@@ -728,7 +728,7 @@ const app = createApp({
 
   <div v-else>
     <!-- ============ HOME: materi harian ============ -->
-    <section v-if="tab==='home'">
+    <section v-if="tab==='home'" class="tabsec">
       <div class="card hero">
         <div class="hero-mascot">{{ mascot.e }}</div>
         <div class="hero-info">
@@ -842,7 +842,7 @@ const app = createApp({
     </section>
 
     <!-- ============ PERPUSTAKAAN ============ -->
-    <section v-if="tab==='library'">
+    <section v-if="tab==='library'" class="tabsec">
       <h2 class="ttl"><span v-html="ic('layers')"></span> Perpustakaan Materi</h2>
       <p class="muted small">Koleksi lengkap kotoba, kanji, bunpou & choukai. Cari atau jelajahi per level.</p>
       <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="libQ" placeholder="Cari materi… cth: taberu, 食, te-form"></div>
@@ -884,7 +884,7 @@ const app = createApp({
     </section>
 
     <!-- ============ QUIZ ============ -->
-    <section v-if="tab==='quiz'">
+    <section v-if="tab==='quiz'" class="tabsec">
       <div v-if="quizResume" class="card warn pop">
         <b>📝 Ada quiz yang belum selesai!</b>
         <p class="muted small">{{ quizResume.quizMode === 'cerdas' ? 'Review Cerdas' : (quizResume.quizMode === 'simulasi' ? 'Simulasi Ujian' : 'Kuis Acak') }} · soal {{ quizResume.qIdx + 1 }}/{{ quizResume.questions.length }} · {{ quizResume.qAns.filter(a => a.ok).length }} benar</p>
@@ -920,7 +920,7 @@ const app = createApp({
     </section>
 
     <!-- ============ QUIZ RUN ============ -->
-    <section v-if="tab==='quizrun' && secQs.length" class="card pop">
+    <section v-if="tab==='quizrun' && secQs.length" class="card pop tabsec">
       <div class="q-head">
         <b>{{ quizSecs[qSec].name }} ({{ qLevel.toUpperCase() }})</b>
         <span class="timer" :class="{low: qTime<60}"><span v-html="ic('clock',17)"></span> {{ fmt(qTime) }}</span>
@@ -936,7 +936,7 @@ const app = createApp({
     </section>
 
     <!-- ============ ADAPTIVE RUN ============ -->
-    <section v-if="tab==='adaptiverun' && adaptiveQs && adaptiveQs.length" class="card pop">
+    <section v-if="tab==='adaptiverun' && adaptiveQs && adaptiveQs.length" class="card pop tabsec">
       <div class="q-head"><b>🧠 Review Cerdas</b><span class="muted small">Soal {{ qIdx+1 }}/{{ adaptiveQs.length }}</span></div>
       <div class="qbar"><i :style="{width: (qIdx/adaptiveQs.length*100)+'%'}"></i></div>
       <h3 class="q-text">{{ adaptiveQs[qIdx].q }}</h3>
@@ -946,7 +946,7 @@ const app = createApp({
     </section>
 
     <!-- ============ QUIZ DONE ============ -->
-    <section v-if="tab==='quizdone'" class="card center">
+    <section v-if="tab==='quizdone'" class="card center tabsec">
       <div v-html="illus('trophy')"></div>
       <h2>Skor: {{ qScore }}/{{ qAns.length }} ({{ qAns.length ? Math.round(qScore/qAns.length*100) : 0 }}%)</h2>
       <p class="muted">{{ qScore/qAns.length >= .7 ? 'Sugoi! 🎉' : qScore/qAns.length >= .4 ? 'Lumayan, teruskan! 💪' : 'Ayo belajar lagi! 📚' }}</p>
@@ -964,7 +964,7 @@ const app = createApp({
     </section>
 
     <!-- ============ GAMES ============ -->
-    <section v-if="tab==='games'">
+    <section v-if="tab==='games'" class="tabsec">
       <h2 class="ttl"><span v-html="ic('gamepad')"></span> Games</h2>
       <div class="mode-grid">
         <div class="mode" :class="{on: gTab==='match'}" @click="gTab='match'"><div class="mode-e" v-html="ic('card',30)"></div><b>Kana Match</b></div>
@@ -992,7 +992,7 @@ const app = createApp({
     </section>
 
     <!-- ============ KAMUS ============ -->
-    <section v-if="tab==='kamus'">
+    <section v-if="tab==='kamus'" class="tabsec">
       <h2 class="ttl"><span v-html="ic('search')"></span> Kamus</h2>
       <p class="muted small">218rb+ kosakata & 13rb kanji. Cari pakai kanji, kana, romaji, atau arti.</p>
       <div class="mode-grid" style="grid-template-columns:1fr 1fr">
@@ -1065,7 +1065,7 @@ const app = createApp({
     </section>
 
     <!-- ============ SAYA ============ -->
-    <section v-if="tab==='saya'">
+    <section v-if="tab==='saya'" class="tabsec">
       <div class="card hero">
         <div class="hero-mascot">{{ mascot.e }}</div>
         <div class="hero-info">
@@ -1113,7 +1113,7 @@ const app = createApp({
     </section>
 
     <!-- ============ SRS RUN ============ -->
-    <section v-if="tab==='srsrun' && srsDue[srsIdx]" class="card pop center">
+    <section v-if="tab==='srsrun' && srsDue[srsIdx]" class="card pop center tabsec">
       <p class="muted small">Flashcard {{ srsIdx+1 }}/{{ srsDue.length }} · {{ srsDone }} selesai</p>
       <div class="flash-front">{{ srsDue[srsIdx].front }}</div>
       <div v-if="srsDue[srsIdx].kind==='kanji' && !srsShow">
