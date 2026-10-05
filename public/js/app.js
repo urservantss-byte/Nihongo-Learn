@@ -329,6 +329,17 @@ const app = createApp({
     chQuiz: { deep: true, handler() { this.saveChapterState(); } },
   },
   methods: {
+    fmtQ(t) {
+      if (!t) return '';
+      var lines = String(t).split('\n').map(function(s){ return s.trim(); }).filter(function(s){ return s.length > 0; });
+      var out = '';
+      lines.forEach(function(ln, i) {
+        if (i === 0) { out = ln; return; }
+        if (/^(\d+\s*[\)\.]|（|\[)/.test(ln)) out += '\n' + ln;
+        else out += ' ' + ln;
+      });
+      return out;
+    },
     saveTab() { const m = { quizrun: 'quiz', quizdone: 'quiz', adaptiverun: 'quiz', srsrun: 'saya' }; localStorage.setItem('nl_tab', m[this.tab] || this.tab); },
     saveQuizProgress() {
       if (!['quizrun', 'adaptiverun'].includes(this.tab) || this.qDone) return;
@@ -1035,7 +1046,7 @@ const app = createApp({
                 <div v-if="simCur">
                   <div class="muted small">Soal {{ sim.qPos+1 }}/{{ simSecQs.length }}</div>
                   <div v-if="simCur.q.img"><img :src="simCur.q.img" style="max-width:100%;border-radius:8px;margin:8px 0"></div>
-                  <h3 class="q-text">{{ simCur.q.q }}</h3>
+                  <h3 class="q-text" style="white-space:pre-line">{{ fmtQ(simCur.q.q) }}</h3>
                   <div v-if="simCur.q.rd" class="muted small">{{ simCur.q.rd }}</div>
                   <button v-for="(o, oi) in simCur.q.o" :key="oi" class="opt" :class="{pick: sim.ans[simCur.i]===oi}" @click="simAnswer(oi)">{{ o }}</button>
                 </div>
@@ -1059,7 +1070,7 @@ const app = createApp({
                 <p class="muted small">{{ sim.pkg.source }} &middot; {{ sim.pkg.note }}</p>
                 <div style="text-align:left;margin-top:12px"><b>Pembahasan:</b>
                   <div v-for="(qq, qi) in sim.pkg.questions" :key="qi" class="card small" style="margin:8px 0">
-                    <b>{{ qi+1 }}. {{ qq.q }}</b>
+                    <b style="white-space:pre-line">{{ qi+1 }}. {{ fmtQ(qq.q) }}</b>
                     <div v-if="qq.a===null || qq.a===undefined" class="muted small">Kunci menyusul</div>
                     <div v-else class="small" :style="{color: sim.ans[qi]===qq.a ? 'var(--ok)' : 'var(--bad)'}">{{ sim.ans[qi]===qq.a ? '&#10003; Benar' : '&#10007; Kurang tepat &mdash; jawaban: ' + qq.o[qq.a] }}</div>
                     <div v-if="qq.ex" class="muted small">&#128161; {{ qq.ex }}</div>
