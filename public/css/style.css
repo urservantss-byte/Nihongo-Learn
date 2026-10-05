@@ -231,7 +231,10 @@ h2.ttl + .muted, h2.ttl + p { margin-bottom: 8px; }
 .penjelasan-text { white-space: normal; line-height: 1.8; }
 .penjelasan-text p { margin: 0 0 10px; }
 .penjelasan-text p:last-child { margin-bottom: 0; }
-.penjelasan-text ul, .penjelasan-text ol { padding-left: 1.35em; margin: 4px 0 12px; }
+/* jeda antar blok pembahasan (sub-judul bernomor, jebakan, ringkasan) */
+.penjelasan-text p:has(> b:only-child) { margin-top: 20px; }
+.penjelasan-text p:has(> b:only-child):first-child { margin-top: 0; }
+.penjelasan-text ul, .penjelasan-text ol { padding-left: 1.35em; margin: 4px 0 14px; }
 .penjelasan-text li { margin: 4px 0; }
 .penjelasan-text li::marker { color: var(--pri-d); }
 @media (max-width: 768px) {
