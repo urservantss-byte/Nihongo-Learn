@@ -331,14 +331,18 @@ const app = createApp({
   methods: {
     fmtQ(t) {
       if (!t) return '';
-      var lines = String(t).split('\n').map(function(s){ return s.trim(); }).filter(function(s){ return s.length > 0; });
-      var out = '';
-      lines.forEach(function(ln, i) {
-        if (i === 0) { out = ln; return; }
-        if (/^(\d+\s*[\)\.]|（|\[)/.test(ln)) out += '\n' + ln;
-        else out += ' ' + ln;
-      });
-      return out;
+      var lines = String(t).split('\n');
+      var out = [];
+      for (var i = 0; i < lines.length; i++) {
+        var ln = lines[i].trim();
+        if (!ln) { out.push(''); continue; }
+        var prev = out.length ? out[out.length - 1] : null;
+        var startMarker = /^(\d+\s*[\)\.]|\uff08|\[|[・\u2022\-])/.test(ln);
+        if (prev && prev !== '' && !startMarker && !/[。、！？：:;?.!」』）)\]\}]$/.test(prev)) {
+          out[out.length - 1] = prev + ' ' + ln;
+        } else { out.push(ln); }
+      }
+      return out.join('\n').replace(/\n{3,}/g, '\n\n').replace(/^\n+|\n+$/g, '');
     },
     saveTab() { const m = { quizrun: 'quiz', quizdone: 'quiz', adaptiverun: 'quiz', srsrun: 'saya' }; localStorage.setItem('nl_tab', m[this.tab] || this.tab); },
     saveQuizProgress() {
