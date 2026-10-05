@@ -57,6 +57,16 @@ CREATE TABLE IF NOT EXISTS game_scores (
   score INTEGER NOT NULL,
   created_at TEXT DEFAULT (datetime('now'))
 );
+CREATE TABLE IF NOT EXISTS ask_queue (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL,
+  question TEXT NOT NULL,
+  history TEXT DEFAULT '[]',
+  status TEXT DEFAULT 'pending',
+  answer TEXT DEFAULT '',
+  created_at TEXT DEFAULT (datetime('now')),
+  answered_at TEXT
+);
 -- XP, koin, SRS, statistik soal (pola Duolingo/WaniKani/Renshuu)
 `);
 // kolom baru users (aman untuk DB lama)
@@ -365,66 +375,46 @@ app.get('/api/leaderboard', auth, (req, res) => {
   res.json({ board: rows, my_weekly: me });
 });
 
-// ---- Muse Sensei (Tanya AI) ----
-const GEMINI_KEY = process.env.GEMINI_API_KEY || '';
-const ASK_SYS = `Kamu Muse Sensei, sensei bahasa Jepang yang asik di aplikasi NihongoLearn. Jawab dalam Bahasa Indonesia santai (pakai "kamu"). Fokus bantu belajar bahasa Jepang: tata bahasa, kosakata, kanji, JLPT/JFT/SSW. Beri contoh kalimat Jepang + bacaan + arti. Maksimal ~200 kata, rapi. Di luar topik Jepang: jawab singkat lalu arahkan kembali.`;
+// ---- Muse Sensei (Tanya AI) — dijawab langsung oleh Muse via antrean ----
+const ASK_WORKER_SECRET = process.env.ASK_WORKER_SECRET || '';
 const askLimit = {}; // userId -> { n, reset }
-app.post('/api/ask', auth, async (req, res) => {
+app.post('/api/ask', auth, (req, res) => {
   try {
-    if (!GEMINI_KEY) return res.status(503).json({ error: 'Layanan AI belum aktif' });
     const q = String(req.body.q || '').trim();
     if (!q) return res.status(400).json({ error: 'Pertanyaannya kosong' });
     if (q.length > 1000) return res.status(400).json({ error: 'Pertanyaan terlalu panjang (maks 1000 karakter)' });
-    // rate limit: 30/jam per user
     const uid = req.user.id, now = Date.now();
     const l = askLimit[uid] || { n: 0, reset: now + 3600000 };
     if (now > l.reset) { l.n = 0; l.reset = now + 3600000; }
     if (l.n >= 30) return res.status(429).json({ error: 'Batas 30 pertanyaan/jam tercapai, coba lagi nanti ya' });
     l.n++; askLimit[uid] = l;
-    const hist = Array.isArray(req.body.hist) ? req.body.hist.slice(-6) : [];
-    const contents = hist
-      .filter(m => m && (m.role === 'user' || m.role === 'ai') && m.text)
-      .map(m => ({ role: m.role === 'ai' ? 'model' : 'user', parts: [{ text: String(m.text).slice(0, 1000) }] }));
-    contents.push({ role: 'user', parts: [{ text: q }] });
-    const body = JSON.stringify({
-      system_instruction: { parts: [{ text: ASK_SYS }] },
-      contents,
-      generationConfig: { maxOutputTokens: 500, temperature: 0.7 }
-    });
-    // Coba beberapa model berurutan; hemat kuota: tanpa retry agresif
-    const models = ['gemini-flash-latest', 'gemini-3.8-flash'];
-    let text = '';
-    for (const m of models) {
-      try {
-        const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + m + ':generateContent?key=' + GEMINI_KEY, {
-          method: 'POST', headers: { 'Content-Type': 'application/json' }, body
-        });
-        const d = await r.json().catch(() => ({}));
-        if (r.ok && d.candidates && d.candidates[0] && d.candidates[0].content) {
-          text = d.candidates[0].content.parts.map(p => p.text || '').join('').trim();
-          break;
-        }
-        // 503 = server sibuk sesaat -> tunggu 3 detik, coba sekali lagi
-        if (r.status === 503) {
-          await new Promise(r2 => setTimeout(r2, 3000));
-          const r2 = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + m + ':generateContent?key=' + GEMINI_KEY, {
-            method: 'POST', headers: { 'Content-Type': 'application/json' }, body
-          });
-          const d2 = await r2.json().catch(() => ({}));
-          if (r2.ok && d2.candidates && d2.candidates[0] && d2.candidates[0].content) {
-            text = d2.candidates[0].content.parts.map(p => p.text || '').join('').trim();
-            break;
-          }
-        }
-        // 429 = kuota habis -> langsung berhenti, jangan boros
-        if (r.status === 429) break;
-      } catch {}
-    }
-    if (!text) return res.status(502).json({ error: 'Kuota AI gratis habis, coba lagi 1-2 menit ya 🙏' });
-    res.json({ a: text });
+    const hist = Array.isArray(req.body.hist) ? req.body.hist.slice(-6).map(m => ({ role: m.role, text: String(m.text || '').slice(0, 500) })) : [];
+    const r = db.prepare(`INSERT INTO ask_queue (user_id, question, history) VALUES (?,?,?)`).run(uid, q, JSON.stringify(hist));
+    res.json({ id: r.lastInsertRowid, status: 'pending' });
   } catch (e) {
-    res.status(502).json({ error: 'Sensei lagi sibuk, coba lagi sebentar ya' });
+    res.status(500).json({ error: 'Gagal mengirim pertanyaan' });
   }
+});
+app.get('/api/ask/result/:id', auth, (req, res) => {
+  const row = db.prepare(`SELECT id, status, answer FROM ask_queue WHERE id = ? AND user_id = ?`).get(req.params.id, req.user.id);
+  if (!row) return res.status(404).json({ error: 'Tidak ketemu' });
+  res.json({ status: row.status, answer: row.answer || '' });
+});
+function workerAuth(req, res, next) {
+  if (!ASK_WORKER_SECRET || req.headers['x-worker-secret'] !== ASK_WORKER_SECRET)
+    return res.status(403).json({ error: 'forbidden' });
+  next();
+}
+app.get('/api/ask/pending', workerAuth, (req, res) => {
+  const rows = db.prepare(`SELECT id, user_id, question, history FROM ask_queue WHERE status = 'pending' ORDER BY id LIMIT 10`).all();
+  if (rows.length) db.prepare(`UPDATE ask_queue SET status = 'processing' WHERE id IN (${rows.map(() => '?').join(',')})`).run(...rows.map(r => r.id));
+  res.json({ jobs: rows });
+});
+app.post('/api/ask/answer', workerAuth, (req, res) => {
+  const { id, answer } = req.body || {};
+  if (!id || !answer) return res.status(400).json({ error: 'id & answer wajib' });
+  db.prepare(`UPDATE ask_queue SET status = 'done', answer = ?, answered_at = datetime('now') WHERE id = ?`).run(String(answer).slice(0, 4000), id);
+  res.json({ ok: true });
 });
 
 // ---- SRS flashcards (pola WaniKani/Mazii) ----

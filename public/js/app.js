@@ -708,13 +708,21 @@ const app = createApp({
       try {
         const hist = this.askMsgs.slice(-7, -1).map(m => ({ role: m.role, text: m.text }));
         const d = await api('/api/ask', { method: 'POST', body: JSON.stringify({ q, hist }) });
-        this.askMsgs.push({ role: 'ai', text: d.a });
+        // polling jawaban dari Muse Sensei (maks ~3 menit)
+        let answer = '';
+        for (let i = 0; i < 45; i++) {
+          await new Promise(r => setTimeout(r, 4000));
+          try {
+            const r2 = await api('/api/ask/result/' + d.id);
+            if (r2.status === 'done' && r2.answer) { answer = r2.answer; break; }
+          } catch {}
+        }
+        this.askMsgs.push({ role: 'ai', text: answer || '😅 Muse Sensei belum sempat jawab, coba kirim ulang ya' });
       } catch (e) {
-        this.askMsgs.push({ role: 'ai', text: '😅 ' + (e.message || 'Sensei lagi sibuk, coba lagi ya') });
+        this.askMsgs.push({ role: 'ai', text: '😅 ' + (e.message || 'Gagal mengirim, coba lagi ya') });
       }
       this.askLoading = false; this.saveAsk(); this.scrollAsk();
-    },
-    // ---- kamus ----
+    },    // ---- kamus ----
     jlptLabel(j) { return ({ 4: 'N5', 3: 'N4', 2: 'N3', 1: 'N1' })[j] || ''; },
     async browseKanji() {
       // jelajahi kanji per level JLPT (N5=103, N4=181, dst dari KANJIDIC2)
