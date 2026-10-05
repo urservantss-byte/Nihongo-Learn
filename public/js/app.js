@@ -176,6 +176,10 @@ const app = createApp({
       return t[this.tab] || '';
     },
     user() { return store.user; },
+    myChapters() {
+      const lv = (store.user && store.user.level ? store.user.level : 'n5').toLowerCase();
+      return CHAPTERS[lv] || CHAPTERS['n5'] || [];
+    },
     mascot() { return mascotFor(store.user?.xp); },
     doneSet() { return new Set(store.done); },
     levelProgress() {
@@ -275,10 +279,6 @@ const app = createApp({
     },
     discardSavedQuiz() { this.clearQuizProgress(); },
     // ---- chapter (jalur belajar) ----
-    myChapters() {
-      const lv = (store.user && store.user.level ? store.user.level : 'n5').toLowerCase();
-      return CHAPTERS[lv] || CHAPTERS['n5'] || [];
-    },
     chapterState(ch) {
       const chs = this.myChapters;
       const idx = chs.findIndex(c => c.id === ch.id);
