@@ -391,29 +391,36 @@ app.post('/api/ask', auth, async (req, res) => {
       contents,
       generationConfig: { maxOutputTokens: 500, temperature: 0.7 }
     });
-    // Coba beberapa model berurutan + retry kalau 503/429 (server AI sibuk)
+    // Coba beberapa model berurutan; hemat kuota: tanpa retry agresif
     const models = ['gemini-flash-latest', 'gemini-3.8-flash'];
     let text = '';
     for (const m of models) {
-      for (let attempt = 0; attempt < 2 && !text; attempt++) {
-        try {
-          const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + m + ':generateContent?key=' + GEMINI_KEY, {
+      try {
+        const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + m + ':generateContent?key=' + GEMINI_KEY, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body
+        });
+        const d = await r.json().catch(() => ({}));
+        if (r.ok && d.candidates && d.candidates[0] && d.candidates[0].content) {
+          text = d.candidates[0].content.parts.map(p => p.text || '').join('').trim();
+          break;
+        }
+        // 503 = server sibuk sesaat -> tunggu 3 detik, coba sekali lagi
+        if (r.status === 503) {
+          await new Promise(r2 => setTimeout(r2, 3000));
+          const r2 = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + m + ':generateContent?key=' + GEMINI_KEY, {
             method: 'POST', headers: { 'Content-Type': 'application/json' }, body
           });
-          const d = await r.json().catch(() => ({}));
-          if (!r.ok) console.log(`[ask] ${m} -> ${r.status}: ${JSON.stringify(d).slice(0, 200)}`);
-          if ((r.status === 503 || r.status === 429) && attempt === 0) {
-            await new Promise(r2 => setTimeout(r2, 1500));
-            continue;
+          const d2 = await r2.json().catch(() => ({}));
+          if (r2.ok && d2.candidates && d2.candidates[0] && d2.candidates[0].content) {
+            text = d2.candidates[0].content.parts.map(p => p.text || '').join('').trim();
+            break;
           }
-          if (r.ok && d.candidates && d.candidates[0] && d.candidates[0].content) {
-            text = d.candidates[0].content.parts.map(p => p.text || '').join('').trim();
-          }
-        } catch {}
-      }
-      if (text) break;
+        }
+        // 429 = kuota habis -> langsung berhenti, jangan boros
+        if (r.status === 429) break;
+      } catch {}
     }
-    if (!text) return res.status(502).json({ error: 'Server AI lagi penuh, coba lagi 1-2 menit ya 🙏' });
+    if (!text) return res.status(502).json({ error: 'Kuota AI gratis habis, coba lagi 1-2 menit ya 🙏' });
     res.json({ a: text });
   } catch (e) {
     res.status(502).json({ error: 'Sensei lagi sibuk, coba lagi sebentar ya' });
