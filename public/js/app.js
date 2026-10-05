@@ -2,7 +2,7 @@
 const { createApp, reactive } = Vue;
 
 const store = reactive({
-  user: null, token: localStorage.getItem('nl_token') || '',
+  user: null, token: localStorage.getItem('nl_token') || '', authChecked: false,
   theme: localStorage.getItem('nl_theme') || 'sakura',
   done: [], stats: null, quizHist: [], board: [],
 });
@@ -54,6 +54,7 @@ const ICONS = {
   user: '<circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c.8-3.6 3.9-5.5 7.5-5.5s6.7 1.9 7.5 5.5"/>',
   calendar: '<rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/><path d="m9.5 15 1.8 1.8 3.2-3.2"/>',
   layers: '<path d="m12 3 9 4.5-9 4.5-9-4.5z"/><path d="m3 12.5 9 4.5 9-4.5"/><path d="m3 17 9 4.5L21 17"/>',
+  menu: '<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>',
   trophy: '<path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4.5a2.5 2.5 0 0 0 2.6 4.5M17 6h2.5a2.5 2.5 0 0 1-2.6 4.5"/><path d="M12 14v3M8.5 21h7M10 17c0 1.5-1 2-2.5 2.5M14 17c0 1.5 1 2 2.5 2.5"/>',
   chart: '<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M8 17v-4M13 17V7M18 17v-7"/>',
   sliders: '<path d="M4 21v-6M4 9V3M12 21v-9M12 6V3M20 21v-4M20 11V3"/><path d="M2 15h4M10 8h4M18 17h4"/>',
@@ -165,6 +166,7 @@ const app = createApp({
     srsDue: [], srsTotal: 0, srsIdx: 0, srsShow: false, srsTyped: '', srsDone: 0,
     // saya
     myWeekly: 0,
+    sbHidden: localStorage.getItem('nl_sb') === '1',
   }),
   computed: {
     pageTitle() {
@@ -264,17 +266,21 @@ const app = createApp({
     },
     logout() { saveToken(''); store.user = null; this.tab = 'home'; },
     async refresh() {
-      if (!store.token) return;
+      if (!store.token) { store.authChecked = true; return; }
       try {
         const d = await api('/api/me'); store.user = d.user; setTheme(d.user.theme || 'sakura');
+      } catch { this.logout(); store.authChecked = true; return; }
+      store.authChecked = true;
+      try {
         const p = await api('/api/progress'); store.done = p.done;
         const s = await api('/api/stats'); store.stats = s;
         const h = await api('/api/quiz/history'); store.quizHist = h.history;
         const b = await api('/api/leaderboard'); store.board = b.board; this.myWeekly = b.my_weekly;
         const sr = await api('/api/srs'); this.srsDue = sr.due; this.srsTotal = sr.total;
-      } catch { this.logout(); }
+      } catch (e) { console.warn('refresh data:', e.message); }
     },
     toggleTheme() { setTheme(store.theme === 'sakura' ? 'zen' : 'sakura'); toast(store.theme === 'sakura' ? '🌸 Tema Sakura' : '⛩️ Tema Zen'); },
+    toggleSb() { this.sbHidden = !this.sbHidden; localStorage.setItem('nl_sb', this.sbHidden ? '1' : '0'); },
     async saveSetting(key, val) {
       try { const d = await api('/api/me', { method: 'PATCH', body: JSON.stringify({ [key]: val }) }); store.user = d.user; toast('Disimpan! ✓'); }
       catch (e) { toast(e.message); }
@@ -577,17 +583,21 @@ const app = createApp({
     this.startMatch();
   },
   template: `
-<div>
+<div :class="{ 'sb-hidden': sbHidden }">
   <header class="hdr">
-    <div class="logo"><span class="jp">日本語</span> NihongoLearn</div>
-    <div class="hdr-title">{{ pageTitle }}</div>
+    <div class="hdr-left">
+      <button class="sb-toggle" @click="toggleSb" aria-label="Sembunyikan/tampilkan menu"><span v-html="ic('menu',20)"></span></button>
+      <div class="logo"><span class="jp">日本語</span> NihongoLearn</div>
+      <div class="hdr-title">{{ pageTitle }}</div>
+    </div>
     <div style="display:flex;gap:8px;align-items:center">
       <span v-if="user" class="chip"><span v-html="ic('coin',14)"></span> {{ user.coins || 0 }}</span>
       <button class="theme-btn" @click="toggleTheme">{{ store.theme === 'sakura' ? '⛩️ Zen' : '🌸 Sakura' }}</button>
     </div>
   </header>
 
-  <div v-if="!user" class="auth-card">
+  <div v-if="!store.authChecked" class="auth-check"><div class="mascot">🦉</div><p class="muted">Memuat…</p></div>
+  <div v-else-if="!user" class="auth-card">
     <div class="mascot">🦉</div>
     <h2>{{ mode === 'login' ? 'Selamat datang kembali!' : 'Mulai petualanganmu!' }}</h2>
     <p class="muted">Belajar bahasa Jepang dari hiragana sampai N1</p>
