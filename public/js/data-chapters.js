@@ -1,12 +1,4 @@
-/* ============================================================
-   CHAPTERS — Jalur belajar ala Soumatome per level JLPT
-   Urutan bab dari termudah → tersulit.
-   Setiap bab: penjelasan + kotoba/bunpou/kanji/kaiwa + quiz akhir.
-   Lulus (skor >= 70) → bab berikutnya terbuka.
-   N4: 19 bab — materi lengkap dari buku Nihongo Soumatome N4 Bunpou
-   (124 pola grammar, diterjemahkan ke Bahasa Indonesia).
-   Contoh kalimat gaya WKWK: kanji → hiragana → Indonesia.
-   ============================================================ */
+/* CHAPTERS — data pembelajaran */
 
 const CHAPTERS = {
   "n5": [
@@ -1749,7 +1741,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "[stem] たいです",
+              "pattern": "[kata kerja dasar] たいです",
               "arti": "ingin…",
               "explain": "<b>たい</b> menempel pada stem dan berkonjugasi seperti <b>i-adjective</b> (たべたい → たべたくない). Objek を sering berganti が.",
               "examples": [
@@ -2845,7 +2837,7 @@ const CHAPTERS = {
           "title": "Pola Potensial, Persepsi & Keinginan",
           "items": [
             {
-              "pattern": "V(可能形) + が + (benda)",
+              "pattern": "kata kerja bentuk bisa + が + (benda)",
               "arti": "bisa [melakukan]",
               "explain": "Bentuk potensial menyatakan kemampuan. Ingat: partikel objek <b>を berubah menjadi が</b>. できる adalah potensial khusus dari する.",
               "examples": [
@@ -2962,7 +2954,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V(stem) + たい / たくない / たかった",
+              "pattern": "kata kerja dasar + たい / たくない / たかった",
               "arti": "ingin [melakukan] (diri sendiri)",
               "explain": "<b>Hanya untuk keinginan pembicara sendiri.</b> たい berkonjugasi seperti kata sifat-i: たくない (tidak ingin), たかった (dulu ingin).",
               "examples": [
@@ -2979,7 +2971,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V(stem) + たがる / たがっている",
+              "pattern": "kata kerja dasar + たがる / たがっている",
               "arti": "(dia/mereka) kelihatannya ingin [melakukan]",
               "explain": "Untuk menyatakan keinginan <b>orang ketiga</b>. たがる sendiri adalah kata kerja godan (たがります) — jadi objeknya tetap pakai <b>を</b> seperti kata kerja biasa! Bentuk ている paling sering dipakai.",
               "examples": [
@@ -3375,7 +3367,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N1はN2ほど〜ない",
+              "pattern": "kata benda 1はkata benda 2ほど〜ない",
               "arti": "N1 tidak se-... N2 (= N2 lebih ...)",
               "explain": "Maknanya: \"N1 tidak sampai setingkat N2\" — jadi <b>N2 yang lebih ...</b>. Bisa dibalik menjadi <b>N1よりN2のほうが〜</b> dengan makna sama. WAJIB kalimat negatif!",
               "examples": [
@@ -3820,7 +3812,7 @@ const CHAPTERS = {
           "title": "Pola ている・てある・ところ・てくる/ていく",
           "items": [
             {
-              "pattern": "V(aksi)+ている",
+              "pattern": "kata kerja (aksi)+ている",
               "arti": "sedang [melakukan]",
               "explain": "Untuk kata kerja <b>aksi kontinu</b>: maknanya \"sedang berlangsung saat ini\".",
               "examples": [
@@ -3837,7 +3829,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V(perubahan)+ている",
+              "pattern": "kata kerja (perubahan)+ている",
               "arti": "sudah... (dan keadaannya masih)",
               "explain": "Untuk kata kerja <b>perubahan keadaan sekali-jadi</b>: maknanya \"hasil yang bertahan sampai sekarang\".",
               "examples": [
@@ -3871,7 +3863,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V(かます)+ところ",
+              "pattern": "kata kerja bentuk kamus+ところ",
               "arti": "tepat akan / baru mau …",
               "explain": "Titik waktu <b>tepat sebelum</b> aksi dimulai. Rumus: bentuk kamus = sebelum aksi.",
               "examples": [
@@ -3888,7 +3880,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vている+ところ",
+              "pattern": "kata kerja -te iru + ところ",
               "arti": "tepat sedang … (saat ini)",
               "explain": "Titik waktu <b>di tengah</b> aksi berlangsung. Lebih tegas daripada ている biasa — menekankan \"pas lagi …\".",
               "examples": [
@@ -3905,7 +3897,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V(た)+ところ",
+              "pattern": "kata kerja bentuk lampau+ところ",
               "arti": "baru saja selesai …",
               "explain": "Titik waktu <b>tepat sesudah</b> aksi selesai. Rumus: bentuk-ta = sesudah aksi.",
               "examples": [
@@ -3922,7 +3914,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "他動詞 (を) ⇔ 自動詞 (が)",
+              "pattern": "kata kerja transitif (を) ⇔ kata kerja intransitif (が)",
               "arti": "kata kerja transitif vs intransitif (berpasangan)",
               "explain": "<b>Transitif</b>: ada pelaku, objek pakai <b>を</b> (ドアを開ける = membuka pintu). <b>Intransitif</b>: terjadi sendiri, subjek pakai <b>が</b> (ドアが開く = pintu terbuka). Pasangan wajib hafal: 開ける⇔開く, 閉める⇔閉まる, 壊す⇔壊れる, 止める⇔止まる.",
               "examples": [
@@ -3939,7 +3931,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vて+くる",
+              "pattern": "kata kerja bentuk -te + くる",
               "arti": "(membawa) ke sini / menjadi … (sampai sekarang)",
               "explain": "Dua makna: (1) <b>ruang</b>: bergerak mendekati pembicara — 持ってくる (membawa ke sini); (2) <b>waktu</b>: perubahan bertahap yang <b>sudah sampai sekarang</b> — だんだん〜なってきた.",
               "examples": [
@@ -3956,7 +3948,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vて+いく",
+              "pattern": "kata kerja bentuk -te + いく",
               "arti": "(membawa) pergi / akan menjadi … (ke depan)",
               "explain": "Kebalikan てくる: (1) <b>ruang</b>: bergerak menjauhi pembicara — 持っていく (membawa pergi); (2) <b>waktu</b>: perubahan yang <b>akan berlanjut ke depan</b> — 〜なっていく.",
               "examples": [
@@ -4376,7 +4368,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V(kamus)+ために / N+のために",
+              "pattern": "kata kerja bentuk kamus+ために / kata benda+のために",
               "arti": "untuk / demi / agar (tujuan lewat usaha)",
               "explain": "Tujuan yang dicapai dengan <b>usaha langsung</b>. Bentuk kedua: \"demi\" seseorang/sesuatu (N+のために).",
               "examples": [
@@ -4393,7 +4385,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N(penyebab)+ために",
+              "pattern": "kata benda(penyebab)+ために",
               "arti": "karena / gara-gara N",
               "explain": "Wajah kedua ために! Kalau kata bendanya berupa <b>penyebab atau kejadian</b>, artinya \"karena/gara-gara\", bukan \"demi\". Bedakan dari N(orang/tujuan)+ために = \"demi\".",
               "examples": [
@@ -4410,7 +4402,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V(ない)+ように / V(potensial)+ように",
+              "pattern": "kata kerja bentuk negatif+ように / kata kerja bentuk bisa+ように",
               "arti": "agar / supaya (tujuan tak langsung)",
               "explain": "Tujuan yang hasilnya <b>tidak bisa dikontrol langsung</b>: harapan, pencegahan, kemampuan. Sering dengan ない-form atau bentuk potensial.",
               "examples": [
@@ -4449,7 +4441,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V(kamus)+のに (目的)",
+              "pattern": "kata kerja bentuk kamus+のに (目的)",
               "arti": "untuk (melakukan) …",
               "explain": "Menyatakan tujuan, sama maknanya dengan 〜するために. Biasanya diikuti <b>かかる</b> (butuh waktu/biaya) atau <b>使う</b> (memakai). Bedakan dari のに逆接 yang bernada kecewa.",
               "examples": [
@@ -4837,7 +4829,7 @@ const CHAPTERS = {
           "title": "Pola Pasif & Kausatif",
           "items": [
             {
-              "pattern": "[pelaku]に V-passive (れる/られる)",
+              "pattern": "[pelaku]に kata kerja pasif (れる/られる)",
               "arti": "di-[verb] oleh...",
               "explain": "Pasif ada dua rasa: <b>penderitaan</b> (merugikan pembicara, pakai を) dan <b>netral</b> (fakta umum, sering dengan benda sebagai subjek).",
               "examples": [
@@ -4859,7 +4851,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "[orang]に V-causative (せる/させる)",
+              "pattern": "[orang]に kata kerja kausatif (せる/させる)",
               "arti": "menyuruh [orang] untuk...",
               "explain": "<b>に</b> + kausatif = <b>menyuruh/meminta</b> seseorang melakukan sesuatu.",
               "examples": [
@@ -4881,7 +4873,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "[orang]を V-causative (せる/させる)",
+              "pattern": "[orang]を kata kerja kausatif (せる/させる)",
               "arti": "membiarkan [orang]...",
               "explain": "<b>を</b> + kausatif = <b>membiarkan/mengizinkan</b> — bukan menyuruh!",
               "examples": [
@@ -4903,7 +4895,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vさせられる (kausatif-pasif)",
+              "pattern": "kata kerja dasar + させられる (kausatif-pasif)",
               "arti": "dipaksa...",
               "explain": "Dipaksa melakukan sesuatu lalu benar-benar melakukannya. Nuansanya <b>tidak menyenangkan</b> bagi pembicara. する→させられる.",
               "examples": [
@@ -5276,7 +5268,7 @@ const CHAPTERS = {
           "title": "Pola Pengandaian",
           "items": [
             {
-              "pattern": "Vた+ら / Adjかったら / Nだったら",
+              "pattern": "kata kerja bentuk -ta+ら / kata sifatかったら / kata bendaだったら",
               "arti": "kalau... / setelah...",
               "explain": "Paling serbaguna: kejadian spesifik, urutan kejadian, dan penemuan tak terduga. <b>もし</b> di depan sering dipasangkan.",
               "examples": [
@@ -5298,7 +5290,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vば / Adjければ / Adj-na・Nであれば",
+              "pattern": "kata kerja bentuk -ba / kata sifatければ / kata sifat-na・kata bendaであれば",
               "arti": "jika... (syarat umum)",
               "explain": "Untuk syarat <b>umum dan logis</b>. Fokus: kondisi yang harus dipenuhi. Tidak untuk kejadian lampau yang pasti. Khusus: いい→<b>よければ</b>.",
               "examples": [
@@ -5320,7 +5312,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N+なら / V(kamus)+なら",
+              "pattern": "kata benda+なら / kata kerja bentuk kamus+なら",
               "arti": "kalau soal... / dalam hal...",
               "explain": "Menanggapi informasi/topik dari lawan bicara; bagian setelah なら menyatakan <b>penilaian, harapan, atau keinginan pembicara</b>. Juga bermakna 〜のとき/〜のあと/〜の場合 — dalam pemakaian itu <b>tidak bisa diganti 〜と</b>.",
               "examples": [
@@ -5342,7 +5334,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V(kamus)+と",
+              "pattern": "kata kerja bentuk kamus+と",
               "arti": "jika...maka (pasti)",
               "explain": "Hubungan sebab-akibat yang <b>selalu sama</b>: hukum alam, kebiasaan, mekanisme. Klausa utama <b>TIDAK BOLEH</b> berupa perintah, keinginan, atau ajakan.",
               "examples": [
@@ -5688,7 +5680,7 @@ const CHAPTERS = {
           "title": "Pola Sonkeigo & Kenjougo",
           "items": [
             {
-              "pattern": "お/ご + stem + になる (+ kata khusus)",
+              "pattern": "お/ご + kata kerja dasar + になる (+ kata khusus)",
               "arti": "[beliau] ber-... (hormat)",
               "explain": "Pola sonkeigo untuk <b>lawan bicara/atasan</b>. Kata khusus wajib dihafal: いらっしゃる, めしあがる, なさる, おっしゃる.",
               "examples": [
@@ -5705,7 +5697,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "お/ご + stem + する・いたす (+ kata khusus)",
+              "pattern": "お/ご + kata kerja dasar + する・いたす (+ kata khusus)",
               "arti": "saya ber-... (merendah)",
               "explain": "Pola kenjougo untuk <b>diri sendiri</b>. Kata khusus: いたす, 申す, 参る, 拝見する, いただく.",
               "examples": [
@@ -5739,7 +5731,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Nをさしあげる / Nをくださる / Nをいただく (+ Vて)",
+              "pattern": "kata bendaをさしあげる / kata bendaをくださる / kata bendaをいただく (+ kata kerja bentuk -te)",
               "arti": "memberi/menerima (bahasa hormat)",
               "explain": "Versi keigo dari あげる・くれる・もらう untuk <b>atasan/orang yang dihormati (bukan keluarga sendiri)</b>. Bentuk sopan: さしあげます・くださいます・いただきます.",
               "examples": [
@@ -6080,7 +6072,7 @@ const CHAPTERS = {
           "title": "Pola Partikel & Penekanan",
           "items": [
             {
-              "pattern": "N + で（tempat aktivitas）",
+              "pattern": "kata benda + で（tempat aktivitas）",
               "arti": "di [tempat] — untuk beraktivitas",
               "explain": "<b>で</b> menandai tempat di mana suatu <b>aktivitas</b> dilakukan. Bandingkan dengan <b>に</b> yang menandai keberadaan atau arah. Karena 働く (bekerja) adalah aktivitas, tempatnya memakai で — bentuk 日本に働く adalah <b>salah</b>.",
               "examples": [
@@ -6102,7 +6094,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N + から",
+              "pattern": "kata benda + から",
               "arti": "dari [bahan asal / titik awal]",
               "explain": "<b>から</b> punya dua fungsi utama: (1) <b>bahan asal</b> — sesuatu dibuat DARI apa (ぶどうからワイン); (2) <b>titik awal</b> — mulai DARI mana. Jangan tertukar dengan で yang menandai alat/cara.",
               "examples": [
@@ -6146,7 +6138,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N + も（contoh ekstrem）",
+              "pattern": "kata benda + も（contoh ekstrem）",
               "arti": "bahkan N pun …",
               "explain": "<b>も</b> di sini dipakai untuk <b>contoh ekstrem</b>: bahkan sesuatu yang sangat mendasar pun tidak bisa dilakukan, apalagi hal yang lebih sulit. Selalu dipakai dengan <b>kalimat negatif</b>. Nuansanya: \"sampai segitunya pun tidak\".",
               "examples": [
@@ -6168,7 +6160,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N + ずつ",
+              "pattern": "kata benda + ずつ",
               "arti": "masing-masing [N] / [N] per orang",
               "explain": "<b>ずつ</b> menyatakan <b>pembagian rata</b> atau pengulangan tindakan yang sama: membagikan sesuatu satu per orang, atau belajar 2 halaman setiap hari. Fokusnya pada \"dibagi sama rata\", bukan totalnya.",
               "examples": [
@@ -6190,7 +6182,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N + でも",
+              "pattern": "kata benda + でも",
               "arti": "bahkan N pun / N saja (saran santai)",
               "explain": "<b>でも</b> punya dua fungsi: (1) <b>contoh ekstrem</b> — bahkan sesuatu yang tak terduga pun termasuk (子どもでもできる = bahkan anak-anak pun bisa); (2) <b>saran santai</b> — \"N saja bagaimana?\" sebagai ajakan ringan (お茶でも飲みましょうか). Bedakan dari konteks kalimatnya!",
               "examples": [
@@ -6212,7 +6204,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N + しか + 〜ない",
+              "pattern": "kata benda + しか + 〜ない",
               "arti": "hanya N (tidak ada yang lain)",
               "explain": "Artinya \"hanya N dan tidak ada yang lain\", dan <b>wajib</b> dipakai dengan kalimat <b>negatif</b>. Bedanya dengan だけ (netral, bisa positif): <b>しか〜ない menekankan keterbatasan</b> — ada nuansa \"sayang sekali cuma segitu\". <b>Jebakan:</b> しか dengan kalimat positif adalah salah mutlak.",
               "examples": [
@@ -6546,7 +6538,7 @@ const CHAPTERS = {
           "title": "Pola Penunjuk & Penjelas",
           "items": [
             {
-              "pattern": "N + で（berbagai makna）",
+              "pattern": "kata benda + で（berbagai makna）",
               "arti": "dengan / karena / dari (tergantung konteks)",
               "explain": "Partikel <b>で</b> punya banyak wajah: (1) <b>cara/alat</b> — dengan apa sesuatu dilakukan (電車で行く); (2) <b>cakupan</b> — batasan ruang/harga (日本で一番, 100円で買う); (3) <b>alasan</b> — karena sesuatu terjadi (かぜで休む). <b>Tips:</b> baca kata kerjanya dulu — kalau kata kerjanya \"pergi\", で = cara; kalau \"libur/tidak masuk\", で = alasan.",
               "examples": [
@@ -6568,7 +6560,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N + も（jumlah）",
+              "pattern": "kata benda + も（jumlah）",
               "arti": "sampai [sebanyak itu] / [segitu] pun",
               "explain": "<b>も</b> setelah angka/jumlah menekankan kuantitas: dalam kalimat <b>positif</b> = \"sampai SEBANYAK itu\" (2時間もかかる = sampai 2 jam!); dalam kalimat <b>negatif</b> = \"sampai segitu pun tidak\" (1円もない = sepeser pun tidak ada). <b>Jebakan:</b> jangan tertukar dengan も penekanan ekstrem (bahkan) — yang ini khusus untuk ANGKA.",
               "examples": [
@@ -6590,7 +6582,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N1 + とか + N2 + とか",
+              "pattern": "kata benda 1 + とか + kata benda 2 + とか",
               "arti": "N1, N2, dan sejenisnya (contoh)",
               "explain": "<b>とか</b> dipakai untuk memberi <b>contoh</b> dari suatu kelompok, dengan nuansa \"dan sejenisnya\". Bedanya dengan や (N5): とか lebih <b>kasual</b> dan sering dipakai dalam percakapan. Polanya N1とかN2とか — とか yang terakhir boleh dihilangkan dalam percakapan santai.",
               "examples": [
@@ -6634,7 +6626,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "こんな / そんな / あんな / どんな + N",
+              "pattern": "こんな / そんな / あんな / どんな + kata benda",
               "arti": "N seperti ini / seperti itu / seperti apa",
               "explain": "Kata tunjuk yang menerangkan <b>kata benda</b>: menunjukkan JENIS atau sifat benda/orang/hal. <b>こんな</b> = seperti ini (dekatku), <b>そんな</b> = seperti itu (dekatmu / yang baru dibicarakan), <b>あんな</b> = seperti itu (jauh dari kita berdua), <b>どんな</b> = seperti apa (tanya).",
               "examples": [
@@ -6700,7 +6692,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "〜という N / 〜っていう N",
+              "pattern": "〜という kata benda / 〜っていう kata benda",
               "arti": "N yang bernama ~ / N yang disebut ~",
               "explain": "Menyatakan <b>nama atau sebutan</b> dari kata benda: kalimat bentuk biasa + という + N. Dipakai untuk nama tempat/orang (目黒というところ) atau mengutip isi pembicaraan (〜という話 = kabar bahwa…). <b>〜っていう</b> adalah bentuk <b>santai</b> dari という — artinya sama persis.",
               "examples": [
@@ -6722,7 +6714,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "どういう N",
+              "pattern": "どういう kata benda",
               "arti": "N yang seperti apa / artinya apa",
               "explain": "Kata tanya untuk menanyakan <b>jenis, isi, atau arti</b> kata benda. Pola paling terkenal: <b>どういう意味ですか</b> (apa artinya?). <b>Jebakan mutlak:</b> 〜なにの意味ですか adalah SALAH — yang benar selalu どういう意味ですか. Ini favorit soal JLPT!",
               "examples": [
@@ -7148,7 +7140,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N + ばかり",
+              "pattern": "kata benda + ばかり",
               "arti": "hanya / melulu N",
               "explain": "<b>ばかり</b> menyatakan jumlah N <b>sangat banyak</b> — hampir semuanya melulu N. Beda dengan だけ (netral, \"100% hanya N\"): ばかり menekankan kesan <b>\"melulu / terus-menerus\"</b>, sering dengan nuansa keluhan. ゲームばかりしている = main game MELULU (kesel!).",
               "examples": [
@@ -7170,7 +7162,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N の間（に）/ Vている間（に）",
+              "pattern": "kata benda の間（に）/ kata kerja -te iru + 間（に）",
               "arti": "selama / di tengah-tengah",
               "explain": "Menyatakan sesuatu terjadi <b>di tengah berlangsungnya</b> suatu rentang waktu atau kegiatan. Nの間 = selama N (rentang), Vている間 = ketika sedang melakukan V. <b>Jebakan:</b> に boleh ada boleh tidak — 間に saja sudah benar.",
               "examples": [
@@ -7192,7 +7184,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V1（辞書形）+ とき（に）、V2",
+              "pattern": "kata kerja 1 bentuk kamus+ とき（に）、kata kerja2",
               "arti": "ketika (sebelum) V1, lakukan V2",
               "explain": "V2 dilakukan <b>SEBELUM</b> V1 terjadi. Kuncinya: kata kerja bentuk <b>kamus</b> = belum terjadi. 寝るとき = ketika HENDAK tidur (belum tidur), jadi V2-nya persiapan sebelum tidur.",
               "examples": [
@@ -7214,7 +7206,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V1（た形）+ とき（に）、V2",
+              "pattern": "kata kerja 1 bentuk lampau+ とき（に）、kata kerja2",
               "arti": "ketika (setelah) V1, lakukan V2",
               "explain": "V2 dilakukan <b>SETELAH</b> V1 selesai. Kuncinya: kata kerja bentuk <b>lampau (た)</b> = sudah terjadi. 東京に行ったとき = SETELAH sampai di Tokyo, jadi V2-nya kejadian sesudahnya.",
               "examples": [
@@ -7236,7 +7228,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N + 中",
+              "pattern": "kata benda + 中",
               "arti": "sedang (berlangsung)",
               "explain": "<b>中</b> setelah kata benda menyatakan tindakan <b>sedang berlangsung</b>: 会議中 (sedang rapat), 電話中 (sedang menelepon). Untuk rentang waktu: 午前中 (sepanjang pagi), 今日中 (sepanjang hari ini), 今年中 (sepanjang tahun ini). <b>Cara baca:</b> ちゅう atau じゅう tergantung katanya.",
               "examples": [
@@ -7618,7 +7610,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V（ます-stem）+ ながら",
+              "pattern": "kata kerja (hilangkan ます)+ ながら",
               "arti": "sambil melakukan …",
               "explain": "Melakukan <b>dua tindakan secara bersamaan</b>. Bentuknya kata kerja bentuk ます-stem + ながら (ます-nya dibuang). <b>Jebakan:</b> aksi UTAMA diletakkan di BELAKANG — 食べながら見る = aksi utamanya MENONTON (sambil makan), bukan sebaliknya!",
               "examples": [
@@ -7640,7 +7632,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V（た形）+ ことがある",
+              "pattern": "kata kerja bentuk lampau+ ことがある",
               "arti": "pernah (pengalaman masa lalu)",
               "explain": "Menyatakan <b>pengalaman yang pernah dialami</b> di masa lalu. Bentuknya SELALU kata kerja bentuk <b>lampau (た)</b> + ことがある. <b>Jebakan mutlak:</b> Vる + ことがある artinya BEDA TOTAL (kadang-kadang, lihat pola berikutnya) — jangan tertukar!",
               "examples": [
@@ -7662,7 +7654,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V（辞書形 / ない形）+ ことがある",
+              "pattern": "kata kerja (kamus/negatif)+ ことがある",
               "arti": "kadang-kadang (terjadi sesekali)",
               "explain": "Menyatakan sesuatu <b>terjadi sesekali</b>. Bentuknya kata kerja bentuk <b>kamus</b> (atau ない) + ことがある — BERBEDA dari pola pengalaman yang memakai bentuk lampau! <b>Cara ingat:</b> た = sudah terjadi = pengalaman; る/ない = umum = kadang terjadi.",
               "examples": [
@@ -7684,7 +7676,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N にする / V（ない）ことにする",
+              "pattern": "kata benda にする / kata kerja (negatif)ことにする",
               "arti": "memutuskan sendiri",
               "explain": "Sesuatu yang <b>diputuskan sendiri</b> oleh pembicara. Bentuk <b>〜ことにしている</b> = dijadikan <b>kebiasaan</b> (keputusan yang dijalani terus). Kuncinya: ada kemauan/niat dari pembicara.",
               "examples": [
@@ -7706,7 +7698,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "N になる / V（ない）ことになる",
+              "pattern": "kata benda になる / kata kerja (negatif)ことになる",
               "arti": "diputuskan (oleh keadaan / pihak lain)",
               "explain": "Sesuatu <b>telah diputuskan</b> — BUKAN oleh kemauan pembicara, melainkan oleh <b>keadaan atau pihak lain</b> (aturan, atasan, situasi). <b>Jebakan JLPT:</b> kalau konteksnya \"perusahaan memutuskan\", jawabannya SELALU ことになる, bukan ことにする!",
               "examples": [
@@ -8050,7 +8042,7 @@ const CHAPTERS = {
           "title": "Pola Kewajiban, Izin & Larangan",
           "items": [
             {
-              "pattern": "Vない + ければならない",
+              "pattern": "kata kerja negatif + ければならない",
               "arti": "harus ~ (kewajiban, formal)",
               "explain": "Bentuk kewajiban paling <b>formal dan baku</b>: untuk tulisan, pengumuman, aturan resmi. Nuansanya kuat: tidak ada pilihan selain melakukannya.",
               "examples": [
@@ -8067,7 +8059,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vなくて + はいけない",
+              "pattern": "kata kerja negatif -te + はいけない",
               "arti": "harus ~ (kewajiban, formal percakapan)",
               "explain": "Artinya sama dengan 〜なければならない. Bentuk: Vない tanpa ない menjadi なくて + はいけない. Sedikit lebih umum dipakai dalam <b>percakapan formal</b> sehari-hari.",
               "examples": [
@@ -8084,7 +8076,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vない + といけない",
+              "pattern": "kata kerja negatif + といけない",
               "arti": "harus ~ (kewajiban, santai)",
               "explain": "Artinya sama dengan dua pola di atas. Dari ketiganya, pola ini <b>paling sering muncul dalam percakapan santai</b> sehari-hari. Yang berbeda hanya tingkat formalitas, bukan arti.",
               "examples": [
@@ -8118,7 +8110,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vて + もいい",
+              "pattern": "kata kerja bentuk -te + もいい",
               "arti": "boleh ~ (izin)",
               "explain": "Menyatakan izin: boleh 〜. Dipakai untuk <b>memberi izin</b> (いいですよ) maupun <b>meminta izin</b> (〜てもいいですか). Kebalikan dari larangan 〜てはいけない.",
               "examples": [
@@ -8135,7 +8127,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vなくて + もいい",
+              "pattern": "kata kerja negatif -te + もいい",
               "arti": "tidak perlu ~ / tidak harus ~",
               "explain": "Bentuk <b>negatif dari kewajiban</b>: tidak wajib dilakukan. Bentuk: Vない tanpa ない menjadi なくて + もいい. Perhatian: 〜ないでも itu SALAH, yang benar 〜なくても. Lawan dari 〜てはいけない (larangan).",
               "examples": [
@@ -8152,7 +8144,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vて + はいけない",
+              "pattern": "kata kerja bentuk -te + はいけない",
               "arti": "tidak boleh ~ (larangan)",
               "explain": "Larangan keras: tidak boleh 〜. Untuk <b>aturan dan peraturan resmi</b> (sekolah, tempat umum, rambu). Versi kasualnya 〜ちゃいけない / 〜じゃいけない, dan bentuk larangan langsung adalah 〜な (bab 15).",
               "examples": [
@@ -8169,7 +8161,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V辞書形 + といい / Vた形 + らいい / Vば形 + いい",
+              "pattern": "kata kerja bentuk kamus + といい / kata kerja bentuk lampau + らいい / kata kerja bentuk -ba + いい",
               "arti": "sebaiknya ~ / semoga ~",
               "explain": "Saran lembut atau <b>harapan</b>: sebaiknya 〜 / semoga 〜. Ketiganya maknanya hampir sama. Lebih lembut dari 〜たほうがいい karena bisa dipakai untuk harapan yang belum tentu terjadi. Negatif: 〜ないといい / 〜なかったらいい / 〜なければいい.",
               "examples": [
@@ -8491,7 +8483,7 @@ const CHAPTERS = {
           "title": "Pola Memberi, Menerima & Persiapan",
           "items": [
             {
-              "pattern": "Nをあげる / Nをくれる / Nをもらう",
+              "pattern": "kata bendaをあげる / kata bendaをくれる / kata bendaをもらう",
               "arti": "memberi / diberi / menerima",
               "explain": "Tiga kata kerja memberi-menerima dengan <b>sudut pandang berbeda</b>. あげる: saya memberi ke orang lain (arah keluar). くれる: orang lain memberi ke SAYA/keluarga saya — くれる SELALU untuk penerima saya. もらう: saya menerima dari orang lain (bisa pakai に atau から).",
               "examples": [
@@ -8513,7 +8505,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vて + あげる",
+              "pattern": "kata kerja bentuk -te + あげる",
               "arti": "melakukan ~ untuk orang lain",
               "explain": "Saya melakukan sesuatu <b>untuk orang lain</b> (saya berbuat baik). Untuk tanaman, hewan, dan anak sendiri dipakai <b>Vてやる / Nをやる</b>, mis. 花に水をやる (menyiram bunga).",
               "examples": [
@@ -8535,7 +8527,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vて + くれる",
+              "pattern": "kata kerja bentuk -te + くれる",
               "arti": "orang lain melakukan ~ untuk saya",
               "explain": "Orang lain melakukan sesuatu <b>untuk saya/keluarga saya</b>. Sudut pandangnya dari penerima. Sering dipakai bersama ucapan terima kasih: 〜てくれてありがとう.",
               "examples": [
@@ -8557,7 +8549,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vて + もらう",
+              "pattern": "kata kerja bentuk -te + もらう",
               "arti": "menerima kebaikan ~ / dibantu ~",
               "explain": "Saya <b>menerima jasa</b> berupa orang lain melakukan sesuatu untuk saya, dengan nuansa terima kasih. Bedanya dengan てくれる: てもらう menekankan <b>saya yang meminta/menerima jasanya</b> (saya berinisiatif), てくれる menekankan dia berbuat baik.",
               "examples": [
@@ -8574,7 +8566,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vて + おく",
+              "pattern": "kata kerja bentuk -te + おく",
               "arti": "melakukan ~ sebagai persiapan / membiarkan tetap ~",
               "explain": "Dua makna: ① <b>Persiapan</b> — melakukan sesuatu terlebih dahulu untuk nanti. ② <b>Mempertahankan kondisi</b> — membiarkan tetap seperti sekarang. Versi santai: ておく → <b>とく</b> (読んどく, 開けとく, しとく).",
               "examples": [
@@ -8596,7 +8588,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vて + みる",
+              "pattern": "kata kerja bentuk -te + みる",
               "arti": "mencoba ~",
               "explain": "Mencoba melakukan 〜 untuk melihat hasilnya — untuk pertama kali atau ingin tahu rasanya. Bentuk ingin mencoba: <b>〜てみたい</b>です.",
               "examples": [
@@ -8618,7 +8610,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vて + しまう",
+              "pattern": "kata kerja bentuk -te + しまう",
               "arti": "~ sampai habis / terlanjur ~ (penekanan & penyesalan)",
               "explain": "Dua makna: ① <b>Penekanan</b> — dilakukan sampai selesai/habis sepenuhnya. ② <b>Penyesalan</b> — terjadi di luar kendali dan pembicara menyesalinya. Versi santai: 〜ちゃう / 〜じゃう.",
               "examples": [
@@ -8640,7 +8632,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vてちゃう / Vでちゃう (〜ちゃいけない)",
+              "pattern": "kata kerja bentuk -teちゃう / kata kerja bentuk -te/-de + ちゃう (〜ちゃいけない)",
               "arti": "bentuk santai dari 〜てしまう",
               "explain": "<b>Kontraksi santai</b> dari Vてしまう: てしまう → ちゃう, でしまう → じゃう (使ってしまう→使っちゃう, 忘れてしまう→忘れちゃう, 行ってしまう→行っちゃう, 読んでしまう→読んじゃう). Juga dipakai untuk larangan santai: 〜ちゃいけない (versi santai dari 〜てはいけない).",
               "examples": [
@@ -8962,7 +8954,7 @@ const CHAPTERS = {
           "title": "Pola Niat & Rencana",
           "items": [
             {
-              "pattern": "Vよう",
+              "pattern": "kata kerja bentuk -you",
               "arti": "ayo ~ / mari ~ (kasual)",
               "explain": "Bentuk ajakan <b>kasual antar teman</b> — versi santai dari Vましょう. する→しよう, 来る→来よう. Jangan dipakai kepada atasan.",
               "examples": [
@@ -8984,7 +8976,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vよう + と思う",
+              "pattern": "kata kerja bentuk -you + と思う",
               "arti": "berniat ~",
               "explain": "Menyatakan niat atau keinginan kuat pembicara. Nuansanya: niat yang <b>baru diputuskan</b> saat berbicara. Bandingkan dengan つもり (rencana yang sudah mantap).",
               "examples": [
@@ -9006,7 +8998,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V辞書形 + つもり",
+              "pattern": "kata kerja bentuk kamus + つもり",
               "arti": "berencana / berniat ~",
               "explain": "Rencana atau niat yang <b>kuat dan sudah dipikirkan matang</b>. Perhatian: <b>つもりはありません</b> (tidak berniat) penolakannya lebih kuat daripada ないつもりです.",
               "examples": [
@@ -9028,7 +9020,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V辞書形 / Vない + ようにする",
+              "pattern": "kata kerja bentuk kamus / kata kerja negatif + ようにする",
               "arti": "berusaha untuk ~ / membiasakan ~",
               "explain": "Usaha atau kebiasaan yang dilakukan dengan <b>kesadaran sendiri</b>: saya berusaha agar 〜. Bedanya dengan ようになる: ようにする menekankan <b>usaha aktif</b> dari pembicara, ようになる menekankan <b>perubahan yang terjadi</b>.",
               "examples": [
@@ -9045,7 +9037,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V辞書形 / Vない / V可能形 + ようになる",
+              "pattern": "kata kerja bentuk kamus / kata kerja negatif / kata kerja bentuk bisa + ようになる",
               "arti": "menjadi bisa ~ / menjadi ~ (perubahan)",
               "explain": "Menyatakan <b>perubahan keadaan</b>: dulu tidak bisa/tidak begitu, sekarang menjadi bisa atau menjadi begitu. Untuk kemampuan baru (話せるようになる) maupun kebiasaan yang berubah (早く寝るようになる).",
               "examples": [
@@ -9067,7 +9059,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V辞書形 / Vない + ように言う",
+              "pattern": "kata kerja bentuk kamus / kata kerja negatif + ように言う",
               "arti": "menyuruh / meminta agar ~",
               "explain": "Menyuruh atau meminta seseorang agar melakukan sesuatu <b>secara tidak langsung</b> — lebih halus dari perintah langsung (〜しろ). Bentuk pasif: 〜ように言われる = disuruh agar 〜.",
               "examples": [
@@ -9416,7 +9408,7 @@ const CHAPTERS = {
           "title": "Pola Saran & Permintaan Sopan",
           "items": [
             {
-              "pattern": "Vた形 + ほうがいい",
+              "pattern": "kata kerja bentuk lampau + ほうがいい",
               "arti": "sebaiknya ~ (saran)",
               "explain": "Saran atau nasihat yang <b>tegas</b>: sebaiknya 〜. Dipakai saat memberi saran tentang apa yang lebih baik dilakukan. Lebih tegas dari 〜といい/〜たらいい/〜ばいい. Versi sopan: 〜たほうがいいですよ.",
               "examples": [
@@ -9438,7 +9430,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vない形 + ほうがいい",
+              "pattern": "kata kerja bentuk negatif + ほうがいい",
               "arti": "sebaiknya tidak ~ (saran negatif)",
               "explain": "Bentuk negatif dari saran: sebaiknya TIDAK 〜. Untuk menasihati agar tidak melakukan sesuatu yang tidak baik atau berbahaya.",
               "examples": [
@@ -9477,7 +9469,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vます stem + なさい",
+              "pattern": "kata kerja (hilangkan ます) + なさい",
               "arti": "~lah (perintah sopan)",
               "explain": "Perintah yang <b>sopan</b>: bentuk ます tanpa ます + なさい (食べます→食べなさい, します→しなさい). Dipakai orang tua ke anak atau guru ke murid. Lebih halus dari 〜しろ, TAPI tetap bernada memerintah — <b>jangan dipakai ke atasan</b>!",
               "examples": [
@@ -9499,7 +9491,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vてくれませんか / Vてもらえませんか / Vてくださいませんか / Vていただけませんか",
+              "pattern": "kata kerja bentuk -teくれませんか / kata kerja bentuk -teもらえませんか / kata kerja bentuk -teくださいませんか / kata kerja bentuk -teいただけませんか",
               "arti": "maukah (tolong) ~? (makin ke bawah makin sopan)",
               "explain": "Cara meminta yang <b>lebih sopan</b> dari Vてください. Tingkat kesopanan naik dari atas ke bawah — <b>Vていただけませんか paling sopan</b>. Jebakan N4: yang benar いただけませんか, BUKAN いただきませんか!",
               "examples": [
@@ -9521,7 +9513,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vてほしい / Vてもらいたい / Vていただきたい",
+              "pattern": "kata kerja bentuk -teほしい / kata kerja bentuk -teもらいたい / kata kerja bentuk -teいただきたい",
               "arti": "ingin (seseorang) ~",
               "explain": "Menyatakan <b>ingin agar orang lain</b> melakukan sesuatu. Vてほしい untuk orang dekat/keluarga; <b>Vてもらいたい / Vていただきたい lebih sopan</b> (untuk orang lain).",
               "examples": [
@@ -9543,7 +9535,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vたら + どうですか / いかがですか",
+              "pattern": "kata kerja bentuk -ta + ら + どうですか / いかがですか",
               "arti": "bagaimana kalau ~? (saran lembut)",
               "explain": "Ungkapan memberi <b>saran paling lembut</b>: bagaimana kalau 〜? / mengapa tidak 〜? Cocok untuk orang yang lebih tua atau atasan. いかがですか lebih sopan dari どうですか.",
               "examples": [
@@ -9565,7 +9557,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vます stem + 方",
+              "pattern": "kata kerja (hilangkan ます) + 方",
               "arti": "cara ~",
               "explain": "Menyatakan <b>cara melakukan</b> sesuatu: bentuk ます tanpa ます + 方 (読み方 = cara membaca, 使い方 = cara memakai, やり方 = cara melakukan). Pola favorit soal N4!",
               "examples": [
@@ -9946,7 +9938,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "形容詞＋さ",
+              "pattern": "kata sifat＋さ",
               "arti": "kata benda dari sifat (besarnya, tingginya...)",
               "explain": "Menambahkan さ pada kata sifat menjadikannya kata benda: kata sifat-i buang い + さ, kata sifat-na + さ. Khusus: いい → <b>よさ</b>.",
               "examples": [
@@ -10370,7 +10362,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "Vやすい／Vにくい",
+              "pattern": "kata kerja dasar + やすい／にくい",
               "arti": "mudah … / sulit …",
               "explain": "Stem bentuk-ます + やすい = mudah melakukan ~; + にくい = sulit melakukan ~ (atau sulit terjadi dengan sendirinya).",
               "examples": [
@@ -10392,7 +10384,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V出す",
+              "pattern": "kata kerja (hilangkan ます) + 出す",
               "arti": "mulai … (tiba-tiba)",
               "explain": "Stem bentuk-ます + 出す. Menyatakan <b>mulai</b> melakukan sesuatu, sering dengan nuansa tiba-tiba.",
               "examples": [
@@ -10409,7 +10401,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V終わる",
+              "pattern": "kata kerja (hilangkan ます) + 終わる",
               "arti": "selesai …",
               "explain": "Stem bentuk-ます + 終わる. Menyatakan <b>selesai</b> melakukan sesuatu. Lawan katanya: V始める (mulai).",
               "examples": [
@@ -10426,7 +10418,7 @@ const CHAPTERS = {
               ]
             },
             {
-              "pattern": "V続ける",
+              "pattern": "kata kerja (hilangkan ます) + 続ける",
               "arti": "terus … / melanjutkan …",
               "explain": "Stem bentuk-ます + 続ける. Menyatakan <b>terus</b> melakukan sesuatu.",
               "examples": [
