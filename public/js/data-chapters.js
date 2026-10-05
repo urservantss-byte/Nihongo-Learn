@@ -96,12 +96,12 @@ const CHAPTERS = {
                 {
                   "jp": "わたしは ブディ です。",
                   "id": "Saya adalah Budi.",
-                  "rd": "わたしわ ブディ です。"
+                  "rd": "わたしはブディです。"
                 },
                 {
                   "jp": "わたしは がくせい です。",
                   "id": "Saya adalah murid.",
-                  "rd": "わたしわ がくせい です。"
+                  "rd": "わたしはがくせいです。"
                 }
               ]
             },
@@ -389,7 +389,7 @@ const CHAPTERS = {
                 {
                   "jp": "りんごを みっつ ください。",
                   "id": "Tolong 3 buah apel.",
-                  "rd": "りんごお みっつ ください。"
+                  "rd": "りんごをみっつください。"
                 },
                 {
                   "jp": "ねこが さんびき います。",
@@ -459,7 +459,7 @@ const CHAPTERS = {
                 {
                   "jp": "がっこうは 8じから 3じまで です。",
                   "id": "Sekolah dari jam 8 sampai jam 3.",
-                  "rd": "がっこうわ はちじから さんじまで です。"
+                  "rd": "がっこうははちじからさんじまでです。"
                 },
                 {
                   "jp": "9じから 5じまで はたらきます。",
@@ -788,12 +788,12 @@ const CHAPTERS = {
                 {
                   "jp": "これは ほんです。",
                   "id": "Ini adalah buku.",
-                  "rd": "これわ ほんです。"
+                  "rd": "これはほんです。"
                 },
                 {
                   "jp": "あれは とけいです。",
                   "id": "Itu (di sana) adalah jam.",
-                  "rd": "あれわ とけいです。"
+                  "rd": "あれはとけいです。"
                 }
               ],
               "tabel": [
@@ -819,12 +819,12 @@ const CHAPTERS = {
                 {
                   "jp": "これは わたしの かばんです。",
                   "id": "Ini adalah tasku.",
-                  "rd": "これわ わたしの かばんです。"
+                  "rd": "これはわたしのかばんです。"
                 },
                 {
                   "jp": "たなかさんの くるまは あかいです。",
                   "id": "Mobil Tanaka berwarna merah.",
-                  "rd": "たなかさんの くるまわ あかいです。"
+                  "rd": "たなかさんのくるまはあかいです。"
                 }
               ],
               "tabel": [
@@ -850,12 +850,12 @@ const CHAPTERS = {
                 {
                   "jp": "みずを ください。",
                   "id": "Tolong air putih.",
-                  "rd": "みずお ください。"
+                  "rd": "みずをください。"
                 },
                 {
                   "jp": "このほんを ください。",
                   "id": "Tolong buku yang ini.",
-                  "rd": "このほんお ください。"
+                  "rd": "このほんをください。"
                 }
               ],
               "tabel": [
@@ -1158,12 +1158,12 @@ const CHAPTERS = {
                 {
                   "jp": "わたしは ごはんを たべます。",
                   "id": "Saya makan nasi.",
-                  "rd": "わたしわ ごはんお たべます。"
+                  "rd": "わたしはごはんをたべます。"
                 },
                 {
                   "jp": "まいばん ほんを よみます。",
                   "id": "Setiap malam membaca buku.",
-                  "rd": "まいばん ほんお よみます。"
+                  "rd": "まいばんほんをよみます。"
                 }
               ]
             },
@@ -1175,7 +1175,7 @@ const CHAPTERS = {
                 {
                   "jp": "あした がっこうへ いきます。",
                   "id": "Besok pergi ke sekolah.",
-                  "rd": "あした がっこうえ いきます。"
+                  "rd": "あしたがっこうへいきます。"
                 },
                 {
                   "jp": "うちに かえります。",
@@ -1211,7 +1211,7 @@ const CHAPTERS = {
                 {
                   "jp": "レストランで ひるごはんを たべます。",
                   "id": "Makan siang di restoran.",
-                  "rd": "レストランで ひるごはんお たべます。"
+                  "rd": "レストランでひるごはんをたべます。"
                 }
               ],
               "tabel": [
@@ -1514,12 +1514,12 @@ const CHAPTERS = {
                 {
                   "jp": "このケーキは とても おいしいです。",
                   "id": "Kue ini sangat enak.",
-                  "rd": "このケーキわ とても おいしいです。"
+                  "rd": "このケーキはとてもおいしいです。"
                 },
                 {
                   "jp": "富士山は とても たかいです。",
                   "id": "Gunung Fuji sangat tinggi.",
-                  "rd": "ふじさんわ とても たかいです。"
+                  "rd": "ふじさんはとてもたかいです。"
                 }
               ]
             },
@@ -1531,12 +1531,12 @@ const CHAPTERS = {
                 {
                   "jp": "このテストは あまり むずかしくないです。",
                   "id": "Tes ini tidak terlalu sulit.",
-                  "rd": "このテストわ あまり むずかしくないです。"
+                  "rd": "このテストはあまりむずかしくないです。"
                 },
                 {
                   "jp": "きょうは あまり さむくないです。",
                   "id": "Hari ini tidak terlalu dingin.",
-                  "rd": "きょうわ あまり さむくないです。"
+                  "rd": "きょうはあまりさむくないです。"
                 }
               ],
               "tabel": [
@@ -1931,12 +1931,12 @@ const CHAPTERS = {
                 {
                   "jp": "きょうは テレビを みない。",
                   "id": "Hari ini tidak nonton TV. (kasual)",
-                  "rd": "きょうわ テレビお みない。"
+                  "rd": "きょうはテレビをみない。"
                 },
                 {
                   "jp": "あしたは いかない。",
                   "id": "Besok tidak pergi. (kasual)",
-                  "rd": "あしたわ いかない。"
+                  "rd": "あしたはいかない。"
                 }
               ],
               "tabel": [
@@ -2268,12 +2268,12 @@ const CHAPTERS = {
                 {
                   "jp": "わたしは まいにち べんきょうします。",
                   "id": "Saya belajar setiap hari.",
-                  "rd": "わたしわ まいにち べんきょうします。"
+                  "rd": "わたしはまいにちべんきょうします。"
                 },
                 {
                   "jp": "ときどき えいがを みます。",
                   "id": "Kadang-kadang menonton film.",
-                  "rd": "ときどき えいがお みます。"
+                  "rd": "ときどきえいがをみます。"
                 }
               ],
               "tabel": [
@@ -2303,7 +2303,7 @@ const CHAPTERS = {
                 {
                   "jp": "わたしは あまり テレビを みません。",
                   "id": "Saya jarang menonton TV.",
-                  "rd": "わたしわ あまり テレビお みません。"
+                  "rd": "わたしはあまりテレビをみません。"
                 },
                 {
                   "jp": "ぜんぜん わかりません。",
@@ -2330,12 +2330,12 @@ const CHAPTERS = {
                 {
                   "jp": "ちちは せんせいです。",
                   "id": "Ayah saya seorang guru.",
-                  "rd": "ちちわ せんせいです。"
+                  "rd": "ちちはせんせいです。"
                 },
                 {
                   "jp": "おとうさんは おいくつですか。",
                   "id": "Ayahmu berumur berapa?",
-                  "rd": "おとうさんわ おいくつですか。"
+                  "rd": "おとうさんはおいくつですか。"
                 }
               ],
               "tabel": [
@@ -2642,12 +2642,12 @@ const CHAPTERS = {
                 {
                   "jp": "ラーメンを ください。",
                   "id": "Minta ramennya.",
-                  "rd": "ラーメンお ください。"
+                  "rd": "ラーメンをください。"
                 },
                 {
                   "jp": "このシャツを ください。",
                   "id": "Saya ambil kemeja ini.",
-                  "rd": "このシャツお ください。"
+                  "rd": "このシャツをください。"
                 }
               ]
             },
@@ -2659,12 +2659,12 @@ const CHAPTERS = {
                 {
                   "jp": "これは いくらですか。",
                   "id": "Ini berapa harganya?",
-                  "rd": "これわ いくらですか。"
+                  "rd": "これはいくらですか。"
                 },
                 {
                   "jp": "コーヒーは いくらですか。",
                   "id": "Kopinya berapa?",
-                  "rd": "コーヒーわ いくらですか。"
+                  "rd": "コーヒーはいくらですか。"
                 }
               ],
               "tabel": [
@@ -3111,7 +3111,7 @@ const CHAPTERS = {
                 {
                   "jp": "窓を開けると、鳥の声が聞こえます。",
                   "id": "Saat membuka jendela, terdengar suara burung.",
-                  "rd": "まどおあけると、とりのこえがきこえます。"
+                  "rd": "まどをあけると、とりのこえがきこえます。"
                 },
                 {
                   "jp": "となりの家からピアノの音が聞こえます。",
@@ -3121,7 +3121,7 @@ const CHAPTERS = {
                 {
                   "jp": "私は左の耳がよく聞こえません。",
                   "id": "Telinga kiri saya tidak terlalu bisa mendengar.",
-                  "rd": "わたしわひだりのみみがよくきこえません。"
+                  "rd": "わたしはひだりのみみがよくきこえません。"
                 }
               ],
               "tabel": [
@@ -3143,7 +3143,7 @@ const CHAPTERS = {
                 {
                   "jp": "このパソコンはラジオも聞けます。",
                   "id": "Komputer ini juga bisa memutar radio.",
-                  "rd": "このパソコンわラジオもきけます。"
+                  "rd": "このパソコンはラジオもきけます。"
                 },
                 {
                   "jp": "こんなにうるさいと、音楽が聞けません。",
@@ -3245,7 +3245,7 @@ const CHAPTERS = {
                 {
                   "jp": "日本へ行きたいです。",
                   "id": "Saya ingin pergi ke Jepang.",
-                  "rd": "にほんえいきたいです。"
+                  "rd": "にほんへいきたいです。"
                 },
                 {
                   "jp": "何も食べたくないです。",
@@ -3276,12 +3276,12 @@ const CHAPTERS = {
                 {
                   "jp": "子供は遊びたがっています。",
                   "id": "Anak itu kelihatannya ingin bermain.",
-                  "rd": "こどもわあそびたがっています。"
+                  "rd": "こどもはあそびたがっています。"
                 },
                 {
                   "jp": "彼は日本へ行きたがっています。",
                   "id": "Dia (laki-laki) kelihatannya ingin pergi ke Jepang.",
-                  "rd": "かれわにほんえいきたがっています。"
+                  "rd": "かれはにほんへいきたがっています。"
                 }
               ],
               "tabel": [
@@ -3665,7 +3665,7 @@ const CHAPTERS = {
                 {
                   "jp": "東京はジャカルタより暑いです。",
                   "id": "Tokyo lebih panas daripada Jakarta.",
-                  "rd": "とうきょうわジャカルタよりあついです。"
+                  "rd": "とうきょうはジャカルタよりあついです。"
                 },
                 {
                   "jp": "りんごのほうがみかんより好きです。",
@@ -3692,12 +3692,12 @@ const CHAPTERS = {
                 {
                   "jp": "今週は先週ほどいそがしくありません。",
                   "id": "Minggu ini tidak sesibuk minggu lalu.",
-                  "rd": "こんしゅうわせんしゅうほどいそがしくありません。"
+                  "rd": "こんしゅうはせんしゅうほどいそがしくありません。"
                 },
                 {
                   "jp": "日本では、ぶた肉は牛肉ほど高くありません。",
                   "id": "Di Jepang, daging babi tidak semahal daging sapi.",
-                  "rd": "にほんでは、ぶたにくわぎゅうにくほどたかくありません。"
+                  "rd": "にほんでは、ぶたにくはぎゅうにくほどたかくありません。"
                 },
                 {
                   "jp": "今週もいそがしいですが、先週ほどではありません。",
@@ -3724,12 +3724,12 @@ const CHAPTERS = {
                 {
                   "jp": "この子は家ではうるさいですが、外ではおとなしいです。",
                   "id": "Anak ini berisik di rumah, tetapi tenang di luar.",
-                  "rd": "このこわいえではうるさいですが、そとではおとなしいです。"
+                  "rd": "このこはいえではうるさいですが、そとではおとなしいです。"
                 },
                 {
                   "jp": "たんじょう日に父からも母からもプレゼントをもらいました。",
                   "id": "Pada hari ulang tahun, saya menerima hadiah dari ayah dan juga dari ibu.",
-                  "rd": "たんじょうひにちちからもははからもプレゼントおもらいました。"
+                  "rd": "たんじょうひにちちからもははからもプレゼントをもらいました。"
                 }
               ],
               "tabel": [
@@ -3791,7 +3791,7 @@ const CHAPTERS = {
                 {
                   "jp": "この本はあの本よりずっと面白いです。",
                   "id": "Buku ini jauh lebih menarik daripada buku itu.",
-                  "rd": "このほんわあのほんよりずっとおもしろいです。"
+                  "rd": "このほんはあのほんよりずっとおもしろいです。"
                 }
               ],
               "tabel": [
@@ -4189,12 +4189,12 @@ const CHAPTERS = {
                 {
                   "jp": "今、ご飯を食べているところです。",
                   "id": "Sekarang sedang makan.",
-                  "rd": "いま、ごはんおたべているところです。"
+                  "rd": "いま、ごはんをたべているところです。"
                 },
                 {
                   "jp": "弟は外で遊んでいます。",
                   "id": "Adik sedang bermain di luar.",
-                  "rd": "おとうとわそとであそんでいます。"
+                  "rd": "おとうとはそとであそんでいます。"
                 }
               ]
             },
@@ -4206,12 +4206,12 @@ const CHAPTERS = {
                 {
                   "jp": "田中さんは結婚しています。",
                   "id": "Tanaka sudah menikah (dan masih).",
-                  "rd": "たなかさんわけっこんしています。"
+                  "rd": "たなかさんはけっこんしています。"
                 },
                 {
                   "jp": "この時計は壊れています。",
                   "id": "Jam ini rusak (keadaannya).",
-                  "rd": "このとけいわこわれています。"
+                  "rd": "このとけいはこわれています。"
                 }
               ]
             },
@@ -4250,12 +4250,12 @@ const CHAPTERS = {
                 {
                   "jp": "今から家を出るところです。",
                   "id": "Saya baru akan keluar dari rumah sekarang.",
-                  "rd": "いまからいえおでるところです。"
+                  "rd": "いまからいえをでるところです。"
                 },
                 {
                   "jp": "これからご飯を食べるところです。",
                   "id": "Saya baru akan makan sekarang.",
-                  "rd": "これからごはんおたべるところです。"
+                  "rd": "これからごはんをたべるところです。"
                 }
               ],
               "tabel": [
@@ -4281,12 +4281,12 @@ const CHAPTERS = {
                 {
                   "jp": "今、料理を作っているところです。",
                   "id": "Sekarang saya sedang memasak.",
-                  "rd": "いま、りょうりおつくっているところです。"
+                  "rd": "いま、りょうりをつくっているところです。"
                 },
                 {
                   "jp": "すみません、今電話をしているところです。",
                   "id": "Maaf, saya sedang menelepon sekarang.",
-                  "rd": "すみません、いまでんわおしているところです。"
+                  "rd": "すみません、いまでんわをしているところです。"
                 }
               ],
               "tabel": [
@@ -4312,7 +4312,7 @@ const CHAPTERS = {
                 {
                   "jp": "今、お昼ご飯を食べたところです。",
                   "id": "Saya baru saja selesai makan siang.",
-                  "rd": "いま、おひるごはんおたべたところです。"
+                  "rd": "いま、おひるごはんをたべたところです。"
                 },
                 {
                   "jp": "今、駅に着いたところです。",
@@ -4329,7 +4329,7 @@ const CHAPTERS = {
                 {
                   "jp": "ドアを開けてください。",
                   "id": "Tolong buka pintunya.",
-                  "rd": "ドアおあけてください。"
+                  "rd": "ドアをあけてください。"
                 },
                 {
                   "jp": "風でドアが開きました。",
@@ -4364,7 +4364,7 @@ const CHAPTERS = {
                 {
                   "jp": "かばんを持ってきてください。",
                   "id": "Tolong bawa tasnya ke sini.",
-                  "rd": "かばんおもってきてください。"
+                  "rd": "かばんをもってきてください。"
                 },
                 {
                   "jp": "だんだん暑くなってきました。",
@@ -4399,7 +4399,7 @@ const CHAPTERS = {
                 {
                   "jp": "この本を持っていってもいいですか。",
                   "id": "Bolehkah saya membawa buku ini pergi?",
-                  "rd": "このほんおもっていってもいいですか。"
+                  "rd": "このほんをもっていってもいいですか。"
                 },
                 {
                   "jp": "これから寒くなっていきます。",
@@ -4794,12 +4794,12 @@ const CHAPTERS = {
                 {
                   "jp": "暑いから、窓を開けてください。",
                   "id": "Karena panas, tolong buka jendela.",
-                  "rd": "あついから、まどおあけてください。"
+                  "rd": "あついから、まどをあけてください。"
                 },
                 {
                   "jp": "病気なので、今日は休みます。",
                   "id": "Karena sakit, hari ini saya istirahat.",
-                  "rd": "びょうきなので、きょうわやすみます。"
+                  "rd": "びょうきなので、きょうはやすみます。"
                 }
               ],
               "tabel": [
@@ -4821,12 +4821,12 @@ const CHAPTERS = {
                 {
                   "jp": "かぜで学校を休みました。",
                   "id": "Saya tidak masuk sekolah karena flu.",
-                  "rd": "かぜでがっこうおやすみました。"
+                  "rd": "かぜでがっこうをやすみました。"
                 },
                 {
                   "jp": "このカレーはからくて食べられません。",
                   "id": "Kari ini terlalu pedas sehingga tidak bisa dimakan.",
-                  "rd": "このカレーわからくてたべられません。"
+                  "rd": "このカレーはからくてたべられません。"
                 },
                 {
                   "jp": "お金がなくて、買えない。",
@@ -5544,7 +5544,7 @@ const CHAPTERS = {
                 {
                   "jp": "お手洗いを使わせてください。",
                   "id": "Tolong izinkan saya memakai toilet.",
-                  "rd": "おてあらいつかわせてください。"
+                  "rd": "おてあらいをつかわせてください。"
                 },
                 {
                   "jp": "疲れた。ちょっと休ませて。",
@@ -5994,7 +5994,7 @@ const CHAPTERS = {
                 {
                   "jp": "コンビニへ行くなら、サンドイッチを買ってきてください。",
                   "id": "Kalau pergi ke minimarket, tolong belikan sandwich sekalian.",
-                  "rd": "コンビニえいくなら、サンドイッチをかってきてください。"
+                  "rd": "コンビニへいくなら、サンドイッチをかってきてください。"
                 },
                 {
                   "jp": "ラーメンなら、駅前のラーメン屋がおいしいですよ。",
@@ -8259,7 +8259,7 @@ const CHAPTERS = {
                 {
                   "jp": "母が料理をしている間に宿題をします。",
                   "id": "Saya mengerjakan PR selagi ibu memasak.",
-                  "rd": "ははがりょうりおしているあいだにしゅくだいをします。"
+                  "rd": "ははがりょうりをしているあいだにしゅくだいをします。"
                 }
               ],
               "tabel": [
@@ -8893,7 +8893,7 @@ const CHAPTERS = {
                 {
                   "jp": "私はAランチにします。",
                   "id": "Saya pilih makan siang A.",
-                  "rd": "わたしはAランチにします。"
+                  "rd": "わたしはエーランチにします。"
                 },
                 {
                   "jp": "これから、ダイエットすることにします。",
@@ -10969,7 +10969,7 @@ const CHAPTERS = {
                 {
                   "jp": "わからないところは先生に聞いたほうがいいですよ。",
                   "id": "Untuk bagian yang tidak dimengerti, sebaiknya tanyakan kepada guru.",
-                  "rd": "わからないところわせんせいにきいたほうがいいですよ。"
+                  "rd": "わからないところはせんせいにきいたほうがいいですよ。"
                 },
                 {
                   "jp": "時間がないから、タクシーで行ったほうがいいでしょう。",
@@ -10979,7 +10979,7 @@ const CHAPTERS = {
                 {
                   "jp": "かぜをひいたときは、早く寝たほうがいいですよ。",
                   "id": "Kalau sedang masuk angin, sebaiknya cepat tidur.",
-                  "rd": "かぜおひいたときわ、はやくねたほうがいいですよ。"
+                  "rd": "かぜをひいたときは、はやくねたほうがいいですよ。"
                 }
               ],
               "tabel": [
@@ -11005,12 +11005,12 @@ const CHAPTERS = {
                 {
                   "jp": "そんなあぶないところには、行かないほうがいいよ。",
                   "id": "Sebaiknya tidak pergi ke tempat berbahaya seperti itu.",
-                  "rd": "そんなあぶないところにわ、いかないほうがいいよ。"
+                  "rd": "そんなあぶないところには、いかないほうがいいよ。"
                 },
                 {
                   "jp": "その川ではおよがないほうがいいでしょう。",
                   "id": "Sebaiknya tidak berenang di sungai itu.",
-                  "rd": "そのかわでわおよがないほうがいいでしょう。"
+                  "rd": "そのかわではおよがないほうがいいでしょう。"
                 }
               ],
               "tabel": [
@@ -11090,7 +11090,7 @@ const CHAPTERS = {
                 {
                   "jp": "つぎのことばを漢字で書きなさい。",
                   "id": "Tulislah kata-kata berikut dalam kanji.",
-                  "rd": "つぎのことばおかんじでかきなさい。"
+                  "rd": "つぎのことばをかんじでかきなさい。"
                 }
               ],
               "tabel": [
@@ -11125,7 +11125,7 @@ const CHAPTERS = {
                 {
                   "jp": "ペンを貸してくださいませんか。",
                   "id": "Bisakah saya pinjam pulpen?",
-                  "rd": "ペンおかしてくださいませんか。"
+                  "rd": "ペンをかしてくださいませんか。"
                 },
                 {
                   "jp": "すみませんが、もう一度言っていただけませんか。",
@@ -11236,12 +11236,12 @@ const CHAPTERS = {
                 {
                   "jp": "この漢字の読み方を教えてください。",
                   "id": "Tolong beri tahu saya cara membaca kanji ini.",
-                  "rd": "このかんじのよみかたおおしえてください。"
+                  "rd": "このかんじのよみかたをおしえてください。"
                 },
                 {
                   "jp": "新しいコンピューターの使い方を習いました。",
                   "id": "Saya belajar cara memakai komputer baru.",
-                  "rd": "あたらしいコンピューターのつかいかたおならいました。"
+                  "rd": "あたらしいコンピューターのつかいかたをならいました。"
                 },
                 {
                   "jp": "このゲームのやり方が、まだわからない。",
@@ -11575,7 +11575,7 @@ const CHAPTERS = {
                 {
                   "jp": "この店の料理はおいしい。それにねだんも安い。",
                   "id": "Masakan restoran ini enak. Selain itu, harganya juga murah.",
-                  "rd": "このみせのりょうりわおいしい。それにねだんもやすい。"
+                  "rd": "このみせのりょうりはおいしい。それにねだんもやすい。"
                 },
                 {
                   "jp": "山田さんは若くてきれいです。それに、頭もいいです。",
@@ -11585,7 +11585,7 @@ const CHAPTERS = {
                 {
                   "jp": "きのうは雨が降っていて寒かったです。そのうえ、風も強かったです。",
                   "id": "Kemarin hujan dan dingin. Ditambah lagi, anginnya juga kencang.",
-                  "rd": "きのうわあめがふっていてさむかったです。そのうえ、かぜもつよかったです。"
+                  "rd": "きのうはあめがふっていてさむかったです。そのうえ、かぜもつよかったです。"
                 }
               ],
               "tabel": [
@@ -11634,12 +11634,12 @@ const CHAPTERS = {
                 {
                   "jp": "きのうは、試験の日だった。ところが、病気で受けることができなかった。",
                   "id": "Kemarin adalah hari ujian. Tetapi ternyata, karena sakit saya tidak bisa ikut.",
-                  "rd": "きのうわ、しけんのひだった。ところが、びょうきでうけることができなかった。"
+                  "rd": "きのうは、しけんのひだった。ところが、びょうきでうけることができなかった。"
                 },
                 {
                   "jp": "朝ははれていた。ところが、昼から急に雨が降ってきた。",
                   "id": "Pagi harinya cerah. Tetapi ternyata, mulai siang tiba-tiba turun hujan.",
-                  "rd": "あさわはれていた。ところが、ひるからきゅうにあめがふってきた。"
+                  "rd": "あさははれていた。ところが、ひるからきゅうにあめがふってきた。"
                 }
               ]
             },
@@ -11651,17 +11651,17 @@ const CHAPTERS = {
                 {
                   "jp": "あの山の高さはどのくらいですか。",
                   "id": "Gunung itu tingginya kira-kira berapa?",
-                  "rd": "あのやまのたかさわどのくらいですか。"
+                  "rd": "あのやまのたかさはどのくらいですか。"
                 },
                 {
                   "jp": "同じ大きさのダイヤモンドでも、ねだんはいろいろ違います。",
                   "id": "Meski berliannya sama besar, harganya bermacam-macam.",
-                  "rd": "おなじおおきさのダイヤモンドでも、ねだんわいろいろちがいます。"
+                  "rd": "おなじおおきさのダイヤモンドでも、ねだんはいろいろちがいます。"
                 },
                 {
                   "jp": "広さよりも便利さを考えて、今のアパートを選びました。",
                   "id": "Saya memilih apartemen sekarang karena mempertimbangkan kepraktisannya daripada luasnya.",
-                  "rd": "ひろさよりもべんりさおかんがえて、いまのアパートおえらびました。"
+                  "rd": "ひろさよりもべんりさをかんがえて、いまのアパートをえらびました。"
                 }
               ],
               "tabel": [
@@ -11700,12 +11700,12 @@ const CHAPTERS = {
                 {
                   "jp": "この店は安いけれども、あまりおいしくないです。",
                   "id": "Toko ini murah, tapi tidak terlalu enak.",
-                  "rd": "このみせわやすいけれども、あまりおいしくないです。"
+                  "rd": "このみせはやすいけれども、あまりおいしくないです。"
                 },
                 {
                   "jp": "ところで、週末は何をする予定ですか。",
                   "id": "Ngomong-ngomong, akhir pekan ada rencana apa?",
-                  "rd": "ところで、しゅうまつわなにをするよていですか。"
+                  "rd": "ところで、しゅうまつはなにをするよていですか。"
                 }
               ],
               "tabel": [
@@ -11743,17 +11743,17 @@ const CHAPTERS = {
                 {
                   "jp": "この文は何回読んでも理解できません。",
                   "id": "Kalimat ini dibaca berapa kali pun tetap tidak bisa saya pahami.",
-                  "rd": "このぶんわなんかいよんでもりかいできません。"
+                  "rd": "このぶんはなんかいよんでもりかいできません。"
                 },
                 {
                   "jp": "あのレストランはいつ行ってもこんでいます。",
                   "id": "Restoran itu selalu ramai kapan pun datang.",
-                  "rd": "あのレストランわいついってもこんでいます。"
+                  "rd": "あのレストランはいついってもこんでいます。"
                 },
                 {
                   "jp": "英語を習っているが、どんなに勉強してもうまく話せない。",
                   "id": "Saya belajar bahasa Inggris, tapi seberapa pun giat belajar, tetap tidak bisa bicara dengan lancar.",
-                  "rd": "えいごおならっているが、どんなにべんきょうしてもうまくはなせない。"
+                  "rd": "えいごをならっているが、どんなにべんきょうしてもうまくはなせない。"
                 }
               ],
               "tabel": [
@@ -11784,7 +11784,7 @@ const CHAPTERS = {
                 {
                   "jp": "パソコンは必要なので、高くても買います。",
                   "id": "Karena butuh komputer, saya akan beli meski mahal.",
-                  "rd": "パソコンわひつようなので、たかくてもかいます。"
+                  "rd": "パソコンはひつようなので、たかくてもかいます。"
                 },
                 {
                   "jp": "明日雨でも、動物園に行きます。",
@@ -12133,17 +12133,17 @@ const CHAPTERS = {
                 {
                   "jp": "このぼうしは私には小さすぎます。",
                   "id": "Topi ini terlalu kecil untukku.",
-                  "rd": "このぼうしわわたしにわちいさすぎます。"
+                  "rd": "このぼうしはわたしにはちいさすぎます。"
                 },
                 {
                   "jp": "きのう、お酒を飲みすぎて、頭がいたい。",
                   "id": "Kemarin minum terlalu banyak sampai kepalaku sakit.",
-                  "rd": "きのう、おさけおのみすぎて、あたまがいたい。"
+                  "rd": "きのう、おさけをのみすぎて、あたまがいたい。"
                 },
                 {
                   "jp": "漢字は多すぎて覚えられません。",
                   "id": "Kanji-nya terlalu banyak sampai tidak bisa dihafal.",
-                  "rd": "かんじわおおすぎておぼえられません。"
+                  "rd": "かんじはおおすぎておぼえられません。"
                 }
               ],
               "tabel": [
@@ -12169,17 +12169,17 @@ const CHAPTERS = {
                 {
                   "jp": "このペンは書きやすいです。",
                   "id": "Pulpen ini mudah dipakai menulis.",
-                  "rd": "このペンわがきやすいです。"
+                  "rd": "このペンはがきやすいです。"
                 },
                 {
                   "jp": "田中先生の説明はわかりやすいです。",
                   "id": "Penjelasan Pak Tanaka mudah dipahami.",
-                  "rd": "たなかせんせいのせつめいわわかりやすいです。"
+                  "rd": "たなかせんせいのせつめいはわかりやすいです。"
                 },
                 {
                   "jp": "この地図は、小さくてわかりにくいです。",
                   "id": "Peta ini kecil dan sulit dipahami.",
-                  "rd": "このちずわ、ちいさくてわかりにくいです。"
+                  "rd": "このちずは、ちいさくてわかりにくいです。"
                 }
               ],
               "tabel": [
@@ -12232,12 +12232,12 @@ const CHAPTERS = {
                 {
                   "jp": "ご飯を食べ終わるまで、待っていてください。",
                   "id": "Tolong tunggu sampai saya selesai makan.",
-                  "rd": "ごはんおたべおわるまで、まっていてください。"
+                  "rd": "ごはんをたべおわるまで、まっていてください。"
                 },
                 {
                   "jp": "宿題をやり終わったら、遊びに行きます。",
                   "id": "Setelah selesai mengerjakan PR, saya akan pergi main.",
-                  "rd": "しゅくだいおやりおわったら、あそびにいきます。"
+                  "rd": "しゅくだいをやりおわったら、あそびにいきます。"
                 }
               ],
               "tabel": [
@@ -12259,12 +12259,12 @@ const CHAPTERS = {
                 {
                   "jp": "1週間、この薬を飲み続けてください。",
                   "id": "Tolong terus minum obat ini selama seminggu.",
-                  "rd": "いっしゅうかん、このくすりおのみつづけてください。"
+                  "rd": "いっしゅうかん、このくすりをのみつづけてください。"
                 },
                 {
                   "jp": "日本語の勉強を続けています。",
                   "id": "Saya terus belajar bahasa Jepang.",
-                  "rd": "にほんごのべんきょうおつづけています。"
+                  "rd": "にほんごのべんきょうをつづけています。"
                 }
               ],
               "tabel": [
@@ -12291,12 +12291,12 @@ const CHAPTERS = {
                 {
                   "jp": "A「どうしたんですか。」B「ちょっと、頭がいたいんです。」",
                   "id": "A: \"Kamu kenapa?\" B: \"Kepalaku agak sakit.\"",
-                  "rd": "A「どうしたんですか。」B「ちょっと、あたまがいたいんです。」"
+                  "rd": "エー「どうしたんですか。」ビー「ちょっと、あたまがいたいんです。」"
                 },
                 {
                   "jp": "A「パーティーに行かないの？」B「ちょっと用事があるんだ。」",
                   "id": "A: \"Tidak pergi ke pesta?\" B: \"Ada urusan sedikit.\"",
-                  "rd": "A「パーティーにいかないの？」B「ちょっとようじがあるんだ。」"
+                  "rd": "エー「パーティーにいかないの？」ビー「ちょっとようじがあるんだ。」"
                 }
               ],
               "tabel": [
@@ -12332,7 +12332,7 @@ const CHAPTERS = {
                 {
                   "jp": "漢字のテストは明日ですよ。",
                   "id": "Tes kanji besok lho. [info baru/penekanan]",
-                  "rd": "かんじのテストわあしたですよ。"
+                  "rd": "かんじのテストはあしたですよ。"
                 }
               ],
               "tabel": [
@@ -12358,7 +12358,7 @@ const CHAPTERS = {
                 {
                   "jp": "ここはどこかな。",
                   "id": "Ini di mana ya?",
-                  "rd": "ここわどこかな。"
+                  "rd": "ここはどこかな。"
                 },
                 {
                   "jp": "早く夏休みが来ないかなあ。",
@@ -12747,7 +12747,7 @@ const CHAPTERS = {
                 {
                   "jp": "なぜ会社をやめたか教えてください。",
                   "id": "Tolong beri tahu saya kenapa kamu keluar dari perusahaan.",
-                  "rd": "なぜかいしゃおやめたかおしえてください。"
+                  "rd": "なぜかいしゃをやめたかおしえてください。"
                 }
               ],
               "tabel": [
@@ -12773,17 +12773,17 @@ const CHAPTERS = {
                 {
                   "jp": "あそこでたばこをすっているのが社長です。",
                   "id": "Yang sedang merokok di sana itu adalah direktur perusahaan.",
-                  "rd": "あそこでたばこおすっているのがしゃちょうです。"
+                  "rd": "あそこでたばこをすっているのがしゃちょうです。"
                 },
                 {
                   "jp": "あなたがほしいのは何ですか。",
                   "id": "Apa yang kamu inginkan?",
-                  "rd": "あなたがほしいのわなんですか。"
+                  "rd": "あなたがほしいのはなんですか。"
                 },
                 {
                   "jp": "姉はケーキを作るのが上手です。",
                   "id": "Kakak perempuan saya pandai membuat kue.",
-                  "rd": "あねわケーキをつくるのがじょうずです。"
+                  "rd": "あねはケーキをつくるのがじょうずです。"
                 }
               ],
               "tabel": [
@@ -12809,17 +12809,17 @@ const CHAPTERS = {
                 {
                   "jp": "田中さんは明日は来ないと言っていましたよ。",
                   "id": "Katanya Tanaka besok tidak datang.",
-                  "rd": "たなかさんはあしたわこないといっていましたよ。"
+                  "rd": "たなかさんはあしたはこないといっていましたよ。"
                 },
                 {
                   "jp": "天気予報で、明日は寒いと言っていました。",
                   "id": "Menurut ramalan cuaca, besok akan dingin.",
-                  "rd": "てんきよほうで、あしたわさむいといっていました。"
+                  "rd": "てんきよほうで、あしたはさむいといっていました。"
                 },
                 {
                   "jp": "医者に酒は飲むなと言われました。",
                   "id": "Dokter bilang saya tidak boleh minum alkohol.",
-                  "rd": "いしゃにさけわのむなといわれました。"
+                  "rd": "いしゃにさけはのむなといわれました。"
                 }
               ],
               "tabel": [
@@ -12855,7 +12855,7 @@ const CHAPTERS = {
                 {
                   "jp": "彼は来ないと思います。",
                   "id": "Saya rasa dia tidak akan datang.",
-                  "rd": "かれわこないとおもいます。"
+                  "rd": "かれはこないとおもいます。"
                 }
               ],
               "tabel": [
@@ -12881,7 +12881,7 @@ const CHAPTERS = {
                 {
                   "jp": "主人は最近、疲れているようです。",
                   "id": "Suamiku akhir-akhir ini kelihatannya lelah.",
-                  "rd": "しゅじんわさいきん、つかれているようです。"
+                  "rd": "しゅじんはさいきん、つかれているようです。"
                 },
                 {
                   "jp": "道路がぬれているから、雨が降ったようですね。",
@@ -12922,7 +12922,7 @@ const CHAPTERS = {
                 {
                   "jp": "明日は天気がよさそうですよ。",
                   "id": "Besok cuacanya kelihatannya bagus.",
-                  "rd": "あしたわてんきがよさそうですよ。"
+                  "rd": "あしたはてんきがよさそうですよ。"
                 },
                 {
                   "jp": "雨が降りそうです。",
@@ -12989,7 +12989,7 @@ const CHAPTERS = {
                 {
                   "jp": "弟はもうすぐ結婚するだろう。",
                   "id": "Adikku mungkin akan segera menikah.",
-                  "rd": "おとうとわもうすぐけっこんするだろう。"
+                  "rd": "おとうとはもうすぐけっこんするだろう。"
                 }
               ],
               "tabel": [
@@ -13021,7 +13021,7 @@ const CHAPTERS = {
                 {
                   "jp": "どうしよう。さいふをどこかに落としたかもしれない。",
                   "id": "Aduh. Mungkin dompetku terjatuh di suatu tempat.",
-                  "rd": "どうしよう。さいふおどこかにおとしたかもしれない。"
+                  "rd": "どうしよう。さいふをどこかにおとしたかもしれない。"
                 }
               ],
               "tabel": [
@@ -13364,12 +13364,12 @@ const CHAPTERS = {
                 {
                   "jp": "私は日本へ行きたいです。",
                   "id": "Saya ingin pergi ke Jepang.",
-                  "rd": "わたしわにほんえいきたいです。"
+                  "rd": "わたしはにほんへいきたいです。"
                 },
                 {
                   "jp": "彼は日本へ行きたがっています。",
                   "id": "Dia kelihatannya ingin pergi ke Jepang.",
-                  "rd": "かれわにほんえいきたがっています。"
+                  "rd": "かれはにほんへいきたがっています。"
                 }
               ],
               "tabel": [
@@ -13423,7 +13423,7 @@ const CHAPTERS = {
                 {
                   "jp": "ボタンを押すと、開きます。",
                   "id": "Jika tombol ditekan, terbuka (pasti → と).",
-                  "rd": "ボタンおおすと、ひらきます。"
+                  "rd": "ボタンをおすと、ひらきます。"
                 }
               ],
               "tabel": [
