@@ -1146,7 +1146,7 @@ const app = createApp({
             </div>
             <div v-if="!modulCh" class="lib-grid">
               <div v-for="ch in modulChapters" :key="ch.id" class="lvl" @click="modulCh=ch.id">
-                <div class="badge"><b>{{ ch.bab }}</b></div>
+                <div class="badge" :class="{ 'bab-pill': ch.nc }"><b>{{ ch.bab }}</b></div>
                 <div class="lvl-body"><b>{{ ch.title }}</b><div class="muted small">{{ modulSecCount(ch) }} {{ modulCat==='kotoba' ? 'kosakata' : 'kanji' }}<span v-if="ch.nc"> &middot; Nihongo Challenge</span></div><div v-if="ch.title_jp" class="muted small">{{ ch.title_jp }}</div></div>
                 <span v-html="ic('play',16)"></span>
               </div>
