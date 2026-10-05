@@ -8841,7 +8841,7 @@ const CHAPTERS = {
                 },
                 {
                   "jp": "こんなにうるさいと、音楽が聞けません。",
-                  "id": "Seribut ini, saya jadi tidak bisa mendengar musiknya.",
+                  "id": "Berisik begini, saya jadi tidak bisa mendengar musiknya.",
                   "rd": "こんなにうるさいと、おんがくがきけません。"
                 }
               ]
