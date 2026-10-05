@@ -168,6 +168,9 @@ app.post('/api/quiz/result', auth, (req, res) => {
 });
 
 app.get('/api/quiz/history', auth, (req, res) => {
+  const rows = db.prepare('SELECT level, score, total, created_at FROM quiz_results WHERE user_id = ? ORDER BY id DESC LIMIT 20').all(req.user.id);
+  res.json({ history: rows });
+});
 
 // ---- Chapter progress (jalur belajar Soumatome) ----
 app.get('/api/chapters/progress', auth, (req, res) => {
@@ -185,8 +188,6 @@ app.post('/api/chapters/complete', auth, (req, res) => {
     updated_at=datetime('now')`)
     .run(req.user.id, String(chapter_id).slice(0, 20), Number(score) || 0, Number(total) || 0, passed);
   res.json({ ok: true, passed: !!passed });
-});  const rows = db.prepare('SELECT level, score, total, created_at FROM quiz_results WHERE user_id = ? ORDER BY id DESC LIMIT 20').all(req.user.id);
-  res.json({ history: rows });
 });
 
 // ---- Games ----
