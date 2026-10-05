@@ -245,7 +245,11 @@ const app = createApp({
       return this.secScores.filter(s => s.pct < 60);
     },
   },
-  watch: { tab() { this.saveTab(); window.scrollTo({ top: 0, behavior: 'smooth' }); } },
+  watch: {
+    tab() { this.saveTab(); window.scrollTo({ top: 0, behavior: 'smooth' }); },
+    openChapter() { this.saveChapterState(); },
+    chQuiz: { deep: true, handler() { this.saveChapterState(); } },
+  },
   methods: {
     saveTab() { const m = { quizrun: 'quiz', quizdone: 'quiz', adaptiverun: 'quiz', srsrun: 'saya' }; localStorage.setItem('nl_tab', m[this.tab] || this.tab); },
     saveQuizProgress() {
@@ -258,6 +262,33 @@ const app = createApp({
       } catch {}
     },
     clearQuizProgress() { localStorage.removeItem('nl_quiz'); this.quizResume = null; },
+    // ---- posisi baca bab & quiz bab: tetap stay saat refresh ----
+    saveChapterState() {
+      try {
+        if (!this.openChapter && !this.chQuiz) { localStorage.removeItem('nl_chapter'); return; }
+        const ch = this.chQuiz ? this.chQuiz.chapter : this.openChapter;
+        const data = { chapter_id: ch.id, savedAt: Date.now(), quiz: null };
+        if (this.chQuiz) {
+          const cq = this.chQuiz;
+          data.quiz = { qs: cq.qs, idx: cq.idx, ans: cq.ans, done: cq.done, score: cq.score, pct: cq.pct };
+        }
+        localStorage.setItem('nl_chapter', JSON.stringify(data));
+      } catch {}
+    },
+    restoreChapterState() {
+      try {
+        if (!store.user) return;
+        const s = JSON.parse(localStorage.getItem('nl_chapter') || 'null');
+        if (!s || !s.chapter_id) return;
+        const ch = Object.values(CHAPTERS).flat().find(c => c.id === s.chapter_id);
+        if (!ch) { localStorage.removeItem('nl_chapter'); return; }
+        this.openChapter = ch;
+        if (s.quiz && s.quiz.qs && s.quiz.qs.length) {
+          this.chQuiz = { chapter: ch, qs: s.quiz.qs, idx: Math.min(s.quiz.idx || 0, s.quiz.qs.length - 1), ans: s.quiz.ans || [], done: !!s.quiz.done, score: s.quiz.score || 0, pct: s.quiz.pct || 0, lock: false };
+        }
+        this.$nextTick(() => window.scrollTo({ top: 0 }));
+      } catch { localStorage.removeItem('nl_chapter'); }
+    },
     resumeTimer() {
       clearInterval(this.qTimer);
       this.qTimer = setInterval(() => { this.qTime--; if (this.qTime <= 0) { clearInterval(this.qTimer); this.nextSec(); } }, 1000);
@@ -357,7 +388,7 @@ const app = createApp({
         toast('Selamat datang, ' + store.user.name + '! 🎉');
       } catch (e) { toast(e.message); }
     },
-    logout() { saveToken(''); store.user = null; this.tab = 'home'; },
+    logout() { saveToken(''); store.user = null; this.tab = 'home'; this.openChapter = null; this.chQuiz = null; localStorage.removeItem('nl_chapter'); },
     async refresh() {
       if (!store.token) { store.authChecked = true; return; }
       try {
@@ -685,7 +716,7 @@ const app = createApp({
       p.style.animationDuration = (6 + Math.random() * 6) + 's';
       document.body.appendChild(p); setTimeout(() => p.remove(), 12000);
     }, 1800);
-    this.refresh();
+    this.refresh().then(() => this.restoreChapterState());
     this.startMatch();
     this.applySb();
     try {
@@ -813,7 +844,7 @@ const app = createApp({
             <div class="passage kaiwa-lines"><div v-for="(ln, li) in s.lines" :key="li" style="margin-bottom:10px"><b>{{ ln.sp }}:</b> {{ ln.jp }}<br><span class="muted small">{{ ln.id }}</span></div></div>
           </div>
         </div>
-        <button class="btn btn-block" @click="startChapterQuiz(openChapter)">📝 Quiz Bab {{ openChapter.bab }} ({{ openChapter.quiz.length }} soal)</button>
+        <button class="btn btn-block" @click="startChapterQuiz(openChapter)">📝 Quiz Bab {{ openChapter.bab }} (10 soal acak)</button>
       </div>
 
       <div v-if="chQuiz" class="card pop">
