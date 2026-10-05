@@ -19682,8 +19682,8 @@ const CHAPTERS = {
     "id": "n2-1",
     "bab": 1,
     "level": "n2",
-    "title": "Saat & Tepat Setelah",
-    "desc": "Menyatakan waktu kejadian dan hal yang terjadi tepat setelahnya.",
+    "title": "〜際に・〜たとたん — Momen & Tepat Setelah",
+    "desc": "Menyatakan waktu kejadian dan hal yang terjadi tepat setelahnya. Pola: 〜際（に）、〜に際して・〜にあたって、〜たとたん（に）、〜（か）と思うと・〜（か）と思ったら、〜か〜ないかのうちに.",
     "icon": "⏰",
     "sections": [
       {
@@ -19693,7 +19693,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Saat & Tepat Setelah",
+        "title": "Kosakata: 〜際に・〜たとたん — Momen & Tepat Setelah",
         "items": [
           {
             "jp": "際",
@@ -19804,7 +19804,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Saat & Tepat Setelah",
+        "title": "Pola: 〜際に・〜たとたん — Momen & Tepat Setelah",
         "items": [
           {
             "pattern": "kata benda + の際（に） / kata kerja bentuk kamus atau bentuk lampau + 際（に）",
@@ -20225,8 +20225,8 @@ const CHAPTERS = {
     "id": "n2-2",
     "bab": 2,
     "level": "n2",
-    "title": "Sedang Berlangsung",
-    "desc": "Menyatakan aksi yang sedang berjalan atau berubah.",
+    "title": "〜最中・〜つつある — Sedang Berlangsung",
+    "desc": "Menyatakan aksi yang sedang berjalan atau berubah. Pola: 〜最中だ、〜うちに、〜ばかりだ・〜一方だ、〜（よ）うとしている、〜つつある、〜つつ.",
     "icon": "🔄",
     "sections": [
       {
@@ -20236,7 +20236,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Sedang Berlangsung",
+        "title": "Kosakata: 〜最中・〜つつある — Sedang Berlangsung",
         "items": [
           {
             "jp": "最中",
@@ -20347,7 +20347,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Sedang Berlangsung",
+        "title": "Pola: 〜最中・〜つつある — Sedang Berlangsung",
         "items": [
           {
             "pattern": "kata benda + の最中だ / kata kerja bentuk ている + 最中だ",
@@ -20791,8 +20791,8 @@ const CHAPTERS = {
     "id": "n2-3",
     "bab": 3,
     "level": "n2",
-    "title": "Setelah Melakukan",
-    "desc": "Pola akibat, syarat, dan urutan setelah melakukan sesuatu.",
+    "title": "〜てはじめて・〜次第 — Setelah Itu, Barulah",
+    "desc": "Pola akibat, syarat, dan urutan setelah melakukan sesuatu. Pola: 〜てはじめて、〜上（で）、〜次第、〜て以来・〜てこのかた、〜てからでないと・〜てからでなければ.",
     "icon": "➡️",
     "sections": [
       {
@@ -20802,7 +20802,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Setelah Melakukan",
+        "title": "Kosakata: 〜てはじめて・〜次第 — Setelah Itu, Barulah",
         "items": [
           {
             "jp": "以来",
@@ -20913,7 +20913,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Setelah Melakukan",
+        "title": "Pola: 〜てはじめて・〜次第 — Setelah Itu, Barulah",
         "items": [
           {
             "pattern": "kata kerja bentuk te + はじめて",
@@ -21339,8 +21339,8 @@ const CHAPTERS = {
     "id": "n2-4",
     "bab": 4,
     "level": "n2",
-    "title": "Rentang & Batasan",
-    "desc": "Menyatakan awal-akhir rentang dan batasan cakupan.",
+    "title": "〜をはじめ・〜にわたって — Rentang & Cakupan",
+    "desc": "Menyatakan awal-akhir rentang dan batasan cakupan. Pola: 〜をはじめ（として）、〜からして、〜にわたって、〜を通じて・〜を通して、〜限り、〜だけ.",
     "icon": "📏",
     "sections": [
       {
@@ -21350,7 +21350,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Rentang & Batasan",
+        "title": "Kosakata: 〜をはじめ・〜にわたって — Rentang & Cakupan",
         "items": [
           {
             "jp": "範囲",
@@ -21461,7 +21461,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Rentang & Batasan",
+        "title": "Pola: 〜をはじめ・〜にわたって — Rentang & Cakupan",
         "items": [
           {
             "pattern": "kata benda + をはじめ（として） / をはじめとする + kata benda",
@@ -21918,8 +21918,8 @@ const CHAPTERS = {
     "id": "n2-5",
     "bab": 5,
     "level": "n2",
-    "title": "Hanya & Terbatas",
-    "desc": "Menyatakan pembatasan: hanya untuk, hanya jika.",
+    "title": "〜に限り・〜に限って — Batasan 'Hanya'",
+    "desc": "Menyatakan pembatasan: hanya untuk, hanya jika. Pola: 〜に限り、〜限り（は）、〜限りでは、〜に限って.",
     "icon": "🎯",
     "sections": [
       {
@@ -21929,7 +21929,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Hanya & Terbatas",
+        "title": "Kosakata: 〜に限り・〜に限って — Batasan 'Hanya'",
         "items": [
           {
             "jp": "限り",
@@ -22040,7 +22040,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Hanya & Terbatas",
+        "title": "Pola: 〜に限り・〜に限って — Batasan 'Hanya'",
         "items": [
           {
             "pattern": "kata benda + に限り",
@@ -22424,8 +22424,8 @@ const CHAPTERS = {
     "id": "n2-6",
     "bab": 6,
     "level": "n2",
-    "title": "Tidak Hanya...",
-    "desc": "Menambahkan informasi: tidak hanya itu, melainkan juga.",
+    "title": "〜に限らず・〜ばかりか — 'Tidak Hanya...'",
+    "desc": "Menambahkan informasi: tidak hanya itu, melainkan juga. Pola: 〜に限らず、〜のみならず、〜ばかりか、〜はもとより、〜上（に）.",
     "icon": "➕",
     "sections": [
       {
@@ -22435,7 +22435,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Tidak Hanya...",
+        "title": "Kosakata: 〜に限らず・〜ばかりか — 'Tidak Hanya...'",
         "items": [
           {
             "jp": "限る",
@@ -22546,7 +22546,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Tidak Hanya...",
+        "title": "Pola: 〜に限らず・〜ばかりか — 'Tidak Hanya...'",
         "items": [
           {
             "arti": "tidak hanya ~ (tetapi juga yang lain)",
@@ -22976,8 +22976,8 @@ const CHAPTERS = {
     "id": "n2-7",
     "bab": 7,
     "level": "n2",
-    "title": "Tentang & Terhadap",
-    "desc": "Menyatakan topik bahasan dan sikap terhadap sesuatu.",
+    "title": "〜に関して・〜に対して — Tentang & Terhadap",
+    "desc": "Menyatakan topik bahasan dan sikap terhadap sesuatu. Pola: 〜に関して、〜をめぐって、〜にかけては、〜に対して.",
     "icon": "📝",
     "sections": [
       {
@@ -22987,7 +22987,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Tentang & Terhadap",
+        "title": "Kosakata: 〜に関して・〜に対して — Tentang & Terhadap",
         "items": [
           {
             "jp": "関する",
@@ -23098,7 +23098,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Tentang & Terhadap",
+        "title": "Pola: 〜に関して・〜に対して — Tentang & Terhadap",
         "items": [
           {
             "arti": "mengenai ~; tentang ~",
@@ -23489,8 +23489,8 @@ const CHAPTERS = {
     "id": "n2-8",
     "bab": 8,
     "level": "n2",
-    "title": "Berdasarkan & Standar",
-    "desc": "Menyatakan dasar, acuan, dan patokan.",
+    "title": "〜に基づいて・〜に沿って — Dasar & Acuan",
+    "desc": "Menyatakan dasar, acuan, dan patokan. Pola: 〜をもとに（して）、〜に基づいて、〜に沿って、〜のもとで・〜のもとに、〜向けだ.",
     "icon": "📐",
     "sections": [
       {
@@ -23500,7 +23500,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Berdasarkan & Standar",
+        "title": "Kosakata: 〜に基づいて・〜に沿って — Dasar & Acuan",
         "items": [
           {
             "jp": "基づく",
@@ -23611,7 +23611,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Berdasarkan & Standar",
+        "title": "Pola: 〜に基づいて・〜に沿って — Dasar & Acuan",
         "items": [
           {
             "arti": "berdasarkan ~ (sebagai bahan)",
@@ -24026,8 +24026,8 @@ const CHAPTERS = {
     "id": "n2-9",
     "bab": 9,
     "level": "n2",
-    "title": "Seiring & Menyesuaikan",
-    "desc": "Menyatakan perubahan seiring dan penyesuaian.",
+    "title": "〜につれて・〜に伴って — Seiring & Sejalan",
+    "desc": "Menyatakan perubahan seiring dan penyesuaian. Pola: 〜につれて・〜にしたがって、〜に伴って・〜とともに、〜次第だ、〜に応じて、〜につけて.",
     "icon": "🌊",
     "sections": [
       {
@@ -24037,7 +24037,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Seiring & Menyesuaikan",
+        "title": "Kosakata: 〜につれて・〜に伴って — Seiring & Sejalan",
         "items": [
           {
             "jp": "伴う",
@@ -24148,7 +24148,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Seiring & Menyesuaikan",
+        "title": "Pola: 〜につれて・〜に伴って — Seiring & Sejalan",
         "items": [
           {
             "arti": "seiring ~, … pun … (berubah bersama)",
@@ -24572,8 +24572,8 @@ const CHAPTERS = {
     "id": "n2-10",
     "bab": 10,
     "level": "n2",
-    "title": "Contoh & Sejenisnya",
-    "desc": "Memberi contoh dan menyatakan hal sejenis.",
+    "title": "〜やら・〜といった — Contoh & Sejenisnya",
+    "desc": "Memberi contoh dan menyatakan hal sejenis. Pola: 〜やら〜やら、〜というか〜というか、〜にしても〜にしても・〜にしろ〜にしろ・〜にせよ〜にせよ、〜といった.",
     "icon": "💬",
     "sections": [
       {
@@ -24583,7 +24583,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Contoh & Sejenisnya",
+        "title": "Kosakata: 〜やら・〜といった — Contoh & Sejenisnya",
         "items": [
           {
             "jp": "さまざま",
@@ -24694,7 +24694,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Contoh & Sejenisnya",
+        "title": "Pola: 〜やら・〜といった — Contoh & Sejenisnya",
         "items": [
           {
             "arti": "ada yang ~, ada yang ~ (macam-macam)",
@@ -25086,8 +25086,8 @@ const CHAPTERS = {
     "id": "n2-11",
     "bab": 11,
     "level": "n2",
-    "title": "Tanpa Terkecuali",
-    "desc": "Mengabaikan perbedaan dan menyatakan berlaku umum.",
+    "title": "〜を問わず・〜はさておき — Tanpa Terkecuali",
+    "desc": "Mengabaikan perbedaan dan menyatakan berlaku umum. Pola: 〜を問わず、〜にかかわりなく・〜にかかわらず、〜もかまわず、〜はともかく（として）、〜はさておき.",
     "icon": "🌐",
     "sections": [
       {
@@ -25097,7 +25097,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Tanpa Terkecuali",
+        "title": "Kosakata: 〜を問わず・〜はさておき — Tanpa Terkecuali",
         "items": [
           {
             "jp": "問う",
@@ -25208,7 +25208,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Tanpa Terkecuali",
+        "title": "Pola: 〜を問わず・〜はさておき — Tanpa Terkecuali",
         "items": [
           {
             "pattern": "kata benda + を問わず",
@@ -25633,8 +25633,8 @@ const CHAPTERS = {
     "id": "n2-12",
     "bab": 12,
     "level": "n2",
-    "title": "Penolakan Kuat",
-    "desc": "Menyangkal dengan tegas dan kuat.",
+    "title": "〜わけがない・〜どころか — Penolakan Tegas",
+    "desc": "Menyangkal dengan tegas dan kuat. Pola: 〜わけがない、〜どころではない・〜どころか、〜ものか、〜わけではない・〜というわけではない、〜というものではない・〜というものでもない.",
     "icon": "🚫",
     "sections": [
       {
@@ -25644,7 +25644,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Penolakan Kuat",
+        "title": "Kosakata: 〜わけがない・〜どころか — Penolakan Tegas",
         "items": [
           {
             "jp": "否定",
@@ -25755,7 +25755,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Penolakan Kuat",
+        "title": "Pola: 〜わけがない・〜どころか — Penolakan Tegas",
         "items": [
           {
             "pattern": "kalimat bentuk biasa + わけがない",
@@ -26185,8 +26185,8 @@ const CHAPTERS = {
     "id": "n2-13",
     "bab": 13,
     "level": "n2",
-    "title": "Membicarakan Topik",
-    "desc": "Mengangkat topik pembicaraan dengan berbagai nuansa.",
+    "title": "〜とは・〜といえば — Mengangkat Topik",
+    "desc": "Mengangkat topik pembicaraan dengan berbagai nuansa. Pola: 〜とは、〜といえば、〜というと・〜といえば・〜といったら、〜（のこと）となると、〜といったら.",
     "icon": "🗣️",
     "sections": [
       {
@@ -26196,7 +26196,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Membicarakan Topik",
+        "title": "Kosakata: 〜とは・〜といえば — Mengangkat Topik",
         "items": [
           {
             "jp": "定義",
@@ -26307,7 +26307,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Membicarakan Topik",
+        "title": "Pola: 〜とは・〜といえば — Mengangkat Topik",
         "items": [
           {
             "pattern": "kata benda + とは",
@@ -26728,8 +26728,8 @@ const CHAPTERS = {
     "id": "n2-14",
     "bab": 14,
     "level": "n2",
-    "title": "Tetapi & Walaupun",
-    "desc": "Menyatakan kontras dan pengecualian.",
+    "title": "〜にもかかわらず・〜ものの — Kontras 'Walaupun'",
+    "desc": "Menyatakan kontras dan pengecualian. Pola: 〜にもかかわらず、〜ものの・〜とはいうものの、〜ながら（も）、〜つつ（も）、〜といっても、〜からといって.",
     "icon": "⚖️",
     "sections": [
       {
@@ -26739,7 +26739,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Tetapi & Walaupun",
+        "title": "Kosakata: 〜にもかかわらず・〜ものの — Kontras 'Walaupun'",
         "items": [
           {
             "jp": "悪天候",
@@ -26850,7 +26850,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Tetapi & Walaupun",
+        "title": "Pola: 〜にもかかわらず・〜ものの — Kontras 'Walaupun'",
         "items": [
           {
             "pattern": "kata benda / kalimat bentuk biasa + にもかかわらず",
@@ -27301,8 +27301,8 @@ const CHAPTERS = {
     "id": "n2-15",
     "bab": 15,
     "level": "n2",
-    "title": "Andai & Kalaupun",
-    "desc": "Pengandaian dan konsesi: andai, kalaupun.",
+    "title": "〜としたら・〜としても — Andai & Kalaupun",
+    "desc": "Pengandaian dan konsesi: andai, kalaupun. Pola: 〜としたら・〜とすれば・〜とすると・〜となったら・〜となれば・〜となると、〜ものなら、〜（よ）うものなら、〜ないことには、〜を抜きにしては、〜としても・〜にしても・〜にしろ・〜にせよ.",
     "icon": "🔮",
     "sections": [
       {
@@ -27312,7 +27312,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Andai & Kalaupun",
+        "title": "Kosakata: 〜としたら・〜としても — Andai & Kalaupun",
         "items": [
           {
             "jp": "仮定",
@@ -27423,7 +27423,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Andai & Kalaupun",
+        "title": "Pola: 〜としたら・〜としても — Andai & Kalaupun",
         "items": [
           {
             "pattern": "kalimat bentuk biasa + としたら / とすれば / とすると; kata benda / kalimat bentuk biasa + となったら / となれば / となると",
@@ -27891,8 +27891,8 @@ const CHAPTERS = {
     "id": "n2-16",
     "bab": 16,
     "level": "n2",
-    "title": "Alasan & Sebab 1",
-    "desc": "Menyatakan alasan dan sebab akibat.",
+    "title": "〜によって・〜おかげだ — Sebab & Alasan 1",
+    "desc": "Menyatakan alasan dan sebab akibat. Pola: 〜によって、〜ものだから・〜もので・〜もの、〜おかげだ／〜せいだ、〜あまり・あまりの〜に、〜につき.",
     "icon": "🔗",
     "sections": [
       {
@@ -27902,7 +27902,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Alasan & Sebab 1",
+        "title": "Kosakata: 〜によって・〜おかげだ — Sebab & Alasan 1",
         "items": [
           {
             "jp": "原因",
@@ -28013,7 +28013,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Alasan & Sebab 1",
+        "title": "Pola: 〜によって・〜おかげだ — Sebab & Alasan 1",
         "items": [
           {
             "pattern": "kata benda + によって / kata benda + による + kata benda",
@@ -28431,8 +28431,8 @@ const CHAPTERS = {
     "id": "n2-17",
     "bab": 17,
     "level": "n2",
-    "title": "Alasan & Sebab 2",
-    "desc": "Alasan lanjutan: karena memang begitu keadaannya.",
+    "title": "〜だけに・〜からには — Sebab & Alasan 2",
+    "desc": "Alasan lanjutan: karena memang begitu keadaannya. Pola: 〜ことだし、〜のことだから、〜だけに、〜ばかりに、〜からには・〜以上は・〜上は.",
     "icon": "🧩",
     "sections": [
       {
@@ -28442,7 +28442,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Alasan & Sebab 2",
+        "title": "Kosakata: 〜だけに・〜からには — Sebab & Alasan 2",
         "items": [
           {
             "jp": "後悔",
@@ -28553,7 +28553,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Alasan & Sebab 2",
+        "title": "Pola: 〜だけに・〜からには — Sebab & Alasan 2",
         "items": [
           {
             "pattern": "kalimat bentuk biasa + ことだし",
@@ -28963,8 +28963,8 @@ const CHAPTERS = {
     "id": "n2-18",
     "bab": 18,
     "level": "n2",
-    "title": "Sulit & Mampu",
-    "desc": "Menyatakan kesulitan dan kemampuan.",
+    "title": "〜がたい・〜かねる — Sulit Dilakukan",
+    "desc": "Menyatakan kesulitan dan kemampuan. Pola: 〜がたい、〜わけにはいかない・〜わけにもいかない、〜かねる、〜ようがない、〜どころではない、〜得る／〜得ない.",
     "icon": "💪",
     "sections": [
       {
@@ -28974,7 +28974,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Sulit & Mampu",
+        "title": "Kosakata: 〜がたい・〜かねる — Sulit Dilakukan",
         "items": [
           {
             "jp": "困難",
@@ -29085,7 +29085,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Sulit & Mampu",
+        "title": "Pola: 〜がたい・〜かねる — Sulit Dilakukan",
         "items": [
           {
             "pattern": "kata kerja bentuk masu + がたい",
@@ -29512,8 +29512,8 @@ const CHAPTERS = {
     "id": "n2-19",
     "bab": 19,
     "level": "n2",
-    "title": "Penilaian & Sudut Pandang",
-    "desc": "Menilai dari sudut pandang tertentu.",
+    "title": "〜わりに・〜にしては — Penilaian 'Padahal'",
+    "desc": "Menilai dari sudut pandang tertentu. Pola: 〜わりに（は）、〜にしては、〜だけ（のこと）はある、〜として、〜にとって、〜にしたら・〜にすれば・〜にしてみれば・〜にしても.",
     "icon": "👁️",
     "sections": [
       {
@@ -29523,7 +29523,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Penilaian & Sudut Pandang",
+        "title": "Kosakata: 〜わりに・〜にしては — Penilaian 'Padahal'",
         "items": [
           {
             "jp": "評価",
@@ -29634,7 +29634,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Penilaian & Sudut Pandang",
+        "title": "Pola: 〜わりに・〜にしては — Penilaian 'Padahal'",
         "items": [
           {
             "pattern": "kata benda の / kata kerja / kata sifat bentuk biasa + わりに（は）",
@@ -30058,8 +30058,8 @@ const CHAPTERS = {
     "id": "n2-20",
     "bab": 20,
     "level": "n2",
-    "title": "Hasil Akhir",
-    "desc": "Menyatakan bagaimana akhirnya sesuatu terjadi.",
+    "title": "〜あげく・〜ずじまい — Akhir yang Terjadi",
+    "desc": "Menyatakan bagaimana akhirnya sesuatu terjadi. Pola: 〜たところ、〜きり、〜あげく、〜末（に）、〜ところだった、〜ずじまいだ.",
     "icon": "🏁",
     "sections": [
       {
@@ -30069,7 +30069,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Hasil Akhir",
+        "title": "Kosakata: 〜あげく・〜ずじまい — Akhir yang Terjadi",
         "items": [
           {
             "jp": "結果",
@@ -30180,7 +30180,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Hasil Akhir",
+        "title": "Pola: 〜あげく・〜ずじまい — Akhir yang Terjadi",
         "items": [
           {
             "pattern": "kata kerja bentuk ta + ところ",
@@ -30608,8 +30608,8 @@ const CHAPTERS = {
     "id": "n2-21",
     "bab": 21,
     "level": "n2",
-    "title": "Penegasan & Pelembutan",
-    "desc": "Menguatkan atau melembutkan pernyataan.",
+    "title": "〜さえ・〜てでも — Penegasan Ekstrem",
+    "desc": "Menguatkan atau melembutkan pernyataan. Pola: 〜ぐらい・〜くらい、〜など・〜なんか・〜なんて、〜まで・〜までして・〜てまで、〜として〜ない、〜さえ、〜てでも.",
     "icon": "🔊",
     "sections": [
       {
@@ -30619,7 +30619,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Penegasan & Pelembutan",
+        "title": "Kosakata: 〜さえ・〜てでも — Penegasan Ekstrem",
         "items": [
           {
             "jp": "程度",
@@ -30730,7 +30730,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Penegasan & Pelembutan",
+        "title": "Pola: 〜さえ・〜てでも — Penegasan Ekstrem",
         "items": [
           {
             "pattern": "kata benda / kata kerja bentuk biasa / kata sifat bentuk biasa + ぐらい・くらい",
@@ -31167,8 +31167,8 @@ const CHAPTERS = {
     "id": "n2-22",
     "bab": 22,
     "level": "n2",
-    "title": "Dugaan & Keyakinan",
-    "desc": "Menyatakan dugaan, kekhawatiran, dan keyakinan.",
+    "title": "〜かねない・〜に違いない — Dugaan & Keyakinan",
+    "desc": "Menyatakan dugaan, kekhawatiran, dan keyakinan. Pola: 〜とみえる、〜かねない、〜おそれがある、〜まい／〜ではあるまいか、〜に違いない・〜に相違ない、〜にきまっている.",
     "icon": "🤔",
     "sections": [
       {
@@ -31178,7 +31178,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Dugaan & Keyakinan",
+        "title": "Kosakata: 〜かねない・〜に違いない — Dugaan & Keyakinan",
         "items": [
           {
             "jp": "推測",
@@ -31289,7 +31289,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Dugaan & Keyakinan",
+        "title": "Pola: 〜かねない・〜に違いない — Dugaan & Keyakinan",
         "items": [
           {
             "pattern": "kalimat bentuk biasa + とみえる",
@@ -31713,8 +31713,8 @@ const CHAPTERS = {
     "id": "n2-23",
     "bab": 23,
     "level": "n2",
-    "title": "Pendapat & Penegasan",
-    "desc": "Menyatakan kesan, pendapat, dan keharusan.",
+    "title": "〜ものだ・〜べきだ — Opini & Keharusan",
+    "desc": "Menyatakan kesan, pendapat, dan keharusan. Pola: 〜ものだ、〜というものだ、〜にすぎない、〜にほかならない、〜に越したことはない、〜しかない・〜よりほかない、〜べきだ／〜べきではない.",
     "icon": "📢",
     "sections": [
       {
@@ -31724,7 +31724,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Pendapat & Penegasan",
+        "title": "Kosakata: 〜ものだ・〜べきだ — Opini & Keharusan",
         "items": [
           {
             "jp": "主張",
@@ -31835,7 +31835,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Pendapat & Penegasan",
+        "title": "Pola: 〜ものだ・〜べきだ — Opini & Keharusan",
         "items": [
           {
             "arti": "memang begitu; begitulah kebenarannya",
@@ -32314,8 +32314,8 @@ const CHAPTERS = {
     "id": "n2-24",
     "bab": 24,
     "level": "n2",
-    "title": "Saran & Tekad",
-    "desc": "Memberi saran dan menyatakan tekad.",
+    "title": "〜ではないか・〜まい — Ajakan & Tekad",
+    "desc": "Memberi saran dan menyatakan tekad. Pola: 〜（よ）うではないか、〜ことだ、〜ものだ／〜ものではない、〜ことはない、〜まい／〜（よ）うか〜まいか、〜ものか.",
     "icon": "✊",
     "sections": [
       {
@@ -32325,7 +32325,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Saran & Tekad",
+        "title": "Kosakata: 〜ではないか・〜まい — Ajakan & Tekad",
         "items": [
           {
             "jp": "提案",
@@ -32436,7 +32436,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Saran & Tekad",
+        "title": "Pola: 〜ではないか・〜まい — Ajakan & Tekad",
         "items": [
           {
             "arti": "marilah kita…; ayo…",
@@ -32872,8 +32872,8 @@ const CHAPTERS = {
     "id": "n2-25",
     "bab": 25,
     "level": "n2",
-    "title": "Perasaan Tak Tertahankan",
-    "desc": "Menyatakan perasaan yang tak bisa ditahan.",
+    "title": "〜てならない・〜ざるを得ない — Tak Tertahankan & Terpaksa",
+    "desc": "Menyatakan perasaan yang tak bisa ditahan. Pola: 〜てしかたがない・〜てしょうがない・〜てたまらない、〜てならない、〜ないではいられない・〜ずにはいられない、〜ないわけに（は）いかない、〜ざるを得ない.",
     "icon": "❤️‍🔥",
     "sections": [
       {
@@ -32883,7 +32883,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Perasaan Tak Tertahankan",
+        "title": "Kosakata: 〜てならない・〜ざるを得ない — Tak Tertahankan & Terpaksa",
         "items": [
           {
             "jp": "感情",
@@ -32994,7 +32994,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Perasaan Tak Tertahankan",
+        "title": "Pola: 〜てならない・〜ざるを得ない — Tak Tertahankan & Terpaksa",
         "items": [
           {
             "arti": "sangat… sampai tak tertahankan",
@@ -33431,8 +33431,8 @@ const CHAPTERS = {
     "id": "n2-26",
     "bab": 26,
     "level": "n2",
-    "title": "Harapan & Kekaguman",
-    "desc": "Menyatakan harapan tulus dan kekaguman.",
+    "title": "〜たいものだ・〜ことだ — Harapan & Kekaguman",
+    "desc": "Menyatakan harapan tulus dan kekaguman. Pola: 〜たいものだ・〜てほしいものだ、〜ものだ、〜ないもの（だろう）か、〜ものがある、〜ことだ、〜ことだろう・〜ことか.",
     "icon": "✨",
     "sections": [
       {
@@ -33442,7 +33442,7 @@ const CHAPTERS = {
       },
       {
         "type": "kotoba",
-        "title": "Kosakata: Harapan & Kekaguman",
+        "title": "Kosakata: 〜たいものだ・〜ことだ — Harapan & Kekaguman",
         "items": [
           {
             "jp": "願望",
@@ -33553,7 +33553,7 @@ const CHAPTERS = {
       },
       {
         "type": "bunpou",
-        "title": "Pola: Harapan & Kekaguman",
+        "title": "Pola: 〜たいものだ・〜ことだ — Harapan & Kekaguman",
         "items": [
           {
             "arti": "ingin sekali… / sangat berharap…",
