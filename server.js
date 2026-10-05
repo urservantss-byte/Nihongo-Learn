@@ -183,25 +183,33 @@ try {
   if (require('fs').existsSync(kpath)) { kdb = new Database(kpath, { readonly: true }); console.log('[kamus] loaded'); }
 } catch (e) { console.log('[kamus] tidak tersedia:', e.message); }
 
-function ftsQ(q) {
-  // sanitasi untuk FTS5 MATCH: ambil token aman
-  const toks = (q || '').toLowerCase().split(/[\s　]+/).filter(Boolean).slice(0, 4)
-    .map(t => t.replace(/["*:^()\-+]/g, '').slice(0, 30)).filter(t => t.length > 0);
-  if (!toks.length) return null;
-  return toks.map(t => `"${t}"*`).join(' ');
-}
 
 app.get('/api/dict/search', (req, res) => {
   if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
-  const mq = ftsQ(req.query.q);
-  if (!mq) return res.json({ results: [] });
+  const rawQ = (req.query.q || '').trim().toLowerCase().slice(0, 30);
+  if (!rawQ) return res.json({ results: [] });
   const lim = Math.min(parseInt(req.query.limit) || 20, 50);
+  // token aman untuk FTS5 (maks 4 kata)
+  const toks = rawQ.split(/[\s　]+/).filter(Boolean).slice(0, 4)
+    .map(t => t.replace(/["*:^()\-+]/g, '').slice(0, 30)).filter(t => t.length > 0);
+  if (!toks.length) return res.json({ results: [] });
   try {
-    const rows = kdb.prepare(`
-      SELECT w.id, w.keb, w.reb, w.gloss, w.pos, rank
+    const mapRow = r => ({ id: r.id, keb: JSON.parse(r.keb || '[]'), reb: JSON.parse(r.reb || '[]'), gloss: r.gloss, pos: [...new Set((r.pos || '').split(',').filter(Boolean))].join(', ') });
+    const sel = `SELECT w.id, w.keb, w.reb, w.gloss, w.pos, rank
       FROM words_fts f JOIN words w ON w.id = f.rowid
-      WHERE words_fts MATCH ? ORDER BY rank LIMIT ?`).all(mq, lim);
-    res.json({ results: rows.map(r => ({ id: r.id, keb: JSON.parse(r.keb || '[]'), reb: JSON.parse(r.reb || '[]'), gloss: r.gloss, pos: [...new Set((r.pos || '').split(',').filter(Boolean))].join(', ') })) });
+      WHERE words_fts MATCH ? ORDER BY rank LIMIT ?`;
+    // Tahap 1: token persis (whole-word) — paling relevan, mis. "eat" -> 食べる
+    const exactQ = toks.map(t => `"${t}"`).join(' ');
+    const exact = kdb.prepare(sel).all(exactQ, lim);
+    const seen = new Set(exact.map(r => r.id));
+    // Tahap 2: prefix — sisanya (eating, eater, ...)
+    let prefix = [];
+    if (exact.length < lim) {
+      const prefixQ = toks.map(t => `"${t}"*`).join(' ');
+      prefix = kdb.prepare(sel).all(prefixQ, lim + seen.size).filter(r => !seen.has(r.id));
+    }
+    const rows = [...exact, ...prefix].slice(0, lim);
+    res.json({ results: rows.map(mapRow) });
   } catch (e) { res.json({ results: [] }); }
 });
 
@@ -299,7 +307,11 @@ app.get('/api/kanji/search', (req, res) => {
   if (/[\u4e00-\u9faf]/.test(q)) {
     rows = kdb.prepare('SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes FROM kanji WHERE ch = ? LIMIT 5').all(q[0]);
   } else {
-    rows = kdb.prepare('SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes FROM kanji WHERE meaning LIKE ? ORDER BY freq LIMIT 20').all(`%${q}%`);
+    // whole-word match dulu ("eat" cocok utuh, bukan "wheat"/"heating"), freq NULL ke belakang
+    const ql = q.toLowerCase();
+    rows = kdb.prepare(`SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes,
+      CASE WHEN ('; ' || lower(meaning) || '; ') LIKE '%; ' || ? || '; %' THEN 0 ELSE 1 END AS tier
+      FROM kanji WHERE meaning LIKE ? ORDER BY tier, COALESCE(freq, 999999) LIMIT 20`).all(ql, `%${ql}%`);
   }
   res.json({ results: rows.map(k => ({ ...k, onyomi: JSON.parse(k.onyomi || '[]'), kunyomi: JSON.parse(k.kunyomi || '[]') })) });
 });
