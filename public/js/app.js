@@ -156,7 +156,7 @@ const app = createApp({
     libQ: '', libType: 'all',
     // quiz
     quizMode: 'acak', qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0, secScores: [],
-    genQs: [], shuffledQs: [],
+    genQs: [], shuffledQs: [], quizResume: null,
     // games
     gTab: 'match', mCards: [], mOpen: [], mHits: 0, mMoves: 0,
     sprintQ: null, sprintScore: 0, sprintTime: 60, sprintTimer: null, sprintOn: false, sprintStreak: 0,
@@ -242,6 +242,36 @@ const app = createApp({
   watch: { tab() { this.saveTab(); } },
   methods: {
     saveTab() { const m = { quizrun: 'quiz', quizdone: 'quiz', adaptiverun: 'quiz', srsrun: 'saya' }; localStorage.setItem('nl_tab', m[this.tab] || this.tab); },
+    saveQuizProgress() {
+      if (!['quizrun', 'adaptiverun'].includes(this.tab) || this.qDone) return;
+      try {
+        const data = { tab: this.tab, quizMode: this.quizMode, qLevel: this.qLevel, qSec: this.qSec, qIdx: this.qIdx, qTime: this.qTime, qAns: this.qAns, savedAt: Date.now() };
+        data.questions = this.tab === 'quizrun' ? (this.quizMode === 'acak' ? this.genQs : this.shuffledQs) : this.adaptiveQs;
+        if (!data.questions || !data.questions.length) return;
+        localStorage.setItem('nl_quiz', JSON.stringify(data));
+      } catch {}
+    },
+    clearQuizProgress() { localStorage.removeItem('nl_quiz'); this.quizResume = null; },
+    resumeTimer() {
+      clearInterval(this.qTimer);
+      this.qTimer = setInterval(() => { this.qTime--; if (this.qTime <= 0) { clearInterval(this.qTimer); this.nextSec(); } }, 1000);
+    },
+    resumeSavedQuiz() {
+      const sq = this.quizResume; if (!sq) return;
+      this.quizMode = sq.quizMode; this.qLevel = sq.qLevel; this.qSec = sq.qSec || 0;
+      this.qIdx = sq.qIdx; this.qTime = sq.qTime; this.qAns = sq.qAns || [];
+      this.qDone = false; this.qScore = 0; this.secScores = [];
+      if (sq.tab === 'quizrun') {
+        if (sq.quizMode === 'acak') { this.genQs = sq.questions; this.shuffledQs = []; }
+        else { this.shuffledQs = sq.questions; this.genQs = []; }
+        this.tab = 'quizrun'; this.$nextTick(() => this.resumeTimer());
+      } else {
+        this.adaptiveQs = sq.questions; this.tab = 'adaptiverun';
+      }
+      this.quizResume = null;
+      toast('Quiz dilanjutkan! 💪');
+    },
+    discardSavedQuiz() { this.clearQuizProgress(); },
     lvName(lv) { const l = LEVELS.find(x => x.id === lv); return l ? l.name : lv.toUpperCase(); },
     libCount(t) { return ALL_LESSONS.filter(l => l.level === this.learnLevel && (t === 'all' || l.type === t)).length; },
     libLessonSub(l) {
@@ -307,6 +337,7 @@ const app = createApp({
     },
     // ---- quiz ----
     async startQuiz() {
+      this.clearQuizProgress();
       this.qSec = 0; this.qIdx = 0; this.qAns = []; this.qDone = false; this.qScore = 0; this.secScores = [];
       if (this.quizMode === 'acak') {
         // soal baru tiap main: dibuat server dari materi, yang sudah pernah dikerjakan disingkirkan dulu
@@ -329,6 +360,7 @@ const app = createApp({
       this.tab = 'quizrun'; this.$nextTick(() => this.runSec());
     },
     async startAdaptive() {
+      this.clearQuizProgress();
       try {
         const d = await api('/api/quiz/weak');
         if (!d.weak.length) { toast('Belum ada data. Kerjakan quiz dulu ya!'); return; }
@@ -363,18 +395,22 @@ const app = createApp({
       const q = this.secQs[this.qIdx];
       const ok = i === q.a;
       this.qAns.push({ q, pick: i, ok, qid: q.qid || q._qid || `${this.qLevel}:${this.qIdx}` });
+      this.saveQuizProgress();
       setTimeout(() => {
         if (this.qIdx + 1 < this.secQs.length) this.qIdx++;
         else this.nextSec();
+        this.saveQuizProgress();
       }, 700);
     },
     adaptAnswer(i) {
       const q = this.adaptiveQs[this.qIdx];
       const ok = i === q.a;
       this.qAns.push({ q, pick: i, ok, qid: q.qid || `${q._lv}:${(QUIZ[q._lv] || []).indexOf(q)}` });
+      this.saveQuizProgress();
       setTimeout(() => {
         if (this.qIdx + 1 < this.adaptiveQs.length) this.qIdx++;
         else this.finishAdaptive();
+        this.saveQuizProgress();
       }, 700);
     },
     nextSec() {
@@ -384,6 +420,7 @@ const app = createApp({
     },
     async finishQuiz() {
       clearInterval(this.qTimer);
+      this.clearQuizProgress();
       this.qDone = true;
       this.qScore = this.qAns.filter(a => a.ok).length;
       // skor per seksi (pola JLPT Sensei: bedah kelemahan)
@@ -401,6 +438,7 @@ const app = createApp({
       this.tab = 'quizdone';
     },
     async finishAdaptive() {
+      this.clearQuizProgress();
       this.qScore = this.qAns.filter(a => a.ok).length;
       try {
         await api('/api/quiz/items', { method: 'POST', body: JSON.stringify({ items: this.qAns.map(a => ({ qid: a.qid, ok: a.ok })) }) });
@@ -587,6 +625,11 @@ const app = createApp({
     this.refresh();
     this.startMatch();
     this.applySb();
+    try {
+      const sq = JSON.parse(localStorage.getItem('nl_quiz') || 'null');
+      if (sq && sq.questions && sq.questions.length && sq.qIdx < sq.questions.length) this.quizResume = sq;
+      else localStorage.removeItem('nl_quiz');
+    } catch { localStorage.removeItem('nl_quiz'); }
   },
   template: `
 <div>
@@ -705,6 +748,11 @@ const app = createApp({
 
     <!-- ============ QUIZ ============ -->
     <section v-if="tab==='quiz'">
+      <div v-if="quizResume" class="card warn pop">
+        <b>📝 Ada quiz yang belum selesai!</b>
+        <p class="muted small">{{ quizResume.quizMode === 'cerdas' ? 'Review Cerdas' : (quizResume.quizMode === 'simulasi' ? 'Simulasi Ujian' : 'Kuis Acak') }} · soal {{ quizResume.qIdx + 1 }}/{{ quizResume.questions.length }} · {{ quizResume.qAns.filter(a => a.ok).length }} benar</p>
+        <div class="btn-row"><button class="btn sm" @click="resumeSavedQuiz">Lanjutkan</button><button class="btn ghost sm" @click="discardSavedQuiz">Buang</button></div>
+      </div>
       <h2 class="ttl"><span v-html="ic('clock')"></span> Quiz</h2>
       <div class="mode-grid">
         <div class="mode" :class="{on: quizMode==='acak'}" @click="quizMode='acak'"><div class="mode-e" v-html="ic('shuffle',30)"></div><b>Kuis Acak</b><div class="muted small">Soal baru tiap main</div></div>
