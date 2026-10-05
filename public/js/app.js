@@ -253,10 +253,17 @@ const app = createApp({
       return groups.filter(g => g.items.length);
     },
     // ---- Modul: cari & jelajahi bunpou/kotoba/kanji ----
-    modulChapters() { return CHAPTERS[this.modulLevel] || []; },
+    modulChapters() {
+      if (this.modulCat === 'kanji' && (this.modulLevel === 'n5' || this.modulLevel === 'n4') && typeof KANJI_NC !== 'undefined' && KANJI_NC[this.modulLevel]) {
+        const lv = this.modulLevel;
+        return KANJI_NC[lv].map(l => ({ id: 'nc-' + lv + '-' + l.lesson, bab: 'Lesson ' + l.lesson, title: l.title_id, title_jp: l.title_jp, nc: true, ncLesson: l }));
+      }
+      return CHAPTERS[this.modulLevel] || [];
+    },
     modulChItems() {
       const ch = this.modulChapters.find(c => c.id === this.modulCh);
       if (!ch) return [];
+      if (ch.nc) return ch.ncLesson.kanji;
       const s = ch.sections.find(x => x.type === this.modulCat);
       return (s && s.items) || [];
     },
@@ -389,6 +396,7 @@ const app = createApp({
       return { level: lv || this.modulLevel, bab: ch.bab, chTitle: ch.title, pattern: it.pattern, arti: String(it.arti || '').replace(/<[^>]+>/g, ''), item: it, kaiwa: k ? k.lines : [] };
     },
     modulSecCount(ch) {
+      if (ch.nc) return ch.ncLesson.kanji.length;
       const s = ch.sections.find(x => x.type === this.modulCat);
       return (s && s.items ? s.items.length : 0);
     },
@@ -1120,7 +1128,7 @@ const app = createApp({
             <div v-if="!modulCh" class="lib-grid">
               <div v-for="ch in modulChapters" :key="ch.id" class="lvl" @click="modulCh=ch.id">
                 <div class="badge"><b>{{ ch.bab }}</b></div>
-                <div class="lvl-body"><b>{{ ch.title }}</b><div class="muted small">{{ modulSecCount(ch) }} {{ modulCat==='kotoba' ? 'kosakata' : 'kanji' }}</div></div>
+                <div class="lvl-body"><b>{{ ch.title }}</b><div class="muted small">{{ modulSecCount(ch) }} {{ modulCat==='kotoba' ? 'kosakata' : 'kanji' }}<span v-if="ch.nc"> &middot; Nihongo Challenge</span></div><div v-if="ch.title_jp" class="muted small">{{ ch.title_jp }}</div></div>
                 <span v-html="ic('play',16)"></span>
               </div>
             </div>
@@ -1129,13 +1137,17 @@ const app = createApp({
               <div v-if="modulCat==='kotoba'">
                 <div v-for="w in modulChItems" :key="w.id" class="rowline" style="align-items:flex-start"><div><b>{{ w.kj || w.jp }}</b> <span class="muted small">{{ w.r }}</span><div class="muted small">{{ w.id }}</div><div v-if="w.note" class="small" style="color:var(--pri-d)">&#128161; {{ w.note }}</div></div><button class="mini-btn" @click="speak(w.jp)">&#128266;</button></div>
               </div>
-              <div v-if="modulCat==='kanji'" class="lib-grid" style="margin-top:8px">
-                <div v-for="k in modulChItems" :key="k.ch" class="card small center">
-                  <div style="font-size:34px">{{ k.ch }}</div>
-                  <div class="small"><b>{{ k.id }}</b></div>
-                  <div class="muted small">kun: {{ k.kun }}</div>
-                  <div class="muted small">on: {{ k.on }}</div>
-                  <div class="small">{{ k.note }}</div>
+              <div v-if="modulCat==='kanji'" style="margin-top:8px">
+                <div v-for="k in modulChItems" :key="k.kj||k.ch" class="card small" style="margin-bottom:10px">
+                  <div style="display:flex;gap:12px;align-items:center">
+                    <div style="font-size:42px;line-height:1.1">{{ k.kj || k.ch }}</div>
+                    <div style="flex:1"><div><b>{{ k.id }}</b></div><div class="muted small">kun: {{ k.kun || '-' }} &middot; on: {{ k.on || '-' }}</div></div>
+                    <button class="mini-btn" @click="speak(k.kj||k.ch)">&#128266;</button>
+                  </div>
+                  <div v-if="k.ex && k.ex.length" style="margin-top:8px;border-top:1px solid var(--line);padding-top:6px">
+                    <div class="muted small" style="margin-bottom:2px">Anak kanji:</div>
+                    <div v-for="(e, ei) in k.ex" :key="ei" class="rowline" style="padding:5px 0;align-items:flex-start"><div><b>{{ e.j }}</b> <span class="muted small">{{ e.r }}</span><div class="muted small">{{ e.i }}</div></div><button class="mini-btn" @click="speak(e.j)">&#128266;</button></div>
+                  </div>
                 </div>
               </div>
             </div>
