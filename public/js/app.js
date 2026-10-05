@@ -256,7 +256,7 @@ const app = createApp({
     modulChapters() {
       if (this.modulCat === 'kanji' && (this.modulLevel === 'n5' || this.modulLevel === 'n4') && typeof KANJI_NC !== 'undefined' && KANJI_NC[this.modulLevel]) {
         const lv = this.modulLevel;
-        return KANJI_NC[lv].map(l => ({ id: 'nc-' + lv + '-' + l.lesson, bab: 'Lesson ' + l.lesson, title: l.title_id, title_jp: l.title_jp, nc: true, ncLesson: l }));
+        return KANJI_NC[lv].map(l => ({ id: 'nc-' + lv + '-' + l.lesson, bab: 'Bab ' + l.lesson, title: l.title_id, title_jp: l.title_jp, nc: true, ncLesson: l }));
       }
       return CHAPTERS[this.modulLevel] || [];
     },
