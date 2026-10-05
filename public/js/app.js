@@ -806,7 +806,7 @@ const app = createApp({
           </div>
           <div v-if="s.type==='kaiwa'">
             <div class="step-tag">💬 {{ s.title }}</div>
-            <div class="passage"><div v-for="(ln, li) in s.lines" :key="li" style="margin-bottom:10px"><b>{{ ln.sp }}:</b> {{ ln.jp }}<br><span class="muted small">{{ ln.id }}</span></div></div>
+            <div class="passage kaiwa-lines"><div v-for="(ln, li) in s.lines" :key="li" style="margin-bottom:10px"><b>{{ ln.sp }}:</b> {{ ln.jp }}<br><span class="muted small">{{ ln.id }}</span></div></div>
           </div>
         </div>
         <button class="btn btn-block" @click="startChapterQuiz(openChapter)">📝 Quiz Bab {{ openChapter.bab }} ({{ openChapter.quiz.length }} soal)</button>
