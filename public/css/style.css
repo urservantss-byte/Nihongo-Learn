@@ -214,6 +214,15 @@ h2.ttl + .muted, h2.ttl + p { margin-bottom: 8px; }
 
 .back-row { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
 .auth-check { max-width: 420px; margin: 80px auto; text-align: center; }
+/* skeleton loading */
+.skel { position: relative; overflow: hidden; background: color-mix(in srgb, var(--line) 50%, transparent); border-radius: 8px; }
+.skel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.6), transparent); animation: skel-shimmer 1.3s infinite; }
+[data-theme="zen"] .skel::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent); }
+@keyframes skel-shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+.skel-line { height: 13px; margin: 9px 0; }
+.skel-title { height: 22px; width: 55%; margin: 14px 0; }
+.skel-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin: 12px 0; box-shadow: var(--shadow); }
+.skel-page { animation: pop .25s ease; }
 /* misc */
 .passage { background: var(--bg2); border-radius: 12px; padding: 13px 14px; line-height: 1.9; margin: 10px 0; font-size: 14.5px; white-space: pre-line; }
 .auth-card { max-width: 420px; margin: 32px auto; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px 20px; text-align: center; }

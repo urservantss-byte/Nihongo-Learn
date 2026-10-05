@@ -271,13 +271,15 @@ const app = createApp({
         const d = await api('/api/me'); store.user = d.user; setTheme(d.user.theme || 'sakura');
       } catch { this.logout(); store.authChecked = true; return; }
       store.authChecked = true;
-      try {
-        const p = await api('/api/progress'); store.done = p.done;
-        const s = await api('/api/stats'); store.stats = s;
-        const h = await api('/api/quiz/history'); store.quizHist = h.history;
-        const b = await api('/api/leaderboard'); store.board = b.board; this.myWeekly = b.my_weekly;
-        const sr = await api('/api/srs'); this.srsDue = sr.due; this.srsTotal = sr.total;
-      } catch (e) { console.warn('refresh data:', e.message); }
+      const [p, s, h, b, sr] = await Promise.allSettled([
+        api('/api/progress'), api('/api/stats'), api('/api/quiz/history'),
+        api('/api/leaderboard'), api('/api/srs'),
+      ]);
+      if (p.status === 'fulfilled') store.done = p.value.done;
+      if (s.status === 'fulfilled') store.stats = s.value;
+      if (h.status === 'fulfilled') store.quizHist = h.value.history;
+      if (b.status === 'fulfilled') { store.board = b.value.board; this.myWeekly = b.value.my_weekly; }
+      if (sr.status === 'fulfilled') { this.srsDue = sr.value.due; this.srsTotal = sr.value.total; }
     },
     toggleTheme() { setTheme(store.theme === 'sakura' ? 'zen' : 'sakura'); toast(store.theme === 'sakura' ? '🌸 Tema Sakura' : '⛩️ Tema Zen'); },
     applySb() { document.documentElement.classList.toggle('sb-hidden', this.sbHidden); },
@@ -598,7 +600,11 @@ const app = createApp({
     </div>
   </header>
 
-  <div v-if="!store.authChecked" class="auth-check"><div class="mascot">🦉</div><p class="muted">Memuat…</p></div>
+  <div v-if="!store.authChecked" class="skel-page">
+    <div class="skel skel-title"></div>
+    <div class="skel-card"><div class="skel skel-line" style="width:75%"></div><div class="skel skel-line" style="width:55%"></div></div>
+    <div class="skel-card"><div class="skel skel-line" style="width:60%"></div><div class="skel skel-line" style="width:85%"></div><div class="skel skel-line" style="width:40%"></div></div>
+  </div>
   <div v-else-if="!user" class="auth-card">
     <div class="mascot">🦉</div>
     <h2>{{ mode === 'login' ? 'Selamat datang kembali!' : 'Mulai petualanganmu!' }}</h2>
@@ -810,7 +816,9 @@ const app = createApp({
         <button v-for="j in [0,5,4,3,2,1]" :key="j" class="pill" :class="{on: kamusJlpt===j}" @click="kamusJlpt=j;browseKanji()">{{ j===0 ? 'Semua' : 'N'+j }}</button>
       </div>
       <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="kamusQ" @input="kamusType" :placeholder="kamusTab==='kotoba' ? 'cth: 食べる / taberu / to eat' : 'cth: 食 / eat'"></div>
-      <div v-if="kamusLoading" class="muted small">Mencari…</div>
+      <div v-if="kamusLoading" class="kamus-grid">
+        <div v-for="i in 6" :key="'sk'+i" class="skel-card" style="margin:0"><div class="skel skel-line" style="width:45%"></div><div class="skel skel-line" style="width:80%"></div></div>
+      </div>
       <div v-if="!kamusDetail">
         <div class="kamus-grid">
         <div v-for="r in kamusResults" :key="r.id||r.ch" class="lvl" @click="kamusTab==='kotoba'?openWord(r.id):openKanji(r.ch)">
@@ -1030,7 +1038,7 @@ app.component('StrokeOrder', {
   },
   template: `
     <div class="stroke-wrap">
-      <div v-if="loading" class="muted small center">Memuat animasi…</div>
+      <div v-if="loading" class="skel" style="width:190px;height:190px;border-radius:18px;margin:0 auto"></div>
       <div v-else-if="error" class="muted small center">Animasi goresan belum tersedia untuk kanji ini.</div>
       <div v-else>
         <svg viewBox="0 0 109 109" class="stroke-svg" aria-label="Animasi urutan goresan">
@@ -1113,7 +1121,7 @@ app.component('WordStrokeOrder', {
   },
   template: `
     <div class="stroke-wrap">
-      <div v-if="loading" class="muted small center">Memuat animasi…</div>
+      <div v-if="loading" class="skel" style="width:190px;height:190px;border-radius:18px;margin:0 auto"></div>
       <div v-else-if="error" class="muted small center">Animasi goresan belum tersedia untuk kata ini.</div>
       <div v-else>
         <div class="wstroke-row">
