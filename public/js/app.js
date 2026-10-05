@@ -302,22 +302,24 @@ const app = createApp({
       this.$nextTick(() => window.scrollTo({ top: 0 }));
     },
     startChapterQuiz(ch) {
-      this.chQuiz = { chapter: ch, idx: 0, ans: [], done: false, score: 0, pct: 0 };
+      // bank soal: ambil 10 acak dari bank 30 soal, acak urutan soal + acak pilihan jawaban
+      const qs = shuffled(ch.quiz).slice(0, 10).map(shuffleQuestion);
+      this.chQuiz = { chapter: ch, qs, idx: 0, ans: [], done: false, score: 0, pct: 0 };
       this.$nextTick(() => window.scrollTo({ top: 0 }));
     },
     answerChapterQuiz(i) {
       if (!this.chQuiz || this.chQuiz.done) return;
-      const q = this.chQuiz.chapter.quiz[this.chQuiz.idx];
+      const q = this.chQuiz.qs[this.chQuiz.idx];
       const ok = i === q.a;
       this.chQuiz.ans.push({ pick: i, ok });
       setTimeout(() => {
-        if (this.chQuiz.idx + 1 < this.chQuiz.chapter.quiz.length) this.chQuiz.idx++;
+        if (this.chQuiz.idx + 1 < this.chQuiz.qs.length) this.chQuiz.idx++;
         else this.finishChapterQuiz();
       }, 650);
     },
     async finishChapterQuiz() {
       const cq = this.chQuiz;
-      const total = cq.chapter.quiz.length;
+      const total = cq.qs.length;
       const score = cq.ans.filter(a => a.ok).length;
       const pct = Math.round(score / total * 100);
       cq.done = true; cq.score = score; cq.pct = pct;
@@ -814,10 +816,10 @@ const app = createApp({
 
       <div v-if="chQuiz" class="card pop">
         <div v-if="!chQuiz.done">
-          <div class="q-head"><span class="muted small">Quiz Bab {{ chQuiz.chapter.bab }} · Soal {{ chQuiz.idx+1 }}/{{ chQuiz.chapter.quiz.length }}</span></div>
-          <div class="qbar"><i :style="{width: (chQuiz.idx / chQuiz.chapter.quiz.length * 100)+'%'}"></i></div>
-          <h3 class="q-text">{{ chQuiz.chapter.quiz[chQuiz.idx].q }}</h3>
-          <button v-for="(o, oi) in chQuiz.chapter.quiz[chQuiz.idx].o" :key="oi" class="opt" @click="answerChapterQuiz(oi)">{{ o }}</button>
+          <div class="q-head"><span class="muted small">Quiz Bab {{ chQuiz.chapter.bab }} · Soal {{ chQuiz.idx+1 }}/{{ chQuiz.qs.length }}</span></div>
+          <div class="qbar"><i :style="{width: (chQuiz.idx / chQuiz.qs.length * 100)+'%'}"></i></div>
+          <h3 class="q-text">{{ chQuiz.qs[chQuiz.idx].q }}</h3>
+          <button v-for="(o, oi) in chQuiz.qs[chQuiz.idx].o" :key="oi" class="opt" @click="answerChapterQuiz(oi)">{{ o }}</button>
           <div class="center" style="margin-top:10px"><button class="btn ghost sm" @click="chQuiz=null">Batal</button></div>
         </div>
         <div v-else class="center">
@@ -826,7 +828,7 @@ const app = createApp({
           <p class="muted small">{{ chQuiz.pct >= 70 ? 'Lulus! Bab berikutnya sudah terbuka. 🎊' : 'Belum lulus (butuh ≥70). Pelajari bab ini lagi, lalu coba lagi!' }}</p>
           <div v-if="chQuiz.pct < 70" style="text-align:left;margin-top:12px">
             <b>Pembahasan:</b>
-            <div v-for="(q, qi) in chQuiz.chapter.quiz" :key="qi" class="card small" style="margin:8px 0">
+            <div v-for="(q, qi) in chQuiz.qs" :key="qi" class="card small" style="margin:8px 0">
               <b>{{ qi+1 }}. {{ q.q }}</b>
               <div class="small" :style="{color: chQuiz.ans[qi].ok ? 'var(--ok)' : 'var(--bad)'}">{{ chQuiz.ans[qi].ok ? '✓ Benar' : '✗ Kurang tepat — jawaban: ' + q.o[q.a] }}</div>
               <div class="muted small">💡 {{ q.explain }}</div>
