@@ -28,7 +28,7 @@ h3 { font-size: 16px; line-height: 1.4; }
 .streak { color: var(--gold); font-weight: 800; }
 
 /* header */
-.hdr { display: flex; align-items: center; justify-content: space-between; padding: 12px 2px; position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.hdr { display: flex; align-items: center; justify-content: space-between; padding: 12px 2px; position: sticky; top: 0; z-index: 20; background: transparent; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
 .logo { font-size: 19px; font-weight: 800; display: flex; align-items: center; gap: 8px; }
 .hdr-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .sb-toggle { display: none; border: 1.5px solid var(--line); background: var(--card); border-radius: 10px; padding: 7px 9px; cursor: pointer; color: var(--ink); font-family: inherit; }
