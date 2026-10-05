@@ -241,6 +241,7 @@ h2.ttl + .muted, h2.ttl + p { margin-bottom: 8px; }
   .kaiwa-lines { font-size: 12px; }
   .kaiwa-lines .muted.small { font-size: 11px; }
   .penjelasan-text { font-size: 13px; line-height: 1.8; }
+  .q-text { font-size: 13.5px; }
 }
 /* Jangan potong kata/frasa Jepang di tengah baris — pindah utuh ke baris berikut */
 .ch-detail p, .ch-detail .passage, .q-text, .opt, .rowline { word-break: keep-all; overflow-wrap: break-word; }
