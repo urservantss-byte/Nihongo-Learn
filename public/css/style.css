@@ -49,7 +49,7 @@ h3 { font-size: 16px; line-height: 1.4; }
 @media (min-width: 900px) {
   .sb-toggle { display: inline-flex; align-items: center; }
   #app { max-width: 1180px; padding: 0 40px 60px 256px; transition: padding .25s ease; }
-  #app:has(.sb-hidden) { padding-left: 40px; }
+  html.sb-hidden #app { padding-left: 40px; }
   .hdr { padding: 14px 2px; }
   .nav {
     top: 0; bottom: 0; left: 0; right: auto;
@@ -62,7 +62,7 @@ h3 { font-size: 16px; line-height: 1.4; }
     transition: transform .25s ease;
     box-shadow: none;
   }
-  .sb-hidden .nav { transform: translateX(-105%); }
+  html.sb-hidden .nav { transform: translateX(-105%); }
   .nav-logo { display: flex; align-items: center; gap: 9px; font-size: 16px; font-weight: 800; padding: 2px 10px 18px; white-space: nowrap; }
   .nav-logo .jp { background: var(--pri); color: #fff; border-radius: 8px; padding: 2px 8px; font-size: 13px; }
   .nav button { flex-direction: row; gap: 11px; max-width: none; width: 100%; font-size: 14px; font-weight: 600; padding: 10px 12px; border-radius: 12px; justify-content: flex-start; color: var(--muted); transition: background .15s, color .15s; white-space: nowrap; }

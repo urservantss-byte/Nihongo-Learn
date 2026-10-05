@@ -280,7 +280,8 @@ const app = createApp({
       } catch (e) { console.warn('refresh data:', e.message); }
     },
     toggleTheme() { setTheme(store.theme === 'sakura' ? 'zen' : 'sakura'); toast(store.theme === 'sakura' ? '🌸 Tema Sakura' : '⛩️ Tema Zen'); },
-    toggleSb() { this.sbHidden = !this.sbHidden; localStorage.setItem('nl_sb', this.sbHidden ? '1' : '0'); },
+    applySb() { document.documentElement.classList.toggle('sb-hidden', this.sbHidden); },
+    toggleSb() { this.sbHidden = !this.sbHidden; localStorage.setItem('nl_sb', this.sbHidden ? '1' : '0'); this.applySb(); },
     async saveSetting(key, val) {
       try { const d = await api('/api/me', { method: 'PATCH', body: JSON.stringify({ [key]: val }) }); store.user = d.user; toast('Disimpan! ✓'); }
       catch (e) { toast(e.message); }
@@ -581,9 +582,10 @@ const app = createApp({
     }, 1800);
     this.refresh();
     this.startMatch();
+    this.applySb();
   },
   template: `
-<div :class="{ 'sb-hidden': sbHidden }">
+<div>
   <header class="hdr">
     <div class="hdr-left">
       <button class="sb-toggle" @click="toggleSb" aria-label="Sembunyikan/tampilkan menu"><span v-html="ic('menu',20)"></span></button>
