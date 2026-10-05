@@ -378,7 +378,7 @@ app.get('/api/leaderboard', auth, (req, res) => {
 // ---- Muse Sensei (Tanya AI) — dijawab langsung oleh Muse via antrean ----
 const ASK_WORKER_SECRET = process.env.ASK_WORKER_SECRET || '';
 const askLimit = {}; // userId -> { n, reset }
-app.post('/api/ask', auth, (req, res) => {
+app.post('/api/ask', auth, async (req, res) => {
   try {
     const q = String(req.body.q || '').trim();
     if (!q) return res.status(400).json({ error: 'Pertanyaannya kosong' });
@@ -390,7 +390,14 @@ app.post('/api/ask', auth, (req, res) => {
     l.n++; askLimit[uid] = l;
     const hist = Array.isArray(req.body.hist) ? req.body.hist.slice(-6).map(m => ({ role: m.role, text: String(m.text || '').slice(0, 500) })) : [];
     const r = db.prepare(`INSERT INTO ask_queue (user_id, question, history) VALUES (?,?,?)`).run(uid, q, JSON.stringify(hist));
-    res.json({ id: r.lastInsertRowid, status: 'pending' });
+    const qid = r.lastInsertRowid;
+    // long-poll: tahan koneksi sampai jawaban siap (maks ~150 detik)
+    for (let i = 0; i < 75; i++) {
+      await new Promise(rr => setTimeout(rr, 2000));
+      const row = db.prepare(`SELECT status, answer FROM ask_queue WHERE id = ?`).get(qid);
+      if (row && row.status === 'done' && row.answer) return res.json({ a: row.answer });
+    }
+    res.json({ a: '', pending: true, id: qid });
   } catch (e) {
     res.status(500).json({ error: 'Gagal mengirim pertanyaan' });
   }

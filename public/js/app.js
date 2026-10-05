@@ -707,35 +707,15 @@ const app = createApp({
       this.askLoading = true; this.scrollAsk();
       try {
         const hist = this.askMsgs.slice(-7, -1).map(m => ({ role: m.role, text: m.text }));
+        // long-poll: koneksi ditahan sampai Muse Sensei selesai jawab
         const d = await api('/api/ask', { method: 'POST', body: JSON.stringify({ q, hist }) });
-        // polling jawaban dari Muse Sensei (maks ~3 menit)
-        let answer = '';
-        for (let i = 0; i < 45; i++) {
-          await new Promise(r => setTimeout(r, 4000));
-          try {
-            const r2 = await api('/api/ask/result/' + d.id);
-            if (r2.status === 'done' && r2.answer) { answer = r2.answer; break; }
-          } catch {}
-        }
-        this.askMsgs.push({ role: 'ai', text: answer || '😅 Muse Sensei belum sempat jawab, coba kirim ulang ya' });
+        if (d.a) this.askMsgs.push({ role: 'ai', text: d.a });
+        else this.askMsgs.push({ role: 'ai', text: '😅 Muse Sensei belum sempat jawab, coba kirim ulang ya' });
       } catch (e) {
         this.askMsgs.push({ role: 'ai', text: '😅 ' + (e.message || 'Gagal mengirim, coba lagi ya') });
       }
       this.askLoading = false; this.saveAsk(); this.scrollAsk();
-    },    // ---- kamus ----
-    jlptLabel(j) { return ({ 4: 'N5', 3: 'N4', 2: 'N3', 1: 'N1' })[j] || ''; },
-    async browseKanji() {
-      // jelajahi kanji per level JLPT (N5=103, N4=181, dst dari KANJIDIC2)
-      this.kamusDetail = null; this.kamusQ = '';
-      if (!this.kamusJlpt) { this.kamusResults = []; return; }
-      this.kamusLoading = true;
-      try {
-        const d = await api(`/api/kanji/by-jlpt?n=${this.kamusJlpt}`);
-        this.kamusResults = d.results || [];
-      } catch { this.kamusResults = []; }
-      this.kamusLoading = false;
-    },
-    kamusType() { clearTimeout(this.kamusTimer); this.kamusTimer = setTimeout(() => this.searchKamus(), 400); },
+    },    kamusType() { clearTimeout(this.kamusTimer); this.kamusTimer = setTimeout(() => this.searchKamus(), 400); },
     async searchKamus() {
       const q = this.kamusQ.trim();
       this.kamusDetail = null; // BUGFIX: jangan tampilkan detail lama saat cari baru
