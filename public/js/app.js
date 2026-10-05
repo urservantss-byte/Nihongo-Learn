@@ -157,6 +157,8 @@ const app = createApp({
     // quiz
     quizMode: 'acak', qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0, secScores: [],
     genQs: [], shuffledQs: [], quizResume: null,
+    // chapter (jalur belajar Soumatome)
+    chapterProgress: {}, openChapter: null, chQuiz: null,
     // games
     gTab: 'match', mCards: [], mOpen: [], mHits: 0, mMoves: 0,
     sprintQ: null, sprintScore: 0, sprintTime: 60, sprintTimer: null, sprintOn: false, sprintStreak: 0,
@@ -272,6 +274,61 @@ const app = createApp({
       toast('Quiz dilanjutkan! 💪');
     },
     discardSavedQuiz() { this.clearQuizProgress(); },
+    // ---- chapter (jalur belajar) ----
+    myChapters() {
+      const lv = (store.user && store.user.level ? store.user.level : 'n5').toLowerCase();
+      return CHAPTERS[lv] || CHAPTERS['n5'] || [];
+    },
+    chapterState(ch) {
+      const chs = this.myChapters;
+      const idx = chs.findIndex(c => c.id === ch.id);
+      if (idx < 0) return 'locked';
+      if (this.chapterProgress[ch.id] && this.chapterProgress[ch.id].passed) return 'done';
+      if (idx === 0) return 'open';
+      const prev = chs[idx - 1];
+      return (this.chapterProgress[prev.id] && this.chapterProgress[prev.id].passed) ? 'open' : 'locked';
+    },
+    async loadChapterProgress() {
+      try {
+        const d = await api('/api/chapters/progress');
+        const o = {};
+        for (const p of (d.progress || [])) o[p.chapter_id] = p;
+        this.chapterProgress = o;
+      } catch {}
+    },
+    openChapterDetail(ch) {
+      if (this.chapterState(ch) === 'locked') { toast('Selesaikan bab sebelumnya dulu! 🔒'); return; }
+      this.openChapter = ch; this.chQuiz = null;
+      this.$nextTick(() => window.scrollTo({ top: 0 }));
+    },
+    startChapterQuiz(ch) {
+      this.chQuiz = { chapter: ch, idx: 0, ans: [], done: false, score: 0, pct: 0 };
+      this.$nextTick(() => window.scrollTo({ top: 0 }));
+    },
+    answerChapterQuiz(i) {
+      if (!this.chQuiz || this.chQuiz.done) return;
+      const q = this.chQuiz.chapter.quiz[this.chQuiz.idx];
+      const ok = i === q.a;
+      this.chQuiz.ans.push({ pick: i, ok });
+      setTimeout(() => {
+        if (this.chQuiz.idx + 1 < this.chQuiz.chapter.quiz.length) this.chQuiz.idx++;
+        else this.finishChapterQuiz();
+      }, 650);
+    },
+    async finishChapterQuiz() {
+      const cq = this.chQuiz;
+      const total = cq.chapter.quiz.length;
+      const score = cq.ans.filter(a => a.ok).length;
+      const pct = Math.round(score / total * 100);
+      cq.done = true; cq.score = score; cq.pct = pct;
+      try {
+        const d = await api('/api/chapters/complete', { method: 'POST', body: JSON.stringify({ chapter_id: cq.chapter.id, score, total }) });
+        await this.loadChapterProgress();
+        if (d.passed) { try { this.gainXP(50, 'chapter ' + cq.chapter.id); } catch {} toast('Bab lulus! 🎉 +50 XP'); }
+        else toast('Belum lulus, coba lagi! 💪');
+      } catch {}
+      this.$nextTick(() => window.scrollTo({ top: 0 }));
+    },
     lvName(lv) { const l = LEVELS.find(x => x.id === lv); return l ? l.name : lv.toUpperCase(); },
     libCount(t) { return ALL_LESSONS.filter(l => l.level === this.learnLevel && (t === 'all' || l.type === t)).length; },
     libLessonSub(l) {
@@ -312,6 +369,7 @@ const app = createApp({
       if (h.status === 'fulfilled') store.quizHist = h.value.history;
       if (b.status === 'fulfilled') { store.board = b.value.board; this.myWeekly = b.value.my_weekly; }
       if (sr.status === 'fulfilled') { this.srsDue = sr.value.due; this.srsTotal = sr.value.total; }
+      this.loadChapterProgress();
     },
     toggleTheme() { setTheme(store.theme === 'sakura' ? 'zen' : 'sakura'); toast(store.theme === 'sakura' ? '🌸 Tema Sakura' : '⛩️ Tema Zen'); },
     applySb() { document.documentElement.classList.toggle('sb-hidden', this.sbHidden); },
@@ -534,6 +592,7 @@ const app = createApp({
       catch (e) { toast(e.message); }
     },
     async openKanji(ch) {
+      this.tab = 'kamus';
       try {
         const d = await api(`/api/kanji/${encodeURIComponent(ch)}`);
         this.kamusDetail = { type: 'kanji', ...d.kanji, words: d.words };
@@ -687,20 +746,84 @@ const app = createApp({
         <div class="stat" @click="tab='saya'"><div class="stat-n"><span v-html="ic('card',18)"></span>{{ store.stats?.srs_due || 0 }}</div><div class="muted small">Review</div></div>
       </div>
 
-      <h2 class="ttl"><span v-html="ic('calendar')"></span> Materi Harian</h2>
-      <p class="muted small">Disusun sesuai level & porsimu. Selesai → lanjut ke materi baru berikutnya.</p>
-      <div class="daily-grid">
-      <div v-if="!dailyLessons.length" class="card center">
-        <div v-html="ic('check',34)"></div>
-        <p><b>Semua materi harian tuntas!</b></p>
-        <p class="muted small">Coba Kuis Acak atau buka Materi untuk eksplorasi bebas.</p>
-        <div class="btn-row center"><button class="btn sm" @click="tab='quiz'">Kuis Acak</button><button class="btn ghost sm" @click="tab='library'">Buka Materi</button></div>
+      <div v-if="!openChapter && !chQuiz">
+      <h2 class="ttl"><span v-html="ic('layers')"></span> Jalur Belajar {{ (store.user?.level || 'n5').toUpperCase() }}</h2>
+      <p class="muted small">Belajar berurutan ala Soumatome — dari termudah ke tersulit. Lulus quiz (≥70) untuk membuka bab berikutnya.</p>
+      <div v-if="!myChapters.length" class="card center muted small">Materi untuk level ini segera hadir! 🚧</div>
+      <div v-for="ch in myChapters" :key="ch.id" class="lvl" :class="{ locked: chapterState(ch)==='locked' }" @click="openChapterDetail(ch)">
+        <div class="badge" :class="{ done: chapterState(ch)==='done' }">{{ chapterState(ch)==='locked' ? '🔒' : (chapterState(ch)==='done' ? '✓' : ch.bab) }}</div>
+        <div class="lvl-body">
+          <b>{{ ch.icon }} Bab {{ ch.bab }}: {{ ch.title }}</b>
+          <div class="muted small">{{ ch.desc }}</div>
+          <div v-if="chapterProgress[ch.id]" class="small" :class="chapterProgress[ch.id].passed ? 'streak' : 'bad'">Nilai: {{ Math.round(chapterProgress[ch.id].score / chapterProgress[ch.id].total * 100) }} {{ chapterProgress[ch.id].passed ? '✅' : '❌ belum lulus' }}</div>
+          <div v-else-if="chapterState(ch)==='locked'" class="muted small">🔒 Selesaikan bab sebelumnya</div>
+        </div>
+        <span v-html="ic(chapterState(ch)==='locked' ? 'x' : 'play', 18)"></span>
       </div>
-      <div v-for="l in dailyLessons" :key="'d-'+l.key" class="lvl" @click="learnLevel=l.level;openLesson=l.key;tab='library'">
-        <div class="badge">{{ LV_ICON[l.level] }}</div>
-        <div class="lvl-body"><b>{{ l.title }}</b><div class="muted small">{{ l.level.toUpperCase() }} · +20 XP</div></div>
-        <span v-html="ic('play')"></span>
       </div>
+
+      <div v-if="openChapter && !chQuiz" class="card pop">
+        <div class="back-row"><button class="btn ghost sm" @click="openChapter=null"><span v-html="ic('back',15)"></span> Jalur Belajar</button></div>
+        <h2>{{ openChapter.icon }} Bab {{ openChapter.bab }}: {{ openChapter.title }}</h2>
+        <p class="muted small">{{ openChapter.desc }}</p>
+        <div v-for="(s, si) in openChapter.sections" :key="si">
+          <div v-if="s.type==='penjelasan'">
+            <div class="step-tag"><span v-html="ic('book',12)"></span> {{ s.title }}</div>
+            <div class="passage" v-html="s.body"></div>
+          </div>
+          <div v-if="s.type==='kotoba'">
+            <div class="step-tag">📝 {{ s.title }}</div>
+            <div v-for="(it, ii) in s.items" :key="ii" class="rowline" style="align-items:flex-start"><div><b>{{ it.kj || it.jp }}</b> <span class="muted small">{{ it.r }}</span><div class="muted small">{{ it.id }}</div><div v-if="it.note" class="small" style="color:var(--pri-d)">💡 {{ it.note }}</div></div><button class="mini-btn" @click="speak(it.jp)">🔊</button></div>
+          </div>
+          <div v-if="s.type==='bunpou'">
+            <div class="step-tag">📐 {{ s.title }}</div>
+            <div v-for="(b, bi) in s.items" :key="bi" class="card" style="margin:8px 0">
+              <b>{{ b.pattern }}</b><div class="muted small">= {{ b.arti }}</div>
+              <p class="small" v-html="b.explain" style="margin:8px 0"></p>
+              <div v-for="(ex, ei) in b.examples" :key="ei" class="passage small" style="margin:6px 0"><b>{{ ex.jp }}</b><br><span class="muted">{{ ex.id }}</span></div>
+            </div>
+          </div>
+          <div v-if="s.type==='kanji'">
+            <div class="step-tag">🈁 {{ s.title }}</div>
+            <div class="kana-grid">
+              <div v-for="(k, ki) in s.items" :key="ki" class="kana" @click="openKanji(k.ch)"><div class="k">{{ k.ch }}</div><div class="r">{{ k.id.split(';')[0] }}</div></div>
+            </div>
+            <div v-for="(k, ki) in s.items" :key="'kd'+ki" class="muted small">{{ k.ch }} ({{ k.kun }} / {{ k.on }}) — {{ k.id }}<span v-if="k.note">. {{ k.note }}</span></div>
+          </div>
+          <div v-if="s.type==='kaiwa'">
+            <div class="step-tag">💬 {{ s.title }}</div>
+            <div class="passage"><div v-for="(ln, li) in s.lines" :key="li" style="margin-bottom:10px"><b>{{ ln.sp }}:</b> {{ ln.jp }}<br><span class="muted small">{{ ln.id }}</span></div></div>
+          </div>
+        </div>
+        <button class="btn btn-block" @click="startChapterQuiz(openChapter)">📝 Quiz Bab {{ openChapter.bab }} ({{ openChapter.quiz.length }} soal)</button>
+      </div>
+
+      <div v-if="chQuiz" class="card pop">
+        <div v-if="!chQuiz.done">
+          <div class="q-head"><span class="muted small">Quiz Bab {{ chQuiz.chapter.bab }} · Soal {{ chQuiz.idx+1 }}/{{ chQuiz.chapter.quiz.length }}</span></div>
+          <div class="qbar"><i :style="{width: (chQuiz.idx / chQuiz.chapter.quiz.length * 100)+'%'}"></i></div>
+          <h3 class="q-text">{{ chQuiz.chapter.quiz[chQuiz.idx].q }}</h3>
+          <button v-for="(o, oi) in chQuiz.chapter.quiz[chQuiz.idx].o" :key="oi" class="opt" @click="answerChapterQuiz(oi)">{{ o }}</button>
+          <div class="center" style="margin-top:10px"><button class="btn ghost sm" @click="chQuiz=null">Batal</button></div>
+        </div>
+        <div v-else class="center">
+          <div style="font-size:52px">{{ chQuiz.pct >= 70 ? '🎉' : '💪' }}</div>
+          <h2>Nilai: {{ chQuiz.pct }}</h2>
+          <p class="muted small">{{ chQuiz.pct >= 70 ? 'Lulus! Bab berikutnya sudah terbuka. 🎊' : 'Belum lulus (butuh ≥70). Pelajari bab ini lagi, lalu coba lagi!' }}</p>
+          <div v-if="chQuiz.pct < 70" style="text-align:left;margin-top:12px">
+            <b>Pembahasan:</b>
+            <div v-for="(q, qi) in chQuiz.chapter.quiz" :key="qi" class="card small" style="margin:8px 0">
+              <b>{{ qi+1 }}. {{ q.q }}</b>
+              <div class="small" :style="{color: chQuiz.ans[qi].ok ? 'var(--ok)' : 'var(--bad)'}">{{ chQuiz.ans[qi].ok ? '✓ Benar' : '✗ Kurang tepat — jawaban: ' + q.o[q.a] }}</div>
+              <div class="muted small">💡 {{ q.explain }}</div>
+            </div>
+          </div>
+          <div class="btn-row center" style="justify-content:center">
+            <button v-if="chQuiz.pct < 70" class="btn" @click="startChapterQuiz(chQuiz.chapter)">🔄 Coba Lagi</button>
+            <button v-if="chQuiz.pct >= 70" class="btn" @click="chQuiz=null;openChapter=null">Lanjut ➜</button>
+            <button class="btn ghost" @click="chQuiz=null">Kembali</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1311,5 +1434,6 @@ app.config.globalProperties.LIB_TYPES = LIB_TYPES;
 app.config.globalProperties.TYPE_ICON = TYPE_ICON;
 app.config.globalProperties.ALL_LESSONS = ALL_LESSONS;
 app.config.globalProperties.LEVEL_ORDER = LEVEL_ORDER;
+app.config.globalProperties.CHAPTERS = CHAPTERS;
 app.mount('#app');
 

@@ -41,6 +41,15 @@ CREATE TABLE IF NOT EXISTS quiz_results (
   total INTEGER NOT NULL,
   created_at TEXT DEFAULT (datetime('now'))
 );
+CREATE TABLE IF NOT EXISTS chapter_progress (
+  user_id INTEGER NOT NULL,
+  chapter_id TEXT NOT NULL,
+  score INTEGER NOT NULL,
+  total INTEGER NOT NULL,
+  passed INTEGER NOT NULL DEFAULT 0,
+  updated_at TEXT DEFAULT (datetime('now')),
+  PRIMARY KEY (user_id, chapter_id)
+);
 CREATE TABLE IF NOT EXISTS game_scores (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   user_id INTEGER NOT NULL,
@@ -159,7 +168,24 @@ app.post('/api/quiz/result', auth, (req, res) => {
 });
 
 app.get('/api/quiz/history', auth, (req, res) => {
-  const rows = db.prepare('SELECT level, score, total, created_at FROM quiz_results WHERE user_id = ? ORDER BY id DESC LIMIT 20').all(req.user.id);
+
+// ---- Chapter progress (jalur belajar Soumatome) ----
+app.get('/api/chapters/progress', auth, (req, res) => {
+  const rows = db.prepare('SELECT chapter_id, score, total, passed, updated_at FROM chapter_progress WHERE user_id = ?').all(req.user.id);
+  res.json({ progress: rows });
+});
+app.post('/api/chapters/complete', auth, (req, res) => {
+  const { chapter_id, score, total } = req.body || {};
+  if (!chapter_id) return res.status(400).json({ error: 'chapter_id wajib' });
+  const passed = (Number(score) / Math.max(1, Number(total))) >= 0.7 ? 1 : 0;
+  db.prepare(`INSERT INTO chapter_progress (user_id, chapter_id, score, total, passed)
+    VALUES (?,?,?,?,?)
+    ON CONFLICT(user_id, chapter_id) DO UPDATE SET score=excluded.score, total=excluded.total,
+    passed=CASE WHEN excluded.passed=1 THEN 1 ELSE chapter_progress.passed END,
+    updated_at=datetime('now')`)
+    .run(req.user.id, String(chapter_id).slice(0, 20), Number(score) || 0, Number(total) || 0, passed);
+  res.json({ ok: true, passed: !!passed });
+});  const rows = db.prepare('SELECT level, score, total, created_at FROM quiz_results WHERE user_id = ? ORDER BY id DESC LIMIT 20').all(req.user.id);
   res.json({ history: rows });
 });
 
