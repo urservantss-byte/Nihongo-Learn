@@ -393,20 +393,33 @@ app.post('/api/ask', auth, async (req, res) => {
       .filter(m => m && (m.role === 'user' || m.role === 'ai') && m.text)
       .map(m => ({ role: m.role === 'ai' ? 'model' : 'user', parts: [{ text: String(m.text).slice(0, 1000) }] }));
     contents.push({ role: 'user', parts: [{ text: q }] });
-    const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=' + GEMINI_KEY, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        system_instruction: { parts: [{ text: ASK_SYS }] },
-        contents,
-        generationConfig: { maxOutputTokens: 800, temperature: 0.7 }
-      })
+    const body = JSON.stringify({
+      system_instruction: { parts: [{ text: ASK_SYS }] },
+      contents,
+      generationConfig: { maxOutputTokens: 800, temperature: 0.7 }
     });
-    const d = await r.json().catch(() => ({}));
-    if (!r.ok) return res.status(502).json({ error: 'Sensei lagi sibuk, coba lagi sebentar ya' });
-    const text = d.candidates && d.candidates[0] && d.candidates[0].content &&
-      d.candidates[0].content.parts.map(p => p.text || '').join('').trim();
-    if (!text) return res.status(502).json({ error: 'Sensei lagi sibuk, coba lagi sebentar ya' });
+    // Coba beberapa model berurutan + retry kalau 503/429 (server AI sibuk)
+    const models = ['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-3.8-flash'];
+    let text = '';
+    for (const m of models) {
+      for (let attempt = 0; attempt < 2 && !text; attempt++) {
+        try {
+          const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + m + ':generateContent?key=' + GEMINI_KEY, {
+            method: 'POST', headers: { 'Content-Type': 'application/json' }, body
+          });
+          const d = await r.json().catch(() => ({}));
+          if ((r.status === 503 || r.status === 429) && attempt === 0) {
+            await new Promise(r2 => setTimeout(r2, 1500));
+            continue;
+          }
+          if (r.ok && d.candidates && d.candidates[0] && d.candidates[0].content) {
+            text = d.candidates[0].content.parts.map(p => p.text || '').join('').trim();
+          }
+        } catch {}
+      }
+      if (text) break;
+    }
+    if (!text) return res.status(502).json({ error: 'Server AI lagi penuh, coba lagi 1-2 menit ya 🙏' });
     res.json({ a: text });
   } catch (e) {
     res.status(502).json({ error: 'Sensei lagi sibuk, coba lagi sebentar ya' });
