@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NihongoLearn — Belajar Bahasa Jepang</title>
+<meta name="description" content="Belajar bahasa Jepang: bunpou, kosakata, kanji, bank soal JLPT/JFT/SSW & info ujian.">
+<meta name="theme-color" content="#e84393">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="NihongoLearn">
 <link rel="stylesheet" href="css/style.css?v=66">
 </head>
 <body>
@@ -19,5 +28,13 @@
 <script src="js/data-banksoal-cleaning.js?v=1"></script>
 <script src="js/data-banksoal-jft2.js?v=1"></script>
 <script src="js/app.js?v=78"></script>
+<script>
+// PWA: daftarkan service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').catch(function(){});
+  });
+}
+</script>
 </body>
 </html>
