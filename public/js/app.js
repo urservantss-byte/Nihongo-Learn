@@ -167,6 +167,10 @@ const app = createApp({
     myWeekly: 0,
   }),
   computed: {
+    pageTitle() {
+      const t = { home: 'Beranda', library: 'Materi', quiz: 'Quiz', quizrun: 'Quiz', adaptiverun: 'Quiz Adaptif', kamus: 'Kamus', games: 'Game', saya: 'Saya', srsrun: 'Review' };
+      return t[this.tab] || '';
+    },
     user() { return store.user; },
     mascot() { return mascotFor(store.user?.xp); },
     doneSet() { return new Set(store.done); },
@@ -576,6 +580,7 @@ const app = createApp({
 <div>
   <header class="hdr">
     <div class="logo"><span class="jp">日本語</span> NihongoLearn</div>
+    <div class="hdr-title">{{ pageTitle }}</div>
     <div style="display:flex;gap:8px;align-items:center">
       <span v-if="user" class="chip"><span v-html="ic('coin',14)"></span> {{ user.coins || 0 }}</span>
       <button class="theme-btn" @click="toggleTheme">{{ store.theme === 'sakura' ? '⛩️ Zen' : '🌸 Sakura' }}</button>
@@ -809,7 +814,7 @@ const app = createApp({
         <div v-if="kamusQ && !kamusLoading && !kamusResults.length" class="card muted small center">Tidak ketemu. Coba kata lain.</div>
       </div>
       <div v-else class="card pop">
-        <button class="btn ghost sm" @click="kamusDetail=null"><span v-html="ic('back',15)"></span> Hasil cari</button>
+        <div class="back-row"><button class="btn ghost sm" @click="kamusDetail=null"><span v-html="ic('back',15)"></span> Hasil cari</button></div>
         <div v-if="kamusDetail.type==='word'">
           <h2>{{ kamusDetail.keb[0] || kamusDetail.reb[0] }}</h2>
           <p class="muted">{{ kamusDetail.reb.join('、') }}</p>
