@@ -5,6 +5,7 @@
    Lulus (skor >= 70) → bab berikutnya terbuka.
    N4: 19 bab — materi lengkap dari buku Nihongo Soumatome N4 Bunpou
    (124 pola grammar, diterjemahkan ke Bahasa Indonesia).
+   Contoh kalimat gaya WKWK: kanji → hiragana → Indonesia.
    ============================================================ */
 
 const CHAPTERS = {
@@ -102,11 +103,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "わたしは ブディ です。",
-                  "id": "Saya adalah Budi."
+                  "id": "Saya adalah Budi.",
+                  "rd": "わたしわ ブディ です。"
                 },
                 {
                   "jp": "わたしは がくせい です。",
-                  "id": "Saya adalah murid."
+                  "id": "Saya adalah murid.",
+                  "rd": "わたしわ がくせい です。"
                 }
               ]
             },
@@ -117,7 +120,8 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "インドネシア から きました。",
-                  "id": "Saya berasal dari Indonesia."
+                  "id": "Saya berasal dari Indonesia.",
+                  "rd": "インドネシア から きました。"
                 }
               ]
             }
@@ -382,11 +386,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "りんごを みっつ ください。",
-                  "id": "Tolong 3 buah apel."
+                  "id": "Tolong 3 buah apel.",
+                  "rd": "りんごお みっつ ください。"
                 },
                 {
                   "jp": "ねこが さんびき います。",
-                  "id": "Ada 3 ekor kucing."
+                  "id": "Ada 3 ekor kucing.",
+                  "rd": "ねこが さんびき います。"
                 }
               ]
             },
@@ -397,11 +403,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "いま 3じです。",
-                  "id": "Sekarang jam 3."
+                  "id": "Sekarang jam 3.",
+                  "rd": "いま さんじです。"
                 },
                 {
                   "jp": "いま 7じはんです。",
-                  "id": "Sekarang jam setengah 8 (7:30)."
+                  "id": "Sekarang jam setengah 8 (7:30).",
+                  "rd": "いま しちじはんです。"
                 }
               ]
             },
@@ -412,11 +420,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "がっこうは 8じから 3じまで です。",
-                  "id": "Sekolah dari jam 8 sampai jam 3."
+                  "id": "Sekolah dari jam 8 sampai jam 3.",
+                  "rd": "がっこうわ はちじから さんじまで です。"
                 },
                 {
                   "jp": "9じから 5じまで はたらきます。",
-                  "id": "Bekerja dari jam 9 sampai jam 5."
+                  "id": "Bekerja dari jam 9 sampai jam 5.",
+                  "rd": "くじから ごじまで はたらきます。"
                 }
               ]
             }
@@ -725,11 +735,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "これは ほんです。",
-                  "id": "Ini adalah buku."
+                  "id": "Ini adalah buku.",
+                  "rd": "これわ ほんです。"
                 },
                 {
                   "jp": "あれは とけいです。",
-                  "id": "Itu (di sana) adalah jam."
+                  "id": "Itu (di sana) adalah jam.",
+                  "rd": "あれわ とけいです。"
                 }
               ]
             },
@@ -740,11 +752,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "これは わたしの かばんです。",
-                  "id": "Ini adalah tasku."
+                  "id": "Ini adalah tasku.",
+                  "rd": "これわ わたしの かばんです。"
                 },
                 {
                   "jp": "たなかさんの くるまは あかいです。",
-                  "id": "Mobil Tanaka berwarna merah."
+                  "id": "Mobil Tanaka berwarna merah.",
+                  "rd": "たなかさんの くるまわ あかいです。"
                 }
               ]
             },
@@ -755,11 +769,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "みずを ください。",
-                  "id": "Tolong air putih."
+                  "id": "Tolong air putih.",
+                  "rd": "みずお ください。"
                 },
                 {
                   "jp": "このほんを ください。",
-                  "id": "Tolong buku yang ini."
+                  "id": "Tolong buku yang ini.",
+                  "rd": "このほんお ください。"
                 }
               ]
             }
@@ -1051,11 +1067,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "わたしは ごはんを たべます。",
-                  "id": "Saya makan nasi."
+                  "id": "Saya makan nasi.",
+                  "rd": "わたしわ ごはんお たべます。"
                 },
                 {
                   "jp": "まいばん ほんを よみます。",
-                  "id": "Setiap malam membaca buku."
+                  "id": "Setiap malam membaca buku.",
+                  "rd": "まいばん ほんお よみます。"
                 }
               ]
             },
@@ -1066,11 +1084,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "あした がっこうへ いきます。",
-                  "id": "Besok pergi ke sekolah."
+                  "id": "Besok pergi ke sekolah.",
+                  "rd": "あした がっこうえ いきます。"
                 },
                 {
                   "jp": "うちに かえります。",
-                  "id": "Pulang ke rumah."
+                  "id": "Pulang ke rumah.",
+                  "rd": "うちに かえります。"
                 }
               ]
             },
@@ -1081,11 +1101,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "としょかんで べんきょうします。",
-                  "id": "Belajar di perpustakaan."
+                  "id": "Belajar di perpustakaan.",
+                  "rd": "としょかんで べんきょうします。"
                 },
                 {
                   "jp": "レストランで ひるごはんを たべます。",
-                  "id": "Makan siang di restoran."
+                  "id": "Makan siang di restoran.",
+                  "rd": "レストランで ひるごはんお たべます。"
                 }
               ]
             }
@@ -1377,11 +1399,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "このケーキは とても おいしいです。",
-                  "id": "Kue ini sangat enak."
+                  "id": "Kue ini sangat enak.",
+                  "rd": "このケーキわ とても おいしいです。"
                 },
                 {
                   "jp": "富士山は とても たかいです。",
-                  "id": "Gunung Fuji sangat tinggi."
+                  "id": "Gunung Fuji sangat tinggi.",
+                  "rd": "ふじさんわ とても たかいです。"
                 }
               ]
             },
@@ -1392,11 +1416,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "このテストは あまり むずかしくないです。",
-                  "id": "Tes ini tidak terlalu sulit."
+                  "id": "Tes ini tidak terlalu sulit.",
+                  "rd": "このテストわ あまり むずかしくないです。"
                 },
                 {
                   "jp": "きょうは あまり さむくないです。",
-                  "id": "Hari ini tidak terlalu dingin."
+                  "id": "Hari ini tidak terlalu dingin.",
+                  "rd": "きょうわ あまり さむくないです。"
                 }
               ]
             },
@@ -1407,11 +1433,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "きれいな はなです。",
-                  "id": "Ini bunga yang cantik."
+                  "id": "Ini bunga yang cantik.",
+                  "rd": "きれいな はなです。"
                 },
                 {
                   "jp": "ゆうめいな ひとです。",
-                  "id": "Dia orang yang terkenal."
+                  "id": "Dia orang yang terkenal.",
+                  "rd": "ゆうめいな ひとです。"
                 }
               ]
             }
@@ -1710,11 +1738,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ちょっと まってください。",
-                  "id": "Tolong tunggu sebentar."
+                  "id": "Tolong tunggu sebentar.",
+                  "rd": "ちょっと まってください。"
                 },
                 {
                   "jp": "ゆっくり はなしてください。",
-                  "id": "Tolong bicara pelan-pelan."
+                  "id": "Tolong bicara pelan-pelan.",
+                  "rd": "ゆっくり はなしてください。"
                 }
               ]
             },
@@ -1725,11 +1755,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "すしが たべたいです。",
-                  "id": "Saya ingin makan sushi."
+                  "id": "Saya ingin makan sushi.",
+                  "rd": "すしが たべたいです。"
                 },
                 {
                   "jp": "にほんに いきたいです。",
-                  "id": "Saya ingin pergi ke Jepang."
+                  "id": "Saya ingin pergi ke Jepang.",
+                  "rd": "にほんに いきたいです。"
                 }
               ]
             },
@@ -1740,11 +1772,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "きょうは テレビを みない。",
-                  "id": "Hari ini tidak nonton TV. (kasual)"
+                  "id": "Hari ini tidak nonton TV. (kasual)",
+                  "rd": "きょうわ テレビお みない。"
                 },
                 {
                   "jp": "あしたは いかない。",
-                  "id": "Besok tidak pergi. (kasual)"
+                  "id": "Besok tidak pergi. (kasual)",
+                  "rd": "あしたわ いかない。"
                 }
               ]
             }
@@ -2057,11 +2091,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "わたしは まいにち べんきょうします。",
-                  "id": "Saya belajar setiap hari."
+                  "id": "Saya belajar setiap hari.",
+                  "rd": "わたしわ まいにち べんきょうします。"
                 },
                 {
                   "jp": "ときどき えいがを みます。",
-                  "id": "Kadang-kadang menonton film."
+                  "id": "Kadang-kadang menonton film.",
+                  "rd": "ときどき えいがお みます。"
                 }
               ]
             },
@@ -2072,11 +2108,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "わたしは あまり テレビを みません。",
-                  "id": "Saya jarang menonton TV."
+                  "id": "Saya jarang menonton TV.",
+                  "rd": "わたしわ あまり テレビお みません。"
                 },
                 {
                   "jp": "ぜんぜん わかりません。",
-                  "id": "Sama sekali tidak mengerti."
+                  "id": "Sama sekali tidak mengerti.",
+                  "rd": "ぜんぜん わかりません。"
                 }
               ]
             },
@@ -2087,11 +2125,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ちちは せんせいです。",
-                  "id": "Ayah saya seorang guru."
+                  "id": "Ayah saya seorang guru.",
+                  "rd": "ちちわ せんせいです。"
                 },
                 {
                   "jp": "おとうさんは おいくつですか。",
-                  "id": "Ayahmu berumur berapa?"
+                  "id": "Ayahmu berumur berapa?",
+                  "rd": "おとうさんわ おいくつですか。"
                 }
               ]
             }
@@ -2387,11 +2427,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ラーメンを ください。",
-                  "id": "Minta ramennya."
+                  "id": "Minta ramennya.",
+                  "rd": "ラーメンお ください。"
                 },
                 {
                   "jp": "このシャツを ください。",
-                  "id": "Saya ambil kemeja ini."
+                  "id": "Saya ambil kemeja ini.",
+                  "rd": "このシャツお ください。"
                 }
               ]
             },
@@ -2402,11 +2444,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "これは いくらですか。",
-                  "id": "Ini berapa harganya?"
+                  "id": "Ini berapa harganya?",
+                  "rd": "これわ いくらですか。"
                 },
                 {
                   "jp": "コーヒーは いくらですか。",
-                  "id": "Kopinya berapa?"
+                  "id": "Kopinya berapa?",
+                  "rd": "コーヒーわ いくらですか。"
                 }
               ]
             }
@@ -2807,11 +2851,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "日本語が話せます。",
-                  "id": "Saya bisa berbicara bahasa Jepang."
+                  "id": "Saya bisa berbicara bahasa Jepang.",
+                  "rd": "にほんごがはなせます。"
                 },
                 {
                   "jp": "車が運転できますか。",
-                  "id": "Apakah (kamu) bisa menyetir mobil?"
+                  "id": "Apakah (kamu) bisa menyetir mobil?",
+                  "rd": "くるまがうんてんできますか。"
                 }
               ]
             },
@@ -2822,15 +2868,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "窓を開けると、鳥の声が聞こえます。",
-                  "id": "Saat membuka jendela, terdengar suara burung."
+                  "id": "Saat membuka jendela, terdengar suara burung.",
+                  "rd": "まどおあけると、とりのこえがきこえます。"
                 },
                 {
                   "jp": "となりの家からピアノの音が聞こえます。",
-                  "id": "Dari rumah sebelah terdengar suara piano."
+                  "id": "Dari rumah sebelah terdengar suara piano.",
+                  "rd": "となりのいえからピアノのおとがきこえます。"
                 },
                 {
                   "jp": "私は左の耳がよく聞こえません。",
-                  "id": "Telinga kiri saya tidak terlalu bisa mendengar."
+                  "id": "Telinga kiri saya tidak terlalu bisa mendengar.",
+                  "rd": "わたしわひだりのみみがよくきこえません。"
                 }
               ]
             },
@@ -2841,11 +2890,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "このパソコンはラジオも聞けます。",
-                  "id": "Komputer ini juga bisa memutar radio."
+                  "id": "Komputer ini juga bisa memutar radio.",
+                  "rd": "このパソコンわラジオもきけます。"
                 },
                 {
                   "jp": "こんなにうるさいと、音楽が聞けません。",
-                  "id": "Seribut ini, saya jadi tidak bisa mendengar musiknya."
+                  "id": "Seribut ini, saya jadi tidak bisa mendengar musiknya.",
+                  "rd": "こんなにうるさいと、おんがくがきけません。"
                 }
               ]
             },
@@ -2856,15 +2907,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "この窓から山が見えます。",
-                  "id": "Dari jendela ini terlihat gunung."
+                  "id": "Dari jendela ini terlihat gunung.",
+                  "rd": "このまどからやまがみえます。"
                 },
                 {
                   "jp": "ここから東京駅がよく見えます。",
-                  "id": "Dari sini Stasiun Tokyo terlihat jelas."
+                  "id": "Dari sini Stasiun Tokyo terlihat jelas.",
+                  "rd": "ここからとうきょうえきがよくみえます。"
                 },
                 {
                   "jp": "めがねがないから、よく見えません。",
-                  "id": "Karena tidak memakai kacamata, saya tidak bisa melihat dengan jelas."
+                  "id": "Karena tidak memakai kacamata, saya tidak bisa melihat dengan jelas.",
+                  "rd": "めがねがないから、よくみえません。"
                 }
               ]
             },
@@ -2875,11 +2929,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "この美術館では、ピカソの絵が見られます。",
-                  "id": "Di museum seni ini bisa melihat lukisan Picasso."
+                  "id": "Di museum seni ini bisa melihat lukisan Picasso.",
+                  "rd": "このびじゅつかんでは、ピカソのえがみられます。"
                 },
                 {
                   "jp": "この席からは花火がよく見られます。",
-                  "id": "Dari kursi ini kembang api terlihat jelas."
+                  "id": "Dari kursi ini kembang api terlihat jelas.",
+                  "rd": "このせきからはなびがよくみられます。"
                 }
               ]
             },
@@ -2890,15 +2946,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "公園で子どもたちが遊んでいるのが見えます。",
-                  "id": "Di taman terlihat anak-anak sedang bermain."
+                  "id": "Di taman terlihat anak-anak sedang bermain.",
+                  "rd": "こうえんでこどもたちがあそんでいるのがみえます。"
                 },
                 {
                   "jp": "きのう、トムさんがきれいな女の人と歩いているのを見ました。",
-                  "id": "Kemarin saya melihat Tom berjalan bersama perempuan cantik."
+                  "id": "Kemarin saya melihat Tom berjalan bersama perempuan cantik.",
+                  "rd": "きのう、トムさんがきれいなおんなのひととあるいているのをおみました。"
                 },
                 {
                   "jp": "となりの部屋でだれかがけんかしているのが聞こえます。",
-                  "id": "Terdengar seseorang sedang bertengkar di kamar sebelah."
+                  "id": "Terdengar seseorang sedang bertengkar di kamar sebelah.",
+                  "rd": "となりのへやでだれかがけんかしているのがきこえます。"
                 }
               ]
             },
@@ -2909,11 +2968,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "日本へ行きたいです。",
-                  "id": "Saya ingin pergi ke Jepang."
+                  "id": "Saya ingin pergi ke Jepang.",
+                  "rd": "にほんえいきたいです。"
                 },
                 {
                   "jp": "何も食べたくないです。",
-                  "id": "Saya tidak ingin makan apa-apa."
+                  "id": "Saya tidak ingin makan apa-apa.",
+                  "rd": "なにもたべたくないです。"
                 }
               ]
             },
@@ -2924,11 +2985,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "子供は遊びたがっています。",
-                  "id": "Anak itu kelihatannya ingin bermain."
+                  "id": "Anak itu kelihatannya ingin bermain.",
+                  "rd": "こどもわあそびたがっています。"
                 },
                 {
                   "jp": "彼は日本へ行きたがっています。",
-                  "id": "Dia (laki-laki) kelihatannya ingin pergi ke Jepang."
+                  "id": "Dia (laki-laki) kelihatannya ingin pergi ke Jepang.",
+                  "rd": "かれわにほんえいきたがっています。"
                 }
               ]
             }
@@ -3301,11 +3364,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "東京はジャカルタより暑いです。",
-                  "id": "Tokyo lebih panas daripada Jakarta."
+                  "id": "Tokyo lebih panas daripada Jakarta.",
+                  "rd": "とうきょうわジャカルタよりあついです。"
                 },
                 {
                   "jp": "りんごのほうがみかんより好きです。",
-                  "id": "Saya lebih suka apel daripada jeruk."
+                  "id": "Saya lebih suka apel daripada jeruk.",
+                  "rd": "りんごのほうがみかんよりすきです。"
                 }
               ]
             },
@@ -3316,15 +3381,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "今週は先週ほどいそがしくありません。",
-                  "id": "Minggu ini tidak sesibuk minggu lalu."
+                  "id": "Minggu ini tidak sesibuk minggu lalu.",
+                  "rd": "こんしゅうわせんしゅうほどいそがしくありません。"
                 },
                 {
                   "jp": "日本では、ぶた肉は牛肉ほど高くありません。",
-                  "id": "Di Jepang, daging babi tidak semahal daging sapi."
+                  "id": "Di Jepang, daging babi tidak semahal daging sapi.",
+                  "rd": "にほんでは、ぶたにくわぎゅうにくほどたかくありません。"
                 },
                 {
                   "jp": "今週もいそがしいですが、先週ほどではありません。",
-                  "id": "Minggu ini juga sibuk, tetapi tidak sesibuk minggu lalu."
+                  "id": "Minggu ini juga sibuk, tetapi tidak sesibuk minggu lalu.",
+                  "rd": "こんしゅうもいそがしいですが、せんしゅうほどではありません。"
                 }
               ]
             },
@@ -3335,11 +3403,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "この子は家ではうるさいですが、外ではおとなしいです。",
-                  "id": "Anak ini berisik di rumah, tetapi tenang di luar."
+                  "id": "Anak ini berisik di rumah, tetapi tenang di luar.",
+                  "rd": "このこわいえではうるさいですが、そとではおとなしいです。"
                 },
                 {
                   "jp": "たんじょう日に父からも母からもプレゼントをもらいました。",
-                  "id": "Pada hari ulang tahun, saya menerima hadiah dari ayah dan juga dari ibu."
+                  "id": "Pada hari ulang tahun, saya menerima hadiah dari ayah dan juga dari ibu.",
+                  "rd": "たんじょうひにちちからもははからもプレゼントおもらいました。"
                 }
               ]
             },
@@ -3350,11 +3420,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "日本の中で富士山がいちばん高いです。",
-                  "id": "Gunung Fuji yang paling tinggi di Jepang."
+                  "id": "Gunung Fuji yang paling tinggi di Jepang.",
+                  "rd": "にほんのなかでふじさんがいちばんたかいです。"
                 },
                 {
                   "jp": "一年の中で夏がいちばん暑いです。",
-                  "id": "Musim panas yang paling panas dalam setahun."
+                  "id": "Musim panas yang paling panas dalam setahun.",
+                  "rd": "いちねんのなかでなつがいちばんあついです。"
                 }
               ]
             },
@@ -3365,11 +3437,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "もっとゆっくり話してください。",
-                  "id": "Tolong bicara lebih pelan lagi."
+                  "id": "Tolong bicara lebih pelan lagi.",
+                  "rd": "もっとゆっくりはなしてください。"
                 },
                 {
                   "jp": "この本はあの本よりずっと面白いです。",
-                  "id": "Buku ini jauh lebih menarik daripada buku itu."
+                  "id": "Buku ini jauh lebih menarik daripada buku itu.",
+                  "rd": "このほんわあのほんよりずっとおもしろいです。"
                 }
               ]
             }
@@ -3752,11 +3826,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "今、ご飯を食べているところです。",
-                  "id": "Sekarang sedang makan."
+                  "id": "Sekarang sedang makan.",
+                  "rd": "いま、ごはんおたべているところです。"
                 },
                 {
                   "jp": "弟は外で遊んでいます。",
-                  "id": "Adik sedang bermain di luar."
+                  "id": "Adik sedang bermain di luar.",
+                  "rd": "おとうとわそとであそんでいます。"
                 }
               ]
             },
@@ -3767,11 +3843,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "田中さんは結婚しています。",
-                  "id": "Tanaka sudah menikah (dan masih)."
+                  "id": "Tanaka sudah menikah (dan masih).",
+                  "rd": "たなかさんわけっこんしています。"
                 },
                 {
                   "jp": "この時計は壊れています。",
-                  "id": "Jam ini rusak (keadaannya)."
+                  "id": "Jam ini rusak (keadaannya).",
+                  "rd": "このとけいわこわれています。"
                 }
               ]
             },
@@ -3782,11 +3860,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "窓が開けてあります。",
-                  "id": "Jendela (sengaja) dibiarkan terbuka."
+                  "id": "Jendela (sengaja) dibiarkan terbuka.",
+                  "rd": "まどがあけてあります。"
                 },
                 {
                   "jp": "部屋が掃除してあります。",
-                  "id": "Kamar sudah dibersihkan (siap dipakai)."
+                  "id": "Kamar sudah dibersihkan (siap dipakai).",
+                  "rd": "へやがそうじしてあります。"
                 }
               ]
             },
@@ -3797,11 +3877,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "今から家を出るところです。",
-                  "id": "Saya baru akan keluar dari rumah sekarang."
+                  "id": "Saya baru akan keluar dari rumah sekarang.",
+                  "rd": "いまからいえおでるところです。"
                 },
                 {
                   "jp": "これからご飯を食べるところです。",
-                  "id": "Saya baru akan makan sekarang."
+                  "id": "Saya baru akan makan sekarang.",
+                  "rd": "これからごはんおたべるところです。"
                 }
               ]
             },
@@ -3812,11 +3894,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "今、料理を作っているところです。",
-                  "id": "Sekarang saya sedang memasak."
+                  "id": "Sekarang saya sedang memasak.",
+                  "rd": "いま、りょうりおつくっているところです。"
                 },
                 {
                   "jp": "すみません、今電話をしているところです。",
-                  "id": "Maaf, saya sedang menelepon sekarang."
+                  "id": "Maaf, saya sedang menelepon sekarang.",
+                  "rd": "すみません、いまでんわおしているところです。"
                 }
               ]
             },
@@ -3827,11 +3911,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "今、お昼ご飯を食べたところです。",
-                  "id": "Saya baru saja selesai makan siang."
+                  "id": "Saya baru saja selesai makan siang.",
+                  "rd": "いま、おひるごはんおたべたところです。"
                 },
                 {
                   "jp": "今、駅に着いたところです。",
-                  "id": "Saya baru saja tiba di stasiun."
+                  "id": "Saya baru saja tiba di stasiun.",
+                  "rd": "いま、えきについたところです。"
                 }
               ]
             },
@@ -3842,11 +3928,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ドアを開けてください。",
-                  "id": "Tolong buka pintunya."
+                  "id": "Tolong buka pintunya.",
+                  "rd": "ドアおあけてください。"
                 },
                 {
                   "jp": "風でドアが開きました。",
-                  "id": "Pintu terbuka karena angin."
+                  "id": "Pintu terbuka karena angin.",
+                  "rd": "かぜでドアがあきました。"
                 }
               ]
             },
@@ -3857,11 +3945,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "かばんを持ってきてください。",
-                  "id": "Tolong bawa tasnya ke sini."
+                  "id": "Tolong bawa tasnya ke sini.",
+                  "rd": "かばんおもってきてください。"
                 },
                 {
                   "jp": "だんだん暑くなってきました。",
-                  "id": "Perlahan-lahan menjadi panas (sampai sekarang)."
+                  "id": "Perlahan-lahan menjadi panas (sampai sekarang).",
+                  "rd": "だんだんあつくなってきました。"
                 }
               ]
             },
@@ -3872,11 +3962,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "この本を持っていってもいいですか。",
-                  "id": "Bolehkah saya membawa buku ini pergi?"
+                  "id": "Bolehkah saya membawa buku ini pergi?",
+                  "rd": "このほんおもっていってもいいですか。"
                 },
                 {
                   "jp": "これから寒くなっていきます。",
-                  "id": "Mulai sekarang akan menjadi dingin."
+                  "id": "Mulai sekarang akan menjadi dingin.",
+                  "rd": "これからさむくなっていきます。"
                 }
               ]
             }
@@ -4251,11 +4343,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "暑いから、窓を開けてください。",
-                  "id": "Karena panas, tolong buka jendela."
+                  "id": "Karena panas, tolong buka jendela.",
+                  "rd": "あついから、まどおあけてください。"
                 },
                 {
                   "jp": "病気なので、今日は休みます。",
-                  "id": "Karena sakit, hari ini saya istirahat."
+                  "id": "Karena sakit, hari ini saya istirahat.",
+                  "rd": "びょうきなので、きょうわやすみます。"
                 }
               ]
             },
@@ -4266,15 +4360,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "かぜで学校を休みました。",
-                  "id": "Saya tidak masuk sekolah karena flu."
+                  "id": "Saya tidak masuk sekolah karena flu.",
+                  "rd": "かぜでがっこうおやすみました。"
                 },
                 {
                   "jp": "このカレーはからくて食べられません。",
-                  "id": "Kari ini terlalu pedas sehingga tidak bisa dimakan."
+                  "id": "Kari ini terlalu pedas sehingga tidak bisa dimakan.",
+                  "rd": "このカレーわからくてたべられません。"
                 },
                 {
                   "jp": "お金がなくて、買えない。",
-                  "id": "Tidak ada uang, jadi tidak bisa beli."
+                  "id": "Tidak ada uang, jadi tidak bisa beli.",
+                  "rd": "おかねがなくて、かえない。"
                 }
               ]
             },
@@ -4285,11 +4382,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "合格するために、毎日勉強します。",
-                  "id": "Agar lulus, saya belajar setiap hari."
+                  "id": "Agar lulus, saya belajar setiap hari.",
+                  "rd": "ごうかくするために、まいにちべんきょうします。"
                 },
                 {
                   "jp": "家族のために働きます。",
-                  "id": "Saya bekerja demi keluarga."
+                  "id": "Saya bekerja demi keluarga.",
+                  "rd": "かぞくのためにはたらきます。"
                 }
               ]
             },
@@ -4300,11 +4399,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "台風のために試合が中止になった。",
-                  "id": "Pertandingan dibatalkan karena topan."
+                  "id": "Pertandingan dibatalkan karena topan.",
+                  "rd": "たいふうのためにしあいがちゅうしになった。"
                 },
                 {
                   "jp": "火事のために電車が止まった。",
-                  "id": "Kereta berhenti karena kebakaran."
+                  "id": "Kereta berhenti karena kebakaran.",
+                  "rd": "かじのためにでんしゃがとまった。"
                 }
               ]
             },
@@ -4315,11 +4416,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "忘れないように、メモします。",
-                  "id": "Agar tidak lupa, saya mencatat."
+                  "id": "Agar tidak lupa, saya mencatat.",
+                  "rd": "わすれないように、メモします。"
                 },
                 {
                   "jp": "聞こえるように、大きく話します。",
-                  "id": "Agar terdengar, saya bicara keras."
+                  "id": "Agar terdengar, saya bicara keras.",
+                  "rd": "きこえるように、おおきくはなします。"
                 }
               ]
             },
@@ -4330,15 +4433,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "きのう勉強したのに、もう忘れてしまいました。",
-                  "id": "Padahal kemarin sudah belajar, tapi sudah lupa lagi."
+                  "id": "Padahal kemarin sudah belajar, tapi sudah lupa lagi.",
+                  "rd": "きのうべんきょうしたのに、もうわすれてしまいました。"
                 },
                 {
                   "jp": "冬なのに、あたたかいですね。",
-                  "id": "Padahal musim dingin, tapi hangat ya."
+                  "id": "Padahal musim dingin, tapi hangat ya.",
+                  "rd": "ふゆなのに、あたたかいですね。"
                 },
                 {
                   "jp": "このパソコンは高かったのに、もうこわれてしまいました。",
-                  "id": "Padahal komputer ini mahal, tapi sudah rusak."
+                  "id": "Padahal komputer ini mahal, tapi sudah rusak.",
+                  "rd": "このパソコンはたかかったのに、もうこわれてしまいました。"
                 }
               ]
             },
@@ -4349,15 +4455,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "この絵をかくのに1か月かかりました。",
-                  "id": "Menggambar lukisan ini butuh waktu satu bulan."
+                  "id": "Menggambar lukisan ini butuh waktu satu bulan.",
+                  "rd": "このえをかくのに1かげつかかりました。"
                 },
                 {
                   "jp": "子どもをいい学校に入れるのにお金がかかります。",
-                  "id": "Memasukkan anak ke sekolah yang bagus butuh banyak uang."
+                  "id": "Memasukkan anak ke sekolah yang bagus butuh banyak uang.",
+                  "rd": "こどもをいいがっこうにいれるのにおかねがかかります。"
                 },
                 {
                   "jp": "この洗剤は、セーターを洗うのに使います。",
-                  "id": "Deterjen ini dipakai untuk mencuci sweater."
+                  "id": "Deterjen ini dipakai untuk mencuci sweater.",
+                  "rd": "このせんざいは、セーターをあらうのにつかいます。"
                 }
               ]
             }
@@ -4734,15 +4843,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "財布を盗まれました。",
-                  "id": "Dompet (saya) dicuri orang."
+                  "id": "Dompet (saya) dicuri orang.",
+                  "rd": "さいふをぬすまれました。"
                 },
                 {
                   "jp": "その歌は、世界中で歌われています。",
-                  "id": "Lagu itu dinyanyikan di seluruh dunia."
+                  "id": "Lagu itu dinyanyikan di seluruh dunia.",
+                  "rd": "そのうたは、せかいじゅうでうたわれています。"
                 },
                 {
                   "jp": "入学式は、このホールで行われます。",
-                  "id": "Upacara penerimaan siswa baru diadakan di aula ini."
+                  "id": "Upacara penerimaan siswa baru diadakan di aula ini.",
+                  "rd": "にゅうがくしきは、このホールでおこなわれます。"
                 }
               ]
             },
@@ -4753,15 +4865,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "子供に野菜を食べさせます。",
-                  "id": "Saya menyuruh anak makan sayur."
+                  "id": "Saya menyuruh anak makan sayur.",
+                  "rd": "こどもにやさいをたべさせます。"
                 },
                 {
                   "jp": "その先生は学生に日本語の日記を書かせます。",
-                  "id": "Guru itu menyuruh murid-muridnya menulis diary dalam bahasa Jepang."
+                  "id": "Guru itu menyuruh murid-muridnya menulis diary dalam bahasa Jepang.",
+                  "rd": "そのせんせいはがくせいににほんごのにっきをかかせます。"
                 },
                 {
                   "jp": "社長は、ちこくが多い社員をやめさせました。",
-                  "id": "Direktur memberhentikan karyawan yang sering terlambat."
+                  "id": "Direktur memberhentikan karyawan yang sering terlambat.",
+                  "rd": "しゃちょうは、ちこくがおおいしゃいんをやめさせました。"
                 }
               ]
             },
@@ -4772,15 +4887,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "子供を外で遊ばせます。",
-                  "id": "Saya membiarkan anak bermain di luar."
+                  "id": "Saya membiarkan anak bermain di luar.",
+                  "rd": "こどもをそとであそばせます。"
                 },
                 {
                   "jp": "公園で犬を走らせましょう。",
-                  "id": "Ayo biarkan anjing berlari di taman."
+                  "id": "Ayo biarkan anjing berlari di taman.",
+                  "rd": "こうえんでいぬをはしらせましょう。"
                 },
                 {
                   "jp": "好きなことをさせてください。",
-                  "id": "Tolong biarkan (saya) melakukan hal yang saya suka."
+                  "id": "Tolong biarkan (saya) melakukan hal yang saya suka.",
+                  "rd": "すきなことをさせてください。"
                 }
               ]
             },
@@ -4791,11 +4909,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "子どものころ、毎日母に野菜を食べさせられました。",
-                  "id": "Waktu kecil, setiap hari aku dipaksa makan sayur oleh ibu."
+                  "id": "Waktu kecil, setiap hari aku dipaksa makan sayur oleh ibu.",
+                  "rd": "こどものころ、まいにちははにやさいをたべさせられました。"
                 },
                 {
                   "jp": "私は大きい失敗をして、会社をやめさせられました。",
-                  "id": "Aku membuat kesalahan besar dan dipaksa keluar dari perusahaan."
+                  "id": "Aku membuat kesalahan besar dan dipaksa keluar dari perusahaan.",
+                  "rd": "わたしはおおきいしっぱいをして、かいしゃをやめさせられました。"
                 }
               ]
             },
@@ -4806,15 +4926,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ノートをコピーさせてください。",
-                  "id": "Tolong izinkan saya menyalin catatanmu."
+                  "id": "Tolong izinkan saya menyalin catatanmu.",
+                  "rd": "ノートをコピーさせてください。"
                 },
                 {
                   "jp": "お手洗いを使わせてください。",
-                  "id": "Tolong izinkan saya memakai toilet."
+                  "id": "Tolong izinkan saya memakai toilet.",
+                  "rd": "おてあらいつかわせてください。"
                 },
                 {
                   "jp": "疲れた。ちょっと休ませて。",
-                  "id": "Capek. Izinkan aku istirahat sebentar."
+                  "id": "Capek. Izinkan aku istirahat sebentar.",
+                  "rd": "つかれた。ちょっとやすませて。"
                 }
               ]
             }
@@ -5159,15 +5282,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "雨が降ったら、明日の試合は中止です。",
-                  "id": "Kalau hujan, pertandingan besok dibatalkan."
+                  "id": "Kalau hujan, pertandingan besok dibatalkan.",
+                  "rd": "あめがふったら、あしたのしあいはちゅうしです。"
                 },
                 {
                   "jp": "暑かったら、エアコンをつけてください。",
-                  "id": "Kalau panas, tolong nyalakan AC."
+                  "id": "Kalau panas, tolong nyalakan AC.",
+                  "rd": "あつかったら、エアコンをつけてください。"
                 },
                 {
                   "jp": "もし大きい地震が起きたら、どうしますか。",
-                  "id": "Kalau ada gempa besar, apa yang akan kamu lakukan?"
+                  "id": "Kalau ada gempa besar, apa yang akan kamu lakukan?",
+                  "rd": "もしおおきいじしんがおきたら、どうしますか。"
                 }
               ]
             },
@@ -5178,15 +5304,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "安ければ買いますが、高いので買いません。",
-                  "id": "Kalau murah saya beli, tapi karena mahal saya tidak beli."
+                  "id": "Kalau murah saya beli, tapi karena mahal saya tidak beli.",
+                  "rd": "やすければかいますが、たかいのでかいません。"
                 },
                 {
                   "jp": "タクシーで行けば、間に合うでしょう。",
-                  "id": "Kalau naik taksi, (kamu) pasti keburu."
+                  "id": "Kalau naik taksi, (kamu) pasti keburu.",
+                  "rd": "タクシーでいけば、まにあうでしょう。"
                 },
                 {
                   "jp": "きらいなら、食べなくてもいいですよ。",
-                  "id": "Kalau tidak suka, tidak usah makan juga tidak apa-apa."
+                  "id": "Kalau tidak suka, tidak usah makan juga tidak apa-apa.",
+                  "rd": "きらいなら、たべなくてもいいですよ。"
                 }
               ]
             },
@@ -5197,15 +5326,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ここから東京駅に行くなら、地下鉄が便利です。",
-                  "id": "Kalau mau pergi dari sini ke Stasiun Tokyo, kereta bawah tanah lebih praktis."
+                  "id": "Kalau mau pergi dari sini ke Stasiun Tokyo, kereta bawah tanah lebih praktis.",
+                  "rd": "ここからとうきょうえきにいくなら、ちかてつがべんりです。"
                 },
                 {
                   "jp": "コンビニへ行くなら、サンドイッチを買ってきてください。",
-                  "id": "Kalau pergi ke minimarket, tolong belikan sandwich sekalian."
+                  "id": "Kalau pergi ke minimarket, tolong belikan sandwich sekalian.",
+                  "rd": "コンビニえいくなら、サンドイッチをかってきてください。"
                 },
                 {
                   "jp": "ラーメンなら、駅前のラーメン屋がおいしいですよ。",
-                  "id": "Kalau soal ramen, kedai ramen di depan stasiun itu enak lho."
+                  "id": "Kalau soal ramen, kedai ramen di depan stasiun itu enak lho.",
+                  "rd": "ラーメンなら、えきまえのラーメンやがおいしいですよ。"
                 }
               ]
             },
@@ -5216,11 +5348,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "このボタンを押すと、ドアが開きます。",
-                  "id": "Kalau tombol ini ditekan, pintunya terbuka."
+                  "id": "Kalau tombol ini ditekan, pintunya terbuka.",
+                  "rd": "このボタンをおすと、ドアがひらきます。"
                 },
                 {
                   "jp": "ここを右に曲がると、銀行があります。",
-                  "id": "Kalau belok kanan di sini, ada bank."
+                  "id": "Kalau belok kanan di sini, ada bank.",
+                  "rd": "ここをみぎにまがると、ぎんこうがあります。"
                 }
               ]
             }
@@ -5560,11 +5694,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "先生はもうお帰りになりました。",
-                  "id": "Bapak/Ibu guru sudah pulang (hormat)."
+                  "id": "Bapak/Ibu guru sudah pulang (hormat).",
+                  "rd": "せんせいはもうおかえりになりました。"
                 },
                 {
                   "jp": "どうぞ、めしあがってください。",
-                  "id": "Silakan dimakan (hormat)."
+                  "id": "Silakan dimakan (hormat).",
+                  "rd": "どうぞ、めしあがってください。"
                 }
               ]
             },
@@ -5575,11 +5711,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私がご案内いたします。",
-                  "id": "Saya yang akan memandu (merendah)."
+                  "id": "Saya yang akan memandu (merendah).",
+                  "rd": "わたしがごあんないいたします。"
                 },
                 {
                   "jp": "資料を拝見しました。",
-                  "id": "Saya sudah melihat dokumennya (merendah)."
+                  "id": "Saya sudah melihat dokumennya (merendah).",
+                  "rd": "しりょうをはいけんしました。"
                 }
               ]
             },
@@ -5590,11 +5728,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "先生が本をくださいました。",
-                  "id": "Guru memberi saya buku (hormat)."
+                  "id": "Guru memberi saya buku (hormat).",
+                  "rd": "せんせいがほんをくださいました。"
                 },
                 {
                   "jp": "先生の本をいただきました。",
-                  "id": "Saya menerima buku dari guru (merendah)."
+                  "id": "Saya menerima buku dari guru (merendah).",
+                  "rd": "せんせいのほんをいただきました。"
                 }
               ]
             },
@@ -5605,19 +5745,23 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "先生に花をさしあげました。",
-                  "id": "Saya memberi bunga kepada guru (merendah)."
+                  "id": "Saya memberi bunga kepada guru (merendah).",
+                  "rd": "せんせいにはなをさしあげました。"
                 },
                 {
                   "jp": "先生が本をくださいました。",
-                  "id": "Guru memberi saya buku (hormat)."
+                  "id": "Guru memberi saya buku (hormat).",
+                  "rd": "せんせいがほんをくださいました。"
                 },
                 {
                   "jp": "先生に地図をかいていただきました。",
-                  "id": "Saya menerima kebaikan guru yang menggambar peta untuk saya."
+                  "id": "Saya menerima kebaikan guru yang menggambar peta untuk saya.",
+                  "rd": "せんせいにちずをかいていただきました。"
                 },
                 {
                   "jp": "あの先生はいつもやさしく教えてくださいます。",
-                  "id": "Guru itu selalu mengajari saya dengan ramah (hormat)."
+                  "id": "Guru itu selalu mengajari saya dengan ramah (hormat).",
+                  "rd": "あのせんせいはいつもやさしくおしえてくださいます。"
                 }
               ]
             }
@@ -5942,15 +6086,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "兄は日本で働いています。",
-                  "id": "Kakak laki-laki saya bekerja di Jepang."
+                  "id": "Kakak laki-laki saya bekerja di Jepang.",
+                  "rd": "あにはにほんではたらいています。"
                 },
                 {
                   "jp": "図書館で勉強します。",
-                  "id": "Saya belajar di perpustakaan."
+                  "id": "Saya belajar di perpustakaan.",
+                  "rd": "としょかんでべんきょうします。"
                 },
                 {
                   "jp": "学校で昼ご飯を食べました。",
-                  "id": "Saya makan siang di sekolah."
+                  "id": "Saya makan siang di sekolah.",
+                  "rd": "がっこうでひるごはんをたべました。"
                 }
               ]
             },
@@ -5961,15 +6108,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ぶどうからワインを作ります。",
-                  "id": "Wine dibuat dari buah anggur."
+                  "id": "Wine dibuat dari buah anggur.",
+                  "rd": "ぶどうからワインをつくります。"
                 },
                 {
                   "jp": "東京から大阪まで新幹線で行きます。",
-                  "id": "Dari Tokyo ke Osaka naik shinkansen."
+                  "id": "Dari Tokyo ke Osaka naik shinkansen.",
+                  "rd": "とうきょうからおおさかまでしんかんせんでいきます。"
                 },
                 {
                   "jp": "この紙は木から作られています。",
-                  "id": "Kertas ini dibuat dari kayu."
+                  "id": "Kertas ini dibuat dari kayu.",
+                  "rd": "このかみはきからつくられています。"
                 }
               ]
             },
@@ -5980,15 +6130,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "1日に3回、この薬を飲んでください。",
-                  "id": "Minumlah obat ini 3 kali sehari."
+                  "id": "Minumlah obat ini 3 kali sehari.",
+                  "rd": "1にちに3かい、このくすりをのんでください。"
                 },
                 {
                   "jp": "週に2回、プールで泳ぎます。",
-                  "id": "Saya berenang di kolam 2 kali seminggu."
+                  "id": "Saya berenang di kolam 2 kali seminggu.",
+                  "rd": "しゅうに2かい、プールでおよぎます。"
                 },
                 {
                   "jp": "1年に1回、健康診断を受けます。",
-                  "id": "Saya cek kesehatan 1 kali setahun."
+                  "id": "Saya cek kesehatan 1 kali setahun.",
+                  "rd": "1ねんに1かい、けんこうしんだんをうけます。"
                 }
               ]
             },
@@ -5999,15 +6152,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私はひらがなも書けません。",
-                  "id": "Saya bahkan tidak bisa menulis hiragana."
+                  "id": "Saya bahkan tidak bisa menulis hiragana.",
+                  "rd": "わたしはひらがなもかけません。"
                 },
                 {
                   "jp": "1円も持っていません。",
-                  "id": "Saya tidak membawa uang sepeser pun."
+                  "id": "Saya tidak membawa uang sepeser pun.",
+                  "rd": "1えんももっていません。"
                 },
                 {
                   "jp": "彼は挨拶もできません。",
-                  "id": "Dia bahkan tidak bisa menyapa."
+                  "id": "Dia bahkan tidak bisa menyapa.",
+                  "rd": "かれはあいさつもできません。"
                 }
               ]
             },
@@ -6018,15 +6174,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "このプリントを1枚ずつ配ってください。",
-                  "id": "Tolong bagikan selebaran ini satu lembar per orang."
+                  "id": "Tolong bagikan selebaran ini satu lembar per orang.",
+                  "rd": "このプリントを1まいずつくばってください。"
                 },
                 {
                   "jp": "この本を毎日2ページずつ勉強しましょう。",
-                  "id": "Mari belajar buku ini 2 halaman setiap hari."
+                  "id": "Mari belajar buku ini 2 halaman setiap hari.",
+                  "rd": "このほんをまいにち2ページずつべんきょうしましょう。"
                 },
                 {
                   "jp": "子どもたちに飴を3つずつあげました。",
-                  "id": "Saya memberi 3 permen kepada tiap anak."
+                  "id": "Saya memberi 3 permen kepada tiap anak.",
+                  "rd": "こどもたちにあめを3つずつあげました。"
                 }
               ]
             },
@@ -6037,15 +6196,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "これは子どもでもできる問題です。",
-                  "id": "Ini soal yang bahkan anak-anak pun bisa kerjakan."
+                  "id": "Ini soal yang bahkan anak-anak pun bisa kerjakan.",
+                  "rd": "これはこどもでもできるもんだいです。"
                 },
                 {
                   "jp": "お茶でも飲みましょうか。",
-                  "id": "Minum teh saja, bagaimana?"
+                  "id": "Minum teh saja, bagaimana?",
+                  "rd": "おちゃでものみましょうか。"
                 },
                 {
                   "jp": "5分でもいいから休みたいです。",
-                  "id": "Saya ingin istirahat walau hanya 5 menit."
+                  "id": "Saya ingin istirahat walau hanya 5 menit.",
+                  "rd": "5ふんでもいいからやすみたいです。"
                 }
               ]
             },
@@ -6056,15 +6218,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私のクラスに男の人は二人しかいません。",
-                  "id": "Di kelas saya hanya ada dua orang laki-laki."
+                  "id": "Di kelas saya hanya ada dua orang laki-laki.",
+                  "rd": "わたしのクラスにおとこのひとはふたりしかいません。"
                 },
                 {
                   "jp": "ジョンさんは英語しか話せません。",
-                  "id": "John hanya bisa berbicara bahasa Inggris."
+                  "id": "John hanya bisa berbicara bahasa Inggris.",
+                  "rd": "ジョンさんはえいごしかはなせません。"
                 },
                 {
                   "jp": "1000円しか持っていません。",
-                  "id": "Saya hanya punya 1000 yen."
+                  "id": "Saya hanya punya 1000 yen.",
+                  "rd": "1000えんしかもっていません。"
                 }
               ]
             }
@@ -6387,15 +6552,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "電車で行きます。",
-                  "id": "Saya pergi dengan kereta."
+                  "id": "Saya pergi dengan kereta.",
+                  "rd": "でんしゃでいきます。"
                 },
                 {
                   "jp": "この本を100円で買いました。",
-                  "id": "Saya membeli buku ini seharga 100 yen."
+                  "id": "Saya membeli buku ini seharga 100 yen.",
+                  "rd": "このほんを100えんでかいました。"
                 },
                 {
                   "jp": "かぜで学校を休みました。",
-                  "id": "Saya tidak masuk sekolah karena flu."
+                  "id": "Saya tidak masuk sekolah karena flu.",
+                  "rd": "かぜでがっこうをやすみました。"
                 }
               ]
             },
@@ -6406,15 +6574,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "学校まで2時間もかかります。",
-                  "id": "Sampai ke sekolah memakan waktu 2 jam."
+                  "id": "Sampai ke sekolah memakan waktu 2 jam.",
+                  "rd": "がっこうまで2じかんもかかります。"
                 },
                 {
                   "jp": "ビールを3本も飲みました。",
-                  "id": "Saya minum bir sampai 3 botol."
+                  "id": "Saya minum bir sampai 3 botol.",
+                  "rd": "ビールを3ぼんものみました。"
                 },
                 {
                   "jp": "10分も待てませんでした。",
-                  "id": "Saya tidak bisa menunggu sampai 10 menit pun."
+                  "id": "Saya tidak bisa menunggu sampai 10 menit pun.",
+                  "rd": "10ぷんもまてませんでした。"
                 }
               ]
             },
@@ -6425,15 +6596,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "毎日、昼はラーメンとかそばとかを食べます。",
-                  "id": "Setiap hari saya makan siang ramen, soba, dan sejenisnya."
+                  "id": "Setiap hari saya makan siang ramen, soba, dan sejenisnya.",
+                  "rd": "まいにち、ひるはラーメンとかそばとかをたべます。"
                 },
                 {
                   "jp": "映画とか音楽が好きです。",
-                  "id": "Saya suka film, musik, dan sejenisnya."
+                  "id": "Saya suka film, musik, dan sejenisnya.",
+                  "rd": "えいがとかおんがくがすきです。"
                 },
                 {
                   "jp": "日本とか韓国に行きたいです。",
-                  "id": "Saya ingin pergi ke Jepang, Korea, dan sejenisnya."
+                  "id": "Saya ingin pergi ke Jepang, Korea, dan sejenisnya.",
+                  "rd": "にほんとかかんこくにいきたいです。"
                 }
               ]
             },
@@ -6444,15 +6618,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "これは姉にもらったバッグです。",
-                  "id": "Ini adalah tas yang saya dapat dari kakak perempuan saya."
+                  "id": "Ini adalah tas yang saya dapat dari kakak perempuan saya.",
+                  "rd": "これはあねにもらったバッグです。"
                 },
                 {
                   "jp": "この近くに安くておいしいレストランがありますか。",
-                  "id": "Apakah ada restoran yang murah dan enak di dekat sini?"
+                  "id": "Apakah ada restoran yang murah dan enak di dekat sini?",
+                  "rd": "このちかくにやすくておいしいレストランがありますか。"
                 },
                 {
                   "jp": "日本語を勉強している学生が多いです。",
-                  "id": "Banyak murid yang sedang belajar bahasa Jepang."
+                  "id": "Banyak murid yang sedang belajar bahasa Jepang.",
+                  "rd": "にほんごをべんきょうしているがくせいがおおいです。"
                 }
               ]
             },
@@ -6463,15 +6640,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私もこんな家に住みたいです。",
-                  "id": "Saya juga ingin tinggal di rumah seperti ini."
+                  "id": "Saya juga ingin tinggal di rumah seperti ini.",
+                  "rd": "わたしもこんなうちにすみたいです。"
                 },
                 {
                   "jp": "あんなバッグがほしいです。",
-                  "id": "Saya ingin tas seperti itu (yang di sana)."
+                  "id": "Saya ingin tas seperti itu (yang di sana).",
+                  "rd": "あんなバッグがほしいです。"
                 },
                 {
                   "jp": "どんな音楽が好きですか。",
-                  "id": "Musik seperti apa yang kamu suka?"
+                  "id": "Musik seperti apa yang kamu suka?",
+                  "rd": "どんなおんがくがすきですか。"
                 }
               ]
             },
@@ -6482,15 +6662,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "こんなに勉強しているのに、成績が悪いのはどうしてだろう。",
-                  "id": "Padahal sudah belajar sebanyak ini, kenapa nilainya masih jelek ya?"
+                  "id": "Padahal sudah belajar sebanyak ini, kenapa nilainya masih jelek ya?",
+                  "rd": "こんなにべんきょうしているのに、せいせきがわるいのはどうしてだろう。"
                 },
                 {
                   "jp": "A「テスト、全然できませんでした。」B「そんなにむずかしかったんですか。」",
-                  "id": "A: \"Ujiannya sama sekali tidak bisa kukerjakan.\" B: \"Sesulit itu ya?\""
+                  "id": "A: \"Ujiannya sama sekali tidak bisa kukerjakan.\" B: \"Sesulit itu ya?\"",
+                  "rd": "エー「テスト、ぜんぜんできませんでした。」ビー「そんなにむずかしかったんですか。」"
                 },
                 {
                   "jp": "あんなに速く走れるんですか。",
-                  "id": "Bisa lari secepat itu ya?"
+                  "id": "Bisa lari secepat itu ya?",
+                  "rd": "あんなにはやくはしれるんですか。"
                 }
               ]
             },
@@ -6501,15 +6684,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私もそう思います。",
-                  "id": "Saya juga berpikir begitu."
+                  "id": "Saya juga berpikir begitu.",
+                  "rd": "わたしもそうおもいます。"
                 },
                 {
                   "jp": "A「これは、漢字でどう書きますか。」B「こう書きます。」",
-                  "id": "A: \"Ini ditulis bagaimana dalam kanji?\" B: \"Ditulisnya seperti ini.\""
+                  "id": "A: \"Ini ditulis bagaimana dalam kanji?\" B: \"Ditulisnya seperti ini.\"",
+                  "rd": "エー「これは、かんじでどうかきますか。」ビー「こうかきます。」"
                 },
                 {
                   "jp": "そうやってください。",
-                  "id": "Tolong lakukan dengan cara begitu."
+                  "id": "Tolong lakukan dengan cara begitu.",
+                  "rd": "そうやってください。"
                 }
               ]
             },
@@ -6520,15 +6706,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "兄は、東京の目黒というところに住んでいます。",
-                  "id": "Kakak laki-laki saya tinggal di tempat bernama Meguro di Tokyo."
+                  "id": "Kakak laki-laki saya tinggal di tempat bernama Meguro di Tokyo.",
+                  "rd": "あには、とうきょうのめぐろというところにすんでいます。"
                 },
                 {
                   "jp": "電気代があがるという話は、本当ですか。",
-                  "id": "Benarkah kabar bahwa tarif listrik akan naik?"
+                  "id": "Benarkah kabar bahwa tarif listrik akan naik?",
+                  "rd": "でんきだいがあがるというはなしは、ほんとうですか。"
                 },
                 {
                   "jp": "駅前の「あすか」っていうレストランを知っていますか。",
-                  "id": "Kamu tahu restoran bernama \"Asuka\" di depan stasiun?"
+                  "id": "Kamu tahu restoran bernama \"Asuka\" di depan stasiun?",
+                  "rd": "えきまえの「あすか」っていうレストランをしっていますか。"
                 }
               ]
             },
@@ -6539,15 +6728,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "それはどういう意味ですか。",
-                  "id": "Itu artinya apa?"
+                  "id": "Itu artinya apa?",
+                  "rd": "それはどういういみですか。"
                 },
                 {
                   "jp": "日本で×はダメという意味です。",
-                  "id": "Di Jepang, tanda silang (×) berarti \"tidak boleh\"."
+                  "id": "Di Jepang, tanda silang (×) berarti \"tidak boleh\".",
+                  "rd": "にほんで×はダメといういみです。"
                 },
                 {
                   "jp": "どういう人が好きですか。",
-                  "id": "Orang yang seperti apa yang kamu suka?"
+                  "id": "Orang yang seperti apa yang kamu suka?",
+                  "rd": "どういうひとがすきですか。"
                 }
               ]
             }
@@ -6874,15 +7066,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "来週の水曜日まで会社を休みます。",
-                  "id": "Saya libur dari kantor sampai hari Rabu minggu depan."
+                  "id": "Saya libur dari kantor sampai hari Rabu minggu depan.",
+                  "rd": "らいしゅうのすいようびまでかいしゃをやすみます。"
                 },
                 {
                   "jp": "母は夜おそくまで働いています。",
-                  "id": "Ibu bekerja sampai larut malam."
+                  "id": "Ibu bekerja sampai larut malam.",
+                  "rd": "はははよるおそくまではたらいています。"
                 },
                 {
                   "jp": "5時まで勉強しました。",
-                  "id": "Saya belajar sampai jam 5."
+                  "id": "Saya belajar sampai jam 5.",
+                  "rd": "5じまでべんきょうしました。"
                 }
               ]
             },
@@ -6893,15 +7088,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "レポートは15日までに出してください。",
-                  "id": "Tolong kumpulkan laporannya paling lambat tanggal 15."
+                  "id": "Tolong kumpulkan laporannya paling lambat tanggal 15.",
+                  "rd": "レポートは15にちまでにだしてください。"
                 },
                 {
                   "jp": "私は30歳になるまでに結婚したいです。",
-                  "id": "Saya ingin menikah sebelum berusia 30 tahun."
+                  "id": "Saya ingin menikah sebelum berusia 30 tahun.",
+                  "rd": "わたしは30さいになるまでにけっこんしたいです。"
                 },
                 {
                   "jp": "明日の朝までに終わらせます。",
-                  "id": "Akan saya selesaikan paling lambat besok pagi."
+                  "id": "Akan saya selesaikan paling lambat besok pagi.",
+                  "rd": "あしたのあさまでにおわらせます。"
                 }
               ]
             },
@@ -6912,15 +7110,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "夏休みは旅行したりテニスをしたりしていました。",
-                  "id": "Saat liburan musim panas, saya melakukan hal-hal seperti traveling dan bermain tenis."
+                  "id": "Saat liburan musim panas, saya melakukan hal-hal seperti traveling dan bermain tenis.",
+                  "rd": "なつやすみはりょこうしたりテニスをしたりしていました。"
                 },
                 {
                   "jp": "雨が降ったりやんだりしています。",
-                  "id": "Hujan turun lalu berhenti, begitu berulang-ulang."
+                  "id": "Hujan turun lalu berhenti, begitu berulang-ulang.",
+                  "rd": "あめがふったりやんだりしています。"
                 },
                 {
                   "jp": "休みは映画を見たり本を読んだりします。",
-                  "id": "Saat libur saya melakukan hal-hal seperti menonton film dan membaca buku."
+                  "id": "Saat libur saya melakukan hal-hal seperti menonton film dan membaca buku.",
+                  "rd": "やすみはえいがをみたりほんをよんだりします。"
                 }
               ]
             },
@@ -6931,15 +7132,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "このレストランはおいしいし、安いです。",
-                  "id": "Restoran ini enak dan murah."
+                  "id": "Restoran ini enak dan murah.",
+                  "rd": "このレストランはおいしいし、やすいです。"
                 },
                 {
                   "jp": "のどもかわいたし、おなかもすいたし、少し休みたいです。",
-                  "id": "Tenggorokan saya kering dan perut juga lapar, jadi saya ingin istirahat sebentar."
+                  "id": "Tenggorokan saya kering dan perut juga lapar, jadi saya ingin istirahat sebentar.",
+                  "rd": "のどもかわいたし、おなかもすいたし、すこしやすみたいです。"
                 },
                 {
                   "jp": "安いし、近いし、便利です。",
-                  "id": "Murah, dekat, dan praktis."
+                  "id": "Murah, dekat, dan praktis.",
+                  "rd": "やすいし、ちかいし、べんりです。"
                 }
               ]
             },
@@ -6950,15 +7154,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "弟はゲームばかりしています。",
-                  "id": "Adik laki-laki saya main game melulu."
+                  "id": "Adik laki-laki saya main game melulu.",
+                  "rd": "おとうとはゲームばかりしています。"
                 },
                 {
                   "jp": "父はこのごろお酒ばかり飲んでいます。",
-                  "id": "Akhir-akhir ini ayah minum minuman keras melulu."
+                  "id": "Akhir-akhir ini ayah minum minuman keras melulu.",
+                  "rd": "ちちはこのごろおさけばかりのんでいます。"
                 },
                 {
                   "jp": "甘いものばかり食べないでください。",
-                  "id": "Jangan makan yang manis-manis melulu."
+                  "id": "Jangan makan yang manis-manis melulu.",
+                  "rd": "あまいものばかりたべないでください。"
                 }
               ]
             },
@@ -6969,15 +7176,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "夏休みの間にヨーロッパへ旅行をする予定です。",
-                  "id": "Saya berencana berlibur ke Eropa selama liburan musim panas."
+                  "id": "Saya berencana berlibur ke Eropa selama liburan musim panas.",
+                  "rd": "なつやすみのあいだにヨーロッパへりょこうをするよていです。"
                 },
                 {
                   "jp": "映画を見ている間に、寝てしまいました。",
-                  "id": "Saya tertidur ketika sedang menonton film."
+                  "id": "Saya tertidur ketika sedang menonton film.",
+                  "rd": "えいがをみているあいだに、ねてしまいました。"
                 },
                 {
                   "jp": "母が料理をしている間に宿題をします。",
-                  "id": "Saya mengerjakan PR selagi ibu memasak."
+                  "id": "Saya mengerjakan PR selagi ibu memasak.",
+                  "rd": "ははがりょうりおしているあいだにしゅくだいをします。"
                 }
               ]
             },
@@ -6988,15 +7198,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "寝るとき、パジャマを着ます。",
-                  "id": "Ketika hendak tidur, saya memakai piyama."
+                  "id": "Ketika hendak tidur, saya memakai piyama.",
+                  "rd": "ねるとき、パジャマをきます。"
                 },
                 {
                   "jp": "私は、本を読むとき、めがねをかけます。",
-                  "id": "Ketika membaca buku, saya memakai kacamata."
+                  "id": "Ketika membaca buku, saya memakai kacamata.",
+                  "rd": "わたしは、ほんをよむとき、めがねをかけます。"
                 },
                 {
                   "jp": "出かけるとき、電気を消します。",
-                  "id": "Ketika hendak pergi, saya mematikan lampu."
+                  "id": "Ketika hendak pergi, saya mematikan lampu.",
+                  "rd": "でかけるとき、でんきをけします。"
                 }
               ]
             },
@@ -7007,15 +7220,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "東京に行ったときに、友だちに会う予定です。",
-                  "id": "Ketika sudah sampai di Tokyo, saya berencana bertemu teman."
+                  "id": "Ketika sudah sampai di Tokyo, saya berencana bertemu teman.",
+                  "rd": "とうきょうにいったときに、ともだちにあうよていです。"
                 },
                 {
                   "jp": "ご飯を食べたとき、歯を磨きます。",
-                  "id": "Setelah makan, saya menggosok gigi."
+                  "id": "Setelah makan, saya menggosok gigi.",
+                  "rd": "ごはんをたべたとき、はをみがきます。"
                 },
                 {
                   "jp": "家に帰ったとき、雨が降り出しました。",
-                  "id": "Ketika sampai di rumah, hujan mulai turun."
+                  "id": "Ketika sampai di rumah, hujan mulai turun.",
+                  "rd": "いえにかえったとき、あめがふりだしました。"
                 }
               ]
             },
@@ -7026,15 +7242,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "社長は今、会議中です。",
-                  "id": "Direktur sedang rapat sekarang."
+                  "id": "Direktur sedang rapat sekarang.",
+                  "rd": "しゃちょうはいま、かいぎちゅうです。"
                 },
                 {
                   "jp": "田中さんは今、電話中です。",
-                  "id": "Tanaka sedang menelepon sekarang."
+                  "id": "Tanaka sedang menelepon sekarang.",
+                  "rd": "たなかさんはいま、でんわちゅうです。"
                 },
                 {
                   "jp": "午前中に来てください。",
-                  "id": "Tolong datang sepanjang pagi ini."
+                  "id": "Tolong datang sepanjang pagi ini.",
+                  "rd": "ごぜんちゅうにきてください。"
                 }
               ]
             }
@@ -7361,15 +7580,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "いすにすわって話しましょう。",
-                  "id": "Mari bicara sambil duduk di kursi."
+                  "id": "Mari bicara sambil duduk di kursi.",
+                  "rd": "いすにすわってはなしましょう。"
                 },
                 {
                   "jp": "えんぴつを使って書いてください。",
-                  "id": "Tolong tulis dengan menggunakan pensil."
+                  "id": "Tolong tulis dengan menggunakan pensil.",
+                  "rd": "えんぴつをつかってかいてください。"
                 },
                 {
                   "jp": "傘を持たないで出かけました。",
-                  "id": "Saya pergi tanpa membawa payung."
+                  "id": "Saya pergi tanpa membawa payung.",
+                  "rd": "かさをもたないででかけました。"
                 }
               ]
             },
@@ -7380,15 +7602,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "まどを開けたまま寝ました。",
-                  "id": "Saya tidur dengan jendela tetap terbuka."
+                  "id": "Saya tidur dengan jendela tetap terbuka.",
+                  "rd": "まどをあけたままねました。"
                 },
                 {
                   "jp": "父はめがねをかけたまま寝ました。",
-                  "id": "Ayah tidur dengan kacamata masih dipakai."
+                  "id": "Ayah tidur dengan kacamata masih dipakai.",
+                  "rd": "ちちはめがねをかけたままねました。"
                 },
                 {
                   "jp": "靴を履いたまま入らないでください。",
-                  "id": "Tolong jangan masuk dengan sepatu masih dipakai."
+                  "id": "Tolong jangan masuk dengan sepatu masih dipakai.",
+                  "rd": "くつをはいたままはいらないでください。"
                 }
               ]
             },
@@ -7399,15 +7624,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私はいつもご飯を食べながら、テレビを見ています。",
-                  "id": "Saya selalu menonton TV sambil makan."
+                  "id": "Saya selalu menonton TV sambil makan.",
+                  "rd": "わたしはいつもごはんをたべながら、テレビをみています。"
                 },
                 {
                   "jp": "田中さんの息子さんは、働きながら大学に行っています。",
-                  "id": "Putra Tuan Tanaka kuliah sambil bekerja."
+                  "id": "Putra Tuan Tanaka kuliah sambil bekerja.",
+                  "rd": "たなかさんのむすこさんは、はたらきながらだいがくにいっています。"
                 },
                 {
                   "jp": "音楽を聞きながら走ります。",
-                  "id": "Saya lari sambil mendengarkan musik."
+                  "id": "Saya lari sambil mendengarkan musik.",
+                  "rd": "おんがくをききながらはしります。"
                 }
               ]
             },
@@ -7418,15 +7646,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私はアフリカに行ったことがあります。",
-                  "id": "Saya pernah pergi ke Afrika."
+                  "id": "Saya pernah pergi ke Afrika.",
+                  "rd": "わたしはアフリカにいったことがあります。"
                 },
                 {
                   "jp": "私はマラソン大会に出たことがあります。",
-                  "id": "Saya pernah ikut lomba maraton."
+                  "id": "Saya pernah ikut lomba maraton.",
+                  "rd": "わたしはマラソンたいかいにでたことがあります。"
                 },
                 {
                   "jp": "すしを食べたことがありますか。",
-                  "id": "Apakah kamu pernah makan sushi?"
+                  "id": "Apakah kamu pernah makan sushi?",
+                  "rd": "すしをたべたことがありますか。"
                 }
               ]
             },
@@ -7437,15 +7668,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "うちの犬は夜中にほえることがあって、困ります。",
-                  "id": "Anjing saya kadang menggonggong tengah malam, jadi merepotkan."
+                  "id": "Anjing saya kadang menggonggong tengah malam, jadi merepotkan.",
+                  "rd": "うちのいぬはよなかにほえることがあって、こまります。"
                 },
                 {
                   "jp": "私は昼ご飯を食べないことがあります。",
-                  "id": "Saya kadang tidak makan siang."
+                  "id": "Saya kadang tidak makan siang.",
+                  "rd": "わたしはひるごはんをたべないことがあります。"
                 },
                 {
                   "jp": "たまに遅れることがあります。",
-                  "id": "Kadang-kadang saya terlambat."
+                  "id": "Kadang-kadang saya terlambat.",
+                  "rd": "たまにおくれることがあります。"
                 }
               ]
             },
@@ -7456,15 +7690,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私はAランチにします。",
-                  "id": "Saya pilih makan siang A."
+                  "id": "Saya pilih makan siang A.",
+                  "rd": "わたしはAランチにします。"
                 },
                 {
                   "jp": "これから、ダイエットすることにします。",
-                  "id": "Mulai sekarang, saya memutuskan untuk diet."
+                  "id": "Mulai sekarang, saya memutuskan untuk diet.",
+                  "rd": "これから、ダイエットすることにします。"
                 },
                 {
                   "jp": "毎朝6時に起きることにしています。",
-                  "id": "Saya membiasakan diri bangun jam 6 setiap pagi."
+                  "id": "Saya membiasakan diri bangun jam 6 setiap pagi.",
+                  "rd": "まいあさ6じにおきることにしています。"
                 }
               ]
             },
@@ -7475,15 +7712,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "明日雨なら、ハイキングは中止になります。",
-                  "id": "Jika besok hujan, hiking akan dibatalkan."
+                  "id": "Jika besok hujan, hiking akan dibatalkan.",
+                  "rd": "あしたあめなら、ハイキングはちゅうしになります。"
                 },
                 {
                   "jp": "来月、イギリスへ出張することになりました。",
-                  "id": "Bulan depan telah diputuskan saya dinas ke Inggris."
+                  "id": "Bulan depan telah diputuskan saya dinas ke Inggris.",
+                  "rd": "らいげつ、イギリスへしゅっちょうすることになりました。"
                 },
                 {
                   "jp": "ルールが変わることになりました。",
-                  "id": "Telah diputuskan aturannya berubah."
+                  "id": "Telah diputuskan aturannya berubah.",
+                  "rd": "ルールがかわることになりました。"
                 }
               ]
             },
@@ -7494,15 +7734,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "テレビの音を小さくしてください。",
-                  "id": "Tolong kecilkan suara TV."
+                  "id": "Tolong kecilkan suara TV.",
+                  "rd": "テレビのおとをちいさくしてください。"
                 },
                 {
                   "jp": "母がなくなって、さびしくなりました。",
-                  "id": "Ibu meninggal, saya menjadi kesepian."
+                  "id": "Ibu meninggal, saya menjadi kesepian.",
+                  "rd": "ははがなくなって、さびしくなりました。"
                 },
                 {
                   "jp": "部屋をきれいにします。",
-                  "id": "Saya membersihkan (membuat bersih) kamar."
+                  "id": "Saya membersihkan (membuat bersih) kamar.",
+                  "rd": "へやをきれいにします。"
                 }
               ]
             }
@@ -7813,11 +8056,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "明日は早く起きなければなりません。",
-                  "id": "Besok saya harus bangun pagi-pagi."
+                  "id": "Besok saya harus bangun pagi-pagi.",
+                  "rd": "あしたははやくおきなければなりません。"
                 },
                 {
                   "jp": "日本では車は左側を走らなければなりません。",
-                  "id": "Di Jepang, mobil harus berjalan di lajur kiri."
+                  "id": "Di Jepang, mobil harus berjalan di lajur kiri.",
+                  "rd": "にほんではくるまはひだりがわをはしらなければなりません。"
                 }
               ]
             },
@@ -7828,11 +8073,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "今週は日曜日も会社に行かなくてはいけない。",
-                  "id": "Minggu ini saya harus pergi ke kantor bahkan di hari Minggu."
+                  "id": "Minggu ini saya harus pergi ke kantor bahkan di hari Minggu.",
+                  "rd": "こんしゅうはにちようびもかいしゃにいかなくてはいけない。"
                 },
                 {
                   "jp": "宿題をしなくてはいけません。",
-                  "id": "Saya harus mengerjakan PR."
+                  "id": "Saya harus mengerjakan PR.",
+                  "rd": "しゅくだいをしなくてはいけません。"
                 }
               ]
             },
@@ -7843,11 +8090,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "食後に、薬を飲まないといけない。",
-                  "id": "Setelah makan, saya harus minum obat."
+                  "id": "Setelah makan, saya harus minum obat.",
+                  "rd": "しょくごに、くすりをのまないといけない。"
                 },
                 {
                   "jp": "明日は来ないといけないよ。",
-                  "id": "Besok kamu harus datang, ya."
+                  "id": "Besok kamu harus datang, ya.",
+                  "rd": "あしたはこないといけないよ。"
                 }
               ]
             },
@@ -7858,11 +8107,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "洗濯しなきゃ。",
-                  "id": "Saya harus mencuci pakaian."
+                  "id": "Saya harus mencuci pakaian.",
+                  "rd": "せんたくしなきゃ。"
                 },
                 {
                   "jp": "お客さんが来るから、片づけないと。",
-                  "id": "Karena ada tamu yang datang, saya harus beres-beres."
+                  "id": "Karena ada tamu yang datang, saya harus beres-beres.",
+                  "rd": "おきゃくさんがくるから、かたづけないと。"
                 }
               ]
             },
@@ -7873,11 +8124,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "これ、すててもいいですか。",
-                  "id": "Bolehkah saya membuang ini?"
+                  "id": "Bolehkah saya membuang ini?",
+                  "rd": "これ、すててもいいですか。"
                 },
                 {
                   "jp": "その本は、すぐに返さなくてもいいです。",
-                  "id": "Buku itu tidak perlu dikembalikan sekarang juga."
+                  "id": "Buku itu tidak perlu dikembalikan sekarang juga.",
+                  "rd": "そのほんは、すぐにかえさなくてもいいです。"
                 }
               ]
             },
@@ -7888,11 +8141,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "明日来なくてもいいですか。",
-                  "id": "Apakah saya tidak perlu datang besok?"
+                  "id": "Apakah saya tidak perlu datang besok?",
+                  "rd": "あしたこなくてもいいですか。"
                 },
                 {
                   "jp": "今日じゃなくてもいいです。",
-                  "id": "Tidak harus hari ini juga tidak apa-apa."
+                  "id": "Tidak harus hari ini juga tidak apa-apa.",
+                  "rd": "きょうじゃなくてもいいです。"
                 }
               ]
             },
@@ -7903,11 +8158,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "テストのとき、ペンを使ってはいけません。",
-                  "id": "Saat ujian, tidak boleh memakai pulpen."
+                  "id": "Saat ujian, tidak boleh memakai pulpen.",
+                  "rd": "テストのとき、ペンをつかってはいけません。"
                 },
                 {
                   "jp": "その川でおよいではいけません。",
-                  "id": "Tidak boleh berenang di sungai itu."
+                  "id": "Tidak boleh berenang di sungai itu.",
+                  "rd": "そのかわでおよいではいけません。"
                 }
               ]
             },
@@ -7918,15 +8175,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "頭が痛いとき、この薬を飲むといいです。",
-                  "id": "Kalau kepala sakit, sebaiknya minum obat ini."
+                  "id": "Kalau kepala sakit, sebaiknya minum obat ini.",
+                  "rd": "あたまがいたいとき、このくすりをのむといいです。"
                 },
                 {
                   "jp": "仕事が早く見つかったらいいですね。",
-                  "id": "Semoga kamu segera mendapatkan pekerjaan, ya."
+                  "id": "Semoga kamu segera mendapatkan pekerjaan, ya.",
+                  "rd": "しごとがはやくみつかったらいいですね。"
                 },
                 {
                   "jp": "母の病気が早く治ればいいのですが…。",
-                  "id": "Semoga penyakit ibu segera sembuh…"
+                  "id": "Semoga penyakit ibu segera sembuh…",
+                  "rd": "ははのびょうきがはやくなおればいいのですが…。"
                 }
               ]
             }
@@ -8237,15 +8497,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私は田中さんにセーターをあげました。",
-                  "id": "Saya memberi sweater kepada Tanaka-san."
+                  "id": "Saya memberi sweater kepada Tanaka-san.",
+                  "rd": "わたしはたなかさんにセーターをあげました。"
                 },
                 {
                   "jp": "田中さんが（私に）セーターをくれました。",
-                  "id": "Tanaka-san memberi sweater kepada saya."
+                  "id": "Tanaka-san memberi sweater kepada saya.",
+                  "rd": "たなかさんが（わたしに）セーターをくれました。"
                 },
                 {
                   "jp": "私は田中さんにセーターをもらいました。",
-                  "id": "Saya menerima sweater dari Tanaka-san."
+                  "id": "Saya menerima sweater dari Tanaka-san.",
+                  "rd": "わたしはたなかさんにセーターをもらいました。"
                 }
               ]
             },
@@ -8256,15 +8519,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私は田中さんに地図をかいてあげました。",
-                  "id": "Saya menggambar peta untuk Tanaka-san."
+                  "id": "Saya menggambar peta untuk Tanaka-san.",
+                  "rd": "わたしはたなかさんにちずをかいてあげました。"
                 },
                 {
                   "jp": "私は友だちの引っ越しを手伝ってあげました。",
-                  "id": "Saya membantu pindahan rumah teman saya."
+                  "id": "Saya membantu pindahan rumah teman saya.",
+                  "rd": "わたしはともだちのひっこしをてつだってあげました。"
                 },
                 {
                   "jp": "英語を教えてあげましょうか。",
-                  "id": "Mau saya ajari bahasa Inggris?"
+                  "id": "Mau saya ajari bahasa Inggris?",
+                  "rd": "えいごをおしえてあげましょうか。"
                 }
               ]
             },
@@ -8275,15 +8541,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "田中さんは私に地図をかいてくれました。",
-                  "id": "Tanaka-san menggambar peta untuk saya."
+                  "id": "Tanaka-san menggambar peta untuk saya.",
+                  "rd": "たなかさんはわたしにちずをかいてくれました。"
                 },
                 {
                   "jp": "このマフラーは、友だちがあんでくれました。",
-                  "id": "Syal ini dirajutkan oleh teman saya."
+                  "id": "Syal ini dirajutkan oleh teman saya.",
+                  "rd": "このマフラーは、ともだちがあんでくれました。"
                 },
                 {
                   "jp": "手伝ってくれて、ありがとう。",
-                  "id": "Terima kasih sudah membantu saya."
+                  "id": "Terima kasih sudah membantu saya.",
+                  "rd": "てつだってくれて、ありがとう。"
                 }
               ]
             },
@@ -8294,11 +8563,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私は田中さんに地図をかいてもらいました。",
-                  "id": "Saya meminta Tanaka-san menggambar peta untuk saya."
+                  "id": "Saya meminta Tanaka-san menggambar peta untuk saya.",
+                  "rd": "わたしはたなかさんにちずをかいてもらいました。"
                 },
                 {
                   "jp": "友だちに東京駅まで連れて行ってもらいました。",
-                  "id": "Teman saya mengantar saya sampai ke Stasiun Tokyo."
+                  "id": "Teman saya mengantar saya sampai ke Stasiun Tokyo.",
+                  "rd": "ともだちにとうきょうえきまでつれていってもらいました。"
                 }
               ]
             },
@@ -8309,15 +8580,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "お客さんが来る前にそうじしておきます。",
-                  "id": "Saya akan beres-beres dulu sebelum tamu datang."
+                  "id": "Saya akan beres-beres dulu sebelum tamu datang.",
+                  "rd": "おきゃくさんがくるまえにそうじしておきます。"
                 },
                 {
                   "jp": "旅行する前に、ガイドブックを読んでおきましょう。",
-                  "id": "Sebelum bepergian, mari baca buku panduan dulu."
+                  "id": "Sebelum bepergian, mari baca buku panduan dulu.",
+                  "rd": "りょこうするまえに、ガイドブックをよんでおきましょう。"
                 },
                 {
                   "jp": "ドアを開けておいてください。",
-                  "id": "Tolong biarkan pintunya tetap terbuka."
+                  "id": "Tolong biarkan pintunya tetap terbuka.",
+                  "rd": "ドアをあけておいてください。"
                 }
               ]
             },
@@ -8328,15 +8602,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "これ、おいしいですよ。食べてみてください。",
-                  "id": "Ini enak lho. Coba makan deh."
+                  "id": "Ini enak lho. Coba makan deh.",
+                  "rd": "これ、おいしいですよ。たべてみてください。"
                 },
                 {
                   "jp": "くつを買う前には必ずはいてみましょう。",
-                  "id": "Sebelum membeli sepatu, pastikan untuk mencobanya dulu."
+                  "id": "Sebelum membeli sepatu, pastikan untuk mencobanya dulu.",
+                  "rd": "くつをかうまえにはかならずはいてみましょう。"
                 },
                 {
                   "jp": "日本の旅館にとまってみたいです。",
-                  "id": "Saya ingin mencoba menginap di penginapan Jepang."
+                  "id": "Saya ingin mencoba menginap di penginapan Jepang.",
+                  "rd": "にほんのりょかんにとまってみたいです。"
                 }
               ]
             },
@@ -8347,15 +8624,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "残っていたワインを飲んでしまいました。",
-                  "id": "Saya menghabiskan sisa anggur yang ada."
+                  "id": "Saya menghabiskan sisa anggur yang ada.",
+                  "rd": "のこっていたワインをのんでしまいました。"
                 },
                 {
                   "jp": "電車の中にかさを忘れてしまいました。",
-                  "id": "Saya ketinggalan payung di dalam kereta."
+                  "id": "Saya ketinggalan payung di dalam kereta.",
+                  "rd": "でんしゃのなかにかさをわすれてしまいました。"
                 },
                 {
                   "jp": "駅まで走りましたが、電車は行ってしまいました。",
-                  "id": "Saya berlari ke stasiun, tapi keretanya sudah keburu pergi."
+                  "id": "Saya berlari ke stasiun, tapi keretanya sudah keburu pergi.",
+                  "rd": "えきまではしりましたが、でんしゃはいってしまいました。"
                 }
               ]
             },
@@ -8366,11 +8646,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ケーキを全部食べちゃった。",
-                  "id": "Kuenya sudah kuhabiskan semua."
+                  "id": "Kuenya sudah kuhabiskan semua.",
+                  "rd": "ケーキをぜんぶたべちゃった。"
                 },
                 {
                   "jp": "宿題を忘れちゃった。",
-                  "id": "Aku lupa mengerjakan PR."
+                  "id": "Aku lupa mengerjakan PR.",
+                  "rd": "しゅくだいをわすれちゃった。"
                 }
               ]
             }
@@ -8686,15 +8968,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "飲みに行こう！",
-                  "id": "Ayo pergi minum!"
+                  "id": "Ayo pergi minum!",
+                  "rd": "のみにいこう！"
                 },
                 {
                   "jp": "疲れたから、ちょっと休もう。",
-                  "id": "Capek, istirahat sebentar yuk."
+                  "id": "Capek, istirahat sebentar yuk.",
+                  "rd": "つかれたから、ちょっとやすもう。"
                 },
                 {
                   "jp": "おなかがすいたね。何か食べよう。",
-                  "id": "Lapar ya. Makan sesuatu yuk."
+                  "id": "Lapar ya. Makan sesuatu yuk.",
+                  "rd": "おなかがすいたね。なにかたべよう。"
                 }
               ]
             },
@@ -8705,15 +8990,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "明日買い物に行こうと思っています。",
-                  "id": "Besok saya berniat pergi belanja."
+                  "id": "Besok saya berniat pergi belanja.",
+                  "rd": "あしたかいものにいこうとおもっています。"
                 },
                 {
                   "jp": "新しい自転車を買おうと思っています。",
-                  "id": "Saya berniat membeli sepeda baru."
+                  "id": "Saya berniat membeli sepeda baru.",
+                  "rd": "あたらしいじてんしゃをかおうとおもっています。"
                 },
                 {
                   "jp": "明日は日曜日なのでゆっくり寝ようと思います。",
-                  "id": "Karena besok hari Minggu, saya berniat tidur santai."
+                  "id": "Karena besok hari Minggu, saya berniat tidur santai.",
+                  "rd": "あしたはにちようびなのでゆっくりねようとおもいます。"
                 }
               ]
             },
@@ -8724,15 +9012,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "夏休みに国に帰るつもりです。",
-                  "id": "Libur musim panas saya berencana pulang ke negara saya."
+                  "id": "Libur musim panas saya berencana pulang ke negara saya.",
+                  "rd": "なつやすみにくににかえるつもりです。"
                 },
                 {
                   "jp": "私は来年日本に留学するつもりです。",
-                  "id": "Tahun depan saya berencana kuliah di Jepang."
+                  "id": "Tahun depan saya berencana kuliah di Jepang.",
+                  "rd": "わたしはらいねんにほんにりゅうがくするつもりです。"
                 },
                 {
                   "jp": "私は、大学に行くつもりはありません。",
-                  "id": "Saya tidak berencana masuk universitas."
+                  "id": "Saya tidak berencana masuk universitas.",
+                  "rd": "わたしは、だいがくにいくつもりはありません。"
                 }
               ]
             },
@@ -8743,11 +9034,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "日本語のクラスでは、日本語だけを話すようにしています。",
-                  "id": "Di kelas bahasa Jepang, saya berusaha berbicara hanya dalam bahasa Jepang."
+                  "id": "Di kelas bahasa Jepang, saya berusaha berbicara hanya dalam bahasa Jepang.",
+                  "rd": "にほんごのクラスでは、にほんごだけをはなすようにしています。"
                 },
                 {
                   "jp": "毎食後、歯をみがくようにしています。",
-                  "id": "Setiap selesai makan, saya selalu menyikat gigi."
+                  "id": "Setiap selesai makan, saya selalu menyikat gigi.",
+                  "rd": "まいしょくご、はをみがくようにしています。"
                 }
               ]
             },
@@ -8758,15 +9051,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "日本語が上手に話せるようになりたいです。",
-                  "id": "Saya ingin bisa berbicara bahasa Jepang dengan baik."
+                  "id": "Saya ingin bisa berbicara bahasa Jepang dengan baik.",
+                  "rd": "にほんごがじょうずにはなせるようになりたいです。"
                 },
                 {
                   "jp": "赤ちゃんは、1さいごろから歩くようになります。",
-                  "id": "Bayi mulai bisa berjalan sekitar usia satu tahun."
+                  "id": "Bayi mulai bisa berjalan sekitar usia satu tahun.",
+                  "rd": "あかちゃんは、1さいごろからあるくようになります。"
                 },
                 {
                   "jp": "父は仕事をやめてから、早く寝るようになりました。",
-                  "id": "Sejak berhenti bekerja, ayah saya menjadi tidur lebih awal."
+                  "id": "Sejak berhenti bekerja, ayah saya menjadi tidur lebih awal.",
+                  "rd": "ちちはしごとをやめてから、はやくねるようになりました。"
                 }
               ]
             },
@@ -8777,15 +9073,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "父にあまりお酒を飲まないように言っています。",
-                  "id": "Saya selalu bilang kepada ayah agar tidak terlalu banyak minum alkohol."
+                  "id": "Saya selalu bilang kepada ayah agar tidak terlalu banyak minum alkohol.",
+                  "rd": "ちちにあまりおさけをのまないようにいっています。"
                 },
                 {
                   "jp": "母から今日は早く帰るように言われました。",
-                  "id": "Ibu menyuruh saya pulang lebih awal hari ini."
+                  "id": "Ibu menyuruh saya pulang lebih awal hari ini.",
+                  "rd": "ははからきょうははやくかえるようにいわれました。"
                 },
                 {
                   "jp": "妻に、家の中ではたばこを吸わないように言われています。",
-                  "id": "Istri selalu bilang agar saya tidak merokok di dalam rumah."
+                  "id": "Istri selalu bilang agar saya tidak merokok di dalam rumah.",
+                  "rd": "つまに、いえのなかではたばこをすわないようにいわれています。"
                 }
               ]
             },
@@ -8796,15 +9095,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "すみませんが、この辺にコンビニはありませんか。",
-                  "id": "Permisi, di sekitar sini ada minimarket tidak?"
+                  "id": "Permisi, di sekitar sini ada minimarket tidak?",
+                  "rd": "すみませんが、このへんにコンビニはありませんか。"
                 },
                 {
                   "jp": "もしもし、こちらはA社の田中ですが、リンさんをお願いします。",
-                  "id": "Halo, saya Tanaka dari perusahaan A, bisa sambungkan ke Lin?"
+                  "id": "Halo, saya Tanaka dari perusahaan A, bisa sambungkan ke Lin?",
+                  "rd": "もしもし、こちらはAしゃのたなかですが、リンさんをおねがいします。"
                 },
                 {
                   "jp": "映画のチケットが2枚あるんだけど、いっしょに行かない？",
-                  "id": "Saya punya dua tiket bioskop, mau pergi bareng?"
+                  "id": "Saya punya dua tiket bioskop, mau pergi bareng?",
+                  "rd": "えいがのチケットがにまいあるんだけど、いっしょにいかない？"
                 }
               ]
             }
@@ -9120,15 +9422,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "わからないところは先生に聞いたほうがいいですよ。",
-                  "id": "Untuk bagian yang tidak dimengerti, sebaiknya tanyakan kepada guru."
+                  "id": "Untuk bagian yang tidak dimengerti, sebaiknya tanyakan kepada guru.",
+                  "rd": "わからないところわせんせいにきいたほうがいいですよ。"
                 },
                 {
                   "jp": "時間がないから、タクシーで行ったほうがいいでしょう。",
-                  "id": "Karena tidak ada waktu, sebaiknya naik taksi saja."
+                  "id": "Karena tidak ada waktu, sebaiknya naik taksi saja.",
+                  "rd": "じかんがないから、タクシーでいったほうがいいでしょう。"
                 },
                 {
                   "jp": "かぜをひいたときは、早く寝たほうがいいですよ。",
-                  "id": "Kalau sedang masuk angin, sebaiknya cepat tidur."
+                  "id": "Kalau sedang masuk angin, sebaiknya cepat tidur.",
+                  "rd": "かぜおひいたときわ、はやくねたほうがいいですよ。"
                 }
               ]
             },
@@ -9139,11 +9444,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "そんなあぶないところには、行かないほうがいいよ。",
-                  "id": "Sebaiknya tidak pergi ke tempat berbahaya seperti itu."
+                  "id": "Sebaiknya tidak pergi ke tempat berbahaya seperti itu.",
+                  "rd": "そんなあぶないところにわ、いかないほうがいいよ。"
                 },
                 {
                   "jp": "その川ではおよがないほうがいいでしょう。",
-                  "id": "Sebaiknya tidak berenang di sungai itu."
+                  "id": "Sebaiknya tidak berenang di sungai itu.",
+                  "rd": "そのかわでわおよがないほうがいいでしょう。"
                 }
               ]
             },
@@ -9154,15 +9461,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "しゃべるな！静かにしろ！",
-                  "id": "Jangan bicara! Diam!"
+                  "id": "Jangan bicara! Diam!",
+                  "rd": "しゃべるな！しずかにしろ！"
                 },
                 {
                   "jp": "がんばれ！",
-                  "id": "Semangat!"
+                  "id": "Semangat!",
+                  "rd": "がんばれ！"
                 },
                 {
                   "jp": "混ぜるな、危険！",
-                  "id": "Jangan dicampur, berbahaya!"
+                  "id": "Jangan dicampur, berbahaya!",
+                  "rd": "まぜるな、きけん！"
                 }
               ]
             },
@@ -9173,15 +9483,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "早く起きなさい。",
-                  "id": "Cepat bangun."
+                  "id": "Cepat bangun.",
+                  "rd": "はやくおきなさい。"
                 },
                 {
                   "jp": "肉ばかり食べないで、野菜も食べなさい。",
-                  "id": "Jangan hanya makan daging, makan juga sayurannya."
+                  "id": "Jangan hanya makan daging, makan juga sayurannya.",
+                  "rd": "にくばかりたべないで、やさいもたべなさい。"
                 },
                 {
                   "jp": "つぎのことばを漢字で書きなさい。",
-                  "id": "Tulislah kata-kata berikut dalam kanji."
+                  "id": "Tulislah kata-kata berikut dalam kanji.",
+                  "rd": "つぎのことばおかんじでかきなさい。"
                 }
               ]
             },
@@ -9192,15 +9505,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ちょっと、手伝ってくれませんか。",
-                  "id": "Bisakah bantu saya sebentar?"
+                  "id": "Bisakah bantu saya sebentar?",
+                  "rd": "ちょっと、てつだってくれませんか。"
                 },
                 {
                   "jp": "ペンを貸してくださいませんか。",
-                  "id": "Bisakah saya pinjam pulpen?"
+                  "id": "Bisakah saya pinjam pulpen?",
+                  "rd": "ペンおかしてくださいませんか。"
                 },
                 {
                   "jp": "すみませんが、もう一度言っていただけませんか。",
-                  "id": "Maaf, bisakah diucapkan sekali lagi?"
+                  "id": "Maaf, bisakah diucapkan sekali lagi?",
+                  "rd": "すみませんが、もういちどいっていただけませんか。"
                 }
               ]
             },
@@ -9211,15 +9527,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "父に早く元気になってほしいです。",
-                  "id": "Saya ingin ayah cepat sembuh."
+                  "id": "Saya ingin ayah cepat sembuh.",
+                  "rd": "ちちにはやくげんきになってほしいです。"
                 },
                 {
                   "jp": "私のことを忘れないでほしい。",
-                  "id": "Saya ingin kamu tidak melupakan saya."
+                  "id": "Saya ingin kamu tidak melupakan saya.",
+                  "rd": "わたしのことをわすれないでほしい。"
                 },
                 {
                   "jp": "息子にいい大学に行ってもらいたいです。",
-                  "id": "Saya ingin anak laki-laki saya masuk universitas yang bagus."
+                  "id": "Saya ingin anak laki-laki saya masuk universitas yang bagus.",
+                  "rd": "むすこにいいだいがくにいってもらいたいです。"
                 }
               ]
             },
@@ -9230,15 +9549,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "インターネットで調べたらどうですか。",
-                  "id": "Bagaimana kalau cari di internet?"
+                  "id": "Bagaimana kalau cari di internet?",
+                  "rd": "インターネットでしらべたらどうですか。"
                 },
                 {
                   "jp": "先生に聞いてみたらどうですか。",
-                  "id": "Bagaimana kalau coba tanya ke guru?"
+                  "id": "Bagaimana kalau coba tanya ke guru?",
+                  "rd": "せんせいにきいてみたらどうですか。"
                 },
                 {
                   "jp": "少し休んだらいかがですか。",
-                  "id": "Bagaimana kalau istirahat sebentar?"
+                  "id": "Bagaimana kalau istirahat sebentar?",
+                  "rd": "すこしやすんだらいかがですか。"
                 }
               ]
             },
@@ -9249,15 +9571,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "この漢字の読み方を教えてください。",
-                  "id": "Tolong beri tahu saya cara membaca kanji ini."
+                  "id": "Tolong beri tahu saya cara membaca kanji ini.",
+                  "rd": "このかんじのよみかたおおしえてください。"
                 },
                 {
                   "jp": "新しいコンピューターの使い方を習いました。",
-                  "id": "Saya belajar cara memakai komputer baru."
+                  "id": "Saya belajar cara memakai komputer baru.",
+                  "rd": "あたらしいコンピューターのつかいかたおならいました。"
                 },
                 {
                   "jp": "このゲームのやり方が、まだわからない。",
-                  "id": "Saya masih belum tahu cara bermain game ini."
+                  "id": "Saya masih belum tahu cara bermain game ini.",
+                  "rd": "このゲームのやりかたが、まだわからない。"
                 }
               ]
             }
@@ -9571,15 +9896,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "この店の料理はおいしい。それにねだんも安い。",
-                  "id": "Masakan restoran ini enak. Selain itu, harganya juga murah."
+                  "id": "Masakan restoran ini enak. Selain itu, harganya juga murah.",
+                  "rd": "このみせのりょうりわおいしい。それにねだんもやすい。"
                 },
                 {
                   "jp": "山田さんは若くてきれいです。それに、頭もいいです。",
-                  "id": "Yamada masih muda dan cantik. Selain itu, dia juga pintar."
+                  "id": "Yamada masih muda dan cantik. Selain itu, dia juga pintar.",
+                  "rd": "やまださんはわかくてきれいです。それに、あたまもいいです。"
                 },
                 {
                   "jp": "きのうは雨が降っていて寒かったです。そのうえ、風も強かったです。",
-                  "id": "Kemarin hujan dan dingin. Ditambah lagi, anginnya juga kencang."
+                  "id": "Kemarin hujan dan dingin. Ditambah lagi, anginnya juga kencang.",
+                  "rd": "きのうわあめがふっていてさむかったです。そのうえ、かぜもつよかったです。"
                 }
               ]
             },
@@ -9590,11 +9918,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "電車で事故があった。それで、ちこくしてしまった。",
-                  "id": "Ada kecelakaan di kereta. Makanya saya terlambat."
+                  "id": "Ada kecelakaan di kereta. Makanya saya terlambat.",
+                  "rd": "でんしゃでじこがあった。それで、ちこくしてしまった。"
                 },
                 {
                   "jp": "パソコンがこわれた。だから、新しいのを買った。",
-                  "id": "Komputer saya rusak. Makanya saya beli yang baru."
+                  "id": "Komputer saya rusak. Makanya saya beli yang baru.",
+                  "rd": "パソコンがこわれた。だから、あたらしいのをかった。"
                 }
               ]
             },
@@ -9605,11 +9935,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "きのうは、試験の日だった。ところが、病気で受けることができなかった。",
-                  "id": "Kemarin adalah hari ujian. Tetapi ternyata, karena sakit saya tidak bisa ikut."
+                  "id": "Kemarin adalah hari ujian. Tetapi ternyata, karena sakit saya tidak bisa ikut.",
+                  "rd": "きのうわ、しけんのひだった。ところが、びょうきでうけることができなかった。"
                 },
                 {
                   "jp": "朝ははれていた。ところが、昼から急に雨が降ってきた。",
-                  "id": "Pagi harinya cerah. Tetapi ternyata, mulai siang tiba-tiba turun hujan."
+                  "id": "Pagi harinya cerah. Tetapi ternyata, mulai siang tiba-tiba turun hujan.",
+                  "rd": "あさわはれていた。ところが、ひるからきゅうにあめがふってきた。"
                 }
               ]
             },
@@ -9620,15 +9952,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "あの山の高さはどのくらいですか。",
-                  "id": "Gunung itu tingginya kira-kira berapa?"
+                  "id": "Gunung itu tingginya kira-kira berapa?",
+                  "rd": "あのやまのたかさわどのくらいですか。"
                 },
                 {
                   "jp": "同じ大きさのダイヤモンドでも、ねだんはいろいろ違います。",
-                  "id": "Meski berliannya sama besar, harganya bermacam-macam."
+                  "id": "Meski berliannya sama besar, harganya bermacam-macam.",
+                  "rd": "おなじおおきさのダイヤモンドでも、ねだんわいろいろちがいます。"
                 },
                 {
                   "jp": "広さよりも便利さを考えて、今のアパートを選びました。",
-                  "id": "Saya memilih apartemen sekarang karena mempertimbangkan kepraktisannya daripada luasnya."
+                  "id": "Saya memilih apartemen sekarang karena mempertimbangkan kepraktisannya daripada luasnya.",
+                  "rd": "ひろさよりもべんりさおかんがえて、いまのアパートおえらびました。"
                 }
               ]
             },
@@ -9639,15 +9974,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "まず宿題をして、それから遊びます。",
-                  "id": "Kerjakan PR dulu, setelah itu baru main."
+                  "id": "Kerjakan PR dulu, setelah itu baru main.",
+                  "rd": "まずしゅくだいをして、それからあそびます。"
                 },
                 {
                   "jp": "この店は安いけれども、あまりおいしくないです。",
-                  "id": "Toko ini murah, tapi tidak terlalu enak."
+                  "id": "Toko ini murah, tapi tidak terlalu enak.",
+                  "rd": "このみせわやすいけれども、あまりおいしくないです。"
                 },
                 {
                   "jp": "ところで、週末は何をする予定ですか。",
-                  "id": "Ngomong-ngomong, akhir pekan ada rencana apa?"
+                  "id": "Ngomong-ngomong, akhir pekan ada rencana apa?",
+                  "rd": "ところで、しゅうまつわなにをするよていですか。"
                 }
               ]
             },
@@ -9658,15 +9996,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "この文は何回読んでも理解できません。",
-                  "id": "Kalimat ini dibaca berapa kali pun tetap tidak bisa saya pahami."
+                  "id": "Kalimat ini dibaca berapa kali pun tetap tidak bisa saya pahami.",
+                  "rd": "このぶんわなんかいよんでもりかいできません。"
                 },
                 {
                   "jp": "あのレストランはいつ行ってもこんでいます。",
-                  "id": "Restoran itu selalu ramai kapan pun datang."
+                  "id": "Restoran itu selalu ramai kapan pun datang.",
+                  "rd": "あのレストランわいついってもこんでいます。"
                 },
                 {
                   "jp": "英語を習っているが、どんなに勉強してもうまく話せない。",
-                  "id": "Saya belajar bahasa Inggris, tapi seberapa pun giat belajar, tetap tidak bisa bicara dengan lancar."
+                  "id": "Saya belajar bahasa Inggris, tapi seberapa pun giat belajar, tetap tidak bisa bicara dengan lancar.",
+                  "rd": "えいごおならっているが、どんなにべんきょうしてもうまくはなせない。"
                 }
               ]
             },
@@ -9677,15 +10018,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "調べてもわからなかった。",
-                  "id": "Sudah saya cari tahu, tapi tetap tidak paham."
+                  "id": "Sudah saya cari tahu, tapi tetap tidak paham.",
+                  "rd": "しらべてもわからなかった。"
                 },
                 {
                   "jp": "パソコンは必要なので、高くても買います。",
-                  "id": "Karena butuh komputer, saya akan beli meski mahal."
+                  "id": "Karena butuh komputer, saya akan beli meski mahal.",
+                  "rd": "パソコンわひつようなので、たかくてもかいます。"
                 },
                 {
                   "jp": "明日雨でも、動物園に行きます。",
-                  "id": "Besok walaupun hujan, saya akan pergi ke kebun binatang."
+                  "id": "Besok walaupun hujan, saya akan pergi ke kebun binatang.",
+                  "rd": "あしたあめでも、どうぶつえんにいきます。"
                 }
               ]
             }
@@ -10010,15 +10354,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "このぼうしは私には小さすぎます。",
-                  "id": "Topi ini terlalu kecil untukku."
+                  "id": "Topi ini terlalu kecil untukku.",
+                  "rd": "このぼうしわわたしにわちいさすぎます。"
                 },
                 {
                   "jp": "きのう、お酒を飲みすぎて、頭がいたい。",
-                  "id": "Kemarin minum terlalu banyak sampai kepalaku sakit."
+                  "id": "Kemarin minum terlalu banyak sampai kepalaku sakit.",
+                  "rd": "きのう、おさけおのみすぎて、あたまがいたい。"
                 },
                 {
                   "jp": "漢字は多すぎて覚えられません。",
-                  "id": "Kanji-nya terlalu banyak sampai tidak bisa dihafal."
+                  "id": "Kanji-nya terlalu banyak sampai tidak bisa dihafal.",
+                  "rd": "かんじわおおすぎておぼえられません。"
                 }
               ]
             },
@@ -10029,15 +10376,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "このペンは書きやすいです。",
-                  "id": "Pulpen ini mudah dipakai menulis."
+                  "id": "Pulpen ini mudah dipakai menulis.",
+                  "rd": "このペンわがきやすいです。"
                 },
                 {
                   "jp": "田中先生の説明はわかりやすいです。",
-                  "id": "Penjelasan Pak Tanaka mudah dipahami."
+                  "id": "Penjelasan Pak Tanaka mudah dipahami.",
+                  "rd": "たなかせんせいのせつめいわわかりやすいです。"
                 },
                 {
                   "jp": "この地図は、小さくてわかりにくいです。",
-                  "id": "Peta ini kecil dan sulit dipahami."
+                  "id": "Peta ini kecil dan sulit dipahami.",
+                  "rd": "このちずわ、ちいさくてわかりにくいです。"
                 }
               ]
             },
@@ -10048,11 +10398,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "午後から雨が降り出しました。",
-                  "id": "Mulai siang hari hujan mulai turun."
+                  "id": "Mulai siang hari hujan mulai turun.",
+                  "rd": "ごごからあめがふりだしました。"
                 },
                 {
                   "jp": "赤ちゃんが急に泣き出した。",
-                  "id": "Bayi itu tiba-tiba mulai menangis."
+                  "id": "Bayi itu tiba-tiba mulai menangis.",
+                  "rd": "あかちゃんがきゅうになきだした。"
                 }
               ]
             },
@@ -10063,11 +10415,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ご飯を食べ終わるまで、待っていてください。",
-                  "id": "Tolong tunggu sampai saya selesai makan."
+                  "id": "Tolong tunggu sampai saya selesai makan.",
+                  "rd": "ごはんおたべおわるまで、まっていてください。"
                 },
                 {
                   "jp": "宿題をやり終わったら、遊びに行きます。",
-                  "id": "Setelah selesai mengerjakan PR, saya akan pergi main."
+                  "id": "Setelah selesai mengerjakan PR, saya akan pergi main.",
+                  "rd": "しゅくだいおやりおわったら、あそびにいきます。"
                 }
               ]
             },
@@ -10078,11 +10432,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "1週間、この薬を飲み続けてください。",
-                  "id": "Tolong terus minum obat ini selama seminggu."
+                  "id": "Tolong terus minum obat ini selama seminggu.",
+                  "rd": "いっしゅうかん、このくすりおのみつづけてください。"
                 },
                 {
                   "jp": "日本語の勉強を続けています。",
-                  "id": "Saya terus belajar bahasa Jepang."
+                  "id": "Saya terus belajar bahasa Jepang.",
+                  "rd": "にほんごのべんきょうおつづけています。"
                 }
               ]
             },
@@ -10093,15 +10449,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "どうしてパーティーに行かないんですか。",
-                  "id": "Kenapa kamu tidak pergi ke pesta? [minta penjelasan]"
+                  "id": "Kenapa kamu tidak pergi ke pesta? [minta penjelasan]",
+                  "rd": "どうしてパーティーにいかないんですか。"
                 },
                 {
                   "jp": "A「どうしたんですか。」B「ちょっと、頭がいたいんです。」",
-                  "id": "A: \"Kamu kenapa?\" B: \"Kepalaku agak sakit.\""
+                  "id": "A: \"Kamu kenapa?\" B: \"Kepalaku agak sakit.\"",
+                  "rd": "A「どうしたんですか。」B「ちょっと、あたまがいたいんです。」"
                 },
                 {
                   "jp": "A「パーティーに行かないの？」B「ちょっと用事があるんだ。」",
-                  "id": "A: \"Tidak pergi ke pesta?\" B: \"Ada urusan sedikit.\""
+                  "id": "A: \"Tidak pergi ke pesta?\" B: \"Ada urusan sedikit.\"",
+                  "rd": "A「パーティーにいかないの？」B「ちょっとようじがあるんだ。」"
                 }
               ]
             },
@@ -10112,15 +10471,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "トムさんのおねえさん、きれいだなあ。",
-                  "id": "Kakak perempuan Tom cantik sekali ya."
+                  "id": "Kakak perempuan Tom cantik sekali ya.",
+                  "rd": "トムさんのおねえさん、きれいだなあ。"
                 },
                 {
                   "jp": "いい天気ですね。",
-                  "id": "Cuacanya bagus ya. [mengajak setuju]"
+                  "id": "Cuacanya bagus ya. [mengajak setuju]",
+                  "rd": "いいてんきですね。"
                 },
                 {
                   "jp": "漢字のテストは明日ですよ。",
-                  "id": "Tes kanji besok lho. [info baru/penekanan]"
+                  "id": "Tes kanji besok lho. [info baru/penekanan]",
+                  "rd": "かんじのテストわあしたですよ。"
                 }
               ]
             },
@@ -10131,15 +10493,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "ここはどこかな。",
-                  "id": "Ini di mana ya?"
+                  "id": "Ini di mana ya?",
+                  "rd": "ここわどこかな。"
                 },
                 {
                   "jp": "早く夏休みが来ないかなあ。",
-                  "id": "Semoga libur musim panas cepat datang."
+                  "id": "Semoga libur musim panas cepat datang.",
+                  "rd": "はやくなつやすみがこないかなあ。"
                 },
                 {
                   "jp": "明日、雨が降るかしら。",
-                  "id": "Besok hujan tidak ya?"
+                  "id": "Besok hujan tidak ya?",
+                  "rd": "あした、あめがふるかしら。"
                 }
               ]
             }
@@ -10461,15 +10826,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "おいしいかどうかわかりませんが、食べてみてください。",
-                  "id": "Saya tidak tahu enak atau tidak, tapi silakan dicoba."
+                  "id": "Saya tidak tahu enak atau tidak, tapi silakan dicoba.",
+                  "rd": "おいしいかどうかわかりませんが、たべてみてください。"
                 },
                 {
                   "jp": "その話が本当かどうか調べたほうがいいですよ。",
-                  "id": "Sebaiknya kamu cek apakah cerita itu benar."
+                  "id": "Sebaiknya kamu cek apakah cerita itu benar.",
+                  "rd": "そのはなしがほんとうかどうかしらべたほうがいいですよ。"
                 },
                 {
                   "jp": "新しい学校で、友だちができるかどうか心配です。",
-                  "id": "Saya khawatir bisa atau tidak punya teman di sekolah yang baru."
+                  "id": "Saya khawatir bisa atau tidak punya teman di sekolah yang baru.",
+                  "rd": "あたらしいがっこうで、ともだちができるかどうかしんぱいです。"
                 }
               ]
             },
@@ -10480,15 +10848,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "田中さんがどこに住んでいるか知っていますか。",
-                  "id": "Apakah kamu tahu Tanaka tinggal di mana?"
+                  "id": "Apakah kamu tahu Tanaka tinggal di mana?",
+                  "rd": "たなかさんがどこにすんでいるかしっていますか。"
                 },
                 {
                   "jp": "きのうの夜、どうやって帰ったか覚えていません。",
-                  "id": "Saya tidak ingat bagaimana caranya pulang tadi malam."
+                  "id": "Saya tidak ingat bagaimana caranya pulang tadi malam.",
+                  "rd": "きのうのよる、どうやってかえったかおぼえていません。"
                 },
                 {
                   "jp": "なぜ会社をやめたか教えてください。",
-                  "id": "Tolong beri tahu saya kenapa kamu keluar dari perusahaan."
+                  "id": "Tolong beri tahu saya kenapa kamu keluar dari perusahaan.",
+                  "rd": "なぜかいしゃおやめたかおしえてください。"
                 }
               ]
             },
@@ -10499,15 +10870,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "あそこでたばこをすっているのが社長です。",
-                  "id": "Yang sedang merokok di sana itu adalah direktur perusahaan."
+                  "id": "Yang sedang merokok di sana itu adalah direktur perusahaan.",
+                  "rd": "あそこでたばこおすっているのがしゃちょうです。"
                 },
                 {
                   "jp": "あなたがほしいのは何ですか。",
-                  "id": "Apa yang kamu inginkan?"
+                  "id": "Apa yang kamu inginkan?",
+                  "rd": "あなたがほしいのわなんですか。"
                 },
                 {
                   "jp": "姉はケーキを作るのが上手です。",
-                  "id": "Kakak perempuan saya pandai membuat kue."
+                  "id": "Kakak perempuan saya pandai membuat kue.",
+                  "rd": "あねわケーキをつくるのがじょうずです。"
                 }
               ]
             },
@@ -10518,15 +10892,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "田中さんは明日は来ないと言っていましたよ。",
-                  "id": "Katanya Tanaka besok tidak datang."
+                  "id": "Katanya Tanaka besok tidak datang.",
+                  "rd": "たなかさんはあしたわこないといっていましたよ。"
                 },
                 {
                   "jp": "天気予報で、明日は寒いと言っていました。",
-                  "id": "Menurut ramalan cuaca, besok akan dingin."
+                  "id": "Menurut ramalan cuaca, besok akan dingin.",
+                  "rd": "てんきよほうで、あしたわさむいといっていました。"
                 },
                 {
                   "jp": "医者に酒は飲むなと言われました。",
-                  "id": "Dokter bilang saya tidak boleh minum alkohol."
+                  "id": "Dokter bilang saya tidak boleh minum alkohol.",
+                  "rd": "いしゃにさけわのむなといわれました。"
                 }
               ]
             },
@@ -10537,15 +10914,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "田中さんはもう帰ったと思います。",
-                  "id": "Saya rasa Tanaka sudah pulang."
+                  "id": "Saya rasa Tanaka sudah pulang.",
+                  "rd": "たなかさんはもうかえったとおもいます。"
                 },
                 {
                   "jp": "試験に受かったと思います。",
-                  "id": "Saya rasa saya lulus ujian."
+                  "id": "Saya rasa saya lulus ujian.",
+                  "rd": "しけんにうかったとおもいます。"
                 },
                 {
                   "jp": "彼は来ないと思います。",
-                  "id": "Saya rasa dia tidak akan datang."
+                  "id": "Saya rasa dia tidak akan datang.",
+                  "rd": "かれわこないとおもいます。"
                 }
               ]
             },
@@ -10556,15 +10936,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "主人は最近、疲れているようです。",
-                  "id": "Suamiku akhir-akhir ini kelihatannya lelah."
+                  "id": "Suamiku akhir-akhir ini kelihatannya lelah.",
+                  "rd": "しゅじんわさいきん、つかれているようです。"
                 },
                 {
                   "jp": "道路がぬれているから、雨が降ったようですね。",
-                  "id": "Karena jalanannya basah, sepertinya tadi hujan."
+                  "id": "Karena jalanannya basah, sepertinya tadi hujan.",
+                  "rd": "どうろがぬれているから、あめがふったようですね。"
                 },
                 {
                   "jp": "このパソコン、変です。こわれているみたいです。",
-                  "id": "Komputer ini aneh. Sepertinya rusak."
+                  "id": "Komputer ini aneh. Sepertinya rusak.",
+                  "rd": "このパソコン、へんです。こわれているみたいです。"
                 }
               ]
             },
@@ -10575,15 +10958,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "元気そうな赤ちゃんですね。",
-                  "id": "Bayi yang kelihatannya sehat ya."
+                  "id": "Bayi yang kelihatannya sehat ya.",
+                  "rd": "げんきそうなあかちゃんですね。"
                 },
                 {
                   "jp": "明日は天気がよさそうですよ。",
-                  "id": "Besok cuacanya kelihatannya bagus."
+                  "id": "Besok cuacanya kelihatannya bagus.",
+                  "rd": "あしたわてんきがよさそうですよ。"
                 },
                 {
                   "jp": "雨が降りそうです。",
-                  "id": "Kelihatannya akan hujan."
+                  "id": "Kelihatannya akan hujan.",
+                  "rd": "あめがふりそうです。"
                 }
               ]
             },
@@ -10594,11 +10980,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "天気予報によると、午後から雨が降るそうですよ。",
-                  "id": "Menurut ramalan cuaca, katanya mulai siang akan hujan."
+                  "id": "Menurut ramalan cuaca, katanya mulai siang akan hujan.",
+                  "rd": "てんきよほうによると、ごごからあめがふるそうですよ。"
                 },
                 {
                   "jp": "田中さんのお父さんは元気だそうです。",
-                  "id": "Katanya ayah Tanaka sehat."
+                  "id": "Katanya ayah Tanaka sehat.",
+                  "rd": "たなかさんのおとうさんはげんきだそうです。"
                 }
               ]
             },
@@ -10609,11 +10997,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "トムさんはたぶん試験に受かるでしょう。",
-                  "id": "Tom mungkin akan lulus ujian."
+                  "id": "Tom mungkin akan lulus ujian.",
+                  "rd": "トムさんはたぶんしけんにうかるでしょう。"
                 },
                 {
                   "jp": "弟はもうすぐ結婚するだろう。",
-                  "id": "Adikku mungkin akan segera menikah."
+                  "id": "Adikku mungkin akan segera menikah.",
+                  "rd": "おとうとわもうすぐけっこんするだろう。"
                 }
               ]
             },
@@ -10624,15 +11014,18 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "来年、東京に転勤になるかもしれません。",
-                  "id": "Tahun depan mungkin saya dipindahtugaskan ke Tokyo."
+                  "id": "Tahun depan mungkin saya dipindahtugaskan ke Tokyo.",
+                  "rd": "らいねん、とうきょうにてんきんになるかもしれません。"
                 },
                 {
                   "jp": "寒いですね。今晩、雪が降るかもしれませんよ。",
-                  "id": "Dingin ya. Malam ini mungkin turun salju."
+                  "id": "Dingin ya. Malam ini mungkin turun salju.",
+                  "rd": "さむいですね。こんばん、ゆきがふるかもしれませんよ。"
                 },
                 {
                   "jp": "どうしよう。さいふをどこかに落としたかもしれない。",
-                  "id": "Aduh. Mungkin dompetku terjatuh di suatu tempat."
+                  "id": "Aduh. Mungkin dompetku terjatuh di suatu tempat.",
+                  "rd": "どうしよう。さいふおどこかにおとしたかもしれない。"
                 }
               ]
             }
@@ -10960,11 +11353,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "私は日本へ行きたいです。",
-                  "id": "Saya ingin pergi ke Jepang."
+                  "id": "Saya ingin pergi ke Jepang.",
+                  "rd": "わたしわにほんえいきたいです。"
                 },
                 {
                   "jp": "彼は日本へ行きたがっています。",
-                  "id": "Dia kelihatannya ingin pergi ke Jepang."
+                  "id": "Dia kelihatannya ingin pergi ke Jepang.",
+                  "rd": "かれわにほんえいきたがっています。"
                 }
               ]
             },
@@ -10975,11 +11370,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "合格するために勉強します。",
-                  "id": "Agar lulus, saya belajar (usaha langsung)."
+                  "id": "Agar lulus, saya belajar (usaha langsung).",
+                  "rd": "ごうかくするためにべんきょうします。"
                 },
                 {
                   "jp": "忘れないようにメモします。",
-                  "id": "Agar tidak lupa, saya mencatat (pencegahan)."
+                  "id": "Agar tidak lupa, saya mencatat (pencegahan).",
+                  "rd": "わすれないようにメモします。"
                 }
               ]
             },
@@ -10990,11 +11387,13 @@ const CHAPTERS = {
               "examples": [
                 {
                   "jp": "安ければ、買います。",
-                  "id": "Jika murah, saya beli (syarat umum → ば)."
+                  "id": "Jika murah, saya beli (syarat umum → ば).",
+                  "rd": "やすければ、かいます。"
                 },
                 {
                   "jp": "ボタンを押すと、開きます。",
-                  "id": "Jika tombol ditekan, terbuka (pasti → と)."
+                  "id": "Jika tombol ditekan, terbuka (pasti → と).",
+                  "rd": "ボタンおおすと、ひらきます。"
                 }
               ]
             }

@@ -777,10 +777,18 @@ const app = createApp({
           </div>
           <div v-if="s.type==='bunpou'">
             <div class="step-tag">📐 {{ s.title }}</div>
-            <div v-for="(b, bi) in s.items" :key="bi" class="card" style="margin:8px 0">
-              <b>{{ b.pattern }}</b><div class="muted small">= {{ b.arti }}</div>
-              <p class="small" v-html="b.explain" style="margin:8px 0"></p>
-              <div v-for="(ex, ei) in b.examples" :key="ei" class="passage small" style="margin:6px 0"><b>{{ ex.jp }}</b><br><span class="muted">{{ ex.id }}</span></div>
+            <div v-for="(b, bi) in s.items" :key="bi" class="bp-card">
+              <div class="bp-head">{{ b.pattern }}</div>
+              <div class="bp-body">
+                <div class="muted small bp-arti">= {{ b.arti }}</div>
+                <p class="small" v-html="b.explain"></p>
+                <div class="bp-ex-label">Contoh kalimat:</div>
+                <div v-for="(ex, ei) in b.examples" :key="ei" class="ex-box">
+                  <div class="ex-jp">{{ ex.jp }}</div>
+                  <div v-if="ex.rd" class="ex-rd">{{ ex.rd }}</div>
+                  <div class="ex-id">{{ ex.id }}</div>
+                </div>
+              </div>
             </div>
           </div>
           <div v-if="s.type==='kanji'">
