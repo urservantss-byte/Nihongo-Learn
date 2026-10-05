@@ -769,7 +769,7 @@ const app = createApp({
         <div v-for="(s, si) in openChapter.sections" :key="si">
           <div v-if="s.type==='penjelasan'">
             <div class="step-tag"><span v-html="ic('book',12)"></span> {{ s.title }}</div>
-            <div class="passage" v-html="s.body"></div>
+            <div class="passage penjelasan-text" v-html="s.body"></div>
           </div>
           <div v-if="s.type==='kotoba'">
             <div class="step-tag">📝 {{ s.title }}</div>
