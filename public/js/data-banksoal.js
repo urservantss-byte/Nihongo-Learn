@@ -3240,6 +3240,7 @@ const BANK_PACKAGES = [
       "rd": ""
     },
     {
+      "img": "img/ssw/pabrik-hygiene.jpg",
       "q": "次(つぎ)の画像(がぞう)を見て(みて)ください! \n 間違って(まちがっているものはどれですか。",
       "o": [
         "ヘアーネットをかぶる",
@@ -5353,6 +5354,7 @@ const BANK_PACKAGES = [
       "ex": "Bencana sekunder\n• 薬剤\nやくざい\nYakuzai\nNarkoba\n• 事故\nじこ\nJiko\nKecelakaan ‘\n• 災害\nさいがい\nSaigai\nBencana\n• 倉庫\nそうこ\nSouko\nGudang\n• 原材料\nげんざいりょう\nGenzairyou\nBahan baku"
     },
     {
+      "img": "img/ssw/pabrik-warehouse.jpg",
       "q": "\nこれはある食品工場（しょくひんこうじょう）の原材料（げんざいりょう）倉\n庫（そこ）の入り口（いりぐち）の写真（しゃしん）です。\n虫（むし）は光（ひかり）に誘われ（さそわれ）、わずがな隙間（すきま）か\nら入って（はいって）きます。どうすればいいですか。",
       "rd": "Kore wa aru shokuhin kōjō no genzairyō sōko no iriguchi no shashindesu. Mushi wa hikari\nni sasowa re, wazu ga na sukima kara haitte kimasu. Dōsureba īdesu ka.",
       "o": [
