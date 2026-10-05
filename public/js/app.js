@@ -783,7 +783,8 @@ const app = createApp({
                 <div class="muted small bp-arti">= {{ b.arti }}</div>
                 <div v-if="b.tabel && b.tabel.length" class="bp-table">
                   <div v-for="(t, ti) in b.tabel" :key="ti" class="bp-trow">
-                    <span class="bp-tk">{{ t.k }}</span><span class="bp-teq">=</span><span class="bp-tv">{{ t.v }}</span>
+                    <div class="bp-tk">{{ t.k }}</div>
+                    <div class="bp-tv"><span class="bp-teq">=</span> {{ t.v }}</div>
                   </div>
                 </div>
                 <p class="small" v-html="b.explain"></p>
