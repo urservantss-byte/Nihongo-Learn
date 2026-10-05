@@ -49,7 +49,7 @@ h3 { font-size: 16px; line-height: 1.4; }
 @media (min-width: 900px) {
   .sb-toggle { display: inline-flex; align-items: center; }
   #app { max-width: 1180px; padding: 0 40px 60px 256px; transition: padding .25s ease; }
-  .sb-hidden #app { padding-left: 40px; }
+  #app:has(.sb-hidden) { padding-left: 40px; }
   .hdr { padding: 14px 2px; }
   .nav {
     top: 0; bottom: 0; left: 0; right: auto;
