@@ -284,12 +284,12 @@ const app = createApp({
     },
     // ---- Simulasi bank soal ----
     bankPkgs() { return (typeof BANK_PACKAGES === 'undefined') ? [] : BANK_PACKAGES; },
-    jlptPkgs() { return this.bankPkgs.filter(p => p.cat === 'jlpt' && p.year === this.modulSub && p.level === this.modulLevel); },
+    jlptPkgs() { return this.bankPkgs.filter(p => p.cat === 'jlpt' && String(p.year) === String(this.modulSub) && p.level === this.modulLevel); },
     jftPkgs() { return this.bankPkgs.filter(p => p.cat === 'jft'); },
     sswPkgs() { return this.bankPkgs.filter(p => p.cat === 'ssw' && p.field === this.modulSub); },
     bankYearCount() {
       const c = {};
-      for (const p of this.bankPkgs) if (p.cat === 'jlpt') c[p.year] = (c[p.year] || 0) + 1;
+      for (const p of this.bankPkgs) if (p.cat === 'jlpt') c[String(p.year)] = (c[String(p.year)] || 0) + 1;
       return c;
     },
     simSecQs() {
@@ -1025,7 +1025,7 @@ const app = createApp({
 
           <div v-if="sim">
             <div class="card pop">
-              <div class="q-head"><span class="muted small">{{ sim.pkg.title }} &middot; {{ sim.secs[sim.secIdx].name }}</span><b :style="{color: sim.tLeft < 300 ? 'var(--bad)' : 'inherit'}">&#9201; {{ simTimeStr(sim.tLeft) }}</b></div>
+              <div class="q-head"><span class="muted small">{{ sim.pkg.title }} &middot; {{ sim.secs[sim.secIdx].name }}</span><b v-if="!sim.done" :style="{color: sim.tLeft < 300 ? 'var(--bad)' : 'inherit'}">&#9201; {{ simTimeStr(sim.tLeft) }}</b></div>
               <div v-if="!sim.done">
                 <div v-if="sim.secs[sim.secIdx].id==='choukai' && sim.pkg.audio" style="margin:8px 0">
                   <audio controls preload="none" :src="sim.pkg.audio" style="width:100%"></audio>
@@ -1185,6 +1185,8 @@ const app = createApp({
               <div v-else class="card center pop"><div style="font-size:40px">&#128269;</div><b>Materi {{ (SSW_FIELDS.find(f=>f.id===modulSub)||{}).name }} segera hadir</b><p class="muted small">Materi &amp; soal bidang ini sedang diriset &amp; diverifikasi. &#128591;</p></div>
             </div>
           </div>
+        </div>
+      </div>
       <div v-else class="card pop">
         <button class="btn ghost sm" @click="modulPat=null"><span v-html="ic('back',15)"></span> Kembali</button>
         <div class="step-tag">&#128214; {{ modulPat.level.toUpperCase() }} &middot; Bab {{ modulPat.bab }}</div>
