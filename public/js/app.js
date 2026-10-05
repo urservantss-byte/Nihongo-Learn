@@ -308,11 +308,13 @@ const app = createApp({
       this.$nextTick(() => window.scrollTo({ top: 0 }));
     },
     answerChapterQuiz(i) {
-      if (!this.chQuiz || this.chQuiz.done) return;
+      if (!this.chQuiz || this.chQuiz.done || this.chQuiz.lock) return;
+      this.chQuiz.lock = true;
       const q = this.chQuiz.qs[this.chQuiz.idx];
       const ok = i === q.a;
       this.chQuiz.ans.push({ pick: i, ok });
       setTimeout(() => {
+        this.chQuiz.lock = false;
         if (this.chQuiz.idx + 1 < this.chQuiz.qs.length) this.chQuiz.idx++;
         else this.finishChapterQuiz();
       }, 650);
