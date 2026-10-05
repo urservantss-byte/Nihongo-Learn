@@ -977,7 +977,7 @@ const app = createApp({
         <div v-if="!chQuiz.done">
           <div class="q-head"><span class="muted small">Quiz Bab {{ chQuiz.chapter.bab }} · Soal {{ chQuiz.idx+1 }}/{{ chQuiz.qs.length }}</span></div>
           <div class="qbar"><i :style="{width: (chQuiz.idx / chQuiz.qs.length * 100)+'%'}"></i></div>
-          <h3 class="q-text">{{ chQuiz.qs[chQuiz.idx].q }}</h3>
+          <h3 class="q-text" style="white-space:pre-line">{{ fmtQ(chQuiz.qs[chQuiz.idx].q) }}</h3>
           <button v-for="(o, oi) in chQuiz.qs[chQuiz.idx].o" :key="oi" class="opt" @click="answerChapterQuiz(oi)">{{ o }}</button>
           <div class="center" style="margin-top:10px"><button class="btn ghost sm" @click="chQuiz=null">Batal</button></div>
         </div>
@@ -988,7 +988,7 @@ const app = createApp({
           <div v-if="chQuiz.pct < 70" style="text-align:left;margin-top:12px">
             <b>Pembahasan:</b>
             <div v-for="(q, qi) in chQuiz.qs" :key="qi" class="card small" style="margin:8px 0">
-              <b>{{ qi+1 }}. {{ q.q }}</b>
+              <b style="white-space:pre-line">{{ qi+1 }}. {{ fmtQ(q.q) }}</b>
               <div class="small" :style="{color: chQuiz.ans[qi].ok ? 'var(--ok)' : 'var(--bad)'}">{{ chQuiz.ans[qi].ok ? '✓ Benar' : '✗ Kurang tepat — jawaban: ' + q.o[q.a] }}</div>
               <div class="muted small">💡 {{ q.explain }}</div>
             </div>
@@ -1266,7 +1266,7 @@ const app = createApp({
       <div class="muted small">Soal {{ qIdx+1 }}/{{ secQs.length }} · Seksi {{ qSec+1 }}/{{ quizSecs.length }}</div>
       <div class="qbar"><i :style="{width: ((qIdx)/secQs.length*100)+'%'}"></i></div>
       <div v-if="secQs[qIdx].passage" class="passage">{{ secQs[qIdx].q.split('質問')[0] }}</div>
-      <h3 class="q-text">{{ secQs[qIdx].passage ? '質問：' + secQs[qIdx].q.split('質問：')[1] : secQs[qIdx].q }}</h3>
+      <h3 class="q-text" style="white-space:pre-line">{{ secQs[qIdx].passage ? '質問：' + fmtQ(secQs[qIdx].q.split('質問：')[1]) : fmtQ(secQs[qIdx].q) }}</h3>
       <button v-if="secQs[qIdx].audio" class="btn ghost sm" @click="playAudio(secQs[qIdx].audio)"><span v-html="ic('volume',15)"></span> Putar audio</button>
       <button v-for="(o,i) in secQs[qIdx].o" :key="i" class="opt"
         :class="{pick: qAns[qAns.length-1]?.q===secQs[qIdx] && qAns[qAns.length-1].pick===i, right: qAns[qAns.length-1]?.q===secQs[qIdx] && i===secQs[qIdx].a, wrong: qAns[qAns.length-1]?.q===secQs[qIdx] && qAns[qAns.length-1].pick===i && i!==secQs[qIdx].a}"
@@ -1277,7 +1277,7 @@ const app = createApp({
     <section v-if="tab==='adaptiverun' && adaptiveQs && adaptiveQs.length" class="card pop tabsec">
       <div class="q-head"><b>🧠 Review Cerdas</b><span class="muted small">Soal {{ qIdx+1 }}/{{ adaptiveQs.length }}</span></div>
       <div class="qbar"><i :style="{width: (qIdx/adaptiveQs.length*100)+'%'}"></i></div>
-      <h3 class="q-text">{{ adaptiveQs[qIdx].q }}</h3>
+      <h3 class="q-text" style="white-space:pre-line">{{ fmtQ(adaptiveQs[qIdx].q) }}</h3>
       <button v-for="(o,i) in adaptiveQs[qIdx].o" :key="i" class="opt"
         :class="{pick: qAns[qAns.length-1]?.q===adaptiveQs[qIdx] && qAns[qAns.length-1].pick===i, right: qAns[qAns.length-1]?.q===adaptiveQs[qIdx] && i===adaptiveQs[qIdx].a, wrong: qAns[qAns.length-1]?.q===adaptiveQs[qIdx] && qAns[qAns.length-1].pick===i && i!==adaptiveQs[qIdx].a}"
         @click="adaptAnswer(i)"><b>{{ ['A','B','C','D'][i] }}.</b> {{ o }}</button>
