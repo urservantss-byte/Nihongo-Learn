@@ -173,6 +173,7 @@ const app = createApp({
     libQ: '', libType: 'all',
     // modul (pusat materi)
     modulQ: '', modulCat: null, modulLevel: 'n5', modulSub: null, modulCh: null, modulPat: null,
+    simPkg: null, sim: null,
     // quiz
     quizMode: 'acak', qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0, secScores: [],
     genQs: [], shuffledQs: [], quizResume: null,
@@ -281,6 +282,34 @@ const app = createApp({
         }
       return out.slice(0, 60);
     },
+    // ---- Simulasi bank soal ----
+    bankPkgs() { return (typeof BANK_PACKAGES === 'undefined') ? [] : BANK_PACKAGES; },
+    jlptPkgs() { return this.bankPkgs.filter(p => p.cat === 'jlpt' && p.year === this.modulSub && p.level === this.modulLevel); },
+    jftPkgs() { return this.bankPkgs.filter(p => p.cat === 'jft'); },
+    sswPkgs() { return this.bankPkgs.filter(p => p.cat === 'ssw' && p.field === this.modulSub); },
+    bankYearCount() {
+      const c = {};
+      for (const p of this.bankPkgs) if (p.cat === 'jlpt') c[p.year] = (c[p.year] || 0) + 1;
+      return c;
+    },
+    simSecQs() {
+      if (!this.sim) return [];
+      const sec = this.sim.secs[this.sim.secIdx];
+      const out = [];
+      this.sim.pkg.questions.forEach((q, i) => { if (!this.sim.pkg.sections || (q.sec || q.s) === sec.id) out.push({ q, i }); });
+      return out;
+    },
+    simCur() { return this.sim ? (this.simSecQs[this.sim.qPos] || null) : null; },
+    simScore() {
+      if (!this.sim) return null;
+      let ok = 0, tot = 0;
+      this.sim.pkg.questions.forEach((q, i) => {
+        if (q.a === null || q.a === undefined) return;
+        tot++;
+        if (this.sim.ans[i] === q.a) ok++;
+      });
+      return { ok, tot, pct: tot ? Math.round(ok / tot * 100) : 0 };
+    },
     quizQs() {
       if (this.quizMode === 'acak') return this.genQs;
       return this.shuffledQs.length ? this.shuffledQs : (QUIZ[this.qLevel] || []);
@@ -295,7 +324,7 @@ const app = createApp({
     },
   },
   watch: {
-    tab() { this.saveTab(); window.scrollTo({ top: 0, behavior: 'smooth' }); },
+    tab() { this.saveTab(); if (this.tab !== 'library') this.closeSim(); window.scrollTo({ top: 0, behavior: 'smooth' }); },
     openChapter() { this.saveChapterState(); },
     chQuiz: { deep: true, handler() { this.saveChapterState(); } },
   },
@@ -310,6 +339,36 @@ const app = createApp({
         localStorage.setItem('nl_quiz', JSON.stringify(data));
       } catch {}
     },
+    // ---- Simulasi bank soal ----
+    simTimeStr(s) { const m = Math.floor(s / 60); return m + ':' + String(s % 60).padStart(2, '0'); },
+    simTimeFor(pkg) { return Math.min(120, Math.max(30, pkg.questions.length)); },
+    startSim(pkg) {
+      this.stopSimTimer();
+      const secs = pkg.sections || [{ id: 'all', name: 'Latihan', time: this.simTimeFor(pkg) }];
+      this.simPkg = null;
+      this.sim = { pkg, secs, secIdx: 0, qPos: 0, ans: {}, tLeft: secs[0].time * 60, timer: null, done: false };
+      this.tickSim();
+    },
+    tickSim() {
+      this.stopSimTimer();
+      this.sim.timer = setInterval(() => {
+        if (!this.sim || this.sim.done) return this.stopSimTimer();
+        this.sim.tLeft--;
+        if (this.sim.tLeft <= 0) this.nextSimSection();
+      }, 1000);
+    },
+    stopSimTimer() { if (this.sim && this.sim.timer) { clearInterval(this.sim.timer); this.sim.timer = null; } },
+    simAnswer(oi) { const c = this.simCur; if (!c || this.sim.done) return; this.sim.ans[c.i] = oi; },
+    simGo(d) { const n = this.sim.qPos + d; if (n >= 0 && n < this.simSecQs.length) this.sim.qPos = n; },
+    nextSimSection() {
+      if (this.sim.secIdx < this.sim.secs.length - 1) {
+        this.sim.secIdx++; this.sim.qPos = 0;
+        this.sim.tLeft = this.sim.secs[this.sim.secIdx].time * 60;
+        this.tickSim();
+      } else this.finishSim();
+    },
+    finishSim() { this.stopSimTimer(); this.sim.done = true; },
+    closeSim() { this.stopSimTimer(); this.sim = null; this.simPkg = null; },
     clearQuizProgress() { localStorage.removeItem('nl_quiz'); this.quizResume = null; },
     _modPat(ch, it, k, lv) {
       return { level: lv || this.modulLevel, bab: ch.bab, chTitle: ch.title, pattern: it.pattern, arti: String(it.arti || '').replace(/<[^>]+>/g, ''), item: it, kaiwa: k ? k.lines : [] };
@@ -962,9 +1021,71 @@ const app = createApp({
         </div>
 
         <div v-else>
-          <button class="btn ghost sm" @click="modulCat=null;modulSub=null;modulCh=null"><span v-html="ic('back',15)"></span> Modul</button>
+          <button class="btn ghost sm" @click="closeSim();modulCat=null;modulSub=null;modulCh=null"><span v-html="ic('back',15)"></span> Modul</button>
 
-          <div v-if="modulCat==='bunpou'">
+          <div v-if="sim">
+            <div class="card pop">
+              <div class="q-head"><span class="muted small">{{ sim.pkg.title }} &middot; {{ sim.secs[sim.secIdx].name }}</span><b :style="{color: sim.tLeft < 300 ? 'var(--bad)' : 'inherit'}">&#9201; {{ simTimeStr(sim.tLeft) }}</b></div>
+              <div v-if="!sim.done">
+                <div v-if="sim.secs[sim.secIdx].id==='choukai' && sim.pkg.audio" style="margin:8px 0">
+                  <audio controls preload="none" :src="sim.pkg.audio" style="width:100%"></audio>
+                  <div class="muted small">Dengarkan audio, lalu jawab soalnya.</div>
+                </div>
+                <div class="qbar"><i :style="{width: ((sim.qPos+1)/Math.max(1,simSecQs.length)*100)+'%'}"></i></div>
+                <div v-if="simCur">
+                  <div class="muted small">Soal {{ sim.qPos+1 }}/{{ simSecQs.length }}</div>
+                  <div v-if="simCur.q.img"><img :src="simCur.q.img" style="max-width:100%;border-radius:8px;margin:8px 0"></div>
+                  <h3 class="q-text" style="white-space:pre-line">{{ simCur.q.q }}</h3>
+                  <div v-if="simCur.q.rd" class="muted small">{{ simCur.q.rd }}</div>
+                  <button v-for="(o, oi) in simCur.q.o" :key="oi" class="opt" :class="{pick: sim.ans[simCur.i]===oi}" @click="simAnswer(oi)">{{ o }}</button>
+                </div>
+                <div class="palette">
+                  <button v-for="(it, pi) in simSecQs" :key="pi" class="pnum" :class="{on: pi===sim.qPos, done: sim.ans[it.i]!==undefined && sim.ans[it.i]!==null}" @click="sim.qPos=pi">{{ pi+1 }}</button>
+                </div>
+                <div class="btn-row">
+                  <button class="btn ghost sm" @click="simGo(-1)">&larr; Prev</button>
+                  <button class="btn ghost sm" @click="simGo(1)">Next &rarr;</button>
+                </div>
+                <div class="btn-row" style="margin-top:8px">
+                  <button v-if="sim.secIdx < sim.secs.length-1" class="btn sm" @click="nextSimSection()">Section berikutnya &rarr;</button>
+                  <button class="btn sm" @click="finishSim()">Selesai &amp; Nilai</button>
+                  <button class="btn ghost sm" @click="closeSim()">Batal</button>
+                </div>
+              </div>
+              <div v-else class="center">
+                <div style="font-size:52px">{{ simScore.pct >= 70 ? '&#127881;' : '&#128170;' }}</div>
+                <h2>{{ simScore.ok }}/{{ simScore.tot }} ({{ simScore.pct }}%)</h2>
+                <p class="muted small">{{ simScore.pct >= 70 ? 'Lulus target latihan! &#127882;' : 'Belum mencapai target 70%. Pelajari lagi, lalu coba lagi!' }}</p>
+                <p class="muted small">{{ sim.pkg.source }} &middot; {{ sim.pkg.note }}</p>
+                <div style="text-align:left;margin-top:12px"><b>Pembahasan:</b>
+                  <div v-for="(qq, qi) in sim.pkg.questions" :key="qi" class="card small" style="margin:8px 0">
+                    <b>{{ qi+1 }}. <span style="white-space:pre-line">{{ qq.q }}</span></b>
+                    <div v-if="qq.a===null || qq.a===undefined" class="muted small">Kunci menyusul</div>
+                    <div v-else class="small" :style="{color: sim.ans[qi]===qq.a ? 'var(--ok)' : 'var(--bad)'}">{{ sim.ans[qi]===qq.a ? '&#10003; Benar' : '&#10007; Kurang tepat &mdash; jawaban: ' + qq.o[qq.a] }}</div>
+                    <div v-if="qq.ex" class="muted small">&#128161; {{ qq.ex }}</div>
+                  </div>
+                </div>
+                <div class="btn-row center" style="justify-content:center">
+                  <button class="btn" @click="startSim(sim.pkg)">&#128260; Ulangi</button>
+                  <button class="btn ghost" @click="closeSim()">Kembali</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div v-else-if="simPkg">
+            <div class="card pop">
+              <b>{{ simPkg.title }}</b>
+              <div class="muted small">{{ simPkg.questions.length }} soal &middot; Sumber: {{ simPkg.source }} ({{ simPkg.note }})</div>
+              <div v-if="simPkg.sections" class="small" style="margin-top:6px"><b>Aturan waktu (format asli):</b>
+                <div v-for="s in simPkg.sections" :key="s.id" class="muted small">&bull; {{ s.name }} &mdash; {{ s.time }} menit</div>
+              </div>
+              <div v-else class="muted small" style="margin-top:6px">Waktu: {{ simTimeFor(simPkg) }} menit (mode latihan)</div>
+              <div v-if="simPkg.audio" class="muted small">&#128266; Termasuk audio listening</div>
+              <button class="btn btn-block" style="margin-top:10px" @click="startSim(simPkg)"><span v-html="ic('play',16)"></span> Mulai Simulasi</button>
+              <div class="center" style="margin-top:8px"><button class="btn ghost sm" @click="simPkg=null">Kembali</button></div>
+            </div>
+          </div>
+          <div v-else-if="modulCat==='bunpou'">
             <div class="pill-row">
               <button v-for="lv in ['n5','n4','n3','n2','n1']" :key="'mb-'+lv" class="pill" :class="{on: modulLevel===lv}" @click="modulLevel=lv">{{ lv.toUpperCase() }}</button>
             </div>
@@ -1007,15 +1128,25 @@ const app = createApp({
 
           <div v-if="modulCat==='bank'">
             <div v-if="!modulSub" class="lib-grid">
-              <div v-for="y in BANK_YEARS" :key="'by'+y" class="lvl" @click="modulSub=y">
+              <div v-for="y in BANK_YEARS" :key="'by'+y" class="lvl" @click="modulSub=y;modulLevel='n5'">
                 <div class="badge"><span style="font-size:22px">&#128218;</span></div>
-                <div class="lvl-body"><b>JLPT {{ y }}</b><div class="muted small">N5&ndash;N1 &middot; Juli &amp; Desember</div></div>
+                <div class="lvl-body"><b>JLPT {{ y }}</b><div class="muted small">{{ bankYearCount[y] ? bankYearCount[y]+' paket' : 'segera hadir' }}</div></div>
                 <span v-html="ic('play',16)"></span>
               </div>
             </div>
             <div v-else>
               <button class="btn ghost sm" @click="modulSub=null"><span v-html="ic('back',15)"></span> Pilih tahun</button>
-              <div class="card center pop"><div style="font-size:40px">&#128269;</div><b>Soal JLPT {{ modulSub }} segera hadir</b><p class="muted small">Soal tahun {{ modulSub }} sedang diriset &amp; diverifikasi dari berbagai sumber. Sabar ya! &#128591;</p></div>
+              <div class="pill-row">
+                <button v-for="lv in ['n5','n4','n3','n2','n1']" :key="'bl-'+lv" class="pill" :class="{on: modulLevel===lv}" @click="modulLevel=lv">{{ lv.toUpperCase() }}</button>
+              </div>
+              <div v-if="jlptPkgs.length" class="lib-grid">
+                <div v-for="p in jlptPkgs" :key="p.id" class="lvl" @click="simPkg=p">
+                  <div class="badge"><span style="font-size:22px">&#127919;</span></div>
+                  <div class="lvl-body"><b>{{ p.title }}</b><div class="muted small">{{ p.questions.length }} soal &middot; {{ p.source }}</div></div>
+                  <span v-html="ic('play',16)"></span>
+                </div>
+              </div>
+              <div v-else class="card center pop"><div style="font-size:40px">&#128269;</div><b>Soal {{ modulLevel.toUpperCase() }} {{ modulSub }} segera hadir</b><p class="muted small">Paket soal ini sedang diriset &amp; diverifikasi. Sabar ya! &#128591;</p></div>
             </div>
           </div>
 
@@ -1024,7 +1155,14 @@ const app = createApp({
               <b>&#128483;&#65039; JFT-Basic (Japan Foundation Test)</b>
               <div class="small" style="margin-top:6px">Ujian CBT &plusmn;50 soal, 60 menit: huruf &amp; kosakata, percakapan &amp; ekspresi, listening, reading. Lulus: 200/250 poin. Dibutuhkan untuk visa SSW (Specified Skilled Worker).</div>
             </div>
-            <div class="card center"><div style="font-size:40px">&#128269;</div><b>Bank soal JFT-Basic segera hadir</b><p class="muted small">Soal-soal real JFT-Basic sedang diriset &amp; diverifikasi. &#128591;</p></div>
+            <div v-if="jftPkgs.length" class="lib-grid">
+              <div v-for="p in jftPkgs" :key="p.id" class="lvl" @click="simPkg=p">
+                <div class="badge"><span style="font-size:22px">&#127919;</span></div>
+                <div class="lvl-body"><b>{{ p.title }}</b><div class="muted small">{{ p.questions.length }} soal &middot; {{ p.source }}</div></div>
+                <span v-html="ic('play',16)"></span>
+              </div>
+            </div>
+            <div v-else class="card center"><div style="font-size:40px">&#128269;</div><b>Bank soal JFT-Basic segera hadir</b><p class="muted small">Soal-soal JFT-Basic sedang diriset &amp; diverifikasi. &#128591;</p></div>
           </div>
 
           <div v-if="modulCat==='ssw'">
@@ -1037,12 +1175,16 @@ const app = createApp({
             </div>
             <div v-else>
               <button class="btn ghost sm" @click="modulSub=null"><span v-html="ic('back',15)"></span> Pilih bidang</button>
-              <div class="card center pop"><div style="font-size:40px">&#128269;</div><b>Materi {{ (SSW_FIELDS.find(f=>f.id===modulSub)||{}).name }} segera hadir</b><p class="muted small">Materi &amp; soal bidang ini sedang diriset &amp; diverifikasi. &#128591;</p></div>
+              <div v-if="sswPkgs.length" class="lib-grid">
+                <div v-for="p in sswPkgs" :key="p.id" class="lvl" @click="simPkg=p">
+                  <div class="badge"><span style="font-size:22px">&#127919;</span></div>
+                  <div class="lvl-body"><b>{{ p.title }}</b><div class="muted small">{{ p.questions.length }} soal &middot; {{ p.source }}</div></div>
+                  <span v-html="ic('play',16)"></span>
+                </div>
+              </div>
+              <div v-else class="card center pop"><div style="font-size:40px">&#128269;</div><b>Materi {{ (SSW_FIELDS.find(f=>f.id===modulSub)||{}).name }} segera hadir</b><p class="muted small">Materi &amp; soal bidang ini sedang diriset &amp; diverifikasi. &#128591;</p></div>
             </div>
           </div>
-        </div>
-      </div>
-
       <div v-else class="card pop">
         <button class="btn ghost sm" @click="modulPat=null"><span v-html="ic('back',15)"></span> Kembali</button>
         <div class="step-tag">&#128214; {{ modulPat.level.toUpperCase() }} &middot; Bab {{ modulPat.bab }}</div>
@@ -1080,21 +1222,17 @@ const app = createApp({
       <h2 class="ttl"><span v-html="ic('clock')"></span> Quiz</h2>
       <div class="mode-grid">
         <div class="mode" :class="{on: quizMode==='acak'}" @click="quizMode='acak'"><div class="mode-e" v-html="ic('shuffle',30)"></div><b>Kuis Acak</b><div class="muted small">Soal baru tiap main</div></div>
-        <div class="mode" :class="{on: quizMode==='simulasi'}" @click="quizMode='simulasi'"><div class="mode-e" v-html="ic('target',30)"></div><b>Simulasi Ujian</b><div class="muted small">Format asli + bedah nilai</div></div>
+        <div class="mode" @click="closeSim();modulCat='bank';modulSub=null;modulQ='';tab='library'"><div class="mode-e" v-html="ic('target',30)"></div><b>Simulasi Ujian</b><div class="muted small">Soal asli + format asli</div></div>
         <div class="mode" :class="{on: quizMode==='cerdas'}" @click="quizMode='cerdas'"><div class="mode-e" v-html="ic('sparkles',30)"></div><b>Review Cerdas</b><div class="muted small">Fokus soal yang lemah</div></div>
       </div>
       <div v-if="quizMode!=='cerdas'">
         <label class="lbl">Pilih level</label>
         <select v-model="qLevel"><option v-for="lv in ['n5','n4','n3','n2','n1']" :value="lv">{{ lv.toUpperCase() }}</option></select>
-        <div v-if="quizMode==='acak'" class="card">
+        <div class="card">
           <p><b>20 soal acak</b> disusun dari bank soal + materi level {{ qLevel.toUpperCase() }}.</p>
           <p class="muted small">Soal yang sudah pernah kamu kerjakan tidak akan muncul lagi sampai semua soal baru habis. Urutan soal & pilihan jawaban diacak setiap permainan.</p>
         </div>
-        <div v-else class="card"><b><span v-html="ic('clock',15)"></span> Aturan waktu:</b>
-          <div v-for="s in QUIZ_RULES[qLevel].sections" :key="s.id" class="muted small">• {{ s.name }} — {{ fmt(s.time) }}</div>
-          <p class="muted small">Soal & pilihan jawaban diacak. Soal baru diprioritaskan.</p>
-        </div>
-        <button class="btn btn-block" @click="startQuiz"><span v-html="ic('play',16)"></span> {{ quizMode==='simulasi' ? 'Mulai Simulasi' : 'Mulai Kuis Acak' }}</button>
+        <button class="btn btn-block" @click="startQuiz"><span v-html="ic('play',16)"></span> Mulai Kuis Acak</button>
       </div>
       <div v-else class="card">
         <div v-html="illus('quiz')"></div>

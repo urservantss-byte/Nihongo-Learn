@@ -319,3 +319,10 @@ h2.ttl + .muted, h2.ttl + p { margin-bottom: 8px; }
   .tabsec, .lvl, .lvl-mini, .pop, .skel-page, .mascot, .hero-mascot { animation: none !important; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+/* ---- Simulasi bank soal ---- */
+.palette { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.pnum { width: 34px; height: 34px; border-radius: 8px; border: 1.5px solid var(--line); background: var(--card); color: var(--ink); font-size: 12px; cursor: pointer; }
+.pnum.on { border-color: var(--acc); background: color-mix(in srgb, var(--acc) 18%, var(--card)); font-weight: bold; }
+.pnum.done { border-color: var(--ok); }
+.opt.pick { border-color: var(--acc); background: color-mix(in srgb, var(--acc) 10%, var(--card)); }
