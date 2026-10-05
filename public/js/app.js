@@ -939,7 +939,7 @@ const app = createApp({
 // ===== Animasi urutan goresan kanji (data: KanjiVG, CC BY-SA 3.0) =====
 app.component('StrokeOrder', {
   props: ['ch'],
-  data: () => ({ paths: [], idx: 0, playing: false, timer: null, error: false, loading: true }),
+  data: () => ({ strokes: [], idx: 0, playing: false, timer: null, error: false, loading: true }),
   computed: {
     url() { return 'https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/' + this.ch.codePointAt(0).toString(16).padStart(5, '0') + '.svg'; }
   },
@@ -948,7 +948,8 @@ app.component('StrokeOrder', {
   beforeUnmount() { clearTimeout(this.timer); },
   methods: {
     ic(n, s) { return window.__icons ? window.__icons(n, s) : ''; },
-    reset() { clearTimeout(this.timer); this.paths = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
+    reset() { clearTimeout(this.timer); this.strokes = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
+    strokeStart(d) { const m = /M([0-9.]+),([0-9.]+)/.exec(d || ''); return { x: m ? +m[1] : 0, y: m ? +m[2] : 0 }; },
     async load() {
       try {
         const r = await fetch(this.url);
@@ -957,27 +958,31 @@ app.component('StrokeOrder', {
         const doc = new DOMParser().parseFromString(t, 'image/svg+xml');
         const ps = [...doc.querySelectorAll('path')].filter(p => /-s\d+$/.test(p.id || ''));
         ps.sort((a, b) => parseInt(a.id.match(/-s(\d+)$/)[1]) - parseInt(b.id.match(/-s(\d+)$/)[1]));
-        this.paths = ps.map(p => p.getAttribute('d')).filter(Boolean);
-        if (!this.paths.length) this.error = true;
+        this.strokes = ps.map(p => {
+          const d = p.getAttribute('d') || '';
+          const pt = this.strokeStart(d);
+          return { d, x: pt.x, y: pt.y };
+        }).filter(s => s.d);
+        if (!this.strokes.length) this.error = true;
       } catch { this.error = true; }
       this.loading = false;
     },
     play() {
       if (this.playing) { this.playing = false; clearTimeout(this.timer); return; }
-      if (this.idx >= this.paths.length) this.idx = 0;
+      if (this.idx >= this.strokes.length) this.idx = 0;
       this.playing = true;
       const tick = () => {
         if (!this.playing) return;
-        if (this.idx >= this.paths.length) { this.playing = false; return; }
+        if (this.idx >= this.strokes.length) { this.playing = false; return; }
         this.idx++;
         this.timer = setTimeout(tick, 650);
       };
       tick();
     },
-    step(d) { this.playing = false; clearTimeout(this.timer); this.idx = Math.max(0, Math.min(this.paths.length, this.idx + d)); },
+    step(d) { this.playing = false; clearTimeout(this.timer); this.idx = Math.max(0, Math.min(this.strokes.length, this.idx + d)); },
     replay() { this.playing = false; clearTimeout(this.timer); this.idx = 0; this.$nextTick(() => this.play()); },
-    playLabel() { return this.playing ? 'Jeda' : (this.idx > 0 && this.idx < this.paths.length ? 'Lanjut' : 'Putar'); },
-    shownStroke() { return Math.min(this.idx, this.paths.length); }
+    playLabel() { return this.playing ? 'Jeda' : (this.idx > 0 && this.idx < this.strokes.length ? 'Lanjut' : 'Putar'); },
+    shownStroke() { return Math.min(this.idx, this.strokes.length); }
   },
   template: `
     <div class="stroke-wrap">
@@ -985,14 +990,15 @@ app.component('StrokeOrder', {
       <div v-else-if="error" class="muted small center">Animasi goresan belum tersedia untuk kanji ini.</div>
       <div v-else>
         <svg viewBox="0 0 109 109" class="stroke-svg" aria-label="Animasi urutan goresan">
-          <path v-for="(d,i) in paths" :key="'g'+i" :d="d" class="ghost" fill="none" />
-          <path v-for="(d,i) in paths" :key="i" :d="d" class="trace" :class="{ done: i < idx }" pathLength="1" fill="none" />
+          <path v-for="(s,i) in strokes" :key="'g'+i" :d="s.d" class="ghost" fill="none" />
+          <path v-for="(s,i) in strokes" :key="i" :d="s.d" class="trace" :class="{ done: i < idx }" pathLength="1" fill="none" />
+          <text v-for="(s,i) in strokes" :key="'n'+i" :x="s.x" :y="s.y" class="snum">{{ i + 1 }}</text>
         </svg>
-        <p class="muted small center" style="margin:6px 0">Goresan {{ shownStroke() }} / {{ paths.length }}</p>
+        <p class="muted small center" style="margin:6px 0">Goresan {{ shownStroke() }} / {{ strokes.length }}</p>
         <div class="btn-row center">
           <button class="mini-btn" @click="step(-1)" :disabled="idx <= 0" title="Mundur">‹</button>
           <button class="btn sm" @click="play()">{{ playLabel() }}</button>
-          <button class="mini-btn" @click="step(1)" :disabled="idx >= paths.length" title="Maju">›</button>
+          <button class="mini-btn" @click="step(1)" :disabled="idx >= strokes.length" title="Maju">›</button>
           <button class="mini-btn" @click="replay()" title="Ulangi">↺</button>
         </div>
         <p class="muted small center" style="margin-top:6px">Urutan goresan: KanjiVG (CC BY-SA)</p>
@@ -1005,11 +1011,11 @@ app.component('WordStrokeOrder', {
   props: ['kanjis'],
   data: () => ({ sets: [], idx: 0, playing: false, timer: null, error: false, loading: true }),
   computed: {
-    total() { return this.sets.reduce((a, s) => a + s.paths.length, 0); },
+    total() { return this.sets.reduce((a, s) => a + s.strokes.length, 0); },
     activeIdx() {
       let acc = 0;
       for (let i = 0; i < this.sets.length; i++) {
-        acc += this.sets[i].paths.length;
+        acc += this.sets[i].strokes.length;
         if (this.idx < acc) return i;
       }
       return Math.max(0, this.sets.length - 1);
@@ -1026,20 +1032,25 @@ app.component('WordStrokeOrder', {
           try {
             const r = await fetch(this.svgUrl(ch));
             const t = await r.text();
-            if (!r.ok || t.indexOf('<svg') < 0) return { ch, paths: [] };
+            if (!r.ok || t.indexOf('<svg') < 0) return { ch, strokes: [] };
             const doc = new DOMParser().parseFromString(t, 'image/svg+xml');
             const ps = [...doc.querySelectorAll('path')].filter(p => /-s\d+$/.test(p.id || ''));
             ps.sort((a, b) => parseInt(a.id.match(/-s(\d+)$/)[1]) - parseInt(b.id.match(/-s(\d+)$/)[1]));
-            return { ch, paths: ps.map(p => p.getAttribute('d')).filter(Boolean) };
-          } catch { return { ch, paths: [] }; }
+            const strokes = ps.map(p => {
+              const d = p.getAttribute('d') || '';
+              const m = /M([0-9.]+),([0-9.]+)/.exec(d);
+              return { d, x: m ? +m[1] : 0, y: m ? +m[2] : 0 };
+            }).filter(s => s.d);
+            return { ch, strokes };
+          } catch { return { ch, strokes: [] }; }
         }));
-        this.sets = arr.filter(s => s.paths.length);
+        this.sets = arr.filter(s => s.strokes.length);
         if (!this.sets.length) this.error = true;
       } catch { this.error = true; }
       this.loading = false;
     },
-    offset(i) { let a = 0; for (let k = 0; k < i; k++) a += this.sets[k].paths.length; return a; },
-    shownFor(i) { return Math.max(0, Math.min(this.sets[i].paths.length, this.idx - this.offset(i))); },
+    offset(i) { let a = 0; for (let k = 0; k < i; k++) a += this.sets[k].strokes.length; return a; },
+    shownFor(i) { return Math.max(0, Math.min(this.sets[i].strokes.length, this.idx - this.offset(i))); },
     play() {
       if (this.playing) { this.playing = false; clearTimeout(this.timer); return; }
       if (this.idx >= this.total) this.idx = 0;
@@ -1065,8 +1076,9 @@ app.component('WordStrokeOrder', {
           <div v-for="(s, i) in sets" :key="s.ch" class="wstroke-item" :class="{ active: activeIdx === i }">
             <div class="wstroke-ch">{{ s.ch }}</div>
             <svg viewBox="0 0 109 109" class="stroke-svg wsm" aria-label="Animasi urutan goresan">
-              <path v-for="(d, j) in s.paths" :key="'g'+j" :d="d" class="ghost" fill="none" />
-              <path v-for="(d, j) in s.paths" :key="j" :d="d" class="trace" :class="{ done: j < shownFor(i) }" pathLength="1" fill="none" />
+              <path v-for="(st, j) in s.strokes" :key="'g'+j" :d="st.d" class="ghost" fill="none" />
+              <path v-for="(st, j) in s.strokes" :key="j" :d="st.d" class="trace" :class="{ done: j < shownFor(i) }" pathLength="1" fill="none" />
+              <text v-for="(st, j) in s.strokes" :key="'n'+j" :x="st.x" :y="st.y" class="snum">{{ j + 1 }}</text>
             </svg>
           </div>
         </div>
