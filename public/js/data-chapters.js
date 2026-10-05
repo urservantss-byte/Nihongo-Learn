@@ -34019,109 +34019,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜が早いか・〜や否や — Tepat Setelah & Seketika",
           "items": [
             {
-              "jp": "出発",
-              "kj": "しゅっぱつ",
-              "r": "shuppatsu",
-              "id": "keberangkatan",
-              "note": "出発の時間に遅れる — terlambat dari waktu keberangkatan"
+              "jp": "矢継ぎ早",
+              "kj": "矢継ぎ早",
+              "r": "yatsugibaya",
+              "id": "bertubi-tubi",
+              "note": "矢継ぎ早に質問を浴びせる — menghujani pertanyaan bertubi-tubi"
             },
             {
-              "jp": "空港",
-              "kj": "くうこう",
-              "r": "kuukou",
-              "id": "bandara",
-              "note": "空港に着く — tiba di bandara"
+              "jp": "間髪を入れず",
+              "kj": "間髪を入れず",
+              "r": "kanhatsuwoirezu",
+              "id": "tanpa jeda",
+              "note": "間髪を入れず反論する — langsung membantah tanpa jeda"
             },
             {
-              "jp": "駆け込む",
-              "kj": "かけこむ",
-              "r": "kakekomu",
-              "id": "berlari masuk",
-              "note": "コンビニに駆け込む — berlari masuk ke minimarket"
+              "jp": "すかさず",
+              "kj": "すかさず",
+              "r": "sukasazu",
+              "id": "seketika itu juga",
+              "note": "すかさずツッコミを入れる — langsung menyela seketika"
             },
             {
-              "jp": "一目",
-              "kj": "ひとめ",
-              "r": "hitome",
-              "id": "sekilas pandang",
-              "note": "一目見る — melihat sekilas"
+              "jp": "途端",
+              "kj": "途端",
+              "r": "totan",
+              "id": "tepat saat",
+              "note": "ドアを開けた途端、拍手が起こった — tepat saat pintu dibuka, tepuk tangan pecah"
             },
             {
-              "jp": "唐揚げ",
-              "kj": "からあげ",
-              "r": "karaage",
-              "id": "ayam goreng",
-              "note": "唐揚げが大好物 — sangat suka karaage"
+              "jp": "電光石火",
+              "kj": "電光石火",
+              "r": "denkousekka",
+              "id": "secepat kilat",
+              "note": "電光石火の速さで駆けつける — datang secepat kilat"
             },
             {
-              "jp": "食卓",
-              "kj": "しょくたく",
-              "r": "shokutaku",
-              "id": "meja makan",
-              "note": "食卓に出す — menyajikan ke meja makan"
+              "jp": "不意",
+              "kj": "不意",
+              "r": "fui",
+              "id": "tiba-tiba; tak terduga",
+              "note": "不意を突かれる — disergap tiba-tiba"
             },
             {
-              "jp": "吐き出す",
-              "kj": "はきだす",
-              "r": "hakidasu",
-              "id": "memuntahkan",
-              "note": "飲んだものを吐き出す — memuntahkan yang diminum"
+              "jp": "刹那",
+              "kj": "刹那",
+              "r": "setsuna",
+              "id": "sekejap",
+              "note": "刹那の出来事 — kejadian sesaat"
             },
             {
-              "jp": "大声",
-              "kj": "おおごえ",
-              "r": "oogoe",
-              "id": "suara keras",
-              "note": "大声でどなる — membentak dengan suara keras"
+              "jp": "疾走",
+              "kj": "疾走",
+              "r": "shissou",
+              "id": "berlari kencang",
+              "note": "疾走するバイク — motor yang melaju kencang"
             },
             {
-              "jp": "怒鳴る",
-              "kj": "どなる",
-              "r": "donaru",
-              "id": "membentak",
-              "note": "大声で怒鳴る — membentak dengan suara keras"
+              "jp": "瞬く間",
+              "kj": "瞬く間",
+              "r": "matatakuma",
+              "id": "dalam sekejap mata",
+              "note": "瞬く間に広がった噂 — gosip yang menyebar dalam sekejap"
             },
             {
-              "jp": "次々",
-              "kj": "つぎつぎ",
-              "r": "tsugitsugi",
-              "id": "satu demi satu",
-              "note": "次々に来る — berdatangan satu demi satu"
+              "jp": "怒涛",
+              "kj": "怒涛",
+              "r": "dotou",
+              "id": "gelombang dahsyat",
+              "note": "怒涛の勢いで攻める — menyerang dengan momentum dahsyat"
             },
             {
-              "jp": "寂しい",
-              "kj": "さびしい",
-              "r": "sabishii",
-              "id": "sepi",
-              "note": "家の中が寂しい — di dalam rumah terasa sepi"
+              "jp": "雪崩を打つ",
+              "kj": "雪崩を打つ",
+              "r": "nadarewoutsu",
+              "id": "berbondong-bondong",
+              "note": "雪崩を打って押し寄せる客 — pelanggan yang berdatangan berbondong-bondong"
             },
             {
-              "jp": "乾燥地",
-              "kj": "かんそうち",
-              "r": "kansouchi",
-              "id": "daerah kering",
-              "note": "乾燥地に生きる — hidup di daerah kering"
+              "jp": "畳み掛ける",
+              "kj": "畳み掛ける",
+              "r": "tatamikakeru",
+              "id": "menghujani; mendesak bertubi-tubi",
+              "note": "畳み掛けるように質問する — bertanya bertubi-tubi"
             },
             {
-              "jp": "蓄える",
-              "kj": "たくわえる",
-              "r": "takuwaeru",
-              "id": "menyimpan, menimbun",
-              "note": "栄養を蓄える — menyimpan nutrisi"
+              "jp": "間一髪",
+              "kj": "間一髪",
+              "r": "kanippatsu",
+              "id": "nyaris; hampir celaka",
+              "note": "間一髪で助かる — selamat di detik terakhir"
             },
             {
-              "jp": "生き延びる",
-              "kj": "いきのびる",
-              "r": "ikinobiru",
-              "id": "bertahan hidup",
-              "note": "厳しい環境で生き延びる — bertahan hidup di lingkungan keras"
+              "jp": "咄嗟",
+              "kj": "咄嗟",
+              "r": "tossa",
+              "id": "seketika; spontan",
+              "note": "咄嗟の判断 — keputusan spontan seketika"
             },
             {
-              "jp": "途上期",
-              "kj": "とじょうき",
-              "r": "tojouki",
-              "id": "masa berkembang",
-              "note": "発展途上期 — masa sedang berkembang"
+              "jp": "俄か雨",
+              "kj": "俄か雨",
+              "r": "niwakaame",
+              "id": "hujan tiba-tiba",
+              "note": "俄か雨に降られる — kehujanan hujan tiba-tiba"
             }
           ]
         },
@@ -34304,60 +34304,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 1",
           "items": [
             {
-              "ch": "早",
-              "kun": "はやい",
-              "on": "ソウ",
-              "id": "cepat, awal",
-              "note": "〜が早いか — begitu ... langsung ..."
+              "ch": "刹",
+              "kun": "",
+              "on": "セツ",
+              "id": "sekejap",
+              "note": "刹那（せつな）= sekejap"
             },
             {
-              "ch": "否",
-              "kun": "いなむ",
-              "on": "ヒ",
-              "id": "menolak, tidak",
-              "note": "〜や否や — tepat saat ... langsung ..."
+              "ch": "瞬",
+              "kun": "またた(く)",
+              "on": "シュン",
+              "id": "kedipan",
+              "note": "瞬間（しゅんかん）= sekejap"
             },
             {
-              "ch": "飲",
-              "kun": "のむ",
-              "on": "イン",
-              "id": "minum",
-              "note": "飲むなり — begitu minum, langsung ..."
+              "ch": "咄",
+              "kun": "",
+              "on": "トツ",
+              "id": "tiba-tiba",
+              "note": "咄嗟（とっさ）= spontan, seketika"
             },
             {
-              "ch": "吐",
-              "kun": "はく",
-              "on": "ト",
-              "id": "muntah, meludah",
-              "note": "吐き出す — memuntahkan"
+              "ch": "俄",
+              "kun": "にわか",
+              "on": "ガ",
+              "id": "tiba-tiba",
+              "note": "俄か雨（にわかあめ）= hujan tiba-tiba"
             },
             {
-              "ch": "側",
-              "kun": "そば・がわ",
-              "on": "ソク",
-              "id": "sisi, dekat",
-              "note": "〜そばから — begitu selesai, langsung ..."
+              "ch": "疾",
+              "kun": "はや(い)",
+              "on": "シツ",
+              "id": "cepat",
+              "note": "疾走（しっそう）= berlari kencang"
             },
             {
-              "ch": "寂",
-              "kun": "さびしい",
-              "on": "ジャク",
-              "id": "sepi",
-              "note": "寂しくなった — menjadi sepi"
+              "ch": "迅",
+              "kun": "はや(い)",
+              "on": "ジン",
+              "id": "cepat",
+              "note": "迅速（じんそく）= cepat, sigap"
             },
             {
-              "ch": "乾",
-              "kun": "かわく",
-              "on": "カン",
-              "id": "kering",
-              "note": "乾燥地 — daerah kering"
+              "ch": "忽",
+              "kun": "",
+              "on": "コツ",
+              "id": "tiba-tiba",
+              "note": "忽然（こつぜん）= tiba-tiba"
             },
             {
-              "ch": "栄",
-              "kun": "さかえる",
-              "on": "エイ",
-              "id": "makmur, berkembang",
-              "note": "栄養 えいよう — nutrisi"
+              "ch": "隙",
+              "kun": "すき",
+              "on": "ゲキ",
+              "id": "celah",
+              "note": "隙を突く（すきをつく）= memanfaatkan celah"
             }
           ]
         },
@@ -34367,43 +34367,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "昨日の引っ越し、どうだった？",
-              "id": "Pindahan kemarin gimana?"
+              "jp": "昨日の面接、どうだった？",
+              "id": "Gimana wawancara kemarin?"
             },
             {
               "sp": "B",
-              "jp": "大変だったよ。部屋に入るが早いか、段ボールの山が崩れてきてさ。",
-              "id": "Capek banget. Begitu masuk kamar, tumpukan kardus langsung ambruk."
+              "jp": "まあ、部屋に入るや否や、社長が「座って」ってさ。緊張したよ。",
+              "id": "Ya, baru masuk ruangan langsung disuruh duduk sama direkturnya. Tegang banget."
             },
             {
               "sp": "A",
-              "jp": "うわ、それはひどいね。片付けたそばから散らかるんだろう？",
-              "id": "Wah, parah ya. Begitu dibereskan langsung berantakan lagi kan?"
+              "jp": "うわ、威圧感すごそう。質問はどんな感じ？",
+              "id": "Wah, auranya pasti ngeri. Pertanyaannya gimana?"
             },
             {
               "sp": "B",
-              "jp": "そうそう。子供が生まれてからというもの、家の中がいつもこんな感じだよ。",
-              "id": "Iya. Sejak anak lahir, rumah selalu kayak gini."
+              "jp": "自己紹介を終えるが早いか、矢継ぎ早に質問が飛んできて。",
+              "id": "Baru selesai perkenalan diri, langsung dihujani pertanyaan bertubi-tubi."
             },
             {
               "sp": "A",
-              "jp": "不景気にあって、引っ越し代もばかにならないね。",
-              "id": "Di tengah resesi gini, biaya pindahan juga nggak murah ya."
+              "jp": "えー、休む間もなく？きついね。",
+              "id": "Hah, nggak dikasih napas? Berat tuh."
             },
             {
               "sp": "B",
-              "jp": "本当だよ。でも、新しい生活が始まるや、わくわくしてきた。",
-              "id": "Bener. Tapi begitu hidup baru dimulai, aku jadi semangat."
+              "jp": "ほんと。答えたそばから次の質問だもん。終わった途端、スッキリしたけどね。",
+              "id": "Banget. Baru jawab, langsung pertanyaan berikutnya. Tapi anehnya pas selesai malah plong."
             },
             {
               "sp": "A",
-              "jp": "それはよかった。手伝いが必要なら言ってね。",
-              "id": "Syukurlah. Kalau butuh bantuan bilang aja ya."
+              "jp": "ってことは手応えあったってことじゃん？不況にあっての就活、大変だよね。",
+              "id": "Berarti pede dong? Cari kerja di tengah resesi gini berat ya."
             },
             {
               "sp": "B",
-              "jp": "ありがとう。今度遊びに来てよ。",
-              "id": "Makasih. Main ke sini ya kapan-kapan."
+              "jp": "ほんとそれ。転職を決めてからというもの、毎日気が抜けないよ。",
+              "id": "Banget. Sejak mutusin pindah kerja, tiap hari nggak bisa santai."
             }
           ]
         }
@@ -34539,109 +34539,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜を皮切りに・〜に至るまで — Awal Rentang & Batas Akhir",
           "items": [
             {
+              "jp": "嚆矢",
+              "kj": "嚆矢",
+              "r": "koushi",
+              "id": "awal mula; tonggak",
+              "note": "改革の嚆矢となる — menjadi tonggak awal reformasi"
+            },
+            {
               "jp": "皮切り",
-              "kj": "かわきり",
+              "kj": "皮切り",
               "r": "kawakiri",
-              "id": "awal, permulaan",
-              "note": "〜を皮切りに — diawali dengan ..."
+              "id": "pembuka; permulaan",
+              "note": "全国ツアーの皮切り — pembuka tur nasional"
             },
             {
-              "jp": "公演",
-              "kj": "こうえん",
-              "r": "kouen",
-              "id": "pertunjukan",
-              "note": "東京公演 — pertunjukan di Tokyo"
+              "jp": "開幕",
+              "kj": "開幕",
+              "r": "kaimaku",
+              "id": "pembukaan (acara)",
+              "note": "開幕を飾る — memeriahkan pembukaan"
             },
             {
-              "jp": "予定",
-              "kj": "よてい",
-              "r": "yotei",
-              "id": "rencana",
-              "note": "予定しています — berencana"
+              "jp": "幕開け",
+              "kj": "幕開け",
+              "r": "makuake",
+              "id": "tirai dibuka; awal",
+              "note": "新時代の幕開け — awal zaman baru"
             },
             {
-              "jp": "服装",
-              "kj": "ふくそう",
-              "r": "fukusou",
-              "id": "pakaian, penampilan",
-              "note": "服装に厳しい — ketat soal pakaian"
+              "jp": "締め括り",
+              "kj": "締め括り",
+              "r": "shimekukuri",
+              "id": "penutup; kesimpulan",
+              "note": "一年を締め括る — menutup tahun dengan baik"
             },
             {
-              "jp": "綿密",
-              "kj": "めんみつ",
-              "r": "menmitsu",
-              "id": "rinci, teliti",
-              "note": "綿密な計画 — rencana yang rinci"
+              "jp": "大団円",
+              "kj": "大団円",
+              "r": "daidanen",
+              "id": "akhir yang meriah",
+              "note": "大団円を迎える — berakhir dengan meriah"
             },
             {
-              "jp": "起床",
-              "kj": "きしょう",
-              "r": "kishou",
-              "id": "bangun tidur",
-              "note": "起床時間 — waktu bangun"
+              "jp": "終幕",
+              "kj": "終幕",
+              "r": "shuumaku",
+              "id": "tirai ditutup; berakhir",
+              "note": "長い論争に終幕を下ろす — mengakhiri perdebatan panjang"
             },
             {
-              "jp": "限度",
-              "kj": "げんど",
-              "r": "gendo",
-              "id": "batas",
-              "note": "限度を超える — melampaui batas"
+              "jp": "極致",
+              "kj": "極致",
+              "r": "kyokuchi",
+              "id": "puncak; klimaks",
+              "note": "美の極致 — puncak keindahan"
             },
             {
-              "jp": "講座",
-              "kj": "こうざ",
-              "r": "kouza",
-              "id": "kursus",
-              "note": "講座の受講生 — peserta kursus"
+              "jp": "絶頂",
+              "kj": "絶頂",
+              "r": "zecchou",
+              "id": "puncak kejayaan",
+              "note": "絶頂期にある — sedang di puncak kejayaan"
             },
             {
-              "jp": "募集",
-              "kj": "ぼしゅう",
-              "r": "boshuu",
-              "id": "perekrutan",
-              "note": "募集を行う — melakukan perekrutan"
+              "jp": "黎明",
+              "kj": "黎明",
+              "r": "reimei",
+              "id": "fajar; awal zaman",
+              "note": "黎明期のインターネット — internet di masa awal"
             },
             {
-              "jp": "授与式",
-              "kj": "じゅよしき",
-              "r": "juyoshiki",
-              "id": "upacara penyerahan",
-              "note": "卒業証書授与式 — upacara penyerahan ijazah"
+              "jp": "終焉",
+              "kj": "終焉",
+              "r": "shuuen",
+              "id": "akhir zaman; keruntuhan",
+              "note": "時代の終焉 — berakhirnya sebuah zaman"
             },
             {
-              "jp": "閉店",
-              "kj": "へいてん",
-              "r": "heiten",
-              "id": "toko tutup",
-              "note": "閉店する — tutup (toko)"
+              "jp": "発端",
+              "kj": "発端",
+              "r": "hottan",
+              "id": "awal mula (kejadian)",
+              "note": "論争の発端 — pemicu perdebatan"
             },
             {
-              "jp": "せいぜい",
-              "kj": "せいぜい",
-              "r": "seizei",
-              "id": "paling-paling",
-              "note": "せいぜい6人 — paling-paling 6 orang"
+              "jp": "契機",
+              "kj": "契機",
+              "r": "keiki",
+              "id": "momentum; pemicu",
+              "note": "改革の契機となる — menjadi momentum reformasi"
             },
             {
-              "jp": "参加者",
-              "kj": "さんかしゃ",
-              "r": "sankasha",
-              "id": "peserta",
-              "note": "参加者が集まる — peserta berkumpul"
+              "jp": "節目",
+              "kj": "節目",
+              "r": "fushime",
+              "id": "tonggak; momen penting",
+              "note": "人生の節目 — tonggak kehidupan"
             },
             {
-              "jp": "最高",
-              "kj": "さいこう",
-              "r": "saikou",
-              "id": "tertinggi, terbaik",
-              "note": "最高に暑い日 — hari terpanas"
-            },
-            {
-              "jp": "末日",
-              "kj": "まつじつ",
-              "r": "matsujitsu",
-              "id": "hari terakhir (bulan)",
-              "note": "9月末日 — akhir September"
+              "jp": "有終の美",
+              "kj": "有終の美",
+              "r": "yuushuunobi",
+              "id": "akhir yang indah",
+              "note": "有終の美を飾る — menutup dengan akhir yang indah"
             }
           ]
         },
@@ -34796,60 +34796,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 2",
           "items": [
             {
-              "ch": "皮",
-              "kun": "かわ",
-              "on": "ヒ",
-              "id": "kulit",
-              "note": "皮切り かわきり — awal, permulaan"
+              "ch": "嚆",
+              "kun": "",
+              "on": "コウ",
+              "id": "awal mula",
+              "note": "嚆矢（こうし）= tonggak awal"
             },
             {
-              "ch": "限",
-              "kun": "かぎる",
-              "on": "ゲン",
-              "id": "batas",
-              "note": "〜を限りに — berakhir sampai ..."
+              "ch": "黎",
+              "kun": "",
+              "on": "レイ",
+              "id": "fajar",
+              "note": "黎明（れいめい）= fajar zaman"
             },
             {
-              "ch": "募",
-              "kun": "つのる",
-              "on": "ボ",
-              "id": "merekrut",
-              "note": "募集 ぼしゅう — perekrutan"
+              "ch": "幕",
+              "kun": "まく",
+              "on": "マク",
+              "id": "tirai",
+              "note": "開幕（かいまく）= pembukaan"
             },
             {
-              "ch": "授",
-              "kun": "さずける",
-              "on": "ジュ",
-              "id": "menganugerahkan",
-              "note": "授与式 じゅよしき — upacara penyerahan"
+              "ch": "締",
+              "kun": "し(まる)",
+              "on": "テイ",
+              "id": "mengikat; menutup",
+              "note": "締め括り（しめくくり）= penutup"
             },
             {
-              "ch": "終",
-              "kun": "おわる・おえる",
-              "on": "シュウ",
-              "id": "selesai",
-              "note": "〜をもって — dengan ini berakhir"
+              "ch": "焉",
+              "kun": "",
+              "on": "エン",
+              "id": "akhir",
+              "note": "終焉（しゅうえん）= akhir zaman"
             },
             {
-              "ch": "密",
-              "kun": "—",
-              "on": "ミツ",
-              "id": "rapat, rinci",
-              "note": "綿密 めんみつ — rinci, teliti"
+              "ch": "契",
+              "kun": "ちぎ(る)",
+              "on": "ケイ",
+              "id": "janji; momentum",
+              "note": "契機（けいき）= momentum"
             },
             {
-              "ch": "床",
-              "kun": "ゆか・とこ",
-              "on": "ショウ",
-              "id": "lantai",
-              "note": "起床 きしょう — bangun tidur"
+              "ch": "節",
+              "kun": "ふし",
+              "on": "セツ",
+              "id": "ruas; tonggak",
+              "note": "節目（ふしめ）= tonggak"
             },
             {
-              "ch": "催",
-              "kun": "もよおす",
-              "on": "サイ",
-              "id": "mengadakan",
-              "note": "開催 かいさい — penyelenggaraan"
+              "ch": "頂",
+              "kun": "いただき",
+              "on": "チョウ",
+              "id": "puncak",
+              "note": "頂点（ちょうてん）= puncak"
             }
           ]
         },
@@ -34859,43 +34859,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "今度の文化祭、準備は進んでる？",
-              "id": "Persiapan festival budaya gimana?"
+              "jp": "ツアーお疲れさま！大阪を皮切りに、全国回ったんだよね。",
+              "id": "Makasih buat turnya! Dibuka dari Osaka, keliling seluruh Jepang ya."
             },
             {
               "sp": "B",
-              "jp": "うん。オープニングの演奏を皮切りに、いろんな企画があるんだ。",
-              "id": "Iya. Diawali pertunjukan pembuka, ada banyak acara."
+              "jp": "うん、札幌に至るまで全部で20公演。長かったなあ。",
+              "id": "Iya, sampai Sapporo total 20 pertunjukan. Panjang banget rasanya."
             },
             {
               "sp": "A",
-              "jp": "へえ。朝の開会式から夜の後夜祭に至るまで、一日中あるの？",
-              "id": "Wah. Dari upacara pembuka pagi sampai acara penutup malam, seharian penuh?"
+              "jp": "でも初日からチケット完売だったんでしょ？すごいじゃん。",
+              "id": "Tapi dari hari pertama tiketnya sold out kan? Keren tuh."
             },
             {
               "sp": "B",
-              "jp": "そう。実行委員の募集は今月を限りに締め切るよ。",
-              "id": "Iya. Pendaftaran panitia ditutup sampai bulan ini."
+              "jp": "まあね。初日が終わったときは、ほっとしたっていうか。",
+              "id": "Ya gitu deh. Pas hari pertama selesai rasanya lega banget."
             },
             {
               "sp": "A",
-              "jp": "参加者はどのくらい来そう？",
-              "id": "Kira-kira pesertanya berapa?"
+              "jp": "今回のツアーをもって、結成10周年なんだよね。",
+              "id": "Tur kali ini sekaligus penanda 10 tahun bandnya ya."
             },
             {
               "sp": "B",
-              "jp": "去年は500人だったけど、今年はせいぜい400人といったところだね。",
-              "id": "Tahun lalu 500 orang, tahun ini paling-paling 400 orang lah."
+              "jp": "そう。これを限りに、一旦活動休止するんだ。",
+              "id": "Betul. Setelah ini, kita hiatus dulu."
             },
             {
               "sp": "A",
-              "jp": "じゃあ、早めに申し込まなきゃ。",
-              "id": "Kalau gitu harus daftar cepat."
+              "jp": "えっ、そうなの？残念だなあ。",
+              "id": "Hah, gitu? Sayang banget."
             },
             {
               "sp": "B",
-              "jp": "うん。これをもって会議を終わります。解散！",
-              "id": "Oke. Dengan ini rapat selesai. Bubar!"
+              "jp": "充電期間ってやつさ。復活は来年の今ごろ、ってところだね。",
+              "id": "Masa ngecas lah istilahnya. Comeback-nya kira-kira tahun depan segini."
             }
           ]
         }
@@ -35031,109 +35031,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜をおいて・〜ならでは — Pembatasan & Keunikan",
           "items": [
             {
-              "jp": "染色",
-              "kj": "せんしょく",
-              "r": "senshoku",
-              "id": "pewarnaan (kain)",
-              "note": "染色ができる — bisa mewarnai kain"
+              "jp": "唯一無二",
+              "kj": "唯一無二",
+              "r": "yuiitsumuni",
+              "id": "satu-satunya",
+              "note": "唯一無二の存在 — sosok yang satu-satunya"
             },
             {
-              "jp": "色使い",
-              "kj": "いろづかい",
-              "r": "irozukai",
-              "id": "pemakaian warna",
-              "note": "素晴らしい色使い — pemakaian warna yang indah"
+              "jp": "空前絶後",
+              "kj": "空前絶後",
+              "r": "kuuzenzetsugo",
+              "id": "belum pernah terjadi",
+              "note": "空前絶後の記録 — rekor yang belum pernah terjadi"
             },
             {
-              "jp": "候補地",
-              "kj": "こうほち",
-              "r": "kouhochi",
-              "id": "lokasi kandidat",
-              "note": "候補地に選ばれる — terpilih sebagai lokasi kandidat"
+              "jp": "類稀",
+              "kj": "類稀",
+              "r": "taguimare",
+              "id": "langka tak tertandingi",
+              "note": "類稀な才能 — bakat yang langka tak tertandingi"
             },
             {
-              "jp": "演技",
-              "kj": "えんぎ",
-              "r": "engi",
-              "id": "akting",
-              "note": "演技がうまい — aktingnya bagus"
+              "jp": "随一",
+              "kj": "随一",
+              "r": "zuiichi",
+              "id": "nomor satu; tiada banding",
+              "note": "国内随一の技術 — teknologi nomor satu di negeri ini"
             },
             {
-              "jp": "ほれぼれする",
-              "kj": "ほれぼれする",
-              "r": "horeboresuru",
-              "id": "memukau",
-              "note": "ほれぼれするほど — sampai memukau"
+              "jp": "卓越",
+              "kj": "卓越",
+              "r": "takuetsu",
+              "id": "unggul",
+              "note": "卓越した手腕 — kemampuan yang unggul"
             },
             {
-              "jp": "とどまる",
-              "kj": "とどまる",
-              "r": "todomaru",
-              "id": "terbatas, berhenti",
-              "note": "一国にとどまらない — tidak terbatas pada satu negara"
+              "jp": "群を抜く",
+              "kj": "群を抜く",
+              "r": "gunwonuku",
+              "id": "menonjol dari yang lain",
+              "note": "群を抜いて優れている — unggul menonjol dari yang lain"
             },
             {
-              "jp": "情報",
-              "kj": "じょうほう",
-              "r": "jouhou",
-              "id": "informasi",
-              "note": "情報を伝える — menyampaikan informasi"
+              "jp": "抜きん出る",
+              "kj": "抜きん出る",
+              "r": "nukinderu",
+              "id": "menonjol",
+              "note": "他を抜きん出る実力 — kemampuan yang menonjol dari lainnya"
             },
             {
-              "jp": "影響",
-              "kj": "えいきょう",
-              "r": "eikyou",
-              "id": "pengaruh",
-              "note": "影響を受ける — terkena pengaruh"
+              "jp": "並ぶものがない",
+              "kj": "並ぶものがない",
+              "r": "narabumonoganai",
+              "id": "tiada tanding",
+              "note": "並ぶもののない美しさ — keindahan tiada tanding"
             },
             {
-              "jp": "手間",
-              "kj": "てま",
-              "r": "tema",
-              "id": "usaha, ketelitian",
-              "note": "手間がかかる — butuh usaha/waktu"
+              "jp": "他に類を見ない",
+              "kj": "他に類を見ない",
+              "r": "hokani ruiwominai",
+              "id": "tak ada duanya",
+              "note": "他に類を見ない大ヒット — hits besar yang tak ada duanya"
             },
             {
-              "jp": "日常",
-              "kj": "にちじょう",
-              "r": "nichijou",
-              "id": "sehari-hari",
-              "note": "日常の料理 — masakan sehari-hari"
+              "jp": "比類なき",
+              "kj": "比類なき",
+              "r": "hiruinaki",
+              "id": "tiada banding",
+              "note": "比類なき功績 — prestasi tiada banding"
             },
             {
-              "jp": "面倒",
-              "kj": "めんどう",
-              "r": "mendou",
-              "id": "merepotkan",
-              "note": "面倒だ — merepotkan"
+              "jp": "独壇場",
+              "kj": "独壇場",
+              "r": "dokudanjou",
+              "id": "panggung tunggal; dominasi",
+              "note": "独壇場を築く — membangun dominasi mutlak"
             },
             {
-              "jp": "感性",
-              "kj": "かんせい",
-              "r": "kansei",
-              "id": "kepekaan",
-              "note": "鋭い感性 — kepekaan yang tajam"
+              "jp": "一頭地を抜く",
+              "kj": "一頭地を抜く",
+              "r": "ittouchiwonuku",
+              "id": "unggul jauh",
+              "note": "一頭地を抜く活躍 — kiprah yang unggul jauh"
             },
             {
-              "jp": "語彙",
-              "kj": "ごい",
-              "r": "goi",
-              "id": "kosakata",
-              "note": "語彙が豊富 — kosakatanya kaya"
+              "jp": "出色",
+              "kj": "出色",
+              "r": "shusshoku",
+              "id": "luar biasa menonjol",
+              "note": "出色の出来栄え — hasil yang luar biasa"
             },
             {
-              "jp": "人柄",
-              "kj": "ひとがら",
-              "r": "hitogara",
-              "id": "kepribadian",
-              "note": "人柄がいい — kepribadiannya baik"
+              "jp": "傑出",
+              "kj": "傑出",
+              "r": "kesshutsu",
+              "id": "menonjol; luar biasa",
+              "note": "傑出した才能 — bakat yang luar biasa"
             },
             {
-              "jp": "ぐいぐい",
-              "kj": "ぐいぐい",
-              "r": "guigui",
-              "id": "dengan kuat, mendesak",
-              "note": "ぐいぐい引っ張る — menarik dengan kuat"
+              "jp": "無双",
+              "kj": "無双",
+              "r": "musou",
+              "id": "tiada tanding",
+              "note": "天下無双の強さ — kekuatan tiada tanding"
             }
           ]
         },
@@ -35288,60 +35288,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 3",
           "items": [
             {
-              "ch": "染",
-              "kun": "そまる・そめる",
-              "on": "セン",
-              "id": "mewarnai",
-              "note": "染色 せんしょく — pewarnaan kain"
+              "ch": "唯",
+              "kun": "ただ",
+              "on": "ユイ",
+              "id": "hanya",
+              "note": "唯一無二（ゆいいつむに）= satu-satunya"
             },
             {
-              "ch": "候",
-              "kun": "そうろう",
-              "on": "コウ",
-              "id": "calon, musim",
-              "note": "候補地 こうほち — lokasi kandidat"
+              "ch": "稀",
+              "kun": "まれ",
+              "on": "キ",
+              "id": "langka",
+              "note": "類稀（たぐいまれ）= langka tak tertandingi"
             },
             {
-              "ch": "演",
-              "kun": "えんじる",
-              "on": "エン",
-              "id": "berakting",
-              "note": "演技 えんぎ — akting"
+              "ch": "卓",
+              "kun": "",
+              "on": "タク",
+              "id": "unggul",
+              "note": "卓越（たくえつ）= unggul"
             },
             {
-              "ch": "技",
-              "kun": "わざ",
-              "on": "ギ",
-              "id": "teknik",
-              "note": "演技 えんぎ — akting"
+              "ch": "傑",
+              "kun": "",
+              "on": "ケツ",
+              "id": "luar biasa",
+              "note": "傑出（けっしゅつ）= menonjol"
             },
             {
-              "ch": "留",
-              "kun": "とまる・とめる",
-              "on": "リュウ",
-              "id": "berhenti",
-              "note": "〜にとどまらず — tidak terbatas pada ..."
+              "ch": "随",
+              "kun": "したが(う)",
+              "on": "ズイ",
+              "id": "mengikuti",
+              "note": "随一（ずいいち）= nomor satu"
             },
             {
-              "ch": "響",
-              "kun": "ひびく",
-              "on": "キョウ",
-              "id": "bergema",
-              "note": "影響 えいきょう — pengaruh"
+              "ch": "抜",
+              "kun": "ぬ(く)",
+              "on": "バツ",
+              "id": "mencabut; menonjol",
+              "note": "群を抜く（ぐんをぬく）= menonjol"
             },
             {
-              "ch": "鋭",
-              "kun": "するどい",
-              "on": "エイ",
-              "id": "tajam",
-              "note": "鋭い感性 — kepekaan yang tajam"
+              "ch": "類",
+              "kun": "たぐい",
+              "on": "ルイ",
+              "id": "jenis",
+              "note": "比類なき（ひるいなき）= tiada banding"
             },
             {
-              "ch": "柄",
-              "kun": "がら",
-              "on": "ヘイ",
-              "id": "corak, kepribadian",
-              "note": "人柄 ひとがら — kepribadian"
+              "ch": "双",
+              "kun": "ふた(つ)",
+              "on": "ソウ",
+              "id": "pasangan",
+              "note": "無双（むそう）= tiada tanding"
             }
           ]
         },
@@ -35351,43 +35351,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "この店のカレー、すごくおいしいね。",
-              "id": "Kari di kedai ini enak banget ya."
+              "jp": "この店の寿司、やっぱり別格だよね。",
+              "id": "Sushi di sini emang beda kelas ya."
             },
             {
               "sp": "B",
-              "jp": "でしょう？この味はこの店ならではだよ。",
-              "id": "Kan? Rasa ini khas cuma ada di kedai ini."
+              "jp": "うん、ここの大将をおいて、こんなネタを握れる人はいないよ。",
+              "id": "Iya, selain chef di sini, nggak ada yang bisa bikin neta seenak ini."
             },
             {
               "sp": "A",
-              "jp": "本当だ。チェーン店はおろか、他のカレー専門店でも食べられない味だ。",
-              "id": "Bener. Jangankan resto chain, kedai kari lain pun nggak ada yang seenak ini."
+              "jp": "確かに。鮮度もさることながら、シャリの温度が絶妙なんだよ。",
+              "id": "Bener. Selain ikannya yang segar, suhu nasinya juga pas banget."
             },
             {
               "sp": "B",
-              "jp": "店主のこだわりもさることながら、スパイスの配合が絶妙なんだ。",
-              "id": "Keseriusan pemiliknya memang hebat, tapi racikan rempahnya juga luar biasa."
+              "jp": "握りの技はおろか、目利きも一流だもんね。",
+              "id": "Jangankan teknik ngepalnya, kemampuan milih ikannya aja udah kelas satu."
             },
             {
               "sp": "A",
-              "jp": "噂は日本にとどまらず、海外の雑誌にも載ったらしいよ。",
-              "id": "Katanya pamornya nggak cuma di Jepang, sampai dimuat di majalah luar negeri."
+              "jp": "回転寿司にとどまらず、高級店でも通用するレベルだよ。",
+              "id": "Nggak cuma buat sushi putar, buat restoran mewah juga masuk levelnya."
             },
             {
               "sp": "B",
-              "jp": "へえ。じゃあ、この店のシェフをおいてほかに作れないね。",
-              "id": "Wah. Kalau gitu, selain chef kedai ini nggak ada yang bisa bikin."
+              "jp": "京都出身ならではの繊細さっていうかさ。",
+              "id": "Kayak kehalusan khas orang Kyoto gitu lah."
             },
             {
               "sp": "A",
-              "jp": "また来ようね。",
-              "id": "Ayo ke sini lagi ya."
+              "jp": "ほんと、他では味わえないよね。",
+              "id": "Bener, di tempat lain nggak bakal nemu."
             },
             {
               "sp": "B",
-              "jp": "うん、絶対！",
-              "id": "Iya, pasti!"
+              "jp": "次はカウンターで食べてみたいな。",
+              "id": "Berikutnya pengen makan di counter deh."
             }
           ]
         }
@@ -35523,109 +35523,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜なり…なり・〜であれ…であれ — Contoh & Pilihan",
           "items": [
             {
-              "jp": "おにぎり",
-              "kj": "おにぎり",
-              "r": "onigiri",
-              "id": "nasi kepal",
-              "note": "おにぎりを買う — membeli onigiri"
+              "jp": "一例",
+              "kj": "一例",
+              "r": "ichirei",
+              "id": "sebuah contoh",
+              "note": "一例を挙げる — memberi sebuah contoh"
             },
             {
-              "jp": "緊急",
-              "kj": "きんきゅう",
-              "r": "kinkyuu",
-              "id": "darurat",
-              "note": "緊急の場合 — dalam keadaan darurat"
+              "jp": "枚挙に暇がない",
+              "kj": "枚挙に暇がない",
+              "r": "maikyoniitomaganai",
+              "id": "tak terhitung banyaknya",
+              "note": "枚挙に暇がないほど多い — saking banyaknya tak terhitung"
             },
             {
-              "jp": "冷静",
-              "kj": "れいせい",
-              "r": "reisei",
-              "id": "tenang",
-              "note": "冷静になる — menjadi tenang"
+              "jp": "挙げればきりがない",
+              "kj": "挙げればきりがない",
+              "r": "agereba kiri ga nai",
+              "id": "kalau disebut tak ada habisnya",
+              "note": "挙げればきりがない — kalau disebut-sebut nggak ada habisnya"
             },
             {
-              "jp": "芸術",
-              "kj": "げいじゅつ",
-              "r": "geijutsu",
-              "id": "seni",
-              "note": "芸術には才能が必要 — seni butuh bakat"
+              "jp": "千差万別",
+              "kj": "千差万別",
+              "r": "sensabanbetsu",
+              "id": "beraneka ragam",
+              "note": "千差万別の意見 — pendapat yang beraneka ragam"
             },
             {
-              "jp": "才能",
-              "kj": "さいのう",
-              "r": "sainou",
-              "id": "bakat",
-              "note": "才能がある — berbakat"
+              "jp": "十人十色",
+              "kj": "十人十色",
+              "r": "juunintoiro",
+              "id": "setiap orang berbeda",
+              "note": "好みは十人十色だ — selera tiap orang beda-beda"
             },
             {
-              "jp": "努力",
-              "kj": "どりょく",
-              "r": "doryoku",
-              "id": "usaha",
-              "note": "努力だけではだめ — usaha saja tidak cukup"
+              "jp": "百花繚乱",
+              "kj": "百花繚乱",
+              "r": "hyakkaryouran",
+              "id": "bermekaran beraneka",
+              "note": "百花繚乱の才能 — bakat-bakat yang bermekaran"
             },
             {
-              "jp": "映像",
-              "kj": "えいぞう",
-              "r": "eizou",
-              "id": "gambar, visual",
-              "note": "映像の美しさ — keindahan gambar"
+              "jp": "玉石混交",
+              "kj": "玉石混交",
+              "r": "gyokusekikonkou",
+              "id": "campur aduk baik-buruk",
+              "note": "玉石混交の情報 — informasi yang campur aduk"
             },
             {
-              "jp": "素晴らしい",
-              "kj": "すばらしい",
-              "r": "subarashii",
-              "id": "luar biasa",
-              "note": "素晴らしい作品 — karya yang luar biasa"
+              "jp": "甲乙つけがたい",
+              "kj": "甲乙つけがたい",
+              "r": "kouotsukegatai",
+              "id": "sulit menentukan mana lebih baik",
+              "note": "甲乙つけがたい勝負 — pertandingan yang sulit ditentukan pemenangnya"
             },
             {
-              "jp": "砂浜",
-              "kj": "すなはま",
-              "r": "sunahama",
-              "id": "pantai berpasir",
-              "note": "砂浜で遊ぶ — bermain di pantai"
+              "jp": "優劣つけがたい",
+              "kj": "優劣つけがたい",
+              "r": "yuuretsutsukegatai",
+              "id": "sulit dibedakan unggulnya",
+              "note": "優劣つけがたい二人 — dua orang yang sulit dibedakan keunggulannya"
             },
             {
-              "jp": "全身",
-              "kj": "ぜんしん",
-              "r": "zenshin",
-              "id": "sekujur tubuh",
-              "note": "全身砂だらけ — sekujur tubuh penuh pasir"
+              "jp": "一長一短",
+              "kj": "一長一短",
+              "r": "icchouittan",
+              "id": "ada plus minusnya",
+              "note": "一長一短がある — ada plus minusnya"
             },
             {
-              "jp": "廊下",
-              "kj": "ろうか",
-              "r": "rouka",
-              "id": "koridor",
-              "note": "廊下を歩く — berjalan di koridor"
+              "jp": "良し悪し",
+              "kj": "良し悪し",
+              "r": "yoshiashi",
+              "id": "baik buruknya",
+              "note": "良し悪しを判断する — menilai baik buruknya"
             },
             {
-              "jp": "家中",
-              "kj": "いえじゅう",
-              "r": "iejuu",
-              "id": "seluruh rumah",
-              "note": "家中〜が落ちている — seluruh rumah penuh ..."
+              "jp": "取捨選択",
+              "kj": "取捨選択",
+              "r": "shushasentaku",
+              "id": "memilih-milah",
+              "note": "取捨選択を迫られる — dipaksa memilih-milah"
             },
             {
-              "jp": "文句",
-              "kj": "もんく",
-              "r": "monku",
-              "id": "keluhan, cela",
-              "note": "文句なし — tanpa cela"
+              "jp": "二者択一",
+              "kj": "二者択一",
+              "r": "nishatakuitsu",
+              "id": "pilih salah satu dari dua",
+              "note": "二者択一を迫られる — dipaksa memilih salah satu"
             },
             {
-              "jp": "雰囲気",
-              "kj": "ふんいき",
-              "r": "fun'iki",
-              "id": "suasana",
-              "note": "いい雰囲気 — suasana yang enak"
+              "jp": "三者三様",
+              "kj": "三者三様",
+              "r": "sanshasanyou",
+              "id": "masing-masing berbeda",
+              "note": "三者三様の答え — jawaban yang masing-masing berbeda"
             },
             {
-              "jp": "予定通り",
-              "kj": "よていどおり",
-              "r": "yoteidoori",
-              "id": "sesuai jadwal",
-              "note": "予定通り行う — dilaksanakan sesuai jadwal"
+              "jp": "選り取り見取り",
+              "kj": "選り取り見取り",
+              "r": "yoridorimidori",
+              "id": "bisa pilih sesuka hati",
+              "note": "選り取り見取りだ — bisa pilih sesuka hati"
             }
           ]
         },
@@ -35752,60 +35752,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 4",
           "items": [
             {
-              "ch": "緊",
-              "kun": "しまる・しめる",
-              "on": "キン",
-              "id": "ketat",
-              "note": "緊急 きんきゅう — darurat"
+              "ch": "枚",
+              "kun": "まい",
+              "on": "マイ",
+              "id": "lembar",
+              "note": "枚挙（まいきょ）= enumerasi; pencacahan"
             },
             {
-              "ch": "冷",
-              "kun": "つめたい・ひえる",
-              "on": "レイ",
-              "id": "dingin",
-              "note": "冷静 れいせい — tenang"
+              "ch": "暇",
+              "kun": "ひま",
+              "on": "カ",
+              "id": "waktu luang",
+              "note": "枚挙に暇がない（まいきょにいとまがない）= tak terhitung"
             },
             {
-              "ch": "芸",
-              "kun": "うえる・うえ",
-              "on": "ゲイ",
-              "id": "seni",
-              "note": "芸術 げいじゅつ — seni"
+              "ch": "挙",
+              "kun": "あ(げる)",
+              "on": "キョ",
+              "id": "mengangkat",
+              "note": "一例を挙げる（いちれいをあげる）= memberi contoh"
             },
             {
-              "ch": "術",
-              "kun": "すべ",
-              "on": "ジュツ",
-              "id": "teknik",
-              "note": "芸術 げいじゅつ — seni"
+              "ch": "択",
+              "kun": "えら(ぶ)",
+              "on": "タク",
+              "id": "memilih",
+              "note": "二者択一（にしゃたくいつ）= pilih salah satu"
             },
             {
-              "ch": "努",
-              "kun": "つとめる",
-              "on": "ド",
-              "id": "berusaha",
-              "note": "努力 どりょく — usaha"
+              "ch": "捨",
+              "kun": "す(てる)",
+              "on": "シャ",
+              "id": "membuang",
+              "note": "取捨選択（しゅしゃせんたく）= memilih-milah"
             },
             {
-              "ch": "映",
-              "kun": "うつる・うつす",
-              "on": "エイ",
-              "id": "memantulkan",
-              "note": "映像 えいぞう — gambar, visual"
+              "ch": "繚",
+              "kun": "",
+              "on": "リョウ",
+              "id": "beraneka",
+              "note": "百花繚乱（ひゃっかりょうらん）= bermekaran"
             },
             {
-              "ch": "砂",
-              "kun": "すな",
+              "ch": "混",
+              "kun": "ま(じる)",
+              "on": "コン",
+              "id": "campur",
+              "note": "玉石混交（ぎょくせきこんこう）= campur aduk"
+            },
+            {
+              "ch": "差",
+              "kun": "さ(す)",
               "on": "サ",
-              "id": "pasir",
-              "note": "砂浜 すなはま — pantai berpasir"
-            },
-            {
-              "ch": "浜",
-              "kun": "はま",
-              "on": "ヒン",
-              "id": "pantai",
-              "note": "砂浜 すなはま — pantai berpasir"
+              "id": "perbedaan",
+              "note": "千差万別（せんさばんべつ）= beraneka ragam"
             }
           ]
         },
@@ -35815,43 +35815,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "週末、どこか行かない？",
-              "id": "Akhir pekan, pergi ke mana gitu yuk?"
+              "jp": "週末どうする？映画なり、買い物なり、どっか行こうよ。",
+              "id": "Akhir pekan mau ngapain? Nonton kek, belanja kek, jalan yuk."
             },
             {
               "sp": "B",
-              "jp": "いいね。海なり山なり、どこでもいいよ。",
-              "id": "Boleh. Pantai atau gunung, mana aja oke."
+              "jp": "映画はいいけど、何見る？アクションであれ、コメディであれ、私はOKだよ。",
+              "id": "Nonton boleh, tapi nonton apa? Aksi atau komedi, aku oke aja."
             },
             {
               "sp": "A",
-              "jp": "じゃあ、海にしようか。晴れであれ雨であれ、楽しめそうだし。",
-              "id": "Kalau gitu ke pantai aja. Mau cerah mau hujan, kayaknya tetap seru."
+              "jp": "じゃあさ、新宿といい、渋谷といい、どこも混んでるよね。",
+              "id": "Ya tapi, Shinjuku kek, Shibuya kek, semuanya rame ya."
             },
             {
               "sp": "B",
-              "jp": "うん。景色といい食べ物といい、最高だよ、あの辺は。",
-              "id": "Iya. Daerah sana, baik pemandangannya maupun makanannya, top banget."
+              "jp": "まあ、土日だしね。昼といわず、夜といわず、人多いし。",
+              "id": "Ya namanya juga weekend. Siang kek, malam kek, pasti penuh orang."
             },
             {
               "sp": "A",
-              "jp": "土日といわず平日といわず、混んでるって聞いたけど。",
-              "id": "Katanya rame terus, baik weekend maupun weekday."
+              "jp": "っていうか、家でまったりするのもアリじゃん？",
+              "id": "Ngomong-ngomong, santai di rumah juga boleh kan?"
             },
             {
               "sp": "B",
-              "jp": "大丈夫。朝早く行けば空いてるよ。",
-              "id": "Aman. Kalau berangkat pagi-pagi masih sepi."
+              "jp": "それもいいね。たまにはさ。",
+              "id": "Boleh juga tuh. Sesekali."
             },
             {
               "sp": "A",
-              "jp": "じゃあ、電車なり車なりで行こう。",
-              "id": "Kalau gitu berangkat naik kereta atau mobil aja."
+              "jp": "決まり。じゃあ、ポテチ買ってこよう。",
+              "id": "Deal. Yaudah aku beli keripik."
             },
             {
               "sp": "B",
-              "jp": "了解！楽しみだね。",
-              "id": "Siap! Nggak sabar nih."
+              "jp": "了解。私は飲み物用意しとく。",
+              "id": "Oke. Aku siapin minumannya."
             }
           ]
         }
@@ -35987,109 +35987,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜いかんだ・〜をよそに — Ketergantungan & Ketidakpedulian",
           "items": [
             {
-              "jp": "開催",
-              "kj": "かいさい",
-              "r": "kaisai",
-              "id": "penyelenggaraan",
-              "note": "大会を開催する — menyelenggarakan kejuaraan"
+              "jp": "左右される",
+              "kj": "左右される",
+              "r": "sayousareru",
+              "id": "dipengaruhi; ditentukan",
+              "note": "天候に左右される — dipengaruhi cuaca"
             },
             {
-              "jp": "協力",
-              "kj": "きょうりょく",
-              "r": "kyouryoku",
-              "id": "kerja sama",
-              "note": "協力を得る — mendapat kerja sama"
+              "jp": "委ねる",
+              "kj": "委ねる",
+              "r": "yudaneru",
+              "id": "menyerahkan",
+              "note": "運命に委ねる — menyerahkan pada nasib"
             },
             {
-              "jp": "採用",
-              "kj": "さいよう",
-              "r": "saiyou",
-              "id": "penerimaan (kerja)",
-              "note": "採用が決まる — diterima kerja"
+              "jp": "一任する",
+              "kj": "一任する",
+              "r": "ichininsuru",
+              "id": "menyerahkan sepenuhnya",
+              "note": "彼に一任する — menyerahkan sepenuhnya padanya"
             },
             {
-              "jp": "個人情報",
-              "kj": "こじんじょうほう",
-              "r": "kojinhoujou",
-              "id": "informasi pribadi",
-              "note": "個人情報を守る — melindungi informasi pribadi"
+              "jp": "他力本願",
+              "kj": "他力本願",
+              "r": "tarikihongan",
+              "id": "mengandalkan orang lain",
+              "note": "他力本願ではだめだ — mengandalkan orang lain itu nggak bener"
             },
             {
-              "jp": "問い合わせ",
-              "kj": "といあわせ",
-              "r": "toiawase",
-              "id": "pertanyaan, permintaan info",
-              "note": "問い合わせに答える — menjawab pertanyaan"
+              "jp": "成り行き任せ",
+              "kj": "成り行き任せ",
+              "r": "nariyukimakase",
+              "id": "membiarkan mengalir",
+              "note": "成り行き任せにする — membiarkannya mengalir apa adanya"
             },
             {
-              "jp": "優勝",
-              "kj": "ゆうしょう",
-              "r": "yuushou",
-              "id": "juara",
-              "note": "優勝する — menjadi juara"
+              "jp": "野放し",
+              "kj": "野放し",
+              "r": "nobanashi",
+              "id": "dibiarkan liar",
+              "note": "野放しにする — membiarkannya liar tanpa aturan"
             },
             {
-              "jp": "障害",
-              "kj": "しょうがい",
-              "r": "shougai",
-              "id": "keterbatasan, rintangan",
-              "note": "障害を乗り越える — mengatasi rintangan"
+              "jp": "見て見ぬふり",
+              "kj": "見て見ぬふり",
+              "r": "miteminufuri",
+              "id": "pura-pura tidak melihat",
+              "note": "見て見ぬふりをする — pura-pura tidak melihat"
             },
             {
-              "jp": "精力的",
-              "kj": "せいりょくてき",
-              "r": "seiryokuteki",
-              "id": "penuh semangat",
-              "note": "精力的に活動する — aktif dengan penuh semangat"
+              "jp": "知らんぷり",
+              "kj": "知らんぷり",
+              "r": "shiranpuri",
+              "id": "pura-pura tidak tahu",
+              "note": "知らんぷりを決め込む — bersikeras pura-pura tidak tahu"
             },
             {
-              "jp": "宣告",
-              "kj": "せんこく",
-              "r": "senkoku",
-              "id": "vonis, pengumuman",
-              "note": "がんの宣告 — vonis kanker"
+              "jp": "黙殺",
+              "kj": "黙殺",
+              "r": "mokusatsu",
+              "id": "mengabaikan total",
+              "note": "批判を黙殺する — mengabaikan kritik sama sekali"
             },
             {
-              "jp": "最期",
-              "kj": "さいご",
-              "r": "saigo",
-              "id": "akhir (hidup)",
-              "note": "最期まで — sampai akhir hayat"
+              "jp": "等閑視",
+              "kj": "等閑視",
+              "r": "toukanshi",
+              "id": "mengabaikan; meremehkan",
+              "note": "等閑視できない問題 — masalah yang tak bisa diabaikan"
             },
             {
-              "jp": "振る舞う",
-              "kj": "ふるまう",
-              "r": "furumau",
-              "id": "bersikap, bertingkah",
-              "note": "明るく振る舞う — bersikap ceria"
+              "jp": "軽視",
+              "kj": "軽視",
+              "r": "keishi",
+              "id": "meremehkan",
+              "note": "リスクを軽視する — meremehkan risiko"
             },
             {
-              "jp": "退院",
-              "kj": "たいいん",
-              "r": "taiin",
-              "id": "keluar dari rumah sakit",
-              "note": "退院する — keluar dari rumah sakit"
+              "jp": "蔑ろ",
+              "kj": "蔑ろ",
+              "r": "naigashiro",
+              "id": "mengabaikan; meremehkan",
+              "note": "約束を蔑ろにする — mengabaikan janji"
             },
             {
-              "jp": "抗議",
-              "kj": "こうぎ",
-              "r": "kougi",
-              "id": "protes",
-              "note": "抗議行動 — aksi protes"
+              "jp": "意に介さない",
+              "kj": "意に介さない",
+              "r": "inikaisanai",
+              "id": "tidak peduli",
+              "note": "批判を意に介さない — tidak peduli pada kritik"
             },
             {
-              "jp": "計画",
-              "kj": "けいかく",
-              "r": "keikaku",
-              "id": "rencana",
-              "note": "計画を進める — menjalankan rencana"
+              "jp": "頓着しない",
+              "kj": "頓着しない",
+              "r": "tonchakushinai",
+              "id": "tidak peduli",
+              "note": "世間の目など頓着しない — tidak peduli pada pandangan orang"
             },
             {
-              "jp": "手ぬぐい",
-              "kj": "てぬぐい",
-              "r": "tenugui",
-              "id": "handuk tangan tradisional",
-              "note": "手ぬぐいを使う — memakai tenugui"
+              "jp": "顧みない",
+              "kj": "顧みない",
+              "r": "kaeriminai",
+              "id": "tidak menoleh; tidak peduli",
+              "note": "危険を顧みず進む — maju tanpa menghiraukan bahaya"
             }
           ]
         },
@@ -36244,60 +36244,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 5",
           "items": [
             {
-              "ch": "力",
-              "kun": "ちから",
-              "on": "リョク",
-              "id": "tenaga",
-              "note": "協力 きょうりょく — kerja sama"
+              "ch": "委",
+              "kun": "ゆだ(ねる)",
+              "on": "イ",
+              "id": "menyerahkan",
+              "note": "委ねる（ゆだねる）= menyerahkan"
             },
             {
-              "ch": "採",
-              "kun": "とる",
-              "on": "サイ",
-              "id": "mengambil",
-              "note": "採用 さいよう — penerimaan kerja"
+              "ch": "黙",
+              "kun": "だま(る)",
+              "on": "モク",
+              "id": "diam",
+              "note": "黙殺（もくさつ）= mengabaikan total"
             },
             {
-              "ch": "優",
-              "kun": "やさしい・すぐれる",
-              "on": "ユウ",
-              "id": "unggul, lembut",
-              "note": "優勝 ゆうしょう — juara"
+              "ch": "蔑",
+              "kun": "さげす(む)",
+              "on": "ベツ",
+              "id": "meremehkan",
+              "note": "蔑ろ（ないがしろ）= mengabaikan"
             },
             {
-              "ch": "障",
-              "kun": "さわる",
-              "on": "ショウ",
-              "id": "menghalangi",
-              "note": "障害 しょうがい — rintangan"
+              "ch": "頓",
+              "kun": "",
+              "on": "トン",
+              "id": "seketika",
+              "note": "頓着（とんちゃく）= kepedulian"
             },
             {
-              "ch": "宣",
-              "kun": "のたまう",
-              "on": "セン",
-              "id": "mengumumkan",
-              "note": "宣告 せんこく — vonis, pengumuman"
+              "ch": "顧",
+              "kun": "かえり(みる)",
+              "on": "コ",
+              "id": "menoleh",
+              "note": "顧みない（かえりみない）= tak menghiraukan"
             },
             {
-              "ch": "退",
-              "kun": "しりぞく・しりぞける",
-              "on": "タイ",
-              "id": "mundur",
-              "note": "退院 たいいん — keluar dari rumah sakit"
+              "ch": "任",
+              "kun": "まか(せる)",
+              "on": "ニン",
+              "id": "menyerahkan",
+              "note": "一任（いちにん）= penyerahan penuh"
             },
             {
-              "ch": "抗",
-              "kun": "あらがう",
-              "on": "コウ",
-              "id": "melawan",
-              "note": "抗議 こうぎ — protes"
+              "ch": "願",
+              "kun": "ねが(う)",
+              "on": "ガン",
+              "id": "permohonan",
+              "note": "他力本願（たりきほんがん）= mengandalkan orang lain"
             },
             {
-              "ch": "計",
-              "kun": "はかる",
-              "on": "ケイ",
-              "id": "merencanakan",
-              "note": "計画 けいかく — rencana"
+              "ch": "放",
+              "kun": "はな(す)",
+              "on": "ホウ",
+              "id": "melepas",
+              "note": "野放し（のばなし）= dibiarkan liar"
             }
           ]
         },
@@ -36307,43 +36307,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "来月の大会、出ることにしたんだ。",
-              "id": "Bulan depan aku mutusin ikut kejuaraan."
+              "jp": "田中さん、最近どう？相変わらず？",
+              "id": "Tanaka gimana kabarnya belakangan? Masih gitu-gitu aja?"
             },
             {
               "sp": "B",
-              "jp": "すごいね！結果はどうなりそう？",
-              "id": "Keren! Kira-kira hasilnya gimana?"
+              "jp": "相変わらずだよ。締め切りをよそに、定時で帰っちゃうんだもん。",
+              "id": "Masih. Deadline dicuekin, pulang tepat waktu terus."
             },
             {
               "sp": "A",
-              "jp": "練習の成果いかんだね。毎日頑張ってるよ。",
-              "id": "Tergantung hasil latihanku. Tiap hari aku latihan keras."
+              "jp": "えー、プロジェクトの成否は彼次第なのに？",
+              "id": "Hah, padahal berhasil nggaknya proyek tergantung dia?"
             },
             {
               "sp": "B",
-              "jp": "天気のいかんにかかわらず、やるんでしょう？",
-              "id": "Terlepas dari cuaca, tetap jalan kan?"
+              "jp": "そうなの。「結果はいかんで決まる」って言うけど、努力してないじゃん。",
+              "id": "Nah itu. Bilangnya 'hasil tergantung usaha', tapi usahanya aja nggak ada."
             },
             {
               "sp": "A",
-              "jp": "うん。ライバルの存在をものともせず、自分の記録に挑戦するよ。",
-              "id": "Iya. Tanpa gentar pada para rival, aku akan menantang rekor pribadiku."
+              "jp": "上司も見て見ぬふりなんでしょ？",
+              "id": "Atasannya juga pura-pura nggak lihat kan?"
             },
             {
               "sp": "B",
-              "jp": "家族の心配をよそに、って感じだね（笑）。",
-              "id": "Kayak 'tanpa peduli kekhawatiran keluarga' ya (haha)."
+              "jp": "まあね。批判を意に介さないっていうか、鋼のメンタルだよ。",
+              "id": "Ya gitu deh. Kritik dicuekin aja, mental baja banget."
             },
             {
               "sp": "A",
-              "jp": "まあね。初心者ならいざしらず、もう3年もやってるから。",
-              "id": "Ya gimana ya. Kalau pemula sih wajar, tapi ini udah 3 tahun."
+              "jp": "それはそれで凄いけどさ。普通の社員ならいざしらず、リーダーがそれじゃ困るよね。",
+              "id": "Itu sih hebat juga, tapi... kalau staf biasa sih terserah, kalau leader begitu kan repot."
             },
             {
               "sp": "B",
-              "jp": "応援してるよ！",
-              "id": "Aku dukung kamu!"
+              "jp": "ほんと。文句をものともせず、我が道を行くって感じ。",
+              "id": "Bener. Keluhan dihiraukan, jalanin caranya sendiri gitu."
             }
           ]
         }
@@ -36479,109 +36479,109 @@ const CHAPTERS = {
           "title": "Kosakata: Kesan & Gelagat Seolah-olah",
           "items": [
             {
-              "jp": "様子",
-              "kj": "様子",
-              "r": "yousu",
-              "id": "keadaan, gelagat",
-              "note": "様子を見る = melihat situasi dulu"
+              "jp": "間髪を入れず",
+              "kj": "間髪を入れず",
+              "r": "kanhatsu wo irezu",
+              "id": "tanpa jeda sedikit pun",
+              "note": "間髪を入れず反論する — langsung membantah tanpa jeda"
             },
             {
-              "jp": "態度",
-              "kj": "態度",
-              "r": "taido",
-              "id": "sikap",
-              "note": "態度が大きい = sombong"
+              "jp": "気色ばむ",
+              "kj": "気色ばむ",
+              "r": "keshikibamu",
+              "id": "(wajah) berubah menunjukkan emosi",
+              "note": "気色ばんで詰め寄る — mendesak dengan wajah memerah"
             },
             {
-              "jp": "仕草",
-              "kj": "仕草",
-              "r": "shigusa",
-              "id": "gerak-gerik",
-              "note": "仕草で示す = menunjukkan lewat gerak"
+              "jp": "押し黙る",
+              "kj": "押し黙る",
+              "r": "oshidamaru",
+              "id": "bungkam seribu bahasa",
+              "note": "押し黙ったまま席を立つ — pergi dari kursi tetap bungkam"
             },
             {
-              "jp": "雰囲気",
-              "kj": "雰囲気",
-              "r": "fun'iki",
-              "id": "suasana",
-              "note": "雰囲気が重い = suasana terasa berat"
+              "jp": "顔色をうかがう",
+              "kj": "顔色を窺う",
+              "r": "kaoiro wo ukagau",
+              "id": "membaca air muka",
+              "note": "上司の顔色をうかがう — membaca air muka atasan"
             },
             {
-              "jp": "表情",
-              "kj": "表情",
-              "r": "hyoujou",
-              "id": "ekspresi wajah",
-              "note": "表情が硬い = ekspresi kaku"
+              "jp": "憮然",
+              "kj": "憮然",
+              "r": "buzen",
+              "id": "manyun, dongkol",
+              "note": "憮然とした表情 — ekspresi manyun"
             },
             {
-              "jp": "目つき",
-              "kj": "目つき",
-              "r": "metsuki",
-              "id": "sorot mata",
-              "note": "目つきが鋭い = tatapan tajam"
+              "jp": "訝る",
+              "kj": "訝る",
+              "r": "ibukaru",
+              "id": "curiga, heran",
+              "note": "訝しげな目つき — sorot mata penuh curiga"
             },
             {
-              "jp": "口調",
-              "kj": "口調",
-              "r": "kuchou",
-              "id": "nada bicara",
-              "note": "口調を和らげる = melembutkan nada bicara"
+              "jp": "含み笑い",
+              "kj": "含み笑い",
+              "r": "fukumiwarai",
+              "id": "senyum penuh arti",
+              "note": "含み笑いを浮かべる — menyunggingkan senyum penuh arti"
             },
             {
-              "jp": "身振り",
-              "kj": "身振り",
-              "r": "miburi",
-              "id": "gerak tubuh",
-              "note": "身振り手振り = bahasa tubuh"
+              "jp": "苦虫を噛み潰したような顔",
+              "kj": "苦虫を噛み潰したような顔",
+              "r": "nigamushi wo kamitsubushita you na kao",
+              "id": "wajah masam seperti menelan pil pahit",
+              "note": "苦虫を噛み潰したような顔で黙る — diam dengan wajah masam"
             },
             {
-              "jp": "気配",
-              "kj": "気配",
-              "r": "kehai",
-              "id": "tanda-tanda kehadiran",
-              "note": "人の気配がする = terasa ada orang"
+              "jp": "目を伏せる",
+              "kj": "目を伏せる",
+              "r": "me wo fuseru",
+              "id": "menundukkan pandangan",
+              "note": "目を伏せたまま答える — menjawab sambil menunduk"
             },
             {
-              "jp": "傾向",
-              "kj": "傾向",
-              "r": "keikou",
-              "id": "kecenderungan",
-              "note": "増える傾向にある = cenderung meningkat"
+              "jp": "片鱗",
+              "kj": "片鱗",
+              "r": "henrin",
+              "id": "secercah (dari sesuatu yang besar)",
+              "note": "本音の片鱗を見せる — menunjukkan secercah isi hati"
             },
             {
-              "jp": "悲観的",
-              "kj": "悲観的",
-              "r": "hikanteki",
-              "id": "pesimistis",
-              "note": "悲観的に考える = berpikir pesimistis"
+              "jp": "本音と建前",
+              "kj": "本音と建前",
+              "r": "honne to tatemae",
+              "id": "isi hati vs basa-basi",
+              "note": "本音と建前を使い分ける — memilah isi hati dan basa-basi"
             },
             {
-              "jp": "独断",
-              "kj": "独断",
-              "r": "dokudan",
-              "id": "keputusan sepihak",
-              "note": "独断で決める = memutuskan sepihak"
+              "jp": "胸中",
+              "kj": "胸中",
+              "r": "kyouchuu",
+              "id": "lubuk hati (formal)",
+              "note": "胸中を察する — memahami lubuk hatinya"
             },
             {
-              "jp": "さりげない",
-              "kj": "さりげない",
-              "r": "sarigenai",
-              "id": "tanpa dibuat-buat, natural",
-              "note": "さりげない優しさ = kebaikan yang natural"
+              "jp": "息を呑む",
+              "kj": "息を呑む",
+              "r": "iki wo nomu",
+              "id": "menahan napas (takjub)",
+              "note": "息を呑むほど美しい — indah sampai bikin menahan napas"
             },
             {
-              "jp": "露骨",
-              "kj": "露骨",
-              "r": "rokotsu",
-              "id": "terang-terangan",
-              "note": "露骨な態度 = sikap terang-terangan"
+              "jp": "目の色を変える",
+              "kj": "目の色を変える",
+              "r": "me no iro wo kaeru",
+              "id": "berubah raut (serius/marah)",
+              "note": "目の色を変えて怒る — marah dengan raut berubah"
             },
             {
-              "jp": "ありあり",
-              "kj": "ありあり",
-              "r": "ariari",
-              "id": "jelas terlihat",
-              "note": "ありありと分かる = terlihat jelas"
+              "jp": "顔をしかめる",
+              "kj": "顔を顰める",
+              "r": "kao wo shikameru",
+              "id": "mengernyitkan wajah",
+              "note": "顔をしかめて首を振る — menggeleng sambil mengernyitkan wajah"
             }
           ]
         },
@@ -36756,60 +36756,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 6",
           "items": [
             {
-              "ch": "様",
-              "kun": "さま",
-              "on": "ヨウ",
-              "id": "rupa, keadaan",
-              "note": "様子 = keadaan"
-            },
-            {
-              "ch": "態",
+              "ch": "憮",
               "kun": "",
-              "on": "タイ",
-              "id": "sikap, penampilan",
-              "note": "態度 = sikap"
+              "on": "ブ",
+              "id": "manyun, kecewa",
+              "note": "憮然（ぶぜん）= manyun, dongkol"
             },
             {
-              "ch": "悲",
-              "kun": "かなしい",
-              "on": "ヒ",
-              "id": "sedih",
-              "note": "悲観的 = pesimistis"
+              "ch": "訝",
+              "kun": "いぶか（る）",
+              "on": "ゲン",
+              "id": "curiga, heran",
+              "note": "訝る（いぶかる）= merasa curiga"
             },
             {
-              "ch": "観",
-              "kun": "みる",
-              "on": "カン",
-              "id": "pandangan, melihat",
-              "note": "悲観 = pesimisme"
+              "ch": "顰",
+              "kun": "しか（める）",
+              "on": "ヒン",
+              "id": "mengernyitkan",
+              "note": "顰める（しかめる）= mengernyitkan wajah"
             },
             {
-              "ch": "独",
-              "kun": "ひとり",
-              "on": "ドク",
-              "id": "sendiri, sepihak",
-              "note": "独断 = keputusan sepihak"
+              "ch": "慄",
+              "kun": "おのの（く）",
+              "on": "リツ",
+              "id": "gemetar ketakutan",
+              "note": "戦慄（せんりつ）= gemetar ketakutan"
             },
             {
-              "ch": "涙",
-              "kun": "なみだ",
-              "on": "ルイ",
-              "id": "air mata",
-              "note": "涙ながらに = sambil berlinang air mata"
+              "ch": "慨",
+              "kun": "",
+              "on": "ガイ",
+              "id": "menghela, meratap",
+              "note": "慨嘆（がいたん）= mengeluh, meratap"
             },
             {
-              "ch": "振",
-              "kun": "ふる",
-              "on": "シン",
-              "id": "menggoyang",
-              "note": "頭を振る = menggelengkan kepala"
+              "ch": "悄",
+              "kun": "",
+              "on": "ショウ",
+              "id": "sunyi, muram",
+              "note": "悄然（しょうぜん）= muram, lesu"
             },
             {
-              "ch": "優",
-              "kun": "やさしい",
-              "on": "ユウ",
-              "id": "lembut, unggul",
-              "note": "優れた = unggul, luar biasa"
+              "ch": "傲",
+              "kun": "おご（る）",
+              "on": "ゴウ",
+              "id": "angkuh",
+              "note": "傲慢（ごうまん）= angkuh"
+            },
+            {
+              "ch": "鬱",
+              "kun": "うっ（する）",
+              "on": "ウツ",
+              "id": "murung, tertekan",
+              "note": "憂鬱（ゆううつ）= murung, depresi"
             }
           ]
         },
@@ -36819,43 +36819,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "田中さん、さっきの会議はどうだった？",
-              "id": "Tanaka, bagaimana rapat tadi?"
+              "jp": "昨日の飲み会、部長すごかったね。",
+              "id": "Acara minum-minum kemarin, si kepala bagian heboh banget ya."
             },
             {
               "sp": "B",
-              "jp": "部長が「任せろ」と言わんばかりの顔でうなずいていたよ。",
-              "id": "Kepala bagian mengangguk dengan wajah seolah berkata 'serahkan padaku'."
+              "jp": "ああ、「俺に任せとけ」と言わんばかりの顔でさ、ずっと武勇伝だったよ。",
+              "id": "Iya, dengan wajah seolah bilang 'serahin ke gue', ceritanya soal kehebatannya melulu."
             },
             {
               "sp": "A",
-              "jp": "頼もしいね。課長はどうだった？",
-              "id": "Bisa diandalkan ya. Bagaimana dengan kepala seksi?"
+              "jp": "っていうか、課長は課長でさ、人の話を最後まで聞かないきらいがあるじゃん。昨日もまた遮ってたし。",
+              "id": "Ngomong-ngomong, si kepala seksi itu lho, punya kebiasaan nggak dengerin orang sampai habis. Kemarin motong omongan lagi."
             },
             {
               "sp": "B",
-              "jp": "あの人はどうも人の意見を認めようとしないきらいがあるから、また反対していたよ。",
-              "id": "Orang itu punya kebiasaan buruk tidak mau mengakui pendapat orang lain, jadi dia menentang lagi."
+              "jp": "まあね。でもさ、新人の子、ミスした後ずっと涙ながらに謝っててさ、見てらんなかったよ。",
+              "id": "Ya gitu deh. Tapi anak baru itu, habis bikin salah dia minta maaf sambil nangis terus, nggak tega lihatnya."
             },
             {
               "sp": "A",
-              "jp": "相変わらずだね。新人の佐藤君は？",
-              "id": "Seperti biasa ya. Bagaimana dengan Sato yang baru?"
+              "jp": "あー、かわいそうに。生まれながらに真面目なんだろうね、あの子。",
+              "id": "Aduh, kasihan. Kayaknya dia emang dari sananya serius orangnya."
             },
             {
               "sp": "B",
-              "jp": "資料を間違えて、涙ながらに謝っていたよ。",
-              "id": "Dia salah membuat materi, lalu meminta maaf sambil berlinang air mata."
+              "jp": "だね。帰りの電車、窓の外を眺めるともなく眺めてたら、いつの間にか家通り過ぎてたよ。",
+              "id": "Iya. Di kereta pulang, aku bengong ngeliatin luar jendela tanpa sadar, tau-tau kelewatan rumah."
             },
             {
               "sp": "A",
-              "jp": "かわいそうに。テレビでも見るともなく見て、気分転換したらいいのに。",
-              "id": "Kasihan. Seharusnya dia menonton TV sekadarnya saja untuk menyegarkan pikiran."
+              "jp": "それはお疲れモードだね。さ、今日は早く帰って休みなよ。",
+              "id": "Itu mah mode kecapekan. Sana, hari ini pulang cepat terus istirahat."
             },
             {
               "sp": "B",
-              "jp": "そうだね。生まれながらに真面目な子だから、きっと立ち直るよ。",
-              "id": "Benar juga. Dia anak yang serius sejak lahir, pasti bisa bangkit lagi."
+              "jp": "うん、そうする。ありがとう。",
+              "id": "Iya, gitu aja deh. Makasih ya."
             }
           ]
         }
@@ -36991,109 +36991,109 @@ const CHAPTERS = {
           "title": "Kosakata: Sambil & Kegiatan Sampingan",
           "items": [
             {
-              "jp": "散歩",
-              "kj": "散歩",
-              "r": "sanpo",
-              "id": "jalan-jalan",
-              "note": "散歩がてら = sekalian jalan-jalan"
+              "jp": "序でに",
+              "kj": "序でに",
+              "r": "tsuide ni",
+              "id": "sekalian (bentuk kanji N1)",
+              "note": "序でに寄る — sekalian mampir"
             },
             {
-              "jp": "買い物",
-              "kj": "買い物",
-              "r": "kaimono",
-              "id": "belanja",
-              "note": "買い物がてら寄る = mampir sekalian belanja"
+              "jp": "兼ねる",
+              "kj": "兼ねる",
+              "r": "kaneru",
+              "id": "merangkap",
+              "note": "仕事を兼ねた旅行 — perjalanan yang merangkap urusan kerja"
             },
             {
-              "jp": "見学",
-              "kj": "見学",
-              "r": "kengaku",
-              "id": "kunjungan studi",
-              "note": "工場見学 = kunjungan ke pabrik"
+              "jp": "掛け持ち",
+              "kj": "掛け持ち",
+              "r": "kakemochi",
+              "id": "merangkap beberapa pekerjaan",
+              "note": "バイトを掛け持ちする — merangkap beberapa kerja paruh waktu"
             },
             {
-              "jp": "挨拶",
-              "kj": "挨拶",
-              "r": "aisatsu",
-              "id": "salam, sapaan",
-              "note": "挨拶回り = berkeliling memberi salam"
+              "jp": "兼業",
+              "kj": "兼業",
+              "r": "kengyou",
+              "id": "pekerjaan sampingan (formal)",
+              "note": "兼業農家 — petani yang merangkap pekerjaan lain"
             },
             {
-              "jp": "訪問",
-              "kj": "訪問",
-              "r": "houmon",
-              "id": "kunjungan",
-              "note": "家庭訪問 = kunjungan ke rumah"
+              "jp": "内職",
+              "kj": "内職",
+              "r": "naishoku",
+              "id": "kerja sampingan rumahan",
+              "note": "内職で家計を助ける — membantu keuangan rumah dengan kerja sampingan"
             },
             {
-              "jp": "定年",
-              "kj": "定年",
-              "r": "teinen",
-              "id": "pensiun (usia)",
-              "note": "定年退職 = pensiun karena usia"
-            },
-            {
-              "jp": "勤務",
-              "kj": "勤務",
-              "r": "kinmu",
-              "id": "dinas, bekerja",
-              "note": "勤務時間 = jam kerja"
-            },
-            {
-              "jp": "副業",
-              "kj": "副業",
-              "r": "fukugyou",
-              "id": "pekerjaan sampingan",
-              "note": "副業で稼ぐ = mencari uang lewat kerja sampingan"
-            },
-            {
-              "jp": "趣味",
-              "kj": "趣味",
-              "r": "shumi",
-              "id": "hobi",
-              "note": "趣味は読書です = hobiku membaca"
-            },
-            {
-              "jp": "習い事",
-              "kj": "習い事",
-              "r": "naraigoto",
-              "id": "kursus, les",
-              "note": "ピアノの習い事 = les piano"
-            },
-            {
-              "jp": "育児",
-              "kj": "育児",
-              "r": "ikuji",
-              "id": "mengasuh anak",
-              "note": "育児休暇 = cuti mengasuh anak"
-            },
-            {
-              "jp": "介護",
-              "kj": "介護",
-              "r": "kaigo",
-              "id": "merawat (orang tua/sakit)",
-              "note": "介護施設 = panti perawatan"
-            },
-            {
-              "jp": "両立",
-              "kj": "両立",
-              "r": "ryouritsu",
-              "id": "menjalankan dua hal sekaligus",
-              "note": "仕事と育児の両立 = menyeimbangkan kerja dan anak"
+              "jp": "二足の草鞋",
+              "kj": "二足の草鞋",
+              "r": "nisoku no waraji",
+              "id": "merangkap dua profesi",
+              "note": "二足の草鞋を履く — merangkap dua profesi"
             },
             {
               "jp": "片手間",
               "kj": "片手間",
               "r": "katetema",
-              "id": "waktu luang, sambilan",
-              "note": "片手間にやる = mengerjakan di waktu luang"
+              "id": "di sela waktu luang",
+              "note": "片手間に株をやる — main saham di sela waktu"
             },
             {
-              "jp": "ついで",
-              "kj": "ついで",
-              "r": "tsuide",
-              "id": "sekalian, kebetulan",
-              "note": "ついでに買う = sekalian membeli"
+              "jp": "一石二鳥",
+              "kj": "一石二鳥",
+              "r": "isseki nichou",
+              "id": "sekali dayung dua pulau",
+              "note": "一石二鳥を狙う — mengincar dua keuntungan sekaligus"
+            },
+            {
+              "jp": "一挙両得",
+              "kj": "一挙両得",
+              "r": "ikkyo ryoutoku",
+              "id": "sekali jalan dapat dua",
+              "note": "一挙両得の策 — strategi sekali jalan dapat dua"
+            },
+            {
+              "jp": "用向き",
+              "kj": "用向き",
+              "r": "youmuki",
+              "id": "urusan (formal)",
+              "note": "用向きがあって出かける — keluar karena ada urusan"
+            },
+            {
+              "jp": "挨拶回り",
+              "kj": "挨拶回り",
+              "r": "aisatsu mawari",
+              "id": "kunjungan silaturahmi",
+              "note": "年始の挨拶回り — kunjungan silaturahmi awal tahun"
+            },
+            {
+              "jp": "御用聞き",
+              "kj": "御用聞き",
+              "r": "goyoukiki",
+              "id": "menanyakan kebutuhan pelanggan",
+              "note": "御用聞きに回る — berkeliling menanyakan kebutuhan"
+            },
+            {
+              "jp": "立ち寄り",
+              "kj": "立ち寄り",
+              "r": "tachiyori",
+              "id": "mampir, singgah",
+              "note": "立ち寄り先 — tempat singgah"
+            },
+            {
+              "jp": "抱き合わせ",
+              "kj": "抱き合わせ",
+              "r": "dakiawase",
+              "id": "paket bundling",
+              "note": "抱き合わせ販売 — penjualan paket bundling"
+            },
+            {
+              "jp": "余暇",
+              "kj": "余暇",
+              "r": "yoka",
+              "id": "waktu luang (formal)",
+              "note": "余暇を活用する — memanfaatkan waktu luang"
             }
           ]
         },
@@ -37200,60 +37200,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 7",
           "items": [
             {
-              "ch": "散",
-              "kun": "ちる",
-              "on": "サン",
-              "id": "menyebar, berjalan",
-              "note": "散歩 = jalan-jalan"
+              "ch": "兼",
+              "kun": "か（ねる）",
+              "on": "ケン",
+              "id": "merangkap",
+              "note": "兼業（けんぎょう）= pekerjaan sampingan"
             },
             {
-              "ch": "歩",
-              "kun": "あるく",
-              "on": "ホ",
-              "id": "berjalan",
-              "note": "散歩 = jalan-jalan"
+              "ch": "序",
+              "kun": "",
+              "on": "ジョ",
+              "id": "permulaan, sekalian",
+              "note": "序でに（ついでに）= sekalian"
             },
             {
-              "ch": "買",
-              "kun": "かう",
-              "on": "バイ",
-              "id": "membeli",
-              "note": "買い物 = belanja"
+              "ch": "傍",
+              "kun": "かたわ（ら）",
+              "on": "ボウ",
+              "id": "sisi, samping",
+              "note": "傍ら（かたわら）= di samping"
             },
             {
-              "ch": "物",
-              "kun": "もの",
-              "on": "ブツ",
-              "id": "barang",
-              "note": "買い物 = belanja"
+              "ch": "挨",
+              "kun": "",
+              "on": "アイ",
+              "id": "menyapa",
+              "note": "挨拶回り（あいさつまわり）= kunjungan silaturahmi"
             },
             {
-              "ch": "訪",
-              "kun": "たずねる",
-              "on": "ホウ",
-              "id": "mengunjungi",
-              "note": "訪問 = kunjungan"
+              "ch": "拶",
+              "kun": "",
+              "on": "サツ",
+              "id": "mendesak",
+              "note": "挨拶（あいさつ）= sapaan"
             },
             {
-              "ch": "勤",
-              "kun": "つとめる",
-              "on": "キン",
-              "id": "bekerja, dinas",
-              "note": "勤務 = dinas kerja"
-            },
-            {
-              "ch": "趣",
-              "kun": "おもむき",
-              "on": "シュ",
-              "id": "minat, cita rasa",
-              "note": "趣味 = hobi"
+              "ch": "掛",
+              "kun": "か（かる）・か（ける）",
+              "on": "カイ",
+              "id": "menggantung, mengalikan",
+              "note": "掛け持ち（かけもち）= merangkap"
             },
             {
               "ch": "両",
               "kun": "",
               "on": "リョウ",
               "id": "keduanya",
-              "note": "両立 = menjalankan dua hal"
+              "note": "一挙両得（いっきょりょうとく）= sekali jalan dapat dua"
+            },
+            {
+              "ch": "得",
+              "kun": "え（る）",
+              "on": "トク",
+              "id": "memperoleh, untung",
+              "note": "両得（りょうとく）= dapat dua-duanya"
             }
           ]
         },
@@ -37263,43 +37263,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "佐藤さん、週末は何をしているの？",
-              "id": "Sato, akhir pekan biasanya ngapain?"
+              "jp": "週末、京都行くんだって？",
+              "id": "Katanya akhir pekan mau ke Kyoto?"
             },
             {
               "sp": "B",
-              "jp": "会社勤務のかたわら、子供たちにサッカーを教えているんだ。",
-              "id": "Di samping kerja di perusahaan, aku mengajar sepak bola ke anak-anak."
+              "jp": "うん、友達の結婚式がてらさ、ついでに観光もしてこようかなって。",
+              "id": "Iya, sekalian menghadiri nikahan teman, sekalian jalan-jalan juga."
             },
             {
               "sp": "A",
-              "jp": "すごいね。両立は大変じゃない？",
-              "id": "Hebat ya. Nggak berat menjalankan dua-duanya?"
+              "jp": "いいね。っていうか、最近バイト掛け持ちしてるんでしょ？大丈夫？",
+              "id": "Enak tuh. Ngomong-ngomong, katanya akhir-akhir ini kamu rangkap kerja paruh waktu? Kuat?"
             },
             {
               "sp": "B",
-              "jp": "最初は大変だったけど、今は楽しんでいるよ。",
-              "id": "Awalnya berat, tapi sekarang aku menikmatinya."
+              "jp": "まあ、大学の勉強のかたわら、カフェと塾講師やってるんだ。結構きついけどね。",
+              "id": "Ya, di samping kuliah aku kerja di kafe sama jadi guru les. Lumayan berat sih."
             },
             {
               "sp": "A",
-              "jp": "そういえば、駅前のパン屋さん、知ってる？",
-              "id": "Ngomong-ngomong, kamu tahu toko roti di depan stasiun?"
+              "jp": "すごいね。じゃあ、京都のお土産、八ツ橋かたがた買ってきてよ。",
+              "id": "Hebat. Kalau gitu, sekalian beliin oleh-oleh yatsuhashi ya."
             },
             {
               "sp": "B",
-              "jp": "うん。昨日、散歩がてらパンを買いに行ってきたよ。",
-              "id": "Tahu. Kemarin aku beli roti ke sana sekalian jalan-jalan."
+              "jp": "あはは、了解。散歩がてらいい店探しとくわ。",
+              "id": "Haha, oke. Nanti sekalian jalan-jalan aku cariin toko yang bagus."
             },
             {
               "sp": "A",
-              "jp": "今度、出張かたがた大阪の友達を訪ねる予定なんだ。",
-              "id": "Lain kali aku berencana mengunjungi temanku di Osaka sekalian dinas."
+              "jp": "頼んだよ。無理しないでね。",
+              "id": "Aku titip ya. Jangan dipaksain."
             },
             {
               "sp": "B",
-              "jp": "いいね。お礼かたがたごあいさつしてきたら？",
-              "id": "Bagus tuh. Sekalian beri salam dan ucapkan terima kasih, gimana?"
+              "jp": "うん、ありがとう。",
+              "id": "Iya, makasih."
             }
           ]
         }
@@ -37435,109 +37435,109 @@ const CHAPTERS = {
           "title": "Kosakata: Penyesalan & Kenyataan Berlawanan",
           "items": [
             {
-              "jp": "連絡",
-              "kj": "連絡",
-              "r": "renraku",
-              "id": "kontak, kabar",
-              "note": "ご連絡します = akan menghubungi"
+              "jp": "悔やむ",
+              "kj": "悔やむ",
+              "r": "kuyamu",
+              "id": "menyesali",
+              "note": "判断を悔やむ — menyesali keputusan"
             },
             {
-              "jp": "急ぎ",
-              "kj": "急ぎ",
-              "r": "isogi",
-              "id": "terburu-buru, sibuk",
-              "note": "お急ぎのところ = di saat sedang sibuk"
+              "jp": "心残り",
+              "kj": "心残り",
+              "r": "kokoro nokori",
+              "id": "penyesalan yang mengganjal",
+              "note": "心残りでならない — terus mengganjal di hati"
             },
             {
-              "jp": "安静",
-              "kj": "安静",
-              "r": "ansei",
-              "id": "istirahat tenang",
-              "note": "安静にする = beristirahat"
+              "jp": "未練",
+              "kj": "未練",
+              "r": "miren",
+              "id": "sulit melepas",
+              "note": "未練がましい — terkesan sulit melepas"
             },
             {
-              "jp": "悪化",
-              "kj": "悪化",
-              "r": "akka",
-              "id": "memburuk",
-              "note": "病気が悪化する = penyakit memburuk"
+              "jp": "歯がゆい",
+              "kj": "歯がゆい",
+              "r": "hagayui",
+              "id": "gemas, frustrasi",
+              "note": "歯がゆい思いをする — merasakan frustrasi"
             },
             {
-              "jp": "締め切り",
-              "kj": "締め切り",
-              "r": "shimekiri",
-              "id": "tenggat waktu",
-              "note": "締め切りに間に合う = keburu tenggat"
+              "jp": "もどかしい",
+              "kj": "もどかしい",
+              "r": "modokashii",
+              "id": "menjengkelkan (lambat)",
+              "note": "もどかしくてたまらない — sangat menjengkelkan"
             },
             {
-              "jp": "完成",
-              "kj": "完成",
-              "r": "kansei",
-              "id": "selesai, rampung",
-              "note": "完成させる = merampungkan"
+              "jp": "釈然としない",
+              "kj": "釈然としない",
+              "r": "shakuzentoshinai",
+              "id": "tidak bisa menerima sepenuhnya",
+              "note": "釈然としないまま終わる — berakhir tanpa bisa menerima"
             },
             {
-              "jp": "満点",
-              "kj": "満点",
-              "r": "manten",
-              "id": "nilai sempurna",
-              "note": "満点を取る = mendapat nilai sempurna"
+              "jp": "腑に落ちない",
+              "kj": "腑に落ちない",
+              "r": "fu ni ochinai",
+              "id": "tidak masuk akal di hati",
+              "note": "説明が腑に落ちない — penjelasannya tidak meyakinkan"
             },
             {
-              "jp": "圧勝",
-              "kj": "圧勝",
-              "r": "asshou",
-              "id": "kemenangan telak",
-              "note": "選挙で圧勝する = menang telak di pemilu"
+              "jp": "拍子抜け",
+              "kj": "拍子抜け",
+              "r": "hyoushinuke",
+              "id": "antiklimaks",
+              "note": "拍子抜けするほど簡単 — semudah sampai antiklimaks"
             },
             {
-              "jp": "政権",
-              "kj": "政権",
-              "r": "seiken",
-              "id": "pemerintahan",
-              "note": "政権が続く = pemerintahan berlanjut"
+              "jp": "肩透かし",
+              "kj": "肩透かし",
+              "r": "katasukashi",
+              "id": "harapan yang dikhianati",
+              "note": "肩透かしを食らう — kecele berat"
             },
             {
-              "jp": "支持率",
-              "kj": "支持率",
-              "r": "shijiritsu",
-              "id": "tingkat dukungan",
-              "note": "支持率が落ちる = dukungan menurun"
+              "jp": "期待外れ",
+              "kj": "期待外れ",
+              "r": "kitai hazure",
+              "id": "di luar ekspektasi",
+              "note": "期待外れの結果 — hasil di luar ekspektasi"
             },
             {
-              "jp": "未成年",
-              "kj": "未成年",
-              "r": "miseinen",
-              "id": "di bawah umur",
-              "note": "未成年者 = anak di bawah umur"
+              "jp": "目論見",
+              "kj": "目論見",
+              "r": "mokuromi",
+              "id": "rencana, perhitungan",
+              "note": "目論見が外れる — perhitungan meleset"
             },
             {
-              "jp": "公共",
-              "kj": "公共",
-              "r": "koukyou",
-              "id": "umum, publik",
-              "note": "公共の場 = tempat umum"
+              "jp": "思惑",
+              "kj": "思惑",
+              "r": "omowaku",
+              "id": "dugaan, niat tersembunyi",
+              "note": "思惑通りにいかない — tidak berjalan sesuai dugaan"
             },
             {
-              "jp": "高官",
-              "kj": "高官",
-              "r": "koukan",
-              "id": "pejabat tinggi",
-              "note": "政府の高官 = pejabat tinggi pemerintah"
+              "jp": "皮肉にも",
+              "kj": "皮肉にも",
+              "r": "hiniku ni mo",
+              "id": "ironisnya",
+              "note": "皮肉にも逆効果 — ironisnya malah kontraproduktif"
             },
             {
-              "jp": "ごちそう",
-              "kj": "ごちそう",
-              "r": "gochisou",
-              "id": "hidangan mewah",
-              "note": "ごちそうになる = ditraktir makan"
+              "jp": "口惜しい",
+              "kj": "口惜しい",
+              "r": "kuchioshii",
+              "id": "menyakitkan, menyesakkan (formal)",
+              "note": "口惜しくてならない — sangat menyakitkan"
             },
             {
-              "jp": "手伝う",
-              "kj": "手伝う",
-              "r": "tetsudau",
-              "id": "membantu",
-              "note": "手伝ってくれる = mau membantu"
+              "jp": "後の祭り",
+              "kj": "後の祭り",
+              "r": "ato no matsuri",
+              "id": "nasi sudah jadi bubur",
+              "note": "今さら言っても後の祭りだ — percuma dibilang sekarang"
             }
           ]
         },
@@ -37712,60 +37712,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 8",
           "items": [
             {
-              "ch": "連",
-              "kun": "つらなる",
-              "on": "レン",
-              "id": "berhubungan, menyambung",
-              "note": "連絡 = kontak"
+              "ch": "悔",
+              "kun": "く（いる）・く（やむ）",
+              "on": "カイ",
+              "id": "menyesal",
+              "note": "後悔（こうかい）= penyesalan"
             },
             {
-              "ch": "絡",
-              "kun": "からむ",
-              "on": "ラク",
-              "id": "terlibat, terjalin",
-              "note": "連絡 = menghubungi"
+              "ch": "憾",
+              "kun": "うら（む）",
+              "on": "カン",
+              "id": "sesal mendalam",
+              "note": "遺憾（いかん）= sangat disayangkan"
             },
             {
-              "ch": "急",
-              "kun": "いそぐ",
-              "on": "キュウ",
-              "id": "buru-buru, mendesak",
-              "note": "急ぎ = terburu-buru"
+              "ch": "釈",
+              "kun": "",
+              "on": "シャク",
+              "id": "menjelaskan, melepas",
+              "note": "釈然としない（しゃくぜんとしない）= tak bisa menerima"
             },
             {
-              "ch": "静",
-              "kun": "しずか",
-              "on": "セイ",
-              "id": "tenang",
-              "note": "安静 = istirahat tenang"
+              "ch": "腑",
+              "kun": "はらわた",
+              "on": "フ",
+              "id": "isi perut, hati",
+              "note": "腑に落ちない（ふにおちない）= tak meyakinkan"
             },
             {
-              "ch": "悪",
-              "kun": "わるい",
-              "on": "アク",
-              "id": "buruk, jahat",
-              "note": "悪化 = memburuk"
+              "ch": "拍",
+              "kun": "",
+              "on": "ハク",
+              "id": "tepukan, irama",
+              "note": "拍子抜け（ひょうしぬけ）= antiklimaks"
             },
             {
-              "ch": "化",
-              "kun": "ばける",
-              "on": "カ",
-              "id": "berubah",
-              "note": "悪化 = menjadi buruk"
+              "ch": "透",
+              "kun": "す（く）・す（かす）",
+              "on": "トウ",
+              "id": "tembus",
+              "note": "肩透かし（かたすかし）= kecele"
             },
             {
-              "ch": "締",
-              "kun": "しめる",
-              "on": "テイ",
-              "id": "mengencangkan, menutup",
-              "note": "締め切り = tenggat"
+              "ch": "謀",
+              "kun": "はか（る）",
+              "on": "ボウ",
+              "id": "rencana, siasat",
+              "note": "陰謀（いんぼう）= konspirasi"
             },
             {
-              "ch": "切",
-              "kun": "きる",
-              "on": "セツ",
-              "id": "memotong",
-              "note": "締め切り = batas waktu"
+              "ch": "嘲",
+              "kun": "あざけ（る）",
+              "on": "チョウ",
+              "id": "mengejek",
+              "note": "嘲笑（ちょうしょう）= ejekan"
             }
           ]
         },
@@ -37775,43 +37775,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "お急ぎのところをすみません。ちょっとよろしいでしょうか。",
-              "id": "Maaf mengganggu di saat sibuk. Boleh bertanya sebentar?"
+              "jp": "昨日の面接、どうだった？",
+              "id": "Wawancara kemarin gimana?"
             },
             {
               "sp": "B",
-              "jp": "どうぞ。何でしょうか。",
-              "id": "Silakan. Ada apa?"
+              "jp": "いやー、もっと準備しとけばよかったものを。緊張して頭真っ白になっちゃってさ。",
+              "id": "Aduh, andai aku lebih siap. Saking tegangnya kepalaku blank total."
             },
             {
               "sp": "A",
-              "jp": "昨日の試験、簡単だったので満点を取れたと思いきや、名前を書き忘れたんです。",
-              "id": "Ujian kemarin kukira gampang dan dapat nilai sempurna, ternyata aku lupa menulis nama."
+              "jp": "えー、でも君なら大丈夫っしょ。っていうか、一次は通ったんでしょ？",
+              "id": "Yah, tapi kamu pasti bisa lah. Ngomong-ngomong, tahap pertama lolos kan?"
             },
             {
               "sp": "B",
-              "jp": "それは残念だったね。一言先生に相談すればよかったものを。",
-              "id": "Sayang sekali. Padahal kalau berkonsultasi ke guru sepatah kata saja pasti ada jalan."
+              "jp": "まあ、一次はね。とはいえ、最終は倍率10倍だし…。",
+              "id": "Ya, tahap pertama sih. Tapi finalnya saingannya 10 banding 1..."
             },
             {
               "sp": "A",
-              "jp": "ダイエット中とはいえ、ストレスでつい食べてしまうんです。",
-              "id": "Memang sedang diet, tapi karena stres jadi tanpa sadar makan terus."
+              "jp": "そっか。でもさ、受かったと思いきや、実は補欠だったってオチもあるから、油断しないでね。",
+              "id": "Gitu ya. Tapi hati-hati, ada juga cerita yang kukira lolos ternyata cuma cadangan."
             },
             {
               "sp": "B",
-              "jp": "未成年といえども、健康管理は自分の責任だよ。",
-              "id": "Sekalipun masih muda, menjaga kesehatan adalah tanggung jawabmu sendiri."
+              "jp": "おいおい、縁起でもないこと言うなよ。忙しいところをわざわざありがとうね、相談乗ってくれて。",
+              "id": "Eh, jangan ngomong yang sial-sial dong. Makasih ya udah mau dengerin curhat di tengah kesibukanmu."
             },
             {
               "sp": "A",
-              "jp": "分かってはいるんですが、なかなか続かなくて。",
-              "id": "Aku paham sih, tapi susah konsisten."
+              "jp": "いいよいいよ。結果出たら連絡して。",
+              "id": "Santai aja. Kabarin ya kalau hasilnya keluar."
             },
             {
               "sp": "B",
-              "jp": "まあ、焦らず少しずつやればいいよ。",
-              "id": "Ya sudah, pelan-pelan saja tanpa terburu-buru."
+              "jp": "うん、必ず。",
+              "id": "Iya, pasti."
             }
           ]
         }
@@ -37947,109 +37947,109 @@ const CHAPTERS = {
           "title": "Kosakata: Syarat Mutlak & Akibat Buruk",
           "items": [
             {
-              "jp": "我慢",
-              "kj": "我慢",
-              "r": "gaman",
-              "id": "bersabar, menahan diri",
-              "note": "我慢する = bersabar"
+              "jp": "瀬戸際",
+              "kj": "瀬戸際",
+              "r": "setogiwa",
+              "id": "di ujung tanduk",
+              "note": "倒産の瀬戸際に立つ — di ujung tanduk kebangkrutan"
             },
             {
-              "jp": "入院",
-              "kj": "入院",
-              "r": "nyuuin",
-              "id": "dirawat di RS",
-              "note": "入院する = masuk rumah sakit"
+              "jp": "土壇場",
+              "kj": "土壇場",
+              "r": "dotanba",
+              "id": "saat genting terakhir",
+              "note": "土壇場で覆す — membalikkan di saat terakhir"
             },
             {
-              "jp": "資金",
-              "kj": "資金",
-              "r": "shikin",
-              "id": "dana, modal",
-              "note": "資金を確保する = mengamankan dana"
+              "jp": "窮地",
+              "kj": "窮地",
+              "r": "kyuuchi",
+              "id": "keadaan terjepit",
+              "note": "窮地に陥る — terjerumus ke keadaan terjepit"
             },
             {
-              "jp": "確保",
-              "kj": "確保",
-              "r": "kakuho",
-              "id": "mengamankan, memastikan",
-              "note": "席を確保する = mengamankan tempat duduk"
+              "jp": "背水の陣",
+              "kj": "背水の陣",
+              "r": "haisui no jin",
+              "id": "tekad tanpa jalan mundur",
+              "note": "背水の陣で臨む — menghadapi dengan tekad mati"
             },
             {
-              "jp": "実行",
-              "kj": "実行",
-              "r": "jikkou",
-              "id": "pelaksanaan",
-              "note": "計画を実行する = melaksanakan rencana"
+              "jp": "一か八か",
+              "kj": "一か八か",
+              "r": "ichika bachika",
+              "id": "untung-untungan",
+              "note": "一か八かで賭ける — bertaruh untung-untungan"
             },
             {
-              "jp": "計画",
-              "kj": "計画",
-              "r": "keikaku",
-              "id": "rencana",
-              "note": "計画を立てる = menyusun rencana"
+              "jp": "腹をくくる",
+              "kj": "腹を括る",
+              "r": "hara wo kukuru",
+              "id": "membulatkan tekad",
+              "note": "腹をくくって辞表を出す — membulatkan tekad mengajukan resign"
             },
             {
-              "jp": "助け",
-              "kj": "助け",
-              "r": "tasuke",
-              "id": "bantuan",
-              "note": "助けを求める = meminta bantuan"
+              "jp": "退路を断つ",
+              "kj": "退路を断つ",
+              "r": "tairo wo tatsu",
+              "id": "memutus jalan mundur",
+              "note": "退路を断って挑む — menantang tanpa jalan mundur"
             },
             {
-              "jp": "高齢",
-              "kj": "高齢",
-              "r": "kourei",
-              "id": "usia lanjut",
-              "note": "高齢者 = lansia"
+              "jp": "道連れ",
+              "kj": "道連れ",
+              "r": "michizure",
+              "id": "ikut terseret",
+              "note": "道連れにする — menyeret ikut serta"
             },
             {
-              "jp": "満員",
-              "kj": "満員",
-              "r": "man'in",
-              "id": "penuh sesak",
-              "note": "満員電車 = kereta penuh sesak"
+              "jp": "巻き添え",
+              "kj": "巻き添え",
+              "r": "makizoe",
+              "id": "ikut kena imbas",
+              "note": "巻き添えを食う — kena imbas"
             },
             {
-              "jp": "酒飲み",
-              "kj": "酒飲み",
-              "r": "sakenomi",
-              "id": "pemabuk, tukang minum",
-              "note": "酒飲みの父 = ayah yang suka minum"
+              "jp": "とばっちり",
+              "kj": "とばっちり",
+              "r": "tobacchiri",
+              "id": "kena getahnya",
+              "note": "とばっちりを食らう — kena getah"
             },
             {
-              "jp": "失敗",
-              "kj": "失敗",
-              "r": "shippai",
-              "id": "kegagalan",
-              "note": "失敗を恐れる = takut gagal"
+              "jp": "不可欠",
+              "kj": "不可欠",
+              "r": "fukaketsu",
+              "id": "tidak tergantikan",
+              "note": "不可欠な存在 — sosok yang tak tergantikan"
             },
             {
-              "jp": "報告書",
-              "kj": "報告書",
-              "r": "houkokusho",
-              "id": "laporan",
-              "note": "報告書を提出する = menyerahkan laporan"
+              "jp": "必要不可欠",
+              "kj": "必要不可欠",
+              "r": "hitsuyou fukaketsu",
+              "id": "mutlak diperlukan",
+              "note": "必要不可欠な条件 — syarat mutlak"
             },
             {
-              "jp": "任せる",
-              "kj": "任せる",
-              "r": "makaseru",
-              "id": "mempercayakan",
-              "note": "君に任せる = kuserahkan padamu"
+              "jp": "一蓮托生",
+              "kj": "一蓮托生",
+              "r": "ichiren takushou",
+              "id": "senasib sepenanggungan",
+              "note": "一蓮托生の仲 — kawan senasib sepenanggungan"
             },
             {
-              "jp": "用意",
-              "kj": "用意",
-              "r": "youi",
-              "id": "persiapan",
-              "note": "用意する = mempersiapkan"
+              "jp": "命運",
+              "kj": "命運",
+              "r": "meiun",
+              "id": "nasib",
+              "note": "命運を分ける — menentukan nasib"
             },
             {
-              "jp": "酔いつぶれる",
-              "kj": "酔いつぶれる",
-              "r": "yoitsubureru",
-              "id": "mabuk berat sampai teler",
-              "note": "飲んで酔いつぶれる = minum sampai teler"
+              "jp": "乾坤一擲",
+              "kj": "乾坤一擲",
+              "r": "kenkon itteki",
+              "id": "taruhan besar sekali jalan",
+              "note": "乾坤一擲の大勝負 — pertaruhan besar sekali jalan"
             }
           ]
         },
@@ -38220,60 +38220,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 9",
           "items": [
             {
-              "ch": "慢",
+              "ch": "瀬",
+              "kun": "せ",
+              "on": "ライ",
+              "id": "jeram",
+              "note": "瀬戸際（せとぎわ）= di ujung tanduk"
+            },
+            {
+              "ch": "窮",
+              "kun": "きわ（める）",
+              "on": "キュウ",
+              "id": "terjepit, habis",
+              "note": "窮地（きゅうち）= keadaan terjepit"
+            },
+            {
+              "ch": "壇",
               "kun": "",
-              "on": "マン",
-              "id": "menahan, angkuh",
-              "note": "我慢 = bersabar"
+              "on": "ダン・タン",
+              "id": "panggung",
+              "note": "土壇場（どたんば）= saat genting"
             },
             {
-              "ch": "院",
+              "ch": "托",
               "kun": "",
-              "on": "イン",
-              "id": "institusi, rumah sakit",
-              "note": "入院 = rawat inap"
+              "on": "タク",
+              "id": "mempercayakan",
+              "note": "一蓮托生（いちれんたくしょう）= senasib sepenanggungan"
             },
             {
-              "ch": "資",
+              "ch": "乾",
+              "kun": "かわ（く）・かわ（かす）",
+              "on": "カン",
+              "id": "kering",
+              "note": "乾坤一擲（けんこんいってき）= taruhan besar"
+            },
+            {
+              "ch": "坤",
               "kun": "",
-              "on": "シ",
-              "id": "modal, sumber daya",
-              "note": "資金 = dana"
+              "on": "コン",
+              "id": "bumi",
+              "note": "乾坤一擲（けんこんいってき）= taruhan besar"
             },
             {
-              "ch": "金",
-              "kun": "かね",
-              "on": "キン",
-              "id": "uang, emas",
-              "note": "資金 = dana"
+              "ch": "擲",
+              "kun": "なげう（つ）",
+              "on": "テキ",
+              "id": "melempar",
+              "note": "乾坤一擲 — melempar dadu nasib"
             },
             {
-              "ch": "確",
-              "kun": "たしか",
-              "on": "カク",
-              "id": "pasti, memastikan",
-              "note": "確保 = mengamankan"
-            },
-            {
-              "ch": "保",
-              "kun": "たもつ",
-              "on": "ホ",
-              "id": "menjaga, melindungi",
-              "note": "確保 = memastikan"
-            },
-            {
-              "ch": "満",
-              "kun": "みちる",
-              "on": "マン",
-              "id": "penuh",
-              "note": "満員 = penuh sesak"
-            },
-            {
-              "ch": "任",
-              "kun": "まかせる",
-              "on": "ニン",
-              "id": "mempercayakan, tugas",
-              "note": "任せる = mempercayakan"
+              "ch": "賭",
+              "kun": "か（ける）",
+              "on": "ト",
+              "id": "bertaruh",
+              "note": "賭ける（かける）= bertaruh"
             }
           ]
         },
@@ -38283,43 +38283,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "この企画、資金を確保することなしには実行できないよ。",
-              "id": "Proyek ini tanpa mengamankan dana tidak bisa dijalankan."
+              "jp": "転職、ほんとにするの？",
+              "id": "Beneran mau pindah kerja?"
             },
             {
               "sp": "B",
-              "jp": "子供のためとあれば、どんなことでも我慢するのが親だよ。",
-              "id": "Kalau demi anak, orang tua rela menahan apa pun."
+              "jp": "うん、腹くくった。こんな会社にいたら最後、心も体も壊しちゃうよ。",
+              "id": "Iya, udah bulat tekad. Kalau sampai terus di perusahaan kayak gini, mental sama badan bisa rusak."
             },
             {
               "sp": "A",
-              "jp": "でも、報告書にこんなにミスが多いようでは、上も納得しないだろう。",
-              "id": "Tapi kalau laporannya sebanyak ini salahnya, atasan pun tidak akan setuju."
+              "jp": "まあ、気持ちはわかるけどさ。っていうか、次のあてはあるの？",
+              "id": "Ya, aku ngerti perasaanmu sih. Ngomong-ngomong, udah ada tujuan berikutnya?"
             },
             {
               "sp": "B",
-              "jp": "確かに。満員のバスに乗るくらいなら、歩いたほうがましだっていうのと同じだね。",
-              "id": "Benar juga. Sama seperti 'daripada naik bus penuh sesak, lebih baik jalan kaki'."
+              "jp": "ない。でも、覚悟なしでは何も変わらないし。自分のためとあれば、やるしかないよ。",
+              "id": "Belum. Tapi tanpa tekad nggak akan ada yang berubah. Kalau demi diriku sendiri, harus jalan."
             },
             {
               "sp": "A",
-              "jp": "うちの兄なんて、飲み始めたら最後、朝まで飲むんだよ。",
-              "id": "Kakakku itu, kalau sampai mulai minum, minum terus sampai pagi."
+              "jp": "このままダラダラ続けるくらいなら、思い切って飛び込んだ方がいいよね。",
+              "id": "Daripada terus-terusan begini tanpa arah, mending sekalian nekat nyebur kan."
             },
             {
               "sp": "B",
-              "jp": "それは困ったね。体を壊すようでは、家族も心配するよ。",
-              "id": "Itu merepotkan ya. Kalau sampai merusak badan, keluarga pun khawatir."
+              "jp": "でしょ？こんな調子では、5年後も同じこと言ってそうだし。",
+              "id": "Kan? Kalau keadaannya begini terus, 5 tahun lagi aku masih ngomong hal yang sama."
             },
             {
               "sp": "A",
-              "jp": "本人の自覚なしでは、どうにもならないよ。",
-              "id": "Tanpa kesadaran dari dirinya sendiri, tidak bisa berbuat apa-apa."
+              "jp": "わかる。じゃあ、背水の陣だね。応援してるよ。",
+              "id": "Ngerti. Berarti ini tekad tanpa jalan mundur ya. Aku dukung!"
             },
             {
               "sp": "B",
-              "jp": "まあ、気長に見守るしかないね。",
-              "id": "Ya sudahlah, hanya bisa mengawasi dengan sabar."
+              "jp": "ありがとう。がんばるよ。",
+              "id": "Makasih. Aku usaha yang terbaik."
             }
           ]
         }
@@ -38455,109 +38455,109 @@ const CHAPTERS = {
           "title": "Kosakata: Walaupun Tetap & Sia-sia",
           "items": [
             {
-              "jp": "地震",
-              "kj": "地震",
-              "r": "jishin",
-              "id": "gempa bumi",
-              "note": "大地震 = gempa besar"
+              "jp": "徒労",
+              "kj": "徒労",
+              "r": "torou",
+              "id": "usaha sia-sia",
+              "note": "徒労に終わる — berakhir sia-sia"
             },
             {
-              "jp": "安全",
-              "kj": "安全",
-              "r": "anzen",
-              "id": "aman",
-              "note": "安全なはずだ = seharusnya aman"
+              "jp": "水泡に帰す",
+              "kj": "水泡に帰す",
+              "r": "suihou ni kisu",
+              "id": "jadi buih, gagal total",
+              "note": "努力が水泡に帰す — usaha jadi sia-sia belaka"
             },
             {
-              "jp": "押し通す",
-              "kj": "押し通す",
-              "r": "oshitoosu",
-              "id": "memaksakan kehendak",
-              "note": "やり方を押し通す = memaksakan caranya"
+              "jp": "骨折り損",
+              "kj": "骨折り損",
+              "r": "honeorizon",
+              "id": "capek doang",
+              "note": "骨折り損のくたびれ儲け — capek doang dapatnya cuma lelah"
             },
             {
-              "jp": "理解",
-              "kj": "理解",
-              "r": "rikai",
-              "id": "pemahaman",
-              "note": "理解する = memahami"
+              "jp": "焼け石に水",
+              "kj": "焼け石に水",
+              "r": "yakeishi ni mizu",
+              "id": "tak ada artinya",
+              "note": "焼け石に水だ — tidak ada artinya sama sekali"
             },
             {
-              "jp": "練習",
-              "kj": "練習",
-              "r": "renshuu",
-              "id": "latihan",
-              "note": "練習を休む = absen latihan"
+              "jp": "暖簾に腕押し",
+              "kj": "暖簾に腕押し",
+              "r": "noren ni udeoshi",
+              "id": "tak ada respons (seperti mendorong tirai)",
+              "note": "暖簾に腕押しだ — tidak ada respons sama sekali"
             },
             {
-              "jp": "嵐",
-              "kj": "嵐",
-              "r": "arashi",
-              "id": "badai",
-              "note": "嵐の夜 = malam berbadai"
+              "jp": "糠に釘",
+              "kj": "糠に釘",
+              "r": "nuka ni kugi",
+              "id": "sia-sia (seperti paku di dedak)",
+              "note": "糠に釘だ — sia-sia belaka"
             },
             {
-              "jp": "外出",
-              "kj": "外出",
-              "r": "gaishutsu",
-              "id": "keluar rumah",
-              "note": "外出する = pergi keluar"
+              "jp": "馬の耳に念仏",
+              "kj": "馬の耳に念仏",
+              "r": "uma no mimi ni nenbutsu",
+              "id": "tidak didengarkan (seperti doa ke telinga kuda)",
+              "note": "馬の耳に念仏だ — tidak didengarkan sama sekali"
             },
             {
-              "jp": "無断",
-              "kj": "無断",
-              "r": "mudan",
-              "id": "tanpa izin",
-              "note": "無断欠席 = absen tanpa izin"
+              "jp": "無駄骨",
+              "kj": "無駄骨",
+              "r": "mudabone",
+              "id": "usaha sia-sia",
+              "note": "無駄骨を折る — bersusah payah sia-sia"
             },
             {
-              "jp": "欠席",
-              "kj": "欠席",
-              "r": "kesseki",
-              "id": "absen",
-              "note": "欠席する = tidak hadir"
+              "jp": "虚しい",
+              "kj": "虚しい",
+              "r": "munashii",
+              "id": "hampa",
+              "note": "虚しい努力 — usaha yang hampa"
             },
             {
-              "jp": "許す",
-              "kj": "許す",
-              "r": "yurusu",
-              "id": "memaafkan, mengizinkan",
-              "note": "許さない = tidak dimaafkan"
+              "jp": "いたずらに",
+              "kj": "徒に",
+              "r": "itazura ni",
+              "id": "dengan sia-sia",
+              "note": "いたずらに時を費やす — menyia-nyiakan waktu"
             },
             {
-              "jp": "謝る",
-              "kj": "謝る",
-              "r": "ayamaru",
-              "id": "meminta maaf",
-              "note": "謝ったところで = walaupun sudah minta maaf"
+              "jp": "せっかく〜のに",
+              "kj": "折角〜のに",
+              "r": "sekkaku ~ no ni",
+              "id": "padahal sudah susah payah… tapi",
+              "note": "せっかく来たのに休みだった — padahal jauh-jauh datang ternyata libur"
             },
             {
-              "jp": "関係",
-              "kj": "関係",
-              "r": "kankei",
-              "id": "hubungan",
-              "note": "関係が戻る = hubungan pulih"
+              "jp": "空回り",
+              "kj": "空回り",
+              "r": "karamawari",
+              "id": "berputar tanpa hasil",
+              "note": "努力が空回りする — usaha tidak membuahkan hasil"
             },
             {
-              "jp": "掃除",
-              "kj": "掃除",
-              "r": "souji",
-              "id": "membersihkan",
-              "note": "掃除が大変 = bersih-bersih merepotkan"
+              "jp": "骨折る",
+              "kj": "骨折る",
+              "r": "honeoru",
+              "id": "bersusah payah",
+              "note": "骨折って説得する — bersusah payah membujuk"
             },
             {
-              "jp": "引っ越し",
-              "kj": "引っ越し",
-              "r": "hikkoshi",
-              "id": "pindahan",
-              "note": "引っ越しする = pindah rumah"
+              "jp": "念を押す",
+              "kj": "念を押す",
+              "r": "nen wo osu",
+              "id": "memastikan berulang",
+              "note": "念を押して確認する — memastikan dengan menegaskan"
             },
             {
-              "jp": "暇",
-              "kj": "暇",
-              "r": "hima",
-              "id": "senggang, luang",
-              "note": "暇な時間 = waktu luang"
+              "jp": "念には念を入れる",
+              "kj": "念には念を入れる",
+              "r": "nen ni wa nen wo ireru",
+              "id": "sangat berhati-hati",
+              "note": "念には念を入れて準備する — bersiap dengan sangat hati-hati"
             }
           ]
         },
@@ -38736,60 +38736,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 10",
           "items": [
             {
-              "ch": "震",
-              "kun": "ふるう",
-              "on": "シン",
-              "id": "gempa, bergetar",
-              "note": "地震 = gempa bumi"
+              "ch": "徒",
+              "kun": "いたずら",
+              "on": "ト",
+              "id": "sia-sia",
+              "note": "徒労（とろう）= usaha sia-sia"
             },
             {
-              "ch": "安",
-              "kun": "やすい",
-              "on": "アン",
-              "id": "aman, tenang",
-              "note": "安全 = aman"
+              "ch": "泡",
+              "kun": "あわ",
+              "on": "ホウ",
+              "id": "buih",
+              "note": "水泡に帰す（すいほうにきす）= gagal total"
             },
             {
-              "ch": "全",
-              "kun": "まったく",
-              "on": "ゼン",
-              "id": "seluruh",
-              "note": "全力 = segenap tenaga"
+              "ch": "簾",
+              "kun": "すだれ",
+              "on": "レン",
+              "id": "tirai bambu",
+              "note": "暖簾（のれん）= tirai noren"
             },
             {
-              "ch": "押",
-              "kun": "おす",
-              "on": "オウ",
-              "id": "mendorong",
-              "note": "押し通す = memaksakan"
+              "ch": "糠",
+              "kun": "ぬか",
+              "on": "コウ",
+              "id": "dedak",
+              "note": "糠に釘（ぬかにくぎ）= sia-sia belaka"
             },
             {
-              "ch": "通",
-              "kun": "とおる",
-              "on": "ツウ",
-              "id": "melewati, tembus",
-              "note": "押し通す = memaksakan kehendak"
+              "ch": "釘",
+              "kun": "くぎ",
+              "on": "テイ",
+              "id": "paku",
+              "note": "糠に釘 — seperti menancapkan paku di dedak"
             },
             {
-              "ch": "嵐",
-              "kun": "あらし",
-              "on": "ラン",
-              "id": "badai",
-              "note": "嵐の夜 = malam berbadai"
+              "ch": "虚",
+              "kun": "むな（しい）",
+              "on": "キョ",
+              "id": "hampa",
+              "note": "虚しい（むなしい）= hampa"
             },
             {
-              "ch": "謝",
-              "kun": "あやまる",
-              "on": "シャ",
-              "id": "meminta maaf",
-              "note": "謝る = meminta maaf"
+              "ch": "敢",
+              "kun": "",
+              "on": "カン",
+              "id": "berani",
+              "note": "敢えて言う（あえていう）= berani-berani berkata"
             },
             {
-              "ch": "掃",
-              "kun": "はく",
-              "on": "ソウ",
-              "id": "menyapu, membersihkan",
-              "note": "掃除 = bersih-bersih"
+              "ch": "儲",
+              "kun": "もう（ける）",
+              "on": "チョ",
+              "id": "untung",
+              "note": "骨折り損のくたびれ儲け — 'untung' berupa kelelahan (ironi)"
             }
           ]
         },
@@ -38799,43 +38799,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "明日のサッカーの練習、雨が降ろうが降るまいが休みはないって。",
-              "id": "Latihan sepak bola besok, mau hujan atau tidak katanya tidak libur."
+              "jp": "彼に何度もメールしたんだけど、返事こないんだよね。",
+              "id": "Aku udah email dia berkali-kali, tapi nggak dibales."
             },
             {
               "sp": "B",
-              "jp": "たとえ大雨であれ、行くしかないね。",
-              "id": "Walaupun hujan deras, tidak ada pilihan selain pergi."
+              "jp": "あー、あの人ね。何回送ったところで無駄だよ。読んでも返さないタイプじゃん。",
+              "id": "Ah, orang itu. Mau dikirim berapa kali pun percuma. Tipikal dibaca doang nggak dibales."
             },
             {
               "sp": "A",
-              "jp": "監督は何を言われようが、自分のやり方を押し通すからね。",
-              "id": "Pelatih itu, apa pun yang dikatakan orang, tetap memaksakan caranya sendiri."
+              "jp": "っていうかさ、電話しようが直接行こうが、どうせ「忙しい」で終わるし。",
+              "id": "Ngomong-ngomong, mau ditelepon atau didatangi langsung, ujung-ujungnya juga 'sibuk'."
             },
             {
               "sp": "B",
-              "jp": "まあ、理由が何であれ、無断欠席は許されないしね。",
-              "id": "Ya, apa pun alasannya, absen tanpa izin memang tidak dimaafkan."
+              "jp": "まあ、相手が誰であれ、返事しないのは失礼だよね。",
+              "id": "Ya, siapapun lawannya, nggak bales itu nggak sopan sih."
             },
             {
               "sp": "A",
-              "jp": "昨日サボったんだ。今さら謝ったところで許してもらえないだろうな。",
-              "id": "Kemarin aku bolos. Walaupun sekarang minta maaf mungkin tidak dimaafkan."
+              "jp": "だよね。こっちが丁寧にすればするで、向こうはますます適当になるし。",
+              "id": "Iya kan. Makin sopan kitanya, makin seenaknya dianya."
             },
             {
               "sp": "B",
-              "jp": "広いグラウンドはいいが、広ければ広いで掃除が大変だよ。",
-              "id": "Lapangan yang luas memang bagus, tapi kalau luas ya repot juga membersihkannya."
+              "jp": "わかる。焼け石に水ってやつだね。もう諦めなよ。",
+              "id": "Ngerti banget. Itu yang namanya usaha sia-sia. Udah, relain aja."
             },
             {
               "sp": "A",
-              "jp": "確かに。でも、雨が降ろうと試合はやるんだろう？",
-              "id": "Benar juga. Tapi walaupun hujan, pertandingannya tetap jalan kan?"
+              "jp": "そうするしかないか。はぁ。",
+              "id": "Kayaknya emang cuma itu pilihannya. Hah."
             },
             {
               "sp": "B",
-              "jp": "うん。たとえ嵐の夜であれ、中止しないって監督が言ってた。",
-              "id": "Iya. Kata pelatih, walaupun malam berbadai tidak akan dibatalkan."
+              "jp": "まあまあ、飲みに行こうよ。",
+              "id": "Udah-udah, yuk minum bareng."
             }
           ]
         }
@@ -38971,109 +38971,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜べく・〜がために — Tujuan & Sarana Formal",
           "items": [
             {
-              "jp": "目的",
-              "kj": "目的",
-              "r": "mokuteki",
-              "id": "tujuan",
-              "note": "目的を達成する = mencapai tujuan"
+              "id": "melaksanakan (tugas)",
+              "jp": "遂行",
+              "kj": "遂行",
+              "note": "職務を遂行する = melaksanakan tugas",
+              "r": "suikou"
             },
             {
-              "jp": "手段",
-              "kj": "手段",
-              "r": "shudan",
-              "id": "cara, sarana",
-              "note": "手段を選ばない = tidak pilih-pilih cara"
+              "id": "tekad",
+              "jp": "決意",
+              "kj": "決意",
+              "note": "決意を固める = meneguhkan tekad",
+              "r": "ketsui"
             },
             {
-              "jp": "開発",
-              "kj": "開発",
-              "r": "kaihatsu",
-              "id": "pengembangan",
-              "note": "新製品を開発する = mengembangkan produk baru"
+              "id": "kesiapan mental, tekad",
+              "jp": "覚悟",
+              "kj": "覚悟",
+              "note": "覚悟を決める = membulatkan tekad",
+              "r": "kakugo"
             },
             {
-              "jp": "介護",
-              "kj": "介護",
-              "r": "kaigo",
-              "id": "perawatan (lansia)",
-              "note": "介護ロボット = robot perawat lansia"
+              "id": "maksud pokok, tujuan",
+              "jp": "趣旨",
+              "kj": "趣旨",
+              "note": "趣旨に賛同する = menyetujui maksudnya",
+              "r": "shushi"
             },
             {
-              "jp": "実験",
-              "kj": "実験",
-              "r": "jikken",
-              "id": "percobaan, eksperimen",
-              "note": "実験を続ける = melanjutkan percobaan"
+              "id": "tindakan, langkah",
+              "jp": "措置",
+              "kj": "措置",
+              "note": "措置を講じる = mengambil tindakan",
+              "r": "sochi"
             },
             {
-              "jp": "連絡",
-              "kj": "連絡",
-              "r": "renraku",
-              "id": "pemberitahuan, kontak",
-              "note": "ご連絡いたします = kami akan menghubungi"
+              "id": "upaya sekuat tenaga",
+              "jp": "尽力",
+              "kj": "尽力",
+              "note": "尽力を尽くす = mengerahkan segenap upaya",
+              "r": "jinryoku"
             },
             {
-              "jp": "書面",
-              "kj": "書面",
-              "r": "shomen",
-              "id": "surat tertulis",
-              "note": "書面をもって = melalui surat tertulis"
+              "id": "menunaikan (sampai tuntas)",
+              "jp": "全う",
+              "kj": "全う",
+              "note": "使命を全うする = menunaikan misi",
+              "r": "mattou"
             },
             {
-              "jp": "採用試験",
-              "kj": "採用試験",
-              "r": "saiyoushiken",
-              "id": "tes rekrutmen",
-              "note": "採用試験の結果 = hasil tes rekrutmen"
+              "id": "pelaksanaan nekat",
+              "jp": "敢行",
+              "kj": "敢行",
+              "note": "敢行する = melaksanakan dengan berani",
+              "r": "kankou"
             },
             {
-              "jp": "結果",
-              "kj": "結果",
-              "r": "kekka",
-              "id": "hasil",
-              "note": "結果を出す = membuahkan hasil"
+              "id": "pemberlakuan (UU)",
+              "jp": "施行",
+              "kj": "施行",
+              "note": "法律を施行する = memberlakukan undang-undang",
+              "r": "shikou"
             },
             {
-              "jp": "医療技術",
-              "kj": "医療技術",
-              "r": "iryougijutsu",
-              "id": "teknologi medis",
-              "note": "最新の医療技術 = teknologi medis terkini"
+              "id": "penitipan, alih daya",
+              "jp": "委託",
+              "kj": "委託",
+              "note": "業務を委託する = mengalihdayakan pekerjaan",
+              "r": "itaku"
             },
             {
-              "jp": "寿命",
-              "kj": "寿命",
-              "r": "jumyou",
-              "id": "umur hidup",
-              "note": "寿命を延ばす = memperpanjang umur"
+              "id": "perantaraan, mediasi",
+              "jp": "斡旋",
+              "kj": "斡旋",
+              "note": "斡旋する = menjadi perantara",
+              "r": "assen"
             },
             {
-              "jp": "延ばす",
-              "kj": "延ばす",
-              "r": "nobasu",
-              "id": "memperpanjang",
-              "note": "寿命を延ばす = memperpanjang umur hidup"
+              "id": "melalui",
+              "jp": "介して",
+              "kj": "介して",
+              "note": "〜を介して知り合う = berkenalan melalui ~",
+              "r": "kaishite"
             },
             {
-              "jp": "夢",
-              "kj": "夢",
-              "r": "yume",
-              "id": "mimpi",
-              "note": "夢を実現する = mewujudkan mimpi"
+              "id": "melalui, memediasi",
+              "jp": "介する",
+              "kj": "介する",
+              "note": "〜を介する = melalui ~ (formal)",
+              "r": "kaisuru"
             },
             {
-              "jp": "実現",
-              "kj": "実現",
-              "r": "jitsugen",
-              "id": "realisasi, perwujudan",
-              "note": "夢の実現 = terwujudnya mimpi"
+              "id": "penyerahan sepenuhnya",
+              "jp": "一任",
+              "kj": "一任",
+              "note": "一任する = menyerahkan sepenuhnya",
+              "r": "ichinin"
             },
             {
-              "jp": "上京",
-              "kj": "上京",
-              "r": "joukyou",
-              "id": "pergi ke Tokyo",
-              "note": "上京した = pergi (merantau) ke Tokyo"
+              "id": "menitipkan, mempercayakan",
+              "jp": "託す",
+              "kj": "託す",
+              "note": "未来を託す = menitipkan masa depan",
+              "r": "takusu"
             }
           ]
         },
@@ -39196,60 +39196,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 11",
           "items": [
             {
-              "ch": "目",
-              "kun": "め",
-              "on": "モク",
-              "id": "mata",
-              "note": "目的 (もくてき) = tujuan"
+              "ch": "遂",
+              "id": "melaksanakan",
+              "kun": "と(げる)",
+              "note": "遂行 (すいこう) = pelaksanaan",
+              "on": "スイ"
             },
             {
-              "ch": "的",
-              "kun": "まと",
-              "on": "テキ",
-              "id": "sasaran",
-              "note": "目的, 積極的 (せっきょくてき) = positif"
+              "ch": "悟",
+              "id": "memahami",
+              "kun": "さと(る)",
+              "note": "覚悟 (かくご) = tekad",
+              "on": "ゴ"
             },
             {
-              "ch": "開",
-              "kun": "ひら(く)",
-              "on": "カイ",
-              "id": "membuka",
-              "note": "開発 (かいはつ) = pengembangan"
+              "ch": "趣",
+              "id": "maksud",
+              "kun": "おもむき",
+              "note": "趣旨 (しゅし) = maksud pokok",
+              "on": "シュ"
             },
             {
-              "ch": "発",
+              "ch": "措",
+              "id": "menaruh",
+              "kun": "お(く)",
+              "note": "措置 (そち) = tindakan",
+              "on": "ソ"
+            },
+            {
+              "ch": "敢",
+              "id": "berani",
+              "kun": "あ(えて)",
+              "note": "敢行 (かんこう) = pelaksanaan nekat",
+              "on": "カン"
+            },
+            {
+              "ch": "斡",
+              "id": "memediasi",
               "kun": "",
-              "on": "ハツ・ホツ",
-              "id": "memancarkan",
-              "note": "開発, 発表 (はっぴょう) = pengumuman"
+              "note": "斡旋 (あっせん) = perantaraan",
+              "on": "アツ"
             },
             {
-              "ch": "実",
-              "kun": "み",
-              "on": "ジツ",
-              "id": "nyata, buah",
-              "note": "実現 (じつげん) = realisasi"
+              "ch": "旋",
+              "id": "berputar",
+              "kun": "め(ぐる)",
+              "note": "斡旋 (あっせん) = perantaraan",
+              "on": "セン"
             },
             {
-              "ch": "験",
-              "kun": "",
-              "on": "ケン",
-              "id": "ujian, percobaan",
-              "note": "実験 (じっけん) = eksperimen"
-            },
-            {
-              "ch": "書",
-              "kun": "か(く)",
-              "on": "ショ",
-              "id": "menulis",
-              "note": "書面 (しょめん) = surat tertulis"
-            },
-            {
-              "ch": "夢",
-              "kun": "ゆめ",
-              "on": "ム",
-              "id": "mimpi",
-              "note": "夢 (ゆめ), 夢中 (むちゅう) = terlena"
+              "ch": "託",
+              "id": "menitipkan",
+              "kun": "たく(す)",
+              "note": "託す (たくす) = mempercayakan",
+              "on": "タク"
             }
           ]
         },
@@ -39258,44 +39258,44 @@ const CHAPTERS = {
           "title": "Percakapan",
           "lines": [
             {
-              "sp": "A",
-              "jp": "来年、留学するべく、今から準備しているんだ。",
-              "id": "Demi kuliah ke luar negeri tahun depan, aku sudah bersiap dari sekarang."
+              "id": "Eh, dengar soal bisnis baru? Katanya mulai jalan bulan depan.",
+              "jp": "ねえ、新規事業のこと聞いた？来月から動き出すらしいよ。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "すごいね。夢を実現させるがため、頑張っているんだね。",
-              "id": "Hebat. Kamu berjuang demi mewujudkan mimpimu ya."
+              "id": "Ya, dengar-dengar sih. Ngapain emangnya?",
+              "jp": "うん、噂では聞いたよ。何をするんだっけ？",
+              "sp": "B"
             },
             {
-              "sp": "A",
-              "jp": "うん。親の期待に応えんがために、絶対合格したい。",
-              "id": "Ya. Demi memenuhi harapan orang tuaku, aku ingin lulus."
+              "id": "Demi ekspansi ke luar negeri, katanya sekarang lagi riset pasar.",
+              "jp": "海外に進出するべく、今、市場調査をしてるんだって。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "応援しているよ。結果は書面をもって連絡が来るの？",
-              "id": "Aku mendukungmu. Hasilnya diberitahu lewat surat tertulis?"
+              "id": "Wah, demi mempertaruhkan masa depan perusahaan, presiden direktur juga serius katanya.",
+              "jp": "へえ、会社の未来を賭けるがために、社長も本気らしいね。",
+              "sp": "B"
             },
             {
-              "sp": "A",
-              "jp": "ううん、今回はメールをもって連絡が来るらしいよ。",
-              "id": "Tidak, kali ini katanya pemberitahuannya lewat email."
+              "id": "Yah, survei di lokasi kayaknya diserahkan ke vendor khusus.",
+              "jp": "まあ、現地の調査は専門業者に委託するみたいだよ。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "そうなんだ。最新の技術をもってすれば、手続きも簡単だね。",
-              "id": "Begitu. Kalau mengandalkan teknologi terbaru, urusannya pun jadi mudah."
+              "id": "Begitu. Hasilnya diberitahu lewat surat tertulis katanya.",
+              "jp": "そうなんだ。結果は書面をもって連絡が来るってさ。",
+              "sp": "B"
             },
             {
-              "sp": "A",
-              "jp": "本当だね。目標を達成するべく、今日も勉強を続けるよ。",
-              "id": "Benar. Demi mencapai target, hari ini pun aku lanjut belajar."
+              "id": "Ya. Kalau mengandalkan data terbaru, risikonya juga bisa dikurangi.",
+              "jp": "うん。最新のデータをもってすれば、リスクも減らせるだろうし。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "無理しないでね。体が資本だよ。",
-              "id": "Jangan memaksakan diri. Kesehatan itu modal utama."
+              "id": "Makanya, demi menyukseskan bisnisnya, ayo kita kerahkan upaya bareng-bareng.",
+              "jp": "やっぱり、事業を成功させるべく、みんなで尽力しよう。",
+              "sp": "B"
             }
           ]
         }
@@ -39431,109 +39431,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜ばこそ・〜ゆえに — Alasan & Penyebab Formal",
           "items": [
             {
-              "jp": "理由",
-              "kj": "理由",
-              "r": "riyuu",
-              "id": "alasan",
-              "note": "理由を説明する = menjelaskan alasan"
+              "id": "oleh karena itu",
+              "jp": "故に",
+              "kj": "故に",
+              "note": "〜ゆえに = karena (bahasa resmi)",
+              "r": "yueni"
             },
             {
-              "jp": "原因",
-              "kj": "原因",
-              "r": "gen'in",
-              "id": "penyebab",
-              "note": "原因を調べる = menyelidiki penyebab"
+              "id": "asal-usul",
+              "jp": "由来",
+              "kj": "由来",
+              "note": "〜に由来する = berasal dari ~",
+              "r": "yurai"
             },
             {
-              "jp": "連休",
-              "kj": "連休",
-              "r": "renkyuu",
-              "id": "libur panjang berurutan",
-              "note": "連休とあって = karena sedang libur panjang"
+              "id": "disebabkan oleh",
+              "jp": "起因",
+              "kj": "起因",
+              "note": "〜に起因する = disebabkan oleh ~",
+              "r": "kiin"
             },
             {
-              "jp": "行楽地",
-              "kj": "行楽地",
-              "r": "kourakuchi",
-              "id": "tempat rekreasi",
-              "note": "行楽地はどこもいっぱい = tempat rekreasi penuh semua"
+              "id": "terpaksa",
+              "jp": "余儀なく",
+              "kj": "余儀なく",
+              "note": "〜を余儀なくされる = terpaksa ~",
+              "r": "yoginaku"
             },
             {
-              "jp": "報道",
-              "kj": "報道",
-              "r": "houdou",
-              "id": "liputan, pemberitaan",
-              "note": "報道される = diliput media"
+              "id": "tak terhindarkan",
+              "jp": "不可避",
+              "kj": "不可避",
+              "note": "衝突は不可避だ = bentrokan tak terhindarkan",
+              "r": "fukahi"
             },
             {
-              "jp": "店主",
-              "kj": "店主",
-              "r": "tenshu",
-              "id": "pemilik toko",
-              "note": "店主の絵 = lukisan milik pemilik toko"
+              "id": "tidak ada pilihan lain",
+              "jp": "やむを得ない",
+              "kj": "やむを得ない",
+              "note": "やむを得ず欠席する = terpaksa absen",
+              "r": "yamuwoenai"
             },
             {
-              "jp": "不機嫌",
-              "kj": "不機嫌",
-              "r": "fukigen",
-              "id": "muram, tidak senang",
-              "note": "不機嫌な顔 = wajah muram"
+              "id": "terpaksa harus",
+              "jp": "せざるを得ない",
+              "kj": "せざるを得ない",
+              "note": "引き受けざるを得ない = terpaksa harus menerima",
+              "r": "sezaruoenai"
             },
             {
-              "jp": "空腹",
-              "kj": "空腹",
-              "r": "kuufuku",
-              "id": "lapar (perut kosong)",
-              "note": "空腹だったりする = kadang lapar"
+              "id": "keniscayaan",
+              "jp": "必然",
+              "kj": "必然",
+              "note": "必然的な結果 = hasil yang niscaya",
+              "r": "hitsuzen"
             },
             {
-              "jp": "約束",
-              "kj": "約束",
-              "r": "yakusoku",
-              "id": "janji",
-              "note": "約束した手前 = karena sudah terlanjur berjanji"
+              "id": "menimbulkan, mengundang",
+              "jp": "招く",
+              "kj": "招く",
+              "note": "誤解を招く = menimbulkan kesalahpahaman",
+              "r": "maneku"
             },
             {
-              "jp": "解決",
-              "kj": "解決",
-              "r": "kaiketsu",
-              "id": "penyelesaian",
-              "note": "問題を解決する = menyelesaikan masalah"
+              "id": "membawa, mengakibatkan",
+              "jp": "もたらす",
+              "kj": "もたらす",
+              "note": "変化をもたらす = membawa perubahan",
+              "r": "motarasu"
             },
             {
-              "jp": "体裁",
-              "kj": "体裁",
-              "r": "teisai",
-              "id": "kepantasan, penampilan lahiriah",
-              "note": "体裁が悪い = tidak pantas dilihat"
+              "id": "bermuara pada, disebabkan oleh",
+              "jp": "帰する",
+              "kj": "帰する",
+              "note": "〜に帰する = disebabkan oleh ~",
+              "r": "kisuru"
             },
             {
-              "jp": "不手際",
-              "kj": "不手際",
-              "r": "futegiwa",
-              "id": "kesalahan, kecerobohan",
-              "note": "数々の不手際 = berbagai kesalahan"
+              "id": "berdasarkan",
+              "jp": "拠る",
+              "kj": "拠る",
+              "note": "〜に拠る = berdasarkan ~",
+              "r": "yoru"
             },
             {
-              "jp": "許す",
-              "kj": "許す",
-              "r": "yurusu",
-              "id": "memaafkan, mengizinkan",
-              "note": "お許しください = mohon dimaafkan"
+              "id": "berdasarkan",
+              "jp": "基づく",
+              "kj": "基づく",
+              "note": "データに基づく = berdasarkan data",
+              "r": "motodzuku"
             },
             {
-              "jp": "信頼",
-              "kj": "信頼",
-              "r": "shinrai",
-              "id": "kepercayaan",
-              "note": "信頼が得られない = tidak mendapat kepercayaan"
+              "id": "mempertimbangkan",
+              "jp": "鑑みる",
+              "kj": "鑑みる",
+              "note": "〜に鑑みる = mempertimbangkan ~",
+              "r": "kangamiru"
             },
             {
-              "jp": "政策",
-              "kj": "政策",
-              "r": "seisaku",
-              "id": "kebijakan",
-              "note": "新しい政策 = kebijakan baru"
+              "id": "mendasari, berdasarkan",
+              "jp": "踏まえる",
+              "kj": "踏まえる",
+              "note": "〜を踏まえる = berdasarkan ~",
+              "r": "fumaeru"
             }
           ]
         },
@@ -39712,60 +39712,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 12",
           "items": [
             {
-              "ch": "理",
-              "kun": "ことわり",
-              "on": "リ",
-              "id": "alasan, logika",
-              "note": "理由 (りゆう) = alasan"
+              "ch": "故",
+              "id": "sebab",
+              "kun": "ゆえ",
+              "note": "故に (ゆえに) = oleh karena itu",
+              "on": "コ"
             },
             {
               "ch": "由",
-              "kun": "よし",
-              "on": "ユ",
               "id": "sebab",
-              "note": "理由, 自由 (じゆう) = kebebasan"
+              "kun": "よし",
+              "note": "由来 (ゆらい) = asal-usul",
+              "on": "ユ"
             },
             {
-              "ch": "連",
-              "kun": "つら(なる)",
-              "on": "レン",
-              "id": "menghubungkan",
-              "note": "連休 (れんきゅう) = libur berurutan"
+              "ch": "起",
+              "id": "terjadi",
+              "kun": "お(きる)",
+              "note": "起因 (きいん) = disebabkan oleh",
+              "on": "キ"
             },
             {
-              "ch": "休",
-              "kun": "やす(む)",
-              "on": "キュウ",
-              "id": "istirahat",
-              "note": "休み (やすみ), 連休"
+              "ch": "余",
+              "id": "sisa",
+              "kun": "あま(る)",
+              "note": "余儀なく (よぎなく) = terpaksa",
+              "on": "ヨ"
             },
             {
-              "ch": "報",
-              "kun": "むく(いる)",
-              "on": "ホウ",
-              "id": "laporan",
-              "note": "報道 (ほうどう) = pemberitaan"
+              "ch": "避",
+              "id": "menghindari",
+              "kun": "さ(ける)",
+              "note": "不可避 (ふかひ) = tak terhindarkan",
+              "on": "ヒ"
             },
             {
-              "ch": "道",
-              "kun": "みち",
-              "on": "ドウ",
-              "id": "jalan",
-              "note": "報道, 北海道 (ほっかいどう)"
+              "ch": "必",
+              "id": "pasti",
+              "kun": "かなら(ず)",
+              "note": "必然 (ひつぜん) = keniscayaan",
+              "on": "ヒツ"
             },
             {
-              "ch": "約",
-              "kun": "やく(す)",
-              "on": "ヤク",
-              "id": "janji",
-              "note": "約束 (やくそく) = janji"
+              "ch": "招",
+              "id": "mengundang",
+              "kun": "まね(く)",
+              "note": "招く (まねく) = menimbulkan",
+              "on": "ショウ"
             },
             {
-              "ch": "束",
-              "kun": "たば",
-              "on": "ソク",
-              "id": "ikat",
-              "note": "約束, 束ねる (たばねる) = mengikat"
+              "ch": "鑑",
+              "id": "mempertimbangkan",
+              "kun": "かんが(みる)",
+              "note": "鑑みる (かんがみる) = mempertimbangkan",
+              "on": "カン"
             }
           ]
         },
@@ -39774,44 +39774,44 @@ const CHAPTERS = {
           "title": "Percakapan",
           "lines": [
             {
-              "sp": "A",
-              "jp": "どうしてあの会社を辞めたの？",
-              "id": "Kenapa kamu keluar dari perusahaan itu?"
+              "id": "Eh, Tanaka belakangan kelihatan sibuk banget.",
+              "jp": "ねえ、田中さん、最近やたら忙しそうじゃん。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "好きであればこそ、辞めたんだ。成長できない職場にいたくなかった。",
-              "id": "Justru karena aku menyukainya, aku keluar. Aku tidak mau di tempat kerja yang tidak bisa membuatku bertumbuh."
+              "id": "Ya, karena sudah terlanjur jadi penanggung jawab proyek baru, aku nggak bisa santai.",
+              "jp": "うん、新規案件の責任者になった手前、気を抜けないんだよ。",
+              "sp": "B"
             },
             {
-              "sp": "A",
-              "jp": "連休とあって、どこも混んでいるね。",
-              "id": "Karena sedang libur panjang, di mana-mana ramai ya."
+              "id": "Begitu ya. Karena dia veteran, ekspektasinya pasti besar juga ya.",
+              "jp": "そっか。ベテランとあって、期待も大きいんだろうね。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "子供ではあるまいし、文句ばかり言わないで楽しもうよ。",
-              "id": "Kan bukan anak-anak, jangan mengeluh terus, nikmati saja."
+              "id": "Iya sih. Kan bukan amatir, kalau salah nggak bisa cuma jadi bahan ketawa.",
+              "jp": "まあね。プロではあるまいし、ミスしたら笑い話で済まないさ。",
+              "sp": "B"
             },
             {
-              "sp": "A",
-              "jp": "リーダーになった手前、弱音は吐けないよ。",
-              "id": "Karena sudah terlanjur jadi pemimpin, aku tidak bisa mengeluh."
+              "id": "Justru karena keras, katanya orang bisa bertumbuh.",
+              "jp": "厳しければこそ、成長できるって言うじゃん。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "経験不足ゆえ、ご迷惑をおかけして申し訳ありません。",
-              "id": "Karena kurang pengalaman, saya mohon maaf atas ketidaknyamanannya."
+              "id": "Betul. Karena kurang pengalaman, kadang aku merepotkan juga.",
+              "jp": "そうだね。経験不足ゆえ、迷惑かけることもあるけど。",
+              "sp": "B"
             },
             {
-              "sp": "A",
-              "jp": "そんなにかしこまらなくていいよ。",
-              "id": "Tidak perlu sekaku itu."
+              "id": "Nggak kok. Malah aku mengandalkanmu.",
+              "jp": "そんなことないよ。むしろ頼りにしてるって。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "ありがとう。でも、けじめはつけたいんだ。",
-              "id": "Makasih. Tapi aku ingin bersikap tegas pada diriku sendiri."
+              "id": "Makasih. Aku tetap ingin memenuhi ekspektasi.",
+              "jp": "ありがとう。やっぱり期待に応えたいよ。",
+              "sp": "B"
             }
           ]
         }
@@ -39947,109 +39947,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜べからず・〜まじき — Kemungkinan & Larangan Formal",
           "items": [
             {
-              "jp": "想像",
-              "kj": "想像",
-              "r": "souzou",
-              "id": "imajinasi, bayangan",
-              "note": "想像にかたくない = mudah dibayangkan"
+              "id": "melarang",
+              "jp": "禁ずる",
+              "kj": "禁ずる",
+              "note": "立ち入りを禁ずる = melarang masuk",
+              "r": "kinzuru"
             },
             {
-              "jp": "察する",
-              "kj": "察する",
-              "r": "sassuru",
-              "id": "memahami (perasaan orang)",
-              "note": "心中を察する = memahami isi hati"
+              "id": "melarang",
+              "jp": "禁じる",
+              "kj": "禁じる",
+              "note": "喫煙を禁じる = melarang merokok",
+              "r": "kinjiru"
             },
             {
-              "jp": "理解",
-              "kj": "理解",
-              "r": "rikai",
-              "id": "pemahaman",
-              "note": "理解するにかたくない = mudah dipahami"
+              "id": "larangan keras",
+              "jp": "厳禁",
+              "kj": "厳禁",
+              "note": "持ち込み厳禁 = dilarang keras membawa masuk",
+              "r": "genkin"
             },
             {
-              "jp": "心中",
-              "kj": "心中",
-              "r": "shinchuu",
-              "id": "isi hati",
-              "note": "社長の心中 = isi hati direktur"
+              "id": "aturan, ketetapan",
+              "jp": "掟",
+              "kj": "掟",
+              "note": "掟を破る = melanggar aturan",
+              "r": "okite"
             },
             {
-              "jp": "偽物",
-              "kj": "偽物",
-              "r": "nisemono",
-              "id": "barang palsu",
-              "note": "偽物であること = hal bahwa itu palsu"
+              "id": "aturan disiplin",
+              "jp": "戒律",
+              "kj": "戒律",
+              "note": "戒律を守る = mematuhi aturan",
+              "r": "kairitsu"
             },
             {
-              "jp": "素人",
-              "kj": "素人",
-              "r": "shirouto",
-              "id": "amatir",
-              "note": "素人のわたし = saya yang amatir"
+              "id": "pelanggaran (hukum)",
+              "jp": "抵触",
+              "kj": "抵触",
+              "note": "法に抵触する = melanggar hukum",
+              "r": "teishoku"
             },
             {
-              "jp": "否定",
-              "kj": "否定",
-              "r": "hitei",
-              "id": "penyangkalan",
-              "note": "否定すべくもない = jelas tidak bisa disangkal"
+              "id": "pelanggaran",
+              "jp": "違反",
+              "kj": "違反",
+              "note": "規則違反 = pelanggaran aturan",
+              "r": "ihan"
             },
             {
-              "jp": "準備",
-              "kj": "準備",
-              "r": "junbi",
-              "id": "persiapan",
-              "note": "準備を始める = mulai bersiap"
+              "id": "pembiaran diam-diam",
+              "jp": "黙認",
+              "kj": "黙認",
+              "note": "黙認する = membiarkan tanpa menegur",
+              "r": "mokunin"
             },
             {
-              "jp": "立ち入る",
-              "kj": "立ち入る",
-              "r": "tachiiru",
-              "id": "memasuki (area)",
-              "note": "立ち入るべからず = dilarang masuk"
+              "id": "pengabaian",
+              "jp": "看過",
+              "kj": "看過",
+              "note": "看過できない = tidak bisa dibiarkan",
+              "r": "kanka"
             },
             {
-              "jp": "事件",
-              "kj": "事件",
-              "r": "jiken",
-              "id": "insiden, peristiwa",
-              "note": "事件を起こす = menimbulkan insiden"
+              "id": "tak terhindarkan",
+              "jp": "免れない",
+              "kj": "免れない",
+              "note": "批判を免れない = tak lepas dari kritik",
+              "r": "manugarenai"
             },
             {
-              "jp": "発言",
-              "kj": "発言",
-              "r": "hatsugen",
-              "id": "pernyataan, ucapan",
-              "note": "あるまじき発言 = ucapan yang tidak pantas"
+              "id": "penghindaran",
+              "jp": "回避",
+              "kj": "回避",
+              "note": "リスクを回避する = menghindari risiko",
+              "r": "kaihi"
             },
             {
-              "jp": "辞任",
-              "kj": "辞任",
-              "r": "jinin",
-              "id": "pengunduran diri",
-              "note": "辞任に追い込まれる = dipaksa mengundurkan diri"
+              "id": "penghalangan",
+              "jp": "阻止",
+              "kj": "阻止",
+              "note": "犯行を阻止する = menggagalkan kejahatan",
+              "r": "soshi"
             },
             {
-              "jp": "犯罪",
-              "kj": "犯罪",
-              "r": "hanzai",
-              "id": "kejahatan",
-              "note": "許すまじき犯罪 = kejahatan yang tak termaafkan"
+              "id": "penangkalan",
+              "jp": "抑止",
+              "kj": "抑止",
+              "note": "犯罪の抑止 = pencegahan kejahatan",
+              "r": "yokushi"
             },
             {
-              "jp": "大臣",
-              "kj": "大臣",
-              "r": "daijin",
-              "id": "menteri",
-              "note": "大臣の発言 = ucapan menteri"
+              "id": "penahanan, pembatasan",
+              "jp": "拘束",
+              "kj": "拘束",
+              "note": "身柄を拘束する = menahan seseorang",
+              "r": "kousoku"
             },
             {
-              "jp": "黙る",
-              "kj": "黙る",
-              "r": "damaru",
-              "id": "diam",
-              "note": "黙ってはいられない = tidak bisa tinggal diam"
+              "id": "belenggu",
+              "jp": "束縛",
+              "kj": "束縛",
+              "note": "束縛から逃れる = lepas dari belenggu",
+              "r": "sokubaku"
             }
           ]
         },
@@ -40276,60 +40276,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 13",
           "items": [
             {
-              "ch": "想",
-              "kun": "おも(う)",
-              "on": "ソウ",
-              "id": "pikiran",
-              "note": "想像 (そうぞう) = imajinasi"
-            },
-            {
-              "ch": "像",
+              "ch": "禁",
+              "id": "melarang",
               "kun": "",
-              "on": "ゾウ",
-              "id": "bayangan, patung",
-              "note": "想像, 肖像 (しょうぞう) = potret"
+              "note": "禁じる (きんじる) = melarang",
+              "on": "キン"
             },
             {
-              "ch": "偽",
-              "kun": "いつわ(る)",
-              "on": "ギ",
-              "id": "palsu",
-              "note": "偽物 (にせもの) = barang palsu"
+              "ch": "厳",
+              "id": "ketat",
+              "kun": "きび(しい)",
+              "note": "厳禁 (げんきん) = larangan keras",
+              "on": "ゲン"
             },
             {
-              "ch": "物",
-              "kun": "もの",
-              "on": "ブツ・モツ",
-              "id": "benda",
-              "note": "偽物, 食べ物 (たべもの) = makanan"
+              "ch": "掟",
+              "id": "aturan, ketetapan",
+              "kun": "おきて",
+              "note": "掟 (おきて) = aturan, ketetapan",
+              "on": ""
             },
             {
-              "ch": "否",
-              "kun": "いな",
-              "on": "ヒ",
-              "id": "penolakan",
-              "note": "否定 (ひてい) = penyangkalan"
+              "ch": "戒",
+              "id": "peringatan",
+              "kun": "いまし(める)",
+              "note": "戒律 (かいりつ) = aturan disiplin",
+              "on": "カイ"
             },
             {
-              "ch": "定",
-              "kun": "さだ(める)",
-              "on": "テイ",
-              "id": "menetapkan",
-              "note": "否定, 予定 (よてい) = rencana"
+              "ch": "抵",
+              "id": "menyangga",
+              "kun": "",
+              "note": "抵触 (ていしょく) = melanggar (hukum)",
+              "on": "テイ"
             },
             {
-              "ch": "犯",
-              "kun": "おか(す)",
-              "on": "ハン",
-              "id": "melanggar",
-              "note": "犯罪 (はんざい) = kejahatan"
+              "ch": "黙",
+              "id": "diam",
+              "kun": "だま(る)",
+              "note": "黙認 (もくにん) = pembiaran diam-diam",
+              "on": "モク"
             },
             {
-              "ch": "罪",
-              "kun": "つみ",
-              "on": "ザイ",
-              "id": "dosa, kesalahan",
-              "note": "犯罪, 有罪 (ゆうざい) = bersalah"
+              "ch": "免",
+              "id": "terlepas",
+              "kun": "まぬが(れる)",
+              "note": "免れない (まぬがれない) = tak terhindarkan",
+              "on": "メン"
+            },
+            {
+              "ch": "抑",
+              "id": "menekan",
+              "kun": "おさ(える)",
+              "note": "抑止 (よくし) = penangkalan",
+              "on": "ヨク"
             }
           ]
         },
@@ -40338,44 +40338,44 @@ const CHAPTERS = {
           "title": "Percakapan",
           "lines": [
             {
-              "sp": "A",
-              "jp": "あの絵、本物かな。",
-              "id": "Lukisan itu, asli tidak ya?"
+              "id": "Eh, di gudang ini tertulis selain pihak terkait dilarang masuk.",
+              "jp": "ねえ、この倉庫、関係者以外立ち入るべからずって書いてあるよ。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "素人のわたしには知るべくもないよ。専門家に聞こう。",
-              "id": "Bagi saya yang amatir jelas tidak mungkin tahu. Tanya ahlinya saja."
+              "id": "Benarkah. Kalau ketahuan, pasti dimarahi.",
+              "jp": "ほんとだ。見つかったら、怒られるに決まってるね。",
+              "sp": "B"
             },
             {
-              "sp": "A",
-              "jp": "この部屋、関係者以外立ち入るべからずって書いてある。",
-              "id": "Di ruangan ini tertulis selain pihak terkait dilarang masuk."
+              "id": "Aku penasaran isinya seperti apa, tapi tak berani mendekat.",
+              "jp": "中がどうなってるのか気になるけど、近づくに近づけないよ。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "じゃあ、ここで待つしかないね。",
-              "id": "Kalau begitu, hanya bisa menunggu di sini."
+              "id": "Paham. Rasa ingin melihatnya mudah dibayangkan, tapi tahan saja.",
+              "jp": "分かる。見たい気持ちは想像にかたくないけど、我慢しよう。",
+              "sp": "B"
             },
             {
-              "sp": "A",
-              "jp": "試験まであと三日だ。のんびりしてはいられないよ。",
-              "id": "Tinggal tiga hari sampai ujian. Tidak bisa bersantai-santai."
+              "id": "Maksudnya, kalau ketahuan jelas tidak mungkin bisa beralasan ya.",
+              "jp": "っていうか、見つかったら言い訳すべくもないよね。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "分かるよ。わたしも遊ぶに遊べない心境だよ。",
-              "id": "Aku paham. Aku pun ingin main tapi tidak bisa."
+              "id": "Ya. Pasti dimarahi karena perbuatan yang tidak pantas bagi murid.",
+              "jp": "そうだね。生徒にあるまじき行為だって怒られるよ。",
+              "sp": "B"
             },
             {
-              "sp": "A",
-              "jp": "彼の努力は想像にかたくないよね。",
-              "id": "Mudah dibayangkan betapa keras usahanya ya."
+              "id": "Yah, kalau cuma ditegur sih masih mending.",
+              "jp": "まあ、注意だけで済めばいいけどさ。",
+              "sp": "A"
             },
             {
-              "sp": "B",
-              "jp": "うん。あんな発言はリーダーにあるまじき行為だと思う。",
-              "id": "Ya. Ucapan seperti itu menurutku perbuatan yang tidak pantas bagi seorang pemimpin."
+              "id": "Ya. Pokoknya, tidak bisa bersantai-santai di sini. Ayo pergi.",
+              "jp": "うん。とにかく、ここでのんびりしてはいられないね。行こう。",
+              "sp": "B"
             }
           ]
         }
@@ -40511,109 +40511,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜ともあろう・〜たるもの — Standar & Penilaian",
           "items": [
             {
-              "jp": "経営者",
-              "kj": "経営者",
-              "r": "keieisha",
-              "id": "pengusaha, pemimpin perusahaan",
-              "note": "経営者たるもの = sebagai seorang pemimpin perusahaan"
+              "jp": "品格",
+              "kj": "ひんかく",
+              "r": "hinkaku",
+              "id": "wibawa, kepribadian yang luhur",
+              "note": "品格を保つ = menjaga wibawa"
             },
             {
-              "jp": "社会人",
-              "kj": "社会人",
-              "r": "shakaijin",
-              "id": "orang dewasa yang bekerja",
-              "note": "社会人たるもの = sebagai orang dewasa yang bekerja"
+              "jp": "威厳",
+              "kj": "いげん",
+              "r": "igen",
+              "id": "kewibawaan",
+              "note": "威厳を保つ = menjaga kewibawaan"
             },
             {
-              "jp": "国会議員",
-              "kj": "国会議員",
-              "r": "kokkaigiin",
-              "id": "anggota parlemen",
-              "note": "国会議員ともあろう人 = padahal anggota parlemen"
+              "jp": "風格",
+              "kj": "ふうかく",
+              "r": "fukaku",
+              "id": "wibawa, kharisma yang terpancar",
+              "note": "風格がある = berwibawa / punya kharisma"
             },
             {
-              "jp": "差別",
-              "kj": "差別",
-              "r": "sabetsu",
-              "id": "diskriminasi",
-              "note": "差別的な発言 = ucapan yang diskriminatif"
+              "jp": "資質",
+              "kj": "ししつ",
+              "r": "shishitsu",
+              "id": "kualifikasi, bakat bawaan",
+              "note": "リーダーとしての資質 = bakat sebagai pemimpin"
             },
             {
-              "jp": "中学生",
-              "kj": "中学生",
-              "r": "chuugakusei",
-              "id": "siswa SMP",
-              "note": "中学生ともなると = begitu sampai SMP"
+              "jp": "素質",
+              "kj": "そしつ",
+              "r": "soshitsu",
+              "id": "bakat, potensi bawaan",
+              "note": "音楽の素質がある = berbakat dalam musik"
             },
             {
-              "jp": "老後",
-              "kj": "老後",
-              "r": "rougo",
-              "id": "masa tua",
-              "note": "老後のこと = soal masa tua"
+              "jp": "見識",
+              "kj": "けんしき",
+              "r": "kenshiki",
+              "id": "wawasan, daya nilai",
+              "note": "見識が深い = wawasannya luas"
             },
             {
-              "jp": "気遣う",
-              "kj": "気遣う",
-              "r": "kizukau",
-              "id": "memperhatikan (perasaan orang)",
-              "note": "気を遣っている = sedang memperhatikan"
+              "jp": "度量",
+              "kj": "どりょう",
+              "r": "doryo",
+              "id": "kelapangan dada, jiwa besar",
+              "note": "度量が大きい = berjiwa besar"
             },
             {
-              "jp": "価値",
-              "kj": "価値",
-              "r": "kachi",
-              "id": "nilai",
-              "note": "それなりの価値 = nilai yang sepadan"
+              "jp": "肝心",
+              "kj": "かんじん",
+              "r": "kanjin",
+              "id": "hal yang paling penting/krusial",
+              "note": "肝心なところで = di titik yang krusial"
             },
             {
-              "jp": "作家",
-              "kj": "作家",
-              "r": "sakka",
-              "id": "penulis, seniman",
-              "note": "この作家の作った皿 = piring buatan seniman ini"
+              "jp": "肝要",
+              "kj": "かんよう",
+              "r": "kan'yo",
+              "id": "inti yang penting (formal)",
+              "note": "肝要な点 = poin yang penting"
             },
             {
-              "jp": "傷",
-              "kj": "傷",
-              "r": "kizu",
-              "id": "luka, cacat",
-              "note": "少し傷があっても = walaupun sedikit cacat"
+              "jp": "模範",
+              "kj": "もはん",
+              "r": "mohan",
+              "id": "teladan, contoh",
+              "note": "模範となる = menjadi teladan"
             },
             {
-              "jp": "言葉遣い",
-              "kj": "言葉遣い",
-              "r": "kotobazukai",
-              "id": "cara berbahasa",
-              "note": "言葉の使い方 = cara memakai kata"
+              "jp": "規範",
+              "kj": "きはん",
+              "r": "kihan",
+              "id": "norma, standar",
+              "note": "倫理の規範 = norma etika"
             },
             {
-              "jp": "素直",
-              "kj": "素直",
-              "r": "sunao",
-              "id": "jujur, lugu",
-              "note": "素直な子供 = anak yang lugu"
+              "jp": "体面",
+              "kj": "たいめん",
+              "r": "taimen",
+              "id": "kehormatan, muka",
+              "note": "体面を保つ = menjaga muka"
             },
             {
-              "jp": "当然",
-              "kj": "当然",
-              "r": "touzen",
-              "id": "wajar, seharusnya",
-              "note": "できて当然 = wajar kalau bisa"
+              "jp": "面目",
+              "kj": "めんぼく",
+              "r": "menboku",
+              "id": "kehormatan, harga diri",
+              "note": "面目を失う = kehilangan muka"
             },
             {
-              "jp": "挨拶",
-              "kj": "挨拶",
-              "r": "aisatsu",
-              "id": "sapaan",
-              "note": "あいさつを守る = menjaga sapaan"
+              "jp": "矜持",
+              "kj": "きょうじ",
+              "r": "kyoji",
+              "id": "harga diri, kebanggaan diri",
+              "note": "矜持を貫く = memegang teguh harga diri"
             },
             {
-              "jp": "親",
-              "kj": "親",
-              "r": "oya",
-              "id": "orang tua",
-              "note": "親の言うこと = perkataan orang tua"
+              "jp": "沽券",
+              "kj": "こけん",
+              "r": "koken",
+              "id": "reputasi, nama baik",
+              "note": "沽券にかかわる = menyangkut reputasi"
             }
           ]
         },
@@ -40792,60 +40792,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 14",
           "items": [
             {
-              "ch": "経",
-              "kun": "へ(る)",
-              "on": "ケイ",
-              "id": "melewati",
-              "note": "経営 (けいえい) = manajemen, 経験 (けいけん) = pengalaman"
+              "ch": "威",
+              "kun": "おどす",
+              "on": "イ",
+              "id": "kewibawaan, mengancam",
+              "note": "威厳 (いげん) = kewibawaan"
             },
             {
-              "ch": "営",
-              "kun": "いとな(む)",
-              "on": "エイ",
-              "id": "mengelola",
-              "note": "経営者 (けいえいしゃ) = pengusaha"
-            },
-            {
-              "ch": "社",
-              "kun": "やしろ",
-              "on": "シャ",
-              "id": "perusahaan, kuil",
-              "note": "社会 (しゃかい) = masyarakat, 社長 (しゃちょう) = direktur"
-            },
-            {
-              "ch": "会",
-              "kun": "あ(う)",
-              "on": "カイ",
-              "id": "bertemu",
-              "note": "社会人 (しゃかいじん), 会社 (かいしゃ) = perusahaan"
-            },
-            {
-              "ch": "議",
+              "ch": "矜",
               "kun": "",
-              "on": "ギ",
-              "id": "pembahasan",
-              "note": "会議 (かいぎ) = rapat, 国会議員 (こっかいぎいん)"
+              "on": "キョウ",
+              "id": "harga diri, mengasihani",
+              "note": "矜持 (きょうじ) = harga diri"
             },
             {
-              "ch": "員",
+              "ch": "沽",
               "kun": "",
-              "on": "イン",
-              "id": "anggota",
-              "note": "国会議員, 店員 (てんいん) = pegawai toko"
+              "on": "コ",
+              "id": "menjual, reputasi",
+              "note": "沽券 (こけん) = reputasi"
             },
             {
-              "ch": "差",
-              "kun": "さ(す)",
-              "on": "サ",
-              "id": "perbedaan",
-              "note": "差別 (さべつ) = diskriminasi"
+              "ch": "範",
+              "kun": "",
+              "on": "ハン",
+              "id": "contoh, teladan",
+              "note": "模範 (もはん) = teladan"
             },
             {
-              "ch": "別",
-              "kun": "わか(れる)",
-              "on": "ベツ",
-              "id": "memisahkan",
-              "note": "差別, 特別 (とくべつ) = istimewa"
+              "ch": "規",
+              "kun": "",
+              "on": "キ",
+              "id": "aturan, standar",
+              "note": "規範 (きはん) = norma"
+            },
+            {
+              "ch": "素",
+              "kun": "もと",
+              "on": "ソ",
+              "id": "unsur, polos, bawaan",
+              "note": "素質 (そしつ) = bakat"
+            },
+            {
+              "ch": "質",
+              "kun": "ただす",
+              "on": "シツ",
+              "id": "kualitas, menanyai",
+              "note": "資質 (ししつ) = kualifikasi / bakat"
+            },
+            {
+              "ch": "格",
+              "kun": "",
+              "on": "カク",
+              "id": "status, martabat",
+              "note": "品格 (ひんかく) = wibawa"
             }
           ]
         },
@@ -40855,43 +40855,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "最近の新入社員ときたら、挨拶もろくにできない。",
-              "id": "Kalau soal karyawan baru zaman sekarang, memberi salam saja tidak becus."
+              "jp": "ねえ、聞いた？田中さんが課長になったんだって。課長ともなると、会議の仕切りも変わってくるよね。",
+              "id": "Eh, denger nggak? Katanya Pak Tanaka jadi kepala seksi. Kalau udah sampai level kepala seksi, cara mimpin rapat juga berubah ya."
             },
             {
               "sp": "B",
-              "jp": "まあまあ。新入社員なりに頑張っているんだよ。",
-              "id": "Sabar. Dengan segala keterbatasannya sebagai karyawan baru, dia sedang berusaha."
+              "jp": "うーん、まあ、課長たるものは部下の模範にならなきゃね。でもさ、田中さんときたら、相変わらず遅刻ばっかりなんだよ。",
+              "id": "Hmm, ya namanya kepala seksi harusnya jadi teladan buat bawahannya. Tapi ya, kalau soal Pak Tanaka, dia tuh masih aja sering telat."
             },
             {
               "sp": "A",
-              "jp": "課長ともあろう人が、部下の前でそんなことを言うなんて。",
-              "id": "Padahal seorang kepala seksi, kok berkata begitu di depan bawahan."
+              "jp": "え、課長ともあろう人が遅刻って、マジ？ちょっと威厳がないんじゃない？",
+              "id": "Eh, orang yang jadi kepala seksi kok telat? Serius? Kayaknya nggak berwibawa deh."
             },
             {
               "sp": "B",
-              "jp": "管理職たるもの、言葉には気をつけなければならないね。",
-              "id": "Sebagai seorang atasan, sudah seharusnya berhati-hati dalam berucap."
+              "jp": "やっぱりね。うちの前の課長なんてさ、品格が違ったじゃん。",
+              "id": "Nah kan. Kepala seksi yang sebelumnya, wibawanya beda banget."
             },
             {
               "sp": "A",
-              "jp": "子供も高校生ともなると、親と話さなくなるね。",
-              "id": "Begitu anak sampai SMA, tidak mau bicara dengan orang tua ya."
+              "jp": "まあ、田中さんなりに頑張ってるのかもしれないよ。まだなって一週間だし。",
+              "id": "Ya, mungkin Pak Tanaka juga berusaha dengan caranya sendiri. Baru seminggu jadi juga."
             },
             {
               "sp": "B",
-              "jp": "それなりの理由があるんだろう。見守ろうよ。",
-              "id": "Pasti ada alasannya yang sepadan. Awasi saja dari jauh."
+              "jp": "それはそうだけどさ、部下に「時間守れ」なんて言っても説得力ゼロだよ。",
+              "id": "Ya bener sih, tapi kalau dia bilang 'jangan telat' ke bawahan, nggak ada yang bakal dengerin."
             },
             {
               "sp": "A",
-              "jp": "社会人たるもの、時間を守るのは当然だよね。",
-              "id": "Sebagai orang dewasa yang bekerja, menepati waktu itu sudah seharusnya ya."
+              "jp": "っていうか、役職が上がるほど目立つっていうし、本人も分かってるんじゃない？",
+              "id": "Maksudnya, makin tinggi jabatan makin disorot orang, dia juga pasti sadar kan?"
             },
             {
               "sp": "B",
-              "jp": "その通り。子供なりに約束を守る子もいるのにね。",
-              "id": "Tepat. Padahal ada anak yang dengan caranya sendiri menepati janji."
+              "jp": "うん、ほんとに。課長たるもの、見られてナンボだからね。",
+              "id": "Iya, bener banget. Namanya juga kepala seksi, dinilai dari apa yang dilihat orang."
             }
           ]
         }
@@ -41027,109 +41027,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜にひきかえ・〜にもまして — Perbandingan & Kontras",
           "items": [
             {
-              "jp": "姉",
-              "kj": "姉",
-              "r": "ane",
-              "id": "kakak perempuan",
-              "note": "姉がきれい好き = kakak suka kebersihan"
+              "jp": "雲泥の差",
+              "kj": "うんでいのさ",
+              "r": "undei no sa",
+              "id": "perbedaan bagai langit dan bumi",
+              "note": "雲泥の差がある = bedanya bagai langit dan bumi"
             },
             {
-              "jp": "妹",
-              "kj": "妹",
-              "r": "imouto",
-              "id": "adik perempuan",
-              "note": "妹は部屋を散らかす = adik mengobrak-abrik kamar"
+              "jp": "月とすっぽん",
+              "kj": "つきとすっぽん",
+              "r": "tsuki to suppon",
+              "id": "jauh berbeda (bagai bulan dan kura-kura)",
+              "note": "月とすっぽんの違い = perbedaan yang jauh sekali"
             },
             {
-              "jp": "散らかす",
-              "kj": "散らかす",
-              "r": "chirakasu",
-              "id": "mengobrak-abrik",
-              "note": "部屋を散らかす = mengobrak-abrik kamar"
+              "jp": "天と地",
+              "kj": "てんとち",
+              "r": "ten to chi",
+              "id": "langit dan bumi (perbedaan besar)",
+              "note": "天と地ほど違う = beda jauh bagai langit dan bumi"
             },
             {
-              "jp": "猛暑",
-              "kj": "猛暑",
-              "r": "mousho",
-              "id": "panas terik",
-              "note": "猛暑で気温が上がる = panas terik menaikkan suhu"
+              "jp": "段違い",
+              "kj": "だんちがい",
+              "r": "danchigai",
+              "id": "jauh lebih unggul",
+              "note": "段違いに上手い = jauh lebih jago"
             },
             {
-              "jp": "気温",
-              "kj": "気温",
-              "r": "kion",
-              "id": "suhu udara",
-              "note": "気温が33度を超える = suhu melewati 33 derajat"
+              "jp": "桁違い",
+              "kj": "けたちがい",
+              "r": "ketachigai",
+              "id": "beda jauh (tingkatan digit)",
+              "note": "桁違いの金額 = jumlah uang yang beda jauh"
             },
             {
-              "jp": "結婚式",
-              "kj": "結婚式",
-              "r": "kekkonshiki",
-              "id": "upacara pernikahan",
-              "note": "結婚式の日 = hari pernikahan"
+              "jp": "格段",
+              "kj": "かくだん",
+              "r": "kakudan",
+              "id": "jauh, luar biasa",
+              "note": "格段に良くなった = membaik jauh"
             },
             {
-              "jp": "美しい",
-              "kj": "美しい",
-              "r": "utsukushii",
-              "id": "indah",
-              "note": "いつにもまして美しい = lebih indah dari biasanya"
+              "jp": "遥かに",
+              "kj": "はるかに",
+              "r": "haruka ni",
+              "id": "jauh lebih (adverbia)",
+              "note": "遥かに上回る = jauh melampaui"
             },
             {
-              "jp": "演劇",
-              "kj": "演劇",
-              "r": "engeki",
-              "id": "teater, drama",
-              "note": "演劇を続ける = terus berteater"
+              "jp": "際立つ",
+              "kj": "きわだつ",
+              "r": "kiwadatsu",
+              "id": "menonjol, tampak jelas",
+              "note": "存在感が際立つ = kehadirannya menonjol"
             },
             {
-              "jp": "外出",
-              "kj": "外出",
-              "r": "gaishutsu",
-              "id": "keluar rumah",
-              "note": "外出したい = ingin keluar rumah"
+              "jp": "引き立つ",
+              "kj": "ひきたつ",
+              "r": "hikitatsu",
+              "id": "tampak menonjol (karena kontras)",
+              "note": "肌が引き立つ色 = warna yang membuat kulit tampak menonjol"
             },
             {
-              "jp": "せめて",
-              "kj": "せめて",
-              "r": "semete",
-              "id": "setidaknya",
-              "note": "せめて月に1回 = setidaknya sebulan sekali"
+              "jp": "対照的",
+              "kj": "たいしょうてき",
+              "r": "taishoteki",
+              "id": "kontras, berlawanan",
+              "note": "対照的な性格 = kepribadian yang kontras"
             },
             {
-              "jp": "広い",
-              "kj": "広い",
-              "r": "hiroi",
-              "id": "luas",
-              "note": "広いマンション = apartemen yang luas"
+              "jp": "対極",
+              "kj": "たいきょく",
+              "r": "taikyoku",
+              "id": "kutub yang berlawanan",
+              "note": "対極にある = berlawanan kutub"
             },
             {
-              "jp": "狭い",
-              "kj": "狭い",
-              "r": "semai",
-              "id": "sempit",
-              "note": "狭い部屋 = kamar yang sempit"
+              "jp": "一変",
+              "kj": "いっぺん",
+              "r": "ippen",
+              "id": "berubah total",
+              "note": "様子が一変した = suasananya berubah total"
             },
             {
-              "jp": "古い",
-              "kj": "古い",
-              "r": "furui",
-              "id": "tua (benda)",
-              "note": "古い建物 = bangunan tua"
+              "jp": "様変わり",
+              "kj": "ようがわり",
+              "r": "yogawari",
+              "id": "berubah rupa total",
+              "note": "すっかり様変わりした = berubah total"
             },
             {
-              "jp": "遠い",
-              "kj": "遠い",
-              "r": "tooi",
-              "id": "jauh",
-              "note": "駅から遠い = jauh dari stasiun"
+              "jp": "見違える",
+              "kj": "みちがえる",
+              "r": "michigaeru",
+              "id": "berubah sampai tak dikenali",
+              "note": "見違えるほど綺麗になった = berubah sampai tak dikenali"
             },
             {
-              "jp": "きれい好き",
-              "kj": "きれい好き",
-              "r": "kireizuki",
-              "id": "suka kebersihan",
-              "note": "きれい好きな姉 = kakak yang suka kebersihan"
+              "jp": "比較にならない",
+              "kj": "ひかくにならない",
+              "r": "hikaku ni naranai",
+              "id": "tidak ada bandingnya",
+              "note": "比較にならないほど安い = jauh lebih murah, tak ada bandingnya"
             }
           ]
         },
@@ -41244,60 +41244,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 15",
           "items": [
             {
-              "ch": "姉",
-              "kun": "あね",
-              "on": "シ",
-              "id": "kakak perempuan",
-              "note": "姉 (あね), お姉さん (おねえさん)"
+              "ch": "雲",
+              "kun": "くも",
+              "on": "ウン",
+              "id": "awan",
+              "note": "雲泥の差 (うんでいのさ) = bagai langit dan bumi"
             },
             {
-              "ch": "妹",
-              "kun": "いもうと",
-              "on": "マイ",
-              "id": "adik perempuan",
-              "note": "妹 (いもうと), 姉妹 (しまい) = kakak-beradik perempuan"
+              "ch": "泥",
+              "kun": "どろ",
+              "on": "デイ",
+              "id": "lumpur",
+              "note": "雲泥 (うんでい) = awan dan lumpur"
             },
             {
-              "ch": "散",
-              "kun": "ち(る)",
-              "on": "サン",
-              "id": "berhamburan",
-              "note": "散らかす (ちらかす), 解散 (かいさん) = bubar"
+              "ch": "桁",
+              "kun": "けた",
+              "on": "",
+              "id": "digit, tingkatan",
+              "note": "桁違い (けたちがい) = beda jauh"
             },
             {
-              "ch": "猛",
+              "ch": "対",
               "kun": "",
-              "on": "モウ",
-              "id": "garang, dahsyat",
-              "note": "猛暑 (もうしょ) = panas terik"
+              "on": "タイ",
+              "id": "berhadapan, pasangan",
+              "note": "対照的 (たいしょうてき) = kontras"
             },
             {
-              "ch": "暑",
-              "kun": "あつ(い)",
-              "on": "ショ",
-              "id": "panas",
-              "note": "暑い (あつい), 猛暑"
+              "ch": "際",
+              "kun": "きわ",
+              "on": "サイ",
+              "id": "tepi, kesempatan; menonjol",
+              "note": "際立つ (きわだつ) = menonjol"
             },
             {
-              "ch": "婚",
+              "ch": "様",
+              "kun": "さま",
+              "on": "ヨウ",
+              "id": "rupa, keadaan; bapak/ibu",
+              "note": "様変わり (ようがわり) = berubah total"
+            },
+            {
+              "ch": "段",
               "kun": "",
-              "on": "コン",
-              "id": "pernikahan",
-              "note": "結婚 (けっこん), 離婚 (りこん) = cerai"
+              "on": "ダン",
+              "id": "tingkat, anak tangga",
+              "note": "段違い (だんちがい) = jauh lebih unggul"
             },
             {
-              "ch": "美",
-              "kun": "うつく(しい)",
-              "on": "ビ",
-              "id": "indah",
-              "note": "美しい (うつくしい), 美人 (びじん) = wanita cantik"
-            },
-            {
-              "ch": "劇",
-              "kun": "",
-              "on": "ゲキ",
-              "id": "drama",
-              "note": "演劇 (えんげき) = teater, 劇場 (げきじょう) = gedung teater"
+              "ch": "違",
+              "kun": "ちがう",
+              "on": "イ",
+              "id": "berbeda",
+              "note": "見違える (みちがえる) = berubah hingga tak dikenali"
             }
           ]
         },
@@ -41307,43 +41307,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "姉がきれい好きなのにひきかえ、妹の部屋はいつも散らかっているよ。",
-              "id": "Berbanding terbalik dengan kakak yang suka kebersihan, kamar adik selalu berantakan."
+              "jp": "さ、昨日の焼肉屋どうだった？俺行けなかったんだけど。",
+              "id": "Eh, restoran yakiniku kemarin gimana? Aku nggak bisa ikut."
             },
             {
               "sp": "B",
-              "jp": "それにひきかえ、うちは逆だよ。姉のほうが散らかすんだ。",
-              "id": "Berbanding terbalik dengan itu, di rumahku kebalikannya. Kakak yang mengobrak-abrik."
+              "jp": "えっとね、いつにもまして期待してたんだけど、ちょっと微妙だったかな。",
+              "id": "Hmm, aku sih ekspektasinya ketinggian, jadi agak mengecewakan."
             },
             {
               "sp": "A",
-              "jp": "今年の夏は去年にもまして暑いね。",
-              "id": "Musim panas tahun ini bahkan lebih panas dari tahun lalu ya."
+              "jp": "へえ、口コミめっちゃ良かったじゃん。",
+              "id": "Hah, padahal review-nya bagus banget kan?"
             },
             {
               "sp": "B",
-              "jp": "本当だね。プロの気象予報士も驚く暑さだよ。",
-              "id": "Benar. Bahkan peramal cuaca profesional pun terkejut dengan panasnya."
+              "jp": "そうなんだよ。前に行ったあの店にひきかえ、肉が硬くてさ。",
+              "id": "Iya. Berbanding terbalik sama restoran yang dulu kita datengin, dagingnya keras."
             },
             {
               "sp": "A",
-              "jp": "毎日走っているの？",
-              "id": "Kamu lari tiap hari?"
+              "jp": "前の店が段違いに良かったってこと？",
+              "id": "Maksudnya restoran yang dulu jauh lebih enak gitu?"
             },
             {
               "sp": "B",
-              "jp": "毎週とは言わないまでも、週に3回は走っているよ。",
-              "id": "Walaupun tidak tiap minggu penuh, seminggu 3 kali aku lari."
+              "jp": "うん。まあ、すごく美味しいわけじゃないまでも、ボリュームだけはすごかったけどね。",
+              "id": "Iya. Ya walaupun nggak sampai enak banget, porsinya doang sih yang gede."
             },
             {
               "sp": "A",
-              "jp": "すごいね。わたしは散歩さえ続かないよ。",
-              "id": "Hebat. Aku jalan santai saja tidak berlanjut."
+              "jp": "ボリュームだけあってもなあ。接客はどうだったの？",
+              "id": "Porsi doang yang gede mah percuma. Pelayanannya gimana?"
             },
             {
               "sp": "B",
-              "jp": "完璧とは言わないまでも、少しずつ始めればいいよ。",
-              "id": "Walaupun tidak sempurna, mulai sedikit demi sedikit saja."
+              "jp": "そこは味にひきかえ、接客はすごく良かったんだよね。",
+              "id": "Nah, berbanding terbalik sama rasanya, pelayanannya bagus banget."
             }
           ]
         }
@@ -41479,109 +41479,109 @@ const CHAPTERS = {
           "title": "Kosakata: 〜始末だ・〜っぱなしだ — Akibat & Keadaan Akhir",
           "items": [
             {
-              "jp": "死者",
-              "kj": "死者",
-              "r": "shisha",
-              "id": "korban jiwa",
-              "note": "死者が出る = muncul korban jiwa"
+              "jp": "挙げ句",
+              "kj": "あげく",
+              "r": "ageku",
+              "id": "pada akhirnya (hasil yang buruk)",
+              "note": "挙げ句の果てに = pada akhirnya malah"
             },
             {
-              "jp": "感染",
-              "kj": "感染",
-              "r": "kansen",
-              "id": "penularan, infeksi",
-              "note": "感染拡大 = meluasnya penularan"
+              "jp": "末路",
+              "kj": "まつろ",
+              "r": "matsuro",
+              "id": "akhir yang menyedihkan, kehancuran",
+              "note": "悲惨な末路を辿る = menemui akhir yang tragis"
             },
             {
-              "jp": "拡大",
-              "kj": "拡大",
-              "r": "kakudai",
-              "id": "perluasan",
-              "note": "感染拡大の深刻さ = parahnya penyebaran infeksi"
+              "jp": "破綻",
+              "kj": "はたん",
+              "r": "hatan",
+              "id": "kegagalan, keruntuhan",
+              "note": "経営が破綻する = usahanya bangkrut"
             },
             {
-              "jp": "深刻",
-              "kj": "深刻",
-              "r": "shinkoku",
-              "id": "serius, gawat",
-              "note": "深刻さに気がつく = menyadari kegawatannya"
+              "jp": "頓挫",
+              "kj": "とんざ",
+              "r": "tonza",
+              "id": "mandek, terhenti di tengah jalan",
+              "note": "計画が頓挫する = rencana mandek"
             },
             {
-              "jp": "症状",
-              "kj": "症状",
-              "r": "shoujou",
-              "id": "gejala",
-              "note": "ひどい症状 = gejala yang parah"
+              "jp": "放置",
+              "kj": "ほうち",
+              "r": "hochi",
+              "id": "membiarkan, menelantarkan",
+              "note": "放置しておく = membiarkan begitu saja"
             },
             {
-              "jp": "病院",
-              "kj": "病院",
-              "r": "byouin",
-              "id": "rumah sakit",
-              "note": "病院へ行く = pergi ke rumah sakit"
+              "jp": "漫然",
+              "kj": "まんぜん",
+              "r": "manzen",
+              "id": "tanpa tujuan, asal-asalan",
+              "note": "漫然と過ごす = menjalani hari tanpa tujuan"
             },
             {
-              "jp": "閉店",
-              "kj": "閉店",
-              "r": "heiten",
-              "id": "penutupan toko",
-              "note": "閉店が相次ぐ = penutupan toko terjadi beruntun"
+              "jp": "杜撰",
+              "kj": "ずさん",
+              "r": "zusan",
+              "id": "ceroboh, asal-asalan",
+              "note": "杜撰な管理 = pengelolaan yang ceroboh"
             },
             {
-              "jp": "支店",
-              "kj": "支店",
-              "r": "shiten",
-              "id": "cabang",
-              "note": "三つの支店 = tiga cabang"
+              "jp": "おざなり",
+              "kj": "おざなり",
+              "r": "ozanari",
+              "id": "asal-asalan, setengah hati",
+              "note": "おざなりな対応 = penanganan asal-asalan"
             },
             {
-              "jp": "物理",
-              "kj": "物理",
-              "r": "butsuri",
-              "id": "fisika",
-              "note": "物理が不得意 = tidak pandai fisika"
+              "jp": "なし崩し",
+              "kj": "なしぐずし",
+              "r": "nashikuzushi",
+              "id": "berakhir tanpa kejelasan",
+              "note": "なし崩しに終わる = berakhir tanpa kejelasan"
             },
             {
-              "jp": "不得意",
-              "kj": "不得意",
-              "r": "futokui",
-              "id": "tidak pandai",
-              "note": "不得意な科目 = mata pelajaran yang tidak dikuasai"
+              "jp": "有耶無耶",
+              "kj": "うやむや",
+              "r": "uyamuya",
+              "id": "tidak jelas, menggantung",
+              "note": "有耶無耶に終わる = berakhir dengan tidak jelas"
             },
             {
-              "jp": "泣き出す",
-              "kj": "泣き出す",
-              "r": "nakidasu",
-              "id": "mulai menangis",
-              "note": "ついに泣き出す = akhirnya menangis"
+              "jp": "台無し",
+              "kj": "だいなし",
+              "r": "dainashi",
+              "id": "rusak total, sia-sia",
+              "note": "努力が台無しになる = usaha jadi sia-sia"
             },
             {
-              "jp": "電気",
-              "kj": "電気",
-              "r": "denki",
-              "id": "listrik",
-              "note": "電気をつけっぱなし = lampu dibiarkan menyala"
+              "jp": "水の泡",
+              "kj": "みずのあわ",
+              "r": "mizu no awa",
+              "id": "jadi sia-sia (bagai buih)",
+              "note": "努力が水の泡になる = usaha jadi sia-sia"
             },
             {
-              "jp": "相手",
-              "kj": "相手",
-              "r": "aite",
-              "id": "lawan bicara, pihak lain",
-              "note": "相手も悪い = pihak lain juga salah"
+              "jp": "自業自得",
+              "kj": "じごうじとく",
+              "r": "jigo jitoku",
+              "id": "akibat perbuatan sendiri",
+              "note": "自業自得だ = itu akibat perbuatannya sendiri"
             },
             {
-              "jp": "言い返す",
-              "kj": "言い返す",
-              "r": "iikaesu",
-              "id": "membalas ucapan",
-              "note": "言い返せなかった = tidak bisa membalas"
+              "jp": "尻拭い",
+              "kj": "しりぬぐい",
+              "r": "shirinugui",
+              "id": "membereskan masalah orang lain",
+              "note": "尻拭いをする = membereskan masalah orang lain"
             },
             {
-              "jp": "とうとう",
-              "kj": "とうとう",
-              "r": "toutou",
-              "id": "akhirnya",
-              "note": "とうとう辞める = akhirnya keluar"
+              "jp": "三日坊主",
+              "kj": "みっかぼうず",
+              "r": "mikkabozu",
+              "id": "berhenti setelah tiga hari",
+              "note": "三日坊主で終わる = berhenti di tengah jalan"
             }
           ]
         },
@@ -41728,60 +41728,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 16",
           "items": [
             {
-              "ch": "死",
-              "kun": "し(ぬ)",
-              "on": "シ",
-              "id": "mati",
-              "note": "死者 (ししゃ) = korban jiwa, 死亡 (しぼう) = kematian"
-            },
-            {
-              "ch": "者",
-              "kun": "もの",
-              "on": "シャ",
-              "id": "orang",
-              "note": "死者, 医者 (いしゃ) = dokter"
-            },
-            {
-              "ch": "感",
-              "kun": "かん(じる)",
-              "on": "カン",
-              "id": "merasa",
-              "note": "感染 (かんせん) = infeksi, 感動 (かんどう) = terharu"
-            },
-            {
-              "ch": "染",
-              "kun": "そ(まる)",
-              "on": "セン",
-              "id": "mewarnai, menular",
-              "note": "感染, 伝染 (でんせん) = penularan"
-            },
-            {
-              "ch": "閉",
-              "kun": "し(める)",
-              "on": "ヘイ",
-              "id": "menutup",
-              "note": "閉店 (へいてん) = tutup toko, 閉まる (しまる) = tertutup"
-            },
-            {
-              "ch": "店",
-              "kun": "みせ",
-              "on": "テン",
-              "id": "toko",
-              "note": "閉店, 喫茶店 (きっさてん) = kedai kopi"
-            },
-            {
-              "ch": "始",
-              "kun": "はじ(める)",
-              "on": "シ",
-              "id": "memulai",
-              "note": "始末 (しまつ) = kesudahan, 開始 (かいし) = mulai"
+              "ch": "挙",
+              "kun": "あげる",
+              "on": "キョ",
+              "id": "mengangkat",
+              "note": "挙げ句 (あげく) = pada akhirnya"
             },
             {
               "ch": "末",
               "kun": "すえ",
               "on": "マツ",
-              "id": "akhir, ujung",
-              "note": "始末, 月末 (げつまつ) = akhir bulan"
+              "id": "ujung, akhir",
+              "note": "末路 (まつろ) = akhir yang menyedihkan"
+            },
+            {
+              "ch": "破",
+              "kun": "やぶる",
+              "on": "ハ",
+              "id": "merusak, pecah",
+              "note": "破綻 (はたん) = bangkrut / gagal"
+            },
+            {
+              "ch": "頓",
+              "kun": "",
+              "on": "トン",
+              "id": "tiba-tiba; terhenti",
+              "note": "頓挫 (とんざ) = mandek / terhenti"
+            },
+            {
+              "ch": "挫",
+              "kun": "くじく",
+              "on": "ザ",
+              "id": "patah semangat, gagal",
+              "note": "頓挫 (とんざ) = rencana mandek"
+            },
+            {
+              "ch": "杜",
+              "kun": "もり",
+              "on": "ト",
+              "id": "hutan; ceroboh (dl jukugo)",
+              "note": "杜撰 (ずさん) = ceroboh"
+            },
+            {
+              "ch": "泡",
+              "kun": "あわ",
+              "on": "ホウ",
+              "id": "buih, gelembung",
+              "note": "水の泡 (みずのあわ) = sia-sia"
+            },
+            {
+              "ch": "尻",
+              "kun": "しり",
+              "on": "",
+              "id": "pantat; bagian belakang",
+              "note": "尻拭い (しりぬぐい) = membereskan masalah orang lain"
             }
           ]
         },
@@ -41791,43 +41791,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "この辺の店、閉店が相次いでいるね。",
-              "id": "Toko-toko di sekitar sini tutup beruntun ya."
+              "jp": "そういえば、あの新規プロジェクトどうなったの？最近全然聞かないけど。",
+              "id": "Ngomong-ngomong, proyek baru itu gimana kabarnya? Belakangan nggak kedengeran sama sekali."
             },
             {
               "sp": "B",
-              "jp": "Bスーパーに至っては、先月で三店舗も閉めたらしいよ。",
-              "id": "Kalau sudah supermarket B, katanya bulan lalu menutup tiga gerai."
+              "jp": "あー、つぶれちゃったんだよ。予算が削られて、挙げ句企画自体が消える始末だよ。",
+              "id": "Ah, bubar tuh. Anggarannya dipotong terus, sampai akhirnya rencananya sendiri malah hilang."
             },
             {
               "sp": "A",
-              "jp": "そんなに深刻なんだ。景気が悪化するに至って、客足が遠のいたんだね。",
-              "id": "Separah itu ya. Sampai ekonomi memburuk, pelanggan pun menjauh."
+              "jp": "マジか。課長が上に直談判したって聞いたけどさ。",
+              "id": "Serius? Tapi katanya manajer sampai negosiasi langsung ke atas?"
             },
             {
               "sp": "B",
-              "jp": "うちの兄なんか、遊んでばかりいて、とうとう仕事を辞めてしまう始末だよ。",
-              "id": "Kakakku malah, main melulu, akhirnya keluar dari pekerjaan."
+              "jp": "うん、課長が直接交渉するに至っても、予算は一銭も戻らなかったらしい。",
+              "id": "Iya, padahal manajer sampai negosiasi langsung, tapi anggarannya nggak balik sepeser pun katanya."
             },
             {
               "sp": "A",
-              "jp": "それは困ったね。注意しないの？",
-              "id": "Itu merepotkan. Tidak dinasihati?"
+              "jp": "へえ。管理者の人まで辞めるに至っては、もう誰が責任者かも分かんないよね。",
+              "id": "Wah. Sampai-sampai orang adminnya juga resign, udah nggak jelas lagi siapa yang tanggung jawab ya."
             },
             {
               "sp": "B",
-              "jp": "言っても聞かないんだ。わたしだけ言いっぱなしで疲れたよ。",
-              "id": "Dibilang pun tidak didengar. Hanya aku yang ngomong terus, capek."
+              "jp": "そうそう。メールしても返信なし、電話も出ない始末。書類は机の上に出しっぱなしだしさ、ほんと杜撰だよ。",
+              "id": "Nah itu. Diemail nggak dibales, ditelepon nggak diangkat. Dokumen dibiarin numpuk di atas meja, kacau banget."
             },
             {
               "sp": "A",
-              "jp": "電気をつけっぱなしで出かけないでって言ったのに。",
-              "id": "Padahal sudah kubilang jangan pergi dengan lampu dibiarkan menyala."
+              "jp": "ひどいなあ。結局、尻拭いさせられるのはいつも現場だもんね。",
+              "id": "Parah ya. Yang ujung-ujungnya disuruh beresin masalahnya ya selalu kita-kita di lapangan."
             },
             {
               "sp": "B",
-              "jp": "ごめんごめん。次からは気をつけるよ。",
-              "id": "Maaf maaf. Lain kali aku hati-hati."
+              "jp": "まあね。次のプロジェクトこそ、ちゃんとやらないと。",
+              "id": "Iya nih. Proyek berikutnya harus beneran beres deh."
             }
           ]
         }
@@ -41963,109 +41963,109 @@ const CHAPTERS = {
           "title": "Kosakata: Penekanan Ekstrem",
           "items": [
             {
-              "jp": "強調",
-              "kj": "強調",
-              "r": "kyouchou",
-              "id": "penekanan",
-              "note": "重要な点を強調する (menekankan poin penting)"
-            },
-            {
-              "jp": "極端",
-              "kj": "極端",
-              "r": "kyokutan",
-              "id": "ekstrem",
-              "note": "極端な例を挙げる (memberi contoh ekstrem)"
-            },
-            {
-              "jp": "わずか",
-              "kj": "僅か",
-              "r": "wazuka",
-              "id": "sedikit; hanya",
-              "note": "わずか1ミリの差 (selisih hanya 1 mm)"
-            },
-            {
-              "jp": "一瞬",
-              "kj": "一瞬",
-              "r": "isshun",
-              "id": "sekejap",
-              "note": "一瞬たりとも気を抜くな (jangan lengah sekejap pun)"
-            },
-            {
-              "jp": "決して",
-              "kj": "決して",
-              "r": "kesshite",
-              "id": "sama sekali tidak",
-              "note": "決して諦めない (tidak akan menyerah)"
-            },
-            {
               "jp": "一切",
               "kj": "一切",
               "r": "issai",
               "id": "sama sekali",
-              "note": "一切受け付けない (tidak menerima sama sekali)"
+              "note": "一切受け付けない＝sama sekali tidak menerima"
+            },
+            {
+              "jp": "微塵",
+              "kj": "微塵",
+              "r": "mijin",
+              "id": "sedikit pun; serpihan",
+              "note": "微塵も感じない＝tidak merasakan sedikit pun"
+            },
+            {
+              "jp": "片鱗",
+              "kj": "片鱗",
+              "r": "henrin",
+              "id": "secuil; petunjuk",
+              "note": "才能の片鱗すら見せない"
+            },
+            {
+              "jp": "些細",
+              "kj": "些細",
+              "r": "sasai",
+              "id": "sepele; remeh",
+              "note": "些細なことで腹を立てる"
             },
             {
               "jp": "皆無",
               "kj": "皆無",
               "r": "kaimu",
-              "id": "nihil; tidak ada sama sekali",
-              "note": "効果は皆無だ (tidak ada efek sama sekali)"
+              "id": "nihil sama sekali",
+              "note": "成功の可能性は皆無だ"
             },
             {
-              "jp": "誇張",
-              "kj": "誇張",
-              "r": "kochou",
-              "id": "hiperbola; berlebihan",
-              "note": "誇張した表現 (ungkapan yang dilebih-lebihkan)"
+              "jp": "寸分",
+              "kj": "寸分",
+              "r": "sunbun",
+              "id": "sejengkal pun",
+              "note": "寸分の狂いもない"
+            },
+            {
+              "jp": "毛頭",
+              "kj": "毛頭",
+              "r": "moutou",
+              "id": "sama sekali tidak (berniat)",
+              "note": "毛頭その気はない"
+            },
+            {
+              "jp": "露ほど",
+              "kj": "露ほど",
+              "r": "tsuyuhodo",
+              "id": "setetes pun",
+              "note": "露ほども疑わない"
+            },
+            {
+              "jp": "断じて",
+              "kj": "断じて",
+              "r": "danjite",
+              "id": "dengan tegas (menyangkal)",
+              "note": "断じて許さない"
+            },
+            {
+              "jp": "毫も",
+              "kj": "毫も",
+              "r": "goumo",
+              "id": "sedikit pun",
+              "note": "毫も動じない"
             },
             {
               "jp": "断固",
               "kj": "断固",
               "r": "danko",
-              "id": "tegas; kukuh",
-              "note": "断固として反対する (menentang dengan tegas)"
+              "id": "kukuh; tegas",
+              "note": "断固として拒否する"
             },
             {
-              "jp": "断言",
-              "kj": "断言",
-              "r": "dangen",
-              "id": "menegaskan",
-              "note": "成功を断言する (menegaskan akan berhasil)"
+              "jp": "頑な",
+              "kj": "頑な",
+              "r": "katakuna",
+              "id": "keras kepala; kaku",
+              "note": "頑なに黙り込む"
             },
             {
-              "jp": "際立つ",
-              "kj": "際立つ",
-              "r": "kiwadatsu",
-              "id": "menonjol",
-              "note": "才能が際立つ (bakatnya menonjol)"
+              "jp": "一顧だに",
+              "kj": "一顧だに",
+              "r": "ikkodani",
+              "id": "tidak melirik sedikit pun",
+              "note": "彼の提案を一顧だにしない"
             },
             {
-              "jp": "並外れる",
-              "kj": "並外れる",
-              "r": "namihazareru",
-              "id": "luar biasa",
-              "note": "並外れた記憶力 (daya ingat luar biasa)"
+              "jp": "一瞥",
+              "kj": "一瞥",
+              "r": "ichibetsu",
+              "id": "sekilas pandang",
+              "note": "冷たい一瞥をくれる"
             },
             {
-              "jp": "格別",
-              "kj": "格別",
-              "r": "kakubetsu",
-              "id": "istimewa",
-              "note": "格別の思い (perasaan yang istimewa)"
-            },
-            {
-              "jp": "甚だしい",
-              "kj": "甚だしい",
-              "r": "hanahadashii",
-              "id": "sangat; keterlaluan",
-              "note": "甚だしい間違い (kesalahan yang keterlaluan)"
-            },
-            {
-              "jp": "さえ",
-              "kj": "さえ",
-              "r": "sae",
-              "id": "bahkan",
-              "note": "子供さえ知っている (bahkan anak kecil tahu)"
+              "jp": "些か",
+              "kj": "些か",
+              "r": "isasaka",
+              "id": "sedikit; agak",
+              "note": "些か困惑している"
             }
           ]
         },
@@ -42276,60 +42276,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 17",
           "items": [
             {
-              "ch": "強",
-              "kun": "つよ・い",
-              "on": "キョウ",
-              "id": "kuat",
-              "note": "強調する (menekankan)"
+              "ch": "毫",
+              "kun": "",
+              "on": "ゴウ",
+              "id": "sedikit; rambut halus",
+              "note": "毫も（ごうも）＝sedikit pun tidak"
             },
             {
-              "ch": "調",
-              "kun": "しら・べる",
-              "on": "チョウ",
-              "id": "menyelidiki; menyesuaikan",
-              "note": "強調の調 (nada penekanan)"
+              "ch": "微",
+              "kun": "",
+              "on": "ビ",
+              "id": "halus; sedikit",
+              "note": "微塵（みじん）＝serpihan; sedikit pun"
             },
             {
-              "ch": "極",
-              "kun": "きわ・める",
-              "on": "キョク",
-              "id": "ekstrem; mencapai puncak",
-              "note": "極端な (yang ekstrem)"
+              "ch": "寸",
+              "kun": "",
+              "on": "スン",
+              "id": "sejengkal",
+              "note": "寸分（すんぶん）＝sejengkal pun"
             },
             {
-              "ch": "瞬",
-              "kun": "またた・く",
-              "on": "シュン",
-              "id": "sekejap",
-              "note": "一瞬 (sekejap mata)"
-            },
-            {
-              "ch": "忘",
-              "kun": "わす・れる",
-              "on": "ボウ",
-              "id": "lupa",
-              "note": "忘れたことはない (tak pernah lupa)"
+              "ch": "皆",
+              "kun": "",
+              "on": "カイ",
+              "id": "semua",
+              "note": "皆無（かいむ）＝nihil sama sekali"
             },
             {
               "ch": "断",
-              "kun": "た・つ",
+              "kun": "",
               "on": "ダン",
-              "id": "memutus; menegaskan",
-              "note": "断固として (dengan tegas)"
+              "id": "memutus; tegas",
+              "note": "断固（だんこ）＝kukuh; tegas"
             },
             {
-              "ch": "許",
-              "kun": "ゆる・す",
-              "on": "キョ",
-              "id": "mengizinkan",
-              "note": "許されていない (tidak diizinkan)"
+              "ch": "頑",
+              "kun": "かたくな",
+              "on": "ガン",
+              "id": "keras kepala",
+              "note": "頑な（かたくな）＝keras kepala; kaku"
             },
             {
-              "ch": "際",
-              "kun": "きわ",
-              "on": "サイ",
-              "id": "tepi; kesempatan",
-              "note": "際立つ (menonjol)"
+              "ch": "瞥",
+              "kun": "",
+              "on": "ベツ",
+              "id": "melirik sekilas",
+              "note": "一瞥（いちべつ）＝sekilas pandang"
+            },
+            {
+              "ch": "露",
+              "kun": "つゆ",
+              "on": "ロ",
+              "id": "embun",
+              "note": "露ほど（つゆほど）＝setetes pun"
             }
           ]
         },
@@ -42339,43 +42339,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "明日のプレゼン、緊張するなあ。",
-              "id": "Presentasi besok bikin tegang ya."
+              "jp": "昨日のプレゼン、どうだった？",
+              "id": "Presentasi kemarin gimana?"
             },
             {
               "sp": "B",
-              "jp": "大丈夫。一晩たりともサボらず練習したんだから、自信を持ちなさい。",
-              "id": "Tenang. Kamu latihan tanpa bolos sehari pun, jadi percayalah."
+              "jp": "最悪だったよ。部長、一瞥だにくれなかったんだ。",
+              "id": "Parah banget. Direkturnya bahkan nggak ngelirik sedikit pun."
             },
             {
               "sp": "A",
-              "jp": "でも、部長すら難しいって言ってた案件だよ。",
-              "id": "Tapi ini kasus yang bahkan kepala bagian bilang sulit."
+              "jp": "えっ、そこまで？　質問すら出なかったの？",
+              "id": "Hah, separah itu? Pertanyaan aja nggak ada yang keluar?"
             },
             {
               "sp": "B",
-              "jp": "想像するだに恐ろしいって顔だね。でも、君にしては珍しく弱気だよ。",
-              "id": "Wajahmu seperti ketakutan hanya membayangkannya. Tapi padahal kamu, tumben pesimis."
+              "jp": "うん。誤字は一か所たりとも許されないって、あれだけ言ったのに。",
+              "id": "Iya. Padahal udah dibilang berkali-kali, salah ketik satu pun nggak boleh ada."
             },
             {
               "sp": "A",
-              "jp": "8年目にしてようやく掴んだチャンスなんだ。",
-              "id": "Ini kesempatan yang baru kudapat setelah 8 tahun."
+              "jp": "っていうか、田中さんにして、あんなミスするなんてね。",
+              "id": "Maksudnya, masa Tanaka-san sampai bikin salah kayak gitu sih."
             },
             {
               "sp": "B",
-              "jp": "そうだね。チームあっての成功だから、みんなで頑張ろう。",
-              "id": "Iya. Kesuksesan ini ada berkat tim, jadi ayo berjuang bersama."
+              "jp": "まあ、彼の努力あっての今のチームだから、責められないけどさ。",
+              "id": "Ya, tapi tim ini ada berkat kerja keras dia, jadi nggak bisa nyalahin juga sih."
             },
             {
               "sp": "A",
-              "jp": "資料、10ページからあるよ。",
-              "id": "Materinya 10 halaman atau lebih loh."
+              "jp": "それはそうだけど、損失は億からあるんだよ？　洒落にならないって。",
+              "id": "Itu sih iya, tapi kerugiannya ratusan juta yen lho? Bukan main-main."
             },
             {
               "sp": "B",
-              "jp": "夢にだに思わなかった量だね。さあ、始めよう。",
-              "id": "Jumlah yang tak terbayang dalam mimpi pun. Ayo mulai."
+              "jp": "分かってる。次こそ、微塵の妥協もしないでいこう。",
+              "id": "Ngerti kok. Berikutnya, kita jalan tanpa kompromi sedikit pun."
             }
           ]
         }
@@ -42511,109 +42511,109 @@ const CHAPTERS = {
           "title": "Kosakata: Tekad & Penegasan",
           "items": [
             {
-              "jp": "主張",
-              "kj": "主張",
-              "r": "shuchou",
-              "id": "pendapat tegas; klaim",
-              "note": "自分の主張を貫く (berpegang pada pendiriannya)"
-            },
-            {
-              "jp": "断定",
-              "kj": "断定",
-              "r": "dantei",
-              "id": "penegasan",
-              "note": "断定的な口調 (nada yang tegas)"
-            },
-            {
               "jp": "決意",
               "kj": "決意",
               "r": "ketsui",
               "id": "tekad",
-              "note": "決意を固める (memantapkan tekad)"
+              "note": "決意を固める"
             },
             {
               "jp": "覚悟",
               "kj": "覚悟",
               "r": "kakugo",
               "id": "kesiapan mental",
-              "note": "覚悟を決める (membulatkan tekad)"
+              "note": "覚悟を決める"
             },
             {
-              "jp": "協力",
-              "kj": "協力",
-              "r": "kyouryoku",
-              "id": "kerja sama",
-              "note": "協力を求める (meminta kerja sama)"
+              "jp": "断行",
+              "kj": "断行",
+              "r": "dankou",
+              "id": "melaksanakan dengan tegas",
+              "note": "改革を断行する"
             },
             {
-              "jp": "称賛",
-              "kj": "称賛",
-              "r": "shousan",
-              "id": "pujian",
-              "note": "称賛に値する (layak dipuji)"
+              "jp": "敢行",
+              "kj": "敢行",
+              "r": "kankou",
+              "id": "melaksanakan (dengan berani)",
+              "note": "計画を敢行する"
             },
             {
-              "jp": "驚き",
-              "kj": "驚き",
-              "r": "odoroki",
-              "id": "keterkejutan",
-              "note": "驚きを隠せない (tak bisa menyembunyikan keterkejutan)"
+              "jp": "決行",
+              "kj": "決行",
+              "r": "kekkou",
+              "id": "melaksanakan (rencana)",
+              "note": "予定通り決行する"
             },
             {
-              "jp": "天職",
-              "kj": "天職",
-              "r": "tenshoku",
-              "id": "panggilan hidup",
-              "note": "天職だと思う (merasa sebagai panggilan hidup)"
+              "jp": "厭わない",
+              "kj": "厭わない",
+              "r": "itowanai",
+              "id": "tidak segan",
+              "note": "批判を厭わない"
             },
             {
-              "jp": "天才",
-              "kj": "天才",
-              "r": "tensai",
-              "id": "jenius",
-              "note": "天才的な発想 (ide yang jenius)"
+              "jp": "憚らない",
+              "kj": "憚らない",
+              "r": "habakaranai",
+              "id": "tidak sungkan",
+              "note": "物言うことを憚らない"
             },
             {
-              "jp": "当然",
-              "kj": "当然",
-              "r": "touzen",
-              "id": "wajar; sudah seharusnya",
-              "note": "当然のことだ (hal yang wajar)"
+              "jp": "躊躇",
+              "kj": "躊躇",
+              "r": "chuucho",
+              "id": "ragu-ragu",
+              "note": "躊躇することなく決断する"
             },
             {
-              "jp": "珍しい",
-              "kj": "珍しい",
-              "r": "mezurashii",
-              "id": "langka; jarang",
-              "note": "珍しい光景 (pemandangan langka)"
+              "jp": "果断",
+              "kj": "果断",
+              "r": "kadan",
+              "id": "tegas dan cepat",
+              "note": "果断な処置を取る"
             },
             {
-              "jp": "通勤",
-              "kj": "通勤",
-              "r": "tsuukin",
-              "id": "perjalanan ke kantor",
-              "note": "通勤に1時間かかる (butuh 1 jam ke kantor)"
+              "jp": "毅然",
+              "kj": "毅然",
+              "r": "kizen",
+              "id": "tegas; berwibawa",
+              "note": "毅然とした態度で臨む"
             },
             {
-              "jp": "練習",
-              "kj": "練習",
-              "r": "renshuu",
-              "id": "latihan",
-              "note": "練習を重ねる (berlatih berulang-ulang)"
+              "jp": "敢然",
+              "kj": "敢然",
+              "r": "kanzen",
+              "id": "dengan berani",
+              "note": "敢然と立ち向かう"
             },
             {
-              "jp": "本番",
-              "kj": "本番",
-              "r": "honban",
-              "id": "penampilan sebenarnya",
-              "note": "本番に強い (tangguh saat tampil)"
+              "jp": "断念",
+              "kj": "断念",
+              "r": "dannen",
+              "id": "mengurungkan; menyerah",
+              "note": "計画を断念する"
             },
             {
-              "jp": "努力",
-              "kj": "努力",
-              "r": "doryoku",
-              "id": "usaha",
-              "note": "努力が実を結ぶ (usaha membuahkan hasil)"
+              "jp": "撤回",
+              "kj": "撤回",
+              "r": "tekkai",
+              "id": "menarik kembali",
+              "note": "発言を撤回する"
+            },
+            {
+              "jp": "翻意",
+              "kj": "翻意",
+              "r": "hon'i",
+              "id": "berubah pikiran",
+              "note": "翻意を促す"
+            },
+            {
+              "jp": "一念",
+              "kj": "一念",
+              "r": "ichinen",
+              "id": "tekad bulat",
+              "note": "一念発起して挑む"
             }
           ]
         },
@@ -42788,60 +42788,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 18",
           "items": [
             {
-              "ch": "主",
-              "kun": "おも",
-              "on": "シュ",
-              "id": "utama",
-              "note": "主張する (menyatakan pendapat)"
-            },
-            {
-              "ch": "張",
-              "kun": "は・る",
-              "on": "チョウ",
-              "id": "meregang; menegakkan",
-              "note": "主張の張 (ketegasan)"
-            },
-            {
-              "ch": "断",
-              "kun": "た・つ",
-              "on": "ダン",
-              "id": "memutus; menegaskan",
-              "note": "断定する (menegaskan)"
-            },
-            {
-              "ch": "定",
-              "kun": "さだ・める",
-              "on": "テイ",
-              "id": "menetapkan",
-              "note": "断定の定 (kepastian)"
-            },
-            {
               "ch": "決",
-              "kun": "き・める",
+              "kun": "",
               "on": "ケツ",
               "id": "memutuskan",
-              "note": "決意する (bertekad)"
+              "note": "決意（けつい）＝tekad"
             },
             {
               "ch": "覚",
-              "kun": "おぼ・える",
+              "kun": "",
               "on": "カク",
-              "id": "mengingat; menyadari",
-              "note": "覚悟を決める (membulatkan tekad)"
+              "id": "sadar; siap",
+              "note": "覚悟（かくご）＝kesiapan mental"
             },
             {
-              "ch": "天",
-              "kun": "あま",
-              "on": "テン",
-              "id": "langit",
-              "note": "天職 (panggilan hidup)"
+              "ch": "敢",
+              "kun": "",
+              "on": "カン",
+              "id": "berani",
+              "note": "敢行（かんこう）＝melaksanakan dengan berani"
             },
             {
-              "ch": "驚",
-              "kun": "おどろ・く",
-              "on": "キョウ",
-              "id": "terkejut",
-              "note": "驚くには当たらない (tak perlu dikagetkan)"
+              "ch": "躊",
+              "kun": "",
+              "on": "チュウ",
+              "id": "ragu-ragu",
+              "note": "躊躇（ちゅうちょ）＝keraguan"
+            },
+            {
+              "ch": "毅",
+              "kun": "",
+              "on": "キ",
+              "id": "tegas; kokoh",
+              "note": "毅然（きぜん）＝tegas berwibawa"
+            },
+            {
+              "ch": "撤",
+              "kun": "",
+              "on": "テツ",
+              "id": "menarik; menyingkir",
+              "note": "撤回（てっかい）＝menarik kembali"
+            },
+            {
+              "ch": "翻",
+              "kun": "",
+              "on": "ホン",
+              "id": "membalik",
+              "note": "翻意（ほんい）＝berubah pikiran"
+            },
+            {
+              "ch": "厭",
+              "kun": "いと（わない）",
+              "on": "エン",
+              "id": "segan; benci",
+              "note": "厭わない（いとわない）＝tidak segan"
             }
           ]
         },
@@ -42851,43 +42851,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "手伝ってくれる人がいないんだ。",
-              "id": "Tidak ada yang mau membantuku."
+              "jp": "ねえ、本気で会社辞めるの？",
+              "id": "Eh, serius mau resign?"
             },
             {
               "sp": "B",
-              "jp": "なら、一人でやってみるまでだ。応援してるよ。",
-              "id": "Kalau begitu, coba sendiri saja. Aku mendukungmu."
+              "jp": "うん、決めた。やるまでだよ。",
+              "id": "Iya, udah kuputusin. Pokoknya jalan aja."
             },
             {
               "sp": "A",
-              "jp": "失敗したらどうしよう。",
-              "id": "Bagaimana kalau gagal?"
+              "jp": "でも、生活どうするの？　貯金を使い果たしたら、それまでだよ？",
+              "id": "Tapi hidup gimana? Kalau tabungan habis, tamat riwayatmu lho?"
             },
             {
               "sp": "B",
-              "jp": "失敗を恐れていてはそれまでだ。挑戦しよう。",
-              "id": "Kalau takut gagal ya tamat. Ayo tantang."
+              "jp": "言うまでもないけど、計画は立ててるって。",
+              "id": "Nggak usah dibilang juga, rencananya udah kusiapin kok."
             },
             {
               "sp": "A",
-              "jp": "でも、部長に怒られるかも。",
-              "id": "Tapi mungkin dimarahi kepala bagian."
+              "jp": "失敗したら笑いものになるよ？",
+              "id": "Kalau gagal, jadi bahan ketawaan lho?"
             },
             {
               "sp": "B",
-              "jp": "怒られるには当たらないよ。言うまでもなく、君はよく頑張った。",
-              "id": "Tidak perlu takut dimarahi. Tak perlu dikatakan lagi, kamu sudah berusaha keras."
+              "jp": "笑われるには当たらないね。挑戦しない人生のほうが、よっぽどつまらない。",
+              "id": "Nggak perlulah ditanggapi segitunya. Hidup tanpa tantangan itu jauh lebih membosankan."
             },
             {
               "sp": "A",
-              "jp": "ありがとう。これこそ友情でなくてなんだろう。",
-              "id": "Makasih. Kalau ini bukan persahabatan, apa lagi?"
+              "jp": "……そこまで言うなら、応援するしかないじゃん。",
+              "id": "……Kalau kamu ngomong sampai segitunya, aku cuma bisa dukung deh."
             },
             {
               "sp": "B",
-              "jp": "はは、ただ励ましたまでだよ。",
-              "id": "Haha, aku hanya sekadar menyemangatimu."
+              "jp": "ありがとう。これが夢でなくてなんだろうって、自分に言い聞かせてるんだ。",
+              "id": "Makasih. Aku terus meyakinkan diriku sendiri: kalau ini bukan mimpi, apalagi?"
             }
           ]
         }
@@ -43023,109 +43023,109 @@ const CHAPTERS = {
           "title": "Kosakata: Penilaian & Kekaguman",
           "items": [
             {
-              "jp": "評価",
-              "kj": "評価",
-              "r": "hyouka",
-              "id": "penilaian",
-              "note": "高く評価する (menilai tinggi)"
+              "jp": "絶賛",
+              "kj": "絶賛",
+              "r": "zessan",
+              "id": "pujian luar biasa",
+              "note": "絶賛を博する"
             },
             {
-              "jp": "感想",
-              "kj": "感想",
-              "r": "kansou",
-              "id": "kesan",
-              "note": "感想を述べる (menyampaikan kesan)"
+              "jp": "喝采",
+              "kj": "喝采",
+              "r": "kassai",
+              "id": "sorak-sorai meriah",
+              "note": "喝采を浴びる"
             },
             {
-              "jp": "鑑賞",
-              "kj": "鑑賞",
-              "r": "kanshou",
-              "id": "apresiasi; menikmati",
-              "note": "音楽を鑑賞する (menikmati musik)"
+              "jp": "賞賛",
+              "kj": "賞賛",
+              "r": "shousan",
+              "id": "pujian; sanjungan",
+              "note": "賞賛に値する"
             },
             {
-              "jp": "信頼",
-              "kj": "信頼",
-              "r": "shinrai",
-              "id": "kepercayaan",
-              "note": "信頼に足る人 (orang yang layak dipercaya)"
+              "jp": "激賞",
+              "kj": "激賞",
+              "r": "gekishou",
+              "id": "pujian heboh",
+              "note": "批評家から激賞される"
             },
             {
-              "jp": "残念",
-              "kj": "残念",
-              "r": "zannen",
-              "id": "sayang; menyedihkan",
-              "note": "残念な結果 (hasil yang disayangkan)"
+              "jp": "驚嘆",
+              "kj": "驚嘆",
+              "r": "kyoutan",
+              "id": "kekaguman",
+              "note": "驚嘆に値する"
             },
             {
-              "jp": "素晴らしい",
-              "kj": "素晴らしい",
-              "r": "subarashii",
+              "jp": "感嘆",
+              "kj": "感嘆",
+              "r": "kantan",
+              "id": "kekaguman",
+              "note": "感嘆の声を上げる"
+            },
+            {
+              "jp": "圧巻",
+              "kj": "圧巻",
+              "r": "akkan",
+              "id": "yang paling menakjubkan",
+              "note": "圧巻の演技だった"
+            },
+            {
+              "jp": "白眉",
+              "kj": "白眉",
+              "r": "hakubi",
+              "id": "yang terbaik",
+              "note": "白眉の出来栄え"
+            },
+            {
+              "jp": "秀逸",
+              "kj": "秀逸",
+              "r": "shuuitsu",
+              "id": "sangat bagus",
+              "note": "秀逸なアイデア"
+            },
+            {
+              "jp": "卓越",
+              "kj": "卓越",
+              "r": "takuetsu",
+              "id": "unggul",
+              "note": "卓越した技術"
+            },
+            {
+              "jp": "出色",
+              "kj": "出色",
+              "r": "shusshoku",
               "id": "luar biasa",
-              "note": "素晴らしい景色 (pemandangan luar biasa)"
+              "note": "出色の出来だった"
             },
             {
-              "jp": "寂しい",
-              "kj": "寂しい",
-              "r": "sabishii",
-              "id": "sepi",
-              "note": "寂しいかぎりだ (sungguh sepi rasanya)"
+              "jp": "非凡",
+              "kj": "非凡",
+              "r": "hibon",
+              "id": "tidak biasa; luar biasa",
+              "note": "非凡な才能の持ち主"
             },
             {
-              "jp": "恐ろしい",
-              "kj": "恐ろしい",
-              "r": "osoroshii",
-              "id": "mengerikan",
-              "note": "恐ろしい事件 (kejadian mengerikan)"
+              "jp": "希代",
+              "kj": "希代",
+              "r": "kidai",
+              "id": "langka di zaman ini",
+              "note": "希代の名演"
             },
             {
-              "jp": "だらしない",
-              "kj": "だらしない",
-              "r": "darashinai",
-              "id": "tidak rapi; malas",
-              "note": "だらしない生活 (hidup yang berantakan)"
+              "jp": "空前絶後",
+              "kj": "空前絶後",
+              "r": "kuuzenzetsugo",
+              "id": "belum pernah ada",
+              "note": "空前絶後の記録"
             },
             {
-              "jp": "頂上",
-              "kj": "頂上",
-              "r": "choujou",
-              "id": "puncak",
-              "note": "山の頂上 (puncak gunung)"
-            },
-            {
-              "jp": "景色",
-              "kj": "景色",
-              "r": "keshiki",
-              "id": "pemandangan",
-              "note": "景色がいい (pemandangannya bagus)"
-            },
-            {
-              "jp": "判決",
-              "kj": "判決",
-              "r": "hanketsu",
-              "id": "putusan (pengadilan)",
-              "note": "判決が出る (putusan dijatuhkan)"
-            },
-            {
-              "jp": "不当",
-              "kj": "不当",
-              "r": "futou",
-              "id": "tidak adil",
-              "note": "不当な扱い (perlakuan tidak adil)"
-            },
-            {
-              "jp": "悪口",
-              "kj": "悪口",
-              "r": "warukuchi",
-              "id": "gunjingan",
-              "note": "悪口を言う (menggunjing)"
-            },
-            {
-              "jp": "立派",
-              "kj": "立派",
-              "r": "rippa",
-              "id": "mengagumkan",
-              "note": "立派な仕事 (pekerjaan yang mengagumkan)"
+              "jp": "感服",
+              "kj": "感服",
+              "r": "kanpuku",
+              "id": "kagum; takjub",
+              "note": "その手腕に感服する"
             }
           ]
         },
@@ -43332,60 +43332,60 @@ const CHAPTERS = {
           "title": "Kanji Bab 19",
           "items": [
             {
-              "ch": "評",
+              "ch": "賛",
               "kun": "",
-              "on": "ヒョウ",
-              "id": "menilai",
-              "note": "評価する (menilai)"
+              "on": "サン",
+              "id": "memuji",
+              "note": "絶賛（ぜっさん）＝pujian luar biasa"
             },
             {
-              "ch": "価",
-              "kun": "あたい",
-              "on": "カ",
-              "id": "nilai",
-              "note": "評価の価 (nilai penilaian)"
+              "ch": "嘆",
+              "kun": "",
+              "on": "タン",
+              "id": "mengeluh; mengagumi",
+              "note": "驚嘆（きょうたん）＝kekaguman"
             },
             {
-              "ch": "感",
+              "ch": "喝",
+              "kun": "",
+              "on": "カツ",
+              "id": "berseru; menegur",
+              "note": "喝采（かっさい）＝sorak-sorai"
+            },
+            {
+              "ch": "巻",
               "kun": "",
               "on": "カン",
-              "id": "rasa",
-              "note": "感想を述べる (menyampaikan kesan)"
+              "id": "gulungan; puncak",
+              "note": "圧巻（あっかん）＝yang paling menakjubkan"
             },
             {
-              "ch": "想",
-              "kun": "おも・う",
-              "on": "ソウ",
-              "id": "membayangkan",
-              "note": "感想の想 (kesan)"
+              "ch": "眉",
+              "kun": "まゆ",
+              "on": "ビ",
+              "id": "alis",
+              "note": "白眉（はくび）＝yang terbaik"
             },
             {
-              "ch": "賞",
+              "ch": "逸",
               "kun": "",
-              "on": "ショウ",
-              "id": "menghargai; hadiah",
-              "note": "鑑賞する (menikmati; mengapresiasi)"
+              "on": "イツ",
+              "id": "melebihi; lepas",
+              "note": "秀逸（しゅういつ）＝sangat bagus"
             },
             {
-              "ch": "信",
+              "ch": "卓",
               "kun": "",
-              "on": "シン",
-              "id": "percaya",
-              "note": "信頼する (memercayai)"
+              "on": "タク",
+              "id": "unggul",
+              "note": "卓越（たくえつ）＝unggul; luar biasa"
             },
             {
-              "ch": "頼",
-              "kun": "たよ・る",
-              "on": "ライ",
-              "id": "mengandalkan",
-              "note": "信頼の頼 (kepercayaan)"
-            },
-            {
-              "ch": "残",
-              "kun": "のこ・る",
-              "on": "ザン",
-              "id": "sisa",
-              "note": "残念だ (disayangkan)"
+              "ch": "希",
+              "kun": "",
+              "on": "キ",
+              "id": "langka; harap",
+              "note": "希代（きだい）＝langka di zaman ini"
             }
           ]
         },
@@ -43395,43 +43395,43 @@ const CHAPTERS = {
           "lines": [
             {
               "sp": "A",
-              "jp": "昨日のコンサート、どうだった？",
-              "id": "Konser kemarin gimana?"
+              "jp": "昨日のライブ、行った？",
+              "id": "Konser kemarin, kamu nonton?"
             },
             {
               "sp": "B",
-              "jp": "素晴らしさといったら……。感動のあまり涙が出たよ。",
-              "id": "Keindahannya tak terkatakan… Saking terharunya aku sampai menangis."
+              "jp": "行った行った！　圧巻だったよ。鳥肌が立つとは、まさにこのことだね。",
+              "id": "Nonton dong! Keren abis. Merinding itu ya, beneran kayak gini rasanya."
             },
             {
               "sp": "A",
-              "jp": "歌手の声、鑑賞に堪えるものだったね。",
-              "id": "Suara penyanyinya layak dinikmati ya."
+              "jp": "へえ、そこまで？　歌唱力といったらなかったって感じ？",
+              "id": "Hah, sehebat itu? Suaranya luar biasa banget gitu?"
             },
             {
               "sp": "B",
-              "jp": "うん。プロと言うに足る実力だよ。",
-              "id": "Iya. Kemampuan yang layak disebut profesional."
+              "jp": "うん。声量も表現力も、プロの名に恥じないっていうか……いや、称賛に足るレベルだった。",
+              "id": "Iya. Volume sama ekspresinya, bukan cuma pantas disebut pro… malah layak dipuji setinggi langit."
             },
             {
               "sp": "A",
-              "jp": "でも、会場のマナーの悪さといったら……。",
-              "id": "Tapi buruknya tata krama penonton itu…"
+              "jp": "さすが希代の歌姫だね。チケット取れなくて悔しいかぎりだよ。",
+              "id": "Pantes dijuluki diva langka zaman ini ya. Nyesel banget nggak kebagian tiket."
             },
             {
               "sp": "B",
-              "jp": "残念極まるね。でも全体としては楽しいかぎりだったよ。",
-              "id": "Sungguh sangat disayangkan. Tapi secara keseluruhan sungguh menyenangkan."
+              "jp": "まあ、次は一緒に行こうよ。感動が極まって、最後ちょっと泣きそうになったんだ。",
+              "id": "Yaudah, lain kali kita nonton bareng ya. Saking terharunya, di akhir aku sampai mau nangis."
             },
             {
               "sp": "A",
-              "jp": "こんな席が取れるとは驚きだ。",
-              "id": "Bisa dapat kursi sebagus ini sungguh mengejutkan."
+              "jp": "えー、泣くほど？　そこまで言うなら、DVD出たら絶対見るわ。",
+              "id": "Hah, sampai nangis? Kalau kamu ngomong sampai segitunya, nanti kalau DVD-nya keluar pasti kutonton."
             },
             {
               "sp": "B",
-              "jp": "本当にいい思い出になったね。",
-              "id": "Benar-benar jadi kenangan indah ya."
+              "jp": "うん、見て見て。白眉のステージだったって、保証するよ。",
+              "id": "Iya, tonton deh. Kujamin, itu penampilan terbaiknya."
             }
           ]
         }
@@ -43564,109 +43564,109 @@ const CHAPTERS = {
         {
           "items": [
             {
-              "id": "perasaan",
-              "jp": "心情",
-              "kj": "心情",
-              "note": "心情を吐露する (mencurahkan perasaan)",
-              "r": "shinjou"
+              "jp": "慚愧",
+              "kj": "慚愧",
+              "r": "zanki",
+              "id": "malu dan menyesal",
+              "note": "慚愧に堪えない"
             },
             {
-              "id": "mencintai",
-              "jp": "愛する",
-              "kj": "愛する",
-              "note": "愛してやまない (mencintai sepenuh hati)",
-              "r": "aisuru"
+              "jp": "痛恨",
+              "kj": "痛恨",
+              "r": "tsuukon",
+              "id": "penyesalan mendalam",
+              "note": "痛恨の極みだ"
             },
             {
-              "id": "berdoa; memohon",
-              "jp": "願う",
-              "kj": "願う",
-              "note": "幸せを願う (mendoakan kebahagiaan)",
-              "r": "negau"
+              "jp": "慟哭",
+              "kj": "慟哭",
+              "r": "doukoku",
+              "id": "ratapan",
+              "note": "慟哭する遺族"
             },
             {
-              "id": "terharu",
-              "jp": "感激",
-              "kj": "感激",
-              "note": "感激に堪えない (tak tertahankan harunya)",
-              "r": "kangeki"
+              "jp": "悲嘆",
+              "kj": "悲嘆",
+              "r": "hitan",
+              "id": "duka cita",
+              "note": "悲嘆に暮れる"
             },
             {
-              "id": "kegembiraan",
-              "jp": "喜び",
-              "kj": "喜び",
-              "note": "喜びを分かち合う (berbagi kegembiraan)",
-              "r": "yorokobi"
+              "jp": "哀悼",
+              "kj": "哀悼",
+              "r": "aitou",
+              "id": "bela sungkawa",
+              "note": "哀悼の意を表する"
             },
             {
-              "id": "air mata",
-              "jp": "涙",
-              "kj": "涙",
-              "note": "涙を禁じ得ない (tak bisa menahan air mata)",
-              "r": "namida"
+              "jp": "追悼",
+              "kj": "追悼",
+              "r": "tsuitou",
+              "id": "mengenang (yang wafat)",
+              "note": "追悼の辞を述べる"
             },
             {
-              "id": "kemarahan",
-              "jp": "怒り",
-              "kj": "怒り",
-              "note": "怒りを覚える (merasakan kemarahan)",
-              "r": "ikari"
+              "jp": "悔恨",
+              "kj": "悔恨",
+              "r": "kaikon",
+              "id": "penyesalan",
+              "note": "悔恨の念に堪えない"
             },
             {
-              "id": "melarang; menahan",
-              "jp": "禁じる",
-              "kj": "禁じる",
-              "note": "禁じ得ない (tak bisa menahan)",
-              "r": "kinjiru"
+              "jp": "自責",
+              "kj": "自責",
+              "r": "jiseki",
+              "id": "menyalahkan diri sendiri",
+              "note": "自責の念に駆られる"
             },
             {
-              "id": "pensiun",
-              "jp": "引退",
-              "kj": "引退",
-              "note": "引退を余儀なくされる (terpaksa pensiun)",
-              "r": "intai"
+              "jp": "引責",
+              "kj": "引責",
+              "r": "inseki",
+              "id": "mengambil tanggung jawab",
+              "note": "引責辞任する"
             },
             {
-              "id": "terpaksa",
+              "jp": "辞任",
+              "kj": "辞任",
+              "r": "jinin",
+              "id": "pengunduran diri",
+              "note": "辞任を余儀なくされる"
+            },
+            {
               "jp": "余儀なく",
               "kj": "余儀なく",
-              "note": "〜を余儀なくされる (terpaksa …)",
-              "r": "yoginaku"
+              "r": "yoginaku",
+              "id": "terpaksa",
+              "note": "中止を余儀なくされる"
             },
             {
-              "id": "meminta maaf",
-              "jp": "謝る",
-              "kj": "謝る",
-              "note": "謝らないではすまない (mau tidak mau harus meminta maaf)",
-              "r": "ayamaru"
+              "jp": "断腸",
+              "kj": "断腸",
+              "r": "danchou",
+              "id": "sangat menyakitkan",
+              "note": "断腸の思いだ"
             },
             {
-              "id": "melukai",
-              "jp": "傷つける",
-              "kj": "傷つける",
-              "note": "心を傷つける (melukai hati)",
-              "r": "kizutsukeru"
+              "jp": "苦渋",
+              "kj": "苦渋",
+              "r": "kujuu",
+              "id": "pahit dan sulit",
+              "note": "苦渋の決断を迫られる"
             },
             {
-              "id": "kesaksian",
-              "jp": "供述",
-              "kj": "供述",
-              "note": "供述を聞く (mendengar kesaksian)",
-              "r": "kyoujutsu"
+              "jp": "忍びない",
+              "kj": "忍びない",
+              "r": "shinobinai",
+              "id": "tak tega",
+              "note": "見過ごすには忍びない"
             },
             {
-              "id": "bangkrut",
-              "jp": "倒産",
-              "kj": "倒産",
-              "note": "倒産が相次ぐ (kebangkrutan bertubi-tubi)",
-              "r": "tousan"
-            },
-            {
-              "id": "lulusan",
-              "jp": "卒業生",
-              "kj": "卒業生",
-              "note": "卒業生の皆さん (para lulusan sekalian)",
-              "r": "sotsugyousei"
+              "jp": "やるせない",
+              "kj": "やるせない",
+              "r": "yarusenai",
+              "id": "menyedihkan; tak berdaya",
+              "note": "やるせない気持ちになる"
             }
           ],
           "title": "Kosakata: Perasaan & Keterpaksaan",
@@ -43881,60 +43881,60 @@ const CHAPTERS = {
         {
           "items": [
             {
-              "ch": "心",
-              "id": "hati",
-              "kun": "こころ",
-              "note": "心情 (perasaan)",
-              "on": "シン"
-            },
-            {
-              "ch": "情",
-              "id": "perasaan",
-              "kun": "なさ・け",
-              "note": "心情の情 (perasaan)",
-              "on": "ジョウ"
-            },
-            {
-              "ch": "愛",
-              "id": "cinta",
+              "ch": "慚",
               "kun": "",
-              "note": "愛する (mencintai)",
-              "on": "アイ"
+              "on": "ザン",
+              "id": "malu",
+              "note": "慚愧（ざんき）＝malu dan menyesal"
             },
             {
-              "ch": "願",
-              "id": "memohon",
-              "kun": "ねが・う",
-              "note": "願う (berdoa; memohon)",
-              "on": "ガン"
+              "ch": "恨",
+              "kun": "うら（む）",
+              "on": "コン",
+              "id": "dendam; sesal",
+              "note": "痛恨（つうこん）＝penyesalan mendalam"
             },
             {
-              "ch": "激",
-              "id": "dahsyat",
-              "kun": "はげ・しい",
-              "note": "感激する (terharu)",
-              "on": "ゲキ"
-            },
-            {
-              "ch": "喜",
-              "id": "gembira",
-              "kun": "よろこ・ぶ",
-              "note": "喜び (kegembiraan)",
-              "on": "キ"
-            },
-            {
-              "ch": "涙",
-              "id": "air mata",
-              "kun": "なみだ",
-              "note": "涙を禁じ得ない (tak bisa menahan air mata)",
-              "on": "ルイ"
-            },
-            {
-              "ch": "禁",
-              "id": "larangan",
+              "ch": "慟",
               "kun": "",
-              "note": "禁じる (melarang; menahan)",
-              "on": "キン"
+              "on": "ドウ",
+              "id": "berduka",
+              "note": "慟哭（どうこく）＝ratapan"
+            },
+            {
+              "ch": "悼",
+              "kun": "",
+              "on": "トウ",
+              "id": "berkabung",
+              "note": "哀悼（あいとう）＝bela sungkawa"
+            },
+            {
+              "ch": "責",
+              "kun": "",
+              "on": "セキ",
+              "id": "tanggung jawab",
+              "note": "引責（いんせき）＝mengambil tanggung jawab"
+            },
+            {
+              "ch": "忍",
+              "kun": "しの（ぶ）",
+              "on": "ニン",
+              "id": "menahan; sabar",
+              "note": "忍びない（しのびない）＝tak tega"
+            },
+            {
+              "ch": "渋",
+              "kun": "",
+              "on": "ジュウ",
+              "id": "segan; pahit",
+              "note": "苦渋（くじゅう）＝pahit dan sulit"
+            },
+            {
+              "ch": "辞",
+              "kun": "",
+              "on": "ジ",
+              "id": "kata; mengundurkan diri",
+              "note": "辞任（じにん）＝pengunduran diri"
             }
           ],
           "title": "Kanji Bab 20",
@@ -43943,44 +43943,44 @@ const CHAPTERS = {
         {
           "lines": [
             {
-              "id": "Katanya atlet Nakagawa pensiun ya.",
-              "jp": "中川選手、引退するんだってね。",
-              "sp": "A"
+              "sp": "A",
+              "jp": "ねえ、例の食品偽装のニュース見た？",
+              "id": "Eh, kamu lihat berita pemalsuan label makanan itu?"
             },
             {
-              "id": "Padahal masih muda ya. Mungkin tak bisa menang melawan cedera.",
-              "jp": "まだ若いのにね。けがには勝てなかったんだろう。",
-              "sp": "B"
+              "sp": "B",
+              "jp": "見たよ。社長が引責辞任を余儀なくされたんだってね。",
+              "id": "Lihat. Katanya direkturnya terpaksa mundur untuk bertanggung jawab."
             },
             {
-              "id": "Sebagai salah satu penggemar, sungguh tak tertahankan sedihnya.",
-              "jp": "ファンの一人として、残念に堪えないよ。",
-              "sp": "A"
+              "sp": "A",
+              "jp": "そりゃそうだよ。消費者を裏切ったんだから、謝罪しないではすまないでしょ。",
+              "id": "Ya iyalah. Udah mengkhianati konsumen, nggak bisa nggak minta maaf."
             },
             {
-              "id": "Aku juga salah satu yang mencintai permainannya sepenuh hati.",
-              "jp": "私も彼のプレーを愛してやまない一人だよ。",
-              "sp": "B"
+              "sp": "B",
+              "jp": "ほんと。被害者の気持ちを思うと、胸が痛むのを禁じ得ないよ。",
+              "id": "Bener. Ngebayangin perasaan para korban, dadaku rasanya sakit nggak ketahan."
             },
             {
-              "id": "Demi dia, kita mau tidak mau harus terus mendukung ya.",
-              "jp": "彼の分まで応援しないではすまないね。",
-              "sp": "A"
+              "sp": "A",
+              "jp": "会見で土下座してたけど、慚愧に堪えないって顔してたね。",
+              "id": "Di konferensi pers dia sampai dogeza, mukanya kelihatan malu setengah mati."
             },
             {
-              "id": "Iya. Tak bisa menahan air mata, tapi ayo menatap ke depan.",
-              "jp": "うん。涙を禁じ得ないけど、前を向こう。",
-              "sp": "B"
+              "sp": "B",
+              "jp": "まあ、長年築いた信頼を失ったんだから、断腸の思いだろうね。",
+              "id": "Ya, kehilangan kepercayaan yang dibangun bertahun-tahun, pasti perih banget rasanya."
             },
             {
-              "id": "Aku senantiasa mendoakan kesuksesan para pemain baru.",
-              "jp": "新しい選手の活躍を願ってやまないよ。",
-              "sp": "A"
+              "sp": "A",
+              "jp": "でもさ、再発防止を徹底しないと、消費者は黙っていないではおかないよ。",
+              "id": "Tapi, kalau pencegahan biar nggak keulang nggak dibenerin serius, konsumen nggak bakal tinggal diam."
             },
             {
-              "id": "Iya. Mereka pun pasti akan menjawab harapan itu.",
-              "jp": "そうだね。彼らも期待に応えずにはおかないだろう。",
-              "sp": "B"
+              "sp": "B",
+              "jp": "うん。会社は生まれ変わるって言ってたけど、見守るしかないね。応援してやまないよ。",
+              "id": "Iya. Perusahaannya bilang mau berubah total, kita cuma bisa ngawasin. Aku dukung sepenuh hati kok."
             }
           ],
           "title": "Percakapan",
