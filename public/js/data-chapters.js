@@ -19677,6 +19677,14328 @@ const CHAPTERS = {
       quiz: [{"q": "私は＿＿＿夢をあきらめない。(Aku bertekad tidak akan pernah menyerah pada mimpiku.)", "o": ["めったに", "まったく", "少しも", "決して"], "a": 3, "explain": "決して〜ない mengandung tekad kuat: \"bersumpah tidak akan...\"."}, {"q": "このスープは＿＿＿辛くない。(Sup ini sama sekali tidak pedas.)", "o": ["もしも", "めったに", "決して", "まったく"], "a": 3, "explain": "まったく〜ない = sama sekali tidak; menyatakan fakta objektif."}, {"q": "彼は＿＿＿怒らない。(Dia jarang sekali marah.)", "o": ["必ずしも", "決して", "めったに", "まったく"], "a": 2, "explain": "めったに〜ない = jarang sekali / hampir tidak pernah."}, {"q": "彼の話す英語は＿＿＿わからない。(Bahasa Inggrisnya sedikit pun tidak kumengerti.)", "o": ["決して", "たとえ", "めったに", "少しも"], "a": 3, "explain": "少しも〜ない = sedikit pun tidak; menekankan kadar nol."}, {"q": "ごめん、＿＿＿気づかなかった。(Maaf, aku sama sekali tidak sadar.)", "o": ["ちっとも", "めったに", "もしも", "必ずしも"], "a": 0, "explain": "ちっとも = 少しも versi kasual sehari-hari."}, {"q": "こんなチャンスは＿＿＿ないよ。(Kesempatan seperti ini hampir tidak pernah ada.)", "o": ["もしかすると", "めったに", "決して", "少しも"], "a": 1, "explain": "めったにない = hampir tidak pernah ada (pola tetap: kata benda + は + めったにない)."}, {"q": "「決して」の使い方 yang BENAR adalah...", "o": ["決して忘れる。", "決して忘れよう。", "決して忘れたい。", "決して忘れない。"], "a": 3, "explain": "決して selalu diikuti bentuk negatif."}, {"q": "「めったに」の使い方 yang BENAR adalah...", "o": ["めったに食べる。", "めったに食べた。", "めったに食べない。", "めったに食べたい。"], "a": 2, "explain": "めったに selalu diikuti bentuk negatif."}, {"q": "私は＿＿＿泳げない。(Aku sama sekali tidak bisa berenang.)", "o": ["もしも", "たとえ", "決して", "まったく"], "a": 3, "explain": "まったく〜ない untuk fakta objektif \"sama sekali tidak\"."}, {"q": "Kalimat yang SALAH adalah...", "o": ["決してあきらめない。", "まったくわからない。", "少しも食べない。", "めったに遊ぶ。"], "a": 3, "explain": "めったに harus dengan bentuk negatif: めったに遊ばない."}]
     }
   ],
-  "n2": [],
+  "n2": [
+  {
+    "id": "n2-1",
+    "bab": 1,
+    "level": "n2",
+    "title": "Saat & Tepat Setelah",
+    "desc": "Menyatakan waktu kejadian dan hal yang terjadi tepat setelahnya.",
+    "icon": "⏰",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Saat & Tepat Setelah",
+        "body": "<p>Bab ini berisi keluarga pola <b>waktu<\/b> dan <b>tepat setelah<\/b> — salah satu jebakan favorit soal N2 karena banyak polanya mirip tapi tidak bisa saling menggantikan. Kuncinya: bedakan dulu yang <b>formal<\/b> (untuk pengumuman dan tulisan resmi) dari yang <b>dramatis<\/b> (untuk kejadian tak terduga).<\/p><p>Untuk 'saat' versi formal, ada <b>の際に<\/b> — dipakai di pengumuman bandara, hotel, atau situs perusahaan, bukan untuk obrolan sehari-hari. Sedangkan <b>に際して<\/b> dan <b>にあたって<\/b> khusus untuk <b>momen istimewa yang hanya terjadi sekali<\/b> seperti menikah, membuka usaha, atau memulai proyek. Bedanya: <b>にあたって<\/b> bernuansa lebih aktif dan positif, jadi tidak boleh dipasangkan dengan kata bernuansa negatif seperti perpisahan atau kebangkrutan.<\/p><p>Untuk 'tepat setelah', ada tiga pola yang wajib dibedakan. <b>とたん（に）<\/b> dipakai saat tepat setelah tindakan seketika, langsung terjadi hal yang <b>mengejutkan<\/b>. <b>（か）と思うと<\/b> menekankan <b>langsung berlanjut ke kejadian berikutnya<\/b> — dan tidak boleh dipakai untuk tindakan pembicara sendiri. <b>か〜ないかのうちに<\/b> menekankan dua kejadian yang terjadi <b>hampir bersamaan<\/b>, nuansa 'bersamaannya' paling kuat di antara ketiganya.<\/p><p>Jebakan umum: setelah <b>とたん<\/b>, <b>かと思うと<\/b>, dan <b>かのうちに<\/b> tidak boleh ada kalimat ajakan, perintah, atau harapan pembicara. Lalu jangan pakai <b>際に<\/b> untuk hal sepele sehari-hari — terdengar kaku dan tidak wajar.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Saat & Tepat Setelah",
+        "items": [
+          {
+            "jp": "際",
+            "kj": "際",
+            "r": "sai",
+            "id": "saat (formal)",
+            "note": "際の挨拶 = sapaan pada kesempatan itu"
+          },
+          {
+            "jp": "直後",
+            "kj": "直後",
+            "r": "chokugo",
+            "id": "tepat setelah",
+            "note": "地震の直後 = tepat setelah gempa"
+          },
+          {
+            "jp": "瞬間",
+            "kj": "瞬間",
+            "r": "shunkan",
+            "id": "sekejap",
+            "note": "その瞬間 = pada saat itu juga"
+          },
+          {
+            "jp": "折",
+            "kj": "折",
+            "r": "ori",
+            "id": "kesempatan",
+            "note": "折に触れて = setiap ada kesempatan"
+          },
+          {
+            "jp": "門出",
+            "kj": "門出",
+            "r": "kadode",
+            "id": "awal kehidupan baru",
+            "note": "門出を祝う = merayakan awal yang baru"
+          },
+          {
+            "jp": "搭乗",
+            "kj": "搭乗",
+            "r": "toujou",
+            "id": "naik pesawat",
+            "note": "搭乗手続き = prosedur naik pesawat"
+          },
+          {
+            "jp": "外出",
+            "kj": "外出",
+            "r": "gaishutsu",
+            "id": "keluar rumah",
+            "note": "外出中 = sedang keluar"
+          },
+          {
+            "jp": "同時",
+            "kj": "同時",
+            "r": "douji",
+            "id": "bersamaan",
+            "note": "同時に = pada saat yang sama"
+          },
+          {
+            "jp": "間際",
+            "kj": "間際",
+            "r": "magiwa",
+            "id": "menjelang",
+            "note": "出発間際 = menjelang keberangkatan"
+          },
+          {
+            "jp": "矢先",
+            "kj": "矢先",
+            "r": "yasaki",
+            "id": "tepat saat akan",
+            "note": "出かけようとした矢先に = tepat saat hendak pergi"
+          },
+          {
+            "jp": "いきなり",
+            "kj": "いきなり",
+            "r": "ikinari",
+            "id": "tiba-tiba",
+            "note": "いきなり雨が降る = tiba-tiba hujan turun"
+          },
+          {
+            "jp": "突然",
+            "kj": "突然",
+            "r": "totsuzen",
+            "id": "tiba-tiba",
+            "note": "突然の訪問 = kunjungan mendadak"
+          },
+          {
+            "jp": "たちまち",
+            "kj": "たちまち",
+            "r": "tachimachi",
+            "id": "seketika",
+            "note": "たちまち広がる = menyebar seketika"
+          },
+          {
+            "jp": "受け取り",
+            "kj": "受け取り",
+            "r": "uketori",
+            "id": "pengambilan",
+            "note": "商品の受け取り = pengambilan barang"
+          },
+          {
+            "jp": "節目",
+            "kj": "節目",
+            "r": "fushime",
+            "id": "momen penting",
+            "note": "人生の節目 = tonggak kehidupan"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Saat & Tepat Setelah",
+        "items": [
+          {
+            "pattern": "kata benda + の際（に） / kata kerja bentuk kamus atau bentuk lampau + 際（に）",
+            "arti": "saat; ketika (bahasa formal)",
+            "explain": "Artinya sama dengan 〜とき, tapi ini versi formalnya. Dipakai di situasi resmi — pengumuman bandara, hotel, atau situs web perusahaan — bukan untuk obrolan sehari-hari. Menempel pada kata benda (pakai の) atau kata kerja bentuk kamus/bentuk lampau yang menyatakan tindakan atau peristiwa, seperti 搭乗 (naik pesawat) atau 外出. Jebakan umum: jangan pakai untuk hal sepele seperti 'saat makan siang' — terdengar kaku dan tidak wajar.",
+            "tabel": [
+              {
+                "k": "kata benda + の際（に）",
+                "v": "saat ~ (kata benda)"
+              },
+              {
+                "k": "kata kerja bentuk kamus + 際（に）",
+                "v": "saat akan ~"
+              },
+              {
+                "k": "kata kerja bentuk lampau + 際（に）",
+                "v": "saat telah ~"
+              },
+              {
+                "k": "搭乗の際",
+                "v": "saat naik pesawat"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "この整理券は、商品受け取りの際、必要です。",
+                "rd": "このせいりけんは、しょうひんうけとりのさい、ひつようです。",
+                "id": "Kupon penukaran ini diperlukan saat pengambilan barang."
+              },
+              {
+                "jp": "こちらの会議室をご利用になる際は、受付で必要事項をご記入ください。",
+                "rd": "こちらのかいぎしつをごりようになるさいは、うけつけでひつようじこうをごきにゅうください。",
+                "id": "Saat menggunakan ruang rapat ini, mohon isi data yang diperlukan di meja resepsionis."
+              },
+              {
+                "jp": "アメリカの大統領は来日した際に、わたしたちの大学でスピーチを行った。",
+                "rd": "アメリカのだいとうりょうはらいにちしたさいに、わたしたちのだいがくでスピーチをおこなった。",
+                "id": "Saat berkunjung ke Jepang, presiden Amerika berpidato di universitas kami."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk kamus + に際して / にあたって",
+            "arti": "pada saat; berkenaan dengan (formal)",
+            "explain": "Keduanya berarti 'pada saat ~' dalam bahasa formal, dipakai untuk momen istimewa yang hanya terjadi sekali dan disengaja — seperti menikah, membuka toko, atau memulai usaha. Bedanya: にあたって dipakai untuk tindakan yang lebih aktif dan positif, jadi tidak boleh dipasangkan dengan kata bernuansa negatif seperti 別れ (perpisahan), 入院 (masuk rumah sakit), atau 倒産 (bangkrut). Setelah pola ini biasanya muncul kalimat yang menyatakan tindakan.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + に際して",
+                "v": "pada saat ~ (formal)"
+              },
+              {
+                "k": "kata kerja bentuk kamus + にあたって",
+                "v": "berkenaan dengan ~ (lebih aktif)"
+              },
+              {
+                "k": "× 別れにあたって",
+                "v": "salah — kata negatif tidak boleh"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "工事関係者は工事を始めるに際して、近所の住民にあいさつをして回った。",
+                "rd": "こうじかんけいしゃはこうじをはじめるにさいして、きんじょのじゅうみんにあいさつをしてまわった。",
+                "id": "Sebelum memulai pembangunan, pihak kontraktor berkeliling menyapa warga sekitar."
+              },
+              {
+                "jp": "当ショッピングサイトのご利用に際して、以下のご利用条件をよくお読みください。",
+                "rd": "とうショッピングサイトのごりようにさいして、いかのごりようじょうけんをよくおよみください。",
+                "id": "Saat menggunakan situs belanja kami, mohon baca baik-baik syarat penggunaan berikut."
+              },
+              {
+                "jp": "新しく事業を始めるにあたって、しっかりと準備をしようと思っております。",
+                "rd": "あたらしくじぎょうをはじめるにあたって、しっかりとじゅんびをしようとおもっております。",
+                "id": "Dalam memulai usaha baru ini, saya berniat mempersiapkan diri dengan matang."
+              },
+              {
+                "jp": "お二人の門出にあたりまして、お祝いの言葉を申し上げます。",
+                "rd": "おふたりのかどでにあたりまして、おいわいのことばをもうしあげます。",
+                "id": "Sehubungan dengan awal kehidupan baru kalian berdua, saya menyampaikan ucapan selamat."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk lampau + とたん（に）",
+            "arti": "begitu ~, langsung terjadi hal tak terduga",
+            "explain": "Pola ini dipakai saat tepat setelah suatu tindakan, langsung terjadi hal lain yang mengejutkan. Kata kerja sebelumnya harus yang menyatakan gerakan atau perubahan seketika, seperti 立ち上がる (berdiri) atau 変わる (berubah). Kalimat sesudahnya harus berisi hal yang tak terduga. Jebakan: setelah とたん tidak boleh ada kalimat ajakan, perintah, atau harapan pembicara seperti 〜ませんか atau 〜なさい.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk lampau + とたん（に）",
+                "v": "begitu ~, langsung ~"
+              },
+              {
+                "k": "× 飲んだとたんに、帰りましょう",
+                "v": "salah — ajakan tidak boleh"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "山の頂上でワインを一口飲んだとたんに、めまいがした。",
+                "rd": "やまのちょうじょうでワインをひとくちのんだとたんに、めまいがした。",
+                "id": "Begitu meneguk wine sekali di puncak gunung, aku langsung pusing."
+              },
+              {
+                "jp": "夫は結婚前は優しかったが、結婚したとたんに、態度が変わった。",
+                "rd": "おっとはけっこんまえはやさしかったが、けっこんしたとたんに、たいどがかわった。",
+                "id": "Suamiku baik sebelum menikah, tapi begitu menikah sikapnya langsung berubah."
+              },
+              {
+                "jp": "国の母に電話をかけた。母の声を聞いたとたん、涙があふれてきた。",
+                "rd": "くにのははにでんわをかけた。ははのこえをきいたとたん、なみだがあふれてきた。",
+                "id": "Aku menelepon ibuku di kampung halaman. Begitu mendengar suaranya, air mataku langsung meluap."
+              },
+              {
+                "jp": "僕が「さよなら」と言ったとたん、彼女は走っていってしまった。",
+                "rd": "ぼくが「さよなら」といったとたん、かのじょははしっていってしまった。",
+                "id": "Begitu aku berkata \"selamat tinggal\", dia langsung pergi berlari."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk lampau + （か）と思うと / （か）と思ったら",
+            "arti": "baru saja kupikir ~, eh langsung terjadi hal berikutnya",
+            "explain": "Pola ini dipakai saat tepat setelah sesuatu terjadi, langsung menyusul kejadian atau perubahan besar berikutnya. Berbeda dengan とたん yang fokus pada keterkejutan, pola ini menekankan 'langsung berlanjut ke hal berikutnya'. Tidak boleh dipakai untuk tindakan pembicara sendiri, dan kalimat sesudahnya harus sedikit mengejutkan. Sama seperti とたん, tidak boleh diikuti kalimat harapan atau ajakan.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk lampau + かと思うと",
+                "v": "baru saja ~, langsung ~"
+              },
+              {
+                "k": "kata kerja bentuk lampau + かと思ったら",
+                "v": "baru saja ~, eh ternyata ~"
+              },
+              {
+                "k": "× わたしが帰ったかと思うと",
+                "v": "salah — bukan tindakan pembicara"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "林さんは部屋に入ってきたかと思うと、いきなり窓を全部開けた。",
+                "rd": "はやしさんはへやにはいってきたかとおもうと、いきなりまどをぜんぶあけた。",
+                "id": "Baru saja kupikir Hayashi masuk kamar, tiba-tiba dia membuka semua jendela."
+              },
+              {
+                "jp": "赤ちゃんは今泣いたと思うと、もう笑っている。",
+                "rd": "あかちゃんはいまないたとおもうと、もうわらっている。",
+                "id": "Bayinya baru saja menangis, eh sekarang sudah tertawa."
+              },
+              {
+                "jp": "やっと部屋が片付いたかと思ったら、子供たちがすぐまた散らかした。",
+                "rd": "やっとへやがかたづいたかとおもったら、こどもたちがすぐまたちらかした。",
+                "id": "Baru saja kupikir kamar akhirnya rapi, anak-anak langsung mengacak-acaknya lagi."
+              },
+              {
+                "jp": "このごろは気温の差が大きい。昨日は暑くなったかと思ったら、今日は涼しい。",
+                "rd": "このごろはきおんのさがおおきい。きのうはあつくなったかとおもったら、きょうはすずしい。",
+                "id": "Akhir-akhir ini perbedaan suhunya besar. Kemarin kupikir sudah panas, eh hari ini sejuk."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk kamus/lampau + か + kata kerja bentuk negatif + かのうちに",
+            "arti": "begitu ~ selesai, langsung (hampir bersamaan)",
+            "explain": "Pola ini menekankan dua kejadian yang terjadi hampir bersamaan — begitu yang pertama selesai, yang kedua langsung terjadi. Nuansa 'bersamaan'-nya lebih kuat daripada 〜（か）と思うと. Kata kerja yang dipakai harus yang menyatakan gerakan atau perubahan seketika seperti 着く (tiba) atau 終わる (selesai). Kalimat sesudahnya tidak boleh berupa harapan pembicara atau ajakan.",
+            "tabel": [
+              {
+                "k": "kata kerja + か + bentuk negatif + かのうちに",
+                "v": "begitu ~, langsung ~"
+              },
+              {
+                "k": "横になるかならないかのうちに",
+                "v": "begitu berbaring, langsung ~"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "一郎はベッドに横になるかならないかのうちに、ぐっすり眠ってしまった。",
+                "rd": "いちろうはベッドによこになるかならないかのうちに、ぐっすりねむってしまった。",
+                "id": "Ichiro langsung tertidur pulas begitu berbaring di tempat tidur."
+              },
+              {
+                "jp": "わたしは夜が明けたか明けないかのうちに家を出て、空港へ向かった。",
+                "rd": "わたしはよるがあけたかあけないかのうちにいえをでて、くうこうへむかった。",
+                "id": "Aku keluar rumah dan menuju bandara begitu fajar menyingsing."
+              },
+              {
+                "jp": "あの作家は今売れっ子だ。話題作を発表したかしないかのうちに、もう次の作品に取りかかっているそうだ。",
+                "rd": "あのさっかはいまうれっこだ。わだいさくをはっぴょうしたかしないかのうちに、もうつぎのさくひんにとりかかっているそうだ。",
+                "id": "Penulis itu sedang laris. Katanya, begitu karya terbarunya dirilis, dia langsung mengerjakan karya berikutnya."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 1",
+        "items": [
+          {
+            "ch": "際",
+            "kun": "きわ",
+            "on": "サイ",
+            "id": "saat; kesempatan",
+            "note": "実際（じっさい）= kenyataan"
+          },
+          {
+            "ch": "直",
+            "kun": "なお（す）/ただ（ちに）",
+            "on": "チョク",
+            "id": "langsung",
+            "note": "直接（ちょくせつ）= langsung"
+          },
+          {
+            "ch": "瞬",
+            "kun": "またた（く）",
+            "on": "シュン",
+            "id": "sekejap",
+            "note": "瞬間（しゅんかん）= sekejap mata"
+          },
+          {
+            "ch": "途",
+            "kun": "—",
+            "on": "ト",
+            "id": "tengah jalan",
+            "note": "途中（とちゅう）= di tengah jalan"
+          },
+          {
+            "ch": "同",
+            "kun": "おな（じ）",
+            "on": "ドウ",
+            "id": "sama",
+            "note": "同時（どうじ）= bersamaan"
+          },
+          {
+            "ch": "間",
+            "kun": "あいだ/ま",
+            "on": "カン",
+            "id": "antara; waktu",
+            "note": "間際（まぎわ）= menjelang"
+          },
+          {
+            "ch": "矢",
+            "kun": "や",
+            "on": "シ",
+            "id": "panah",
+            "note": "矢先（やさき）= tepat saat akan"
+          },
+          {
+            "ch": "折",
+            "kun": "お（る）/おり",
+            "on": "セツ",
+            "id": "melipat; kesempatan",
+            "note": "折に触れて（おりにふれて）= setiap ada kesempatan"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "来週の大阪出張だけど、搭乗の際にこの整理券が必要なんだって。",
+            "id": "Soal dinas ke Osaka minggu depan, katanya kupon ini diperlukan saat naik pesawat."
+          },
+          {
+            "sp": "B",
+            "jp": "そうなんだ。受付で受け取った際に、説明がなかったけどね。",
+            "id": "Oh ya? Waktu menerimanya di resepsionis tidak ada penjelasan."
+          },
+          {
+            "sp": "A",
+            "jp": "新しい支社を開設するにあたって、ルールが厳しくなったらしいよ。",
+            "id": "Katanya sejak pembukaan cabang baru, aturannya jadi ketat."
+          },
+          {
+            "sp": "B",
+            "jp": "なるほどね。じゃあ、手続きをしたかしないかのうちに、書類を出さないと。",
+            "id": "Begitu ya. Kalau begitu, harus menyerahkan dokumen begitu selesai urus administrasi."
+          },
+          {
+            "sp": "A",
+            "jp": "実はさ、空港に着いたとたん、部長から電話がかかってきたんだ。",
+            "id": "Sebenarnya, begitu sampai bandara, langsung ditelepon manajer."
+          },
+          {
+            "sp": "B",
+            "jp": "え、何かあったの？",
+            "id": "Eh, ada apa?"
+          },
+          {
+            "sp": "A",
+            "jp": "会議の資料を送ったかと思ったら、宛先を間違えてたんだよ。",
+            "id": "Baru saja kupikir sudah mengirim materi rapat, eh ternyata salah alamat."
+          },
+          {
+            "sp": "B",
+            "jp": "それは大変！すぐに送り直さないと。",
+            "id": "Gawat! Harus segera kirim ulang."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "当ホテルをご利用の___、フロントでお名前をご記入ください。",
+        "o": [
+          "とたんに",
+          "かと思うと",
+          "際に",
+          "次第"
+        ],
+        "a": 2,
+        "explain": "ご利用の際に = ungkapan formal khas pengumuman; とたん butuh kejadian yang mengejutkan."
+      },
+      {
+        "q": "結婚式に___まして、多くの方にご出席いただき、ありがとうございました。",
+        "o": [
+          "際し",
+          "とたん",
+          "かと思ったら",
+          "ばかり"
+        ],
+        "a": 0,
+        "explain": "結婚式に際しまして = sapaan formal untuk momen istimewa yang hanya sekali."
+      },
+      {
+        "q": "ドアを開けた___、犬が飛び出してきた。",
+        "o": [
+          "際に",
+          "にあたって",
+          "一方だ",
+          "とたんに"
+        ],
+        "a": 3,
+        "explain": "開けたとたんに = tepat setelah tindakan seketika, langsung terjadi hal tak terduga."
+      },
+      {
+        "q": "彼が部屋を出た___、電話が鳴った。",
+        "o": [
+          "際に",
+          "かと思うと",
+          "にあたって",
+          "ばかりだ"
+        ],
+        "a": 1,
+        "explain": "出たかと思うと = langsung berlanjut ke kejadian berikutnya; bukan tindakan pembicara sendiri."
+      },
+      {
+        "q": "ベッドに横になる___、眠ってしまった。",
+        "o": [
+          "かならないかのうちに",
+          "とたんに",
+          "際に",
+          "次第"
+        ],
+        "a": 0,
+        "explain": "横になるかならないかのうちに = pola idiom untuk dua kejadian yang hampir bersamaan."
+      },
+      {
+        "q": "彼女は家に帰る___ないかのうちに、夕食の準備を始めた。",
+        "o": [
+          "とたんに",
+          "際に",
+          "か帰ら",
+          "次第"
+        ],
+        "a": 2,
+        "explain": "帰るか帰らないかのうちに = struktur idiom tetap; bagian か〜ないかのうちに sudah ada di kalimat."
+      },
+      {
+        "q": "お二人のご結婚___、心よりお祝い申し上げます。",
+        "o": [
+          "とたん",
+          "にあたり",
+          "際に",
+          "うちに"
+        ],
+        "a": 1,
+        "explain": "ご結婚にあたり = ungkapan formal untuk momen istimewa sekali seperti pernikahan."
+      },
+      {
+        "q": "資料を印刷した___、すぐに会議が始まった。",
+        "o": [
+          "かと思うと",
+          "際に",
+          "にあたって",
+          "ばかりだ"
+        ],
+        "a": 0,
+        "explain": "印刷したかと思うと = baru saja selesai, langsung berlanjut ke kejadian berikutnya."
+      },
+      {
+        "q": "パスポートを提示する___、係員が中身を確認した。",
+        "o": [
+          "際に",
+          "とたんに",
+          "かと思ったら",
+          "一方だ"
+        ],
+        "a": 0,
+        "explain": "提示する際に = 'saat' versi formal; tidak ada unsur kejutan sehingga とたん salah."
+      },
+      {
+        "q": "シャワーを浴びた___、電話が鳴った。",
+        "o": [
+          "際に",
+          "とたんに",
+          "に際して",
+          "つつある"
+        ],
+        "a": 1,
+        "explain": "浴びたとたんに = tepat setelah tindakan seketika terjadi hal yang tak terduga."
+      }
+    ]
+  },
+  {
+    "id": "n2-2",
+    "bab": 2,
+    "level": "n2",
+    "title": "Sedang Berlangsung",
+    "desc": "Menyatakan aksi yang sedang berjalan atau berubah.",
+    "icon": "🔄",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Sedang Berlangsung",
+        "body": "<p>Bab ini berisi pola-pola untuk menyatakan <b>sesuatu yang sedang berlangsung<\/b> atau <b>perubahan yang terus berjalan<\/b> — semuanya bernada formal dan sering muncul di berita serta tulisan resmi. Jebakan N2 di sini adalah pasangan-pasangan yang mirip: <b>うちに<\/b> yang punya dua arti, <b>ばかりだ<\/b> lawan <b>一方だ<\/b>, dan <b>ようとしている<\/b> lawan <b>つつある<\/b>.<\/p><p><b>最中だ<\/b> berarti 'tepat sedang', dan sering dipakai dalam bentuk <b>最中に<\/b> yang setelahnya muncul kejadian tak terduga yang mengganggu. Sedangkan <b>うちに<\/b> punya dua wajah: arti A 'selagi' — ada batas waktu, jadi lakukan sesuatu sebelum terlambat, dan setelahnya harus tindakan yang disengaja; arti B 'sambil' — selama melakukan sesuatu, muncul perubahan tanpa disengaja, seperti 'tanpa kusadari'.<\/p><p><b>ばかりだ<\/b> dan <b>一方だ<\/b> sama-sama berarti 'terus ke satu arah', tapi nuansanya beda: <b>ばかりだ<\/b> sering dipakai untuk perubahan ke arah yang <b>buruk<\/b>, sedangkan <b>一方だ<\/b> netral — hanya menyatakan arahnya satu. Keduanya menempel pada kata kerja yang menyatakan perubahan.<\/p><p>Terakhir, <b>ようとしている<\/b> berarti 'akan segera' — sesaat <b>sebelum<\/b> perubahan terjadi, sedangkan <b>つつある<\/b> berarti perubahannya <b>sudah mulai dan masih berjalan<\/b>. Dan <b>つつ<\/b> adalah versi formal dari <b>ながら<\/b> ('sambil') dengan syarat penting: subjek kalimat depan dan belakang harus sama.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Sedang Berlangsung",
+        "items": [
+          {
+            "jp": "最中",
+            "kj": "最中",
+            "r": "saichuu",
+            "id": "tepat di tengah",
+            "note": "会議の最中に = di tengah rapat"
+          },
+          {
+            "jp": "一方",
+            "kj": "一方",
+            "r": "ippou",
+            "id": "di satu sisi; terus",
+            "note": "悪くなる一方だ = terus memburuk"
+          },
+          {
+            "jp": "次第に",
+            "kj": "次第に",
+            "r": "shidai ni",
+            "id": "berangsur",
+            "note": "次第に暖かくなる = berangsur menghangat"
+          },
+          {
+            "jp": "徐々に",
+            "kj": "徐々に",
+            "r": "jojo ni",
+            "id": "perlahan-lahan",
+            "note": "徐々に回復する = pulih perlahan"
+          },
+          {
+            "jp": "急速に",
+            "kj": "急速に",
+            "r": "kyuusoku ni",
+            "id": "dengan pesat",
+            "note": "急速に発展する = berkembang pesat"
+          },
+          {
+            "jp": "日増しに",
+            "kj": "日増しに",
+            "r": "himashi ni",
+            "id": "hari demi hari",
+            "note": "日増しに寒くなる = makin dingin hari demi hari"
+          },
+          {
+            "jp": "刻々と",
+            "kj": "刻々と",
+            "r": "kokukoku to",
+            "id": "dari waktu ke waktu",
+            "note": "刻々と変わる = berubah dari waktu ke waktu"
+          },
+          {
+            "jp": "着々と",
+            "kj": "着々と",
+            "r": "chakuchaku to",
+            "id": "dengan mantap",
+            "note": "着々と進む = maju dengan mantap"
+          },
+          {
+            "jp": "絶えず",
+            "kj": "絶えず",
+            "r": "taezu",
+            "id": "terus-menerus",
+            "note": "絶えず努力する = terus berusaha"
+          },
+          {
+            "jp": "ますます",
+            "kj": "ますます",
+            "r": "masumasu",
+            "id": "semakin",
+            "note": "ますます複雑になる = semakin rumit"
+          },
+          {
+            "jp": "だんだん",
+            "kj": "だんだん",
+            "r": "dandan",
+            "id": "perlahan-lahan",
+            "note": "だんだん慣れる = berangsur terbiasa"
+          },
+          {
+            "jp": "どんどん",
+            "kj": "どんどん",
+            "r": "dondon",
+            "id": "dengan cepat",
+            "note": "どんどん進む = maju dengan cepat"
+          },
+          {
+            "jp": "じわじわ",
+            "kj": "じわじわ",
+            "r": "jiwajiwa",
+            "id": "perlahan tapi pasti",
+            "note": "じわじわ広がる = meluas perlahan"
+          },
+          {
+            "jp": "頻繁に",
+            "kj": "頻繁に",
+            "r": "hinpan ni",
+            "id": "sering",
+            "note": "頻繁に会う = sering bertemu"
+          },
+          {
+            "jp": "いつのまにか",
+            "kj": "いつのまにか",
+            "r": "itsunomanika",
+            "id": "tanpa disadari",
+            "note": "いつのまにか夜になった = tanpa sadar sudah malam"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Sedang Berlangsung",
+        "items": [
+          {
+            "pattern": "kata benda + の最中だ / kata kerja bentuk ている + 最中だ",
+            "arti": "sedang tepat ~",
+            "explain": "Artinya 'tepat sedang ~', dipakai untuk tindakan yang dilakukan dalam waktu yang relatif singkat seperti 読む (membaca) atau 書いている (sedang menulis). Sering dipakai dalam bentuk 〜最中に, yang setelahnya biasanya muncul kejadian tak terduga yang mengganggu — misalnya hujan turun saat sedang barbekyu.",
+            "tabel": [
+              {
+                "k": "kata benda + の最中だ",
+                "v": "tepat sedang ~ (kata benda)"
+              },
+              {
+                "k": "kata kerja ている + 最中だ",
+                "v": "tepat sedang ~"
+              },
+              {
+                "k": "スピーチの最中に",
+                "v": "di tengah pidato"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "田中さんは今考えごとをしている最中だから、じゃましないほうがいい。",
+                "rd": "たなかさんはいまかんがえごとをしているさいちゅうだから、じゃましないほうがいい。",
+                "id": "Tanaka sedang berpikir, sebaiknya jangan diganggu."
+              },
+              {
+                "jp": "浜辺でバーベキューをやっている最中に、急に雨が降り出した。",
+                "rd": "はまべでバーベキューをやっているさいちゅうに、きゅうにあめがふりだした。",
+                "id": "Saat sedang barbekyu di pantai, tiba-tiba hujan turun."
+              },
+              {
+                "jp": "スピーチの最中に、突然電気が消えた。",
+                "rd": "スピーチのさいちゅうに、とつぜんでんきがきえた。",
+                "id": "Di tengah pidato, tiba-tiba listrik padam."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk kamus/ている/bentuk negatif + うちに (juga: kata sifat, kata benda + の + うちに)",
+            "arti": "A: selagi ~ (lakukan sebelum terlambat) / B: sambil ~ (terjadi perubahan)",
+            "explain": "Pola ini punya dua arti. Arti A: 'selagi ~' — ada batas waktu, jadi lakukan sesuatu sebelum kesempatan hilang, misalnya selagi masih muda. Setelahnya harus kalimat tindakan yang disengaja. Arti B: 'sambil ~' — selama melakukan sesuatu, muncul perubahan tanpa disengaja, misalnya sambil mencari di internet jadi paham banyak hal. Keduanya menempel pada kata yang punya rentang waktu.",
+            "tabel": [
+              {
+                "k": "A: kamus/ている/negatif + うちに",
+                "v": "selagi ~ (lakukan sebelum terlambat)"
+              },
+              {
+                "k": "B: kamus/ている/negatif + うちに",
+                "v": "sambil ~ (terjadi perubahan)"
+              },
+              {
+                "k": "忘れないうちに",
+                "v": "selagi belum lupa"
+              },
+              {
+                "k": "知らないうちに",
+                "v": "tanpa disadari"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "忘れないうちに、カレンダーにメモしておこう。",
+                "rd": "わすれないうちに、カレンダーにメモしておこう。",
+                "id": "Selagi belum lupa, catat di kalender."
+              },
+              {
+                "jp": "学生のうちに車の運転免許を取ろうと思っています。",
+                "rd": "がくせいのうちにくるまのうんてんめんきょをとろうとおもっています。",
+                "id": "Aku berniat mengambil SIM mobil selagi masih berstatus pelajar."
+              },
+              {
+                "jp": "インターネットで調べているうちに、いろいろなことがわかってきた。",
+                "rd": "インターネットでしらべているうちに、いろいろなことがわかってきた。",
+                "id": "Sambil mencari di internet, aku jadi paham banyak hal."
+              },
+              {
+                "jp": "知らないうちに、雨が降り始めていた。",
+                "rd": "しらないうちに、あめがふりはじめていた。",
+                "id": "Tanpa kusadari, hujan sudah mulai turun."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk kamus + ばかりだ / 一方だ",
+            "arti": "terus ~ (perubahan ke satu arah)",
+            "explain": "Pola ini menyatakan perubahan yang terus berjalan ke satu arah. Kata kerja yang dipakai harus yang menyatakan perubahan seperti 増える (bertambah) atau 悪くなる (memburuk). Bedanya: ばかりだ sering dipakai untuk perubahan ke arah yang buruk, sedangkan 一方だ netral — hanya menyatakan 'terus ke satu arah'. Keduanya memberi kesan perubahan yang tidak berhenti.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + ばかりだ",
+                "v": "terus ~ (cenderung ke arah buruk)"
+              },
+              {
+                "k": "kata kerja bentuk kamus + 一方だ",
+                "v": "terus ~ (ke satu arah)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "このごろは仕事が多くて残業が増えるばかりだ。",
+                "rd": "このごろはしごとがおおくてざんぎょうがふえるばかりだ。",
+                "id": "Akhir-akhir ini pekerjaanku banyak dan lemburku terus bertambah."
+              },
+              {
+                "jp": "東京の交通機関は複雑になるばかりで、わたしはよくわからなくなってきた。",
+                "rd": "とうきょうのこうつうきかんはふくざつになるばかりで、わたしはよくわからなくなってきた。",
+                "id": "Transportasi di Tokyo makin lama makin rumit, aku jadi makin tidak paham."
+              },
+              {
+                "jp": "一度問題が起きてから、彼との人間関係は悪くなる一方だ。",
+                "rd": "いちどもんだいがおきてから、かれとのにんげんかんけいはわるくなるいっぽうだ。",
+                "id": "Sejak ada masalah sekali, hubunganku dengannya terus memburuk."
+              },
+              {
+                "jp": "牛や豚の病気が広がる一方なので、国中の人が心配している。",
+                "rd": "うしやぶたのびょうきがひろがるいっぽうなので、くにじゅうのひとがしんぱいしている。",
+                "id": "Penyakit sapi dan babi terus menyebar, sehingga orang di seluruh negeri khawatir."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk niat + としている",
+            "arti": "akan segera ~ (formal)",
+            "explain": "Artinya 'akan segera ~', versi formal dari もうすぐ〜する. Dipakai untuk hal seketika seperti 始まる (mulai) atau 幕が開く (tirai dibuka). Karena formal, sering muncul di berita atau pengumuman. Berbeda dengan 〜つつある yang menyatakan perubahan sedang berlangsung, pola ini menyatakan sesaat sebelum perubahan terjadi.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk niat + としている",
+                "v": "akan segera ~"
+              },
+              {
+                "k": "始まろうとしている",
+                "v": "akan segera dimulai"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "さあ、決勝戦が今、始まろうとしています。みんな緊張しています。",
+                "rd": "さあ、けっしょうせんがいま、はじまろうとしています。みんなきんちょうしています。",
+                "id": "Nah, pertandingan final akan segera dimulai. Semua tegang."
+              },
+              {
+                "jp": "駅前に30階建ての高級マンションが完成しようとしている。",
+                "rd": "えきまえにさんじゅっかいだてのこうきゅうマンションがかんせいしようとしている。",
+                "id": "Apartemen mewah 30 lantai di depan stasiun akan segera selesai."
+              },
+              {
+                "jp": "桜が満開になろうとしているとき、雪が降った。",
+                "rd": "さくらがまんかいになろうとしているとき、ゆきがふった。",
+                "id": "Saat bunga sakura hampir mekar penuh, salju turun."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk masu (tanpa ます) + つつある",
+            "arti": "sedang ~ (perubahan berlangsung, formal)",
+            "explain": "Artinya 'sedang ~', versi formal dari 〜ている untuk menyatakan perubahan yang sedang berlangsung. Kata kerja yang dipakai harus yang menyatakan perubahan seperti 暖かくなる (menjadi hangat) atau 広がる (meluas). Sering muncul di berita atau tulisan formal. Berbeda dengan 〜（よ）うとしている yang berarti 'akan segera', pola ini berarti perubahannya sudah mulai dan masih berjalan.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk masu + つつある",
+                "v": "sedang ~ (perubahan berlangsung)"
+              },
+              {
+                "k": "暖かくなりつつある",
+                "v": "sedang menjadi hangat"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "次第に暖かくなりつつあります。春はもうすぐです。",
+                "rd": "しだいにあたたかくなりつつあります。はるはもうすぐです。",
+                "id": "Cuaca berangsur menghangat. Musim semi sudah dekat."
+              },
+              {
+                "jp": "この会社は現在発展しつつあり、将来が期待される。",
+                "rd": "このかいしゃはげんざいはってんしつつあり、しょうらいがきたいされる。",
+                "id": "Perusahaan ini sedang berkembang dan masa depannya diharapkan."
+              },
+              {
+                "jp": "明治時代の初め、日本は急速に近代化しつつあった。",
+                "rd": "めいじじだいのはじめ、にほんはきゅうそくにきんだいかしつつあった。",
+                "id": "Pada awal zaman Meiji, Jepang sedang mengalami modernisasi dengan pesat."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk masu (tanpa ます) + つつ",
+            "arti": "sambil ~ (formal)",
+            "explain": "Artinya sama dengan 〜ながら ('sambil'), tapi versi formalnya. Kata kerja yang dipakai harus yang menyatakan tindakan dengan rentang waktu seperti 考える (berpikir). Syarat penting: subjek kalimat depan dan belakang harus sama — tidak boleh 'aku berpikir sambil dia makan'. Sering muncul di tulisan atau pidato formal.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk masu + つつ",
+                "v": "sambil ~ (formal)"
+              },
+              {
+                "k": "= 〜ながら",
+                "v": "versi kasualnya"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "この空き地をどうするかについては、住民と話し合いつつ、計画を立てていきたい。",
+                "rd": "このあきちをどうするかについては、じゅうみんとはなしあいつつ、けいかくをたてていきたい。",
+                "id": "Soal lahan kosong ini akan bagaimana, aku ingin menyusun rencana sambil berdiskusi dengan warga."
+              },
+              {
+                "jp": "将来の仕事のこと、お金のことなどを考えつつ、進路を選ばなければならない。",
+                "rd": "しょうらいのしごとのこと、おかねのことなどをかんがえつつ、しんろをえらばなければならない。",
+                "id": "Aku harus memilih jalan hidup sambil memikirkan pekerjaan masa depan dan soal uang."
+              },
+              {
+                "jp": "いろいろな体験を楽しみつつ、日本の生活に慣れていった。",
+                "rd": "いろいろなたいけんをたのしみつつ、にほんのせいかつになれていった。",
+                "id": "Aku berangsur terbiasa dengan kehidupan di Jepang sambil menikmati berbagai pengalaman."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 2",
+        "items": [
+          {
+            "ch": "最",
+            "kun": "もっと（も）",
+            "on": "サイ",
+            "id": "paling",
+            "note": "最近（さいきん）= akhir-akhir ini"
+          },
+          {
+            "ch": "途",
+            "kun": "—",
+            "on": "ト",
+            "id": "tengah jalan",
+            "note": "途中（とちゅう）= di tengah jalan"
+          },
+          {
+            "ch": "頻",
+            "kun": "しき（りに）",
+            "on": "ヒン",
+            "id": "sering",
+            "note": "頻繁（ひんぱん）= sering"
+          },
+          {
+            "ch": "増",
+            "kun": "ふ（える）/ま（す）",
+            "on": "ゾウ",
+            "id": "bertambah",
+            "note": "増加（ぞうか）= peningkatan"
+          },
+          {
+            "ch": "刻",
+            "kun": "きざ（む）",
+            "on": "コク",
+            "id": "mengukir; waktu",
+            "note": "時刻（じこく）= waktu"
+          },
+          {
+            "ch": "変",
+            "kun": "か（わる）/か（える）",
+            "on": "ヘン",
+            "id": "berubah",
+            "note": "変化（へんか）= perubahan"
+          },
+          {
+            "ch": "展",
+            "kun": "—",
+            "on": "テン",
+            "id": "mengembangkan",
+            "note": "発展（はってん）= perkembangan"
+          },
+          {
+            "ch": "続",
+            "kun": "つづ（く）/つづ（ける）",
+            "on": "ゾク",
+            "id": "berlanjut",
+            "note": "継続（けいぞく）= kelanjutan"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "うちの会社、最近発展しつつあるよね。注文が増える一方だよ。",
+            "id": "Perusahaan kita sedang berkembang ya akhir-akhir ini. Pesanan terus bertambah."
+          },
+          {
+            "sp": "B",
+            "jp": "ほんとだね。忙しくなるばかりで、残業が増える一方だよ。",
+            "id": "Iya banget. Makin sibuk terus, lembur juga terus bertambah."
+          },
+          {
+            "sp": "A",
+            "jp": "でも、将来のことを考えつつ働けば、きっと道が開けるよ。",
+            "id": "Tapi kalau bekerja sambil memikirkan masa depan, pasti ada jalan."
+          },
+          {
+            "sp": "B",
+            "jp": "そうだね。忘れないうちに、今日の議事録をまとめておこう。",
+            "id": "Iya ya. Selagi belum lupa, aku rangkum notulen rapat hari ini."
+          },
+          {
+            "sp": "A",
+            "jp": "あ、部長が会議を始めようとしているよ。急ごう。",
+            "id": "Eh, manajer akan segera memulai rapat. Cepetan."
+          },
+          {
+            "sp": "B",
+            "jp": "うん。知らないうちに、もうこんな時間だね。",
+            "id": "Iya. Tanpa sadar sudah jam segini ya."
+          },
+          {
+            "sp": "A",
+            "jp": "さあ、会議の最中はスマホの電源を切っておこう。",
+            "id": "Nah, selama rapat matikan HP ya."
+          },
+          {
+            "sp": "B",
+            "jp": "了解。話し合いつつ、いい案を出そう。",
+            "id": "Siap. Sambil berdiskusi, kita keluarkan ide bagus."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "スピーチの___、マイクの調子が悪くなった。",
+        "o": [
+          "うちに",
+          "最中に",
+          "次第に",
+          "一方で"
+        ],
+        "a": 1,
+        "explain": "スピーチの最中に = tepat di tengah pidato, lalu terjadi gangguan tak terduga."
+      },
+      {
+        "q": "若い___、いろいろなことに挑戦しよう。",
+        "o": [
+          "うちに",
+          "最中に",
+          "ばかりに",
+          "つつある"
+        ],
+        "a": 0,
+        "explain": "若いうちに = selagi masih muda; arti A うちに, setelahnya tindakan yang disengaja."
+      },
+      {
+        "q": "パソコンを使っている___、操作方法が分かってきた。",
+        "o": [
+          "最中に",
+          "ばかりだ",
+          "うちに",
+          "次第"
+        ],
+        "a": 2,
+        "explain": "使っているうちに = arti B うちに; sambil melakukan, muncul perubahan tanpa disengaja."
+      },
+      {
+        "q": "借金が増える___で、生活が苦しくなってきた。",
+        "o": [
+          "ばかり",
+          "一方",
+          "最中",
+          "うち"
+        ],
+        "a": 0,
+        "explain": "増えるばかりで = terus bertambah ke arah buruk lalu berlanjut ke kalimat negatif."
+      },
+      {
+        "q": "技術は進歩する___だ。",
+        "o": [
+          "ばかり",
+          "最中",
+          "うち",
+          "一方"
+        ],
+        "a": 3,
+        "explain": "進歩する一方だ = terus ke satu arah (netral); ばかりだ cenderung untuk arah yang buruk."
+      },
+      {
+        "q": "コンサートが今まさに始まろう___。",
+        "o": [
+          "としています",
+          "つつあります",
+          "ばかりです",
+          "ながらです"
+        ],
+        "a": 0,
+        "explain": "始まろうとしています = akan segera dimulai (formal); つつあります berarti perubahan sedang berlangsung."
+      },
+      {
+        "q": "秋が深まり、朝晩冷え込むようになり___。",
+        "o": [
+          "としています",
+          "つつあります",
+          "ばかりです",
+          "ながらです"
+        ],
+        "a": 1,
+        "explain": "なりつつあります = perubahan sudah mulai dan masih berjalan; ようとしています berarti 'akan segera'."
+      },
+      {
+        "q": "住民の皆様と話し合い___、計画を進めてまいります。",
+        "o": [
+          "ながら",
+          "ばかり",
+          "つつ",
+          "うち"
+        ],
+        "a": 2,
+        "explain": "話し合いつつ = 'sambil' versi formal untuk kalimat resmi; ながら terlalu kasual di sini."
+      },
+      {
+        "q": "暗くならない___、家に帰ろう。",
+        "o": [
+          "うちに",
+          "最中に",
+          "ばかりに",
+          "次第に"
+        ],
+        "a": 0,
+        "explain": "暗くならないうちに = selagi belum gelap; arti A うちに diikuti ajakan."
+      },
+      {
+        "q": "経済のグローバル化が進み___、世界は狭くなっている。",
+        "o": [
+          "ようとしており",
+          "ばかりであり",
+          "ながらであり",
+          "つつあり"
+        ],
+        "a": 3,
+        "explain": "進みつつあり = perubahan sedang berlangsung (formal); ようとしており berarti 'akan segera'."
+      }
+    ]
+  },
+  {
+    "id": "n2-3",
+    "bab": 3,
+    "level": "n2",
+    "title": "Setelah Melakukan",
+    "desc": "Pola akibat, syarat, dan urutan setelah melakukan sesuatu.",
+    "icon": "➡️",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Setelah Melakukan",
+        "body": "<p>Bab ini berisi pola-pola <b>'setelah'<\/b> — tapi jangan samakan semuanya dengan 〜てから. Setiap pola di sini punya <b>syarat ketat<\/b> untuk kalimat sesudahnya, dan di situlah soal N2 menjebak. Hafalkan pasangannya: pola apa, sesudahnya harus kalimat seperti apa.<\/p><p><b>てはじめて<\/b> dipakai untuk <b>titik balik pengalaman<\/b>: setelah mengalami sesuatu, barulah terjadi hal yang belum pernah terjadi — biasanya 'baru sadar' atau 'baru tahu'. Sedangkan <b>た上で<\/b> berarti 'setelah melakukan sesuatu <b>sebagai persiapan<\/b>, lalu bertindak' — subjek depan dan belakang harus sama, dan kalimat belakangnya tindakan yang disengaja.<\/p><p><b>次第<\/b> adalah versi formal dari 'begitu ~, langsung' untuk hal yang sudah pasti terjadi begitu waktunya tiba; setelahnya harus <b>niat atau harapan pembicara<\/b>, seperti menghubungi atau menunggu. Sedangkan <b>て以来<\/b> berarti 'sejak saat itu <b>terus sampai sekarang<\/b>' — hanya untuk titik waktu yang tidak terlalu dekat, dan <b>てこのかた<\/b> adalah versi yang lebih formal dan puitis.<\/p><p><b>てからでないと<\/b> menyatakan <b>syarat mutlak<\/b>: kalau belum menyelesaikan A, maka B tidak bisa terjadi — setelahnya <b>wajib kalimat negatif<\/b>. Jebakan umum: jangan pakai <b>以来<\/b> untuk 'sejak kemarin' (terlalu dekat); jangan bedakan subjek di <b>た上で<\/b>; dan jangan taruh kalimat ajakan setelah <b>次第<\/b> yang bukan niat pembicara.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Setelah Melakukan",
+        "items": [
+          {
+            "jp": "以来",
+            "kj": "以来",
+            "r": "irai",
+            "id": "sejak",
+            "note": "あの時以来 = sejak saat itu"
+          },
+          {
+            "jp": "以降",
+            "kj": "以降",
+            "r": "ikou",
+            "id": "sejak (formal)",
+            "note": "それ以降 = sejak itu"
+          },
+          {
+            "jp": "以後",
+            "kj": "以後",
+            "r": "igo",
+            "id": "setelah itu",
+            "note": "今後（こんご）= mulai sekarang"
+          },
+          {
+            "jp": "以前",
+            "kj": "以前",
+            "r": "izen",
+            "id": "sebelumnya",
+            "note": "以前から = sejak dulu"
+          },
+          {
+            "jp": "次第",
+            "kj": "次第",
+            "r": "shidai",
+            "id": "begitu; tergantung",
+            "note": "わかり次第 = begitu jelas"
+          },
+          {
+            "jp": "初めて",
+            "kj": "初めて",
+            "r": "hajimete",
+            "id": "pertama kali",
+            "note": "初めて知った = baru tahu pertama kali"
+          },
+          {
+            "jp": "予め",
+            "kj": "予め",
+            "r": "arakajime",
+            "id": "sebelumnya",
+            "note": "予め連絡する = menghubungi sebelumnya"
+          },
+          {
+            "jp": "確かめる",
+            "kj": "確かめる",
+            "r": "tashikameru",
+            "id": "memastikan",
+            "note": "安全を確かめる = memastikan keamanan"
+          },
+          {
+            "jp": "判断",
+            "kj": "判断",
+            "r": "handan",
+            "id": "penilaian",
+            "note": "判断を下す = mengambil keputusan"
+          },
+          {
+            "jp": "準備",
+            "kj": "準備",
+            "r": "junbi",
+            "id": "persiapan",
+            "note": "準備ができる = persiapan selesai"
+          },
+          {
+            "jp": "完了",
+            "kj": "完了",
+            "r": "kanryou",
+            "id": "selesai",
+            "note": "作業の完了 = selesainya pekerjaan"
+          },
+          {
+            "jp": "終了",
+            "kj": "終了",
+            "r": "shuuryou",
+            "id": "berakhir",
+            "note": "会議の終了 = berakhirnya rapat"
+          },
+          {
+            "jp": "締め切り",
+            "kj": "締め切り",
+            "r": "shimekiri",
+            "id": "batas akhir",
+            "note": "締め切りに間に合う = keburu batas akhir"
+          },
+          {
+            "jp": "連絡",
+            "kj": "連絡",
+            "r": "renraku",
+            "id": "menghubungi",
+            "note": "連絡を取る = menghubungi"
+          },
+          {
+            "jp": "決意",
+            "kj": "決意",
+            "r": "ketsui",
+            "id": "tekad",
+            "note": "決意を固める = memantapkan tekad"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Setelah Melakukan",
+        "items": [
+          {
+            "pattern": "kata kerja bentuk te + はじめて",
+            "arti": "setelah ~, barulah ...",
+            "explain": "Pola ini dipakai saat setelah mengalami sesuatu atau mencapai suatu kondisi, barulah terjadi hal yang belum pernah terjadi sebelumnya. Setelah pola ini harus muncul kalimat bermakna 'hal baru terjadi / sadar / terwujud' — misalnya 気がついた (baru sadar) atau わかった (baru tahu). Nuansanya: pengalaman itu menjadi titik balik.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk te + はじめて",
+                "v": "setelah ~, barulah ..."
+              },
+              {
+                "k": "見てはじめて",
+                "v": "setelah melihat, barulah ~"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "実際に現地の様子を見てはじめて、今回の地震のひどさを知った。",
+                "rd": "じっさいにげんちのようすをみてはじめて、こんかいのじしんのひどさをしった。",
+                "id": "Setelah melihat sendiri kondisi di lokasi, barulah aku tahu betapa parahnya gempa kali ini."
+              },
+              {
+                "jp": "相手の話の途中で話を始めるくせがあると、人に言われてはじめて気がついた。",
+                "rd": "あいてのはなしのとちゅうではなしをはじめるくせがあると、ひとにいわれてはじめてきがついた。",
+                "id": "Baru kusadari setelah diberi tahu orang bahwa aku punya kebiasaan memotong pembicaraan lawan bicara."
+              },
+              {
+                "jp": "山田先生の指導を受けてはじめて、生物の観察が面白いと思うようになった。",
+                "rd": "やまだせんせいのしどうをうけてはじめて、せいぶつのかんさつがおもしろいとおもうようになった。",
+                "id": "Setelah mendapat bimbingan dari Yamada-sensei, barulah aku merasa mengamati makhluk hidup itu menarik."
+              },
+              {
+                "jp": "チャンスがあってはじめて、才能が生きてくるのではないだろうか。",
+                "rd": "チャンスがあってはじめて、さいのうがいきてくるのではないだろうか。",
+                "id": "Bukankah bakat baru akan bersinar setelah ada kesempatan?"
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk lampau + 上で / kata benda + の上（で）",
+            "arti": "setelah ~ (sebagai persiapan), lalu ...",
+            "explain": "Pola ini berarti 'setelah melakukan ~ (sebagai persiapan), lalu melakukan tindakan berikutnya'. Subjek kalimat depan dan belakang harus sama, dan kalimat belakangnya harus tindakan yang disengaja sebagai kelanjutan dari hasil tindakan pertama. Berbeda dengan 〜てから yang untuk urutan yang sudah wajar, pola ini dipakai saat ada jeda pertimbangan di antaranya. Untuk kata benda, bentuk 〜上 (tanpa で) terdengar lebih formal.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk lampau + 上で",
+                "v": "setelah ~, lalu ... (sebagai persiapan)"
+              },
+              {
+                "k": "kata benda + の上（で）",
+                "v": "setelah ~ (lebih formal: 〜上)"
+              },
+              {
+                "k": "確かめた上で",
+                "v": "setelah memastikan"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "文書が保存されていることを確かめた上で、パソコンをシャットダウンしてください。",
+                "rd": "ぶんしょがほぞんされていることをたしかめたうえで、パソコンをシャットダウンしてください。",
+                "id": "Setelah memastikan dokumen tersimpan, matikan komputer."
+              },
+              {
+                "jp": "経済的なことをよく考えた上で、進路を決める必要がある。",
+                "rd": "けいざいてきなことをよくかんがえたうえで、しんろをきめるひつようがある。",
+                "id": "Perlu memutuskan jalan hidup setelah memikirkan soal keuangan baik-baik."
+              },
+              {
+                "jp": "自分一人では決められませんので、家族と相談した上で、お返事をいたします。",
+                "rd": "じぶんひとりではきめられませんので、かぞくとそうだんしたうえで、おへんじをいたします。",
+                "id": "Saya tidak bisa memutuskan sendiri, jadi akan membalas setelah berdiskusi dengan keluarga."
+              },
+              {
+                "jp": "この列車には特急券が必要です。あらかじめ特急券をお買い求めの上、ご乗車ください。",
+                "rd": "このれっしゃにはとっきゅうけんがひつようです。あらかじめとっきゅうけんをおかいもとめのうえ、ごじょうしゃください。",
+                "id": "Kereta ini memerlukan karcis ekspres. Silakan naik setelah membeli karcis ekspres terlebih dahulu."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk masu (tanpa ます) + 次第",
+            "arti": "begitu ~, langsung ...",
+            "explain": "Artinya 'begitu ~, langsung ...', versi formal. Dipakai untuk hal yang sudah pasti akan terjadi begitu waktunya tiba — misalnya 定員になる (kuota terpenuhi) atau 準備ができる (persiapan selesai). Setelah pola ini harus muncul kalimat harapan/niat pembicara atau ajakan, seperti ご連絡いたします atau お待ちください. Nuansanya resmi, sering muncul di pengumuman.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk masu + 次第",
+                "v": "begitu ~, langsung ..."
+              },
+              {
+                "k": "わかり次第",
+                "v": "begitu jelas, langsung ~"
+              },
+              {
+                "k": "でき次第",
+                "v": "begitu selesai, langsung ~"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "詳しいことがわかり次第、ご連絡いたします。",
+                "rd": "くわしいことがわかりしだい、ごれんらくいたします。",
+                "id": "Begitu ada info detail, akan segera saya hubungi."
+              },
+              {
+                "jp": "定員になり次第、締め切らせていただきます。",
+                "rd": "ていいんになりしだい、しめきらせていただきます。",
+                "id": "Begitu kuota terpenuhi, pendaftaran akan segera ditutup."
+              },
+              {
+                "jp": "会場の準備ができ次第、ご案内いたします。もうしばらくお待ちください。",
+                "rd": "かいじょうのじゅんびができしだい、ごあんないいたします。もうしばらくおまちください。",
+                "id": "Begitu persiapan venue selesai, akan segera kami pandu. Mohon tunggu sebentar lagi."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk te + 以来 / このかた",
+            "arti": "sejak ~, terus sampai sekarang",
+            "explain": "Artinya 'sejak ~, keadaannya terus berlanjut sampai sekarang'. Dipakai untuk titik waktu di masa lalu yang tidak terlalu dekat — tidak wajar untuk 'sejak kemarin'. Setelah pola ini harus muncul kalimat bermakna 'terus sampai sekarang', dan tidak boleh kalimat tentang masa depan. 〜てこのかた lebih formal dan puitis daripada 〜て以来.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk te + 以来",
+                "v": "sejak ~, terus sampai sekarang"
+              },
+              {
+                "k": "kata kerja bentuk te + このかた",
+                "v": "sejak ~ (lebih formal/puitis)"
+              },
+              {
+                "k": "× 昨日会って以来",
+                "v": "tidak wajar — terlalu dekat"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "1年前にけがをして以来、体の調子がどうも良くない。",
+                "rd": "いちねんまえにけがをしていらい、からだのちょうしがどうもよくない。",
+                "id": "Sejak cedera setahun lalu, kondisi badanku tidak begitu baik."
+              },
+              {
+                "jp": "あの山の写真を見て以来、いつかは登ってみたいとずっと思い続けてきた。",
+                "rd": "あのやまのしゃしんをみていらい、いつかはのぼってみたいとずっとおもいつづけてきた。",
+                "id": "Sejak melihat foto gunung itu, aku terus berpikir ingin mendakinya suatu hari."
+              },
+              {
+                "jp": "子供が生まれて以来、外で酒を飲んでいない。",
+                "rd": "こどもがうまれていらい、そとでさけをのんでいない。",
+                "id": "Sejak anak lahir, aku tidak minum di luar."
+              },
+              {
+                "jp": "日本から帰国してこのかた、毎日日本のことを思い出している。",
+                "rd": "にほんからきこくしてこのかた、まいにちにほんのことをおもいだしている。",
+                "id": "Sejak pulang dari Jepang, aku teringat Jepang setiap hari."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk te + からでないと / からでなければ",
+            "arti": "kalau belum ~, tidak bisa ...",
+            "explain": "Artinya 'kalau belum ~, maka tidak bisa ...' — menyatakan syarat mutlak. Setelah pola ini harus muncul kalimat bermakna negatif (tidak bisa, tidak tahu, mustahil). Mirip dengan 〜ないと, tapi pola ini menekankan urutan: harus menyelesaikan A dulu, baru B bisa terjadi.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk te + からでないと",
+                "v": "kalau belum ~, tidak bisa ..."
+              },
+              {
+                "k": "kata kerja bentuk te + からでなければ",
+                "v": "kalau belum ~, maka tidak ..."
+              },
+              {
+                "k": "後には否定的な文",
+                "v": "setelahnya harus kalimat negatif"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "この果物は赤くなってからでないと、酸っぱくて食べられません。",
+                "rd": "このくだものはあかくなってからでないと、すっぱくてたべられません。",
+                "id": "Buah ini tidak bisa dimakan kalau belum merah — rasanya asam."
+              },
+              {
+                "jp": "もっと情報を集めてからでないと、その話が本当かどうか判断できない。",
+                "rd": "もっとじょうほうをあつめてからでないと、そのはなしがほんとうかどうかはんだんできない。",
+                "id": "Aku tidak bisa menilai benar tidaknya cerita itu kalau belum mengumpulkan lebih banyak informasi."
+              },
+              {
+                "jp": "この電車は車内の清掃が済んでからでないと、ご乗車になれません。",
+                "rd": "このでんしゃはしゃないのせいそうがすんでからでないと、ごじょうしゃになれません。",
+                "id": "Kereta ini tidak bisa dinaiki sebelum pembersihan gerbong selesai."
+              },
+              {
+                "jp": "退院したばかりなんですから、十分に体力がついてからでなければ、運動は無理ですよ。",
+                "rd": "たいいんしたばかりなんですから、じゅうぶんにたいりょくがついてからでなければ、うんどうはむりですよ。",
+                "id": "Kamu baru keluar dari rumah sakit, jadi olahraga mustahil kalau tenagamu belum pulih dengan cukup."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 3",
+        "items": [
+          {
+            "ch": "初",
+            "kun": "はじ（め）/はつ",
+            "on": "ショ",
+            "id": "pertama",
+            "note": "初めて（はじめて）= pertama kali"
+          },
+          {
+            "ch": "以",
+            "kun": "もっ（て）",
+            "on": "イ",
+            "id": "dengan; sejak",
+            "note": "以来（いらい）= sejak"
+          },
+          {
+            "ch": "来",
+            "kun": "く（る）/き（ます）",
+            "on": "ライ",
+            "id": "datang",
+            "note": "由来（ゆらい）= asal-usul"
+          },
+          {
+            "ch": "次",
+            "kun": "つ（ぐ）/つぎ",
+            "on": "ジ",
+            "id": "berikutnya",
+            "note": "次第（しだい）= begitu; tergantung"
+          },
+          {
+            "ch": "第",
+            "kun": "—",
+            "on": "ダイ",
+            "id": "nomor urut",
+            "note": "第一（だいいち）= pertama"
+          },
+          {
+            "ch": "確",
+            "kun": "たし（か）",
+            "on": "カク",
+            "id": "pasti",
+            "note": "確認（かくにん）= konfirmasi"
+          },
+          {
+            "ch": "判",
+            "kun": "—",
+            "on": "ハン",
+            "id": "menilai",
+            "note": "判断（はんだん）= penilaian"
+          },
+          {
+            "ch": "完",
+            "kun": "—",
+            "on": "カン",
+            "id": "sempurna",
+            "note": "完成（かんせい）= selesai"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "資料の準備ができ次第、すぐにお知らせしますね。",
+            "id": "Begitu persiapan dokumen selesai, akan segera saya kabari."
+          },
+          {
+            "sp": "B",
+            "jp": "ありがとう。じゃあ、内容を確かめた上で、部長に報告しよう。",
+            "id": "Makasih. Kalau begitu, setelah memastikan isinya, lapor ke manajer."
+          },
+          {
+            "sp": "A",
+            "jp": "うん。実際に現場を見てはじめて、問題の大きさが分かったよ。",
+            "id": "Iya. Setelah melihat langsung ke lokasi, barulah aku paham besarnya masalah."
+          },
+          {
+            "sp": "B",
+            "jp": "そうなんだ。あの事故があって以来、安全管理が厳しくなったからね。",
+            "id": "Begitu ya. Sejak kecelakaan itu, pengelolaan keamanan jadi ketat."
+          },
+          {
+            "sp": "A",
+            "jp": "許可が下りてからでないと、工事は始められませんよ。",
+            "id": "Kalau izin belum turun, pembangunan tidak bisa dimulai."
+          },
+          {
+            "sp": "B",
+            "jp": "分かってる。じゃあ、まず申請書を出してこよう。",
+            "id": "Paham. Kalau begitu, aku ajukan dulu surat permohonannya."
+          },
+          {
+            "sp": "A",
+            "jp": "うん、よろしく。終わったら連絡してね。",
+            "id": "Iya, tolong ya. Kalau sudah selesai hubungi aku."
+          },
+          {
+            "sp": "B",
+            "jp": "任せて。準備が整い次第、連絡するよ。",
+            "id": "Serahkan padaku. Begitu persiapan beres, aku hubungi."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "現地を見て___、被害の大きさが分かった。",
+        "o": [
+          "上で",
+          "次第",
+          "はじめて",
+          "以来"
+        ],
+        "a": 2,
+        "explain": "見てはじめて = setelah melihat, barulah sadar; pola titik balik pengalaman."
+      },
+      {
+        "q": "内容をよく確かめた___、返事をします。",
+        "o": [
+          "上で",
+          "はじめて",
+          "次第",
+          "以来"
+        ],
+        "a": 0,
+        "explain": "確かめた上で = setelah memastikan sebagai persiapan, lalu bertindak; subjek sama."
+      },
+      {
+        "q": "準備ができ___、ご案内いたします。",
+        "o": [
+          "上で",
+          "はじめて",
+          "次第",
+          "以来"
+        ],
+        "a": 2,
+        "explain": "でき次第 = begitu selesai, langsung; pola formal diikuti niat pembicara."
+      },
+      {
+        "q": "子供が生まれて___、生活が変わった。",
+        "o": [
+          "はじめて",
+          "上で",
+          "次第",
+          "以来"
+        ],
+        "a": 3,
+        "explain": "生まれて以来 = sejak saat itu keadaannya terus sampai sekarang."
+      },
+      {
+        "q": "許可が下りて___、入場できません。",
+        "o": [
+          "からでないと",
+          "はじめて",
+          "上で",
+          "以来"
+        ],
+        "a": 0,
+        "explain": "下りてからでないと = kalau belum turun, tidak bisa; syarat mutlak + kalimat negatif."
+      },
+      {
+        "q": "日本に来て___、毎日日本語を勉強している。",
+        "o": [
+          "はじめて",
+          "上で",
+          "このかた",
+          "次第"
+        ],
+        "a": 2,
+        "explain": "来てこのかた = sejak datang, terus sampai sekarang; versi formal/puitis dari 以来."
+      },
+      {
+        "q": "説明を聞いて___、やっと納得した。",
+        "o": [
+          "次第",
+          "はじめて",
+          "以来",
+          "上で"
+        ],
+        "a": 1,
+        "explain": "聞いてはじめて = setelah mendengar, barulah mengerti; hal baru yang belum pernah terjadi."
+      },
+      {
+        "q": "定員になり___、受付を終了します。",
+        "o": [
+          "次第",
+          "はじめて",
+          "上で",
+          "以来"
+        ],
+        "a": 0,
+        "explain": "になり次第 = begitu kuota terpenuhi, langsung; ungkapan pengumuman resmi."
+      },
+      {
+        "q": "よく考えた___、決断する必要がある。",
+        "o": [
+          "はじめて",
+          "以来",
+          "次第",
+          "上で"
+        ],
+        "a": 3,
+        "explain": "考えた上で = setelah mempertimbangkan sebagai persiapan; subjek depan-belakang sama."
+      },
+      {
+        "q": "十分に休んで___、無理は禁物ですよ。",
+        "o": [
+          "はじめて",
+          "からでなければ",
+          "上で",
+          "以来"
+        ],
+        "a": 1,
+        "explain": "休んでからでなければ = kalau belum cukup istirahat, maka tidak boleh; sesudahnya kalimat negatif."
+      }
+    ]
+  },
+  {
+    "id": "n2-4",
+    "bab": 4,
+    "level": "n2",
+    "title": "Rentang & Batasan",
+    "desc": "Menyatakan awal-akhir rentang dan batasan cakupan.",
+    "icon": "📏",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Rentang & Batasan",
+        "body": "<p>Bab ini berisi pola-pola untuk menyatakan <b>rentang, cakupan, dan batasan<\/b> — dari 'mulai dari X dan kawan-kawannya' sampai 'sebanyak-banyaknya'. Semuanya bernada formal dan sering muncul di artikel, brosur, dan berita. Kuncinya: perhatikan <b>seberapa luas cakupan<\/b> yang dimaksud setiap pola.<\/p><p><b>をはじめ（として）<\/b> mengangkat satu contoh yang <b>paling mewakili<\/b> dari banyak hal, lalu setelahnya harus muncul kata yang mencakup contoh itu plus yang lain. Sedangkan <b>からして<\/b> justru sebaliknya: mengambil satu <b>detail kecil<\/b> untuk menyimpulkan keseluruhan — 'lihat saja X-nya sudah begitu' — dan sering dipakai untuk penilaian negatif.<\/p><p><b>にわたって<\/b> menyatakan keadaan yang mencakup <b>seluruh rentang yang luas<\/b> — tempat, waktu, atau jumlah. <b>を通じて・を通して<\/b> punya dua arti: arti A 'selama' untuk periode yang panjang, dan arti B 'melalui' untuk <b>perantara yang tidak langsung<\/b> seperti internet atau kegiatan sukarela — bukan alat yang konkret.<\/p><p><b>の限り<\/b> berarti 'sebatas' kemampuan atau pengetahuan — seperti <b>できる限り<\/b>. Sedangkan <b>だけ<\/b> berarti 'sebanyak-banyaknya sampai batas maksimal', dan kata kerja yang sama sering diulang di depan-belakang. Jebakan: <b>をはじめ<\/b> wajib diikuti kata cakupan; <b>を通じて<\/b> arti B tidak bisa untuk alat yang dipakai langsung.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Rentang & Batasan",
+        "items": [
+          {
+            "jp": "範囲",
+            "kj": "範囲",
+            "r": "han'i",
+            "id": "cakupan",
+            "note": "範囲が広い = cakupannya luas"
+          },
+          {
+            "jp": "限度",
+            "kj": "限度",
+            "r": "gendo",
+            "id": "batas",
+            "note": "限度を超える = melewati batas"
+          },
+          {
+            "jp": "限り",
+            "kj": "限り",
+            "r": "kagiri",
+            "id": "batas",
+            "note": "できる限り = sebatas kemampuan"
+          },
+          {
+            "jp": "全体",
+            "kj": "全体",
+            "r": "zentai",
+            "id": "keseluruhan",
+            "note": "全体像 = gambaran keseluruhan"
+          },
+          {
+            "jp": "一部",
+            "kj": "一部",
+            "r": "ichibu",
+            "id": "sebagian",
+            "note": "一部例外 = sebagian pengecualian"
+          },
+          {
+            "jp": "代表",
+            "kj": "代表",
+            "r": "daihyou",
+            "id": "perwakilan",
+            "note": "代表として = sebagai perwakilan"
+          },
+          {
+            "jp": "一例",
+            "kj": "一例",
+            "r": "ichirei",
+            "id": "satu contoh",
+            "note": "一例を挙げる = memberi satu contoh"
+          },
+          {
+            "jp": "経由",
+            "kj": "経由",
+            "r": "keiyu",
+            "id": "via",
+            "note": "経由便 = penerbangan transit"
+          },
+          {
+            "jp": "期間",
+            "kj": "期間",
+            "r": "kikan",
+            "id": "periode",
+            "note": "期間限定 = terbatas periodenya"
+          },
+          {
+            "jp": "区域",
+            "kj": "区域",
+            "r": "kuiki",
+            "id": "wilayah",
+            "note": "区域外 = di luar wilayah"
+          },
+          {
+            "jp": "全国",
+            "kj": "全国",
+            "r": "zenkoku",
+            "id": "seluruh negeri",
+            "note": "全国各地 = berbagai daerah di negeri ini"
+          },
+          {
+            "jp": "世界中",
+            "kj": "世界中",
+            "r": "sekaijuu",
+            "id": "seluruh dunia",
+            "note": "世界中に広がる = menyebar ke seluruh dunia"
+          },
+          {
+            "jp": "四季",
+            "kj": "四季",
+            "r": "shiki",
+            "id": "empat musim",
+            "note": "四季折々 = setiap musimnya"
+          },
+          {
+            "jp": "精一杯",
+            "kj": "精一杯",
+            "r": "seiippai",
+            "id": "sekuat tenaga",
+            "note": "精一杯頑張る = berjuang sekuat tenaga"
+          },
+          {
+            "jp": "始め",
+            "kj": "始め",
+            "r": "hajime",
+            "id": "awal; sebagai contoh",
+            "note": "をはじめ = mulai dari (sebagai contoh utama)"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Rentang & Batasan",
+        "items": [
+          {
+            "pattern": "kata benda + をはじめ（として） / をはじめとする + kata benda",
+            "arti": "mulai dari ~ (sebagai contoh utama), dan lain-lain",
+            "explain": "Pola ini dipakai untuk mengangkat satu contoh yang paling mewakili dari banyak hal — misalnya 'renang' sebagai wakil dari 'berbagai olahraga'. Setelahnya harus muncul kata yang mencakup contoh tersebut plus hal-hal lain (seperti いろいろなスポーツ). Bahasa formal, sering muncul di brosur atau artikel.",
+            "tabel": [
+              {
+                "k": "kata benda + をはじめ（として）",
+                "v": "mulai dari ~, dan lain-lain"
+              },
+              {
+                "k": "kata benda + をはじめとする + kata benda",
+                "v": "~ sebagai contoh utamanya"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "この体育館では水泳をはじめ、いろいろなスポーツが楽しめる。",
+                "rd": "このたいいくかんではすいえいをはじめ、いろいろなスポーツがたのしめる。",
+                "id": "Di gelanggang olahraga ini, bisa menikmati berbagai olahraga, mulai dari renang."
+              },
+              {
+                "jp": "日本には「桃太郎」をはじめとして、おじいさん、おばあさんがでてくる昔話が多い。",
+                "rd": "にほんには「ももたろう」をはじめとして、おじいさん、おばあさんがでてくるむかしばなしがおおい。",
+                "id": "Di Jepang banyak dongeng lama yang menampilkan kakek-nenek, dengan Momotaro sebagai contohnya."
+              },
+              {
+                "jp": "このあたりには、市役所をはじめとする市の公共の建物が多い。",
+                "rd": "このあたりには、しやくしょをはじめとするとしのこうきょうのたてものがおおい。",
+                "id": "Di sekitar sini banyak gedung publik kota, termasuk balai kota sebagai contoh utamanya."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + からして",
+            "arti": "lihat saja ~ (sudah begitu), apalagi keseluruhannya",
+            "explain": "Pola ini mengambil satu contoh kecil untuk menyimpulkan keseluruhan: 'lihat saja X-nya sudah begitu, apalagi keseluruhannya'. Contoh yang diambil biasanya bukan inti masalah, tapi cukup untuk menilai. Setelahnya sering muncul penilaian negatif. Mirip logika 'dari ... saja sudah kelihatan'.",
+            "tabel": [
+              {
+                "k": "kata benda + からして",
+                "v": "lihat saja ~, apalagi ~"
+              },
+              {
+                "k": "出発時間からして",
+                "v": "lihat saja jam berangkatnya"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "この旅行の計画には無理がある。出発時間からして早すぎる。",
+                "rd": "このりょこうのけいかくにはむりがある。しゅっぱつじかんからしてはやすぎる。",
+                "id": "Rencana perjalanan ini tidak masuk akal. Lihat saja jam berangkatnya, terlalu pagi."
+              },
+              {
+                "jp": "わたしはどうも猫が苦手だ。あの光る目からして何となく怖い感じがする。",
+                "rd": "わたしはどうもねこがにがてだ。あのひかるめからしてなんとなくこわいかんじがする。",
+                "id": "Aku memang tidak akrab dengan kucing. Lihat saja matanya yang menyala itu, rasanya agak menakutkan."
+              },
+              {
+                "jp": "わたしと夫とは似ているところが少ない。第一、食べ物の好みからして正反対だ。",
+                "rd": "わたしとおっととはにているところがすくない。だいいち、たべもののこのみからしてせいはんたいだ。",
+                "id": "Aku dan suamiku sedikit kesamaannya. Pertama-tama, selera makanan kami saja sudah berlawanan."
+              },
+              {
+                "jp": "さすがプロの選手は走り方からしてわたしたちとは違う。",
+                "rd": "さすがプロのせんしゅははしりかたからしてわたしたちとはちがう。",
+                "id": "Memang atlet profesional, cara larinya saja sudah beda dari kami."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + にわたって / にわたる + kata benda",
+            "arti": "sepanjang / meliputi ~ (rentang luas)",
+            "explain": "Pola ini menyatakan suatu keadaan yang mencakup seluruh rentang yang luas — bisa rentang tempat, waktu, jumlah, atau cakupan. Kata benda yang dipakai harus yang menunjukkan keluasan, seperti 20キロ (20 kilometer) atau 3日間 (3 hari). Memberi kesan skala yang besar dan menyeluruh.",
+            "tabel": [
+              {
+                "k": "kata benda + にわたって",
+                "v": "sepanjang / meliputi ~"
+              },
+              {
+                "k": "kata benda + にわたる + kata benda",
+                "v": "yang meliputi ~"
+              },
+              {
+                "k": "3日間にわたる大会",
+                "v": "konferensi selama 3 hari"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "連休の最終日、高速道路は20キロにわたって渋滞が続いた。",
+                "rd": "れんきゅうのさいしゅうび、こうそくどうろはにじゅっキロにわたってじゅうたいがつづいた。",
+                "id": "Pada hari terakhir libur panjang, kemacetan di jalan tol berlanjut sepanjang 20 kilometer."
+              },
+              {
+                "jp": "彼はいろいろなジャンルにわたり、たくさんの本を読んでいる。",
+                "rd": "かれはいろいろなジャンルにわたり、たくさんのほんをよんでいる。",
+                "id": "Dia membaca banyak buku yang mencakup berbagai genre."
+              },
+              {
+                "jp": "3日間にわたる研究発表大会が、無事終了しました。",
+                "rd": "みっかかんにわたるけんきゅうはっぴょうたいかいが、ぶじしゅうりょうしました。",
+                "id": "Konferensi presentasi penelitian selama tiga hari telah selesai dengan lancar."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + を通じて / を通して",
+            "arti": "A: selama / sepanjang ~ — B: melalui ~",
+            "explain": "Pola ini punya dua arti. Arti A: 'selama ~' — menyatakan keadaan yang berlangsung sepanjang suatu periode yang cukup panjang, seperti 四季 (empat musim). Arti B: 'melalui ~' — menyatakan perantara yang tidak langsung, seperti internet atau kegiatan sukarela. Untuk arti B, perantaranya bukan alat yang konkret-langsung, melainkan sesuatu yang menjadi jembatan.",
+            "tabel": [
+              {
+                "k": "A: kata benda (periode) + を通じて・を通して",
+                "v": "selama / sepanjang ~"
+              },
+              {
+                "k": "B: kata benda (perantara) + を通じて・を通して",
+                "v": "melalui ~"
+              },
+              {
+                "k": "四季を通じて",
+                "v": "sepanjang empat musim"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "この町には四季を通じて観光客が訪れる。",
+                "rd": "このまちにはしきをつうじてかんこうきゃくがおとずれる。",
+                "id": "Kota ini dikunjungi wisatawan sepanjang empat musim."
+              },
+              {
+                "jp": "在職期間を通して皆様には大変お世話になりました。",
+                "rd": "ざいしょくきかんをとおしてみなさまにはたいへんおせわになりました。",
+                "id": "Selama masa kerja saya, saya sangat berterima kasih atas bantuan Bapak/Ibu semua."
+              },
+              {
+                "jp": "今日では、インターネットを通じて世界中の情報が手に入る。",
+                "rd": "きょうでは、インターネットをつうじてせかいじゅうのじょうほうがてにはいる。",
+                "id": "Kini, informasi dari seluruh dunia bisa didapat melalui internet."
+              },
+              {
+                "jp": "わたしたちは、ボランティア活動を通していろいろな国の人たちと交流を深めている。",
+                "rd": "わたしたちは、ボランティアかつどうをとおしていろいろなくにのひとたちとこうりゅうをふかめている。",
+                "id": "Kami mempererat hubungan dengan orang-orang dari berbagai negara melalui kegiatan sukarela."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + の限り / kata kerja bentuk kamus atau ている + 限り",
+            "arti": "se-... (sebatas kemampuan / pengetahuan)",
+            "explain": "Pola ini menyatakan batas maksimal dari kemampuan atau pengetahuan — 'sebatas yang aku bisa/tahu'. Sering menempel pada kata kerja bentuk ている atau kata kerja potensial (bisa). Contoh khas: できる限り (sebatas kemampuan), 知っている限り (sebatas pengetahuan). Nuansanya: mengerahkan seluruh yang dimiliki dalam batas itu.",
+            "tabel": [
+              {
+                "k": "kata benda + の限り",
+                "v": "se-~ (batas)"
+              },
+              {
+                "k": "kata kerja kamus/ている + 限り",
+                "v": "sebatas ~"
+              },
+              {
+                "k": "できる限り",
+                "v": "sebatas kemampuan"
+              },
+              {
+                "k": "知っている限り",
+                "v": "sebatas pengetahuan"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "環境を守るためにわたしもできる限りのことをしたい。",
+                "rd": "かんきょうをまもるためにわたしもできるかぎりのことをしたい。",
+                "id": "Demi melindungi lingkungan, aku ingin melakukan segala hal semampuku."
+              },
+              {
+                "jp": "君が知っている限りのことを全部わたしに話してほしい。",
+                "rd": "きみがしっているかぎりのことをぜんぶわたしにはなしてほしい。",
+                "id": "Ceritakan padaku semua yang kamu tahu, sepengetahuanmu."
+              },
+              {
+                "jp": "あしたはよいよ試合だ。力の限り頑張ろう。",
+                "rd": "あしたはよいよしあいだ。ちからのかぎりがんばろう。",
+                "id": "Besok akhirnya pertandingan. Mari berjuang sekuat tenaga."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk kamus + だけ",
+            "arti": "sebanyak-banyaknya ~ (sampai batas maksimal)",
+            "explain": "Pola ini berarti 'sebanyak-banyaknya ~' atau 'sepuasnya ~' — melakukan sesuatu sampai batas maksimal. Sering menempel pada kata kerja potensial (bisa), dan kata kerja yang sama sering diulang di depan-belakang (積めるだけ積んで = muat sebanyak yang bisa dimuat). Tidak bisa dipakai untuk kata kerja yang menyatakan hal seketika. Selain kata kerja, juga bisa menempel pada 〜たい, 欲しい, 好きな, dan 必要な.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + だけ",
+                "v": "sebanyak-banyaknya ~"
+              },
+              {
+                "k": "積めるだけ積む",
+                "v": "muat sebanyak yang bisa dimuat"
+              },
+              {
+                "k": "好きなだけ",
+                "v": "sebanyak yang disukai"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "ここにあるダンボールを、車に積めるだけ積んで持って帰ってください。",
+                "rd": "ここにあるダンボールを、くるまにつめるだけつんでもってかえってください。",
+                "id": "Tolong bawa pulang kardus-kardus di sini, muat ke mobil sebanyak-banyaknya yang bisa dimuat."
+              },
+              {
+                "jp": "父は働くだけ働いて、定年前に退職してしまった。",
+                "rd": "ちちははたらくだけはたらいて、ていねんまえにたいしょくしてしまった。",
+                "id": "Ayah bekerja sepuas-puasnya lalu pensiun sebelum usia pensiun."
+              },
+              {
+                "jp": "今日は部長に言いたいだけの不満を全部言って、すっきりした。",
+                "rd": "きょうはぶちょうにいいたいだけのふまんをぜんぶいって、すっきりした。",
+                "id": "Hari ini aku menyampaikan semua keluhanku pada manajer sepuasnya, rasanya lega."
+              },
+              {
+                "jp": "バイキング形式の食事ですから、好きなものを好きなだけ取ってお召し上がりください。",
+                "rd": "バイキングけいしきのしょくじですから、すきなものをすきなだけとっておめしあがりください。",
+                "id": "Karena ini prasmanan, silakan ambil makanan kesukaan sebanyak yang Anda mau."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 4",
+        "items": [
+          {
+            "ch": "範",
+            "kun": "—",
+            "on": "ハン",
+            "id": "contoh; batas",
+            "note": "範囲（はんい）= cakupan"
+          },
+          {
+            "ch": "囲",
+            "kun": "かこ（む）",
+            "on": "イ",
+            "id": "mengelilingi",
+            "note": "雰囲気（ふんいき）= suasana"
+          },
+          {
+            "ch": "限",
+            "kun": "かぎ（る）",
+            "on": "ゲン",
+            "id": "batas",
+            "note": "限定（げんてい）= terbatas"
+          },
+          {
+            "ch": "始",
+            "kun": "はじ（める）/はじ（まる）",
+            "on": "シ",
+            "id": "mulai",
+            "note": "開始（かいし）= mulai"
+          },
+          {
+            "ch": "代",
+            "kun": "か（わる）/よ",
+            "on": "ダイ",
+            "id": "menggantikan",
+            "note": "代表（だいひょう）= perwakilan"
+          },
+          {
+            "ch": "経",
+            "kun": "へ（る）",
+            "on": "ケイ",
+            "id": "melewati",
+            "note": "経由（けいゆ）= via"
+          },
+          {
+            "ch": "由",
+            "kun": "よし",
+            "on": "ユウ",
+            "id": "asal",
+            "note": "理由（りゆう）= alasan"
+          },
+          {
+            "ch": "域",
+            "kun": "—",
+            "on": "イキ",
+            "id": "wilayah",
+            "note": "地域（ちいき）= daerah"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "このフェス、水泳をはじめ、いろんなスポーツが体験できるんだって。",
+            "id": "Katanya di festival ini bisa mencoba berbagai olahraga, mulai dari renang."
+          },
+          {
+            "sp": "B",
+            "jp": "へえ、すごいね。3日間にわたるイベントなんだ。",
+            "id": "Wah, keren. Acaranya berlangsung selama tiga hari ya."
+          },
+          {
+            "sp": "A",
+            "jp": "うん。全国各地からはもちろん、海外からも参加者が来るらしいよ。",
+            "id": "Iya. Katanya pesertanya datang dari seluruh negeri, bahkan dari luar negeri."
+          },
+          {
+            "sp": "B",
+            "jp": "参加費はどれくらいなの？",
+            "id": "Biaya ikutnya berapa?"
+          },
+          {
+            "sp": "A",
+            "jp": "できる限りのことは自分で用意して、足りない分は現地で買うつもり。",
+            "id": "Sebisa mungkin aku siapkan sendiri, yang kurang beli di sana."
+          },
+          {
+            "sp": "B",
+            "jp": "なるほど。インターネットを通じて申し込むんだよね？",
+            "id": "Begitu ya. Daftarnya lewat internet kan?"
+          },
+          {
+            "sp": "A",
+            "jp": "そうそう。申し込めるだけ申し込んでおこう。",
+            "id": "Iya. Aku daftar sebanyak-banyaknya yang bisa didaftar."
+          },
+          {
+            "sp": "B",
+            "jp": "いいね。四季を通じて楽しめる場所って貴重だよね。",
+            "id": "Bagus tuh. Tempat yang bisa dinikmati sepanjang empat musim itu langka ya."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "この美術館では葛飾北斎___、多くの浮世絵が展示されている。",
+        "o": [
+          "からして",
+          "をはじめ",
+          "にわたって",
+          "を通じて"
+        ],
+        "a": 1,
+        "explain": "をはじめ = mengangkat contoh paling mewakili, lalu cakupan luas sesudahnya."
+      },
+      {
+        "q": "彼の部屋の散らかりよう___、性格がだいたい分かる。",
+        "o": [
+          "をはじめ",
+          "にわたって",
+          "だけで",
+          "からして"
+        ],
+        "a": 3,
+        "explain": "からして = menilai keseluruhan dari satu detail kecil; sering untuk penilaian negatif."
+      },
+      {
+        "q": "マラソンコースは10キロ___、沿道の応援が続いた。",
+        "o": [
+          "にわたって",
+          "をはじめ",
+          "からして",
+          "を通じて"
+        ],
+        "a": 0,
+        "explain": "10キロにわたって = mencakup rentang 10 kilometer penuh."
+      },
+      {
+        "q": "一年___、この地方では祭りが行われる。",
+        "o": [
+          "をはじめ",
+          "からして",
+          "を通じて",
+          "に限り"
+        ],
+        "a": 2,
+        "explain": "一年を通じて = selama setahun penuh; arti A を通じて untuk periode panjang."
+      },
+      {
+        "q": "SNS___、世界中の人と交流できる。",
+        "o": [
+          "を通じて",
+          "をはじめ",
+          "からして",
+          "にわたって"
+        ],
+        "a": 0,
+        "explain": "SNSを通じて = melalui SNS sebagai perantara tidak langsung; arti B を通じて."
+      },
+      {
+        "q": "力の___、頑張ります。",
+        "o": [
+          "をはじめ",
+          "限り",
+          "からして",
+          "にわたって"
+        ],
+        "a": 1,
+        "explain": "力の限り = sekuat tenaga; 限り berarti 'sebatas' kemampuan."
+      },
+      {
+        "q": "食べられる___食べて、大きくなれ。",
+        "o": [
+          "をはじめ",
+          "からして",
+          "に限り",
+          "だけ"
+        ],
+        "a": 3,
+        "explain": "食べられるだけ = sebanyak-banyaknya yang bisa dimakan; だけ = sampai batas maksimal."
+      },
+      {
+        "q": "富士山___、日本の名峰は数えきれない。",
+        "o": [
+          "からして",
+          "にわたる",
+          "をはじめとする",
+          "を通じて"
+        ],
+        "a": 2,
+        "explain": "をはじめとする + kata benda = pola untuk menerangkan kata benda sesudahnya."
+      },
+      {
+        "q": "台風の影響は関東一円___広がった。",
+        "o": [
+          "にわたって",
+          "をはじめ",
+          "からして",
+          "だけで"
+        ],
+        "a": 0,
+        "explain": "一円にわたって = meliputi seluruh area; にわたって untuk cakupan yang luas."
+      },
+      {
+        "q": "できる___の協力をお願いします。",
+        "o": [
+          "限りの",
+          "はじめの",
+          "からの",
+          "だけの"
+        ],
+        "a": 0,
+        "explain": "できる限りの = sebatas kemampuan; 限りの menerangkan kata benda 協力."
+      }
+    ]
+  },
+  {
+    "id": "n2-5",
+    "bab": 5,
+    "level": "n2",
+    "title": "Hanya & Terbatas",
+    "desc": "Menyatakan pembatasan: hanya untuk, hanya jika.",
+    "icon": "🎯",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Hanya & Terbatas",
+        "body": "<p>Bab ini berisi <b>keluarga 限り<\/b> — jebakan klasik N2 yang paling sering keluar. Ada empat pola yang semuanya memakai 限り tapi artinya <b>beda total<\/b>: <b>に限り<\/b>, <b>限りは<\/b>, <b>限りでは<\/b>, dan <b>に限って<\/b>. Salah pilih satu kata saja, maknanya langsung melenceng.<\/p><p><b>に限り<\/b> berarti 'khusus' — pengecualian istimewa dalam pengumuman formal, seperti diskon khusus pembawa kupon. Mirip tapi beda: <b>に限って<\/b> arti A berarti 'khusus hari ini, berbeda dari biasanya' — untuk hal yang menyimpang dari kebiasaan, bukan pengecualian resmi.<\/p><p><b>限りは<\/b> berarti 'selama' — selama suatu kondisi berlangsung, kondisi lain ikut berlangsung; depan dan belakangnya sama-sama <b>keadaan<\/b>, dan kalimat belakangnya tidak boleh bentuk lampau. Sedangkan <b>限りでは<\/b> berarti 'sejauh' — membatasi klaim pada <b>sumber informasi<\/b> yang dimiliki, seperti sepengetahuan atau sejauh penyelidikan; nuansanya jujur dan hati-hati.<\/p><p><b>に限って<\/b> masih punya dua arti lain: arti B 'tepat di saat' — kekesalan karena hal buruk terjadi bertepatan dengan momen penting; dan arti C 'kalau dia, tidak mungkin' — kepercayaan penuh yang setelahnya <b>wajib kalimat negatif<\/b>.<\/p><p>Cara cepat membedakannya: <b>に限り<\/b> untuk pengumuman pengecualian, <b>限りは<\/b> untuk syarat yang berlangsung, <b>限りでは<\/b> untuk batas pengetahuan, <b>に限って<\/b> untuk kekhususan yang menyimpang, momen sial, atau kepercayaan. Dan jangan tertukar dengan <b>の限り<\/b> di bab sebelumnya yang berarti 'sebatas'!<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Hanya & Terbatas",
+        "items": [
+          {
+            "jp": "限り",
+            "kj": "限り",
+            "r": "kagiri",
+            "id": "batas; selama",
+            "note": "限りある時間 = waktu yang terbatas"
+          },
+          {
+            "jp": "例外",
+            "kj": "例外",
+            "r": "reigai",
+            "id": "pengecualian",
+            "note": "例外を認める = mengakui pengecualian"
+          },
+          {
+            "jp": "特別",
+            "kj": "特別",
+            "r": "tokubetsu",
+            "id": "istimewa",
+            "note": "特別扱い = perlakuan istimewa"
+          },
+          {
+            "jp": "条件",
+            "kj": "条件",
+            "r": "jouken",
+            "id": "syarat",
+            "note": "条件を満たす = memenuhi syarat"
+          },
+          {
+            "jp": "対象",
+            "kj": "対象",
+            "r": "taishou",
+            "id": "target",
+            "note": "対象者 = orang yang dituju"
+          },
+          {
+            "jp": "割引",
+            "kj": "割引",
+            "r": "waribiki",
+            "id": "diskon",
+            "note": "割引券 = kupon diskon"
+          },
+          {
+            "jp": "持参",
+            "kj": "持参",
+            "r": "jisan",
+            "id": "membawa",
+            "note": "持参する = membawa serta"
+          },
+          {
+            "jp": "欠席",
+            "kj": "欠席",
+            "r": "kesseki",
+            "id": "absen",
+            "note": "欠席届 = surat izin tidak hadir"
+          },
+          {
+            "jp": "正当",
+            "kj": "正当",
+            "r": "seitou",
+            "id": "sah; wajar",
+            "note": "正当な理由 = alasan yang sah"
+          },
+          {
+            "jp": "患者",
+            "kj": "患者",
+            "r": "kanja",
+            "id": "pasien",
+            "note": "患者さん = pasien"
+          },
+          {
+            "jp": "信頼",
+            "kj": "信頼",
+            "r": "shinrai",
+            "id": "kepercayaan",
+            "note": "信頼できる = bisa dipercaya"
+          },
+          {
+            "jp": "責任",
+            "kj": "責任",
+            "r": "sekinin",
+            "id": "tanggung jawab",
+            "note": "責任を取る = bertanggung jawab"
+          },
+          {
+            "jp": "知識",
+            "kj": "知識",
+            "r": "chishiki",
+            "id": "pengetahuan",
+            "note": "知識が豊富 = pengetahuan luas"
+          },
+          {
+            "jp": "調査",
+            "kj": "調査",
+            "r": "chousa",
+            "id": "penyelidikan",
+            "note": "調査を行う = melakukan penyelidikan"
+          },
+          {
+            "jp": "見解",
+            "kj": "見解",
+            "r": "kenkai",
+            "id": "pandangan",
+            "note": "見解を述べる = menyampaikan pandangan"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Hanya & Terbatas",
+        "items": [
+          {
+            "pattern": "kata benda + に限り",
+            "arti": "khusus ~ (pengecualian)",
+            "explain": "Artinya 'khusus ~' — menyatakan pengecualian yang diperlakukan istimewa. Ini bahasa formal yang dipakai saat mengumumkan sesuatu ke publik, seperti di pengumuman toko atau rumah sakit. Menempel pada hal yang dikecualikan, dan setelahnya dijelaskan perlakuan khusus untuknya. Biasanya tidak diikuti kalimat negatif atau ajakan.",
+            "tabel": [
+              {
+                "k": "kata benda + に限り",
+                "v": "khusus ~ (pengecualian)"
+              },
+              {
+                "k": "お客様に限り",
+                "v": "khusus pelanggan"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "このちらしをご持参のお客様に限り、すべての商品を1割引でお買い求めいただけます。",
+                "rd": "このちらしをごじさんのおきゃくさまにかぎり、すべてのしょうひんをいちわりびきでおかいもとめいただけます。",
+                "id": "Khusus pelanggan yang membawa brosur ini, semua produk bisa dibeli dengan diskon 10%."
+              },
+              {
+                "jp": "欠席理由が正当な場合に限り出席扱いにしますが、それ以外の欠席は認めません。",
+                "rd": "けっせきりゆうがせいとうなばあいにかぎりしゅっせきあつかいにしますが、それいがいのけっせきはみとめません。",
+                "id": "Ketidakhadiran hanya dihitung hadir bila alasannya sah; ketidakhadiran lain tidak diakui."
+              },
+              {
+                "jp": "この病院は午後6時までですが、急を要する患者さんに限り、時間外でも診察いたします。",
+                "rd": "このびょういんはごごろくじまでですが、きゅうをようするかんじゃさんにかぎり、じかんがいでもしんさついたします。",
+                "id": "Rumah sakit ini buka sampai jam 6 sore, tetapi khusus pasien darurat kami layani juga di luar jam."
+              }
+            ]
+          },
+          {
+            "pattern": "bentuk biasa sekarang + 限り（は）",
+            "arti": "selama ~ (kondisi berlangsung)",
+            "explain": "Artinya 'selama ~' — menyatakan bahwa selama suatu kondisi berlangsung, kondisi lain pun ikut berlangsung. Depan dan belakangnya sama-sama menyatakan keadaan (bukan tindakan). Karena bermakna syarat, kalimat belakangnya tidak boleh kalimat lampau. Jangan tertukar dengan 〜限り di 4課 yang berarti 'sebatas'.",
+            "tabel": [
+              {
+                "k": "bentuk biasa + 限り（は）",
+                "v": "selama ~ (kondisi berlangsung)"
+              },
+              {
+                "k": "住んでいる限り",
+                "v": "selama tinggal"
+              },
+              {
+                "k": "親である限りは",
+                "v": "selama menjadi orang tua"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "この町に住んでいる限り、いつでも新鮮な食べ物が手に入る。ここは野菜も魚も豊富だ。",
+                "rd": "このまちにすんでいるかぎり、いつでもしんせんなたべものがてにはいる。ここはやさいもさかなもほうふだ。",
+                "id": "Selama tinggal di kota ini, makanan segar selalu bisa didapat. Di sini sayur dan ikan melimpah."
+              },
+              {
+                "jp": "社員が考え方を変えない限りは、この会社は何も変わらないのではないか。",
+                "rd": "しゃいんがかんがえかたをかえないかぎりは、このかいしゃはなにもかわらないのではないか。",
+                "id": "Selama karyawan tidak mengubah cara berpikirnya, perusahaan ini tidak akan berubah sama sekali, bukan?"
+              },
+              {
+                "jp": "足が丈夫な限り、まだまだ山登りが楽しめるだろう。",
+                "rd": "あしがじょうぶなかぎり、まだまだやまのぼりがたのしめるだろう。",
+                "id": "Selama kakiku masih kuat, aku masih bisa menikmati mendaki gunung."
+              },
+              {
+                "jp": "親である限りは、子供に対する責任があると思う。",
+                "rd": "おやであるかぎりは、こどもにたいするせきにんがあるとおもう。",
+                "id": "Selama menjadi orang tua, aku rasa ada tanggung jawab terhadap anak."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + の限りでは / kata kerja bentuk kamus/lampau/ている + 限りでは",
+            "arti": "sejauh / sepengetahuan ~",
+            "explain": "Artinya 'sejauh ~' — membatasi klaim pada sumber informasi yang dimiliki. Menempel pada kata yang berkaitan dengan memperoleh informasi seperti 見る (melihat), 聞く (mendengar), 知っている (mengetahui), atau 調査 (penyelidikan). Setelahnya muncul penilaian atau informasi. Nuansanya jujur: 'ini hanya sejauh yang aku tahu, bisa saja salah'.",
+            "tabel": [
+              {
+                "k": "kata benda + の限りでは",
+                "v": "sejauh ~"
+              },
+              {
+                "k": "kata kerja kamus/lampau/ている + 限りでは",
+                "v": "sejauh ~"
+              },
+              {
+                "k": "知っている限りでは",
+                "v": "sepengetahuanku"
+              },
+              {
+                "k": "調査の限りでは",
+                "v": "sejauh penyelidikan"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "今回の調査の限りでは、書類にミスはなかった。",
+                "rd": "こんかいのちょうさのかぎりでは、しょるいにミスはなかった。",
+                "id": "Sejauh penyelidikan kali ini, tidak ada kesalahan dalam dokumen."
+              },
+              {
+                "jp": "ちょっと見た限りでは、こちらの商品とあちらの商品では違いがないと思うのですが、どうして値段が違うんですか。",
+                "rd": "ちょっとみたかぎりでは、こちらのしょうひんとあちらのしょうひんではちがいがないとおもうのですが、どうしてねだんがちがうんですか。",
+                "id": "Sekilas kulihat, produk ini dan produk itu tidak ada bedanya, tapi kenapa harganya beda?"
+              },
+              {
+                "jp": "わたしが知っている限りでは、この近所に花屋はありません。",
+                "rd": "わたしがしっているかぎりでは、このきんじょにはなやはありません。",
+                "id": "Sepengetahuanku, di sekitar sini tidak ada toko bunga."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + に限って",
+            "arti": "khusus ~ / tepat di saat ~ / kalau ~ tidak mungkin",
+            "explain": "Pola ini punya tiga arti. Arti A: '~ berbeda dari biasanya' — menyatakan hal yang tidak seperti kebiasaannya. Arti B: 'tepat di saat ~' — menyatakan kekesalan karena hal buruk terjadi bertepatan dengan momen penting. Arti C: 'kalau ~, tidak mungkin berbuat buruk' — menyatakan kepercayaan penuh pada seseorang/sesuatu, setelahnya kalimat negatif yang menyatakan penilaian pembicara.",
+            "tabel": [
+              {
+                "k": "A: kata benda + に限って",
+                "v": "khusus ~ (berbeda dari biasanya)"
+              },
+              {
+                "k": "B: kata benda + に限って",
+                "v": "tepat di saat ~ (kesal)"
+              },
+              {
+                "k": "C: kata benda + に限って",
+                "v": "kalau ~, tidak mungkin (percaya)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "ふだん酒などあまり飲まない彼が、今日に限ってかなり飲んだ。何かあったのだろうか。",
+                "rd": "ふだんさけなどあまりのまないかれが、きょうにかぎってかなりのんだ。なにかあったのだろうか。",
+                "id": "Dia yang biasanya jarang minum, khusus hari ini minum banyak. Ada apa ya?"
+              },
+              {
+                "jp": "庭の手入れをしようと思っている日に限って雨が降る。",
+                "rd": "にわのていれをしようとおもっているひにかぎってあめがふる。",
+                "id": "Tepat di hari aku berniat merawat taman, hujan turun."
+              },
+              {
+                "jp": "今日は大切な用事があったのに、こんな時に限って子供が熱を出してしまった。",
+                "rd": "きょうはたいせつなようじがあったのに、こんなときにかぎってこどもがねつをだしてしまった。",
+                "id": "Padahal hari ini ada urusan penting, eh tepat di saat seperti ini anak malah demam."
+              },
+              {
+                "jp": "うちの子に限って友達をいじめることはないと思いますが……。とても優しい子なんですよ。",
+                "rd": "うちのこにかぎってともだちをいじめることはないとおもいますが……。とてもやさしいこなんですよ。",
+                "id": "Kalau anak saya, rasanya tidak mungkin membully temannya... Dia anak yang sangat baik."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 5",
+        "items": [
+          {
+            "ch": "限",
+            "kun": "かぎ（る）",
+            "on": "ゲン",
+            "id": "batas",
+            "note": "期限（きげん）= tenggat"
+          },
+          {
+            "ch": "例",
+            "kun": "たと（える）",
+            "on": "レイ",
+            "id": "contoh",
+            "note": "例外（れいがい）= pengecualian"
+          },
+          {
+            "ch": "外",
+            "kun": "そと/ほか",
+            "on": "ガイ",
+            "id": "luar",
+            "note": "外国（がいこく）= luar negeri"
+          },
+          {
+            "ch": "特",
+            "kun": "—",
+            "on": "トク",
+            "id": "khusus",
+            "note": "特別（とくべつ）= istimewa"
+          },
+          {
+            "ch": "別",
+            "kun": "わか（れる）",
+            "on": "ベツ",
+            "id": "berpisah; lain",
+            "note": "区別（くべつ）= perbedaan"
+          },
+          {
+            "ch": "信",
+            "kun": "しん（じる）",
+            "on": "シン",
+            "id": "percaya",
+            "note": "信用（しんよう）= kepercayaan"
+          },
+          {
+            "ch": "頼",
+            "kun": "たの（む）/たよ（る）",
+            "on": "ライ",
+            "id": "meminta; mengandalkan",
+            "note": "信頼（しんらい）= kepercayaan"
+          },
+          {
+            "ch": "責",
+            "kun": "せ（める）",
+            "on": "セキ",
+            "id": "tanggung jawab",
+            "note": "責任（せきにん）= tanggung jawab"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "このクーポンをお持ちの方に限り、全品10％引きです。",
+            "id": "Khusus yang membawa kupon ini, semua produk diskon 10%."
+          },
+          {
+            "sp": "B",
+            "jp": "わあ、いいね。いつまでなの？",
+            "id": "Wah, bagus. Sampai kapan?"
+          },
+          {
+            "sp": "A",
+            "jp": "今週末に限り、だそうですよ。",
+            "id": "Katanya khusus akhir pekan ini."
+          },
+          {
+            "sp": "B",
+            "jp": "じゃあ、子供の靴を買いに行きましょう。足が丈夫な限り、外で遊ばせたいし。",
+            "id": "Kalau begitu, ayo beli sepatu anak. Selama kakinya kuat, aku ingin dia main di luar."
+          },
+          {
+            "sp": "A",
+            "jp": "そうね。うちの子に限って、悪いことはしないと信じてるわ。",
+            "id": "Iya. Kalau anakku, aku percaya tidak akan berbuat nakal."
+          },
+          {
+            "sp": "B",
+            "jp": "でも、出かける日に限って雨が降るのよね。",
+            "id": "Tapi tepat di hari mau pergi, hujan turun ya."
+          },
+          {
+            "sp": "A",
+            "jp": "ほんと、そういう時に限って降るよね。",
+            "id": "Iya, memang tepat di saat seperti itu turunnya."
+          },
+          {
+            "sp": "B",
+            "jp": "わたしが知っている限りでは、明日は晴れるみたいだけど。",
+            "id": "Sepengetahuanku sih, besok katanya cerah."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "このチラシをお持ちの方___、20％引きいたします。",
+        "o": [
+          "に限り",
+          "に限って",
+          "限りは",
+          "限りでは"
+        ],
+        "a": 0,
+        "explain": "に限り = khusus; pengecualian istimewa dalam pengumuman formal."
+      },
+      {
+        "q": "健康である___、何でもできる。",
+        "o": [
+          "に限り",
+          "限りは",
+          "限りでは",
+          "に限って"
+        ],
+        "a": 1,
+        "explain": "限りは = selama kondisi berlangsung; depan-belakang sama-sama keadaan."
+      },
+      {
+        "q": "わたしの知っている___、彼は無実だ。",
+        "o": [
+          "に限り",
+          "限りは",
+          "に限って",
+          "限りでは"
+        ],
+        "a": 3,
+        "explain": "知っている限りでは = sepengetahuanku; membatasi klaim pada sumber informasi."
+      },
+      {
+        "q": "まじめな彼___、遅刻などしないだろう。",
+        "o": [
+          "に限って",
+          "に限り",
+          "限りは",
+          "限りでは"
+        ],
+        "a": 0,
+        "explain": "彼に限って = kalau dia, tidak mungkin; kepercayaan penuh + kalimat negatif."
+      },
+      {
+        "q": "デートの日に___、雨が降るんだよな。",
+        "o": [
+          "限り",
+          "限って",
+          "限りは",
+          "限りでは"
+        ],
+        "a": 1,
+        "explain": "日に限って = tepat di hari itu; kekesalan karena momen penting."
+      },
+      {
+        "q": "ふだんはおとなしい彼女が、今日___よくしゃべる。",
+        "o": [
+          "に限り",
+          "限りは",
+          "に限って",
+          "限りでは"
+        ],
+        "a": 2,
+        "explain": "今日に限って = khusus hari ini berbeda dari biasanya; arti A に限って."
+      },
+      {
+        "q": "親である___、子供を守る責任がある。",
+        "o": [
+          "限りは",
+          "に限り",
+          "限りでは",
+          "に限って"
+        ],
+        "a": 0,
+        "explain": "親である限りは = selama menjadi orang tua; syarat yang terus berlangsung."
+      },
+      {
+        "q": "今回の調査の___、異常は見つからなかった。",
+        "o": [
+          "に限り",
+          "限りは",
+          "に限って",
+          "限りでは"
+        ],
+        "a": 3,
+        "explain": "調査の限りでは = sejauh penyelidikan; menempel pada sumber informasi."
+      },
+      {
+        "q": "会員の方___、駐車場を無料でご利用いただけます。",
+        "o": [
+          "に限って",
+          "に限り",
+          "限りは",
+          "限りでは"
+        ],
+        "a": 1,
+        "explain": "会員の方に限り = khusus anggota; bahasa pengumuman yang sopan."
+      },
+      {
+        "q": "試合の日に___、彼がけがをするなんて。",
+        "o": [
+          "限って",
+          "限り",
+          "限りは",
+          "限りでは"
+        ],
+        "a": 0,
+        "explain": "日に限って = tepat di hari pertandingan; arti B に限って untuk momen sial."
+      }
+    ]
+  },
+  {
+    "id": "n2-6",
+    "bab": 6,
+    "level": "n2",
+    "title": "Tidak Hanya...",
+    "desc": "Menambahkan informasi: tidak hanya itu, melainkan juga.",
+    "icon": "➕",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Tidak Hanya...",
+        "body": "<p>Di level N2, pola \"tidak hanya\" bukan cuma <b>だけでなく<\/b>. Ada lima pola dengan rasa berbeda yang sering keluar di soal JLPT, dan salah pilih satu saja bisa mengubah kesan kalimat.<\/p><p><b>に限らず<\/b> berarti \"tidak terbatas pada\" — dipakai untuk menegaskan bahwa sesuatu berlaku luas, bukan cuma pada satu kelompok. <b>のみならず<\/b> adalah versi formal tertulis dari だけでなく, sering muncul di berita dan esai. <b>ばかりか<\/b> punya nada lebih kuat: \"tidak hanya..., bahkan...\" — sering diikuti hal yang di luar dugaan, kadang bernada negatif.<\/p><p><b>はもとより<\/b> artinya \"apalagi...\": hal yang disebut sudah jelas, yang ditekankan justru hal lainnya. Sedangkan <b>上に<\/b> bersifat menumpuk: \"selain..., juga...\" — menambahkan fakta lain yang searah, bukan berlawanan.<\/p><p>Jebakan umum: <b>ばかりか<\/b> tidak bisa dipakai untuk hal yang biasa-biasa saja — ia menuntut unsur kejutan. Dan <b>上に<\/b> hanya untuk penambahan yang searah; jangan pakai untuk kontras.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Tidak Hanya...",
+        "items": [
+          {
+            "jp": "限る",
+            "kj": "限る",
+            "r": "kagiru",
+            "id": "membatasi",
+            "note": "〇〇に限らず = tidak terbatas pada 〇〇"
+          },
+          {
+            "jp": "記念館",
+            "kj": "記念館",
+            "r": "kinenkan",
+            "id": "museum peringatan",
+            "note": "記念 (きねん) = peringatan"
+          },
+          {
+            "jp": "入館者",
+            "kj": "入館者",
+            "r": "nyuukansha",
+            "id": "pengunjung gedung",
+            "note": "入館する = memasuki gedung"
+          },
+          {
+            "jp": "悩まされる",
+            "kj": "悩まされる",
+            "r": "nayamasareru",
+            "id": "diganggu; direpotkan",
+            "note": "騒音に悩まされる = terganggu suara bising"
+          },
+          {
+            "jp": "値上がり",
+            "kj": "値上がり",
+            "r": "neagari",
+            "id": "kenaikan harga",
+            "note": "値上がりする = harganya naik"
+          },
+          {
+            "jp": "与党",
+            "kj": "与党",
+            "r": "yotou",
+            "id": "partai berkuasa",
+            "note": "lawan katanya 野党 (やとう)"
+          },
+          {
+            "jp": "野党",
+            "kj": "野党",
+            "r": "yatou",
+            "id": "partai oposisi",
+            "note": "野党第一党 = partai oposisi terbesar"
+          },
+          {
+            "jp": "慎重",
+            "kj": "慎重",
+            "r": "shinchou",
+            "id": "hati-hati",
+            "note": "慎重に検討する = mempertimbangkan dengan hati-hati"
+          },
+          {
+            "jp": "対策",
+            "kj": "対策",
+            "r": "taisaku",
+            "id": "penanggulangan",
+            "note": "対策を立てる = menyusun penanggulangan"
+          },
+          {
+            "jp": "手間取る",
+            "kj": "手間取る",
+            "r": "temadoru",
+            "id": "memakan waktu; tersendat",
+            "note": "手続きに手間取った = urusannya tersendat"
+          },
+          {
+            "jp": "ためになる",
+            "kj": "ためになる",
+            "r": "tameninaru",
+            "id": "bermanfaat",
+            "note": "ためになる話 = cerita yang bermanfaat"
+          },
+          {
+            "jp": "及ぼす",
+            "kj": "及ぼす",
+            "r": "oyobosu",
+            "id": "menimbulkan (pengaruh)",
+            "note": "影響を及ぼす = memberi pengaruh"
+          },
+          {
+            "jp": "心身",
+            "kj": "心身",
+            "r": "shinshin",
+            "id": "jiwa dan raga",
+            "note": "心身の健康 = kesehatan jiwa dan raga"
+          },
+          {
+            "jp": "滞在",
+            "kj": "滞在",
+            "r": "taizai",
+            "id": "tinggal (sementara)",
+            "note": "海外に滞在する = tinggal di luar negeri"
+          },
+          {
+            "jp": "ごちそう",
+            "kj": "ごちそう",
+            "r": "gochisou",
+            "id": "traktir(an)",
+            "note": "ごちそうになる = ditraktir makan"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Tidak Hanya...",
+        "items": [
+          {
+            "arti": "tidak hanya ~ (tetapi juga yang lain)",
+            "examples": [
+              {
+                "id": "Museum peringatan ini pengunjungnya banyak sepanjang tahun, tidak hanya pada hari libur.",
+                "jp": "この記念館は、休日に限らず一年中入館者が多い。",
+                "rd": "このきねんかんは、きゅうじつにかぎらずいちねんじゅうにゅうかんしゃがおおい。"
+              },
+              {
+                "id": "Tidak hanya di rumah kami, semua warga sekitar pun terganggu oleh suara motor tengah malam.",
+                "jp": "うちに限らず近所の住民はみんな夜中のバイクの音に悩まされている。",
+                "rd": "うちにかぎらずきんじょのじゅうみんはみんなよなかのばいくのおとになやまされている。"
+              },
+              {
+                "id": "Akhir-akhir ini penutupan toko buku terjadi beruntun, tidak hanya di kota-kota daerah tetapi juga di kota-kota besar.",
+                "jp": "近年、地方の町に限らず大都会でも書店の閉店が相次いでいる。",
+                "rd": "きんねん、ちほうのまちにかぎらずだいとかいでもしょてんのへいてんがあいついでいる。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk menegaskan bahwa suatu hal tidak terbatas pada satu contoh saja, melainkan mencakup lingkup yang lebih luas lagi. Setelah pola ini, kalimat biasanya dilanjutkan dengan kata seperti も, みんな, atau いつも yang menegaskan keluasan cakupannya. Sekilas mirip dengan のみならず, tetapi のみならず bernada lebih formal dan bisa dipakai untuk dua hal yang sederajat, sedangkan に限らず menekankan nuansa 'bahkan sampai ke…'.",
+            "pattern": "kata benda + に限らず",
+            "tabel": [
+              {
+                "k": "kata benda + に限らず",
+                "v": "tidak hanya (kata benda)…"
+              },
+              {
+                "k": "～に限らず、…も…",
+                "v": "tidak hanya ~, … pun …"
+              },
+              {
+                "k": "～に限らず、みんな/いつも…",
+                "v": "tidak hanya ~, semuanya/selalu …"
+              }
+            ]
+          },
+          {
+            "arti": "tidak hanya ~, tetapi juga …",
+            "examples": [
+              {
+                "id": "Sepertinya bukan hanya tagihan listrik, tagihan gas dan air pun naik.",
+                "jp": "電気代のみならず、ガス代や水道代も値上がりするようだ。",
+                "rd": "でんきだいのみならず、がすだいやすいどうだいもねあがりするようだ。"
+              },
+              {
+                "id": "Tidak hanya partai berkuasa, partai oposisi pun berhati-hati menghadapi pemilihan yang penuh pertaruhan ini.",
+                "jp": "与党のみならず、野党も覚悟の選出には慎重だ。",
+                "rd": "よとうのみならず、やとうもかくごのせんしゅつにはしんちょうだ。"
+              },
+              {
+                "id": "Ishii tidak hanya mengeluarkan pernyataan yang diskriminatif, ia bahkan tidak meminta maaf atas hal itu.",
+                "jp": "石井さんは、差別的な発言をしたのみならず、それについて謝ることもなかった。",
+                "rd": "いしいさんは、さべつてきなはつげんをしたのみならず、それについてあやまることもなかった。"
+              }
+            ],
+            "explain": "Ini adalah ungkapan formal khas bahasa tulis yang berarti 'tidak hanya…, tetapi juga…'. Berbeda dengan に限らず, pola ini juga bisa dipakai untuk dua hal yang sederajat dan sama-sama penting, bukan hanya untuk memperluas cakupan. Setelahnya, kalimat sering memakai も yang berarti 'juga'.",
+            "pattern": "kata benda / bentuk biasa + のみならず",
+            "tabel": [
+              {
+                "k": "kata benda + のみならず",
+                "v": "tidak hanya (kata benda), tetapi juga…"
+              },
+              {
+                "k": "bentuk biasa + のみならず",
+                "v": "tidak hanya (kalimat), tetapi juga…"
+              },
+              {
+                "k": "～のみならず、…も…",
+                "v": "tidak hanya ~, … pun …"
+              }
+            ]
+          },
+          {
+            "arti": "tidak hanya ~, bahkan … (melebihi dugaan)",
+            "examples": [
+              {
+                "id": "Karena penemuannya terlambat dan penanganannya pun tersendat, penyakit sapi itu akhirnya menyebar.",
+                "jp": "発見が遅れたばかりか対策にも手間取ったので、牛の病気が広がってしまった。",
+                "rd": "はっけんがおくれたばかりかたいさくにもてまどったので、うしのびょうきがひろがってしまった。"
+              },
+              {
+                "id": "Penjelasan guru Yushima tidak hanya mudah dipahami anak-anak, tetapi juga sangat menarik dan bermanfaat.",
+                "jp": "由島先生の説明は、子供にもわかりやすいばかりか、非常に面白くてためになる。",
+                "rd": "ゆしませんせいのせつめいは、こどもにもわかりやすいばかりか、ひじょうにおもしろくてためになる。"
+              },
+              {
+                "id": "Jalur gunung rute A tidak hanya berbahaya bagi pemula, pemandangan di tengah jalannya pun kurang bagus.",
+                "jp": "Aコースの山道は、初心者には危険なばかりか、途中の景色もあまり良くない。",
+                "rd": "えーこーすのやまみちは、しょしんしゃにはきけんなばかりか、とちゅうのけしきもあまりよくない。"
+              },
+              {
+                "id": "Tidak hanya teman-temannya, orang tua dan saudara-saudaranya pun tidak tahu di mana dia berada.",
+                "jp": "友達ばかりか親兄弟も彼の居場所を知らない。",
+                "rd": "ともだちばかりかおやきょうだいもかれのいばしょをしらない。"
+              }
+            ],
+            "explain": "Pola ini dipakai ketika hal pertama saja sudah di luar kewajaran, lalu ditambah hal kedua yang lebih mengejutkan lagi — jadi ada nuansa 'bahkan'. Karena itu, kalimat sesudahnya sering memakai も. Jebakannya: pola ini tidak boleh dipakai untuk kalimat ajakan, perintah, atau permintaan.",
+            "pattern": "kata benda / bentuk biasa + ばかりか",
+            "tabel": [
+              {
+                "k": "kata benda + ばかりか",
+                "v": "tidak hanya (kata benda), bahkan…"
+              },
+              {
+                "k": "bentuk biasa + ばかりか",
+                "v": "tidak hanya (kalimat), bahkan…"
+              },
+              {
+                "k": "～ばかりか、…も…",
+                "v": "tidak hanya ~, … pun …"
+              }
+            ]
+          },
+          {
+            "arti": "apalagi ~, … juga …",
+            "examples": [
+              {
+                "id": "Rokok membahayakan bukan hanya perokoknya sendiri, tetapi juga orang-orang di sekitarnya.",
+                "jp": "たばこは本人はもとより、周りの人にも害を及ぼす。",
+                "rd": "たばこはほんにんはもとより、まわりのひとにもがいをおよぼす。"
+              },
+              {
+                "id": "Orang yang tinggal di luar negeri bersama keluarga sebaiknya memperhatikan kesehatan fisik dan mental keluarganya, apalagi kesehatan dirinya sendiri.",
+                "jp": "家族で外国に滞在している人は、自分の健康管理はもとより家族の心身の健康にも気を配ったほうがいい。",
+                "rd": "かぞくでがいこくにたいざいしているひとは、じぶんのけんこうかんりはもとよりかぞくのしんしんのけんこうにもきをくばったほうがいい。"
+              },
+              {
+                "id": "Tidak hanya warga setempat, orang-orang yang tinggal di daerah sekitarnya pun merasa cemas terhadap pembangkit listrik tenaga nuklir.",
+                "jp": "地元の住民はもとより、周辺の地域に住む人たちも原子力発電所に不安を感じている。",
+                "rd": "じもとのじゅうみんはもとより、しゅうへんのちいきにすむひとたちもげんしりょくはつでんしょにふあんをかんじている。"
+              },
+              {
+                "id": "Di sekolah ini, patuhilah larangan merokok tidak hanya di dalam kelas tetapi juga di luar kelas.",
+                "jp": "この学校では、教室内ではもとより教室の外でも禁煙を守ってください。",
+                "rd": "このがっこうでは、きょうしつないではもとよりきょうしつのそとでもきんえんをまもってください。"
+              }
+            ],
+            "explain": "Ungkapan formal yang menempel pada contoh yang dianggap sudah jelas atau wajar oleh pembicara, lalu menambahkan contoh lain dengan nuansa 'apalagi yang ini'. Setelahnya biasanya muncul も yang berarti 'juga'. Dipakai dalam bahasa tulis atau situasi resmi.",
+            "pattern": "kata benda (+ partikel) + はもとより",
+            "tabel": [
+              {
+                "k": "kata benda + はもとより",
+                "v": "… sudah jelas, … pun …"
+              },
+              {
+                "k": "～はもとより、…も…",
+                "v": "apalagi ~, … juga …"
+              }
+            ]
+          },
+          {
+            "arti": "selain ~, … juga … (bertumpuk)",
+            "examples": [
+              {
+                "id": "Saya sudah dibantu Tanaka dalam pekerjaan, dan setelah bekerja malah ditraktir makan.",
+                "jp": "田中さんには仕事を手伝ってもらった上に、仕事の後、ごちそうになった。",
+                "rd": "たなかさんにはしごとをてつだってもらったうえに、しごとのあと、ごちそうになった。"
+              },
+              {
+                "id": "Dokter Morita setiap hari sibuk bekerja sebagai dokter, dan pada akhir pekan pun ia kesana-kemari untuk seminar dan ceramah.",
+                "jp": "森田先生は、毎日医師として忙しく仕事をしている上、週末も学会や講演で飛び回っている。",
+                "rd": "もりたせんせいは、まいにちいしとしていそがしくしごとをしているうえ、しゅうまつもがっかいやこうえんでとびまわっている。"
+              },
+              {
+                "id": "Teks ini istilahnya sulit, dan isinya pun tidak bagus.",
+                "jp": "このテキストは用語が難しい上に、内容も良くない。",
+                "rd": "このてきすとはようごがむずかしいうえに、ないようもよくない。"
+              },
+              {
+                "id": "Di sini udaranya bersih, dan karena tidak ada tempat terang di dekatnya, bintang terlihat jelas.",
+                "jp": "ここは空気がきれいな上、近くに明るいところがないので星がよく見える。",
+                "rd": "ここはくうきがきれいなうえ、ちかくにあかるいところがないのでほしがよくみえる。"
+              },
+              {
+                "id": "Hari ini aku kurang tidur dan agak demam. Ingin cepat pulang.",
+                "jp": "今日は寝不足の上、少し熱がある。早く帰りたい。",
+                "rd": "きょうはねぶそくのうえ、すこしねつがある。はやくかえりたい。"
+              }
+            ],
+            "explain": "Pola ini menyatakan dua hal yang bertumpuk: selain hal pertama, ada hal kedua lagi. Syarat pentingnya: kedua hal harus searah penilaiannya — hal baik dipasangkan dengan hal baik, hal buruk dengan hal buruk. Tidak boleh mencampur hal baik dan buruk, dan kalimat sesudahnya tidak boleh berupa ajakan atau perintah.",
+            "pattern": "bentuk biasa + 上（に）",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk biasa + 上に",
+                "v": "selain (melakukan)…, … juga …"
+              },
+              {
+                "k": "kata sifat-i bentuk biasa + 上に",
+                "v": "selain (sifat)…, … juga …"
+              },
+              {
+                "k": "kata sifat-na + な/である + 上に",
+                "v": "selain (sifat)…, … juga …"
+              },
+              {
+                "k": "kata benda + の/である + 上に",
+                "v": "selain (kata benda)…, … juga …"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 6",
+        "items": [
+          {
+            "ch": "限",
+            "kun": "かぎ(る)",
+            "on": "ゲン",
+            "id": "batas",
+            "note": "制限 (せいげん) = pembatasan"
+          },
+          {
+            "ch": "悩",
+            "kun": "なや(む)",
+            "on": "ノウ",
+            "id": "risau",
+            "note": "悩み (なやみ) = kegalauan"
+          },
+          {
+            "ch": "値",
+            "kun": "あたい",
+            "on": "チ",
+            "id": "nilai; harga",
+            "note": "値段 (ねだん) = harga"
+          },
+          {
+            "ch": "党",
+            "kun": "—",
+            "on": "トウ",
+            "id": "partai",
+            "note": "政党 (せいとう) = partai politik"
+          },
+          {
+            "ch": "慎",
+            "kun": "つつし(む)",
+            "on": "シン",
+            "id": "hati-hati",
+            "note": "慎重 (しんちょう) = kehati-hatian"
+          },
+          {
+            "ch": "策",
+            "kun": "—",
+            "on": "サク",
+            "id": "siasat",
+            "note": "政策 (せいさく) = kebijakan"
+          },
+          {
+            "ch": "及",
+            "kun": "およ(ぶ)",
+            "on": "キュウ",
+            "id": "mencapai",
+            "note": "影響 (えいきょう) = pengaruh"
+          },
+          {
+            "ch": "館",
+            "kun": "やかた",
+            "on": "カン",
+            "id": "gedung",
+            "note": "図書館 (としょかん) = perpustakaan"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "最近、電気代のみならず、ガス代や水道代も上がったらしいよ。",
+            "id": "Katanya belakangan ini bukan cuma tagihan listrik, tagihan gas dan air pun naik."
+          },
+          {
+            "sp": "B",
+            "jp": "本当？うちに限らず、みんな困っているだろうね。",
+            "id": "Serius? Pasti bukan cuma rumahku, semua orang kesusahan."
+          },
+          {
+            "sp": "A",
+            "jp": "会社も大変だよ。残業が増えた上に、ボーナスまで減ったんだ。",
+            "id": "Kantor juga berat. Selain lembur bertambah, bonus pun dipotong."
+          },
+          {
+            "sp": "B",
+            "jp": "それは厳しいね。社員はもとより、家族の生活にも影響するよ。",
+            "id": "Itu berat ya. Jangankan karyawan, kehidupan keluarganya pun terdampak."
+          },
+          {
+            "sp": "A",
+            "jp": "でも、新しい対策を立てたばかりか、社長自ら説明会を開くらしい。",
+            "id": "Tapi katanya bukan cuma menyusun penanggulangan baru, bahkan presiden direktur sendiri akan mengadakan penjelasan."
+          },
+          {
+            "sp": "B",
+            "jp": "へえ。値上げに限らず、無駄を減らす工夫も必要だね。",
+            "id": "Wah. Tidak terbatas pada kenaikan harga, perlu juga akal mengurangi pemborosan."
+          },
+          {
+            "sp": "A",
+            "jp": "うん。みんなで知恵を出し合う上に、実行も早ければ乗り越えられるさ。",
+            "id": "Ya. Selain saling bertukar akal, kalau eksekusinya cepat pasti bisa melewatinya."
+          },
+          {
+            "sp": "B",
+            "jp": "そうだね。文句を言うばかりか、自分も何か提案してみるよ。",
+            "id": "Betul. Bukan cuma mengeluh, aku pun akan mencoba mengusulkan sesuatu."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "休日に___、平日もこの店は混雑している。",
+        "o": [
+          "のみならず",
+          "に限らず",
+          "ばかりか",
+          "はもとより"
+        ],
+        "a": 1,
+        "explain": "に限らず = tidak terbatas pada (cakupan waktu atau kelompok)."
+      },
+      {
+        "q": "彼は英語___、中国語や韓国語も流暢に話す。",
+        "o": [
+          "ばかりか",
+          "はもとより",
+          "のみならず",
+          "上に"
+        ],
+        "a": 2,
+        "explain": "のみならず = versi formal tertulis dari だけでなく."
+      },
+      {
+        "q": "約束を破った___、謝りもしなかった。",
+        "o": [
+          "に限らず",
+          "のみならず",
+          "はもとより",
+          "ばかりか"
+        ],
+        "a": 3,
+        "explain": "ばかりか = tidak hanya..., bahkan... (melampaui dugaan, sering negatif)."
+      },
+      {
+        "q": "自分の健康___、家族の健康にも気を配るべきだ。",
+        "o": [
+          "はもとより",
+          "に限らず",
+          "ばかりか",
+          "上に"
+        ],
+        "a": 0,
+        "explain": "はもとより = apalagi...; hal yang disebut sudah jelas."
+      },
+      {
+        "q": "彼は親切な___、仕事も速くて助かる。",
+        "o": [
+          "上に",
+          "はもとより",
+          "ばかりか",
+          "に限らず"
+        ],
+        "a": 0,
+        "explain": "上に = selain..., juga... (penambahan fakta yang searah)."
+      },
+      {
+        "q": "この制度は高齢者___、若い世代にも役立つ。",
+        "o": [
+          "のみならず",
+          "ばかりか",
+          "に限らず",
+          "はもとより"
+        ],
+        "a": 2,
+        "explain": "に限らず = tidak terbatas pada satu kelompok."
+      },
+      {
+        "q": "値段が高い___、味もいまいちだった。",
+        "o": [
+          "に限らず",
+          "のみならず",
+          "ばかりか",
+          "はもとより"
+        ],
+        "a": 2,
+        "explain": "ばかりか menuntut unsur kejutan atau kekecewaan."
+      },
+      {
+        "q": "母___、父もこの旅行を楽しみにしている。",
+        "o": [
+          "に限らず",
+          "はもとより",
+          "ばかりか",
+          "上に"
+        ],
+        "a": 1,
+        "explain": "はもとより = jangankan...; yang disebut sudah pasti."
+      },
+      {
+        "q": "雨が降り出した___、雷まで鳴り始めた。",
+        "o": [
+          "はもとより",
+          "上に",
+          "ばかりか",
+          "に限らず"
+        ],
+        "a": 1,
+        "explain": "上に menumpuk fakta tambahan yang searah."
+      },
+      {
+        "q": "社長___、社員全員がこの方針に賛成している。",
+        "o": [
+          "ばかりか",
+          "はもとより",
+          "上に",
+          "のみならず"
+        ],
+        "a": 3,
+        "explain": "のみならず cocok untuk pernyataan formal seperti ini."
+      }
+    ]
+  },
+  {
+    "id": "n2-7",
+    "bab": 7,
+    "level": "n2",
+    "title": "Tentang & Terhadap",
+    "desc": "Menyatakan topik bahasan dan sikap terhadap sesuatu.",
+    "icon": "📝",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Tentang & Terhadap",
+        "body": "<p>Empat pola chapter ini semuanya bisa diartikan \"tentang\", tapi tidak bisa saling menggantikan. Di N2, JLPT suka menguji apakah kamu paham <b>rasa<\/b> masing-masing.<\/p><p><b>に関して<\/b> adalah \"mengenai\" yang paling netral dan formal — aman untuk dokumen, berita, dan percakapan bisnis. Bentuk <b>に関する + kata benda<\/b> dipakai saat menerangkan kata benda. <b>をめぐって<\/b> berarti \"seputar\" — dipakai untuk topik yang <b>diperdebatkan, diperebutkan, atau menjadi pusat perhatian<\/b>; sering bernuansa konflik atau isu hangat.<\/p><p><b>にかけては<\/b> berarti \"kalau soal...\" — dipakai untuk <b>menonjolkan keunggulan atau kekhasan<\/b> di satu bidang, sering dengan nada bangga. Sedangkan <b>に対して<\/b> punya dua arti: \"terhadap\" (sikap atau tindakan kepada seseorang) dan \"berbeda dengan\" (kontras).<\/p><p>Jebakan umum: <b>に関する<\/b> harus diikuti kata benda (に関する問題), sedangkan <b>に関して<\/b> berdiri sendiri. <b>に対して<\/b> untuk kontras hanya dipakai membandingkan dua hal yang sejajar. Dan <b>をめぐって<\/b> jangan dipakai untuk topik netral sehari-hari — terdengar berlebihan.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Tentang & Terhadap",
+        "items": [
+          {
+            "jp": "関する",
+            "kj": "関する",
+            "r": "kansuru",
+            "id": "mengenai",
+            "note": "〇〇に関する質問 = pertanyaan mengenai 〇〇"
+          },
+          {
+            "jp": "事件",
+            "kj": "事件",
+            "r": "jiken",
+            "id": "kasus; insiden",
+            "note": "事件をめぐって = seputar kasus itu"
+          },
+          {
+            "jp": "詳しい",
+            "kj": "詳しい",
+            "r": "kuwashii",
+            "id": "detail",
+            "note": "詳しく説明する = menjelaskan secara detail"
+          },
+          {
+            "jp": "処理",
+            "kj": "処理",
+            "r": "shori",
+            "id": "pengolahan; penanganan",
+            "note": "ごみ処理 = pengolahan sampah"
+          },
+          {
+            "jp": "環境",
+            "kj": "環境",
+            "r": "kankyou",
+            "id": "lingkungan",
+            "note": "環境問題 = masalah lingkungan"
+          },
+          {
+            "jp": "課長",
+            "kj": "課長",
+            "r": "kachou",
+            "id": "kepala seksi",
+            "note": "環境課の課長 = kepala seksi lingkungan"
+          },
+          {
+            "jp": "めぐる",
+            "kj": "めぐる",
+            "r": "meguru",
+            "id": "mengelilingi; seputar",
+            "note": "土地をめぐる争い = sengketa seputar tanah"
+          },
+          {
+            "jp": "親族",
+            "kj": "親族",
+            "r": "shinzoku",
+            "id": "kerabat",
+            "note": "親族一同 = seluruh kerabat"
+          },
+          {
+            "jp": "争う",
+            "kj": "争う",
+            "r": "arasou",
+            "id": "bertengkar; memperebutkan",
+            "note": "遺産を争う = memperebutkan warisan"
+          },
+          {
+            "jp": "消費税",
+            "kj": "消費税",
+            "r": "shouhizei",
+            "id": "pajak konsumsi",
+            "note": "消費税の引き上げ = kenaikan pajak konsumsi"
+          },
+          {
+            "jp": "国会",
+            "kj": "国会",
+            "r": "kokkai",
+            "id": "parlemen",
+            "note": "国会で審議する = membahas di parlemen"
+          },
+          {
+            "jp": "揺れる",
+            "kj": "揺れる",
+            "r": "yureru",
+            "id": "terguncang",
+            "note": "政界が揺れた = dunia politik terguncang"
+          },
+          {
+            "jp": "演説",
+            "kj": "演説",
+            "r": "enzetsu",
+            "id": "pidato",
+            "note": "演説にかけては一流だ = kalau soal pidato, kelas satu"
+          },
+          {
+            "jp": "目上",
+            "kj": "目上",
+            "r": "meue",
+            "id": "orang yang lebih tua",
+            "note": "目上の人に対する態度 = sikap terhadap atasan"
+          },
+          {
+            "jp": "失礼",
+            "kj": "失礼",
+            "r": "shitsurei",
+            "id": "tidak sopan",
+            "note": "失礼な言い方 = cara bicara yang tidak sopan"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Tentang & Terhadap",
+        "items": [
+          {
+            "arti": "mengenai ~; tentang ~",
+            "examples": [
+              {
+                "id": "Apakah ada hal detail yang diketahui mengenai kasus kali ini?",
+                "jp": "今回の事件に関して何か詳しいことがわかりましたか。",
+                "rd": "こんかいのじけんにかんしてなにかくわしいことがわかりましたか。"
+              },
+              {
+                "id": "Mengenai masalah pengolahan sampah, kepala seksi lingkungan yang akan menjelaskan.",
+                "jp": "ごみ処理の問題に関しましては、環境課の課長がご説明いたします。",
+                "rd": "ごみしょりのもんだいにかんしましては、かんきょうかのかちょうがごせつめいいたします。"
+              },
+              {
+                "id": "Kepolisian telah memulai penyelidikan detail mengenai motif pelaku.",
+                "jp": "警察では、犯人の動機に関し、詳しい調査を開始した。",
+                "rd": "けいさつでは、はんにんのどうきにかんし、くわしいちょうさをかいしした。"
+              },
+              {
+                "id": "Mohon kerja samanya untuk mengisi kuesioner mengenai kehidupan para lansia.",
+                "jp": "高齢者の生活に関するアンケートにご協力ください。",
+                "rd": "こうれいしゃのせいかつにかんするあんけーとにごきょうりょくください。"
+              }
+            ],
+            "explain": "Ini adalah ungkapan formal untuk 'mengenai' atau 'tentang', dipakai saat menyampaikan atau mencari informasi yang detail. Berbeda dengan について yang netral, に関して dipakai untuk tema yang besar dan luas — bukan untuk hal yang jawabannya pasti seperti umur atau kewarganegaraan. Setelahnya, kalimat sering memakai kata kerja seperti 調べる (menyelidiki) atau 説明する (menjelaskan).",
+            "pattern": "kata benda + に関して / に関する + kata benda",
+            "tabel": [
+              {
+                "k": "kata benda + に関して",
+                "v": "mengenai ~"
+              },
+              {
+                "k": "kata benda + に関する + kata benda",
+                "v": "(kata benda) yang mengenai ~"
+              },
+              {
+                "k": "～に関しましては",
+                "v": "mengenai ~ (sangat sopan)"
+              }
+            ]
+          },
+          {
+            "arti": "seputar ~; memperebutkan ~",
+            "examples": [
+              {
+                "id": "Para kerabat bertengkar memperebutkan tanah warisan orang tua.",
+                "jp": "親が残した土地をめぐって親族が争っている。",
+                "rd": "おやがのこしたとちをめぐってしんぞくがあらそっている。"
+              },
+              {
+                "id": "Parlemen terguncang hebat akibat persoalan pajak konsumsi.",
+                "jp": "消費税の問題をめぐり、国会は大きく揺れた。",
+                "rd": "しょうひぜいのもんだいをめぐり、こっかいはおおきくゆれた。"
+              },
+              {
+                "id": "Gosip seputar perilakunya langsung menyebar ke seluruh perusahaan.",
+                "jp": "彼女の行動をめぐるうわさはたちまち社内に広がった。",
+                "rd": "かのじょのこうどうをめぐるうわさはたちまちしゃないにひろがった。"
+              }
+            ],
+            "explain": "Ungkapan formal yang dipakai ketika banyak orang terlibat dalam perdebatan, pertentangan, atau gosip seputar suatu hal. Pelakunya biasanya jamak (banyak orang). Bentuk をめぐる dipakai saat menerangkan kata benda yang mengikutinya.",
+            "pattern": "kata benda + をめぐって / をめぐる + kata benda",
+            "tabel": [
+              {
+                "k": "kata benda + をめぐって",
+                "v": "seputar ~ / memperebutkan ~"
+              },
+              {
+                "k": "kata benda + をめぐる + kata benda",
+                "v": "(kata benda) seputar ~"
+              }
+            ]
+          },
+          {
+            "arti": "kalau soal ~, (paling hebat)",
+            "examples": [
+              {
+                "id": "Politisi itu, kalau soal pidato, levelnya yang tertinggi.",
+                "jp": "あの政治家は演説にかけては最高のレベルだ。",
+                "rd": "あのせいじかはえんぜつにかけてはさいこうのれべるだ。"
+              },
+              {
+                "id": "Kalau soal membuat masakan lezat dari bahan murah, saya tidak kalah dari siapa pun.",
+                "jp": "わたしは安い材料でおいしい料理を作ることにかけてはだれにも負けませんよ。",
+                "rd": "わたしはやすいざいりょうでおいしいりょうりをつくることにかけてはだれにもまけませんよ。"
+              },
+              {
+                "id": "Dalam hal kelihian menggiring bola, tidak ada yang melebihi pemain Nakai.",
+                "jp": "ボール運びのうまさにかけては中井選手の右に出るものはいない。",
+                "rd": "ぼーるはこびのうまさにかけてはなかいせんしゅのみぎにでるものはいない。"
+              }
+            ],
+            "explain": "Pola ini menempel pada kata yang menyatakan keahlian atau kemampuan, dengan arti 'kalau soal…'. Kalimat sesudahnya menyatakan bahwa tidak ada yang menandingi dalam hal itu — jadi pola ini sering dipakai untuk memuji keunggulan seseorang.",
+            "pattern": "kata benda + にかけては",
+            "tabel": [
+              {
+                "k": "kata benda + にかけては",
+                "v": "kalau soal ~"
+              },
+              {
+                "k": "～ことにかけては",
+                "v": "kalau soal (melakukan) ~"
+              }
+            ]
+          },
+          {
+            "arti": "terhadap ~; berbeda dengan ~",
+            "examples": [
+              {
+                "id": "Tidak boleh berbicara sekasar itu kepada orang yang lebih tua.",
+                "jp": "目上の人に対してそんな乱暴な言い方をしてはいけません。",
+                "rd": "めうえのひとにたいしてそんならんぼうないいかたをしてはいけません。"
+              },
+              {
+                "id": "Saya rasa pernyataan Tuan Sakurai tidak sopan terhadap warga prefektur.",
+                "jp": "桜井氏の発言は県民に対して失礼だと思う。",
+                "rd": "さくらいしのはつげんはけんみんにたいしてしつれいだとおもう。"
+              },
+              {
+                "id": "Warga menentang keras usulan pemerintah.",
+                "jp": "政府の案に対して住民は大反対した。",
+                "rd": "せいふのあんにたいしてじゅうみんはだいはんたいした。"
+              },
+              {
+                "id": "Dari kuesioner ini terbaca ketidakpuasan terhadap perusahaan.",
+                "jp": "このアンケートから会社に対する不満が読み取れる。",
+                "rd": "このあんけーとからかいしゃにたいするふまんがよみとれる。"
+              },
+              {
+                "id": "Berbeda dengan ketua sebelumnya yang tidak bersemangat, ketua yang baru memiliki daya juang yang luar biasa.",
+                "jp": "やる気がなかった前の会長に対して、新しい会長は素晴らしい行動力がある。",
+                "rd": "やるきがなかったまえのかいちょうにたいして、あたらしいかいちょうはすばらしいこうどうりょくがある。"
+              },
+              {
+                "id": "Di rumah kami, berbeda dengan ayah yang emosinya meledak-ledak, ibu berkepribadian tenang dan lembut.",
+                "jp": "うちでは、父は感情が激しいのに対して、母は冷静で穏やかな性格です。",
+                "rd": "うちでは、ちちはかんじょうがはげしいのにたいして、はははれいせいでおだやかなせいかくです。"
+              },
+              {
+                "id": "Berbeda dengan 30% orang yang menjawab makan roti di pagi hari, 65% menjawab makan nasi.",
+                "jp": "朝はパンを食べると答えた人が30％だったのに対して、ご飯を食べると答えた人は65％だった。",
+                "rd": "あさはぱんをたべるとこたえたひとがさんじゅっぱーせんとだったのにたいして、ごはんをたべるとこたえたひとはろくじゅうごぱーせんとだった。"
+              }
+            ],
+            "explain": "Pola ini punya dua makna yang harus dibedakan. Makna pertama adalah 'terhadap': menyatakan tindakan, sikap, atau perasaan yang ditujukan kepada orang, kelompok, atau suatu masalah. Makna kedua adalah 'berbeda dengan': menyatakan kontras yang jelas antara dua hal yang berlawanan. Untuk makna kedua, polanya bisa diperluas menjadi bentuk biasa + のに対して.",
+            "pattern": "kata benda + に対して / に対する + kata benda",
+            "tabel": [
+              {
+                "k": "kata benda + に対して",
+                "v": "terhadap ~"
+              },
+              {
+                "k": "kata benda + に対する + kata benda",
+                "v": "(kata benda) terhadap ~"
+              },
+              {
+                "k": "bentuk biasa + のに対して",
+                "v": "berbeda dengan (kalimat)…"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 7",
+        "items": [
+          {
+            "ch": "関",
+            "kun": "かか(わる)",
+            "on": "カン",
+            "id": "berhubungan",
+            "note": "関係 (かんけい) = hubungan"
+          },
+          {
+            "ch": "詳",
+            "kun": "くわ(しい)",
+            "on": "ショウ",
+            "id": "detail",
+            "note": "詳細 (しょうさい) = rincian"
+          },
+          {
+            "ch": "処",
+            "kun": "—",
+            "on": "ショ",
+            "id": "menangani",
+            "note": "処理 (しょり) = penanganan"
+          },
+          {
+            "ch": "境",
+            "kun": "さかい",
+            "on": "キョウ",
+            "id": "batas; lingkungan",
+            "note": "環境 (かんきょう) = lingkungan"
+          },
+          {
+            "ch": "争",
+            "kun": "あらそ(う)",
+            "on": "ソウ",
+            "id": "bertengkar",
+            "note": "競争 (きょうそう) = persaingan"
+          },
+          {
+            "ch": "税",
+            "kun": "—",
+            "on": "ゼイ",
+            "id": "pajak",
+            "note": "税金 (ぜいきん) = pajak"
+          },
+          {
+            "ch": "揺",
+            "kun": "ゆ(れる)",
+            "on": "ヨウ",
+            "id": "bergoyang",
+            "note": "動揺 (どうよう) = guncang"
+          },
+          {
+            "ch": "演",
+            "kun": "—",
+            "on": "エン",
+            "id": "memainkan",
+            "note": "演説 (えんぜつ) = pidato"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "今回の事件に関して、何か新しい情報は入った？",
+            "id": "Mengenai kasus kali ini, ada informasi baru yang masuk?"
+          },
+          {
+            "sp": "B",
+            "jp": "うん。土地をめぐって親族が争っているらしいよ。",
+            "id": "Ya. Katanya para kerabat bertengkar memperebutkan tanah."
+          },
+          {
+            "sp": "A",
+            "jp": "消費税の問題をめぐっても、国会は大きく揺れたよね。",
+            "id": "Seputar masalah pajak konsumsi pun, parlemen terguncang hebat kan."
+          },
+          {
+            "sp": "B",
+            "jp": "あの議員は演説にかけては一流だけど、内容は薄いね。",
+            "id": "Anggota dewan itu kalau soal pidato kelas satu, tapi isinya tipis."
+          },
+          {
+            "sp": "A",
+            "jp": "県民に対してあんな発言をするなんて、失礼だよ。",
+            "id": "Berani-beraninya berkata begitu terhadap warga prefektur, tidak sopan."
+          },
+          {
+            "sp": "B",
+            "jp": "環境問題に関しましては、課長が説明することになっている。",
+            "id": "Mengenai masalah lingkungan, kepala seksilah yang akan menjelaskan."
+          },
+          {
+            "sp": "A",
+            "jp": "ごみ処理の問題をめぐる議論は、まだ続きそうだね。",
+            "id": "Diskusi seputar masalah pengolahan sampah sepertinya masih berlanjut."
+          },
+          {
+            "sp": "B",
+            "jp": "うん。住民に対する説明が足りないのが原因だよ。",
+            "id": "Ya. Penyebabnya penjelasan terhadap warga yang kurang."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "今回の事故___詳しい原因はまだ分かっていない。",
+        "o": [
+          "に関して",
+          "をめぐって",
+          "にかけては",
+          "に対して"
+        ],
+        "a": 0,
+        "explain": "に関して = mengenai (netral dan formal, aman untuk topik apa pun)."
+      },
+      {
+        "q": "遺産___親族の間で争いが起きた。",
+        "o": [
+          "に関して",
+          "をめぐって",
+          "にかけては",
+          "に対して"
+        ],
+        "a": 1,
+        "explain": "をめぐって = seputar; dipakai untuk hal yang diperebutkan."
+      },
+      {
+        "q": "彼は料理___誰にも負けない自信がある。",
+        "o": [
+          "に関して",
+          "をめぐって",
+          "にかけては",
+          "に対して"
+        ],
+        "a": 2,
+        "explain": "にかけては = kalau soal... (menonjolkan keunggulan)."
+      },
+      {
+        "q": "目上の人___失礼な態度を取ってはいけない。",
+        "o": [
+          "に関して",
+          "をめぐって",
+          "にかけては",
+          "に対して"
+        ],
+        "a": 3,
+        "explain": "に対して = terhadap (sikap atau tindakan kepada seseorang)."
+      },
+      {
+        "q": "環境問題___会議が開かれた。",
+        "o": [
+          "に対して",
+          "に関して",
+          "をめぐって",
+          "にかけては"
+        ],
+        "a": 1,
+        "explain": "に関して cocok untuk topik netral seperti ini."
+      },
+      {
+        "q": "新法案___与野党の議論が白熱している。",
+        "o": [
+          "に関して",
+          "に対して",
+          "をめぐって",
+          "にかけては"
+        ],
+        "a": 2,
+        "explain": "をめぐって dipakai untuk isu hangat yang diperdebatkan."
+      },
+      {
+        "q": "彼女はピアノ___コンクールで何度も優勝している。",
+        "o": [
+          "にかけては",
+          "に関して",
+          "をめぐって",
+          "に対して"
+        ],
+        "a": 0,
+        "explain": "にかけては menonjolkan bidang keunggulan seseorang."
+      },
+      {
+        "q": "兄___、弟はおとなしい性格だ。",
+        "o": [
+          "に関して",
+          "をめぐって",
+          "にかけては",
+          "に対して"
+        ],
+        "a": 3,
+        "explain": "に対して juga berarti kontras: berbeda dengan..."
+      },
+      {
+        "q": "この件___質問のある方はどうぞ。",
+        "o": [
+          "をめぐって",
+          "に対して",
+          "にかけては",
+          "に関して"
+        ],
+        "a": 3,
+        "explain": "に関して = mengenai; bentuk paling netral."
+      },
+      {
+        "q": "賃上げ___労使の交渉が続いている。",
+        "o": [
+          "に関して",
+          "をめぐって",
+          "に対して",
+          "にかけては"
+        ],
+        "a": 1,
+        "explain": "をめぐって = seputar (isu perundingan yang alot)."
+      }
+    ]
+  },
+  {
+    "id": "n2-8",
+    "bab": 8,
+    "level": "n2",
+    "title": "Berdasarkan & Standar",
+    "desc": "Menyatakan dasar, acuan, dan patokan.",
+    "icon": "📐",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Berdasarkan & Standar",
+        "body": "<p>Lima pola \"berdasarkan\" ini dibedakan oleh <b>apa yang dijadikan dasar<\/b> — bahan, patokan, atau orang. Salah pilih, kalimatnya terdengar janggal bagi penutur asli.<\/p><p><b>をもとに<\/b> memakai sesuatu sebagai <b>bahan<\/b>: pengalaman, cerita, kanji — sesuatu yang diolah menjadi karya baru. <b>に基づいて<\/b> memakai sesuatu sebagai <b>patokan atau landasan<\/b>: data, rencana, undang-undang — dasar yang resmi dan bisa dipertanggungjawabkan.<\/p><p><b>に沿って<\/b> berarti \"mengikuti, sejalan dengan\": tidak menyimpang dari kebijakan atau tema yang sudah ditetapkan. <b>のもとで<\/b> berarti \"di bawah\": berada dalam naungan atau asuhan seseorang maupun organisasi. Sedangkan <b>向け<\/b> menandai <b>target pembaca atau pengguna<\/b>: produk dan layanan yang dirancang untuk kalangan tertentu.<\/p><p>Jebakan umum: <b>をもとに<\/b> dan <b>に基づいて<\/b> tidak selalu bisa ditukar — novel ditulis \"をもとに\" pengalaman, tapi rencana disusun \"に基づいて\" data. <b>向け<\/b> menempel langsung pada targetnya (高齢者向け), bukan pada bendanya.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Berdasarkan & Standar",
+        "items": [
+          {
+            "jp": "基づく",
+            "kj": "基づく",
+            "r": "motodzuku",
+            "id": "berdasarkan",
+            "note": "データに基づく = berdasarkan data"
+          },
+          {
+            "jp": "体験",
+            "kj": "体験",
+            "r": "taiken",
+            "id": "pengalaman",
+            "note": "体験をもとに書く = menulis berdasarkan pengalaman"
+          },
+          {
+            "jp": "個人的",
+            "kj": "個人的",
+            "r": "kojinteki",
+            "id": "pribadi",
+            "note": "個人的な意見 = pendapat pribadi"
+          },
+          {
+            "jp": "売り上げ",
+            "kj": "売り上げ",
+            "r": "uriage",
+            "id": "penjualan",
+            "note": "売り上げ計画 = rencana penjualan"
+          },
+          {
+            "jp": "計画",
+            "kj": "計画",
+            "r": "keikaku",
+            "id": "rencana",
+            "note": "計画を立てる = menyusun rencana"
+          },
+          {
+            "jp": "基本方針",
+            "kj": "基本方針",
+            "r": "kihonhoushin",
+            "id": "kebijakan dasar",
+            "note": "方針に沿って = sesuai kebijakan"
+          },
+          {
+            "jp": "予算案",
+            "kj": "予算案",
+            "r": "yosan'an",
+            "id": "rancangan anggaran",
+            "note": "予算案を作る = menyusun rancangan anggaran"
+          },
+          {
+            "jp": "監督",
+            "kj": "監督",
+            "r": "kantoku",
+            "id": "pelatih",
+            "note": "監督のもとで = di bawah pelatih"
+          },
+          {
+            "jp": "励む",
+            "kj": "励む",
+            "r": "hagemu",
+            "id": "giat; tekun",
+            "note": "練習に励む = giat berlatih"
+          },
+          {
+            "jp": "向け",
+            "kj": "向け",
+            "r": "muke",
+            "id": "untuk (kalangan)",
+            "note": "子供向けの本 = buku untuk anak-anak"
+          },
+          {
+            "jp": "編集",
+            "kj": "編集",
+            "r": "henshuu",
+            "id": "penyuntingan",
+            "note": "編集する = menyunting"
+          },
+          {
+            "jp": "設計",
+            "kj": "設計",
+            "r": "sekkei",
+            "id": "perancangan",
+            "note": "設計する = merancang"
+          },
+          {
+            "jp": "テーマ",
+            "kj": "テーマ",
+            "r": "teema",
+            "id": "tema",
+            "note": "テーマに沿って書く = menulis sesuai tema"
+          },
+          {
+            "jp": "祖母",
+            "kj": "祖母",
+            "r": "sobo",
+            "id": "nenek",
+            "note": "祖母のもとで育つ = dibesarkan oleh nenek"
+          },
+          {
+            "jp": "一人暮らし",
+            "kj": "一人暮らし",
+            "r": "hitorigurashi",
+            "id": "tinggal sendiri",
+            "note": "一人暮らしの高齢者 = lansia yang tinggal sendiri"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Berdasarkan & Standar",
+        "items": [
+          {
+            "arti": "berdasarkan ~ (sebagai bahan)",
+            "examples": [
+              {
+                "id": "Katanya novel ini ditulis berdasarkan pengalaman pribadi penulisnya sendiri.",
+                "jp": "この小説は作者自身の個人的な体験をもとに書いたものだそうだ。",
+                "rd": "このしょうせつはさくしゃじしんのこじんてきなたいけんをもとにかいたものだそうだ。"
+              },
+              {
+                "id": "Logo kaus ini menarik, kan? Katanya dibuat berdasarkan kanji 'bunga'.",
+                "jp": "このシャツのマーク、面白いでしょう。「花」という漢字をもとにして作ったんだそうです。",
+                "rd": "このしゃつのまーく、おもしろいでしょう。「はな」というかんじをもとにしてつくったんだそうです。"
+              },
+              {
+                "id": "Film yang dibuat berdasarkan kecelakaan pesawat itu bukan hanya ini. Masih ada yang lain.",
+                "jp": "あの飛行機事故をもとにした映画はこれだけじゃない。ほかにもある。",
+                "rd": "あのひこうきじこをもとにしたえいがはこれだけじゃない。ほかにもある。"
+              }
+            ],
+            "explain": "Pola ini berarti menciptakan sesuatu yang baru dengan menjadikan suatu hal sebagai bahan, dasar, atau pengalaman. Catatan penting: tidak dipakai untuk bahan fisik yang nyata seperti bahan masakan. Kalimat sesudahnya biasanya memakai kata kerja penciptaan seperti 作る (membuat), デザインする (mendesain), atau 考え出す (menciptakan).",
+            "pattern": "kata benda + をもとに（して）",
+            "tabel": [
+              {
+                "k": "kata benda + をもとに（して）",
+                "v": "berdasarkan ~"
+              },
+              {
+                "k": "kata benda + をもとにした + kata benda",
+                "v": "(kata benda) yang berdasarkan ~"
+              }
+            ]
+          },
+          {
+            "arti": "berdasarkan ~ (sebagai patokan)",
+            "examples": [
+              {
+                "id": "Saya ingin menyusun rencana penjualan berdasarkan data terbaru.",
+                "jp": "最新のデータに基づいて売り上げ計画を立てたいと思います。",
+                "rd": "さいしんのでーたにもとづいてうりあげけいかくをたてたいとおもいます。"
+              },
+              {
+                "id": "Jalan-jalan baru bermunculan di mana-mana berdasarkan rencana jalan nasional.",
+                "jp": "国の道路計画に基づいてあちこちに新しい道路ができ上がっていく。",
+                "rd": "くにのどうろけいかくにもとづいてあちこちにあたらしいどうろができあがっていく。"
+              },
+              {
+                "id": "Di gym ini, latihan otot dilakukan berdasarkan hasil eksperimen ilmiah.",
+                "jp": "このジムでは、科学的な実験結果に基づいた筋肉トレーニングを行っている。",
+                "rd": "このじむでは、かがくてきなじっけんけっかにもとづいたきんにくとれーにんぐをおこなっている。"
+              },
+              {
+                "id": "Dalam seminar penjelasan studi ke luar negeri hari ini, saya bisa mendengar cerita bagus yang berdasarkan pengalaman nyata.",
+                "jp": "今日の留学説明会では、実際の経験に基づくいい話を聞くことができた。",
+                "rd": "きょうのりゅうがくせつめいかいでは、じっさいのけいけんにもとづくいいはなしをきくことができた。"
+              }
+            ],
+            "explain": "Pola ini dipakai saat melakukan sesuatu dengan menjadikan hal tertentu sebagai patokan atau dasar — misalnya data, rencana, atau hasil survei. Bedanya dengan をもとに: kalau をもとに menekankan 'menciptakan sesuatu dari suatu bahan', maka に基づいて menekankan 'bertindak sesuai patokan'.",
+            "pattern": "kata benda + に基づいて",
+            "tabel": [
+              {
+                "k": "kata benda + に基づいて",
+                "v": "berdasarkan ~"
+              },
+              {
+                "k": "kata benda + に基づく/基づいた + kata benda",
+                "v": "(kata benda) yang berdasarkan ~"
+              }
+            ]
+          },
+          {
+            "arti": "sesuai dengan ~; mengikuti ~",
+            "examples": [
+              {
+                "id": "Saat ini kami sedang menyusun rancangan anggaran tahun ini sesuai dengan kebijakan dasar pemerintah.",
+                "jp": "今、政府の基本方針に沿って今年度の予算案を作っている。",
+                "rd": "いま、せいふのきほんほうしんにそってこんねんどのよさんあんをつくっている。"
+              },
+              {
+                "id": "Silakan lanjutkan menulis laporan sesuai tema yang diberikan.",
+                "jp": "与えられたテーマに沿ってレポートを書き進めてください。",
+                "rd": "あたえられたてーまにそってれぽーとをかきすすめてください。"
+              },
+              {
+                "id": "Saya akan berusaha agar bisa berprestasi sesuai harapan Anda semua.",
+                "jp": "皆さんのご期待に沿った活躍ができるように頑張ります。",
+                "rd": "みなさんのごきたいにそったかつやくができるようにがんばります。"
+              },
+              {
+                "id": "Saya ingin arsitek membuat desain rumah yang sesuai dengan keinginan pemesan.",
+                "jp": "建築家は注文する人の意向に沿う住宅設計をしてほしい。",
+                "rd": "けんちくかはちゅうもんするひとのいこうにそうじゅうたくせっけいをしてほしい。"
+              }
+            ],
+            "explain": "Artinya melakukan sesuatu agar sesuai dan tidak melenceng dari suatu patokan, seperti aturan, kebijakan, atau harapan orang lain. Nuansanya seperti 'berjalan beriringan' dengan patokan itu — karena itu kalimat sesudahnya biasanya menyatakan rangkaian tindakan yang berkesinambungan, bukan tindakan sesaat.",
+            "pattern": "kata benda + に沿って",
+            "tabel": [
+              {
+                "k": "kata benda + に沿って",
+                "v": "sesuai dengan ~"
+              },
+              {
+                "k": "kata benda + に沿った + kata benda",
+                "v": "(kata benda) yang sesuai ~"
+              }
+            ]
+          },
+          {
+            "arti": "di bawah ~; dalam kondisi ~",
+            "examples": [
+              {
+                "id": "Tim kini berlatih dengan giat di bawah pelatih baru.",
+                "jp": "チームは今、新しい監督のもとで練習に励んでいる。",
+                "rd": "ちーむはいま、あたらしいかんとくのもとでれんしゅうにはげんでいる。"
+              },
+              {
+                "id": "Sejak lahir hingga kini, saya hidup bahagia di bawah asuhan nenek yang baik hati.",
+                "jp": "わたしは生まれてからずっと、優しい祖母のもとで幸せに暮らしてきました。",
+                "rd": "わたしはうまれてからずっと、やさしいそぼのもとでしあわせにくらしてきました。"
+              },
+              {
+                "id": "Di laboratorium ini, obat baru dibuat dari tumbuhan yang ditanam dalam suhu dan kelembapan yang konstan.",
+                "jp": "この研究所では、一定の温度と湿度のもとで育てられた植物から新しい薬品を作り出した。",
+                "rd": "このけんきゅうじょでは、いっていのおんどとしつどのもとでそだてられたしょくぶつからあたらしいやくひんをつくりだした。"
+              },
+              {
+                "id": "Api unggun di halaman sekolah adalah acara terbesar musim panas dan sudah berlangsung 10 tahun atas persetujuan warga sekitar.",
+                "jp": "校庭でのキャンプファイヤーは夏の最大イベントで、周辺住民の了解のもとに10年も続いている。",
+                "rd": "こうていでのきゃんぷふぁいやーはなつのさいだいいべんとで、しゅうへんじゅうみんのりょうかいのもとにじゅうねんもつづいている。"
+              },
+              {
+                "id": "Sungguh disayangkan alam terus hilang atas nama pembangunan.",
+                "jp": "開発という名のもとに自然が失われていくのは残念だ。",
+                "rd": "かいはつというなのもとにしぜんがうしなわれていくのはざんねんだ。"
+              }
+            ],
+            "explain": "Kedua bentuk ini mirip tetapi pemakaiannya berbeda dan sering diujikan. のもとで menempel pada kata yang menyatakan orang (guru, orang tua, pelatih) dengan arti 'di bawah pengaruh atau bimbingan orang itu'. Sedangkan のもとに menempel pada kata yang menyatakan kondisi atau situasi (pengelolaan, persetujuan) dengan arti 'dalam kondisi itu'.",
+            "pattern": "kata benda + のもとで / のもとに",
+            "tabel": [
+              {
+                "k": "kata (orang) + のもとで",
+                "v": "di bawah (bimbingan) ~"
+              },
+              {
+                "k": "kata (kondisi) + のもとに",
+                "v": "dalam kondisi ~"
+              }
+            ]
+          },
+          {
+            "arti": "ditujukan untuk ~; khusus ~",
+            "examples": [
+              {
+                "id": "Apartemen ini dirancang untuk lansia yang tinggal sendiri.",
+                "jp": "このマンションは一人暮らしの高齢者向けに設計されています。",
+                "rd": "このまんしょんはひとりぐらしのこうれいしゃむけにせっけいされています。"
+              },
+              {
+                "id": "Ini majalah yang disunting untuk anak-anak yang suka IPA.",
+                "jp": "これは理科が好きな子供向けに編集された雑誌です。",
+                "rd": "これはりかがすきなこどもむけにへんしゅうされたざっしです。"
+              },
+              {
+                "id": "Diputuskan akan dibuka kelas memasak untuk pria lajang.",
+                "jp": "独身男性向けの料理教室が開かれることになった。",
+                "rd": "どくしんだんせいむけのりょうりきょうしつがひらかれることになった。"
+              },
+              {
+                "id": "Generator yang diproduksi di pabrik ini ditujukan untuk perorangan.",
+                "jp": "この工場で生産されている発電機は個人向けだ。",
+                "rd": "このこうじょうでせいさんされているはつでんきはこじんむけだ。"
+              }
+            ],
+            "explain": "Pola ini menyatakan bahwa sesuatu dirancang atau dibuat agar cocok untuk target tertentu — biasanya orang atau kelompok tertentu. Kalimat sesudahnya sering memakai kata kerja seperti 作る (membuat), 設計する (merancang), atau デザインする. Dalam kalimat, bentuk 向けに juga sering muncul sebelum kata kerja.",
+            "pattern": "kata benda + 向けだ",
+            "tabel": [
+              {
+                "k": "kata benda (orang) + 向けだ",
+                "v": "ditujukan untuk ~"
+              },
+              {
+                "k": "～向けに + kata kerja",
+                "v": "(dibuat) untuk ~"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 8",
+        "items": [
+          {
+            "ch": "基",
+            "kun": "もと",
+            "on": "キ",
+            "id": "dasar",
+            "note": "基本 (きほん) = dasar"
+          },
+          {
+            "ch": "沿",
+            "kun": "そ(う)",
+            "on": "エン",
+            "id": "mengikuti",
+            "note": "沿線 (えんせん) = sepanjang jalur"
+          },
+          {
+            "ch": "験",
+            "kun": "—",
+            "on": "ケン",
+            "id": "menguji",
+            "note": "経験 (けいけん) = pengalaman"
+          },
+          {
+            "ch": "売",
+            "kun": "う(る)",
+            "on": "バイ",
+            "id": "menjual",
+            "note": "発売 (はつばい) = mulai dijual"
+          },
+          {
+            "ch": "監",
+            "kun": "—",
+            "on": "カン",
+            "id": "mengawasi",
+            "note": "監督 (かんとく) = pelatih"
+          },
+          {
+            "ch": "励",
+            "kun": "はげ(む)",
+            "on": "レイ",
+            "id": "memacu",
+            "note": "激励 (げきれい) = dorongan semangat"
+          },
+          {
+            "ch": "編",
+            "kun": "あ(む)",
+            "on": "ヘン",
+            "id": "menyusun",
+            "note": "編集 (へんしゅう) = penyuntingan"
+          },
+          {
+            "ch": "設",
+            "kun": "もう(ける)",
+            "on": "セツ",
+            "id": "mendirikan",
+            "note": "設計 (せっけい) = perancangan"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "最新のデータに基づいて、来期の売り上げ計画を立てよう。",
+            "id": "Mari susun rencana penjualan semester depan berdasarkan data terbaru."
+          },
+          {
+            "sp": "B",
+            "jp": "いいね。政府の基本方針に沿って予算案も作らないとね。",
+            "id": "Bagus. Kita juga harus menyusun rancangan anggaran sesuai kebijakan dasar pemerintah."
+          },
+          {
+            "sp": "A",
+            "jp": "この小説、作者の体験をもとに書いたらしいよ。",
+            "id": "Katanya novel ini ditulis berdasarkan pengalaman penulisnya."
+          },
+          {
+            "sp": "B",
+            "jp": "へえ。新しい監督のもとで、チームも頑張っているみたいだね。",
+            "id": "Wah. Sepertinya tim juga berjuang di bawah pelatih baru."
+          },
+          {
+            "sp": "A",
+            "jp": "この雑誌は子供向けに編集されているんだって。",
+            "id": "Katanya majalah ini disunting untuk anak-anak."
+          },
+          {
+            "sp": "B",
+            "jp": "テーマに沿ってレポートを書くのは、意外と難しいよね。",
+            "id": "Menulis laporan sesuai tema ternyata sulit ya."
+          },
+          {
+            "sp": "A",
+            "jp": "うん。でも、基本に沿って進めれば大丈夫さ。",
+            "id": "Ya. Tapi kalau dikerjakan sesuai dasarnya, pasti beres."
+          },
+          {
+            "sp": "B",
+            "jp": "そうだね。一人暮らしの高齢者向けの企画も考えてみよう。",
+            "id": "Betul. Mari pikirkan juga program untuk lansia yang tinggal sendiri."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "この映画は実話___作られている。",
+        "o": [
+          "をもとに",
+          "に基づいて",
+          "に沿って",
+          "のもとで"
+        ],
+        "a": 0,
+        "explain": "をもとに = memakai sesuatu sebagai bahan karya."
+      },
+      {
+        "q": "法律___新しい制度が導入された。",
+        "o": [
+          "をもとに",
+          "に基づいて",
+          "に沿って",
+          "向け"
+        ],
+        "a": 1,
+        "explain": "に基づいて = memakai sesuatu sebagai patokan resmi."
+      },
+      {
+        "q": "指示___作業を進めてください。",
+        "o": [
+          "をもとに",
+          "に基づいて",
+          "に沿って",
+          "のもとで"
+        ],
+        "a": 2,
+        "explain": "に沿って = mengikuti, sejalan dengan."
+      },
+      {
+        "q": "彼は有名な先生___ピアノを学んだ。",
+        "o": [
+          "をもとに",
+          "に基づいて",
+          "に沿って",
+          "のもとで"
+        ],
+        "a": 3,
+        "explain": "のもとで = di bawah (naungan seseorang)."
+      },
+      {
+        "q": "この絵本は幼児___書かれている。",
+        "o": [
+          "をもとに",
+          "に基づいて",
+          "向け",
+          "のもとで"
+        ],
+        "a": 2,
+        "explain": "向け = ditujukan untuk (kalangan tertentu)."
+      },
+      {
+        "q": "アンケート結果___改善案を提案した。",
+        "o": [
+          "に基づいて",
+          "をもとに",
+          "に沿って",
+          "のもとで"
+        ],
+        "a": 0,
+        "explain": "に基づいて = berdasarkan (sebagai landasan)."
+      },
+      {
+        "q": "伝説___生まれた物語だそうだ。",
+        "o": [
+          "に基づいて",
+          "をもとに",
+          "に沿って",
+          "向け"
+        ],
+        "a": 1,
+        "explain": "をもとに = memakai legenda sebagai bahan cerita."
+      },
+      {
+        "q": "厳しい父___育った彼は礼儀正しい。",
+        "o": [
+          "をもとに",
+          "に基づいて",
+          "に沿って",
+          "のもとで"
+        ],
+        "a": 3,
+        "explain": "のもとで = di bawah asuhan seseorang."
+      },
+      {
+        "q": "社是___行動することが求められる。",
+        "o": [
+          "に沿って",
+          "をもとに",
+          "に基づいて",
+          "向け"
+        ],
+        "a": 0,
+        "explain": "に沿って = sejalan dengan (kebijakan yang ditetapkan)."
+      },
+      {
+        "q": "ビジネスパーソン___雑誌が増えている。",
+        "o": [
+          "をもとに",
+          "に基づいて",
+          "に沿って",
+          "向け"
+        ],
+        "a": 3,
+        "explain": "向け menempel pada target pembacanya."
+      }
+    ]
+  },
+  {
+    "id": "n2-9",
+    "bab": 9,
+    "level": "n2",
+    "title": "Seiring & Menyesuaikan",
+    "desc": "Menyatakan perubahan seiring dan penyesuaian.",
+    "icon": "🌊",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Seiring & Menyesuaikan",
+        "body": "<p>Chapter ini tentang <b>perubahan yang berjalan beriringan<\/b> dan <b>penyesuaian terhadap sesuatu<\/b> — pola favorit teks berita dan esai N2.<\/p><p><b>につれて<\/b> dan <b>にしたがって<\/b> sama-sama berarti \"seiring...\", untuk perubahan bertahap yang berjalan paralel. <b>に伴って<\/b> dan <b>とともに<\/b> lebih formal dan sering dipakai untuk perubahan <b>berskala besar<\/b>: urbanisasi, digitalisasi, perubahan sosial.<\/p><p><b>次第だ<\/b> berarti \"tergantung\": hasil ditentukan oleh faktor yang disebut. <b>に応じて<\/b> berarti \"sesuai dengan\": menyesuaikan tindakan dengan kondisi. Sedangkan <b>につけて<\/b> unik: \"setiap (melakukan)..., selalu...\" — dipakai untuk <b>perasaan yang muncul berulang<\/b> setiap kali sesuatu terjadi.<\/p><p>Jebakan umum: <b>につれて<\/b> menuntut perubahan <b>bertahap di kedua sisi<\/b>; jangan pakai untuk perubahan mendadak. <b>につけて<\/b> hampir selalu diikuti ungkapan perasaan (心配になる、悲しくなる), bukan fakta netral.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Seiring & Menyesuaikan",
+        "items": [
+          {
+            "jp": "伴う",
+            "kj": "伴う",
+            "r": "tomonau",
+            "id": "menyertai",
+            "note": "変化に伴って = seiring perubahan"
+          },
+          {
+            "jp": "次第",
+            "kj": "次第",
+            "r": "shidai",
+            "id": "tergantung",
+            "note": "努力次第だ = tergantung usaha"
+          },
+          {
+            "jp": "応じる",
+            "kj": "応じる",
+            "r": "oujiru",
+            "id": "menanggapi; sesuai",
+            "note": "予算に応じる = sesuai anggaran"
+          },
+          {
+            "jp": "台風",
+            "kj": "台風",
+            "r": "taifuu",
+            "id": "topan",
+            "note": "台風の接近 = mendekatnya topan"
+          },
+          {
+            "jp": "上達",
+            "kj": "上達",
+            "r": "joutatsu",
+            "id": "kemajuan",
+            "note": "会話が上達する = percakapan meningkat"
+          },
+          {
+            "jp": "普及",
+            "kj": "普及",
+            "r": "fukyuu",
+            "id": "penyebaran",
+            "note": "スマホの普及 = meluasnya ponsel pintar"
+          },
+          {
+            "jp": "変化",
+            "kj": "変化",
+            "r": "henka",
+            "id": "perubahan",
+            "note": "変化に伴って = seiring perubahan"
+          },
+          {
+            "jp": "考え方",
+            "kj": "考え方",
+            "r": "kangaekata",
+            "id": "cara berpikir",
+            "note": "考え方次第だ = tergantung cara berpikir"
+          },
+          {
+            "jp": "年齢",
+            "kj": "年齢",
+            "r": "nenrei",
+            "id": "usia",
+            "note": "年齢に応じて = sesuai usia"
+          },
+          {
+            "jp": "希望",
+            "kj": "希望",
+            "r": "kibou",
+            "id": "harapan",
+            "note": "希望がわく = harapan muncul"
+          },
+          {
+            "jp": "うわさ",
+            "kj": "うわさ",
+            "r": "uwasa",
+            "id": "gosip",
+            "note": "うわさを聞く = mendengar gosip"
+          },
+          {
+            "jp": "気持ち",
+            "kj": "気持ち",
+            "r": "kimochi",
+            "id": "perasaan",
+            "note": "気持ちが落ち着く = perasaan tenang"
+          },
+          {
+            "jp": "日がたつ",
+            "kj": "日がたつ",
+            "r": "higatatsu",
+            "id": "waktu berlalu",
+            "note": "日がたつにつれて = seiring berjalannya waktu"
+          },
+          {
+            "jp": "留学生",
+            "kj": "留学生",
+            "r": "ryuugakusei",
+            "id": "mahasiswa asing",
+            "note": "留学生の増加 = bertambahnya mahasiswa asing"
+          },
+          {
+            "jp": "コミュニケーション",
+            "kj": "コミュニケーション",
+            "r": "komyunikeeshon",
+            "id": "komunikasi",
+            "note": "コミュニケーションを取る = berkomunikasi"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Seiring & Menyesuaikan",
+        "items": [
+          {
+            "arti": "seiring ~, … pun … (berubah bersama)",
+            "examples": [
+              {
+                "id": "Seiring mendekatnya topan, hujan dan angin semakin kencang.",
+                "jp": "台風の接近につれて、雨や風が強くなってきた。",
+                "rd": "たいふうのせっきんにつれて、あめやかぜがつよくなってきた。"
+              },
+              {
+                "id": "Seiring berjalannya waktu sejak datang ke Jepang, kemampuan percakapanku meningkat.",
+                "jp": "日本に来て日がたつにつれて、会話が上達してきた。",
+                "rd": "にほんにきてひがたつにつれて、かいわがじょうたつしてきた。"
+              },
+              {
+                "id": "Seiring bertambahnya kecepatan mobil, risiko kecelakaan pun meningkat.",
+                "jp": "車のスピードが上がるにしたがって、事故の危険性も高くなる。",
+                "rd": "くるまのすぴーどがあがるにしたがって、じこのきけんせいもたかくなる。"
+              },
+              {
+                "id": "Seiring tumbuh besar, anak laki-lakiku menjadi pendiam.",
+                "jp": "息子は成長するにしたがって、口数が少なくなった。",
+                "rd": "むすこはせいちょうするにしたがって、くちかずがすくなくなった。"
+              }
+            ],
+            "explain": "Pola ini menyatakan dua perubahan yang terjadi bersamaan: ketika satu pihak berubah, pihak lain ikut berubah. Keduanya hanya dipakai untuk perubahan yang terjadi secara alami, bukan untuk tindakan yang disengaja. Perbedaannya: につれて hanya boleh dipakai untuk perubahan satu arah (makin… makin…), sedangkan にしたがって boleh juga untuk perubahan dua arah.",
+            "pattern": "kata benda / kata kerja bentuk kamus + につれて / にしたがって",
+            "tabel": [
+              {
+                "k": "kata benda + につれて/にしたがって",
+                "v": "seiring ~"
+              },
+              {
+                "k": "kata kerja bentuk kamus + につれて/にしたがって",
+                "v": "seiring (melakukan) ~"
+              }
+            ]
+          },
+          {
+            "arti": "seiring ~; menyertai ~",
+            "examples": [
+              {
+                "id": "Seiring perubahan jumlah mahasiswa asing yang masuk, jumlah kelas perlu diubah.",
+                "jp": "入学する留学生数の変化に伴って、クラス数を変える必要がある。",
+                "rd": "にゅうがくするりゅうがくせいすうのへんかにともなって、くらすすうをかえるひつようがある。"
+              },
+              {
+                "id": "Seiring meluasnya penggunaan email, cara berkomunikasi pun berubah.",
+                "jp": "メールが普及するに伴い、コミュニケーションの方法も変わってきた。",
+                "rd": "めーるがふきゅうするにともない、こみゅにけーしょんのほうほうもかわってきた。"
+              },
+              {
+                "id": "Saya ingin mengamati berbagai perubahan yang menyertai pemanasan global.",
+                "jp": "地球の温暖化に伴うさまざまな変化を観察したいと思っている。",
+                "rd": "ちきゅうのおんだんかにともなうさまざまなへんかをかんさつしたいとおもっている。"
+              },
+              {
+                "id": "Seiring pulihnya ekonomi, raut wajah orang-orang pun menjadi cerah.",
+                "jp": "経済の回復とともに、人々の表情も明るくなってきた。",
+                "rd": "けいざいのかいふくとともに、ひとびとのひょうじょうもあかるくなってきた。"
+              },
+              {
+                "id": "Seiring meningkatnya penjualan minuman botol plastik, daur ulang pun mulai dipikirkan dengan serius.",
+                "jp": "ペットボトル飲料の売れ行きが伸びるとともに、リサイクルも真剣に考えられるようになった。",
+                "rd": "ぺっとぼとるいんりょうのうれゆきがのびるとともに、りさいくるもしんけんにかんがえられるようになった。"
+              }
+            ],
+            "explain": "Keduanya adalah ungkapan formal yang artinya mirip dengan につれて, tetapi cakupannya lebih luas: bisa juga dipakai untuk perubahan yang disengaja (dilakukan oleh orang), bukan hanya perubahan alami. Sama seperti pasangan sebelumnya, とともに hanya untuk perubahan satu arah, sedangkan に伴って boleh dua arah. Keduanya menyoroti perubahan secara keseluruhan, bukan tahap demi tahap.",
+            "pattern": "kata benda / kata kerja bentuk kamus + に伴って / とともに",
+            "tabel": [
+              {
+                "k": "kata benda / kata kerja bentuk kamus + に伴って",
+                "v": "seiring ~"
+              },
+              {
+                "k": "kata benda / kata kerja bentuk kamus + とともに",
+                "v": "seiring ~"
+              },
+              {
+                "k": "kata benda + に伴う + kata benda",
+                "v": "(kata benda) yang menyertai ~"
+              }
+            ]
+          },
+          {
+            "arti": "tergantung ~; ditentukan oleh ~",
+            "examples": [
+              {
+                "id": "Apakah hidup menyenangkan atau tidak tergantung cara berpikir.",
+                "jp": "人生が楽しいかどうかは考え方次第だ。",
+                "rd": "じんせいがたのしいかどうかはかんがえかたしだいだ。"
+              },
+              {
+                "id": "Menang atau tidaknya pertandingan musim gugur ditentukan oleh latihan musim panas ini.",
+                "jp": "この夏のトレーニング次第で秋の試合に勝てるかどうかが決まる。",
+                "rd": "このなつのとれーにんぐしだいであきのしあいにかてるかどうかがきまる。"
+              },
+              {
+                "id": "Restoran itu, tergantung suasananya, pelanggannya bisa bertambah atau berkurang.",
+                "jp": "レストランは、雰囲気次第でお客様が増えたり減ったりするのです。",
+                "rd": "れすとらんは、ふんいきしだいでおきゃくさまがふえたりへったりするのです。"
+              },
+              {
+                "id": "Tergantung caramu menyampaikannya, tawaran ini bisa saja ditolak.",
+                "jp": "あなたの言い方次第では、この話、断られるかもしれませんよ。",
+                "rd": "あなたのいいかたしだいでは、このはなし、ことわられるかもしれませんよ。"
+              }
+            ],
+            "explain": "Pola ini menyatakan bahwa suatu hasil akan berubah atau ditentukan oleh suatu hal yang memiliki banyak variasi. Kalimat sesudahnya menyatakan perubahan atau keputusan yang mengikuti. Bentuk 次第では dipakai untuk menyatakan salah satu kemungkinan di antara berbagai kemungkinan yang ada.",
+            "pattern": "kata benda + 次第だ",
+            "tabel": [
+              {
+                "k": "kata benda + 次第だ",
+                "v": "tergantung ~"
+              },
+              {
+                "k": "kata benda + 次第では",
+                "v": "tergantung ~, bisa saja …"
+              }
+            ]
+          },
+          {
+            "arti": "sesuai dengan ~; menyesuaikan ~",
+            "examples": [
+              {
+                "id": "Kami akan menentukan menu pesta sesuai anggaran Anda.",
+                "jp": "ご予算に応じてパーティーのメニューを決めます。",
+                "rd": "ごよさんにおうじてぱーてぃーのめにゅーをきめます。"
+              },
+              {
+                "id": "Pilihkan buku sesuai usia anak Anda.",
+                "jp": "お子さんの年齢に応じて本を選んであげてください。",
+                "rd": "おこさんのねんれいにおうじてほんをえらんであげてください。"
+              },
+              {
+                "id": "Jumlah pajak yang dibayarkan berubah sesuai penghasilan.",
+                "jp": "収入に応じて収める税金の額が変わる。",
+                "rd": "しゅうにゅうにおうじておさめるぜいきんのがくがかわる。"
+              },
+              {
+                "id": "Berolahragalah sesuai kemampuan fisik tanpa memaksakan diri.",
+                "jp": "無理をしないで体力に応じた運動をしましょう。",
+                "rd": "むりをしないでたいりょくにおうじたうんどうをしましょう。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk hal yang sifatnya tidak tetap dan bisa berubah-ubah — misalnya usia, kemampuan fisik, atau cuaca. Artinya menyesuaikan tindakan, atau terjadinya perubahan, mengikuti hal itu. Kalimat sesudahnya menyatakan penyesuaian atau perubahan yang mengikuti.",
+            "pattern": "kata benda + に応じて / に応じた + kata benda",
+            "tabel": [
+              {
+                "k": "kata benda + に応じて",
+                "v": "sesuai dengan ~"
+              },
+              {
+                "k": "kata benda + に応じた + kata benda",
+                "v": "(kata benda) yang sesuai ~"
+              }
+            ]
+          },
+          {
+            "arti": "setiap (melakukan) ~, selalu … (perasaan)",
+            "examples": [
+              {
+                "id": "Setiap mendengar lagu ini, harapan muncul di hatiku.",
+                "jp": "この歌を聞くにつけて、心に希望がわいてくる。",
+                "rd": "このうたをきくにつけて、こころにきぼうがわいてくる。"
+              },
+              {
+                "id": "Setiap mendengar gosip tentangnya, aku menjadi khawatir.",
+                "jp": "彼女のうわさを聞くにつけて、心配になる。",
+                "rd": "かのじょのうわさをきくにつけて、しんぱいになる。"
+              },
+              {
+                "id": "Setiap membaca buku penulis ini, aku merenungi diriku saat ini.",
+                "jp": "この作家の本を読むにつけて、今の自分を反省しています。",
+                "rd": "このさっかのほんをよむにつけて、いまのじぶんをはんせいしています。"
+              },
+              {
+                "id": "Ayah selalu saja menceritakan kenangannya saat muda di luar negeri dalam setiap kesempatan.",
+                "jp": "父は何かにつけて、若いころ外国で過ごした思い出を語る。",
+                "rd": "ちちはなにかにつけて、わかいころがいこくですごしたおもいでをかたる。"
+              }
+            ],
+            "explain": "Pola ini berarti: setiap kali melakukan sesuatu, perasaan tertentu selalu muncul. Karena itu kalimat sesudahnya harus menyatakan gejolak hati — seperti senang, sedih, atau khawatir. Pengecualian: ungkapan 何かにつけて adalah idiom yang artinya 'dalam setiap kesempatan', dan dalam hal ini kalimat sesudahnya tidak harus tentang perasaan.",
+            "pattern": "kata kerja bentuk kamus + につけて",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + につけて",
+                "v": "setiap (melakukan) ~, …"
+              },
+              {
+                "k": "何かにつけて",
+                "v": "dalam setiap kesempatan (idiom)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 9",
+        "items": [
+          {
+            "ch": "伴",
+            "kun": "ともな(う)",
+            "on": "ハン",
+            "id": "menyertai",
+            "note": "同伴 (どうはん) = pendamping"
+          },
+          {
+            "ch": "応",
+            "kun": "—",
+            "on": "オウ",
+            "id": "menanggapi",
+            "note": "応用 (おうよう) = penerapan"
+          },
+          {
+            "ch": "普",
+            "kun": "—",
+            "on": "フ",
+            "id": "umum",
+            "note": "普及 (ふきゅう) = penyebaran"
+          },
+          {
+            "ch": "変",
+            "kun": "か(わる)",
+            "on": "ヘン",
+            "id": "berubah",
+            "note": "変化 (へんか) = perubahan"
+          },
+          {
+            "ch": "考",
+            "kun": "かんが(える)",
+            "on": "コウ",
+            "id": "berpikir",
+            "note": "考え方 (かんがえかた) = cara berpikir"
+          },
+          {
+            "ch": "齢",
+            "kun": "よわい",
+            "on": "レイ",
+            "id": "usia",
+            "note": "年齢 (ねんれい) = usia"
+          },
+          {
+            "ch": "希",
+            "kun": "—",
+            "on": "キ",
+            "id": "harap",
+            "note": "希望 (きぼう) = harapan"
+          },
+          {
+            "ch": "慮",
+            "kun": "—",
+            "on": "リョ",
+            "id": "mempertimbangkan",
+            "note": "配慮 (はいりょ) = perhatian"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "日本に来て日がたつにつれて、会話が上達してきたよ。",
+            "id": "Seiring berjalannya waktu sejak datang ke Jepang, percakapanku meningkat."
+          },
+          {
+            "sp": "B",
+            "jp": "すごいね。スマホの普及に伴い、勉強法も変わったよね。",
+            "id": "Hebat. Seiring meluasnya ponsel pintar, cara belajar pun berubah."
+          },
+          {
+            "sp": "A",
+            "jp": "人生が楽しいかどうかは、考え方次第だと思うよ。",
+            "id": "Hidup menyenangkan atau tidak, menurutku tergantung cara berpikir."
+          },
+          {
+            "sp": "B",
+            "jp": "確かに。年齢に応じて、興味も変わってきた気がする。",
+            "id": "Benar juga. Rasanya minatku pun berubah sesuai usia."
+          },
+          {
+            "sp": "A",
+            "jp": "この歌を聞くにつけて、故郷を思い出すんだ。",
+            "id": "Setiap mendengar lagu ini, aku teringat kampung halaman."
+          },
+          {
+            "sp": "B",
+            "jp": "わかる。うわさを聞くにつけて、心配になるよね。",
+            "id": "Paham. Setiap mendengar gosip, jadi khawatir kan."
+          },
+          {
+            "sp": "A",
+            "jp": "留学生の増加に伴って、学校の対応も変わりつつあるよ。",
+            "id": "Seiring bertambahnya mahasiswa asing, penanganan sekolah pun berubah."
+          },
+          {
+            "sp": "B",
+            "jp": "時代の変化につれて、私たちも変わらなきゃね。",
+            "id": "Seiring perubahan zaman, kita pun harus berubah."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "年を取る___、体力が衰えていく。",
+        "o": [
+          "につれて",
+          "に伴って",
+          "次第だ",
+          "につけて"
+        ],
+        "a": 0,
+        "explain": "につれて = seiring (perubahan bertahap yang paralel)."
+      },
+      {
+        "q": "都市化___、地方の人口が減少している。",
+        "o": [
+          "につれて",
+          "に伴って",
+          "応じて",
+          "につけて"
+        ],
+        "a": 1,
+        "explain": "に伴って = seiring; untuk perubahan berskala besar."
+      },
+      {
+        "q": "試合の結果は今日の調子___。",
+        "o": [
+          "につれて",
+          "に伴って",
+          "次第だ",
+          "に応じて"
+        ],
+        "a": 2,
+        "explain": "次第だ = tergantung; ditentukan oleh..."
+      },
+      {
+        "q": "季節___服装を変える必要がある。",
+        "o": [
+          "につれて",
+          "に応じて",
+          "に伴って",
+          "につけて"
+        ],
+        "a": 1,
+        "explain": "に応じて = sesuai dengan; menyesuaikan."
+      },
+      {
+        "q": "彼の話を聞く___、涙が出てきた。",
+        "o": [
+          "につれて",
+          "に伴って",
+          "次第だ",
+          "につけて"
+        ],
+        "a": 3,
+        "explain": "につけて = setiap..., selalu... (perasaan berulang)."
+      },
+      {
+        "q": "景気の回復___、消費も上向いている。",
+        "o": [
+          "につけて",
+          "につれて",
+          "に伴って",
+          "応じて"
+        ],
+        "a": 1,
+        "explain": "につれて untuk dua perubahan yang berjalan bersama."
+      },
+      {
+        "q": "グローバル化___、英語の需要が高まっている。",
+        "o": [
+          "につれて",
+          "に応じて",
+          "に伴って",
+          "につけて"
+        ],
+        "a": 2,
+        "explain": "に伴って cocok untuk fenomena sosial berskala besar."
+      },
+      {
+        "q": "旅行の行き先は予算___決めよう。",
+        "o": [
+          "につれて",
+          "に伴って",
+          "次第だ",
+          "に応じて"
+        ],
+        "a": 3,
+        "explain": "に応じて = menyesuaikan dengan kondisi."
+      },
+      {
+        "q": "写真を見る___、亡き母を思い出す。",
+        "o": [
+          "につけて",
+          "につれて",
+          "に伴って",
+          "次第だ"
+        ],
+        "a": 0,
+        "explain": "につけて selalu diikuti ungkapan perasaan."
+      },
+      {
+        "q": "努力___、必ず報われる。",
+        "o": [
+          "につれて",
+          "に伴って",
+          "に応じて",
+          "次第だ"
+        ],
+        "a": 3,
+        "explain": "次第だ = tergantung pada (usaha)."
+      }
+    ]
+  },
+  {
+    "id": "n2-10",
+    "bab": 10,
+    "level": "n2",
+    "title": "Contoh & Sejenisnya",
+    "desc": "Memberi contoh dan menyatakan hal sejenis.",
+    "icon": "💬",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Contoh & Sejenisnya",
+        "body": "<p>Empat pola chapter ini dipakai saat memberi <b>contoh<\/b> atau menyebut <b>hal-hal sejenis<\/b> — tapi cara dan rasanya beda jauh.<\/p><p><b>やら<\/b> mendaftar hal-hal <b>bermacam-macam<\/b> yang terjadi atau ada: \"ada yang..., ada yang...\". <b>といった<\/b> memberi <b>contoh konkret<\/b> dari suatu kelompok: \"seperti A, B, C\". Keduanya untuk contoh, tapi やら menekankan keragaman, といった menekankan keterwakilan.<\/p><p><b>というか<\/b> dipakai saat <b>mengoreksi atau melunakkan<\/b> ungkapan sendiri: \"dibilang X ya... lebih tepatnya Y\". Sedangkan <b>にしても・にしろ・にせよ<\/b> berarti \"baik... maupun...\": mengajukan dua kemungkinan lalu menyatakan kesimpulan yang <b>tetap sama<\/b>.<\/p><p>Jebakan umum: <b>やら<\/b> bukan sekadar pengganti とか — ia membawa nuansa \"macam-macam, tak terhitung\". <b>にしても<\/b> menuntut kesimpulan yang berlaku untuk <b>semua<\/b> pilihan yang disebut, bukan cuma satu.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Contoh & Sejenisnya",
+        "items": [
+          {
+            "jp": "さまざま",
+            "kj": "さまざま",
+            "r": "samazama",
+            "id": "bermacam-macam",
+            "note": "さまざまな意見 = berbagai pendapat"
+          },
+          {
+            "jp": "喜び",
+            "kj": "喜び",
+            "r": "yorokobi",
+            "id": "kegembiraan",
+            "note": "喜びを表す = mengungkapkan kegembiraan"
+          },
+          {
+            "jp": "抑える",
+            "kj": "抑える",
+            "r": "osaeru",
+            "id": "menahan",
+            "note": "気持ちを抑える = menahan perasaan"
+          },
+          {
+            "jp": "情けない",
+            "kj": "情けない",
+            "r": "nasakenai",
+            "id": "menyedihkan",
+            "note": "情けない思い = perasaan menyedihkan"
+          },
+          {
+            "jp": "落ち着き",
+            "kj": "落ち着き",
+            "r": "ochitsuki",
+            "id": "ketenangan",
+            "note": "落ち着きがない = tidak bisa diam"
+          },
+          {
+            "jp": "物置",
+            "kj": "物置",
+            "r": "monooki",
+            "id": "gudang",
+            "note": "物置にする = dijadikan gudang"
+          },
+          {
+            "jp": "とにかく",
+            "kj": "とにかく",
+            "r": "tonikaku",
+            "id": "pokoknya",
+            "note": "とにかくやってみる = pokoknya coba dulu"
+          },
+          {
+            "jp": "新鮮",
+            "kj": "新鮮",
+            "r": "shinsen",
+            "id": "segar",
+            "note": "新鮮な魚 = ikan segar"
+          },
+          {
+            "jp": "第一",
+            "kj": "第一",
+            "r": "daiichi",
+            "id": "yang utama",
+            "note": "安全第一 = keselamatan yang utama"
+          },
+          {
+            "jp": "計画",
+            "kj": "計画",
+            "r": "keikaku",
+            "id": "rencana",
+            "note": "計画を立てる = membuat rencana"
+          },
+          {
+            "jp": "カロリー",
+            "kj": "カロリー",
+            "r": "karorii",
+            "id": "kalori",
+            "note": "カロリーが高い = berkalori tinggi"
+          },
+          {
+            "jp": "緑黄色野菜",
+            "kj": "緑黄色野菜",
+            "r": "ryokuoushokuyasai",
+            "id": "sayuran hijau-kuning",
+            "note": "体にいい野菜 = sayuran baik untuk tubuh"
+          },
+          {
+            "jp": "腹が立つ",
+            "kj": "腹が立つ",
+            "r": "haragatatsu",
+            "id": "marah",
+            "note": "腹が立ってしかたない = sangat marah"
+          },
+          {
+            "jp": "だます",
+            "kj": "だます",
+            "r": "damasu",
+            "id": "menipu",
+            "note": "だまされたとわかる = sadar telah ditipu"
+          },
+          {
+            "jp": "飛び上がる",
+            "kj": "飛び上がる",
+            "r": "tobiagaru",
+            "id": "melompat",
+            "note": "驚いて飛び上がる = melompat karena kaget"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Contoh & Sejenisnya",
+        "items": [
+          {
+            "arti": "ada yang ~, ada yang ~ (macam-macam)",
+            "examples": [
+              {
+                "id": "Para pemain tim yang menang mengungkapkan kegembiraan dengan berbagai cara — ada yang menangis, ada yang melompat-lompat.",
+                "jp": "勝ったチームの選手たちは、泣き出すやら飛び上がるやらさまざまに喜びを表した。",
+                "rd": "かったちーむのせんしゅたちは、なきだすやらとびあがるやらさまざまによろこびをあらわした。"
+              },
+              {
+                "id": "Saat sadar telah ditipu, aku marah sekaligus merasa menyedihkan, sampai tak bisa menahan perasaan.",
+                "jp": "だまされたとわかったときは腹が立つやら情けないやらで、気持ちを抑えることができなかった。",
+                "rd": "だまされたとわかったときははらがたつやらなさけないやらで、きもちをおさえることができなかった。"
+              },
+              {
+                "id": "Di hari pernikahan putriku, perasaanku campur aduk — senang sekaligus sedih.",
+                "jp": "娘の結婚式の日は、うれしいやら寂しいやら複雑な気持ちだった。",
+                "rd": "むすめのけっこんしきのひは、うれしいやらさびしいやらふくざつなきもちだった。"
+              },
+              {
+                "id": "Di atas meja tertata piring-piring berbagai bentuk — ada yang persegi, ada yang bulat.",
+                "jp": "テーブルの上には、四角いものやら丸いものやらいろいろな形の皿が置いてあった。",
+                "rd": "てーぶるのうえには、しかくいものやらまるいものやらいろいろなかたちのさらがおいてあった。"
+              }
+            ],
+            "explain": "Pola ini menyusun kata-kata yang sekelompok untuk menekankan bahwa ada banyak hal yang campur aduk dan tidak teratur. Sering dipakai saat pembicara tidak bisa membatasi dengan jelas, atau saat merasa kewalahan karena banyaknya hal yang terjadi.",
+            "pattern": "kata benda / kata kerja bentuk kamus / kata sifat-i + やら",
+            "tabel": [
+              {
+                "k": "kata benda + やら",
+                "v": "ada (kata benda), ada yang …"
+              },
+              {
+                "k": "kata kerja bentuk kamus + やら",
+                "v": "ada yang (melakukan)…, ada yang …"
+              },
+              {
+                "k": "kata sifat-i + やら",
+                "v": "ada yang (sifat)…, ada yang …"
+              }
+            ]
+          },
+          {
+            "arti": "dibilang ~ ya, dibilang ~ ya …",
+            "examples": [
+              {
+                "id": "Anak itu… dibilang bersemangat ya, dibilang tidak bisa diam ya — pokoknya anak yang tidak bisa duduk tenang.",
+                "jp": "あの子は元気がいいというか落ち着きがないというか、静かにじっとしていない子です。",
+                "rd": "あのこはげんきがいいというかおちつきがないというか、しずかにじっとしていないこです。"
+              },
+              {
+                "id": "Ruangan ini, dibilang tempat kerja ya, dibilang gudang ya — pokoknya semua barang yang dibutuhkan untuk kerja ada di sini.",
+                "jp": "この部屋は、仕事場というか物置というか、とにかく仕事に必要な物が全部置いてあるんです。",
+                "rd": "このへやは、しごとばというかものおきというか、とにかくしごとにひつようなものがぜんぶおいてあるんです。"
+              },
+              {
+                "id": "Perasaanku sekarang? Hmm. Dibilang lega karena pensiun ya, dibilang sedih ya — rumit.",
+                "jp": "今のわたしの気持ちですか。そうですねえ。退職してほっとしたというか寂しいというか、複雑です。",
+                "rd": "いまのわたしのきもちですか。そうですねえ。たいしょくしてほっとしたというかさびしいというか、ふくざつです。"
+              }
+            ],
+            "explain": "Pola ini dipakai saat pembicara ragu memilih di antara dua ungkapan untuk menjelaskan satu situasi yang sama — keduanya terasa pas, tetapi tidak yakin mana yang paling tepat. Nuansanya seperti orang yang berpikir keras sambil berbicara, khas bahasa lisan.",
+            "pattern": "bentuk biasa + というか",
+            "tabel": [
+              {
+                "k": "bentuk biasa + というか",
+                "v": "dibilang ~ ya …"
+              },
+              {
+                "k": "～というか～というか",
+                "v": "dibilang ~ ya, dibilang ~ ya …"
+              }
+            ]
+          },
+          {
+            "arti": "baik ~ maupun ~, tetap …",
+            "examples": [
+              {
+                "id": "Baik sayuran maupun ikan, kesegaran adalah yang utama untuk bahan masakan.",
+                "jp": "野菜にしても魚にしても、料理の材料は新鮮さが第一です。",
+                "rd": "やさいにしてもさかなにしても、りょうりのざいりょうはしんせんさがだいいちです。"
+              },
+              {
+                "id": "Baik belajar maupun bekerja, sebaiknya buat rencana dulu baru kerjakan.",
+                "jp": "勉強をするにしても仕事をするにしても、計画を立ててからやったほうがいい。",
+                "rd": "べんきょうをするにしてもしごとをするにしても、けいかくをたててからやったほうがいい。"
+              },
+              {
+                "id": "Baik TV maupun koran, berita tidak boleh mengandung opini subjektif.",
+                "jp": "テレビにしろ新聞にしろ、ニュースには主観が入ってはいけない。",
+                "rd": "てれびにしろしんぶんにしろ、にゅーすにはしゅかんがはいってはいけない。"
+              },
+              {
+                "id": "Baik rawat inap maupun rawat jalan, mungkin akan memakan biaya yang cukup besar.",
+                "jp": "入院するにしろ通院するにしろ、かなりのお金がかかるかもしれない。",
+                "rd": "にゅういんするにしろつういんするにしろ、かなりのおかねがかかるかもしれない。"
+              },
+              {
+                "id": "Baik nanti beli rumah maupun tidak, menabunglah dari sekarang.",
+                "jp": "将来家を買うにしろ買わないにしろ、貯金はしておこう。",
+                "rd": "しょうらいうちをかうにしろかわないにしろ、ちょきんはしておこう。"
+              },
+              {
+                "id": "Baik partai berkuasa maupun oposisi, tanggung jawab pemimpin itu berat.",
+                "jp": "与党にせよ野党にせよ、リーダーは責任が重い。",
+                "rd": "よとうにせやとうにせよ、りーだーはせきにんがおもい。"
+              },
+              {
+                "id": "Baik menulis makalah maupun berdiskusi, perlu mengumpulkan data yang cukup terlebih dahulu.",
+                "jp": "論文を書くにせよ討論をするにせよ、十分にデータを集めておく必要がある。",
+                "rd": "ろんぶんをかくにせよとうろんをするにせよ、じゅうぶんにでーたをあつめておくひつようがある。"
+              }
+            ],
+            "explain": "Pola ini menyebutkan dua contoh — bisa yang sekelompok, bisa juga yang berlawanan seperti 'membeli atau tidak membeli' — untuk menyatakan bahwa kesimpulannya tetap sama. Kalimat sesudahnya biasanya berisi penilaian pembicara atau ajakan. Dari tiga variasi ini, にせよ bernada paling formal.",
+            "pattern": "kata benda / kata kerja bentuk kamus atau negatif + にしても / にしろ / にせよ",
+            "tabel": [
+              {
+                "k": "kata benda + にしても/にしろ/にせよ",
+                "v": "baik (kata benda) maupun …"
+              },
+              {
+                "k": "kata kerja bentuk kamus/negatif + にしても/にしろ/にせよ",
+                "v": "baik (melakukan)… maupun …"
+              }
+            ]
+          },
+          {
+            "arti": "seperti ~ (contoh-contoh)",
+            "examples": [
+              {
+                "id": "Aku sangat suka makanan berkalori tinggi seperti kue, keripik kentang, dan hamburger.",
+                "jp": "わたしはケーキ、ポテトチップス、ハンバーガーといったカロリーの高いものが大好きなんです。",
+                "rd": "わたしはけーき、ぽてとちっぷす、はんばーがーといったかろりーのたかいものがだいすきなんです。"
+              },
+              {
+                "id": "Sayuran berwarna pekat seperti wortel, paprika, dan labu kuning disebut sayuran hijau-kuning dan sangat baik untuk tubuh.",
+                "jp": "にんじんやピーマンやかぼちゃといった色の濃い野菜は緑黄色野菜といって、体にとてもいいんですよ。",
+                "rd": "にんじんやぴーまんやかぼちゃといったいろのこいやさいはりょくおうしょくやさいといって、からだにとてもいいんですよ。"
+              },
+              {
+                "id": "Di kota-kota tua seperti Kyoto dan Kamakura banyak terdapat kuil.",
+                "jp": "京都とか鎌倉といった古い街には寺が多い。",
+                "rd": "きょうととかかまくらといったふるいまちにはてらがおおい。"
+              },
+              {
+                "id": "Kata 'eko' kini dipakai dengan makna seperti 'baik untuk lingkungan'.",
+                "jp": "「エコ」という言葉は、「環境にいい」といった意味で使われるようになった。",
+                "rd": "「えこ」ということばは、「かんきょうにいい」といったいみでつかわれるようになった。"
+              }
+            ],
+            "explain": "Pola ini diletakkan setelah beberapa contoh untuk merangkum semuanya, dengan nuansa 'masih ada contoh lain di luar ini'. Sering digabung dengan や atau など. Bisa juga dipakai dengan satu contoh yang representatif untuk menyatakan garis besar isinya saja.",
+            "pattern": "kata benda + といった",
+            "tabel": [
+              {
+                "k": "kata benda + といった",
+                "v": "seperti ~"
+              },
+              {
+                "k": "～や～といった",
+                "v": "seperti ~ dan ~"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 10",
+        "items": [
+          {
+            "ch": "抑",
+            "kun": "おさ(える)",
+            "on": "ヨク",
+            "id": "menekan",
+            "note": "抑制 (よくせい) = penekanan"
+          },
+          {
+            "ch": "情",
+            "kun": "なさ(け)",
+            "on": "ジョウ",
+            "id": "perasaan",
+            "note": "感情 (かんじょう) = emosi"
+          },
+          {
+            "ch": "落",
+            "kun": "お(ちる)",
+            "on": "ラク",
+            "id": "jatuh",
+            "note": "落ち着く (おちつく) = tenang"
+          },
+          {
+            "ch": "置",
+            "kun": "お(く)",
+            "on": "チ",
+            "id": "meletakkan",
+            "note": "物置 (ものおき) = gudang"
+          },
+          {
+            "ch": "鮮",
+            "kun": "あざ(やか)",
+            "on": "セン",
+            "id": "segar",
+            "note": "新鮮 (しんせん) = segar"
+          },
+          {
+            "ch": "計",
+            "kun": "はか(る)",
+            "on": "ケイ",
+            "id": "mengukur",
+            "note": "計画 (けいかく) = rencana"
+          },
+          {
+            "ch": "飛",
+            "kun": "と(ぶ)",
+            "on": "ヒ",
+            "id": "terbang",
+            "note": "飛行機 (ひこうき) = pesawat"
+          },
+          {
+            "ch": "緑",
+            "kun": "みどり",
+            "on": "リョク",
+            "id": "hijau",
+            "note": "緑茶 (りょくちゃ) = teh hijau"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "優勝したとき、みんな泣き出すやら飛び上がるやら大騒ぎだったよ。",
+            "id": "Waktu menang, semuanya ribut — ada yang menangis, ada yang melompat."
+          },
+          {
+            "sp": "B",
+            "jp": "だまされたとわかったときは、腹が立つやら情けないやらだったよ。",
+            "id": "Waktu sadar ketipu, rasanya campur aduk antara marah dan sedih."
+          },
+          {
+            "sp": "A",
+            "jp": "あの子は元気がいいというか、落ち着きがないというか…。",
+            "id": "Anak itu, dibilang bersemangat ya, dibilang nggak bisa diam ya..."
+          },
+          {
+            "sp": "B",
+            "jp": "この部屋も、仕事場というか物置というか、物が多いね。",
+            "id": "Kamar ini juga, dibilang tempat kerja ya, dibilang gudang ya, barangnya banyak."
+          },
+          {
+            "sp": "A",
+            "jp": "野菜にしても魚にしても、新鮮さが第一だよね。",
+            "id": "Baik sayuran maupun ikan, kesegaran itu yang utama."
+          },
+          {
+            "sp": "B",
+            "jp": "ケーキやハンバーガーといった高カロリーのものは控えようか。",
+            "id": "Makanan berkalori tinggi seperti kue dan hamburger kita kurangi yuk."
+          },
+          {
+            "sp": "A",
+            "jp": "勉強をするにしても遊ぶにしても、計画は必要だよ。",
+            "id": "Baik belajar maupun main, rencana itu perlu."
+          },
+          {
+            "sp": "B",
+            "jp": "そうだね。とにかく、健康第一でいこう。",
+            "id": "Betul. Pokoknya, utamakan kesehatan."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "子供たちは、笑う___泣く___大はしゃぎだった。",
+        "o": [
+          "やら",
+          "というか",
+          "にしても",
+          "といった"
+        ],
+        "a": 0,
+        "explain": "やら = ada yang..., ada yang... (hal bermacam-macam)."
+      },
+      {
+        "q": "彼は先生___、友達のような存在だ。",
+        "o": [
+          "やら",
+          "というか",
+          "にしても",
+          "といった"
+        ],
+        "a": 1,
+        "explain": "というか = mengoreksi ungkapan: lebih tepatnya..."
+      },
+      {
+        "q": "雨___雪___、試合は行われる。",
+        "o": [
+          "やら",
+          "というか",
+          "にしても",
+          "といった"
+        ],
+        "a": 2,
+        "explain": "にしても = baik... maupun...; kesimpulan tetap sama."
+      },
+      {
+        "q": "バラ___チューリップ___春の花が咲いている。",
+        "o": [
+          "やら",
+          "というか",
+          "にしても",
+          "といった"
+        ],
+        "a": 3,
+        "explain": "といった = seperti... (contoh konkret)."
+      },
+      {
+        "q": "合格発表の日は、嬉しい___不安___複雑な気持ちだった。",
+        "o": [
+          "といった",
+          "やら",
+          "というか",
+          "にしても"
+        ],
+        "a": 1,
+        "explain": "やら untuk perasaan campur aduk yang bermacam-macam."
+      },
+      {
+        "q": "この店は喫茶店___バー___、夜遅くまで開いている。",
+        "o": [
+          "やら",
+          "にしても",
+          "というか",
+          "といった"
+        ],
+        "a": 2,
+        "explain": "というか = dibilang... ya, dibilang... ya."
+      },
+      {
+        "q": "行く___行かない___、連絡はしてくれ。",
+        "o": [
+          "やら",
+          "というか",
+          "にしろ",
+          "といった"
+        ],
+        "a": 2,
+        "explain": "にしろ = bentuk lain dari にしても."
+      },
+      {
+        "q": "富士山___高尾山___、都内から見える山は美しい。",
+        "o": [
+          "といった",
+          "やら",
+          "というか",
+          "にしても"
+        ],
+        "a": 0,
+        "explain": "といった memberi contoh dari suatu kelompok."
+      },
+      {
+        "q": "驚く___喜ぶ___、彼は声も出なかった。",
+        "o": [
+          "にしても",
+          "といった",
+          "というか",
+          "やら"
+        ],
+        "a": 3,
+        "explain": "やら mendaftar reaksi yang bermacam-macam."
+      },
+      {
+        "q": "彼女の部屋はきれい___、物が多すぎる___…。",
+        "o": [
+          "やら",
+          "にしても",
+          "といった",
+          "というか"
+        ],
+        "a": 3,
+        "explain": "というか melunakkan atau mengoreksi pernyataan sendiri."
+      }
+    ]
+  },
+  {
+    "id": "n2-11",
+    "bab": 11,
+    "level": "n2",
+    "title": "Tanpa Terkecuali",
+    "desc": "Mengabaikan perbedaan dan menyatakan berlaku umum.",
+    "icon": "🌐",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Tanpa Terkecuali",
+        "body": "<p>Di level N2, kamu akan sering bertemu kalimat yang menyatakan sesuatu <b>berlaku untuk semua orang atau semua kondisi tanpa terkecuali<\/b>. Lima pola di bab ini punya rasa yang mirip, tapi nuansanya berbeda — dan soal JLPT suka menguji bedanya.<\/p><p><b>を問わず<\/b> artinya \"tanpa memandang\" — dipakai saat suatu aturan atau kesempatan berlaku sama untuk semua variasi, misalnya umur, jenis, atau dalam dan luar negeri. Sementara <b>にかかわりなく / にかかわらず<\/b> artinya \"tanpa ada hubungannya dengan\" — menekankan bahwa hasil atau keputusan <b>tidak tergantung<\/b> pada faktor tertentu, misalnya jarak atau alasan.<\/p><p><b>もかまわず<\/b> punya nuansa yang lebih berani: \"tanpa memedulikan\" sesuatu yang seharusnya diperhatikan. Pola ini sering menggambarkan orang yang cuek atau nekat. Berbeda dengan dua pola sebelumnya yang netral, もかまわず sering bernada sedikit negatif.<\/p><p>Dua pola terakhir dipakai untuk <b>mengalihkan fokus pembicaraan<\/b>. <b>はともかく（として）<\/b> artinya \"terlepas dari ~\" — kamu mengakui satu hal, tapi menegaskan hal lain yang lebih penting. Sedangkan <b>はさておき<\/b> artinya \"kesampingkan dulu ~\" — kamu menunda membahas satu hal untuk fokus ke hal lain dulu.<\/p><p>Jebakan umum: jangan tertukar を問わず (semua variasi diperlakukan sama) dengan にかかわらず (hasil tidak dipengaruhi faktor X). Dan ingat, もかまわず hampir selalu menggambarkan perilaku yang kurang pantas — jangan pakai untuk konteks positif.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Tanpa Terkecuali",
+        "items": [
+          {
+            "jp": "問う",
+            "kj": "問う",
+            "r": "tou",
+            "id": "menanyakan; mempersoalkan",
+            "note": "問わず = tanpa mempersoalkan"
+          },
+          {
+            "jp": "関わる",
+            "kj": "関わる",
+            "r": "kakawaru",
+            "id": "berhubungan; terlibat",
+            "note": "関わりなく = tanpa ada hubungannya"
+          },
+          {
+            "jp": "構う",
+            "kj": "構う",
+            "r": "kamau",
+            "id": "memedulikan; menghiraukan",
+            "note": "構わず = tanpa memedulikan"
+          },
+          {
+            "jp": "一律",
+            "kj": "一律",
+            "r": "ichiritsu",
+            "id": "seragam; sama rata",
+            "note": "一律500円 = sama rata 500 yen"
+          },
+          {
+            "jp": "例外",
+            "kj": "例外",
+            "r": "reigai",
+            "id": "pengecualian",
+            "note": "例外なく = tanpa pengecualian"
+          },
+          {
+            "jp": "一切",
+            "kj": "一切",
+            "r": "issai",
+            "id": "sama sekali; seluruhnya",
+            "note": "一切関係ない = sama sekali tidak berhubungan"
+          },
+          {
+            "jp": "別",
+            "kj": "別",
+            "r": "betsu",
+            "id": "perbedaan; lain",
+            "note": "別として = terlepas dari"
+          },
+          {
+            "jp": "差別",
+            "kj": "差別",
+            "r": "sabetsu",
+            "id": "diskriminasi; perbedaan perlakuan",
+            "note": "差別なく採用する = merekrut tanpa diskriminasi"
+          },
+          {
+            "jp": "無関係",
+            "kj": "無関係",
+            "r": "mukankei",
+            "id": "tidak berhubungan",
+            "note": "年齢とは無関係に決める"
+          },
+          {
+            "jp": "一様に",
+            "kj": "一様に",
+            "r": "ichiyou ni",
+            "id": "secara seragam",
+            "note": "一様に扱う = memperlakukan sama rata"
+          },
+          {
+            "jp": "ともかく",
+            "kj": "ともかく",
+            "r": "tomokaku",
+            "id": "bagaimanapun; terlepas dari itu",
+            "note": "ともかくとして = terlepas dari"
+          },
+          {
+            "jp": "さておき",
+            "kj": "さておき",
+            "r": "sateoki",
+            "id": "kesampingkan dulu",
+            "note": "それはさておき = soal itu kesampingkan dulu"
+          },
+          {
+            "jp": "無視",
+            "kj": "無視",
+            "r": "mushi",
+            "id": "mengabaikan",
+            "note": "無視する = mengabaikan"
+          },
+          {
+            "jp": "平等",
+            "kj": "平等",
+            "r": "byoudou",
+            "id": "kesetaraan",
+            "note": "平等に扱う = memperlakukan setara"
+          },
+          {
+            "jp": "国籍",
+            "kj": "国籍",
+            "r": "kokuseki",
+            "id": "kewarganegaraan",
+            "note": "国籍を問わず = tanpa memandang kewarganegaraan"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Tanpa Terkecuali",
+        "items": [
+          {
+            "pattern": "kata benda + を問わず",
+            "arti": "tanpa memandang ~; tidak peduli ~",
+            "explain": "Pola ini dipakai untuk menyatakan bahwa suatu perbedaan <b>tidak jadi masalah<\/b> — perlakuannya sama untuk semuanya. Kata benda yang dipasang biasanya kata yang punya banyak variasi (umur, kebangsaan, cuaca) atau pasangan yang berlawanan (pria–wanita, dalam–luar negeri, ada–tidak ada). Jebakan umum: jangan dipakai untuk kata benda biasa yang tidak punya variasi makna, misalnya ×本を問わず.",
+            "tabel": [
+              {
+                "k": "年齢を問わず",
+                "v": "tanpa memandang usia"
+              },
+              {
+                "k": "男女を問わず",
+                "v": "tanpa memandang jenis kelamin"
+              },
+              {
+                "k": "国内外を問わず",
+                "v": "tanpa memandang dalam/luar negeri"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "このドッグショーには種類を問わず、どんな犬でも参加できます。",
+                "rd": "このどっぐしょーにはしゅるいをとわず、どんないぬでもさんかできます。",
+                "id": "Di dog show ini anjing jenis apa pun boleh ikut — tanpa memandang jenisnya."
+              },
+              {
+                "jp": "このクレジットカードは国内、国外を問わず、いろいろな場所で使える。",
+                "rd": "このくれじっとかーどはこくない、こくがいをとわず、いろいろなばしょでつかえる。",
+                "id": "Kartu kredit ini bisa dipakai di berbagai tempat, baik di dalam maupun luar negeri."
+              },
+              {
+                "jp": "このマラソン大会には、性別、年齢を問わず、だれでも参加できます。",
+                "rd": "このまらそんたいかいには、せいべつ、ねんれいをとわず、だれでもさんかできます。",
+                "id": "Lomba maraton ini bisa diikuti siapa saja, tanpa memandang jenis kelamin dan usia."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + にかかわりなく / にかかわらず",
+            "arti": "tanpa ada hubungannya dengan ~; tidak tergantung pada ~",
+            "explain": "Artinya <b>hasilnya sama, tidak dipengaruhi oleh ~<\/b>. Dipakai dengan kata yang punya rentang (jarak, jumlah uang, ukuran), pasangan yang berlawanan (pergi–tidak pergi, banyak–sedikit), atau pola kata tanya + か. Bedanya dengan を問わず: pola ini menekankan 'tidak ada hubungan/pengaruh', sedangkan を問わず menekankan 'perbedaannya tidak dipermasalahkan'.",
+            "tabel": [
+              {
+                "k": "距離にかかわりなく",
+                "v": "tidak tergantung jarak"
+              },
+              {
+                "k": "使う、使わないにかかわらず",
+                "v": "baik dipakai maupun tidak"
+              },
+              {
+                "k": "理由が何であるかにかかわりなく",
+                "v": "apa pun alasannya"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "この路線バスの料金は、乗った距離にかかわりなく一律200円です。",
+                "rd": "このろせんばすのりょうきんは、のったきょりにかかわりなくいちりつ200えんです。",
+                "id": "Tarif bus rute ini 200 yen rata, tidak tergantung jarak yang ditempuh."
+              },
+              {
+                "jp": "理由が何であるかにかかわりなく、一度納入した入学金はお返しできません。",
+                "rd": "りゆうがなんであるかにかかわりなく、いちどのうにゅうしたにゅうがくきんはおかえしできません。",
+                "id": "Apa pun alasannya, uang pendaftaran yang sudah dibayar tidak bisa dikembalikan."
+              },
+              {
+                "jp": "振り込み手数料は、送金金額にかかわらず無料です。",
+                "rd": "ふりこみてすうりょうは、そうきんきんがくにかかわらずむりょうです。",
+                "id": "Biaya transfer gratis, berapa pun jumlah uang yang dikirim."
+              },
+              {
+                "jp": "使う、使わないにかかわらず、会場には一応マイクが準備してあります。",
+                "rd": "つかう、つかわないにかかわらず、かいじょうにはいちおうまいくがじゅんびしてあります。",
+                "id": "Baik dipakai maupun tidak, di tempat acara sudah disiapkan mikrofon untuk jaga-jaga."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda / kalimat bentuk biasa + もかまわず",
+            "arti": "tanpa memedulikan ~; cuek terhadap ~",
+            "explain": "Untuk hal yang <b>normalnya diperhatikan orang<\/b>, tapi pelakunya tidak peduli dan bertindak seenaknya. Karena itu kalimat sesudahnya selalu berisi tindakan yang tidak wajar atau mengejutkan. Jebakan penting dari buku: pola ini <b>tidak bisa<\/b> dipakai untuk menyatakan keinginan, niat, atau ajakan pembicara sendiri.",
+            "tabel": [
+              {
+                "k": "人目もかまわず",
+                "v": "tanpa peduli dilihat orang"
+              },
+              {
+                "k": "値段もかまわず",
+                "v": "tanpa peduli harga"
+              },
+              {
+                "k": "待たせているのもかまわず",
+                "v": "tanpa peduli membuat orang menunggu"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "人目もかまわず、道で大泣きしている人を見かけた。",
+                "rd": "ひとめもかまわず、みちでおおなきしているひとをみかけた。",
+                "id": "Aku melihat orang menangis meraung-raung di jalan, tanpa peduli dilihat orang."
+              },
+              {
+                "jp": "彼は値段もかまわず、好きな料理をどんどん注文した。",
+                "rd": "かれはねだんもかまわず、すきなりょうりをどんどんちゅうもんした。",
+                "id": "Dia memesan makanan kesukaannya terus-terusan, tanpa peduli harganya."
+              },
+              {
+                "jp": "母は人を待たせているのもかまわず、まだ鏡の前で化粧している。",
+                "rd": "はははひとをまたせているのもかまわず、まだかがみのまえでけしょうしている。",
+                "id": "Ibu masih berdandan di depan cermin, tanpa peduli membuat orang menunggu."
+              },
+              {
+                "jp": "父が病気で入院中であるのもかまわず、兄は毎日バイクで遊び回っている。",
+                "rd": "ちちがびょうきでにゅういんちゅうであるのもかまわず、あにはまいにちばいくであそびまわっている。",
+                "id": "Padahal ayah sedang dirawat di rumah sakit, kakak malah keluyuran naik motor setiap hari."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda / kalimat bentuk biasa (sekarang) + はともかく（として）",
+            "arti": "terlepas dari ~; soal ~ sih sudahlah",
+            "explain": "Pembicara menganggap ~ <b>kurang penting<\/b> dibanding hal lain, jadi disisihkan dulu dari pembicaraan. Kalimat sesudahnya berisi hal yang <b>lebih ingin ditekankan<\/b>. Pola ini juga bisa dipasang pada pola kata tanya + か. Nuansanya: '~ sih sudahlah, yang penting...'.",
+            "tabel": [
+              {
+                "k": "味はともかく",
+                "v": "soal rasa sih sudahlah"
+              },
+              {
+                "k": "行くかどうかはともかく",
+                "v": "soal jadi pergi atau tidak sih sudahlah"
+              },
+              {
+                "k": "読むのはともかくとして",
+                "v": "soal membaca sih sudahlah"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "この店は、店の雰囲気はともかく、料理の味は最高だ。",
+                "rd": "このみせは、みせのふんいきはともかく、りょうりのあじはさいこうだ。",
+                "id": "Toko ini, soal suasana sih sudahlah — tapi rasa makanannya luar biasa."
+              },
+              {
+                "jp": "外ではともかく、家の中でたばこを吸うのはやめて。",
+                "rd": "そとではともかく、いえのなかでたばこをすうのはやめて。",
+                "id": "Di luar sih terserah, tapi jangan merokok di dalam rumah."
+              },
+              {
+                "jp": "受験するかどうかはともかく、願書だけはもらっておこう。",
+                "rd": "じゅけんするかどうかはともかく、がんしょだけはもらっておこう。",
+                "id": "Soal jadi ikut ujian atau tidak sih sudahlah, yang penting ambil dulu formulir pendaftarannya."
+              },
+              {
+                "jp": "アラビア語を習いたい。読むのはともかくとして、簡単な会話はできるようになりたい。",
+                "rd": "あらびあごをならいたい。よむのはともかくとして、かんたんなかいわはできるようになりたい。",
+                "id": "Aku ingin belajar bahasa Arab. Soal membaca sih sudahlah, yang penting ingin bisa percakapan sederhana."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + はさておき",
+            "arti": "kesampingkan dulu ~; soal ~ lupakan dulu",
+            "explain": "Hal yang <b>sedang menjadi topik<\/b> disingkirkan dulu karena ada hal yang lebih penting atau lebih mendasar. Kalimat sesudahnya berisi hal yang prioritasnya lebih tinggi. Mirip dengan はともかく, tapi さておき khas dipakai untuk menyela topik yang memang sedang dibicarakan ('bercandanya sudahi dulu', 'detailnya nanti dulu').",
+            "tabel": [
+              {
+                "k": "細かいことはさておき",
+                "v": "kesampingkan dulu hal-hal detail"
+              },
+              {
+                "k": "冗談はさておき",
+                "v": "bercandanya sudahi dulu"
+              },
+              {
+                "k": "どんな家がいいかはさておき",
+                "v": "lupakan dulu soal rumah seperti apa"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "飲み会をするなら、細かいことはさておき、まずは場所と時間を決めなくては。",
+                "rd": "のみかいをするなら、こまかいことはさておき、まずはばしょとじかんをきめなくては。",
+                "id": "Kalau mau bikin acara minum-minum, kesampingkan dulu hal-hal detail — yang penting tentukan tempat dan waktunya dulu."
+              },
+              {
+                "jp": "どんな家がいいかはさておき、どんな地域に引っ越したいかを考えよう。",
+                "rd": "どんないえがいいかはさておき、どんなちいきにひっこしたいかをかんがえよう。",
+                "id": "Lupakan dulu soal rumah seperti apa yang bagus, pikirkan dulu mau pindah ke daerah seperti apa."
+              },
+              {
+                "jp": "冗談はさておき、次回のミーティングのテーマを決めておきたいと思います。",
+                "rd": "じょうだんはさておき、じかいのみーてぃんぐのてーまをきめておきたいとおもいます。",
+                "id": "Bercandanya sudahi dulu — saya ingin menentukan tema rapat berikutnya."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 11",
+        "items": [
+          {
+            "ch": "問",
+            "kun": "とう",
+            "on": "モン",
+            "id": "bertanya",
+            "note": "問題 (もんだい) = masalah; soal"
+          },
+          {
+            "ch": "関",
+            "kun": "かか(わる)",
+            "on": "カン",
+            "id": "berhubungan",
+            "note": "関係 (かんけい) = hubungan"
+          },
+          {
+            "ch": "構",
+            "kun": "かま(う)",
+            "on": "コウ",
+            "id": "memedulikan",
+            "note": "結構 (けっこう) = cukup; lumayan"
+          },
+          {
+            "ch": "別",
+            "kun": "わか(れる)",
+            "on": "ベツ",
+            "id": "berpisah; lain",
+            "note": "別々 (べつべつ) = masing-masing"
+          },
+          {
+            "ch": "律",
+            "kun": "—",
+            "on": "リツ",
+            "id": "aturan; hukum",
+            "note": "一律 (いちりつ) = seragam"
+          },
+          {
+            "ch": "例",
+            "kun": "たと(える)",
+            "on": "レイ",
+            "id": "contoh",
+            "note": "例外 (れいがい) = pengecualian"
+          },
+          {
+            "ch": "差",
+            "kun": "さ(す)",
+            "on": "サ",
+            "id": "perbedaan",
+            "note": "差別 (さべつ) = diskriminasi"
+          },
+          {
+            "ch": "平",
+            "kun": "たい(ら)",
+            "on": "ヘイ",
+            "id": "datar; rata",
+            "note": "平等 (びょうどう) = kesetaraan"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "このイベント、誰でも参加できるの？",
+            "id": "Acara ini, siapa saja bisa ikut?"
+          },
+          {
+            "sp": "B",
+            "jp": "うん、年齢や国籍を問わず、誰でも参加できるよ。",
+            "id": "Iya, tanpa memandang umur atau kewarganegaraan, siapa saja bisa ikut."
+          },
+          {
+            "sp": "A",
+            "jp": "参加費はいくら？",
+            "id": "Biaya partisipasinya berapa?"
+          },
+          {
+            "sp": "B",
+            "jp": "遠くから来る人も、距離にかかわらず一律500円だって。",
+            "id": "Katanya, walau datang dari jauh, tanpa ada hubungannya dengan jarak, sama rata 500 yen."
+          },
+          {
+            "sp": "A",
+            "jp": "へえ、安いね。でも雨が降ったらどうするの？",
+            "id": "Wah, murah ya. Tapi kalau hujan bagaimana?"
+          },
+          {
+            "sp": "B",
+            "jp": "天気もかまわずやるみたい。ちょっと心配だけどね。",
+            "id": "Katanya tetap jalan tanpa memedulikan cuaca. Agak khawatir sih."
+          },
+          {
+            "sp": "A",
+            "jp": "会場の設備はともかく、内容が楽しそうだからいいよ。",
+            "id": "Terlepas dari fasilitas tempatnya, acaranya kelihatan seru jadi tidak apa-apa."
+          },
+          {
+            "sp": "B",
+            "jp": "そうだね。細かいことはさておき、まず申し込もう！",
+            "id": "Iya. Hal-hal detail kesampingkan dulu, daftar dulu saja!"
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "この奨学金は、国籍＿＿＿、すべての留学生が応募できます。",
+        "o": [
+          "を問わず",
+          "にかかわらず",
+          "もかまわず",
+          "はともかく"
+        ],
+        "a": 0,
+        "explain": "を問わず = tanpa memandang (semua variasi diperlakukan sama)."
+      },
+      {
+        "q": "参加費は、利用回数＿＿＿一律3000円です。",
+        "o": [
+          "を問わず",
+          "にかかわりなく",
+          "もかまわず",
+          "はさておき"
+        ],
+        "a": 1,
+        "explain": "にかかわりなく = tanpa ada hubungannya dengan (hasil tidak tergantung pada faktor X)."
+      },
+      {
+        "q": "彼は人目＿＿＿、電車の中で大声で歌い始めた。",
+        "o": [
+          "を問わず",
+          "にかかわらず",
+          "もかまわず",
+          "はともかく"
+        ],
+        "a": 2,
+        "explain": "もかまわず = tanpa memedulikan (nuansa cuek atau nekat)."
+      },
+      {
+        "q": "デザイン＿＿＿、この店の料理の味は最高だ。",
+        "o": [
+          "を問わず",
+          "にかかわらず",
+          "はともかく",
+          "はさておき"
+        ],
+        "a": 2,
+        "explain": "はともかく = terlepas dari (mengakui satu hal, menegaskan hal lain yang lebih penting)."
+      },
+      {
+        "q": "予算のことは＿＿＿、まず企画の内容を固めよう。",
+        "o": [
+          "を問わず",
+          "にかかわらず",
+          "もかまわず",
+          "はさておき"
+        ],
+        "a": 3,
+        "explain": "はさておき = kesampingkan dulu (menunda satu topik untuk fokus ke yang lain)."
+      },
+      {
+        "q": "この保険は、年齢、性別＿＿＿、誰でも加入できます。",
+        "o": [
+          "はともかく",
+          "はさておき",
+          "を問わず",
+          "もかまわず"
+        ],
+        "a": 2,
+        "explain": "を問わず = tanpa memandang perbedaan (umur, jenis kelamin)."
+      },
+      {
+        "q": "理由＿＿＿、納入済みの費用は返金いたしかねます。",
+        "o": [
+          "を問わず",
+          "にかかわらず",
+          "もかまわず",
+          "はともかく"
+        ],
+        "a": 1,
+        "explain": "にかかわらず = tanpa ada hubungannya dengan (alasan apa pun, tidak bisa refund)."
+      },
+      {
+        "q": "味＿＿＿、このレストランは雰囲気がいい。",
+        "o": [
+          "はともかくとして",
+          "を問わず",
+          "にかかわらず",
+          "もかまわず"
+        ],
+        "a": 0,
+        "explain": "はともかくとして = terlepas dari (rasa boleh biasa saja, yang penting suasana)."
+      },
+      {
+        "q": "彼女は周りの反対＿＿＿、留学を決意した。",
+        "o": [
+          "もかまわず",
+          "を問わず",
+          "にかかわらず",
+          "はさておき"
+        ],
+        "a": 0,
+        "explain": "もかまわず = tanpa memedulikan (tentangan orang sekitar)."
+      },
+      {
+        "q": "結果＿＿＿、全力を尽くしたことに変わりはない。",
+        "o": [
+          "はさておき",
+          "を問わず",
+          "にかかわらず",
+          "はともかく"
+        ],
+        "a": 3,
+        "explain": "はともかく = terlepas dari (hasilnya bagaimana pun, yang penting sudah berusaha maksimal)."
+      }
+    ]
+  },
+  {
+    "id": "n2-12",
+    "bab": 12,
+    "level": "n2",
+    "title": "Penolakan Kuat",
+    "desc": "Menyangkal dengan tegas dan kuat.",
+    "icon": "🚫",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Penolakan Kuat",
+        "body": "<p>Bab ini mengumpulkan pola-pola untuk <b>menyangkal dengan tegas<\/b> — sesuatu yang sering muncul di soal JLPT N2 karena tiap pola punya \"kadar\" penolakan yang berbeda. Salah memilih pola bisa mengubah total nada kalimatmu.<\/p><p><b>わけがない<\/b> adalah penolakan yang paling logis: \"tidak mungkin\" karena keyakinan kuat bahwa sesuatu mustahil terjadi. Berbeda dengan <b>わけではない<\/b> yang justru <b>melembutkan<\/b>: \"bukan berarti ~\" — dipakai untuk meluruskan kesalahpahaman tanpa menyangkal total. Inilah pasangan yang paling sering dijebak di soal: beda satu kata, maknanya berlawanan arah.<\/p><p><b>どころではない<\/b> artinya \"jangankan ~\" — situasinya jauh dari yang dibayangkan, biasanya ke arah yang lebih buruk. Sedangkan <b>どころか<\/b> dipakai untuk <b>mengoreksi ke arah yang lebih ekstrem<\/b>: \"bukan cuma X, malah Y\". Keduanya memakai どころ, tapi arah koreksinya berbeda.<\/p><p><b>ものか<\/b> adalah penolakan yang paling emosional: \"mana mungkin!\" — penuh rasa kesal atau tidak percaya. Karena nadanya kasar, pola ini hanya dipakai dalam percakapan kasual, jangan pernah dipakai dalam tulisan formal atau kepada atasan. Sementara <b>というものではない<\/b> justru sangat formal: \"tidak semudah itu\" — menolak generalisasi atau anggapan yang terlalu sederhana.<\/p><p>Jebakan umum: わけがない (mustahil) vs わけではない (bukan berarti) — hafalkan sebagai pasangan berlawanan. Dan ingat, ものか tidak bisa dipakai dalam konteks bisnis atau esai formal.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Penolakan Kuat",
+        "items": [
+          {
+            "jp": "否定",
+            "kj": "否定",
+            "r": "hitei",
+            "id": "penyangkalan",
+            "note": "否定する = menyangkal"
+          },
+          {
+            "jp": "拒否",
+            "kj": "拒否",
+            "r": "kyohi",
+            "id": "penolakan",
+            "note": "申し出を拒否する = menolak tawaran"
+          },
+          {
+            "jp": "断る",
+            "kj": "断る",
+            "r": "kotowaru",
+            "id": "menolak",
+            "note": "依頼を断る = menolak permintaan"
+          },
+          {
+            "jp": "断固",
+            "kj": "断固",
+            "r": "danko",
+            "id": "dengan tegas",
+            "note": "断固反対する = menentang dengan tegas"
+          },
+          {
+            "jp": "決して",
+            "kj": "決して",
+            "r": "kesshite",
+            "id": "sama sekali tidak",
+            "note": "決して許さない = sama sekali tidak akan memaafkan"
+          },
+          {
+            "jp": "とんでもない",
+            "kj": "とんでもない",
+            "r": "tondemonai",
+            "id": "keterlaluan; tidak mungkin",
+            "note": "とんでもない話だ = cerita yang keterlaluan"
+          },
+          {
+            "jp": "まさか",
+            "kj": "まさか",
+            "r": "masaka",
+            "id": "masakan; tidak kusangka",
+            "note": "まさかそんなことはない = masakan tidak begitu"
+          },
+          {
+            "jp": "ありえない",
+            "kj": "ありえない",
+            "r": "arienai",
+            "id": "mustahil terjadi",
+            "note": "ありえないミス = kesalahan yang mustahil"
+          },
+          {
+            "jp": "極端",
+            "kj": "極端",
+            "r": "kyokutan",
+            "id": "ekstrem",
+            "note": "極端な意見 = pendapat ekstrem"
+          },
+          {
+            "jp": "訂正",
+            "kj": "訂正",
+            "r": "teisei",
+            "id": "koreksi; ralat",
+            "note": "記事を訂正する = meralat artikel"
+          },
+          {
+            "jp": "誤解",
+            "kj": "誤解",
+            "r": "gokai",
+            "id": "kesalahpahaman",
+            "note": "誤解を招く = menimbulkan kesalahpahaman"
+          },
+          {
+            "jp": "反論",
+            "kj": "反論",
+            "r": "hanron",
+            "id": "sanggahan",
+            "note": "反論する = menyanggah"
+          },
+          {
+            "jp": "納得",
+            "kj": "納得",
+            "r": "nattoku",
+            "id": "menerima; memahami",
+            "note": "納得がいかない = tidak bisa menerima"
+          },
+          {
+            "jp": "強硬",
+            "kj": "強硬",
+            "r": "kyoukou",
+            "id": "keras; tidak mau kompromi",
+            "note": "強硬な態度 = sikap keras"
+          },
+          {
+            "jp": "言い切る",
+            "kj": "言い切る",
+            "r": "iikiru",
+            "id": "menyatakan dengan tegas",
+            "note": "きっぱりと言い切る = menyatakan dengan tegas"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Penolakan Kuat",
+        "items": [
+          {
+            "pattern": "kalimat bentuk biasa + わけがない",
+            "arti": "tidak mungkin ~; mana mungkin ~",
+            "explain": "Menyatakan <b>keyakinan mutlak<\/b> pembicara bahwa sesuatu tidak terjadi atau tidak benar — jauh lebih tegas daripada sekadar bentuk negatif biasa. Dipakai saat pembicara yakin 100% dari pengalaman atau akal sehatnya.",
+            "tabel": [
+              {
+                "k": "できるわけがない",
+                "v": "tidak mungkin bisa"
+              },
+              {
+                "k": "簡単なわけがない",
+                "v": "tidak mungkin mudah"
+              },
+              {
+                "k": "おいしくないわけがない",
+                "v": "mana mungkin tidak enak"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "この仕事を今日中に全部ですか。わたし一人でできるわけがありませんよ。",
+                "rd": "このしごとをきょうじゅうにぜんぶですか。わたしひとりでできるわけがありませんよ。",
+                "id": "Pekerjaan ini semuanya hari ini? Mana mungkin saya bisa mengerjakannya sendirian."
+              },
+              {
+                "jp": "田中先生の試験がそんなに簡単なわけがない。厳しいことで有名な先生なのだ。",
+                "rd": "たなかせんせいのしけんがそんなにかんたんなわけがない。きびしいことでゆうめいなせんせいなのだ。",
+                "id": "Tidak mungkin ujian Pak Tanaka semudah itu. Beliau terkenal sebagai guru yang keras."
+              },
+              {
+                "jp": "この店は元一流ホテルのコックさんが開いたんだ。料理がおいしくないわけがない。",
+                "rd": "このみせはもといちりゅうほてるのこっくさんがひらいたんだ。りょうりがおいしくないわけがない。",
+                "id": "Toko ini dibuka oleh mantan koki hotel bintang satu. Mana mungkin masakannya tidak enak."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda / kalimat bentuk biasa + どころではない / どころか",
+            "arti": "jangankan ~; bukan cuma ~, malah...",
+            "explain": "Tingkat atau keadaannya <b>jauh berbeda<\/b> dari yang dibayangkan — biasanya jauh lebih buruk. どころか menghubungkan dua hal yang tingkatnya jauh berbeda atau justru berlawanan, dengan penekanan pada bagian belakangnya. Jebakan: bagian belakang どころか sering berisi hal yang lebih parah dari dugaan awal.",
+            "tabel": [
+              {
+                "k": "休むどころではない",
+                "v": "jangankan istirahat"
+              },
+              {
+                "k": "謝るどころか",
+                "v": "bukannya minta maaf, malah..."
+              },
+              {
+                "k": "ちょっとどころではない",
+                "v": "bukan cuma sedikit"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "せきが出るので風邪かなと思っていたが、ただの風邪どころではなく、肺炎だった。",
+                "rd": "せきがでるのでかぜかなとおもっていたが、ただのかぜどころではなく、はいえんだった。",
+                "id": "Karena batuk kukira cuma masuk angin, ternyata bukan sekadar masuk angin — melainkan radang paru-paru."
+              },
+              {
+                "jp": "休日なのでちょっとは道が込むだろうと思っていたが、ちょっとどころではなかった。",
+                "rd": "きゅうじつなのでちょっとはみちがこむだろうとおもっていたが、ちょっとどころではなかった。",
+                "id": "Kukira karena hari libur jalan bakal agak macet, ternyata macetnya bukan main."
+              },
+              {
+                "jp": "マナーが悪い人をちょっと注意したら、謝るどころか、逆にわたしにどなった。",
+                "rd": "まながわるいひとをちょっとちゅういしたら、あやまるどころか、ぎゃくにわたしにどなった。",
+                "id": "Waktu kutegur orang yang tidak sopan itu, bukannya minta maaf, malah dia membentakku."
+              },
+              {
+                "jp": "こんな下手なチームでは、何度試合をしても一度も勝てないどころか、1点も入れられないだろう。",
+                "rd": "こんなへたなちーむでは、なんどしあいをしてもいちどもかてないどころか、いってんもいれられないだろう。",
+                "id": "Dengan tim sepayah ini, jangankan menang sekali pun setelah bertanding berkali-kali, mencetak satu gol pun mungkin tidak bisa."
+              }
+            ]
+          },
+          {
+            "pattern": "kalimat bentuk biasa + ものか",
+            "arti": "mana mungkin ~! (penolakan emosional)",
+            "explain": "Penolakan <b>kuat dan emosional<\/b> dalam bahasa lisan — nadanya seperti 'mana mungkin!' atau 'tidak sudi!'. もんか adalah versi yang lebih kasual, dan perempuan biasanya memakai ものですか / もんですか. Jangan dipakai dalam tulisan formal.",
+            "tabel": [
+              {
+                "k": "来るものか",
+                "v": "mana mungkin datang!"
+              },
+              {
+                "k": "住めるものか",
+                "v": "mana mungkin bisa tinggal!"
+              },
+              {
+                "k": "正直なもんか",
+                "v": "mana mungkin jujur!"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "山田が時間どおりに来るものか。あいつはいつも遅刻なんだから。",
+                "rd": "やまだがじかんどおりにくるものか。あいつはいつもちこくなんだから。",
+                "id": "Mana mungkin Yamada datang tepat waktu! Dia itu selalu terlambat."
+              },
+              {
+                "jp": "駅から歩いて40分。バスもない。こんな不便な所に住めるものか。",
+                "rd": "えきからあるいて40ぷん。ばすもない。こんなふべんなところにすめるものか。",
+                "id": "Jalan kaki 40 menit dari stasiun. Bus pun tidak ada. Mana mungkin bisa tinggal di tempat sesusah ini."
+              },
+              {
+                "jp": "あの人が正直なもんか。うそばかり言う人だ。",
+                "rd": "あのひとがしょうじきなもんか。うそばかりいうひとだ。",
+                "id": "Mana mungkin orang itu jujur! Dia tukang bohong."
+              },
+              {
+                "jp": "わたしが努力家なもんですか。こつこつと努力するのは苦手なんですよ。",
+                "rd": "わたしがどりょくかなもんですか。こつこつとどりょくするのはにがてなんですよ。",
+                "id": "Mana mungkin aku pekerja keras! Aku tidak pandai berusaha tekun sedikit demi sedikit."
+              }
+            ]
+          },
+          {
+            "pattern": "kalimat bentuk biasa + わけではない / というわけではない",
+            "arti": "bukan berarti ~; tidak sepenuhnya ~",
+            "explain": "Menyangkal <b>sebagian<\/b> — tidak semuanya begitu. Untuk penekanan 'tidak selalu', sering dipasangkan dengan kata bermakna 'semua' (いつも, だれでも, どこでも) atau 必ずしも. Bedakan dengan わけがない yang menyangkal total: わけではない = 'bukan berarti begitu', わけがない = 'mana mungkin begitu'.",
+            "tabel": [
+              {
+                "k": "いつでも〜わけではない",
+                "v": "tidak selalu ~"
+              },
+              {
+                "k": "怒っているわけではない",
+                "v": "bukan berarti marah"
+              },
+              {
+                "k": "無理というわけではない",
+                "v": "bukan berarti mustahil"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "携帯電話を持っていても、いつでも電話に出られるわけではない。",
+                "rd": "けいたいでんわをもっていても、いつでもでんわにでられるわけではない。",
+                "id": "Meski punya HP, bukan berarti selalu bisa mengangkat telepon."
+              },
+              {
+                "jp": "A「どうしたの？怒っているの？」 B「怒っているわけじゃないけど……あなたの気持ち、このごろよくわからない。」",
+                "rd": "A「どうしたの？おこっているの？」 B「おこっているわけじゃないけど……あなたのきもち、このごろよくわからない。」",
+                "id": "A: 'Kenapa? Kamu marah?' B: 'Bukan marah sih... cuma akhir-akhir ini aku tidak paham perasaanmu.'"
+              },
+              {
+                "jp": "親の気持ちもわからないわけではないが、自分の進路は自分で決めたい。",
+                "rd": "おやのきもちもわからないわけではないが、じぶんのしんろはじぶんできめたい。",
+                "id": "Bukan berarti aku tidak paham perasaan orang tuaku, tapi jalan hidupku ingin kutentukan sendiri."
+              },
+              {
+                "jp": "その日は絶対に無理というわけではありませんが、できれば別の日にしてもらえるとありがたいです。",
+                "rd": "そのひはぜったいにむりというわけではありませんが、できればべつのひにしてもらえるとありがたいです。",
+                "id": "Bukan berarti hari itu mutlak tidak bisa, tapi kalau bisa diganti hari lain saya akan sangat berterima kasih."
+              }
+            ]
+          },
+          {
+            "pattern": "kalimat bentuk biasa + というものではない / というものでもない",
+            "arti": "bukan berarti kalau ~ lantas pasti...; tidak semudah itu",
+            "explain": "Menyangkal anggapan bahwa <b>syarat terpenuhi = hasil pasti<\/b>. Ini bukan soal fakta konkret, melainkan soal hakikat menurut pendapat pembicara. Sering dipasangkan dengan pola syarat (〜ば) atau 〜からといって. Versi というものでもない nadanya sedikit lebih lembut.",
+            "tabel": [
+              {
+                "k": "資格をとればできるというものではない",
+                "v": "bukan berarti kalau punya lisensi pasti bisa"
+              },
+              {
+                "k": "努力すれば成功するというものでもない",
+                "v": "bukan berarti usaha pasti sukses"
+              },
+              {
+                "k": "自由だからといって〜というものではない",
+                "v": "bukan berarti karena bebas lalu boleh..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "医師の仕事は資格をとればできるというものではない。常に最新の治療法を研究する姿勢がなければいけない。",
+                "rd": "いしのしごとはしかくをとればできるというものではない。つねにさいしんのちりょうほうをけんきゅうするしせいがなければいけない。",
+                "id": "Pekerjaan dokter bukan berarti kalau sudah punya lisensi pasti bisa. Harus selalu punya sikap meneliti metode pengobatan terbaru."
+              },
+              {
+                "jp": "自由だからといって、何をしてもいいというものではありません。",
+                "rd": "じゆうだからといって、なにをしてもいいというものではありません。",
+                "id": "Bukan berarti karena bebas lalu boleh melakukan apa saja."
+              },
+              {
+                "jp": "練習問題は一度やれば終わりだというものではない。間違ったところをよく復習することが大切だ。",
+                "rd": "れんしゅうもんだいはいちどやればおわりだというものではない。まちがったところをよくふくしゅうすることがたいせつだ。",
+                "id": "Soal latihan bukan berarti kalau dikerjakan sekali lalu selesai. Yang penting mengulang bagian yang salah dengan baik."
+              },
+              {
+                "jp": "努力すれば必ず成功するというものでもない。チャンスも必要だ。",
+                "rd": "どりょくすればかならずせいこうするというものでもない。ちゃんすもひつようだ。",
+                "id": "Bukan berarti kalau berusaha pasti sukses. Kesempatan juga diperlukan."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 12",
+        "items": [
+          {
+            "ch": "否",
+            "kun": "ひ",
+            "on": "ヒ",
+            "id": "menyangkal",
+            "note": "否定 (ひてい) = penyangkalan"
+          },
+          {
+            "ch": "拒",
+            "kun": "こば(む)",
+            "on": "キョ",
+            "id": "menolak",
+            "note": "拒否 (きょひ) = penolakan"
+          },
+          {
+            "ch": "断",
+            "kun": "た(つ)",
+            "on": "ダン",
+            "id": "memutus",
+            "note": "判断 (はんだん) = penilaian"
+          },
+          {
+            "ch": "決",
+            "kun": "き(める)",
+            "on": "ケツ",
+            "id": "memutuskan",
+            "note": "解決 (かいけつ) = penyelesaian"
+          },
+          {
+            "ch": "極",
+            "kun": "きわ(める)",
+            "on": "キョク",
+            "id": "ekstrem",
+            "note": "積極的 (せっきょくてき) = proaktif"
+          },
+          {
+            "ch": "訂",
+            "kun": "—",
+            "on": "テイ",
+            "id": "mengoreksi",
+            "note": "訂正 (ていせい) = ralat"
+          },
+          {
+            "ch": "誤",
+            "kun": "あやま(る)",
+            "on": "ゴ",
+            "id": "salah",
+            "note": "誤解 (ごかい) = kesalahpahaman"
+          },
+          {
+            "ch": "反",
+            "kun": "そ(る)",
+            "on": "ハン",
+            "id": "berlawanan",
+            "note": "反対 (はんたい) = menentang"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "明日までにこの資料、全部チェックできる？",
+            "id": "Sampai besok, semua dokumen ini bisa dicek?"
+          },
+          {
+            "sp": "B",
+            "jp": "できるわけがないよ。100ページもあるんだから。",
+            "id": "Mana mungkin bisa. Jumlahnya 100 halaman, lho."
+          },
+          {
+            "sp": "A",
+            "jp": "え、休むどころか、残業になりそうだね。",
+            "id": "Eh, jangankan libur, malah kayaknya harus lembur ya."
+          },
+          {
+            "sp": "B",
+            "jp": "山田が手伝ってくれるものか。あいつはいつも定時で帰るんだから。",
+            "id": "Mana mungkin Yamada mau membantu. Dia selalu pulang tepat waktu."
+          },
+          {
+            "sp": "A",
+            "jp": "怒っているわけじゃないけど、手伝ってくれると助かるな。",
+            "id": "Bukan berarti aku marah, tapi kalau dia mau membantu akan sangat menolong."
+          },
+          {
+            "sp": "B",
+            "jp": "そうだね。頼めば手伝ってくれるというものでもないけど、聞いてみよう。",
+            "id": "Iya. Tidak semudah itu juga kalau cuma diminta, tapi coba tanya saja."
+          },
+          {
+            "sp": "A",
+            "jp": "うん、ダメもとで頼んでみるよ。",
+            "id": "Iya, coba minta saja walau mungkin ditolak."
+          },
+          {
+            "sp": "B",
+            "jp": "がんばって。終わったらおごるよ。",
+            "id": "Semangat. Kalau selesai, aku yang traktir."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "「彼が優勝する＿＿＿。練習不足なんだから。」",
+        "o": [
+          "わけではない",
+          "どころか",
+          "というものではない",
+          "わけがない"
+        ],
+        "a": 3,
+        "explain": "わけがない = tidak mungkin (keyakinan kuat bahwa mustahil terjadi)."
+      },
+      {
+        "q": "A「怒っているの？」B「怒っている＿＿＿けど、ちょっとがっかりしているんだ。」",
+        "o": [
+          "わけがない",
+          "わけじゃない",
+          "どころではない",
+          "ものか"
+        ],
+        "a": 1,
+        "explain": "わけじゃない = bukan berarti (meluruskan kesalahpahaman, melembutkan)."
+      },
+      {
+        "q": "ただの風邪＿＿＿、肺炎だった。",
+        "o": [
+          "どころではなく",
+          "わけがなく",
+          "ものか",
+          "というものではなく"
+        ],
+        "a": 0,
+        "explain": "どころではない = jangankan (situasi jauh dari dugaan, ke arah lebih serius)."
+      },
+      {
+        "q": "休む＿＿＿、徹夜で働いた。",
+        "o": [
+          "ものか",
+          "どころか",
+          "わけか",
+          "というものか"
+        ],
+        "a": 1,
+        "explain": "どころか = bukan cuma (malah sebaliknya, ke arah lebih ekstrem)."
+      },
+      {
+        "q": "「田中が遅刻しない＿＿＿。あいつはいつも遅刻するんだから。」",
+        "o": [
+          "わけがない",
+          "わけではない",
+          "どころか",
+          "ものか"
+        ],
+        "a": 3,
+        "explain": "ものか = mana mungkin! (penolakan emosional, hanya untuk percakapan kasual)."
+      },
+      {
+        "q": "「資格を取ればプロになれる＿＿＿。」",
+        "o": [
+          "というわけではない",
+          "どころではない",
+          "というものではない",
+          "ものか"
+        ],
+        "a": 2,
+        "explain": "というものではない = tidak semudah itu (menolak generalisasi yang terlalu sederhana)."
+      },
+      {
+        "q": "「そんなに急がなくてもいいよ。間に合わない＿＿＿。」",
+        "o": [
+          "わけがない",
+          "わけじゃない",
+          "どころか",
+          "ものか"
+        ],
+        "a": 1,
+        "explain": "わけじゃない = bukan berarti (tidak sepenuhnya begitu)."
+      },
+      {
+        "q": "この程度の努力で合格できる＿＿＿。",
+        "o": [
+          "わけか",
+          "どころか",
+          "というものか",
+          "ものか"
+        ],
+        "a": 3,
+        "explain": "ものか = mana mungkin! (penolakan emosional yang kasar)."
+      },
+      {
+        "q": "忙しくて遊ぶ時間なんてある＿＿＿。",
+        "o": [
+          "わけではなく",
+          "ものか",
+          "どころではなく",
+          "というものではなく"
+        ],
+        "a": 2,
+        "explain": "どころではない = jangankan (punya waktu main)."
+      },
+      {
+        "q": "「彼が犯人である＿＿＿。アリバイがあるんだ。」",
+        "o": [
+          "わけではない",
+          "わけがない",
+          "どころではない",
+          "というものではない"
+        ],
+        "a": 1,
+        "explain": "わけがない = tidak mungkin (ada bukti kuat: alibi)."
+      }
+    ]
+  },
+  {
+    "id": "n2-13",
+    "bab": 13,
+    "level": "n2",
+    "title": "Membicarakan Topik",
+    "desc": "Mengangkat topik pembicaraan dengan berbagai nuansa.",
+    "icon": "🗣️",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Membicarakan Topik",
+        "body": "<p>Bab ini tentang cara <b>mengangkat dan menggeser topik pembicaraan<\/b> — keterampilan penting di N2 karena tiap pola memberi \"sinyal\" yang berbeda ke lawan bicara tentang ke mana arah percakapan.<\/p><p><b>とは<\/b> dipakai saat kamu <b>mendefinisikan<\/b> sesuatu secara formal: \"~ itu adalah...\". Pola ini muncul saat menjelaskan istilah atau menanyakan arti kata. Berbeda dengan <b>といえば<\/b> yang fungsinya <b>mengalihkan topik<\/b> berdasarkan asosiasi: \"ngomong-ngomong soal X...\" — kamu mendengar satu kata, lalu teringat hal lain yang berhubungan.<\/p><p><b>というと / といえば / といったら<\/b> dipakai saat mendengar suatu kata lalu <b>langsung terbayang<\/b> gambaran khasnya: \"kalau dengar kata X, yang terbayang adalah...\". Sementara <b>（のこと）となると<\/b> lebih dramatis: \"kalau sudah soal X\" — menggambarkan orang yang <b>sikapnya berubah total<\/b> begitu topik favoritnya muncul, biasanya jadi bersemangat luar biasa.<\/p><p><b>といったら<\/b> juga punya fungsi kedua yang sering keluar di soal: <b>penekanan tingkat yang luar biasa<\/b> — \"~ itu luar biasa...\" untuk menggambarkan rasa terkejut, sibuk, atau takjub yang sulit diungkapkan dengan kata biasa.<\/p><p>Jebakan umum: といえば (mengalihkan topik ke hal lain) vs というと (menggambarkan asosiasi dari kata itu sendiri). Dan といったら punya dua arti — \"kalau dibilang\" dan \"luar biasa\" — baca konteks kalimatnya baik-baik.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Membicarakan Topik",
+        "items": [
+          {
+            "jp": "定義",
+            "kj": "定義",
+            "r": "teigi",
+            "id": "definisi",
+            "note": "定義する = mendefinisikan"
+          },
+          {
+            "jp": "用語",
+            "kj": "用語",
+            "r": "yougo",
+            "id": "istilah",
+            "note": "専門用語 = istilah khusus bidang"
+          },
+          {
+            "jp": "連想",
+            "kj": "連想",
+            "r": "rensou",
+            "id": "asosiasi",
+            "note": "連想する = mengasosiasikan"
+          },
+          {
+            "jp": "話題",
+            "kj": "話題",
+            "r": "wadai",
+            "id": "topik pembicaraan",
+            "note": "話題になる = menjadi perbincangan"
+          },
+          {
+            "jp": "きっかけ",
+            "kj": "きっかけ",
+            "r": "kikkake",
+            "id": "pemicu; awal mula",
+            "note": "きっかけで話が弾む = obrolan jadi seru karena pemicunya"
+          },
+          {
+            "jp": "余談",
+            "kj": "余談",
+            "r": "yodan",
+            "id": "selingan; intermezo",
+            "note": "余談ですが = sebagai selingan"
+          },
+          {
+            "jp": "本題",
+            "kj": "本題",
+            "r": "hondai",
+            "id": "topik utama",
+            "note": "本題に入る = masuk ke topik utama"
+          },
+          {
+            "jp": "脱線",
+            "kj": "脱線",
+            "r": "dassen",
+            "id": "keluar dari jalur",
+            "note": "話が脱線する = obrolan melenceng"
+          },
+          {
+            "jp": "ちなみに",
+            "kj": "ちなみに",
+            "r": "chinamini",
+            "id": "ngomong-ngomong",
+            "note": "ちなみに、彼は大阪出身だ"
+          },
+          {
+            "jp": "そういえば",
+            "kj": "そういえば",
+            "r": "souieba",
+            "id": "ngomong-ngomong (teringat)",
+            "note": "そういえば、昨日の件だけど"
+          },
+          {
+            "jp": "さすが",
+            "kj": "さすが",
+            "r": "sasuga",
+            "id": "memang pantas; seperti yang diharapkan",
+            "note": "さすがプロだ = memang pantas disebut profesional"
+          },
+          {
+            "jp": "想像を絶する",
+            "kj": "想像を絶する",
+            "r": "souzou wo zessuru",
+            "id": "di luar bayangan",
+            "note": "想像を絶する忙しさ = kesibukan di luar bayangan"
+          },
+          {
+            "jp": "といえば",
+            "kj": "といえば",
+            "r": "toieba",
+            "id": "ngomong-ngomong soal",
+            "note": "京都といえば寺だ"
+          },
+          {
+            "jp": "思わず",
+            "kj": "思わず",
+            "r": "omowazu",
+            "id": "tanpa sadar",
+            "note": "思わず声を上げた = tanpa sadar berseru"
+          },
+          {
+            "jp": "興奮",
+            "kj": "興奮",
+            "r": "koufun",
+            "id": "kegirangan",
+            "note": "興奮して話す = bicara dengan girang"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Membicarakan Topik",
+        "items": [
+          {
+            "pattern": "kata benda + とは",
+            "arti": "~ itu adalah... (definisi formal)",
+            "explain": "Versi <b>formal/kaku<\/b> dari 〜というのは. Dipakai untuk menjelaskan atau mendefinisikan sebuah kata atau istilah. Kalimat sesudahnya berisi penjelasan makna atau hakikat (〜だ, 〜である, 〜ということである, dan sejenisnya).",
+            "tabel": [
+              {
+                "k": "「校正」とは",
+                "v": "'kousei' itu artinya..."
+              },
+              {
+                "k": "人生とは",
+                "v": "hidup itu adalah..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "「校正」とはどういう意味ですか。",
+                "rd": "「こうせい」とはどういういみですか。",
+                "id": "Apa arti kata 'kousei' (koreksi naskah)?"
+              },
+              {
+                "jp": "「増悪」とは医学用語で、症状がもっと悪くなることである。",
+                "rd": "「ぞうあく」とはいがくようごで、しょうじょうがもっとわるくなることである。",
+                "id": "'Zouaku' adalah istilah kedokteran yang artinya gejala menjadi semakin memburuk."
+              },
+              {
+                "jp": "人生とは本人が主役のドラマみたいなものだ。",
+                "rd": "じんせいとはほんにんがしゅやくのどらまみたいなものだ。",
+                "id": "Hidup itu ibarat drama yang dibintangi oleh diri sendiri sendiri."
+              }
+            ]
+          },
+          {
+            "pattern": "kata yang diangkat + といえば / kalimat bentuk biasa + といえば",
+            "arti": "ngomong-ngomong soal ~ / kalau dibilang ~ sih memang, tapi...",
+            "explain": "Punya dua fungsi. <b>Fungsi A:<\/b> mengangkat kata yang baru muncul lalu beralih ke topik terkait ('ngomong-ngomong soal Hawaii...'). <b>Fungsi B:<\/b> mengakui sesuatu seadanya, lalu menyampaikan maksud sebenarnya — cirinya kata yang sama diulang di depan dan belakang, lalu diikuti が / けれど ('kalau dibilang mahal sih memang mahal, tapi...').",
+            "tabel": [
+              {
+                "k": "ハワイといえば",
+                "v": "ngomong-ngomong soal Hawaii"
+              },
+              {
+                "k": "不便といえば不便ですが",
+                "v": "kalau dibilang tidak nyaman sih memang, tapi..."
+              },
+              {
+                "k": "かわいいといえばかわいいけど",
+                "v": "kalau dibilang cantik sih memang, tapi..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "このコーヒー、ハワイのお土産ですか。ハワイといえば、さち子さんが来月ハワイで結婚式をするんだそうですよ。",
+                "rd": "このこーひー、はわいのおみやげですか。はわいといえば、さちこさんがらいげつはわいでけっこんしきをするんだそうですよ。",
+                "id": "Kopi ini oleh-oleh dari Hawaii ya? Ngomong-ngomong soal Hawaii, katanya Sachiko bulan depan menikah di Hawaii."
+              },
+              {
+                "jp": "A「高速道路の料金が安くなるみたいですね。」 B「そのようですね。安くなるといえば、飛行機のチケットが安く買えそうなんで、来月旅行しようと思っているんです。」",
+                "rd": "A「こうそくどうろのりょうきんがやすくなるみたいですね。」 B「そのようですね。やすくなるといえば、ひこうきのちけっとがやすくかえそうなんで、らいげつりょこうしようとおもっているんです。」",
+                "id": "A: 'Katanya tarif tol mau turun ya.' B: 'Iya kayaknya. Ngomong-ngomong soal murah, tiket pesawat kayaknya bisa dibeli murah, jadi bulan depan aku berencana traveling.'"
+              },
+              {
+                "jp": "今のアパート、駅から遠いので不便といえば不便ですが、静かでいいですよ。",
+                "rd": "いまのあぱーと、えきからとおいのでふべんといえばふべんですが、しずかでいいですよ。",
+                "id": "Apartemenku sekarang jauh dari stasiun, jadi kalau dibilang tidak nyaman sih memang tidak nyaman, tapi tenang dan enak."
+              },
+              {
+                "jp": "松本さんのうちのお嬢さん、かわいいといえばかわいいけど、ちょっとわがままね。",
+                "rd": "まつもとさんのうちのおじょうさん、かわいいといえばかわいいけど、ちょっとわがままね。",
+                "id": "Putri keluarga Matsumoto, kalau dibilang cantik sih memang cantik, tapi agak manja ya."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda / kata kerja / kata sifat bentuk biasa + というと / といえば / といったら",
+            "arti": "kalau dengar kata ~, langsung terbayang...",
+            "explain": "Mengatakan hal yang <b>langsung terlintas<\/b> begitu mendengar sebuah kata. Selain itu, というと punya fungsi kedua: <b>memastikan<\/b> apakah maksud lawan bicara sama dengan yang kita pahami — biasanya diikuti ungkapan memastikan seperti ね atau かな.",
+            "tabel": [
+              {
+                "k": "オーストラリアといえば",
+                "v": "kalau dengar Australia"
+              },
+              {
+                "k": "畑というと",
+                "v": "kalau dengar 'kebun'"
+              },
+              {
+                "k": "辞めるというと",
+                "v": "maksudnya berhenti itu..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "これ、うちの畑でとれたトマトです。畑というと広い土地を想像するでしょうが、うちの畑は畳2枚ぐらいの狭さなんです。",
+                "rd": "これ、うちのはたけでとれたとまとです。はたけというとひろいとちをそうぞうするでしょうが、うちのはたけはたたみ2まいぐらいのせまさなんです。",
+                "id": "Ini tomat dari kebun kami. Kalau dengar 'kebun' pasti membayangkan lahan luas, tapi kebun kami sempitnya cuma sekitar 2 tatami."
+              },
+              {
+                "jp": "オーストラリアといえば、すぐにコアラとかカンガルーを思い浮かべる。",
+                "rd": "おーすとらりあといえば、すぐにこあらとかかんがるーをおもいうかべる。",
+                "id": "Kalau dengar Australia, langsung terbayang koala atau kanguru."
+              },
+              {
+                "jp": "くじらっていったら、思いつくことは何でしょうか。",
+                "rd": "くじらっていったら、おもいつくことはなんでしょうか。",
+                "id": "Kalau dengar 'paus', apa yang langsung terpikir?"
+              },
+              {
+                "jp": "A「今度のパーティー、トップでやろうと思っているんですが……。」 B「トップっていうと、去年オープンしたイタリアンレストランのことですね。」",
+                "rd": "A「こんどのぱーてぃー、とっぷでやろうとおもっているんですが……。」 B「とっぷっていうと、きょねんおーぷんしたいたりあんれすとらんのことですね。」",
+                "id": "A: 'Pesta berikutnya rencananya mau di Top...' B: 'Top itu maksudnya restoran Italia yang buka tahun lalu itu ya?"
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + （のこと）となると",
+            "arti": "kalau sudah soal ~, (sikapnya) berubah drastis",
+            "explain": "Menekankan bahwa untuk topik ~, sikap atau perilakunya menjadi <b>tidak biasa<\/b> — berbeda jauh dari normalnya. Kalimat sesudahnya selalu menggambarkan perubahan sikap yang mencolok itu.",
+            "tabel": [
+              {
+                "k": "車のこととなると",
+                "v": "kalau sudah soal mobil"
+              },
+              {
+                "k": "酒となると",
+                "v": "kalau sudah soal alkohol"
+              },
+              {
+                "k": "好きな歌手のこととなると",
+                "v": "kalau sudah soal penyanyi favorit"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "佐藤さんは、好きな歌手のこととなると話が止まらない。",
+                "rd": "さとうさんは、すきなかしゅのこととなるとはなしがとまらない。",
+                "id": "Sato, kalau sudah soal penyanyi favoritnya, bicaranya tidak berhenti-berhenti."
+              },
+              {
+                "jp": "弟は、車のこととなると急に専門家みたいになる。",
+                "rd": "おとうとは、くるまのこととなるときゅうにせんもんかみたいになる。",
+                "id": "Adikku, kalau sudah soal mobil, tiba-tiba jadi seperti pakar."
+              },
+              {
+                "jp": "酒好きだった父は、酒となると人が変わったように元気になった。",
+                "rd": "さけずきだったちちは、さけとなるとひとがかわったようにげんきになった。",
+                "id": "Ayah yang memang suka minum, kalau sudah soal sake, jadi bersemangat seperti orang yang berbeda."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + といったら",
+            "arti": "~ itu luar biasa... (penekanan tingkat yang tidak biasa)",
+            "explain": "Menekankan bahwa <b>tingkatnya tidak biasa<\/b> — luar biasa, bukan main — sering disertai rasa takjub. Kalimat sesudahnya menjelaskan betapa luar biasanya, dan kadang kalimatnya sengaja dihilangkan (diakhiri …) karena sudah terbayang saking luar biasanya.",
+            "tabel": [
+              {
+                "k": "忙しさといったら",
+                "v": "sibuknya luar biasa"
+              },
+              {
+                "k": "驚きといったら",
+                "v": "kagetnya bukan main"
+              },
+              {
+                "k": "怖さといったら",
+                "v": "takutnya tidak terkatakan"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "締め切り前の仕事の忙しさといったら、君には想像もできないと思うよ。",
+                "rd": "しめきりまえのしごとのいそがしさといったら、きみにはそうぞうもできないとおもうよ。",
+                "id": "Sibuknya kerjaan sebelum tenggat itu, kayaknya kamu tidak bisa membayangkannya."
+              },
+              {
+                "jp": "そのニュースを聞いたときの驚きといったら、しばらくは声も出ないほどだった。",
+                "rd": "そのにゅーすをきいたときのおどろきといったら、しばらくはこえもでないほどだった。",
+                "id": "Kagetnya waktu dengar berita itu, sampai beberapa saat tidak bisa bersuara."
+              },
+              {
+                "jp": "富士山の頂上から見た景色といったら、思い出すだけで感動する。",
+                "rd": "ふじさんのちょうじょうからみたけしきといったら、おもいだすだけでかんどうする。",
+                "id": "Indahnya pemandangan dari puncak Gunung Fuji itu, cuma mengingatnya saja sudah terharu."
+              },
+              {
+                "jp": "暗い山道を一人で歩いたときの怖さといったら……。",
+                "rd": "くらいやまみちをひとりであるいたときのこわさといったら……。",
+                "id": "Takutnya waktu jalan sendirian di jalan gunung yang gelap itu... (tidak terkatakan)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 13",
+        "items": [
+          {
+            "ch": "定",
+            "kun": "さだ(める)",
+            "on": "テイ",
+            "id": "menetapkan",
+            "note": "定義 (ていぎ) = definisi"
+          },
+          {
+            "ch": "義",
+            "kun": "—",
+            "on": "ギ",
+            "id": "makna; kebenaran",
+            "note": "意義 (いぎ) = arti penting"
+          },
+          {
+            "ch": "連",
+            "kun": "つら(なる)",
+            "on": "レン",
+            "id": "berangkai",
+            "note": "関連 (かんれん) = keterkaitan"
+          },
+          {
+            "ch": "想",
+            "kun": "おも(う)",
+            "on": "ソウ",
+            "id": "membayangkan",
+            "note": "感想 (かんそう) = kesan"
+          },
+          {
+            "ch": "題",
+            "kun": "—",
+            "on": "ダイ",
+            "id": "topik",
+            "note": "問題 (もんだい) = masalah"
+          },
+          {
+            "ch": "脱",
+            "kun": "ぬ(ぐ)",
+            "on": "ダツ",
+            "id": "lepas",
+            "note": "脱線 (だっせん) = keluar jalur"
+          },
+          {
+            "ch": "絶",
+            "kun": "た(える)",
+            "on": "ゼツ",
+            "id": "terputus",
+            "note": "絶対 (ぜったい) = mutlak"
+          },
+          {
+            "ch": "興",
+            "kun": "おこ(る)",
+            "on": "コウ",
+            "id": "bangkit; menarik",
+            "note": "興味 (きょうみ) = minat"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "「リスケ」ってどういう意味？",
+            "id": "Kata \"risuke\" itu artinya apa?"
+          },
+          {
+            "sp": "B",
+            "jp": "「リスケ」とは、予定を変更することだよ。ビジネス用語だね。",
+            "id": "\"Risuke\" itu adalah mengubah jadwal. Istilah bisnis ya."
+          },
+          {
+            "sp": "A",
+            "jp": "へえ。ビジネスといえば、来週の出張はどうなったの？",
+            "id": "Oh. Ngomong-ngomong soal bisnis, dinas minggu depan bagaimana?"
+          },
+          {
+            "sp": "B",
+            "jp": "大阪に行くんだ。大阪というと、たこ焼きを思い出すなあ。",
+            "id": "Pergi ke Osaka. Kalau dengar kata Osaka, langsung terbayang takoyaki."
+          },
+          {
+            "sp": "A",
+            "jp": "佐藤さん、大阪のこととなると話が止まらないよね。",
+            "id": "Pak Sato, kalau sudah soal Osaka, ceritanya tidak berhenti ya."
+          },
+          {
+            "sp": "B",
+            "jp": "本当だね。たこ焼きの話になったら、1時間は語るよ。",
+            "id": "Benar. Kalau sudah bicara takoyaki, bisa sejam dia bercerita."
+          },
+          {
+            "sp": "A",
+            "jp": "出張前の忙しさといったら、想像を絶するよ。",
+            "id": "Kesibukan sebelum dinas itu luar biasa, di luar bayangan."
+          },
+          {
+            "sp": "B",
+            "jp": "がんばって。お土産はたこ焼きでいいよ。",
+            "id": "Semangat. Oleh-olehnya takoyaki saja tidak apa-apa."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "「リモートワーク」＿＿＿どういう意味ですか。",
+        "o": [
+          "とは",
+          "といえば",
+          "というと",
+          "といったら"
+        ],
+        "a": 0,
+        "explain": "とは = dipakai untuk menanyakan atau menjelaskan definisi suatu istilah."
+      },
+      {
+        "q": "京都＿＿＿、やはり寺や神社を思い浮かべますね。",
+        "o": [
+          "とは",
+          "となると",
+          "といったら",
+          "といえば"
+        ],
+        "a": 3,
+        "explain": "といえば = kalau bicara soal X, langsung terbayang gambaran khasnya."
+      },
+      {
+        "q": "弟は、ゲーム＿＿＿目の色が変わる。",
+        "o": [
+          "といえば",
+          "というと",
+          "のこととなると",
+          "とは"
+        ],
+        "a": 2,
+        "explain": "のこととなると = kalau sudah soal X, sikapnya berubah drastis."
+      },
+      {
+        "q": "試験前の緊張＿＿＿、手が震えるほどだった。",
+        "o": [
+          "といえば",
+          "というと",
+          "といったら",
+          "とは"
+        ],
+        "a": 2,
+        "explain": "といったら = penekanan tingkat yang luar biasa."
+      },
+      {
+        "q": "A「北海道のお土産です。」B「北海道＿＿＿、さち子さんが来月旅行するそうですね。」",
+        "o": [
+          "とは",
+          "といえば",
+          "というと",
+          "となると"
+        ],
+        "a": 1,
+        "explain": "といえば = mengalihkan topik berdasarkan asosiasi kata yang didengar."
+      },
+      {
+        "q": "「DX」＿＿＿、デジタル技術で業務を変革することである。",
+        "o": [
+          "といえば",
+          "というと",
+          "といったら",
+          "とは"
+        ],
+        "a": 3,
+        "explain": "とは = definisi formal suatu istilah."
+      },
+      {
+        "q": "彼女は、推しの歌手＿＿＿話が止まらない。",
+        "o": [
+          "のこととなると",
+          "といえば",
+          "というと",
+          "とは"
+        ],
+        "a": 0,
+        "explain": "のこととなると = begitu topik favorit muncul, jadi bersemangat luar biasa."
+      },
+      {
+        "q": "その知らせを聞いたときの驚き＿＿＿、しばらく言葉が出なかった。",
+        "o": [
+          "といえば",
+          "というと",
+          "といったら",
+          "となると"
+        ],
+        "a": 2,
+        "explain": "といったら = luar biasa, tingkat yang sulit diungkapkan dengan kata biasa."
+      },
+      {
+        "q": "富士山＿＿＿、日本一の山を思い浮かべる。",
+        "o": [
+          "とは",
+          "というと",
+          "といえば",
+          "となると"
+        ],
+        "a": 1,
+        "explain": "というと = kalau dengar kata X, langsung terbayang gambaran khasnya."
+      },
+      {
+        "q": "A「来月ハワイに行くんです。」B「ハワイ＿＿＿、田中さんが去年結婚式をしたところですね。」",
+        "o": [
+          "とは",
+          "といえば",
+          "というと",
+          "といったら"
+        ],
+        "a": 1,
+        "explain": "といえば = ngomong-ngomong soal X (mengalihkan topik)."
+      }
+    ]
+  },
+  {
+    "id": "n2-14",
+    "bab": 14,
+    "level": "n2",
+    "title": "Tetapi & Walaupun",
+    "desc": "Menyatakan kontras dan pengecualian.",
+    "icon": "⚖️",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Tetapi & Walaupun",
+        "body": "<p>Di N2, menyatakan \"tetapi\" tidak cukup hanya dengan が atau けど. Enam pola di bab ini mengungkapkan <b>kontras dengan kadar formalitas dan nuansa yang berbeda<\/b> — dan inilah yang diuji di JLPT.<\/p><p><b>にもかかわらず<\/b> adalah \"meskipun\" yang paling formal — dipakai saat fakta <b>bertentangan dengan harapan wajar<\/b>, sering muncul di berita dan laporan. <b>ものの / とはいうものの<\/b> lebih lembut: \"memang ~, tapi...\" — kamu <b>mengakui<\/b> satu fakta, lalu menyampaikan hal yang bertolak belakang. Nadanya sedikit sastra.<\/p><p><b>ながら（も）<\/b> menggambarkan dua hal yang <b>bertolak belakang namun terjadi bersamaan<\/b>: \"meskipun / padahal\". Hati-hati, ながら juga bisa berarti \"sambil\" — bedakan dari konteksnya. Sementara <b>つつ（も）<\/b> lebih spesifik: menggambarkan <b>kesenjangan antara kesadaran batin dan tindakan nyata<\/b> — \"padahal dalam hati sadar..., tapi tetap...\". Pola ini sangat formal dan khas bahasa tulis.<\/p><p><b>といっても<\/b> dipakai untuk <b>mengoreksi kesan<\/b> yang ditimbulkan sebuah kata: \"walaupun dibilang X, kenyataannya...\". Sedangkan <b>からといって<\/b> <b>menolak kesimpulan yang terburu-buru<\/b>: \"hanya karena X, bukan berarti...\" — selalu diikuti penyangkalan.<\/p><p>Jebakan umum: ながら (dua hal terjadi bersamaan) vs つつ (kesenjangan batin vs tindakan) — jangan tertukar. Dan からといって wajib diikuti kalimat negatif atau penolakan; kalau tidak ada penolakannya, polanya salah.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Tetapi & Walaupun",
+        "items": [
+          {
+            "jp": "悪天候",
+            "kj": "悪天候",
+            "r": "akutenkou",
+            "id": "cuaca buruk",
+            "note": "悪天候にもかかわらず = meskipun cuaca buruk"
+          },
+          {
+            "jp": "予想",
+            "kj": "予想",
+            "r": "yosou",
+            "id": "perkiraan",
+            "note": "予想に反して = bertentangan dengan perkiraan"
+          },
+          {
+            "jp": "期待",
+            "kj": "期待",
+            "r": "kitai",
+            "id": "harapan",
+            "note": "期待を裏切る = mengkhianati harapan"
+          },
+          {
+            "jp": "矛盾",
+            "kj": "矛盾",
+            "r": "mujun",
+            "id": "kontradiksi",
+            "note": "矛盾している = bertentangan"
+          },
+          {
+            "jp": "逆に",
+            "kj": "逆に",
+            "r": "gyakuni",
+            "id": "sebaliknya",
+            "note": "逆に考える = berpikir sebaliknya"
+          },
+          {
+            "jp": "一方",
+            "kj": "一方",
+            "r": "ippou",
+            "id": "di satu sisi",
+            "note": "一方で = di sisi lain"
+          },
+          {
+            "jp": "承知",
+            "kj": "承知",
+            "r": "shouchi",
+            "id": "memahami; mengetahui",
+            "note": "承知の上で = dengan mengetahui (risikonya)"
+          },
+          {
+            "jp": "覚悟",
+            "kj": "覚悟",
+            "r": "kakugo",
+            "id": "kesiapan mental",
+            "note": "覚悟を決める = memantapkan hati"
+          },
+          {
+            "jp": "葛藤",
+            "kj": "葛藤",
+            "r": "kattou",
+            "id": "konflik batin",
+            "note": "葛藤する = mengalami konflik batin"
+          },
+          {
+            "jp": "本心",
+            "kj": "本心",
+            "r": "honshin",
+            "id": "isi hati sebenarnya",
+            "note": "本心では = dalam hati sebenarnya"
+          },
+          {
+            "jp": "建前",
+            "kj": "建前",
+            "r": "tatemae",
+            "id": "sikap formal di depan umum",
+            "note": "本音と建前 = isi hati vs sikap formal"
+          },
+          {
+            "jp": "弁解",
+            "kj": "弁解",
+            "r": "benkai",
+            "id": "pembelaan; dalih",
+            "note": "弁解する = membela diri"
+          },
+          {
+            "jp": "結論",
+            "kj": "結論",
+            "r": "ketsuron",
+            "id": "kesimpulan",
+            "note": "結論を急ぐな = jangan terburu-buru menyimpulkan"
+          },
+          {
+            "jp": "早合点",
+            "kj": "早合点",
+            "r": "hayagaten",
+            "id": "kesimpulan terburu-buru",
+            "note": "早合点するな = jangan gegabah menyimpulkan"
+          },
+          {
+            "jp": "裏腹",
+            "kj": "裏腹",
+            "r": "urahara",
+            "id": "bertolak belakang",
+            "note": "期待とは裏腹に = bertolak belakang dengan harapan"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Tetapi & Walaupun",
+        "items": [
+          {
+            "pattern": "kata benda / kalimat bentuk biasa + にもかかわらず",
+            "arti": "meskipun ~; walaupun ~",
+            "explain": "Menyatakan <b>keterkejutan<\/b> karena sesuatu terjadi tanpa terpengaruh oleh fakta sebelumnya. Berbeda dengan ても yang netral, pola ini selalu membawa nuansa 'kok bisa?' dari pembicara. Jebakan dari buku: <b>tidak bisa<\/b> dipakai untuk menyatakan harapan, niat, atau ajakan.",
+            "tabel": [
+              {
+                "k": "悪天候にもかかわらず",
+                "v": "meskipun cuaca buruk"
+              },
+              {
+                "k": "忙しいにもかかわらず",
+                "v": "meskipun sibuk"
+              },
+              {
+                "k": "足を痛めたにもかかわらず",
+                "v": "meskipun kakinya cedera"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "水道工事の人たちは悪天候にもかかわらず、作業を続けている。",
+                "rd": "すいどうこうじのひとたちはあくてんこうにもかかわらず、さぎょうをつづけている。",
+                "id": "Para pekerja proyek air itu terus bekerja meskipun cuaca buruk."
+              },
+              {
+                "jp": "中村先生はお忙しいにもかかわらず、早く僕のレポートをチェックしてくださった。",
+                "rd": "なかむらせんせいはおいそがしいにもかかわらず、はやくぼくのれぽーとをちぇっくしてくださった。",
+                "id": "Pak Nakamura memeriksa laporanku dengan cepat, padahal beliau sangat sibuk."
+              },
+              {
+                "jp": "足を痛めたにもかかわらず、村田選手はマラソンコースを最後まで走った。",
+                "rd": "あしをいためたにもかかわらず、むらたせんしゅはまらそんこーすをさいごまではしった。",
+                "id": "Meskipun kakinya cedera, atlet Murata berlari sampai garis finis maraton."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja / kata sifat bentuk biasa + ものの; kata benda / kalimat bentuk biasa + とはいうものの",
+            "arti": "memang ~, tapi...; walaupun ~",
+            "explain": "Mengakui sebuah <b>fakta<\/b>, tapi kenyataannya tidak seperti yang wajar dibayangkan dari fakta itu. Dipakai untuk fakta atau hal yang hampir pasti benar. Kalimat sesudahnya berisi hal yang menyimpang dari dugaan ('harusnya begitu, tapi ternyata...'). Tidak dipakai untuk ajakan.",
+            "tabel": [
+              {
+                "k": "買ったものの",
+                "v": "memang sudah beli, tapi..."
+              },
+              {
+                "k": "晴れるものの",
+                "v": "memang cerah, tapi..."
+              },
+              {
+                "k": "不景気とはいうものの",
+                "v": "katanya resesi, tapi..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "明日の天気です。関東地方は晴れるものの、風が強いため寒く感じられるでしょう。",
+                "rd": "あしたのてんきです。かんとうちほうははれるものの、かぜがつよいためさむくかんじられるでしょう。",
+                "id": "Prakiraan cuaca besok: wilayah Kanto memang cerah, tapi karena angin kencang akan terasa dingin."
+              },
+              {
+                "jp": "高価な着物を買ったものの、着るチャンスがない。",
+                "rd": "こうかなきものをかったものの、きるちゃんすがない。",
+                "id": "Sudah beli kimono mahal, tapi tidak ada kesempatan memakainya."
+              },
+              {
+                "jp": "不景気とはいうものの、人々の表情は明るい。",
+                "rd": "ふけいきとはいうものの、ひとびとのひょうじょうはあかるい。",
+                "id": "Katanya resesi, tapi raut wajah orang-orang cerah."
+              },
+              {
+                "jp": "手術は成功したとはいうものの、まだ心配だ。",
+                "rd": "しゅじゅつはせいこうしたとはいうものの、まだしんぱいだ。",
+                "id": "Operasinya memang berhasil, tapi aku masih khawatir."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk ます (tanpa ます) / kata sifat-i / kata sifat-na / kata benda + ながら（も）",
+            "arti": "meskipun ~; padahal ~",
+            "explain": "Di N2, fokusnya adalah makna <b>pertentangan<\/b>: 'meskipun ~' — menyatakan keadaan yang berlawanan dengan dugaan. Subjek kalimat depan dan belakang harus sama. Sering dipakai untuk mengakui kekurangan sebagai pembuka, seperti 狭いながらも ('meskipun sempit'). Kata yang bernuansa penilaian negatif (kecil, sedikit) sering dipasangi も.",
+            "tabel": [
+              {
+                "k": "子供ながら",
+                "v": "meskipun masih anak-anak"
+              },
+              {
+                "k": "狭いながらも",
+                "v": "meskipun sempit"
+              },
+              {
+                "k": "通っていながら",
+                "v": "padahal selalu lewat"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "毎日この道を通っていながら、ここにこんなすてきな店があるとは気がつかなかった。",
+                "rd": "まいにちこのみちをとおっていながら、ここにこんなすてきなみせがあるとはきがつかなかった。",
+                "id": "Padahal tiap hari lewat jalan ini, aku tidak sadar ada toko sebagus ini di sini."
+              },
+              {
+                "jp": "狭いながらも庭があるので、わたしは花を育てて楽しんでいます。",
+                "rd": "せまいながらもにわがあるので、わたしははなをそだててたのしんでいます。",
+                "id": "Meskipun sempit, ada halaman, jadi aku senang menanam bunga."
+              },
+              {
+                "jp": "あの子は子供ながら、世の中の動きをよく知っていますね。",
+                "rd": "あのこはこどもながら、よのなかのうごきをよくしっていますね。",
+                "id": "Anak itu, meskipun masih kecil, paham betul perkembangan dunia ya."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk ます (tanpa ます) + つつ（も）",
+            "arti": "padahal dalam hati ~, tapi (tindakannya beda)",
+            "explain": "<b>Hati berkata lain, tindakan berkata lain.<\/b> Dipakai dengan kata kerja yang berkaitan dengan gerak hati, pikiran, atau ujaran (思う, 知る, 言う). Subjek depan dan belakang harus sama. Tidak dipakai untuk menyatakan harapan, niat, atau ajakan pembicara.",
+            "tabel": [
+              {
+                "k": "知りつつ",
+                "v": "padahal tahu, tapi..."
+              },
+              {
+                "k": "思いつつも",
+                "v": "padahal berpikir, tapi..."
+              },
+              {
+                "k": "気にしつつ",
+                "v": "padahal kepikiran, tapi..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "早く遊びを書かなければと気にしつつ、まだ書いていない。",
+                "rd": "はやくあそびをかかなければときにしつつ、まだかいていない。",
+                "id": "Padahal sudah kepikiran harus cepat menulisnya, tapi belum juga ditulis."
+              },
+              {
+                "jp": "危険だと知りつつ、山道を登り続けた。",
+                "rd": "きけんだとしりつつ、やまみちをのぼりつづけた。",
+                "id": "Padahal tahu berbahaya, (dia) terus mendaki jalan gunung."
+              },
+              {
+                "jp": "体に良くないと思いつつも、毎日インスタント食品ばかり食べています。",
+                "rd": "からだによくないとおもいつつも、まいにちいんすたんとしょくひんばかりたべています。",
+                "id": "Padahal tahu tidak baik untuk badan, tiap hari malah makan makanan instan melulu."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda / kalimat bentuk biasa + といっても",
+            "arti": "walaupun dibilang ~, (kenyataannya beda)",
+            "explain": "Kenyataannya <b>berbeda dari citra<\/b> yang terbayang begitu mendengar kata ~. Kalimat sesudahnya menjelaskan kenyataan yang menyimpang dari bayangan itu. Mirip dengan fungsi B dari といえば, tapi pola ini murni soal 'bayangan vs kenyataan'.",
+            "tabel": [
+              {
+                "k": "おばといっても",
+                "v": "walaupun dibilang tante"
+              },
+              {
+                "k": "できるといっても",
+                "v": "walaupun dibilang bisa"
+              },
+              {
+                "k": "きついといっても",
+                "v": "walaupun dibilang berat"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "わたしは今おばの家に住んでいる。おばといっても母のきょうだいではなく、祖母の妹にあたる人だ。",
+                "rd": "わたしはいまおばのいえにすんでいる。おばといってもははのきょうだいではなく、そぼのいもうとにあたるひとだ。",
+                "id": "Aku sekarang tinggal di rumah tante. Walaupun dibilang tante, bukan saudara ibuku, melainkan adik nenekku."
+              },
+              {
+                "jp": "料理ができるといっても、わたしが作れるのは簡単なものだけです。",
+                "rd": "りょうりができるといっても、わたしがつくれるのはかんたんなものだけです。",
+                "id": "Walaupun dibilang bisa masak, yang bisa kubuat cuma yang gampang-gampang."
+              },
+              {
+                "jp": "今もわたしの仕事はきつい。でも、きついといっても、前の会社にいたときほどではない。",
+                "rd": "いまもわたしのしごとはきつい。でも、きついといっても、まえのかいしゃにいたときほどではない。",
+                "id": "Pekerjaanku sekarang juga berat. Tapi walaupun dibilang berat, tidak seberat waktu di perusahaan lama."
+              }
+            ]
+          },
+          {
+            "pattern": "kalimat bentuk biasa + からといって",
+            "arti": "hanya karena ~, bukan berarti...",
+            "explain": "Menyangkal anggapan <b>'karena ~ maka wajar...'<\/b>. Kalimat sesudahnya sering berupa penyangkalan sebagian seperti 〜とは限らない, 〜わけではない, atau 〜とはいえない. Inti pesannya: satu alasan saja tidak cukup untuk membenarkan kesimpulan itu.",
+            "tabel": [
+              {
+                "k": "連休だからといって",
+                "v": "hanya karena libur panjang"
+              },
+              {
+                "k": "好きじゃないからといって",
+                "v": "hanya karena tidak suka"
+              },
+              {
+                "k": "忙しいからといって",
+                "v": "hanya karena sibuk"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "連休だからといって、デパートに勤めているわたしたちは休めるわけではない。",
+                "rd": "れんきゅうだからといって、でぱーとにつとめているわたしたちはやすめるわけではない。",
+                "id": "Hanya karena libur panjang, bukan berarti kami yang kerja di department store bisa libur."
+              },
+              {
+                "jp": "好きじゃないからといって、食べ物をこんなにたくさん残してはいけませんよ。",
+                "rd": "すきじゃないからといって、たべものをこんなにたくさんのこしてはいけませんよ。",
+                "id": "Hanya karena tidak suka, tidak boleh menyisakan makanan sebanyak ini."
+              },
+              {
+                "jp": "忙しいからといって、睡眠をちゃんととらないと、体を壊しますよ。",
+                "rd": "いそがしいからといって、すいみんをちゃんととらないと、からだをこわしますよ。",
+                "id": "Hanya karena sibuk lalu tidak tidur cukup, badanmu bisa rusak."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 14",
+        "items": [
+          {
+            "ch": "悪",
+            "kun": "わる(い)",
+            "on": "アク",
+            "id": "buruk",
+            "note": "悪天候 (あくてんこう) = cuaca buruk"
+          },
+          {
+            "ch": "予",
+            "kun": "あらかじ(め)",
+            "on": "ヨ",
+            "id": "sebelumnya",
+            "note": "予定 (よてい) = rencana"
+          },
+          {
+            "ch": "期",
+            "kun": "—",
+            "on": "キ",
+            "id": "periode",
+            "note": "期待 (きたい) = harapan"
+          },
+          {
+            "ch": "矛",
+            "kun": "ほこ",
+            "on": "ム",
+            "id": "tombak",
+            "note": "矛盾 (むじゅん) = kontradiksi"
+          },
+          {
+            "ch": "盾",
+            "kun": "たて",
+            "on": "ジュン",
+            "id": "perisai",
+            "note": "矛盾 (むじゅん) = kontradiksi"
+          },
+          {
+            "ch": "逆",
+            "kun": "さか(らう)",
+            "on": "ギャク",
+            "id": "terbalik",
+            "note": "逆転 (ぎゃくてん) = pembalikan keadaan"
+          },
+          {
+            "ch": "覚",
+            "kun": "おぼ(える)",
+            "on": "カク",
+            "id": "mengingat",
+            "note": "覚悟 (かくご) = kesiapan mental"
+          },
+          {
+            "ch": "結",
+            "kun": "むす(ぶ)",
+            "on": "ケツ",
+            "id": "mengikat",
+            "note": "結論 (けつろん) = kesimpulan"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "台風が来ているのに、試合はやるの？",
+            "id": "Padahal topan mau datang, pertandingannya tetap jalan?"
+          },
+          {
+            "sp": "B",
+            "jp": "うん、悪天候にもかかわらず、予定どおり行うそうだよ。",
+            "id": "Iya, katanya meskipun cuaca buruk tetap dilaksanakan sesuai jadwal."
+          },
+          {
+            "sp": "A",
+            "jp": "応援に行きたいものの、電車が止まるかもしれないね。",
+            "id": "Memang ingin pergi mendukung, tapi keretanya mungkin berhenti."
+          },
+          {
+            "sp": "B",
+            "jp": "危険だと知りつつも、やっぱり行くことにするよ。",
+            "id": "Padahal dalam hati tahu berbahaya, tapi aku tetap memutuskan pergi."
+          },
+          {
+            "sp": "A",
+            "jp": "プロといっても、ミスをすることもあるよね。",
+            "id": "Walaupun dibilang profesional, kadang juga membuat kesalahan ya."
+          },
+          {
+            "sp": "B",
+            "jp": "そうだね。プロだからといって、完璧なわけじゃない。",
+            "id": "Iya. Hanya karena profesional, bukan berarti sempurna."
+          },
+          {
+            "sp": "A",
+            "jp": "狭いながらも、スタジアムの雰囲気は最高だよ。",
+            "id": "Meskipun sempit, suasana stadionnya luar biasa lho."
+          },
+          {
+            "sp": "B",
+            "jp": "じゃあ、気をつけて行ってきてね。",
+            "id": "Kalau begitu, hati-hati di jalan ya."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "大雨＿＿＿、工事は予定どおり進められた。",
+        "o": [
+          "にもかかわらず",
+          "ものの",
+          "ながらも",
+          "といっても"
+        ],
+        "a": 0,
+        "explain": "にもかかわらず = meskipun (paling formal, fakta bertentangan dengan harapan wajar)."
+      },
+      {
+        "q": "納得した＿＿＿、心のどこかで不安が残っている。",
+        "o": [
+          "にもかかわらず",
+          "ながらも",
+          "つつも",
+          "ものの"
+        ],
+        "a": 3,
+        "explain": "ものの = memang ~, tapi... (mengakui satu fakta lalu menyampaikan kontras)."
+      },
+      {
+        "q": "彼は若い＿＿＿、考え方がしっかりしている。",
+        "o": [
+          "にもかかわらず",
+          "ものの",
+          "ながらも",
+          "といっても"
+        ],
+        "a": 2,
+        "explain": "ながらも = meskipun / padahal (dua hal bertolak belakang terjadi bersamaan)."
+      },
+      {
+        "q": "危険だと知り＿＿＿、登山を続けた。",
+        "o": [
+          "ながらも",
+          "ものの",
+          "つつも",
+          "といっても"
+        ],
+        "a": 2,
+        "explain": "つつも = padahal dalam hati sadar..., tapi tetap... (kesenjangan batin vs tindakan)."
+      },
+      {
+        "q": "社長＿＿＿、現場のことはあまり知らないらしい。",
+        "o": [
+          "ながらも",
+          "つつも",
+          "ものの",
+          "といっても"
+        ],
+        "a": 3,
+        "explain": "といっても = walaupun dibilang X (mengoreksi kesan dari kata \"社長\")."
+      },
+      {
+        "q": "若い＿＿＿、経験不足だとは限らない。",
+        "o": [
+          "といっても",
+          "からといって",
+          "ながらも",
+          "ものの"
+        ],
+        "a": 1,
+        "explain": "からといって = hanya karena X, bukan berarti... (menolak kesimpulan terburu-buru)."
+      },
+      {
+        "q": "毎日3時間練習している＿＿＿、試験に合格できなかった。",
+        "o": [
+          "ものの",
+          "ながらも",
+          "にもかかわらず",
+          "からといって"
+        ],
+        "a": 2,
+        "explain": "にもかかわらず = meskipun (formal; hasil bertentangan dengan usaha)."
+      },
+      {
+        "q": "やめなければと思い＿＿＿、つい夜更かししてしまう。",
+        "o": [
+          "ながら",
+          "ものの",
+          "といっても",
+          "つつ"
+        ],
+        "a": 3,
+        "explain": "つつ = kesadaran batin (harus berhenti) vs tindakan nyata (tetap begadang)."
+      },
+      {
+        "q": "アルバイト＿＿＿、責任を持って働いてほしい。",
+        "o": [
+          "ながらも",
+          "といっても",
+          "ものの",
+          "からといって"
+        ],
+        "a": 1,
+        "explain": "といっても = walaupun dibilang (hanya) pegawai paruh waktu."
+      },
+      {
+        "q": "失敗した＿＿＿、諦める必要はない。",
+        "o": [
+          "からといって",
+          "といっても",
+          "ながらも",
+          "ものの"
+        ],
+        "a": 0,
+        "explain": "からといって = hanya karena gagal, bukan berarti harus menyerah."
+      }
+    ]
+  },
+  {
+    "id": "n2-15",
+    "bab": 15,
+    "level": "n2",
+    "title": "Andai & Kalaupun",
+    "desc": "Pengandaian dan konsesi: andai, kalaupun.",
+    "icon": "🔮",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Andai & Kalaupun",
+        "body": "<p>Di level N2, <b>pengandaian<\/b> (\"andai...\") dan <b>konsesi<\/b> (\"kalaupun...\") punya banyak pola dengan nuansa yang beda-beda. Salah pilih pola, kalimatmu bisa terdengar aneh — atau malah seperti ancaman.<\/p><p><b>としたら・とすれば・とすると<\/b> dipakai untuk hipotesis yang netral: \"jika/andaikan...\". Sedangkan <b>kata kerja bentuk kamus + ものなら<\/b> mengungkapkan harapan yang nyaris mustahil terwujud: \"andaikan bisa...\". Hati-hati, ada jebakan kembar: <b>bentuk ajakan + ものなら<\/b> artinya justru berlawanan — sebuah peringatan \"kalau sampai... (bakal gawat)\". Dua pola yang mirip, artinya beda jauh; ini jebakan favorit soal JLPT.<\/p><p><b>ないことには<\/b> menyatakan syarat negatif: \"kalau tidak X, maka tidak Y\" — kalimat lanjutannya selalu negatif. Sementara <b>kata benda + を抜きにしては<\/b> berarti \"tanpa... mustahil...\" dan selalu menempel pada kata benda dengan nada yang mutlak.<\/p><p><b>としても・にしても・にしろ・にせよ<\/b> semuanya berarti \"kalaupun/biarpun\". Bedanya hanya tingkat formalitas: <b>にせよ<\/b> paling formal dan tertulis, <b>にしろ<\/b> paling kasual dan lisan. Jebakan umum: jangan pakai としたら untuk menyatakan konsesi — kalau maksudmu \"kalaupun\", wajib pakai としても.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Andai & Kalaupun",
+        "items": [
+          {
+            "jp": "仮定",
+            "kj": "仮定",
+            "r": "katei",
+            "id": "asumsi; pengandaian",
+            "note": "仮定の話 = cerita andaian"
+          },
+          {
+            "jp": "前提",
+            "kj": "前提",
+            "r": "zentei",
+            "id": "premis; asumsi dasar",
+            "note": "前提条件 = syarat prasyarat"
+          },
+          {
+            "jp": "条件",
+            "kj": "条件",
+            "r": "jouken",
+            "id": "syarat",
+            "note": "条件が厳しい = syaratnya ketat"
+          },
+          {
+            "jp": "想定",
+            "kj": "想定",
+            "r": "soutei",
+            "id": "perkiraan; asumsi",
+            "note": "想定外 = di luar perkiraan"
+          },
+          {
+            "jp": "予想",
+            "kj": "予想",
+            "r": "yosou",
+            "id": "prediksi",
+            "note": "予想が外れる = prediksi meleset"
+          },
+          {
+            "jp": "可能性",
+            "kj": "可能性",
+            "r": "kanousei",
+            "id": "kemungkinan",
+            "note": "可能性がある = ada kemungkinan"
+          },
+          {
+            "jp": "万一",
+            "kj": "万一",
+            "r": "man'ichi",
+            "id": "kalau-kalau; seandainya",
+            "note": "万一の場合 = kalau terjadi hal tak terduga"
+          },
+          {
+            "jp": "もしも",
+            "kj": "もしも",
+            "r": "moshimo",
+            "id": "andai; jikalau",
+            "note": "もしもの時 = saat darurat"
+          },
+          {
+            "jp": "たとえ",
+            "kj": "たとえ",
+            "r": "tatoe",
+            "id": "sekalipun; biarpun",
+            "note": "たとえ雨でも = sekalipun hujan"
+          },
+          {
+            "jp": "結果",
+            "kj": "結果",
+            "r": "kekka",
+            "id": "hasil",
+            "note": "結果を出す = membuahkan hasil"
+          },
+          {
+            "jp": "影響",
+            "kj": "影響",
+            "r": "eikyou",
+            "id": "pengaruh",
+            "note": "影響を与える = memberi pengaruh"
+          },
+          {
+            "jp": "覚悟",
+            "kj": "覚悟",
+            "r": "kakugo",
+            "id": "kesiapan mental",
+            "note": "覚悟を決める = membulatkan tekad"
+          },
+          {
+            "jp": "対処",
+            "kj": "対処",
+            "r": "taisho",
+            "id": "penanganan",
+            "note": "対処法 = cara penanganan"
+          },
+          {
+            "jp": "仮説",
+            "kj": "仮説",
+            "r": "kasetsu",
+            "id": "hipotesis",
+            "note": "仮説を立てる = mengajukan hipotesis"
+          },
+          {
+            "jp": "状況",
+            "kj": "状況",
+            "r": "joukyou",
+            "id": "situasi; keadaan",
+            "note": "状況が変わる = situasi berubah"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Andai & Kalaupun",
+        "items": [
+          {
+            "pattern": "kalimat bentuk biasa + としたら / とすれば / とすると; kata benda / kalimat bentuk biasa + となったら / となれば / となると",
+            "arti": "jika ~; andaikan ~",
+            "explain": "Kelompok pola <b>pengandaian<\/b>. としたら・とすれば・とすると pengandaiannya kuat ('andaikan...'). となったら・となれば・となると dipakai untuk hal yang <b>mungkin benar-benar terjadi<\/b>, lalu membayangkan kalau itu terjadi. Kalimat sesudahnya berisi penilaian atau keputusan pembicara. Jebakan: とすると dan となると <b>tidak bisa<\/b> diikuti harapan, niat, atau ajakan.",
+            "tabel": [
+              {
+                "k": "持っていけるとしたら",
+                "v": "andaikan boleh bawa"
+              },
+              {
+                "k": "乗っていたとしたら",
+                "v": "andaikan naik"
+              },
+              {
+                "k": "〜ではないとすると",
+                "v": "jika ~ bukan..."
+              },
+              {
+                "k": "上がるとなれば",
+                "v": "kalau sampai naik"
+              },
+              {
+                "k": "引っ越しとなると",
+                "v": "kalau soal pindahan"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "無人島に何か一つだけ持っていけるとしたら、何を持っていきたいですか。",
+                "rd": "むじんとうになにかひとつだけもっていけるとしたら、なにをもっていきたいですか。",
+                "id": "Andaikan ke pulau tak berpenghuni boleh bawa satu barang saja, apa yang ingin kamu bawa?"
+              },
+              {
+                "jp": "彼が犯人ではないとすると、どこかに本当の犯人がいるはずだ。",
+                "rd": "かれがはんにんではないとすると、どこかにほんとうのはんにんがいるはずだ。",
+                "id": "Jika dia bukan pelakunya, berarti pelaku sebenarnya ada di suatu tempat."
+              },
+              {
+                "jp": "税金が上がるとなれば、国民の生活はますます大変になるだろう。",
+                "rd": "ぜいきんがあがるとなれば、こくみんのせいかつはますますたいへんになるだろう。",
+                "id": "Kalau sampai pajak naik, hidup rakyat akan semakin susah."
+              },
+              {
+                "jp": "引っ越しとなると、かなりのお金がかかる。大丈夫かなあ。",
+                "rd": "ひっこしとなると、かなりのおかねがかかる。だいじょうぶかなあ。",
+                "id": "Kalau soal pindahan, butuh uang yang tidak sedikit. Kira-kira aman tidak ya."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk kamus + ものなら",
+            "arti": "andaikan bisa ~; kalau saja bisa ~",
+            "explain": "Mengandaikan hal yang <b>rasanya mustahil<\/b> terjadi. Kata kerja sebelumnya harus yang bermakna potensial ('bisa'). Kalimat sesudahnya berisi harapan atau keinginan pembicara. Ada juga pemakaian untuk <b>memprovokasi<\/b> lawan bicara, seperti やれるものならやってみろ ('kalau memang bisa, coba lakukan!').",
+            "tabel": [
+              {
+                "k": "戻れるものなら",
+                "v": "andaikan bisa kembali"
+              },
+              {
+                "k": "忘れられるものなら",
+                "v": "kalau saja bisa lupa"
+              },
+              {
+                "k": "やれるものなら",
+                "v": "kalau memang bisa"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "戻れるものなら20年前のわたしに戻って人生をやり直したい。",
+                "rd": "もどれるものなら20ねんまえのわたしにもどってじんせいをやりなおしたい。",
+                "id": "Andaikan bisa kembali, aku ingin kembali ke diriku 20 tahun lalu dan mengulang hidup."
+              },
+              {
+                "jp": "あの日の出来事を忘れられるものなら忘れたいのに……。",
+                "rd": "あのひのできごとをわすれられるものならわすれたいのに……。",
+                "id": "Kalau saja bisa melupakan kejadian hari itu, aku ingin melupakannya..."
+              },
+              {
+                "jp": "やれるものならやってみろ。",
+                "rd": "やれるものならやってみろ。",
+                "id": "Kalau memang bisa, coba lakukan!"
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk ajakan (〜よう) + ものなら",
+            "arti": "kalau sampai ~, bakal gawat",
+            "explain": "Andaikan <b>sampai melakukan<\/b> ~, pasti terjadi hal buruk. Kalimat sesudahnya berisi dugaan akan akibat buruk itu. Dipakai untuk memperingatkan bahaya.",
+            "tabel": [
+              {
+                "k": "食べようものなら",
+                "v": "kalau sampai makan"
+              },
+              {
+                "k": "踏み外そうものなら",
+                "v": "kalau sampai terpeleset"
+              },
+              {
+                "k": "よそ見をしようものなら",
+                "v": "kalau sampai meleng"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "わたしはアレルギー体質なので、合わない食品を食べようものなら、体のあちこちがかゆくなる。",
+                "rd": "わたしはあれるぎーたいしつなので、あわないしょくひんをたべようものなら、からだのあちこちがかゆくなる。",
+                "id": "Aku punya alergi, jadi kalau sampai makan makanan yang tidak cocok, sekujur badan jadi gatal."
+              },
+              {
+                "jp": "山道は危ない。ちょっと足を踏み外そうものなら、大けがをするだろう。",
+                "rd": "やまみちはあぶない。ちょっとあしをふみはずそうものなら、おおけがをするだろう。",
+                "id": "Jalan gunung itu berbahaya. Kalau sampai terpeleset sedikit saja, bisa luka parah."
+              },
+              {
+                "jp": "車の運転中は、一瞬でもよそ見をしようものなら、事故を起こすぞ。",
+                "rd": "くるまのうんてんちゅうは、いっしゅんでもよそみをしようものなら、じこをおこすぞ。",
+                "id": "Saat menyetir, kalau sampai meleng sedetik saja, bisa kecelakaan."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk ない / kata sifat-i くない / kata sifat-na・kata benda でない + ことには",
+            "arti": "kalau tidak ~, maka tidak...",
+            "explain": "Sesuatu <b>tidak akan terwujud<\/b> kecuali ~ dilakukan atau ~ terpenuhi. Kalimat sesudahnya selalu bermakna negatif ('tidak tahu', 'tidak bisa', 'mustahil').",
+            "tabel": [
+              {
+                "k": "会ってみないことには",
+                "v": "kalau tidak bertemu dulu"
+              },
+              {
+                "k": "お金がないことには",
+                "v": "kalau tidak ada uang"
+              },
+              {
+                "k": "丈夫でないことには",
+                "v": "kalau tidak kuat"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "一度会ってみないことには、仕事を任せられる人かどうかわからない。",
+                "rd": "いちどあってみないことには、しごとをまかせられるひとかどうかわからない。",
+                "id": "Kalau tidak bertemu dulu sekali, tidak tahu apakah dia orang yang bisa dipercaya untuk pekerjaan ini."
+              },
+              {
+                "jp": "お金がないことには、この計画は進められない。",
+                "rd": "おかねがないことには、このけいかくはすすめられない。",
+                "id": "Kalau tidak ada uang, rencana ini tidak bisa dijalankan."
+              },
+              {
+                "jp": "足がもっと丈夫でないことには、あの山に登るのは無理だろう。",
+                "rd": "あしがもっとじょうぶでないことには、あのやまにのぼるのはむりだろう。",
+                "id": "Kalau kakinya tidak lebih kuat, mendaki gunung itu mungkin mustahil."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + を抜きにしては",
+            "arti": "tanpa ~, tidak mungkin...",
+            "explain": "~ adalah hal yang <b>sangat dihargai<\/b> pembicara — tanpanya, sesuatu tidak bisa terwujud. Kalimat sesudahnya selalu bermakna 'tidak terwujud' atau 'mustahil'.",
+            "tabel": [
+              {
+                "k": "インターネットを抜きにしては",
+                "v": "tanpa internet"
+              },
+              {
+                "k": "ご指導を抜きにしては",
+                "v": "tanpa bimbingan"
+              },
+              {
+                "k": "助けを抜きにしては",
+                "v": "tanpa bantuan"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "インターネットとメールを抜きにしては、現代社会は成り立たないと言ってもいい。",
+                "rd": "いんたーねっととめーるをぬきにしては、げんだいしゃかいはなりたたないといってもいい。",
+                "id": "Bisa dibilang masyarakat modern tidak bisa berdiri tanpa internet dan email."
+              },
+              {
+                "jp": "田中先生の好意的なご指導を抜きにしては、この勉強会は続けられないだろう。",
+                "rd": "たなかせんせいのこういてきなごしどうをぬきにしては、このべんきょうかいはつづけられないだろう。",
+                "id": "Tanpa bimbingan Pak Tanaka yang penuh kebaikan, kelompok belajar ini mungkin tidak bisa berlanjut."
+              },
+              {
+                "jp": "ボランティアの人たちの助けを抜きにしては、外国人の受け入れ計画は無理だと思う。",
+                "rd": "ぼらんてぃあのひとたちのたすけをぬきにしては、がいこくじんのうけいれけいかくはむりだとおもう。",
+                "id": "Tanpa bantuan para relawan, kurasa rencana penerimaan orang asing itu mustahil."
+              }
+            ]
+          },
+          {
+            "pattern": "kalimat bentuk biasa + としても; kata benda / kalimat bentuk biasa + にしても / にしろ / にせよ",
+            "arti": "kalaupun ~; biarpun ~",
+            "explain": "Kalaupun ~ benar terjadi, <b>perasaan dan penilaian<\/b> pembicara tidak terpengaruh. としても dipakai untuk hal yang diandaikan; にしても・にしろ・にせよ bisa untuk andaian maupun fakta. Pola kata tanya sering muncul di sini. Kalimat sesudahnya berisi penilaian, keputusan, atau kesan pembicara.",
+            "tabel": [
+              {
+                "k": "離れるとしても",
+                "v": "kalaupun berpisah"
+              },
+              {
+                "k": "短かったにしても",
+                "v": "biarpun singkat"
+              },
+              {
+                "k": "悪い結果にしろ",
+                "v": "biarpun hasilnya buruk"
+              },
+              {
+                "k": "何をするにせよ",
+                "v": "apa pun yang dilakukan"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "親元を離れるとしても、できるだけ親の近くに住む方がいい。",
+                "rd": "おやもとをはなれるとしても、できるだけおやのちかくにすむほうがいい。",
+                "id": "Kalaupun pergi dari rumah orang tua, lebih baik tinggal sedekat mungkin dengan mereka."
+              },
+              {
+                "jp": "準備時間が短かったにしても、もう少し立派な報告書を書いてほしかった。",
+                "rd": "じゅんびじかんがみじかかったにしても、もうすこしりっぱなほうこくしょをかいてほしかった。",
+                "id": "Biarpun waktu persiapannya singkat, aku berharap laporannya bisa ditulis lebih bagus."
+              },
+              {
+                "jp": "たとえ悪い結果にしろ、できることは全部やってきたのだから後悔はしない。",
+                "rd": "たとえわるいけっかにしろ、できることはぜんぶやってきたのだからこうかいはしない。",
+                "id": "Biarpun hasilnya buruk, aku sudah melakukan semua yang kubisa, jadi tidak menyesal."
+              },
+              {
+                "jp": "何をするにせよ、心を込めて取り組みたい。",
+                "rd": "なにをするにせよ、こころをこめてとりくみたい。",
+                "id": "Apa pun yang dilakukan, aku ingin mengerjakannya dengan sepenuh hati."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 15",
+        "items": [
+          {
+            "ch": "仮",
+            "kun": "かり",
+            "on": "カ",
+            "id": "sementara",
+            "note": "仮定 (かてい) = asumsi"
+          },
+          {
+            "ch": "設",
+            "kun": "もうける",
+            "on": "セツ",
+            "id": "mendirikan",
+            "note": "建設 (けんせつ) = pembangunan"
+          },
+          {
+            "ch": "想",
+            "kun": "おもう",
+            "on": "ソウ",
+            "id": "pikiran; bayangan",
+            "note": "想像 (そうぞう) = imajinasi"
+          },
+          {
+            "ch": "予",
+            "kun": "あらかじめ",
+            "on": "ヨ",
+            "id": "sebelumnya",
+            "note": "予定 (よてい) = rencana"
+          },
+          {
+            "ch": "条",
+            "kun": "—",
+            "on": "ジョウ",
+            "id": "pasal; ketentuan",
+            "note": "条件 (じょうけん) = syarat"
+          },
+          {
+            "ch": "件",
+            "kun": "くだん",
+            "on": "ケン",
+            "id": "perkara",
+            "note": "事件 (じけん) = insiden"
+          },
+          {
+            "ch": "対",
+            "kun": "—",
+            "on": "タイ",
+            "id": "berhadapan; terhadap",
+            "note": "対応 (たいおう) = penanganan"
+          },
+          {
+            "ch": "処",
+            "kun": "—",
+            "on": "ショ",
+            "id": "tempat; penanganan",
+            "note": "対処 (たいしょ) = penanganan"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "海外で働くとしたら、どこの国に行きたい？",
+            "id": "Kalau andaikan kerja di luar negeri, negara mana yang mau kamu tuju?"
+          },
+          {
+            "sp": "B",
+            "jp": "カナダかな。英語がもっと話せるものなら、すぐに応募したいんだけど。",
+            "id": "Kanada mungkin. Andaikan bahasa Inggrisku lebih lancar, aku ingin langsung melamar."
+          },
+          {
+            "sp": "A",
+            "jp": "語学学校に通わないことには、上達しないよ。",
+            "id": "Kalau tidak ikut kursus bahasa, tidak akan ada kemajuan lho."
+          },
+          {
+            "sp": "B",
+            "jp": "分かってるけど、お金がないことには通えないんだ。",
+            "id": "Aku tahu, tapi kalau tidak ada uang ya tidak bisa ikut."
+          },
+          {
+            "sp": "A",
+            "jp": "奨学金を抜きにしては、留学は無理だね。",
+            "id": "Tanpa beasiswa, belajar ke luar negeri itu mustahil ya."
+          },
+          {
+            "sp": "B",
+            "jp": "たとえ奨学金がもらえるとしても、家族と離れるのは寂しいな。",
+            "id": "Kalaupun dapat beasiswa, berpisah dari keluarga itu menyedihkan."
+          },
+          {
+            "sp": "A",
+            "jp": "まあ、行くにせよ行かないにせよ、早めに決めた方がいいよ。",
+            "id": "Yah, pergi atau tidak, lebih baik putuskan secepatnya."
+          },
+          {
+            "sp": "B",
+            "jp": "そうだね。後悔しようものなら大変だから、よく考えるよ。",
+            "id": "Iya juga. Kalau sampai menyesal bakal gawat, jadi kupikirkan baik-baik."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "無人島に一つだけ持っていけると＿＿＿、あなたは何を持っていきますか。",
+        "o": [
+          "したら",
+          "ものなら",
+          "にしても",
+          "ないことには"
+        ],
+        "a": 0,
+        "explain": "としたら = \"andaikan\" untuk hipotesis netral. ものなら butuh konteks harapan yang mustahil."
+      },
+      {
+        "q": "もう一度だけ彼女に会える＿＿＿、どんなにうれしいだろう。",
+        "o": [
+          "ものなら",
+          "としたら",
+          "ようものなら",
+          "ないことには"
+        ],
+        "a": 0,
+        "explain": "Bentuk kamus + ものなら = harapan \"andaikan bisa\". Kalau よう + ものなら artinya justru peringatan."
+      },
+      {
+        "q": "この山道は夜になると真っ暗だ。足を踏み外そう＿＿＿、大変なことになる。",
+        "o": [
+          "にしても",
+          "ものなら",
+          "ことには",
+          "としたら"
+        ],
+        "a": 1,
+        "explain": "Bentuk ajakan + ものなら = peringatan \"kalau sampai...\". Konteksnya bahaya."
+      },
+      {
+        "q": "実際にやってみない＿＿＿、この仕事の難しさは分からないものだ。",
+        "o": [
+          "を抜きにしては",
+          "ことには",
+          "ばかりに",
+          "にしろ"
+        ],
+        "a": 1,
+        "explain": "ないことには = \"kalau tidak..., maka tidak...\". Kalimat lanjutannya negatif (分からない)."
+      },
+      {
+        "q": "皆様のご支援＿＿＿、このプロジェクトは成り立ちませんでした。",
+        "o": [
+          "ないことには",
+          "としても",
+          "を抜きにしては",
+          "ものなら"
+        ],
+        "a": 2,
+        "explain": "を抜きにしては menempel pada kata benda = \"tanpa... mustahil...\"."
+      },
+      {
+        "q": "雨が降る＿＿＿、運動会は予定通り行います。",
+        "o": [
+          "としたら",
+          "ないことには",
+          "としても",
+          "ようものなら"
+        ],
+        "a": 2,
+        "explain": "\"Kalaupun hujan\" = konsesi, wajib としても. としたら hanya untuk pengandaian biasa."
+      },
+      {
+        "q": "どんな理由＿＿＿、約束は守るべきだ。",
+        "o": [
+          "としたら",
+          "ものなら",
+          "にせよ",
+          "ないことには"
+        ],
+        "a": 2,
+        "explain": "にせよ = \"biarpun\" versi paling formal/tertulis. にしろ lebih kasual."
+      },
+      {
+        "q": "彼が犯人ではない＿＿＿、真犯人はほかにいるはずだ。",
+        "o": [
+          "ものなら",
+          "ようものなら",
+          "とすると",
+          "ないことには"
+        ],
+        "a": 2,
+        "explain": "とすると = \"jika\" untuk dugaan logis. Pasangan alami dari ば・たら di konteks penalaran."
+      },
+      {
+        "q": "お金がない＿＿＿、この計画は進められない。",
+        "o": [
+          "ばかりに",
+          "としても",
+          "にしても",
+          "ことには"
+        ],
+        "a": 3,
+        "explain": "ないことには + hasil negatif = syarat. としても akan mengubah arti jadi \"kalaupun\"."
+      },
+      {
+        "q": "インフルエンザにかかろう＿＿＿、大変なことになるから、手洗いを徹底しよう。",
+        "o": [
+          "としたら",
+          "にしても",
+          "ことには",
+          "ものなら"
+        ],
+        "a": 3,
+        "explain": "Bentuk ajakan + ものなら = peringatan \"kalau sampai...\"."
+      }
+    ]
+  },
+  {
+    "id": "n2-16",
+    "bab": 16,
+    "level": "n2",
+    "title": "Alasan & Sebab 1",
+    "desc": "Menyatakan alasan dan sebab akibat.",
+    "icon": "🔗",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Alasan & Sebab 1",
+        "body": "<p>Di N2 ada banyak cara bilang \"karena\" — dari pengumuman resmi yang kaku sampai pembelaan diri yang santai. Memilih pola yang salah bisa membuat kalimatmu terdengar tidak sopan atau tidak pada tempatnya.<\/p><p><b>によって・による<\/b> menyatakan sebab yang netral dan formal, cocok untuk berita dan laporan. <b>につき<\/b> khusus untuk pengumuman resmi tertulis (\"karena ..., maka ...\"). Sedangkan <b>ものだから・もので・もの<\/b> adalah pembenaran diri dalam percakapan: \"maklum, soalnya...\" — jangan dipakai di tulisan formal.<\/p><p><b>おかげだ<\/b> dipakai untuk sebab yang positif (\"berkat...\"), <b>せいだ<\/b> untuk sebab yang negatif (\"gara-gara...\"). Jebakan: せい kadang dipakai secara ironis untuk hal yang baik, misalnya \"gara-gara kamu aku jadi rajin\" dengan nada bercanda — perhatikan konteksnya.<\/p><p><b>あまり・あまりの〜に<\/b> berarti \"saking ...-nya sampai...\" — emosi atau keadaan yang ekstrem menjadi sebab dari sesuatu. Polanya: kata benda + のあまり, atau あまりの + kata benda + に. Jebakan umum: によって butuh struktur yang tepat (kata benda + によって, atau こと + によって/により); jangan tertukar dengan につき yang hanya untuk pengumuman.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Alasan & Sebab 1",
+        "items": [
+          {
+            "jp": "原因",
+            "kj": "原因",
+            "r": "gen'in",
+            "id": "penyebab",
+            "note": "原因を突き止める = menemukan penyebab"
+          },
+          {
+            "jp": "理由",
+            "kj": "理由",
+            "r": "riyuu",
+            "id": "alasan",
+            "note": "理由を説明する = menjelaskan alasan"
+          },
+          {
+            "jp": "きっかけ",
+            "kj": "きっかけ",
+            "r": "kikkake",
+            "id": "pemicu; awal mula",
+            "note": "きっかけを作る = menciptakan pemicu"
+          },
+          {
+            "jp": "背景",
+            "kj": "背景",
+            "r": "haikei",
+            "id": "latar belakang",
+            "note": "事件の背景 = latar belakang kejadian"
+          },
+          {
+            "jp": "要因",
+            "kj": "要因",
+            "r": "youin",
+            "id": "faktor",
+            "note": "成功の要因 = faktor keberhasilan"
+          },
+          {
+            "jp": "結果",
+            "kj": "結果",
+            "r": "kekka",
+            "id": "hasil; akibat",
+            "note": "結果として = sebagai akibatnya"
+          },
+          {
+            "jp": "影響",
+            "kj": "影響",
+            "r": "eikyou",
+            "id": "pengaruh; dampak",
+            "note": "影響を受ける = terkena dampak"
+          },
+          {
+            "jp": "被害",
+            "kj": "被害",
+            "r": "higai",
+            "id": "kerugian; korban",
+            "note": "被害が出る = timbul kerugian"
+          },
+          {
+            "jp": "言い訳",
+            "kj": "言い訳",
+            "r": "iiwake",
+            "id": "alasan; dalih",
+            "note": "言い訳をする = berdalih"
+          },
+          {
+            "jp": "責任",
+            "kj": "責任",
+            "r": "sekinin",
+            "id": "tanggung jawab",
+            "note": "責任を取る = bertanggung jawab"
+          },
+          {
+            "jp": "都合",
+            "kj": "都合",
+            "r": "tsugou",
+            "id": "keadaan; kenyamanan",
+            "note": "都合が悪い = tidak memungkinkan"
+          },
+          {
+            "jp": "状況",
+            "kj": "状況",
+            "r": "joukyou",
+            "id": "situasi",
+            "note": "状況を把握する = memahami situasi"
+          },
+          {
+            "jp": "事情",
+            "kj": "事情",
+            "r": "jijou",
+            "id": "keadaan; alasan",
+            "note": "家庭の事情 = urusan keluarga"
+          },
+          {
+            "jp": "経緯",
+            "kj": "経緯",
+            "r": "keii",
+            "id": "kronologi",
+            "note": "経緯を説明する = menjelaskan kronologi"
+          },
+          {
+            "jp": "由来",
+            "kj": "由来",
+            "r": "yurai",
+            "id": "asal-usul",
+            "note": "名前の由来 = asal-usul nama"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Alasan & Sebab 1",
+        "items": [
+          {
+            "pattern": "kata benda + によって / kata benda + による + kata benda",
+            "arti": "karena... / melalui...",
+            "explain": "<b>〜によって<\/b> punya dua fungsi: menyatakan <b>penyebab<\/b> (〜が原因で) dan menyatakan <b>cara atau sarana<\/b> (〜という手段). Ini ungkapan formal dan kaku yang sering muncul di berita, pengumuman, dan dokumen resmi. Jebakan: untuk arti \"cara/sarana\", tidak cocok dipakai menyebut alat sehari-hari yang dipakai pribadi seperti telepon, pulpen, atau kereta — tapi boleh dipakai dalam bentuk yang menerangkan kata benda, misalnya 「電話による問い合わせ」 (pertanyaan melalui telepon).",
+            "tabel": [
+              {
+                "k": "kata benda + によって",
+                "v": "karena... (menyatakan penyebab)"
+              },
+              {
+                "k": "kata benda + による + kata benda",
+                "v": "yang disebabkan oleh... / melalui..."
+              },
+              {
+                "k": "〜により",
+                "v": "versi lebih formal dari によって"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "今朝、中央線は踏切内で起きた事故によって、ダイヤが大きく乱れた。",
+                "rd": "けさ、ちゅうおうせんはふみきりないでおきたじこによって、ダイヤがおおきくみだれた。",
+                "id": "Pagi ini jadwal kereta Chuo Line kacau parah akibat kecelakaan yang terjadi di perlintasan rel."
+              },
+              {
+                "jp": "会長が交替したことによって、会の雰囲気が大きく変わった。",
+                "rd": "かいちょうがこうたいしたことによって、かいのふんいきがおおきくかわった。",
+                "id": "Karena ketuanya berganti, suasana perkumpulan berubah drastis."
+              },
+              {
+                "jp": "この地方は毎年台風による被害が出ている。",
+                "rd": "このちほうはまいねんたいふうによるひがいがでている。",
+                "id": "Daerah ini setiap tahun mengalami kerusakan akibat topan."
+              },
+              {
+                "jp": "仕事をコンピューター化することにより、労働力不足は解決できるのではないか。",
+                "rd": "しごとをコンピューターかすることにより、ろうどうりょくぶそくはかいけつできるのではないか。",
+                "id": "Dengan mengkomputerisasi pekerjaan, kekurangan tenaga kerja mungkin bisa diatasi."
+              }
+            ]
+          },
+          {
+            "pattern": "kalimat bentuk biasa + ものだから / もので / もの",
+            "arti": "soalnya... / maklum...",
+            "explain": "Dipakai saat memberi <b>alasan atau pembenaran<\/b> atas sesuatu yang dilakukan, dengan nuansa \"mau bagaimana lagi\". Ini bahasa lisan yang kasual. Jebakan: setelah pola ini <b>tidak boleh<\/b> muncul kalimat perintah atau ajakan. Bentuk 「もの」 di akhir kalimat banyak dipakai perempuan dan anak-anak, dan versi super kasualnya adalah 「もんだから・もんで・もん」.",
+            "tabel": [
+              {
+                "k": "〜ものだから / 〜ものですから",
+                "v": "soalnya... (memberi alasan)"
+              },
+              {
+                "k": "〜もので",
+                "v": "soalnya... (bentuk sopan)"
+              },
+              {
+                "k": "〜んだもの / 〜んだもん",
+                "v": "maklum... (kasual, akhir kalimat)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "すみません。昨日はちょっと熱があったものですから、お休みしました。",
+                "rd": "すみません。きのうはちょっとねつがあったものですから、おやすみしました。",
+                "id": "Maaf. Kemarin saya agak demam, jadi saya izin tidak masuk."
+              },
+              {
+                "jp": "このところ忙しかったもので、お返事が遅れてしまいました。ごめんなさい。",
+                "rd": "このところいそがしかったもので、おへんじがおくれてしまいました。ごめんなさい。",
+                "id": "Akhir-akhir ini sibuk, jadi balasannya terlambat. Maaf ya."
+              },
+              {
+                "jp": "わたし、近眼なもんで、お顔がよく見えなかったんです。失礼しました。",
+                "rd": "わたし、きんがんなもんで、おかおがよくみえなかったんです。しつれいしました。",
+                "id": "Saya rabun jauh sih, jadi wajahnya kurang kelihatan. Maaf ya."
+              },
+              {
+                "jp": "あの人の言うことはよくわからないよ。言葉が難しいんだもの。",
+                "rd": "あのひとのいうことはよくわからないよ。ことばがむずかしいんだもの。",
+                "id": "Omongannya susah dimengerti. Maklum, bahasanya sulit."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda の / kata kerja / kata sifat bentuk biasa + おかげだ / せいだ",
+            "arti": "berkat... / gara-gara...",
+            "explain": "<b>おかげだ<\/b> dipakai kalau hasilnya <b>baik<\/b> (mengandung rasa terima kasih), sedangkan <b>せいだ<\/b> kalau hasilnya <b>buruk<\/b> (mengandung rasa menyalahkan). Keduanya menyatakan bahwa sesuatu terjadi karena pengaruh hal tersebut. Jebakan: setelah kedua pola ini tidak boleh muncul kalimat yang menyatakan keinginan atau ajakan pembicara.",
+            "tabel": [
+              {
+                "k": "〜おかげだ / 〜おかげで",
+                "v": "berkat... (hasil baik)"
+              },
+              {
+                "k": "〜せいだ / 〜せいで",
+                "v": "gara-gara... (hasil buruk)"
+              },
+              {
+                "k": "〜せいか",
+                "v": "mungkin gara-gara... (dugaan)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "わたしが東西大学に合格できたのは、山川先生のおかげです。ありがとうございました。",
+                "rd": "わたしがとうざいだいがくにごうかくできたのは、やまかわせんせいのおかげです。ありがとうございました。",
+                "id": "Saya bisa lulus ujian masuk Universitas Touzai berkat Bu Yamakawa. Terima kasih banyak."
+              },
+              {
+                "jp": "佐藤さんが丁寧にチェックしてくださったおかげで、いいレポートができました。",
+                "rd": "さとうさんがていねいにチェックしてくださったおかげで、いいレポートができました。",
+                "id": "Berkat Pak Sato yang memeriksa dengan teliti, laporannya jadi bagus."
+              },
+              {
+                "jp": "いい天気が続いているおかげで、工事が思ったより早く進んでいます。",
+                "rd": "いいてんきがつづいているおかげで、こうじがおもったよりはやくすすんでいます。",
+                "id": "Berkat cuaca bagus yang berlanjut, pembangunan berjalan lebih cepat dari perkiraan."
+              },
+              {
+                "jp": "父は最近口数が少ない。疲れているせいかもしれない。",
+                "rd": "ちちはさいきんくちかずがすくない。つかれているせいかもしれない。",
+                "id": "Ayah akhir-akhir ini jarang bicara. Mungkin gara-gara lelah."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda の / kata kerja / kata sifat bentuk biasa + あまり / あまりの + kata benda + に",
+            "arti": "saking...-nya sampai...",
+            "explain": "Menyatakan sesuatu yang <b>berlebihan<\/b> sampai menimbulkan hasil yang tidak normal — kebanyakan hasil yang buruk. Ada dua bentuk: 「〜あまり + hasil」 dan 「あまりの + kata benda + に + hasil」. Jebakan: setelah pola ini tidak boleh muncul kalimat yang menyatakan harapan, keinginan, atau ajakan pembicara.",
+            "tabel": [
+              {
+                "k": "〜あまり（〜してしまった）",
+                "v": "saking...-nya sampai..."
+              },
+              {
+                "k": "あまりの + kata benda + に",
+                "v": "saking (kata benda)-nya sampai..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "自分の番が近づいてきたとき、わたしは緊張のあまり頭の中が真っ白になってしまった。",
+                "rd": "じぶんのばんがちかづいてきたとき、わたしはきんちょうのあまりあたまのなかがまっしろになってしまった。",
+                "id": "Saat giliranku makin dekat, saking tegangnya kepalaku jadi blank total."
+              },
+              {
+                "jp": "当然勝つと思っていた試合で最後に逆転負けし、悔しさのあまりぼろぼろ泣いた。",
+                "rd": "とうぜんかつとおもっていたしあいでさいごにぎゃくてんまけし、くやしさのあまりぼろぼろないた。",
+                "id": "Kalah dibalik di akhir pertandingan yang kukira pasti menang, saking kesalnya aku menangis tersedu-sedu."
+              },
+              {
+                "jp": "仕事を早く片付けようと急いだあまり、いくつかミスをしてしまった。",
+                "rd": "しごとをはやくかたづけようといそいだあまり、いくつかミスをしてしまった。",
+                "id": "Saking terburu-buru ingin cepat menyelesaikan pekerjaan, aku malah membuat beberapa kesalahan."
+              },
+              {
+                "jp": "10年ぶりで兄に会った。兄のあまりの変化に言葉が出なかった。",
+                "rd": "じゅうねんぶりであににあった。あにのあまりのへんかにことばがでなかった。",
+                "id": "Bertemu kakak setelah 10 tahun. Saking berubahnya dia, aku sampai kehabisan kata-kata."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + につき",
+            "arti": "karena... (pengumuman resmi)",
+            "explain": "Menyatakan <b>alasan<\/b> dengan cara yang <b>resmi dan publik<\/b> — gaya bahasa kaku dan tertulis. Dipakai di pengumuman tempel, dokumen resmi, dan pemberitahuan. Pola ini menempel pada kata benda yang menyatakan keadaan saat ini.",
+            "tabel": [
+              {
+                "k": "kata benda + につき",
+                "v": "karena... (pengumuman resmi)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "トイレはただ今清掃中につき、ご利用になれません。",
+                "rd": "トイレはただいませいそうちゅうにつき、ごりようになれません。",
+                "id": "Karena toilet sedang dibersihkan saat ini, tidak dapat digunakan."
+              },
+              {
+                "jp": "強風につき、この門は閉鎖中です。",
+                "rd": "きょうふうにつき、このもんはへいさちゅうです。",
+                "id": "Karena angin kencang, gerbang ini sedang ditutup."
+              },
+              {
+                "jp": "本日は祝日につき、閉館しております。",
+                "rd": "ほんじつはしゅくじつにつき、へいかんしております。",
+                "id": "Karena hari ini hari libur nasional, gedung tutup."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 16",
+        "items": [
+          {
+            "ch": "原",
+            "kun": "はら",
+            "on": "ゲン",
+            "id": "asal; sumber",
+            "note": "原因 (げんいん) = penyebab"
+          },
+          {
+            "ch": "因",
+            "kun": "—",
+            "on": "イン",
+            "id": "sebab",
+            "note": "要因 (よういん) = faktor"
+          },
+          {
+            "ch": "由",
+            "kun": "よし",
+            "on": "ユ",
+            "id": "alasan",
+            "note": "理由 (りゆう) = alasan"
+          },
+          {
+            "ch": "故",
+            "kun": "ゆえ",
+            "on": "コ",
+            "id": "sebab; mendiang",
+            "note": "故障 (こしょう) = kerusakan"
+          },
+          {
+            "ch": "責",
+            "kun": "せめる",
+            "on": "セキ",
+            "id": "tanggung jawab",
+            "note": "責任 (せきにん) = tanggung jawab"
+          },
+          {
+            "ch": "害",
+            "kun": "—",
+            "on": "ガイ",
+            "id": "kerugian",
+            "note": "被害 (ひがい) = kerugian"
+          },
+          {
+            "ch": "状",
+            "kun": "—",
+            "on": "ジョウ",
+            "id": "keadaan",
+            "note": "状況 (じょうきょう) = situasi"
+          },
+          {
+            "ch": "況",
+            "kun": "—",
+            "on": "キョウ",
+            "id": "situasi",
+            "note": "状況 (じょうきょう) = situasi"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "今朝は電車が大幅に遅れていたね。何があったの？",
+            "id": "Tadi pagi keretanya terlambat parah ya. Ada apa?"
+          },
+          {
+            "sp": "B",
+            "jp": "踏切での事故によって、ダイヤが乱れたらしいよ。",
+            "id": "Katanya jadwal kacau akibat kecelakaan di perlintasan rel."
+          },
+          {
+            "sp": "A",
+            "jp": "それで遅刻したの？部長に何て言ったの？",
+            "id": "Terus kamu terlambat? Bilang apa ke manajer?"
+          },
+          {
+            "sp": "B",
+            "jp": "事故で電車が止まっていたものですから、と説明したよ。",
+            "id": "Aku jelaskan kalau keretanya berhenti karena kecelakaan."
+          },
+          {
+            "sp": "A",
+            "jp": "部長、怒ってた？",
+            "id": "Manajernya marah?"
+          },
+          {
+            "sp": "B",
+            "jp": "いや、同じ電車に乗っていたおかげで、すぐに信じてもらえた。",
+            "id": "Nggak, berkat beliau naik kereta yang sama, langsung dipercaya."
+          },
+          {
+            "sp": "A",
+            "jp": "よかったね。緊張のあまり、声が震えなかった？",
+            "id": "Untung ya. Saking tegangnya, suaramu nggak gemetar?"
+          },
+          {
+            "sp": "B",
+            "jp": "震えたよ。おかげで今日は一日疲れた。",
+            "id": "Gemetar dong. Gara-gara itu hari ini capek seharian."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "本日は強風＿＿＿、ゴンドラの運行を中止いたします。",
+        "o": [
+          "につき",
+          "あまり",
+          "によって",
+          "ものだから"
+        ],
+        "a": 0,
+        "explain": "につき = \"karena\" untuk pengumuman resmi tertulis. によって tidak dipakai untuk pengumuman."
+      },
+      {
+        "q": "今朝の踏切事故＿＿＿、中央線のダイヤが大幅に乱れた。",
+        "o": [
+          "あまり",
+          "ものだから",
+          "につき",
+          "によって"
+        ],
+        "a": 3,
+        "explain": "によって = \"akibat\" yang netral dan formal, cocok untuk berita."
+      },
+      {
+        "q": "昨日は熱があった＿＿＿、会社を休ませていただきました。",
+        "o": [
+          "につき",
+          "によって",
+          "あまり",
+          "ものですから"
+        ],
+        "a": 3,
+        "explain": "ものだから = pembenaran diri yang sopan dalam percakapan. Bentuk sopannya ものですから."
+      },
+      {
+        "q": "先生に熱心にご指導いただいた＿＿＿、無事に合格できました。",
+        "o": [
+          "せいで",
+          "あまり",
+          "につき",
+          "おかげで"
+        ],
+        "a": 3,
+        "explain": "おかげで = \"berkat\" untuk sebab positif. せいで untuk sebab negatif."
+      },
+      {
+        "q": "連日の夜更かしがたたった＿＿＿、今朝はひどい頭痛に悩まされた。",
+        "o": [
+          "ものだから",
+          "につき",
+          "おかげで",
+          "せいで"
+        ],
+        "a": 3,
+        "explain": "せいで = \"gara-gara\" untuk sebab negatif."
+      },
+      {
+        "q": "いよいよ自分の番が近づき、緊張の＿＿＿頭の中が真っ白になった。",
+        "o": [
+          "によって",
+          "ものだから",
+          "につき",
+          "あまり"
+        ],
+        "a": 3,
+        "explain": "Kata benda + のあまり = \"saking ...-nya\"."
+      },
+      {
+        "q": "10年ぶりに会った恩師の＿＿＿変わりように、言葉を失った。",
+        "o": [
+          "せいの",
+          "あまりの",
+          "おかげの",
+          "による"
+        ],
+        "a": 1,
+        "explain": "あまりの + kata benda + に = \"saking ...-nya sampai...\"."
+      },
+      {
+        "q": "本日は祝日＿＿＿、休館とさせていただきます。",
+        "o": [
+          "につき",
+          "ものだから",
+          "あまり",
+          "によって"
+        ],
+        "a": 0,
+        "explain": "につき menempel langsung pada kata benda dalam pengumuman resmi."
+      },
+      {
+        "q": "台風＿＿＿被害が、各地で報告されている。",
+        "o": [
+          "ものだから",
+          "による",
+          "あまり",
+          "につき"
+        ],
+        "a": 1,
+        "explain": "Pola tetap: kata benda + による + kata benda = \"...akibat...\"."
+      },
+      {
+        "q": "専門用語が多くて難しいんだ＿＿＿、さっぱり分からないよ。",
+        "o": [
+          "につき",
+          "によって",
+          "もの",
+          "あまり"
+        ],
+        "a": 2,
+        "explain": "んだもの = \"maklum\" dalam percakapan kasual. Bentuk penjelas + もの."
+      }
+    ]
+  },
+  {
+    "id": "n2-17",
+    "bab": 17,
+    "level": "n2",
+    "title": "Alasan & Sebab 2",
+    "desc": "Alasan lanjutan: karena memang begitu keadaannya.",
+    "icon": "🧩",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Alasan & Sebab 2",
+        "body": "<p>Chapter ini berisi pola alasan level lanjut — bukan sekadar \"karena\", melainkan \"karena memang begitu keadaannya\". Nuansanya halus, dan inilah yang sering keluar di soal JLPT N2.<\/p><p><b>ことだし<\/b> dipakai untuk menyebut alasan yang ringan sambil mengajak atau mengusulkan sesuatu: \"lagipula...\". <b>だけに<\/b> berarti \"maklum/pantas\" — sesuai dengan ekspektasi dari sifatnya. <b>kata benda (orang) + のことだから<\/b> adalah penilaian berdasarkan karakter orang yang sudah dikenal: \"kalau dia sih...\".<\/p><p><b>ばかりに<\/b> juga berarti \"gara-gara\", tapi selalu bernada penyesalan atas sesuatu yang terjadi. Bedanya dengan せい: ばかりに menekankan \"padahal hanya karena hal sepele itu...\". Pola ini tidak pernah dipakai untuk hal yang positif.<\/p><p><b>からには・以上は・上は<\/b> semuanya berarti \"kalau sudah... ya harus...\" — menyatakan tekad atau kewajiban. <b>上は<\/b> (setelah bentuk kamus/bentuk ta) paling formal dan bertekad bulat. Jebakan: <b>以上は<\/b> sering menempel pada posisi atau status, misalnya 社長である以上 (\"kalau sudah jadi direktur...\").<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Alasan & Sebab 2",
+        "items": [
+          {
+            "jp": "後悔",
+            "kj": "後悔",
+            "r": "koukai",
+            "id": "penyesalan",
+            "note": "後悔する = menyesal"
+          },
+          {
+            "jp": "反省",
+            "kj": "反省",
+            "r": "hansei",
+            "id": "introspeksi",
+            "note": "反省する = introspeksi diri"
+          },
+          {
+            "jp": "決意",
+            "kj": "決意",
+            "r": "ketsui",
+            "id": "tekad",
+            "note": "決意を固める = memantapkan tekad"
+          },
+          {
+            "jp": "覚悟",
+            "kj": "覚悟",
+            "r": "kakugo",
+            "id": "kesiapan mental",
+            "note": "覚悟を決める = membulatkan tekad"
+          },
+          {
+            "jp": "義務",
+            "kj": "義務",
+            "r": "gimu",
+            "id": "kewajiban",
+            "note": "義務を果たす = menunaikan kewajiban"
+          },
+          {
+            "jp": "立場",
+            "kj": "立場",
+            "r": "tachiba",
+            "id": "posisi; kedudukan",
+            "note": "立場を理解する = memahami posisi"
+          },
+          {
+            "jp": "性格",
+            "kj": "性格",
+            "r": "seikaku",
+            "id": "karakter; sifat",
+            "note": "性格が明るい = sifatnya ceria"
+          },
+          {
+            "jp": "評判",
+            "kj": "評判",
+            "r": "hyouban",
+            "id": "reputasi",
+            "note": "評判がいい = reputasinya baik"
+          },
+          {
+            "jp": "期待",
+            "kj": "期待",
+            "r": "kitai",
+            "id": "harapan",
+            "note": "期待に応える = memenuhi harapan"
+          },
+          {
+            "jp": "信頼",
+            "kj": "信頼",
+            "r": "shinrai",
+            "id": "kepercayaan",
+            "note": "信頼を得る = mendapat kepercayaan"
+          },
+          {
+            "jp": "納得",
+            "kj": "納得",
+            "r": "nattoku",
+            "id": "maklum; puas",
+            "note": "納得がいく = bisa dimaklumi"
+          },
+          {
+            "jp": "境遇",
+            "kj": "境遇",
+            "r": "kyouguu",
+            "id": "keadaan nasib",
+            "note": "境遇に負けない = tidak kalah oleh nasib"
+          },
+          {
+            "jp": "言い訳",
+            "kj": "言い訳",
+            "r": "iiwake",
+            "id": "dalih",
+            "note": "言い訳がましい = terkesan berdalih"
+          },
+          {
+            "jp": "口実",
+            "kj": "口実",
+            "r": "koujitsu",
+            "id": "dalih; alasan dibuat-buat",
+            "note": "口実を作る = membuat dalih"
+          },
+          {
+            "jp": "もっとも",
+            "kj": "もっとも",
+            "r": "mottomo",
+            "id": "wajar; memang pantas",
+            "note": "もっともな意見 = pendapat yang wajar"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Alasan & Sebab 2",
+        "items": [
+          {
+            "pattern": "kalimat bentuk biasa + ことだし",
+            "arti": "toh... juga / lagipula...",
+            "explain": "Artinya kurang lebih <b>\"selain alasan lain, pokoknya karena...\"<\/b> — dipakai saat menyampaikan alasan dengan santai. Ini bahasa lisan. Berbeda dengan pola alasan lain, setelah 「ことだし」 <b>boleh<\/b> muncul kalimat yang menyatakan penilaian, harapan, keinginan, atau ajakan pembicara.",
+            "tabel": [
+              {
+                "k": "〜ことだし",
+                "v": "toh... / lagipula..."
+              },
+              {
+                "k": "〜ことですし",
+                "v": "bentuk sopan dari ことだし"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "来週はお客様が来ることだし、家の中の大掃除をしなくちゃ。",
+                "rd": "らいしゅうはおきゃくさまがくることだし、いえのなかのおおそうじをしなくちゃ。",
+                "id": "Minggu depan ada tamu datang, jadi harus bersih-bersih rumah besar-besaran."
+              },
+              {
+                "jp": "雨もやんだことだし、ちょっとジョギングしてこようかな。",
+                "rd": "あめもやんだことだし、ちょっとジョギングしてこようかな。",
+                "id": "Hujannya juga sudah berhenti, jogging sebentar ah."
+              },
+              {
+                "jp": "こちらのおなべは値段も安いことですし、お一ついかがでしょうか。",
+                "rd": "こちらのおなべはねだんもやすいことですし、おひとついかがでしょうか。",
+                "id": "Panci ini harganya juga murah, bagaimana kalau ambil satu?"
+              },
+              {
+                "jp": "あしたはお父さんも休みのことだし、みんなで買い物でも行かない？",
+                "rd": "あしたはおとうさんもやすみのことだし、みんなでかいものでもいかない？",
+                "id": "Besok ayah juga libur, pergi belanja bareng-bareng yuk?"
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda (orang) + のことだから",
+            "arti": "kalau dia sih... / maklum...",
+            "explain": "Dipakai untuk <b>menebak<\/b> sesuatu berdasarkan <b>sifat atau kebiasaan<\/b> orang tersebut. Kebanyakan menempel pada kata yang menyatakan orang. Setelahnya muncul kalimat yang menyatakan tebakan atau penilaian pembicara. Pola ini juga bisa dipakai di akhir kalimat.",
+            "tabel": [
+              {
+                "k": "orang + のことだから",
+                "v": "kalau dia sih... (tebakan dari sifatnya)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "頑張り屋のみち子のことだから、きっと今度のテストでもいい点をとりますよ。",
+                "rd": "がんばりやのみちこのことだから、きっとこんどのテストでもいいてんをとりますよ。",
+                "id": "Kalau Michiko yang rajin itu sih, pasti ujian kali ini juga dapat nilai bagus."
+              },
+              {
+                "jp": "いつもみんなを笑わせていたカンさんのことだから、国に帰ってもまた人気者になると思いますよ。",
+                "rd": "いつもみんなをわらわせていたカンさんのことだから、くににかえってもまたにんきものになるとおもいますよ。",
+                "id": "Kalau Kan yang selalu bikin semua orang ketawa sih, kurasa pulang ke negaranya pun dia akan jadi idola lagi."
+              },
+              {
+                "jp": "太郎の帰りが遅いね。でも、あの子のことだ。どこかの本屋で立ち読みでもして時間が経つのを忘れているんだろう。",
+                "rd": "たろうのかえりがおそいね。でも、あのこのことだ。どこかのほんやでたちよみでもしてじかんがたつのをわすれているんだろう。",
+                "id": "Taro pulangnya telat ya. Tapi maklum anak itu. Pasti lagi baca gratisan di toko buku sampai lupa waktu."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda / kalimat bentuk biasa + だけに",
+            "arti": "maklum... / pantas saja...",
+            "explain": "Menyatakan bahwa suatu keadaan <b>sudah sewajarnya<\/b> mengingat alasannya, atau keadaannya <b>lebih dari biasanya<\/b>. Setelahnya muncul kalimat yang menyatakan tingkat atau keadaan yang sesuai dengan alasan itu. Tidak boleh dipakai dengan kalimat ajakan. Jebakan: kata benda bentuk 「だ」 tidak bisa disambung (×学生だだけに). Ungkapan 「年が年だけに」 artinya \"maklum sudah tua\".",
+            "tabel": [
+              {
+                "k": "〜だけに",
+                "v": "maklum... / pantas saja..."
+              },
+              {
+                "k": "年が年だけに",
+                "v": "maklum sudah berumur"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "あそこは有名レストランだけに、客に出した料理に問題があったとわかったときは大ニュースになった。",
+                "rd": "あそこはゆうめいレストランだけに、きゃくにだしたりょうりにもんだいがあったとわかったときはだいニュースになった。",
+                "id": "Maklum restoran terkenal, waktu ketahuan ada masalah dengan masakan yang disajikan ke tamu, langsung jadi berita besar."
+              },
+              {
+                "jp": "母は花が好きなだけに、花をもらうと大喜びする。",
+                "rd": "ははははながすきなだけに、はなをもらうとおおよろこびする。",
+                "id": "Maklum ibu suka bunga, kalau diberi bunga senang bukan main."
+              },
+              {
+                "jp": "父はよく話す人だっただけに、いなくなった後、いっそう寂しさを感じる。",
+                "rd": "ちちはよくはなすひとだっただけに、いなくなったあと、いっそうさびしさをかんじる。",
+                "id": "Maklum ayah orang yang cerewet, setelah beliau tiada rasa sepinya makin menjadi."
+              },
+              {
+                "jp": "祖父はよく山登りをするが、年が年だけに、無事に帰ってくるまで心配だ。",
+                "rd": "そふはよくやまのぼりをするが、としがとしだけに、ぶじにかえってくるまでしんぱいだ。",
+                "id": "Kakek sering naik gunung, tapi maklum sudah tua, aku khawatir sampai dia pulang dengan selamat."
+              }
+            ]
+          },
+          {
+            "pattern": "kalimat bentuk biasa + ばかりに",
+            "arti": "gara-gara... / saking inginnya...",
+            "explain": "Punya dua makna. Pertama, <b>hanya karena hal sepele itu<\/b>, malah berujung pada <b>hasil buruk yang tak terduga<\/b> — setelah makna ini tidak boleh muncul kalimat keinginan atau ajakan pembicara. Kedua, <b>saking inginnya<\/b> mewujudkan sesuatu sampai melakukan hal yang tidak biasa — kalau disambung 「〜たい」, setelahnya berupa hal luar biasa dan tidak harus negatif.",
+            "tabel": [
+              {
+                "k": "〜ばかりに + hasil buruk",
+                "v": "gara-gara... (hasil tak terduga)"
+              },
+              {
+                "k": "〜たいばかりに",
+                "v": "saking inginnya... sampai..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "ちょっと大工の経験があるばかりに、いろいろな仕事を頼まれてしまう。",
+                "rd": "ちょっとだいくのけいけんがあるばかりに、いろいろなしごとをたのまれてしまう。",
+                "id": "Hanya karena sedikit punya pengalaman jadi tukang kayu, malah dimintai tolong macam-macam pekerjaan."
+              },
+              {
+                "jp": "家のかぎを忘れて出かけたばかりに、家族が帰ってくるまで家に入れなかった。",
+                "rd": "いえのかぎをわすれてでかけたばかりに、かぞくがかえってくるまでいえにはいれなかった。",
+                "id": "Gara-gara lupa bawa kunci lalu pergi, aku tidak bisa masuk rumah sampai keluarga pulang."
+              },
+              {
+                "jp": "遅刻の回数がちょっと多かったばかりに、推薦状を書いてもらえなかった。",
+                "rd": "ちこくのかいすうがちょっとおおかったばかりに、すいせんじょうをかいてもらえなかった。",
+                "id": "Hanya karena agak sering terlambat, aku tidak dibuatkan surat rekomendasi."
+              },
+              {
+                "jp": "山頂から一面の日の出を見たいばかりに、暗いうちに山小屋を出て2時間も歩いたのだ。",
+                "rd": "さんちょうからいちめんのひのでをみたいばかりに、くらいうちにやまごやをでてにじかんもあるいたのだ。",
+                "id": "Saking inginnya melihat matahari terbit dari puncak, aku keluar dari pondok gunung selagi gelap dan berjalan 2 jam."
+              }
+            ]
+          },
+          {
+            "pattern": "kalimat bentuk biasa + からには / 以上は / kata kerja bentuk kamus・bentuk ta + 上は",
+            "arti": "kalau sudah... ya harus...",
+            "explain": "Menyatakan <b>\"karena sudah..., maka wajar/melakukan hal itu\"<\/b> — keseluruhan kalimat menyatakan hal yang dianggap wajar secara umum. Setelahnya boleh muncul kalimat penilaian, harapan, keinginan, atau ajakan pembicara. Perhatikan: 「上は」 hanya menempel pada kata kerja bentuk kamus atau bentuk ta.",
+            "tabel": [
+              {
+                "k": "〜からには",
+                "v": "kalau sudah... (maka wajar)"
+              },
+              {
+                "k": "〜以上（は）",
+                "v": "kalau sudah... (maka harus)"
+              },
+              {
+                "k": "kata kerja bentuk kamus・bentuk ta + 上は",
+                "v": "kalau sudah bertekad..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "留学するからには、ちゃんと目的があるのでしょうね。",
+                "rd": "りゅうがくするからには、ちゃんともくてきがあるのでしょうね。",
+                "id": "Kalau sudah memutuskan belajar ke luar negeri, pasti ada tujuan yang jelas ya."
+              },
+              {
+                "jp": "高いお金を払って外国旅行をするからには、大いに楽しまなければ損だ。",
+                "rd": "たかいおかねをはらってがいこくりょこうをするからには、おおいにたのしまなければそんだ。",
+                "id": "Kalau sudah bayar mahal untuk liburan ke luar negeri, rugi kalau tidak dinikmati puas-puas."
+              },
+              {
+                "jp": "自分一人でやると言った以上、みんなに助けてもらうことはできない。",
+                "rd": "じぶんひとりでやるといったいじょう、みんなにたすけてもらうことはできない。",
+                "id": "Kalau sudah bilang akan kerjakan sendiri, tidak bisa minta tolong semua orang."
+              },
+              {
+                "jp": "専門職である以上、常に新しい知識を身につけなければならないと思う。",
+                "rd": "せんもんしょくであるいじょう、つねにあたらしいちしきをみにつけなければならないとおもう。",
+                "id": "Kalau sudah jadi tenaga profesional, kurasa harus selalu menguasai ilmu baru."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 17",
+        "items": [
+          {
+            "ch": "悔",
+            "kun": "くいる",
+            "on": "カイ",
+            "id": "menyesal",
+            "note": "後悔 (こうかい) = penyesalan"
+          },
+          {
+            "ch": "悟",
+            "kun": "さとる",
+            "on": "ゴ",
+            "id": "sadar; insaf",
+            "note": "覚悟 (かくご) = kesiapan mental"
+          },
+          {
+            "ch": "決",
+            "kun": "きめる",
+            "on": "ケツ",
+            "id": "memutuskan",
+            "note": "決意 (けつい) = tekad"
+          },
+          {
+            "ch": "意",
+            "kun": "—",
+            "on": "イ",
+            "id": "niat; arti",
+            "note": "決意 (けつい) = tekad"
+          },
+          {
+            "ch": "務",
+            "kun": "つとめる",
+            "on": "ム",
+            "id": "tugas",
+            "note": "義務 (ぎむ) = kewajiban"
+          },
+          {
+            "ch": "判",
+            "kun": "わかる",
+            "on": "ハン",
+            "id": "menilai",
+            "note": "判断 (はんだん) = penilaian"
+          },
+          {
+            "ch": "期",
+            "kun": "—",
+            "on": "キ",
+            "id": "periode",
+            "note": "期待 (きたい) = harapan"
+          },
+          {
+            "ch": "納",
+            "kun": "おさめる",
+            "on": "ノウ",
+            "id": "menyimpan; menyetujui",
+            "note": "納得 (なっとく) = maklum"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "来月で会社を辞めることにしたんだ。",
+            "id": "Aku memutuskan resign bulan depan."
+          },
+          {
+            "sp": "B",
+            "jp": "えっ、本当？新しいことに挑戦したいことだし、応援するよ。",
+            "id": "Eh, serius? Lagipula kamu ingin tantangan baru, aku dukung."
+          },
+          {
+            "sp": "A",
+            "jp": "ありがとう。やるからには、中途半端にはしたくないんだ。",
+            "id": "Makasih. Kalau sudah memutuskan, aku nggak mau setengah-setengah."
+          },
+          {
+            "sp": "B",
+            "jp": "真面目な君のことだから、きっと次の職場でもうまくいくよ。",
+            "id": "Kalau kamu yang serius sih, pasti di tempat baru juga sukses."
+          },
+          {
+            "sp": "A",
+            "jp": "でも、今のプロジェクトを途中で投げ出すばかりに、迷惑をかけてしまって。",
+            "id": "Tapi gara-gara meninggalkan proyek di tengah jalan, aku merepotkan banyak orang."
+          },
+          {
+            "sp": "B",
+            "jp": "リーダーだっただけに、引き継ぎは大変だっただろうね。",
+            "id": "Maklum kamu leader-nya, serah terimanya pasti berat ya."
+          },
+          {
+            "sp": "A",
+            "jp": "うん。責任者である以上、最後まで責任を持ちたい。",
+            "id": "Iya. Kalau sudah jadi penanggung jawab, aku ingin bertanggung jawab sampai akhir."
+          },
+          {
+            "sp": "B",
+            "jp": "その意気だよ。決めた上は、迷わず進むだけだ。",
+            "id": "Semangat itu! Kalau sudah memutuskan, tinggal maju tanpa ragu."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "雨もやんだ＿＿＿、ちょっと散歩に行こうか。",
+        "o": [
+          "ことだし",
+          "だけに",
+          "からには",
+          "ばかりに"
+        ],
+        "a": 0,
+        "explain": "ことだし = menyebut alasan ringan sambil mengajak: \"lagipula...\"."
+      },
+      {
+        "q": "努力家で真面目な彼女の＿＿＿、きっと今回も成功するだろう。",
+        "o": [
+          "だけに",
+          "ことだから",
+          "ばかりに",
+          "以上は"
+        ],
+        "a": 1,
+        "explain": "N (orang) + のことだから = penilaian berdasar karakter yang dikenal: \"kalau dia sih...\"."
+      },
+      {
+        "q": "創業100年の老舗＿＿＿、味には絶対の自信がある。",
+        "o": [
+          "ことだし",
+          "ばかりに",
+          "だけに",
+          "からには"
+        ],
+        "a": 2,
+        "explain": "だけに = \"maklum/pantas\" — sesuai ekspektasi dari sifatnya."
+      },
+      {
+        "q": "家のかぎを忘れて出かけた＿＿＿、家族が帰るまで外で待つはめになった。",
+        "o": [
+          "ばかりに",
+          "からには",
+          "だけに",
+          "ことだし"
+        ],
+        "a": 0,
+        "explain": "ばかりに = \"gara-gara\" dengan nada penyesalan. Tidak pernah untuk hal positif."
+      },
+      {
+        "q": "この仕事を引き受けた＿＿＿、最後までやり遂げなければならない。",
+        "o": [
+          "だけに",
+          "ばかりに",
+          "からには",
+          "ことだし"
+        ],
+        "a": 2,
+        "explain": "からには = \"kalau sudah... ya harus...\" (tekad/kewajiban)."
+      },
+      {
+        "q": "チームのリーダーである＿＿＿、結果には責任を持つべきだ。",
+        "o": [
+          "ことだし",
+          "以上は",
+          "ばかりに",
+          "だけに"
+        ],
+        "a": 1,
+        "explain": "以上は sering menempel pada posisi/status: \"kalau sudah (menjadi)...\"."
+      },
+      {
+        "q": "留学すると決めた＿＿＿、迷わず前に進むだけだ。",
+        "o": [
+          "ばかりに",
+          "上は",
+          "だけに",
+          "ことだし"
+        ],
+        "a": 1,
+        "explain": "上は setelah bentuk ta = \"kalau sudah memutuskan\" — paling formal dan bertekad."
+      },
+      {
+        "q": "明日も休みの＿＿＿、今夜はゆっくり映画でも見よう。",
+        "o": [
+          "ばかりに",
+          "からには",
+          "だけに",
+          "ことだし"
+        ],
+        "a": 3,
+        "explain": "ことだし untuk alasan ringan + usulan santai."
+      },
+      {
+        "q": "少し寝坊した＿＿＿、大事な会議に遅刻してしまった。",
+        "o": [
+          "だけに",
+          "ばかりに",
+          "ことだし",
+          "からには"
+        ],
+        "a": 1,
+        "explain": "\"Padahal hanya karena sedikit kesiangan\" — nada penyesalan khas ばかりに."
+      },
+      {
+        "q": "父も年が年＿＿＿、無理はさせられない。",
+        "o": [
+          "ことだし",
+          "ばかりに",
+          "だけに",
+          "からには"
+        ],
+        "a": 2,
+        "explain": "年が年だけに = pola tetap: \"maklum sudah tua\"."
+      }
+    ]
+  },
+  {
+    "id": "n2-18",
+    "bab": 18,
+    "level": "n2",
+    "title": "Sulit & Mampu",
+    "desc": "Menyatakan kesulitan dan kemampuan.",
+    "icon": "💪",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Sulit & Mampu",
+        "body": "<p>Di N2 ada banyak cara bilang \"sulit\" dan \"tidak bisa\" — dan bedanya terletak pada <b>alasannya<\/b>. Memakai pola yang salah bisa membuat penolakanmu terdengar kasar atau tidak masuk akal.<\/p><p><b>がたい<\/b> (setelah bentuk masu) berarti \"sulit\" secara perasaan — sesuatu yang sukar diterima akal atau diungkapkan, misalnya 信じがたい (sukar dipercaya). <b>かねる<\/b> berarti \"sulit\" karena situasi, dan sering dipakai untuk menolak dengan sopan: 賛成しかねます (\"sulit bagi saya untuk menyetujui\"). <b>ようがない<\/b> paling mutlak: \"tidak ada cara untuk...\" sama sekali.<\/p><p><b>わけにはいかない<\/b> berarti terhalang oleh keadaan atau norma sosial — \"tidak patut/tidak tega untuk...\". <b>どころではない<\/b> berarti \"bukan saatnya untuk...\" karena ada prioritas lain yang lebih penting. Jebakan: jangan tertukar antara <b>わけにはいかない<\/b> (tidak boleh/tidak bisa karena keadaan) dan <b>ないわけにはいかない<\/b> (malah berarti \"harus\" — kebalikannya!).<\/p><p><b>得る・得ない<\/b> berarti \"bisa/mungkin\" dalam bahasa tulis yang formal. Pola tetap <b>あり得ない<\/b> berarti \"mustahil\". Jebakan umum: かねる vs がたい — かねる untuk penolakan sopan karena situasi, がたい untuk sesuatu yang sukar diterima perasaan.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Sulit & Mampu",
+        "items": [
+          {
+            "jp": "困難",
+            "kj": "困難",
+            "r": "konnan",
+            "id": "kesulitan",
+            "note": "困難に直面する = menghadapi kesulitan"
+          },
+          {
+            "jp": "限界",
+            "kj": "限界",
+            "r": "genkai",
+            "id": "batas",
+            "note": "限界を超える = melampaui batas"
+          },
+          {
+            "jp": "余裕",
+            "kj": "余裕",
+            "r": "yoyuu",
+            "id": "kelonggaran",
+            "note": "余裕がない = tidak ada kelonggaran"
+          },
+          {
+            "jp": "手段",
+            "kj": "手段",
+            "r": "shudan",
+            "id": "cara; sarana",
+            "note": "手段を選ばない = menghalalkan segala cara"
+          },
+          {
+            "jp": "方法",
+            "kj": "方法",
+            "r": "houhou",
+            "id": "metode",
+            "note": "方法を考える = memikirkan cara"
+          },
+          {
+            "jp": "対策",
+            "kj": "対策",
+            "r": "taisaku",
+            "id": "penanggulangan",
+            "note": "対策を立てる = menyusun penanggulangan"
+          },
+          {
+            "jp": "可能性",
+            "kj": "可能性",
+            "r": "kanousei",
+            "id": "kemungkinan",
+            "note": "可能性を探る = menjajaki kemungkinan"
+          },
+          {
+            "jp": "不可能",
+            "kj": "不可能",
+            "r": "fukanou",
+            "id": "mustahil",
+            "note": "不可能を可能にする = membuat yang mustahil jadi mungkin"
+          },
+          {
+            "jp": "無理",
+            "kj": "無理",
+            "r": "muri",
+            "id": "mustahil; memaksa",
+            "note": "無理をする = memaksakan diri"
+          },
+          {
+            "jp": "我慢",
+            "kj": "我慢",
+            "r": "gaman",
+            "id": "menahan diri",
+            "note": "我慢する = menahan diri"
+          },
+          {
+            "jp": "遠慮",
+            "kj": "遠慮",
+            "r": "enryo",
+            "id": "sungkan",
+            "note": "遠慮なく = jangan sungkan"
+          },
+          {
+            "jp": "都合",
+            "kj": "都合",
+            "r": "tsugou",
+            "id": "keadaan",
+            "note": "都合がつく = waktunya cocok"
+          },
+          {
+            "jp": "事情",
+            "kj": "事情",
+            "r": "jijou",
+            "id": "keadaan",
+            "note": "やむを得ない事情 = keadaan yang tak terhindarkan"
+          },
+          {
+            "jp": "断念",
+            "kj": "断念",
+            "r": "dannen",
+            "id": "mengurungkan",
+            "note": "計画を断念する = mengurungkan rencana"
+          },
+          {
+            "jp": "承知",
+            "kj": "承知",
+            "r": "shouchi",
+            "id": "maklum; setuju",
+            "note": "承知しました = saya mengerti (formal)"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Sulit & Mampu",
+        "items": [
+          {
+            "pattern": "kata kerja bentuk masu + がたい",
+            "arti": "sulit untuk... / sukar...",
+            "explain": "Menyatakan <b>sulit atau tidak bisa<\/b> melakukan sesuatu — tapi <b>bukan<\/b> karena tidak mampu secara fisik, melainkan lebih ke soal perasaan dan pikiran. Kebanyakan menempel pada kata kerja yang menyatakan kerja hati (membayangkan, memahami, mempercayai) atau ujaran (berkata, mengungkapkan).",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk masu + がたい",
+                "v": "sulit untuk..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "あの優しい彼がそんなひどいことをしたとは信じがたい。",
+                "rd": "あのやさしいかれがそんなひどいことをしたとはしんじがたい。",
+                "id": "Sulit dipercaya kalau dia yang baik itu melakukan hal sekejam itu."
+              },
+              {
+                "jp": "この料理は何とも言いがたい初めての味だ。",
+                "rd": "このりょうりはなんともいいがたいはじめてのあじだ。",
+                "id": "Masakan ini punya rasa pertama yang sulit diungkapkan dengan kata-kata."
+              },
+              {
+                "jp": "留学中、自分の国では得がたい経験をたくさんした。",
+                "rd": "りゅうがくちゅう、じぶんのくにではえがたいけいけんをたくさんした。",
+                "id": "Selama belajar di luar negeri, aku mendapat banyak pengalaman yang sulit didapat di negaraku sendiri."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk kamus + わけにはいかない / わけにもいかない",
+            "arti": "tidak bisa... (terhalang keadaan)",
+            "explain": "Menyatakan <b>tidak bisa<\/b> melakukan sesuatu karena <b>bertentangan dengan akal sehat atau moral<\/b>, atau ada <b>hambatan psikologis<\/b> — <b>bukan<\/b> karena tidak mampu. Subjek kalimatnya biasanya orang pertama (saya).",
+            "tabel": [
+              {
+                "k": "〜わけにはいかない",
+                "v": "tidak bisa... (terhalang keadaan)"
+              },
+              {
+                "k": "〜わけにもいかない",
+                "v": "tidak bisa juga... (terhalang keadaan)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "病気の子供を一人家において、仕事に行くわけにはいかない。",
+                "rd": "びょうきのこどもをひとりいえにおいて、しごとにいくわけにはいかない。",
+                "id": "Tidak mungkin aku meninggalkan anak yang sakit sendirian di rumah lalu pergi kerja."
+              },
+              {
+                "jp": "いくらお金に困っていても、そんな大金をあなたから借りるわけにはいかない。",
+                "rd": "いくらおかねにこまっていても、そんなたいきんをあなたからかりるわけにはいかない。",
+                "id": "Sebesar apa pun kesulitanku soal uang, tidak mungkin aku meminjam uang sebanyak itu darimu."
+              },
+              {
+                "jp": "もう終電は終わってしまった。会社に泊まるわけにもいかず、困っている。",
+                "rd": "もうしゅうでんはおわってしまった。かいしゃにとまるわけにもいかず、こまっている。",
+                "id": "Kereta terakhir sudah habis. Menginap di kantor pun tidak bisa, aku kebingungan."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk masu + かねる",
+            "arti": "sulit... / tidak bisa... (karena situasi)",
+            "explain": "Menyatakan <b>tidak bisa<\/b> melakukan sesuatu karena <b>situasi, syarat, atau posisi<\/b> pembicara — <b>bukan<\/b> karena tidak mampu. Sering dipakai untuk <b>menolak dengan halus dan sopan<\/b>. Bentuk khusus: 「見かねる」 artinya \"tidak tega melihat...\".",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk masu + かねる",
+                "v": "sulit... / tidak bisa..."
+              },
+              {
+                "k": "見かねる",
+                "v": "tidak tega melihat..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "メールでのご質問だけでは診断しかねます。一度病院にいらっしゃってください。",
+                "rd": "メールでのごしつもんだけではしんだんしかねます。いちどびょういんにいらっしゃってください。",
+                "id": "Hanya dari pertanyaan lewat email, sulit untuk mendiagnosis. Silakan datang ke rumah sakit sekali."
+              },
+              {
+                "jp": "あなたの気持ちも理解できますが、その案には賛成しかねます。",
+                "rd": "あなたのきもちもりかいできますが、そのあんにはさんせいしかねます。",
+                "id": "Saya memahami perasaan Anda, tapi sulit bagi saya menyetujui usulan itu."
+              },
+              {
+                "jp": "子供が泣いているのを見かねて、結局宿題を手伝ってやった。",
+                "rd": "こどもがないているのをみかねて、けっきょくしゅくだいをてつだってやった。",
+                "id": "Tidak tega melihat anak itu menangis, akhirnya kubantu mengerjakan PR-nya."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk masu + ようがない",
+            "arti": "tidak ada cara untuk... / mustahil...",
+            "explain": "Menyatakan <b>ingin melakukan sesuatu tapi tidak tahu caranya<\/b>, atau <b>sama sekali tidak ada kemungkinan<\/b>. Menekankan nuansa \"mustahil\". Kadang juga dipakai dengan arti \"〜はずがない\" (tidak mungkin...).",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk masu + ようがない",
+                "v": "tidak ada cara untuk... / mustahil..."
+              },
+              {
+                "k": "〜としか言いようがない",
+                "v": "tidak bisa berkata lain selain..."
+              },
+              {
+                "k": "〜のつけようがない",
+                "v": "tidak ada celah untuk... (mengkritik)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "彼の連絡先がわからないので、このニュースを知らせたくても知らせようがない。",
+                "rd": "かれのれんらくさきがわからないので、このニュースをしらせたくてもしらせようがない。",
+                "id": "Karena tidak tahu kontaknya, sekalipun ingin memberi tahu kabar ini tidak ada caranya."
+              },
+              {
+                "jp": "実力はあるのだから、今回の結果には運がなかったとしか言いようがない。",
+                "rd": "じつりょくはあるのだから、こんかいのけっかにはうんがなかったとしかいいようがない。",
+                "id": "Dia sebenarnya berbakat, jadi soal hasil kali ini tidak bisa dibilang lain selain \"tidak beruntung\"."
+              },
+              {
+                "jp": "選手たちの今日の試合での活躍はとても素晴らしく、文句のつけようがない。",
+                "rd": "せんしゅたちのきょうのしあいでのかつやくはとてもすばらしく、もんくのつけようがない。",
+                "id": "Penampilan para pemain di pertandingan hari ini luar biasa, sampai tidak ada celah untuk dikritik."
+              },
+              {
+                "jp": "駅からここまではまっすぐ歩いてくるだけだから、迷いようがないと思うけどね。",
+                "rd": "えきからここまではまっすぐあるいてくるだけだから、まよいようがないとおもうけどね。",
+                "id": "Dari stasiun ke sini tinggal jalan lurus saja, kurasa mustahil tersesat sih."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda / kata kerja bentuk kamus + どころではない",
+            "arti": "bukan saatnya untuk... / tidak sempat...",
+            "explain": "Menyatakan <b>bukan situasi yang memungkinkan<\/b> untuk melakukan sesuatu. Alasannya biasanya karena tidak ada kelonggaran — tidak punya uang, tidak punya waktu, berisik, sakit, dan sebagainya — sehingga hal yang diharapkan atau dibayangkan sama sekali tidak bisa dilakukan.",
+            "tabel": [
+              {
+                "k": "kata benda / kata kerja bentuk kamus + どころではない",
+                "v": "bukan saatnya untuk... / tidak sempat..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "仕事が忙しくて、旅行どころではない。",
+                "rd": "しごとがいそがしくて、りょこうどころではない。",
+                "id": "Kerja sibuk sekali, bukan saatnya untuk liburan."
+              },
+              {
+                "jp": "隣のテーブルの人たちがうるさくて、ゆっくり食事を楽しむどころではなかった。",
+                "rd": "となりのテーブルのひとたちがうるさくて、ゆっくりしょくじをたのしむどころではなかった。",
+                "id": "Orang-orang di meja sebelah berisik, jadi sama sekali bukan situasi untuk menikmati makanan dengan santai."
+              },
+              {
+                "jp": "当時はお金がなかったのでどこかへ遊びに行くどころではなく、毎日アルバイトをしていた。",
+                "rd": "とうじはおかねがなかったのでどこかへあそびにいくどころではなく、まいにちアルバイトをしていた。",
+                "id": "Waktu itu tidak punya uang, jadi bukannya pergi main ke mana-mana, aku malah kerja paruh waktu setiap hari."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk masu + 得る / 得ない",
+            "arti": "bisa... / mungkin... (formal)",
+            "explain": "Menyatakan <b>kemungkinan<\/b>: 〜得る = \"bisa/mungkin terjadi\", 〜得ない = \"tidak bisa/tidak mungkin\". Gaya bahasa formal. Jebakan: tidak cocok dipakai untuk menyatakan kemampuan sehari-hari orang tertentu (misalnya \"bisa berbahasa Inggris\") atau kemungkinan situasional (misalnya \"bisa menyetir karena tidak minum\"). Bentuk positif 「得」 dibaca 「うる」 saat dipakai sebagai kata kerja bantu, sedangkan bentuk negatifnya 「えない」.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk masu + 得る（うる）",
+                "v": "bisa... / mungkin..."
+              },
+              {
+                "k": "kata kerja bentuk masu + 得ない（えない）",
+                "v": "tidak bisa... / tidak mungkin..."
+              },
+              {
+                "k": "あり得ない",
+                "v": "mustahil / tidak mungkin terjadi"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "がんはだれでもかかり得る病気だ。",
+                "rd": "がんはだれでもかかりうるびょうきだ。",
+                "id": "Kanker adalah penyakit yang bisa menyerang siapa saja."
+              },
+              {
+                "jp": "経済の成長と環境保護は両立し得るはずだ。",
+                "rd": "けいざいのせいちょうとかんきょうほごはりょうりつしうるはずだ。",
+                "id": "Pertumbuhan ekonomi dan perlindungan lingkungan seharusnya bisa berjalan beriringan."
+              },
+              {
+                "jp": "人間が100メートルを5秒で走るなんてあり得ない話だ。",
+                "rd": "にんげんがひゃくメートルをごびょうではしるなんてありえないはなしだ。",
+                "id": "Manusia berlari 100 meter dalam 5 detik itu cerita yang mustahil."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 18",
+        "items": [
+          {
+            "ch": "困",
+            "kun": "こまる",
+            "on": "コン",
+            "id": "kesulitan",
+            "note": "困難 (こんなん) = kesulitan"
+          },
+          {
+            "ch": "難",
+            "kun": "かたい",
+            "on": "ナン",
+            "id": "sulit",
+            "note": "困難 (こんなん) = kesulitan"
+          },
+          {
+            "ch": "限",
+            "kun": "かぎる",
+            "on": "ゲン",
+            "id": "batas",
+            "note": "限界 (げんかい) = batas"
+          },
+          {
+            "ch": "余",
+            "kun": "あまる",
+            "on": "ヨ",
+            "id": "sisa",
+            "note": "余裕 (よゆう) = kelonggaran"
+          },
+          {
+            "ch": "段",
+            "kun": "—",
+            "on": "ダン",
+            "id": "tahap",
+            "note": "手段 (しゅだん) = cara"
+          },
+          {
+            "ch": "法",
+            "kun": "—",
+            "on": "ホウ",
+            "id": "hukum; cara",
+            "note": "方法 (ほうほう) = metode"
+          },
+          {
+            "ch": "能",
+            "kun": "—",
+            "on": "ノウ",
+            "id": "mampu",
+            "note": "可能 (かのう) = mungkin"
+          },
+          {
+            "ch": "無",
+            "kun": "ない",
+            "on": "ム",
+            "id": "tidak ada",
+            "note": "無理 (むり) = mustahil"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "来週、有給を取って旅行に行こうと思ってるんだけど。",
+            "id": "Minggu depan aku berencana ambil cuti buat liburan."
+          },
+          {
+            "sp": "B",
+            "jp": "今は決算期で忙しくて、旅行どころではないだろう。",
+            "id": "Sekarang lagi musim tutup buku dan sibuk, bukan saatnya liburan deh."
+          },
+          {
+            "sp": "A",
+            "jp": "そうなんだよね。休みを申請するわけにもいかなくて。",
+            "id": "Iya sih. Rasanya nggak patut mengajukan cuti juga."
+          },
+          {
+            "sp": "B",
+            "jp": "上司に相談したら、時期をずらすよう言われたんだ。",
+            "id": "Waktu konsultasi ke atasan, disuruh geser waktunya."
+          },
+          {
+            "sp": "A",
+            "jp": "繁忙期が終われば、休みも取りやすくなるはずだよ。",
+            "id": "Kalau masa sibuk selesai, harusnya cuti jadi lebih gampang."
+          },
+          {
+            "sp": "B",
+            "jp": "それはそうと、この資料のミスは訂正しようがないね。",
+            "id": "Ngomong-ngomong, kesalahan di dokumen ini sudah tidak bisa diperbaiki ya."
+          },
+          {
+            "sp": "A",
+            "jp": "うん。最初から作り直すしかない。骨が折れるよ。",
+            "id": "Iya. Cuma bisa bikin ulang dari awal. Melelahkan."
+          },
+          {
+            "sp": "B",
+            "jp": "納期に間に合わせるのは無理があり得ない話じゃないけど、かなり厳しいね。",
+            "id": "Menyelesaikannya sebelum tenggat bukan hal yang mustahil, tapi cukup berat ya."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "あの温厚な部長が部下を怒鳴るなんて、信じ＿＿＿話だ。",
+        "o": [
+          "がたい",
+          "ようがない",
+          "どころではない",
+          "かねる"
+        ],
+        "a": 0,
+        "explain": "がたい = \"sulit\" secara perasaan (sukar dipercaya). Menempel pada bentuk masu."
+      },
+      {
+        "q": "病気の母を一人残して旅行に行く＿＿＿。",
+        "o": [
+          "がたい",
+          "ようがない",
+          "わけにはいかない",
+          "かねる"
+        ],
+        "a": 2,
+        "explain": "わけにはいかない = terhalang keadaan/norma: \"tidak patut/tidak tega\"."
+      },
+      {
+        "q": "ご提案の内容につきましては、賛成＿＿＿。",
+        "o": [
+          "しようがありません",
+          "しがたいです",
+          "どころではありません",
+          "しかねます"
+        ],
+        "a": 3,
+        "explain": "しかねます = penolakan sopan \"sulit bagi saya...\" karena situasi. Pola tetap bisnis."
+      },
+      {
+        "q": "彼の連絡先が分からないので、知らせたくても知らせ＿＿＿。",
+        "o": [
+          "がたい",
+          "ようがない",
+          "どころではない",
+          "かねる"
+        ],
+        "a": 1,
+        "explain": "ようがない = \"tidak ada cara untuk...\" sama sekali."
+      },
+      {
+        "q": "決算期で忙しくて、旅行＿＿＿。",
+        "o": [
+          "かねる",
+          "がたい",
+          "ようがない",
+          "どころではない"
+        ],
+        "a": 3,
+        "explain": "どころではない = \"bukan saatnya untuk...\" karena ada prioritas lain."
+      },
+      {
+        "q": "この病気は、誰でもかかり＿＿＿ものだ。",
+        "o": [
+          "どころではない",
+          "かねる",
+          "ようがない",
+          "得る"
+        ],
+        "a": 3,
+        "explain": "得る setelah bentuk masu = \"bisa\" dalam bahasa tulis formal."
+      },
+      {
+        "q": "人間が鳥のように空を飛ぶなんて、あり＿＿＿話だ。",
+        "o": [
+          "得ない",
+          "かねない",
+          "どころではない",
+          "がたい"
+        ],
+        "a": 0,
+        "explain": "あり得ない = pola tetap yang berarti \"mustahil\"."
+      },
+      {
+        "q": "終電を逃してしまった。タクシーは高いし、歩いて帰る＿＿＿、困った。",
+        "o": [
+          "がたい",
+          "ようがない",
+          "わけにもいかない",
+          "かねる"
+        ],
+        "a": 2,
+        "explain": "わけにもいかない = \"...pun tidak bisa\" (bentuk negatif dari わけにはいかない)."
+      },
+      {
+        "q": "この複雑な味は、言葉では言い＿＿＿。",
+        "o": [
+          "かねる",
+          "がたい",
+          "ようがない",
+          "どころではない"
+        ],
+        "a": 1,
+        "explain": "言いがたい = sukar diungkapkan dengan kata-kata (perasaan). かねる akan berarti \"ragu mengatakan\"."
+      },
+      {
+        "q": "試験前で忙しく、ゲームをしている＿＿＿ではない。",
+        "o": [
+          "かねる",
+          "どころ",
+          "がたい",
+          "こと"
+        ],
+        "a": 1,
+        "explain": "Pola tetap: kata benda + どころではない = \"bukan saatnya untuk...\"."
+      }
+    ]
+  },
+  {
+    "id": "n2-19",
+    "bab": 19,
+    "level": "n2",
+    "title": "Penilaian & Sudut Pandang",
+    "desc": "Menilai dari sudut pandang tertentu.",
+    "icon": "👁️",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Penilaian & Sudut Pandang",
+        "body": "<p>Di bab ini kamu belajar <b>menilai sesuatu secara relatif<\/b> — bukan menilai secara mutlak, melainkan selalu dibandingkan dengan suatu patokan: umur, harga, jabatan, atau sudut pandang orang tertentu. Keenam pola di bab ini semuanya menjawab pertanyaan \"dibandingkan dengan apa?\".<\/p><p>Dua pola yang paling sering tertukar di JLPT adalah <b>わりに<\/b> dan <b>にしては<\/b>. Keduanya bisa diterjemahkan \"untuk ukuran...\", tapi titik berangkatnya beda. <b>わりに<\/b> berangkat dari <b>perkiraan berdasarkan skala<\/b> (umur, harga, jumlah) lalu kenyataannya meleset dari perkiraan itu — sering bernada kejutan, bisa positif maupun negatif. <b>にしては<\/b> berangkat dari <b>standar yang wajar untuk suatu kategori<\/b> (一流ホテル, 学生, プロ) lalu menilai apakah pantas atau tidak. Jebakan umum: memakai わりに untuk kategori — \"一流ホテルのわりに\" terdengar janggal; yang tepat adalah にしては.<\/p><p><b>だけのことはある<\/b> justru kebalikannya: hasilnya <b>sesuai<\/b> dengan pengorbanan atau reputasinya — \"pantas saja...\". Dipakai untuk mengakui bahwa sesuatu memang sepadan: 高いだけのことはある (pantas mahal, memang enak). Jangan tertukar dengan わりに yang justru menekankan ketidaksesuaian antara perkiraan dan kenyataan.<\/p><p>Tiga pola terakhir soal <b>sudut pandang<\/b>. <b>として<\/b> berarti dalam kedudukan atau peran yang dijalani (医者として = sebagai dokter). <b>にとって<\/b> berarti dari kacamata pihak tertentu — pihak yang merasakan dampaknya (子供にとって = bagi anak-anak). <b>にしたら・にすれば・にしてみれば<\/b> berarti membayangkan diri menjadi orang itu (\"kalau jadi dia...\"). Jebakan: として vs にとって — として menekankan peran yang dijalankan, にとって menekankan siapa yang terdampak.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Penilaian & Sudut Pandang",
+        "items": [
+          {
+            "jp": "評価",
+            "kj": "評価",
+            "r": "hyouka",
+            "id": "penilaian; evaluasi",
+            "note": "評価が高い = penilaiannya tinggi"
+          },
+          {
+            "jp": "視点",
+            "kj": "視点",
+            "r": "shiten",
+            "id": "sudut pandang",
+            "note": "視点を変える = mengubah sudut pandang"
+          },
+          {
+            "jp": "立場",
+            "kj": "立場",
+            "r": "tachiba",
+            "id": "kedudukan; posisi",
+            "note": "立場が違う = posisinya berbeda"
+          },
+          {
+            "jp": "観点",
+            "kj": "観点",
+            "r": "kanten",
+            "id": "sudut pandang (formal)",
+            "note": "経済的な観点から = dari sudut pandang ekonomi"
+          },
+          {
+            "jp": "基準",
+            "kj": "基準",
+            "r": "kijun",
+            "id": "standar; patokan",
+            "note": "基準を満たす = memenuhi standar"
+          },
+          {
+            "jp": "割に",
+            "kj": "割に",
+            "r": "wari ni",
+            "id": "padahal...; untuk ukuran...",
+            "note": "値段の割に = untuk ukuran harganya"
+          },
+          {
+            "jp": "相応",
+            "kj": "相応",
+            "r": "souou",
+            "id": "sepadan; pantas",
+            "note": "年相応の = sesuai dengan umur"
+          },
+          {
+            "jp": "見合う",
+            "kj": "見合う",
+            "r": "miau",
+            "id": "sepadan; sebanding",
+            "note": "努力に見合う結果 = hasil yang sepadan dengan usaha"
+          },
+          {
+            "jp": "主観",
+            "kj": "主観",
+            "r": "shukan",
+            "id": "subjektif",
+            "note": "主観的な意見 = pendapat subjektif"
+          },
+          {
+            "jp": "客観",
+            "kj": "客観",
+            "r": "kyakkan",
+            "id": "objektif",
+            "note": "客観的に見る = melihat secara objektif"
+          },
+          {
+            "jp": "偏見",
+            "kj": "偏見",
+            "r": "henken",
+            "id": "prasangka",
+            "note": "偏見を持つ = punya prasangka"
+          },
+          {
+            "jp": "先入観",
+            "kj": "先入観",
+            "r": "sennyuukan",
+            "id": "prasangka awal",
+            "note": "先入観を捨てる = membuang prasangka"
+          },
+          {
+            "jp": "比較",
+            "kj": "比較",
+            "r": "hikaku",
+            "id": "perbandingan",
+            "note": "比較にならない = tidak bisa dibandingkan"
+          },
+          {
+            "jp": "対照的",
+            "kj": "対照的",
+            "r": "taishouteki",
+            "id": "kontras",
+            "note": "対照的な結果 = hasil yang kontras"
+          },
+          {
+            "jp": "納得",
+            "kj": "納得",
+            "r": "nattoku",
+            "id": "menerima; maklum",
+            "note": "納得がいく = bisa diterima akal"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Penilaian & Sudut Pandang",
+        "items": [
+          {
+            "pattern": "kata benda の / kata kerja / kata sifat bentuk biasa + わりに（は）",
+            "arti": "padahal... tapi... / untuk ukuran...",
+            "explain": "Menyatakan bahwa kenyataannya <b>berbeda dari tingkat yang diperkirakan<\/b> berdasarkan suatu patokan. Menempel pada kata yang punya rentang makna atau tingkat (umur, harga, khawatir, muda, dan sebagainya). Setelahnya muncul kalimat penilaian yang tidak sesuai dengan perkiraan.",
+            "tabel": [
+              {
+                "k": "〜わりに（は）",
+                "v": "padahal... tapi... / untuk ukuran..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "このお菓子は値段のわりには量が少ない。",
+                "rd": "このおかしはねだんのわりにはりょうがすくない。",
+                "id": "Kue ini, untuk ukuran harganya, isinya sedikit."
+              },
+              {
+                "jp": "この料理は安い材料で簡単にできるわりには豪華に見える。",
+                "rd": "このりょうりはやすいざいりょうでかんたんにできるわりにはごうかにみえる。",
+                "id": "Masakan ini padahal dibuat dari bahan murah dengan mudah, tapi kelihatan mewah."
+              },
+              {
+                "jp": "ゆき子さんは若いわりにしっかりしている。",
+                "rd": "ゆきこさんはわかいわりにしっかりしている。",
+                "id": "Yukiko padahal masih muda, tapi sudah bisa diandalkan."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda / kalimat bentuk biasa + にしては",
+            "arti": "untuk ukuran... / padahal...",
+            "explain": "Menyatakan bahwa sesuatu <b>di luar dugaan<\/b> jika dilihat dari suatu fakta atau standar. Berbeda dengan 「わりに」, pola ini menempel pada hal yang <b>spesifik dan pasti<\/b> (bulan Februari, 1.000 yen, dibuat anak-anak, dan sebagainya). Setelahnya muncul kalimat penilaian yang berbeda dari perkiraan.",
+            "tabel": [
+              {
+                "k": "〜にしては",
+                "v": "untuk ukuran... / padahal..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "今日は2月にしては暖かかった。",
+                "rd": "きょうはにがつにしてはあたたかかった。",
+                "id": "Hari ini, untuk ukuran bulan Februari, hangat."
+              },
+              {
+                "jp": "このかばんは、1,000円にしては丈夫で、デザインもいい。",
+                "rd": "このかばんは、せんえんにしてはじょうぶで、デザインもいい。",
+                "id": "Tas ini, untuk ukuran harga 1.000 yen, kuat dan desainnya juga bagus."
+              },
+              {
+                "jp": "このケーキ、子供が作ったにしてはおいしくできていますね。",
+                "rd": "このケーキ、こどもがつくったにしてはおいしくできていますね。",
+                "id": "Kue ini, padahal dibuat anak-anak, jadinya enak ya."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda / kalimat bentuk biasa + だけ（のこと）はある",
+            "arti": "pantas saja... / maklum...",
+            "explain": "Menyatakan bahwa kenyataannya <b>sesuai dengan yang diharapkan<\/b> dari suatu syarat atau kondisi. Setelahnya muncul kalimat yang menyatakan <b>penilaian tinggi<\/b>. Tidak boleh dipakai dengan kalimat yang menyatakan masa depan atau tebakan. Jebakan: kata benda bentuk 「だ」 tidak bisa disambung.",
+            "tabel": [
+              {
+                "k": "〜だけ（のこと）はある / 〜だけあって",
+                "v": "pantas saja... / maklum..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "素晴らしいマンションだ。家賃が高いだけのことはある。",
+                "rd": "すばらしいマンションだ。やちんがたかいだけのことはある。",
+                "id": "Apartemennya luar biasa. Pantas saja uang sewanya mahal."
+              },
+              {
+                "jp": "彼は10年も日本に住んでいるだけあって、日本のことをよく知っている。",
+                "rd": "かれはじゅうねんもにほんにすんでいるだけあって、にほんのことをよくしっている。",
+                "id": "Maklum dia sudah 10 tahun tinggal di Jepang, dia tahu banyak soal Jepang."
+              },
+              {
+                "jp": "さすがオリンピックだけあって、見事な試合が見られた。",
+                "rd": "さすがオリンピックだけあって、みごとなしあいがみられた。",
+                "id": "Maklum Olimpiade, bisa menyaksikan pertandingan yang hebat."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + として",
+            "arti": "sebagai... / dalam kedudukan...",
+            "explain": "Menyatakan <b>kedudukan, kualifikasi, peran, atau nama<\/b> saat melakukan sesuatu atau berada dalam suatu keadaan. Setelahnya muncul kata kerja yang menyatakan perbuatan atau keadaan, kata yang memberi nilai (terkenal, dan sebagainya), atau kata yang menyatakan penilaian (sudah sewajarnya, memalukan, dan sebagainya).",
+            "tabel": [
+              {
+                "k": "kata benda + として",
+                "v": "sebagai... / dalam kedudukan..."
+              },
+              {
+                "k": "〜としても",
+                "v": "sekalipun sebagai... / kalaupun..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "彼は選手を引退した後、コーチとしてチームのために働いた。",
+                "rd": "かれはせんしゅをいんたいしたあと、コーチとしてチームのためにはたらいた。",
+                "id": "Setelah pensiun sebagai pemain, dia bekerja untuk tim sebagai pelatih."
+              },
+              {
+                "jp": "コーヒーはもともと薬として飲まれていた。",
+                "rd": "コーヒーはもともとくすりとしてのまれていた。",
+                "id": "Kopi pada awalnya diminum sebagai obat."
+              },
+              {
+                "jp": "京都は日本の歴史的な古い町として知られている。",
+                "rd": "きょうとはにほんのれきしてきなふるいまちとしてしられている。",
+                "id": "Kyoto dikenal sebagai kota tua yang bersejarah di Jepang."
+              },
+              {
+                "jp": "子供の安全に気をつけることは親として当然だ。",
+                "rd": "こどものあんぜんにきをつけることはおやとしてとうぜんだ。",
+                "id": "Memperhatikan keselamatan anak adalah hal yang wajar sebagai orang tua."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + にとって",
+            "arti": "bagi... / menurut...",
+            "explain": "Menyatakan <b>penilaian dari sudut pandang<\/b> seseorang (\"di antara berbagai cara pandang, menurut... bisa dikatakan...\"). Kebanyakan menempel pada kata benda yang menyatakan <b>orang<\/b>. Setelahnya muncul kalimat yang menyatakan bagaimana orang itu menilai — kebanyakan kalimat kata sifat. Kalimat yang menyatakan perbuatan tidak dipakai.",
+            "tabel": [
+              {
+                "k": "kata benda (orang) + にとって",
+                "v": "bagi... / menurut..."
+              },
+              {
+                "k": "〜にとっては",
+                "v": "bagi... (penekanan)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "今のわたしにとって一番大切なのは家族です。",
+                "rd": "いまのわたしにとっていちばんだいせつなのはかぞくです。",
+                "id": "Bagi saya saat ini, yang paling penting adalah keluarga."
+              },
+              {
+                "jp": "現代人にとってパソコンはなくてはならない道具である。",
+                "rd": "げんだいじんにとってパソコンはなくてはならないどうぐである。",
+                "id": "Bagi manusia modern, komputer adalah alat yang tidak bisa tidak ada."
+              },
+              {
+                "jp": "この小石はほかの人にとっては普通の石ですが、わたしにとっては宝物なのです。",
+                "rd": "このこいしはほかのひとにとってはふつうのいしですが、わたしにとってはたからものなのです。",
+                "id": "Kerikil ini bagi orang lain hanyalah batu biasa, tapi bagi saya ini harta karun."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + にしたら / にすれば / にしてみれば / にしても",
+            "arti": "kalau jadi dia... / dari sudut pandangnya...",
+            "explain": "Artinya <b>\"kalau menempatkan diri pada posisi...\"<\/b> atau <b>\"dilihat dari sudut pandang...\"<\/b>. Biasanya menempel pada kata yang menyatakan <b>orang selain pembicara<\/b>. Setelahnya muncul kalimat yang menebak perasaan orang itu dari sudut pandangnya.",
+            "tabel": [
+              {
+                "k": "〜にしたら / 〜にすれば",
+                "v": "kalau jadi... / dari sudut pandang..."
+              },
+              {
+                "k": "〜にしてみれば",
+                "v": "kalau mencoba jadi..."
+              },
+              {
+                "k": "〜にしても",
+                "v": "bagi... pun / sekalipun..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "君もいろいろ言われて面倒だろうが、君のお母さんにしたら、君のことが心配なんだよ。",
+                "rd": "きみもいろいろいわれてめんどうだろうが、きみのおかあさんにしたら、きみのことがしんぱいなんだよ。",
+                "id": "Kamu mungkin risih dibilangin macam-macam, tapi kalau jadi ibumu, dia mengkhawatirkanmu."
+              },
+              {
+                "jp": "たばこを吸う人にすれば、たばこの害についての話題は避けたいだろうと思う。",
+                "rd": "たばこをすうひとにすれば、たばこのがいについてのわだいはさけたいだろうとおもう。",
+                "id": "Kalau jadi perokok, kurasa mereka ingin menghindari topik soal bahaya rokok."
+              },
+              {
+                "jp": "新しい高速道路ができて便利になったが、沿線の住民にしてみれば、あまりありがたくはないかもしれない。",
+                "rd": "あたらしいこうそくどうろができてべんりになったが、えんせんのじゅうみんにしてみれば、あまりありがたくはないかもしれない。",
+                "id": "Jalan tol baru memang bikin praktis, tapi kalau jadi warga di sepanjang jalannya, mungkin tidak terlalu berterima kasih."
+              },
+              {
+                "jp": "わたしは早く家を出たい。両親にしても息子には自立してほしいと思っているようだ。",
+                "rd": "わたしははやくいえをでたい。りょうしんにしてもむすこにはじりつしてほしいとおもっているようだ。",
+                "id": "Aku ingin cepat keluar dari rumah. Orang tuaku pun sepertinya ingin anaknya mandiri."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 19",
+        "items": [
+          {
+            "ch": "評",
+            "kun": "—",
+            "on": "ヒョウ",
+            "id": "menilai",
+            "note": "評価 (ひょうか) = penilaian"
+          },
+          {
+            "ch": "価",
+            "kun": "あたい",
+            "on": "カ",
+            "id": "harga; nilai",
+            "note": "価値 (かち) = nilai; harga"
+          },
+          {
+            "ch": "視",
+            "kun": "みる",
+            "on": "シ",
+            "id": "melihat",
+            "note": "視点 (してん) = sudut pandang"
+          },
+          {
+            "ch": "観",
+            "kun": "みる",
+            "on": "カン",
+            "id": "pandangan",
+            "note": "観点 (かんてん) = sudut pandang"
+          },
+          {
+            "ch": "割",
+            "kun": "わる・さく",
+            "on": "カツ",
+            "id": "membagi",
+            "note": "割に (わりに) = padahal..."
+          },
+          {
+            "ch": "応",
+            "kun": "こたえる",
+            "on": "オウ",
+            "id": "merespons; sesuai",
+            "note": "相応 (そうおう) = sepadan"
+          },
+          {
+            "ch": "偏",
+            "kun": "かたよる",
+            "on": "ヘン",
+            "id": "condong",
+            "note": "偏見 (へんけん) = prasangka"
+          },
+          {
+            "ch": "比",
+            "kun": "くらべる",
+            "on": "ヒ",
+            "id": "membandingkan",
+            "note": "比較 (ひかく) = perbandingan"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "新人の田中さん、仕事が早いね。",
+            "id": "Tanaka si karyawan baru kerjanya cepat ya."
+          },
+          {
+            "sp": "B",
+            "jp": "うん、入社一年目のわりにはしっかりしているよ。",
+            "id": "Iya, padahal baru setahun masuk tapi sudah bisa diandalkan."
+          },
+          {
+            "sp": "A",
+            "jp": "一流大学出身にしては、謙虚だよね。",
+            "id": "Untuk ukuran lulusan universitas top, dia rendah hati ya."
+          },
+          {
+            "sp": "B",
+            "jp": "さすが一流大学だけのことはあるね。プレゼンも上手だった。",
+            "id": "Pantas saja lulusan universitas top. Presentasinya juga bagus."
+          },
+          {
+            "sp": "A",
+            "jp": "田中さんの立場にしてみれば、プレッシャーも大きいだろうね。",
+            "id": "Kalau jadi Tanaka, tekanannya pasti besar ya."
+          },
+          {
+            "sp": "B",
+            "jp": "うん。でも上司として、もっとフォローしてあげないと。",
+            "id": "Iya. Tapi sebagai atasan, aku harus lebih mendampinginya."
+          },
+          {
+            "sp": "A",
+            "jp": "新人にとって、この職場はどう映っているのかな。",
+            "id": "Bagi karyawan baru, tempat kerja ini terlihat seperti apa ya."
+          },
+          {
+            "sp": "B",
+            "jp": "厳しいわりに、みんな親切だって言ってたよ。",
+            "id": "Katanya, padahal ketat tapi semua orang baik."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "彼はまだ入社一年目の___、仕事が早くて助かる。",
+        "o": [
+          "わりには",
+          "にしては",
+          "だけのことはある",
+          "にとって"
+        ],
+        "a": 0,
+        "explain": "入社一年目 adalah skala/perkiraan (baru setahun) tapi kenyataannya meleset → わりに."
+      },
+      {
+        "q": "一流ホテルの___、部屋が汚くてがっかりした。",
+        "o": [
+          "わりには",
+          "にしては",
+          "だけあって",
+          "として"
+        ],
+        "a": 1,
+        "explain": "一流ホテル adalah kategori dengan standar yang wajar → にしては."
+      },
+      {
+        "q": "さすが高級レストラン___、料理はどれも絶品だ。",
+        "o": [
+          "わりには",
+          "にしては",
+          "だけのことはある",
+          "にしたら"
+        ],
+        "a": 2,
+        "explain": "Hasil sesuai dengan reputasi/harganya → だけのことはある."
+      },
+      {
+        "q": "彼は医者___、患者一人一人に丁寧に接している。",
+        "o": [
+          "にとって",
+          "として",
+          "にしたら",
+          "わりに"
+        ],
+        "a": 1,
+        "explain": "Dalam kedudukan/peran sebagai dokter → として."
+      },
+      {
+        "q": "この映画は子供___、少し難しすぎるかもしれない。",
+        "o": [
+          "として",
+          "にしたら",
+          "にとって",
+          "にしては"
+        ],
+        "a": 2,
+        "explain": "Dari kacamata anak-anak sebagai pihak yang terdampak → にとって."
+      },
+      {
+        "q": "親の___、子供の将来が心配でならない。",
+        "o": [
+          "にしたら",
+          "わりに",
+          "として",
+          "にとって"
+        ],
+        "a": 0,
+        "explain": "Membayangkan diri menjadi orang tua → にしたら."
+      },
+      {
+        "q": "「安いわりに美味しい」と最も意味が近いのはどれか。",
+        "o": [
+          "安いから美味しい",
+          "高いだけあって美味しい",
+          "安いので美味しくない",
+          "安いのに美味しい"
+        ],
+        "a": 3,
+        "explain": "わりに = padahal... tapi... (kenyataan meleset dari perkiraan)."
+      },
+      {
+        "q": "彼はプロの___、ミスが多すぎる。",
+        "o": [
+          "わりには",
+          "にしては",
+          "だけのことはあって",
+          "にとって"
+        ],
+        "a": 1,
+        "explain": "プロ adalah kategori dengan standar yang wajar → にしては."
+      },
+      {
+        "q": "彼の___、この決定は納得できないだろう。",
+        "o": [
+          "にしたら",
+          "わりに",
+          "として",
+          "にとって"
+        ],
+        "a": 0,
+        "explain": "Membayangkan menjadi dia → にしたら."
+      },
+      {
+        "q": "「として」と「にとって」の使い分けとして正しいのはどれか。",
+        "o": [
+          "両者は完全に同じ意味で交換可能",
+          "「として」は「にとって」の丁寧な言い方",
+          "「にとって」は目上の人にしか使えない",
+          "「医者として」は役割、「子供にとって」は影響を受ける側の視点"
+        ],
+        "a": 3,
+        "explain": "として = kedudukan/peran yang dijalani; にとって = sudut pandang pihak yang terdampak."
+      }
+    ]
+  },
+  {
+    "id": "n2-20",
+    "bab": 20,
+    "level": "n2",
+    "title": "Hasil Akhir",
+    "desc": "Menyatakan bagaimana akhirnya sesuatu terjadi.",
+    "icon": "🏁",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Hasil Akhir",
+        "body": "<p>Bab ini mengumpulkan pola-pola untuk menceritakan <b>bagaimana akhirnya sesuatu terjadi<\/b> — hasil akhir dari rangkaian peristiwa, rencana yang batal, atau kejadian yang nyaris terjadi. Semuanya menjawab pertanyaan \"ujung-ujungnya bagaimana?\".<\/p><p>Pasangan yang paling sering diujikan adalah <b>あげく<\/b> dan <b>末に<\/b>. Keduanya berarti \"setelah... akhirnya...\", tapi <b>あげく<\/b> hampir selalu berkonotasi <b>negatif atau mengecewakan<\/b> — setelah bersusah payah, hasilnya buruk atau sia-sia. <b>末に<\/b> lebih <b>netral dan formal<\/b>, sering dipakai untuk hasil setelah pertimbangan atau proses panjang, dan hasilnya bisa baik. Jebakan JLPT: kalimat dengan hasil positif hampir tidak pernah memakai あげく.<\/p><p><b>たきり<\/b> berarti \"sejak... tidak... lagi\" — menyatakan kontak atau keadaan yang <b>terputus<\/b> sejak suatu kejadian. Jangan tertukar dengan ばかり yang berarti \"baru saja\". <b>たところ<\/b> berarti \"ternyata... begitu dicoba\" — hasil tak terduga saat mencoba sesuatu. Sementara <b>ところだった<\/b> berarti \"<b>hampir saja<\/b>\" — sesuatu nyaris terjadi tapi tidak jadi. Perhatikan: ところだった memakai bentuk kamus atau bentuk negatif, bukan bentuk ta.<\/p><p><b>ずじまいだ<\/b> berarti \"ujung-ujungnya tidak jadi\" — rencana atau harapan yang <b>batal<\/b> terlaksana. Menempel pada bentuk negatif: 行かずじまいだ = ujung-ujungnya tidak jadi pergi. Jebakan umum: ずじまい selalu tentang hal yang <b>tidak<\/b> terjadi, jadi jangan pasangkan dengan hasil yang positif.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Hasil Akhir",
+        "items": [
+          {
+            "jp": "結果",
+            "kj": "結果",
+            "r": "kekka",
+            "id": "hasil",
+            "note": "結果を出す = membuahkan hasil"
+          },
+          {
+            "jp": "挙句",
+            "kj": "挙句",
+            "r": "ageku",
+            "id": "ujung-ujungnya",
+            "note": "挙句の果てに = pada akhirnya"
+          },
+          {
+            "jp": "末",
+            "kj": "末",
+            "r": "sue",
+            "id": "akhir",
+            "note": "議論の末に = setelah diskusi panjang"
+          },
+          {
+            "jp": "収拾",
+            "kj": "収拾",
+            "r": "shuushuu",
+            "id": "penyelesaian; pemberesan",
+            "note": "収拾がつかない = tidak bisa dibereskan"
+          },
+          {
+            "jp": "決着",
+            "kj": "決着",
+            "r": "ketchaku",
+            "id": "keputusan akhir",
+            "note": "決着をつける = mengambil keputusan akhir"
+          },
+          {
+            "jp": "破談",
+            "kj": "破談",
+            "r": "hadan",
+            "id": "batal (rencana)",
+            "note": "話が破談になる = rencana batal"
+          },
+          {
+            "jp": "頓挫",
+            "kj": "頓挫",
+            "r": "tonza",
+            "id": "macet; gagal di tengah jalan",
+            "note": "計画が頓挫する = rencana macet"
+          },
+          {
+            "jp": "水の泡",
+            "kj": "水の泡",
+            "r": "mizu no awa",
+            "id": "sia-sia",
+            "note": "努力が水の泡になる = usaha jadi sia-sia"
+          },
+          {
+            "jp": "骨折り損",
+            "kj": "骨折り損",
+            "r": "honeorizon",
+            "id": "usaha yang sia-sia",
+            "note": "骨折り損になる = jerih payahnya sia-sia"
+          },
+          {
+            "jp": "徒労",
+            "kj": "徒労",
+            "r": "torou",
+            "id": "jerih payah yang sia-sia",
+            "note": "徒労に終わる = berakhir sia-sia"
+          },
+          {
+            "jp": "危機一髪",
+            "kj": "危機一髪",
+            "r": "kikiippatsu",
+            "id": "nyaris celaka",
+            "note": "危機一髪で助かる = selamat di saat kritis"
+          },
+          {
+            "jp": "間一髪",
+            "kj": "間一髪",
+            "r": "kan'ippatsu",
+            "id": "selisih tipis",
+            "note": "間一髪のところで = di saat yang nyaris"
+          },
+          {
+            "jp": "音信不通",
+            "kj": "音信不通",
+            "r": "onshin futsuu",
+            "id": "putus kontak",
+            "note": "音信不通になる = putus kontak"
+          },
+          {
+            "jp": "きり",
+            "kj": "きり",
+            "r": "kiri",
+            "id": "sejak... (terputus)",
+            "note": "あれきり = sejak saat itu"
+          },
+          {
+            "jp": "ずじまい",
+            "kj": "ずじまい",
+            "r": "zujimai",
+            "id": "ujung-ujungnya tidak jadi",
+            "note": "言わずじまい = ujung-ujungnya tidak jadi bilang"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Hasil Akhir",
+        "items": [
+          {
+            "pattern": "kata kerja bentuk ta + ところ",
+            "arti": "ternyata... / begitu dicoba...",
+            "explain": "Dipakai untuk menceritakan <b>satu kejadian di masa lalu<\/b>: \"begitu mencoba..., ternyata hasilnya...\". Setelahnya muncul kalimat yang menyatakan hasil. Dibanding 「〜たら…た」, pola ini lebih menekankan pada <b>\"bagaimana hasilnya\"<\/b>.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk ta + ところ",
+                "v": "ternyata... / begitu dicoba..."
+              },
+              {
+                "k": "〜てみたところ",
+                "v": "begitu dicoba, ternyata..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "2、3日休みたいと課長に相談したところ、2週間休んでもいいと言われた。",
+                "rd": "に、さんにちやすみたいとかちょうにそうだんしたところ、にしゅうかんやすんでもいいといわれた。",
+                "id": "Begitu berkonsultasi ke kepala seksi ingin cuti 2-3 hari, ternyata dibilang boleh cuti 2 minggu."
+              },
+              {
+                "jp": "連絡がとれないのでリーさんのうちへ行ってみたところ、病気で寝ていた。",
+                "rd": "れんらくがとれないのでリーさんのうちへいってみたところ、びょうきでねていた。",
+                "id": "Karena tidak bisa dihubungi, kucoba datang ke rumah Lee, ternyata dia sedang sakit dan berbaring."
+              },
+              {
+                "jp": "この新聞を使ってもいいかどうか聞いてみたところ、80%の人が「使いたい」と答えた。",
+                "rd": "このしんぶんをつかってもいいかどうかきいてみたところ、はちじゅっぱーせんとのひとが「つかいたい」とこたえた。",
+                "id": "Begitu kutanyakan boleh tidak memakai koran ini, ternyata 80% orang menjawab \"ingin memakai\"."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk ta + きり",
+            "arti": "sejak... tidak... lagi",
+            "explain": "Menyatakan bahwa <b>setelah suatu perbuatan, keadaan itu terus berlanjut<\/b> sampai sekarang. Setelahnya muncul kalimat yang menyatakan bahwa hal yang diperkirakan terjadi berikutnya ternyata tidak terjadi — kebanyakan kalimat negatif. Ungkapan 「それきり」 adalah idiom yang artinya \"sejak itu\".",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk ta + きり",
+                "v": "sejak... (tidak... lagi)"
+              },
+              {
+                "k": "それきり",
+                "v": "sejak itu (idiom)"
+              },
+              {
+                "k": "〜たきり（例：寝たきり）",
+                "v": "terus dalam keadaan... (mis. terbaring terus)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "その本は、子供のころ読んだきり、その後一度も読んでいない。",
+                "rd": "そのほんは、こどものころよんだきり、そのごいちどもよんでいない。",
+                "id": "Buku itu, sejak kubaca waktu kecil, tidak pernah kubaca lagi setelahnya."
+              },
+              {
+                "jp": "父は朝、出かけたきりなんです。まだ戻ってきていません。",
+                "rd": "ちちはあさ、でかけたきりなんです。まだもどってきていません。",
+                "id": "Ayah sejak pergi pagi tadi belum kembali. Sampai sekarang belum pulang."
+              },
+              {
+                "jp": "日本は長寿国だが、寝たきりの老人の数も多い。",
+                "rd": "にほんはちょうじゅこくだが、ねたきりのろうじんのかずもおおい。",
+                "id": "Jepang memang negara berumur panjang, tapi jumlah lansia yang terbaring terus juga banyak."
+              },
+              {
+                "jp": "彼に最後に会ったのは卒業式の時です。それきり、一度も会っていません。",
+                "rd": "かれにさいごにあったのはそつぎょうしきのときです。それきり、いちどもあっていません。",
+                "id": "Terakhir bertemu dia saat wisuda. Sejak itu, tidak pernah bertemu lagi."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda の / kata kerja bentuk ta + あげく",
+            "arti": "setelah... ujung-ujungnya...",
+            "explain": "Menyatakan bahwa <b>setelah melalui berbagai hal, akhirnya<\/b> berujung pada suatu hasil. Menempel pada kalimat yang menyatakan keadaan sulit yang berlanjut. Setelahnya kebanyakan berupa hasil yang <b>mengecewakan<\/b> — hasil baik jarang muncul.",
+            "tabel": [
+              {
+                "k": "kata benda の / kata kerja bentuk ta + あげく",
+                "v": "setelah... ujung-ujungnya..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "5時間に及ぶ議論のあげく、結局、結論が出なかった。",
+                "rd": "ごじかんにおよぶぎろんのあげく、けっきょく、けつろんがでなかった。",
+                "id": "Setelah diskusi 5 jam lamanya, ujung-ujungnya tidak ada kesimpulan juga."
+              },
+              {
+                "jp": "いろいろ文句を言ったあげく、その客は何も買わずに帰った。",
+                "rd": "いろいろもんくをいったあげく、そのきゃくはなにもかわずにかえった。",
+                "id": "Setelah protes macam-macam, pelanggan itu ujung-ujungnya pulang tanpa membeli apa-apa."
+              },
+              {
+                "jp": "さんざん悩んだあげく、国へ帰ることにした。",
+                "rd": "さんざんなやんだあげく、くにへかえることにした。",
+                "id": "Setelah galau berat, akhirnya kuputuskan pulang ke negara."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda の / kata kerja bentuk ta + 末（に）",
+            "arti": "setelah... akhirnya...",
+            "explain": "Menyatakan bahwa <b>setelah melalui berbagai hal, akhirnya<\/b> sampai pada suatu hasil. Menempel pada kalimat yang menyatakan keadaan sulit yang berlanjut. Setelahnya muncul kalimat yang menyatakan <b>kesudahan atau keputusan<\/b>. Berbeda dengan 「あげく」, hasilnya tidak harus mengecewakan.",
+            "tabel": [
+              {
+                "k": "kata benda の / kata kerja bentuk ta + 末（に）",
+                "v": "setelah... akhirnya..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "数回におよぶ議論の末、Aの案を採用することにした。",
+                "rd": "すうかいにおよぶぎろんのすえ、エーのあんをさいようすることにした。",
+                "id": "Setelah beberapa kali diskusi, akhirnya diputuskan memakai usulan A."
+              },
+              {
+                "jp": "長い戦いの末、ついに勝利を勝ち取った。",
+                "rd": "ながいたたかいのすえ、ついにしょうりをかちとった。",
+                "id": "Setelah perjuangan panjang, akhirnya kemenangan direbut."
+              },
+              {
+                "jp": "悩んだ末に、手術を受けようと決めた。",
+                "rd": "なやんだすえに、しゅじゅつをうけようときめた。",
+                "id": "Setelah bergumul, akhirnya kuputuskan untuk menjalani operasi."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk kamus / bentuk negatif + ところだった",
+            "arti": "hampir saja... / nyaris...",
+            "explain": "Menyatakan <b>sudah selangkah lagi<\/b> akan menjadi suatu keadaan, tapi <b>kenyataannya tidak jadi<\/b>. Sering dipakai bersama kata keterangan seperti 「うっかり」 (tanpa sadar) atau 「危うく」 (nyaris) untuk menyatakan situasi buruk yang hampir terjadi — tapi bisa juga untuk situasi baik yang nyaris tercapai. Tidak cocok dipakai untuk fenomena alam atau hal yang memang tidak bisa dihindari.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + ところだった",
+                "v": "hampir saja..."
+              },
+              {
+                "k": "kata kerja bentuk negatif + ところだった",
+                "v": "nyaris tidak..."
+              },
+              {
+                "k": "危うく〜ところだった",
+                "v": "nyaris... (situasi buruk)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "あ、今日は15日か。うっかり約束を忘れるところだった。",
+                "rd": "あ、きょうはじゅうごにちか。うっかりやくそくをわすれるところだった。",
+                "id": "Ah, hari ini tanggal 15 ya. Tanpa sadar hampir saja lupa janji."
+              },
+              {
+                "jp": "気をつけてくださいよ。気がつくのが遅かったら火事になるところでしたよ。",
+                "rd": "きをつけてくださいよ。きがつくのがおそかったらかじになるところでしたよ。",
+                "id": "Hati-hati ya. Kalau terlambat sadar, hampir saja kebakaran lho."
+              },
+              {
+                "jp": "朝寝坊して、危うく試験が受けられないところだった。",
+                "rd": "あさねぼうして、あやうくしけんがうけられないところだった。",
+                "id": "Bangun kesiangan, nyaris tidak bisa ikut ujian."
+              },
+              {
+                "jp": "ああ、残念だ。もう少しで100点取れるところだったのに、97点だった。",
+                "rd": "ああ、ざんねんだ。もうすこしでひゃくてんとれるところだったのに、きゅうじゅうななてんだった。",
+                "id": "Ah, sayang sekali. Sedikit lagi dapat 100, tapi malah 97."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk negatif + ずじまいだ",
+            "arti": "ujung-ujungnya tidak... / batal...",
+            "explain": "Menyatakan <b>sudah berniat melakukan sesuatu tapi akhirnya tidak jadi<\/b> — berakhir tanpa dilakukan. Keseluruhan kalimat mengandung rasa <b>menyesal karena melewatkan kesempatan<\/b>. Kebanyakan berupa kalimat lampau, dan tidak dipakai saat masih ada kesempatan.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk negatif + ずじまいだ",
+                "v": "ujung-ujungnya tidak... / batal..."
+              }
+            ],
+            "examples": [
+              {
+                "jp": "いろんな人に聞いてみたが、結局田中さんの連絡先はわからずじまいだった。",
+                "rd": "いろんなひとにきいてみたが、けっきょくたなかさんのれんらくさきはわからずじまいだった。",
+                "id": "Sudah tanya ke banyak orang, tapi ujung-ujungnya kontak Tanaka tetap tidak ketahuan."
+              },
+              {
+                "jp": "彼女にラブレターを書いたけれど、勇気がなくて出せずじまいだった。",
+                "rd": "かのじょにラブレターをかいたけれど、ゆうきがなくてだせずじまいだった。",
+                "id": "Sudah menulis surat cinta untuknya, tapi karena tidak berani, ujung-ujungnya tidak terkirim."
+              },
+              {
+                "jp": "留学中に旅行したかったが、忙しくてどこへも行かずじまいで帰国した。",
+                "rd": "りゅうがくちゅうにりょこうしたかったが、いそがしくてどこへもいかずじまできこくした。",
+                "id": "Selama belajar di luar negeri ingin jalan-jalan, tapi karena sibuk, ujung-ujungnya pulang ke negara tanpa pergi ke mana-mana."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 20",
+        "items": [
+          {
+            "ch": "末",
+            "kun": "すえ",
+            "on": "マツ",
+            "id": "akhir",
+            "note": "週末 (しゅうまつ) = akhir pekan"
+          },
+          {
+            "ch": "挙",
+            "kun": "あげる",
+            "on": "キョ",
+            "id": "mengangkat",
+            "note": "挙句 (あげく) = ujung-ujungnya"
+          },
+          {
+            "ch": "果",
+            "kun": "はたす",
+            "on": "カ",
+            "id": "buah; hasil",
+            "note": "結果 (けっか) = hasil"
+          },
+          {
+            "ch": "収",
+            "kun": "おさめる",
+            "on": "シュウ",
+            "id": "memungut; merapikan",
+            "note": "収拾 (しゅうしゅう) = pemberesan"
+          },
+          {
+            "ch": "決",
+            "kun": "きめる",
+            "on": "ケツ",
+            "id": "memutuskan",
+            "note": "決着 (けっちゃく) = keputusan akhir"
+          },
+          {
+            "ch": "破",
+            "kun": "やぶる",
+            "on": "ハ",
+            "id": "merusak; membatalkan",
+            "note": "破談 (はだん) = batal"
+          },
+          {
+            "ch": "危",
+            "kun": "あぶない・あやうい",
+            "on": "キ",
+            "id": "berbahaya",
+            "note": "危機 (きき) = krisis"
+          },
+          {
+            "ch": "徒",
+            "kun": "いたずら",
+            "on": "ト",
+            "id": "sia-sia",
+            "note": "徒労 (とろう) = jerih payah sia-sia"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "週末の旅行、どうだった？",
+            "id": "Gimana liburan akhir pekannya?"
+          },
+          {
+            "sp": "B",
+            "jp": "それが、台風で中止になっちゃって。楽しみにしてたのに、行かずじまいだったよ。",
+            "id": "Malah batal gara-gara topan. Padahal sudah dinanti-nanti, ujung-ujungnya nggak jadi pergi."
+          },
+          {
+            "sp": "A",
+            "jp": "残念だったね。ホテルはキャンセルできたの？",
+            "id": "Sayang ya. Hotelnya bisa di-cancel?"
+          },
+          {
+            "sp": "B",
+            "jp": "うん。でも、予約したところ、キャンセル料がかかるって言われてさ。",
+            "id": "Bisa. Tapi begitu aku coba (tanya), ternyata kena biaya cancel."
+          },
+          {
+            "sp": "A",
+            "jp": "え、それは痛いね。危うく飛行機まで予約するところだったんでしょ？",
+            "id": "Wah, nyesek tuh. Kamu hampir aja sampai booking pesawat kan?"
+          },
+          {
+            "sp": "B",
+            "jp": "そうなんだ。あげく、高いキャンセル料を払うはめになって。",
+            "id": "Iya. Ujung-ujungnya malah harus bayar biaya cancel yang mahal."
+          },
+          {
+            "sp": "A",
+            "jp": "散々だったね。友達とはそれきり連絡取ってないの？",
+            "id": "Apes banget ya. Terus sama teman-temanmu sejak itu nggak kontak lagi?"
+          },
+          {
+            "sp": "B",
+            "jp": "いや、来月に延期することになった。長い相談の末、みんなの都合が合ったんだ。",
+            "id": "Nggak, diundur ke bulan depan. Setelah diskusi panjang, akhirnya jadwal semua orang cocok."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "長い会議の___、結局何も決まらなかった。",
+        "o": [
+          "あげく",
+          "末に",
+          "きり",
+          "ところ"
+        ],
+        "a": 0,
+        "explain": "Hasil negatif/mengecewakan setelah proses panjang → あげく."
+      },
+      {
+        "q": "彼は留学して___、一度も帰国していない。",
+        "o": [
+          "あげく",
+          "きり",
+          "末",
+          "ところ"
+        ],
+        "a": 1,
+        "explain": "Sejak berangkat留学, tidak pernah pulang lagi (terputus) → きり."
+      },
+      {
+        "q": "駅前の店に入った___、閉まっていた。",
+        "o": [
+          "きり",
+          "あげく",
+          "ところ",
+          "末に"
+        ],
+        "a": 2,
+        "explain": "Begitu mencoba masuk, ternyata tutup → たところ."
+      },
+      {
+        "q": "危うく車にひかれる___だった。",
+        "o": [
+          "ところ",
+          "きり",
+          "あげく",
+          "ずじまい"
+        ],
+        "a": 0,
+        "explain": "Nyaris tertabrak tapi tidak jadi → ところだった."
+      },
+      {
+        "q": "計画は立てたものの、忙しくて実行され___だった。",
+        "o": [
+          "きり",
+          "ところ",
+          "ずじまい",
+          "あげく"
+        ],
+        "a": 2,
+        "explain": "実行されずじまい = ujung-ujungnya tidak dilaksanakan → ずじまい."
+      },
+      {
+        "q": "長い議論の___、新案が採用されることになった。",
+        "o": [
+          "末に",
+          "あげくに",
+          "きりに",
+          "ところに"
+        ],
+        "a": 0,
+        "explain": "Hasil netral/positif setelah proses panjang, gaya formal → 末に."
+      },
+      {
+        "q": "「出かけたきり、帰ってこない」と最も意味が近いのはどれか。",
+        "o": [
+          "出かけてすぐ帰ってきた",
+          "出かける予定だった",
+          "出かけたばかりだ",
+          "出かけてから帰ってこない"
+        ],
+        "a": 3,
+        "explain": "きり = sejak... tidak... lagi."
+      },
+      {
+        "q": "あと少しで電車に乗り遅れる___だった。",
+        "o": [
+          "きり",
+          "あげく",
+          "ところ",
+          "末"
+        ],
+        "a": 2,
+        "explain": "Hampir ketinggalan kereta → ところだった."
+      },
+      {
+        "q": "さんざん迷った___、結局最初の案に戻った。",
+        "o": [
+          "末",
+          "きり",
+          "ところ",
+          "あげく"
+        ],
+        "a": 3,
+        "explain": "Setelah ragu-ragu, hasilnya sia-sia/mengecewakan → あげく."
+      },
+      {
+        "q": "「あげく」と「末に」の違いとして正しいのはどれか。",
+        "o": [
+          "両者は意味も使い方も完全に同じ",
+          "末には否定的な結果にしか使えない",
+          "あげくは良い結果にしか使えない",
+          "あげくは結果が否定的な場合に使うことが多く、末には中立的で改まった言い方"
+        ],
+        "a": 3,
+        "explain": "あげく ≈ negatif/menyesal; 末に ≈ netral dan formal."
+      }
+    ]
+  },
+  {
+    "id": "n2-21",
+    "bab": 21,
+    "level": "n2",
+    "title": "Penegasan & Pelembutan",
+    "desc": "Menguatkan atau melembutkan pernyataan.",
+    "icon": "🔊",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Penegasan & Pelembutan",
+        "body": "<p>Bab ini berisi pola-pola <b>retorika<\/b> untuk menguatkan atau melembutkan pernyataan — cara berbicara yang membuat bahasa Jepangmu terdengar dewasa dan natural, bukan sekadar benar secara tata bahasa.<\/p><p><b>ぐらい・くらい<\/b> dipakai untuk <b>meremehkan tingkat kesulitan atau jumlah<\/b>: \"cuma... saja\" — bisa melembutkan (こんな簡単な問題ぐらい = soal semudah ini saja) atau menekankan bahwa sesuatu itu sepele. <b>など・なんか・なんて<\/b> lebih tajam: <b>merendahkan nilai<\/b> sesuatu atau seseorang (\"barang seperti... saja\", \"sekelas... saja\") — sering bernada menyindir atau meremehkan, jadi hati-hati memakainya kepada orang lain.<\/p><p><b>まで・までして<\/b> berarti \"<b>bahkan sampai...<\/b>\" — menunjukkan tingkat yang ekstrem. Bedanya dengan てでも: <b>まで<\/b> menyatakan <b>fakta<\/b> yang ekstrem (寝る時間を削ってまで勉強した = belajar sampai mengorbankan waktu tidur), sedangkan <b>てでも<\/b> menyatakan <b>kesediaan berkorban<\/b> (\"meski harus... pun rela\": 命を捨ててでも = meski harus membuang nyawa pun). Jebakan: まで melekat pada kata benda atau bentuk-te, てでも hanya pada bentuk-te.<\/p><p><b>として<\/b> yang diikuti kalimat negatif berarti \"<b>tidak satu pun...<\/b>\" — penegasan angka nol (一度として = belum pernah sekali pun). <b>さえ<\/b> punya dua wajah: (1) \"<b>bahkan<\/b>\" untuk penegasan (子供さえ知っている = bahkan anak-anak pun tahu), dan (2) \"<b>asalkan<\/b>\" untuk syarat minimal (水さえあれば = asal ada air). Jebakan JLPT: tentukan dari konteks — kalau kalimatnya pernyataan biasa, biasanya bermakna \"bahkan\"; kalau bentuknya syarat, biasanya \"asalkan\".<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Penegasan & Pelembutan",
+        "items": [
+          {
+            "jp": "程度",
+            "kj": "程度",
+            "r": "teido",
+            "id": "kadar; tingkat",
+            "note": "この程度なら = kalau sekadar ini"
+          },
+          {
+            "jp": "軽視",
+            "kj": "軽視",
+            "r": "keishi",
+            "id": "meremehkan",
+            "note": "軽視できない = tidak bisa diremehkan"
+          },
+          {
+            "jp": "侮る",
+            "kj": "侮る",
+            "r": "anadoru",
+            "id": "meremehkan; menghina",
+            "note": "侮れない相手 = lawan yang tak bisa diremehkan"
+          },
+          {
+            "jp": "見下す",
+            "kj": "見下す",
+            "r": "mikudasu",
+            "id": "memandang rendah",
+            "note": "人を見下す = memandang rendah orang"
+          },
+          {
+            "jp": "卑下",
+            "kj": "卑下",
+            "r": "hige",
+            "id": "merendahkan diri",
+            "note": "自分を卑下する = merendahkan diri sendiri"
+          },
+          {
+            "jp": "謙遜",
+            "kj": "謙遜",
+            "r": "kenson",
+            "id": "rendah hati",
+            "note": "謙遜する = bersikap rendah hati"
+          },
+          {
+            "jp": "過言",
+            "kj": "過言",
+            "r": "kagon",
+            "id": "berlebihan (ucapan)",
+            "note": "過言ではない = tidak berlebihan"
+          },
+          {
+            "jp": "誇張",
+            "kj": "誇張",
+            "r": "kochou",
+            "id": "melebih-lebihkan",
+            "note": "誇張して言う = bilang secara berlebihan"
+          },
+          {
+            "jp": "強調",
+            "kj": "強調",
+            "r": "kyouchou",
+            "id": "penekanan",
+            "note": "強調する = menekankan"
+          },
+          {
+            "jp": "緩和",
+            "kj": "緩和",
+            "r": "kanwa",
+            "id": "pelonggaran; pelembutan",
+            "note": "表現を緩和する = melembutkan ungkapan"
+          },
+          {
+            "jp": "婉曲",
+            "kj": "婉曲",
+            "r": "enkyoku",
+            "id": "tidak langsung; halus",
+            "note": "婉曲な言い方 = cara bicara yang halus"
+          },
+          {
+            "jp": "遠回し",
+            "kj": "遠回し",
+            "r": "toomawashi",
+            "id": "berputar-putar (bicara)",
+            "note": "遠回しに言う = bilang secara tidak langsung"
+          },
+          {
+            "jp": "犠牲",
+            "kj": "犠牲",
+            "r": "gisei",
+            "id": "pengorbanan",
+            "note": "犠牲を払う = berkorban"
+          },
+          {
+            "jp": "覚悟",
+            "kj": "覚悟",
+            "r": "kakugo",
+            "id": "tekad; kesiapan",
+            "note": "覚悟を決める = membulatkan tekad"
+          },
+          {
+            "jp": "極端",
+            "kj": "極端",
+            "r": "kyokutan",
+            "id": "ekstrem",
+            "note": "極端な例 = contoh yang ekstrem"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Penegasan & Pelembutan",
+        "items": [
+          {
+            "pattern": "kata benda / kata kerja bentuk biasa / kata sifat bentuk biasa + ぐらい・くらい",
+            "arti": "sekadar…; cuma…; hal sekecil… saja",
+            "explain": "Pola ini dipakai ketika pembicara menilai sesuatu itu ringan, sepele, atau hanya tingkat minimum — maknanya 'cuma segini saja'. Cara sambungnya: kata benda, kata kerja bentuk biasa, kata sifat-i bentuk biasa, dan kata sifat-na (tetap な) ditambah ぐらい atau くらい. Perhatikan jebakannya: untuk kata benda, ぐらい dipakai lebih sering daripada くらい. Pola ini menegaskan penilaian subjektif pembicara bahwa tingkatannya rendah, bukan sekadar menyatakan jumlah.",
+            "tabel": [
+              {
+                "k": "kata benda + ぐらい",
+                "v": "lebih sering dipakai untuk kata benda"
+              },
+              {
+                "k": "kata kerja / kata sifat bentuk biasa + ぐらい・くらい",
+                "v": "untuk kata kerja dan kata sifat"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "うちに帰ってきたら、自分の靴ぐらいちゃんと並べなさい。",
+                "rd": "うちにかえってきたら、じぶんのくつぐらいちゃんとならべなさい。",
+                "id": "Kalau sudah pulang ke rumah, rapikanlah sepatumu sendiri — hal sekecil itu saja."
+              },
+              {
+                "jp": "この携帯電話は、ちょっとぐらいならぬれても大丈夫です。",
+                "rd": "このけいたいでんわは、ちょっとぐらいならぬれてもだいじょうぶです。",
+                "id": "Sedikit basah saja, ponsel ini masih aman."
+              },
+              {
+                "jp": "少し話したくらいで、その人がどんな人かはわからないだろう。",
+                "rd": "すこしはなしたくらいで、そのひとがどんなひとかはわからないだろう。",
+                "id": "Cuma dengan ngobrol sebentar saja, kamu tidak akan tahu orang seperti apa dia."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda (+ partikel) + など・なんか・なんて",
+            "arti": "…(yang) tidak ada harganya; sekelas… saja",
+            "explain": "Dipakai ketika pembicara merendahkan nilai sesuatu — artinya 'barang sekelas … tidak ada artinya' atau 'hal seperti … tidak penting'. Cara sambungnya: kata benda (bisa disertai partikel) ditambah など・なんか・なんて; なんか dan なんて adalah versi santai untuk percakapan sehari-hari. Jebakannya: setelah pola ini biasanya muncul kalimat yang bernada negatif, atau kalimat yang berisi keinginan atau nasihat pembicara.",
+            "tabel": [
+              {
+                "k": "など",
+                "v": "bentuk standar / netral"
+              },
+              {
+                "k": "なんか・なんて",
+                "v": "bentuk santai untuk percakapan lisan"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "あの人の言ったことなど気にすることはありません。",
+                "rd": "あのひとのいったことなどきにすることはありません。",
+                "id": "Tidak perlu memedulikan perkataan orang seperti dia."
+              },
+              {
+                "jp": "新聞記者になんかならなければよかった。仕事がきつすぎる。",
+                "rd": "しんぶんきしゃになんかならなければよかった。しごとがきつすぎる。",
+                "id": "Seharusnya dulu aku tidak jadi wartawan. Pekerjaannya terlalu berat."
+              },
+              {
+                "jp": "桜井さんは文章がとてもうまい。わたしなんて簡単な文もちゃんと書けないのに。",
+                "rd": "さくらいさんはぶんしょうがとてもうまい。わたしなんてかんたんなぶんもちゃんとかいけないのに。",
+                "id": "Sakurai sangat pandai menulis. Padahal aku ini, kalimat sederhana saja tidak bisa menulis dengan benar."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda (+ partikel) + まで・までして; kata kerja bentuk-te + まで",
+            "arti": "bahkan… sampai…",
+            "explain": "Pola ini menempel pada contoh yang ekstrem dan di luar dugaan — maknanya 'bahkan sampai …'. Cara sambungnya: kata benda (bisa dengan partikel) ditambah まで atau までして, atau kata kerja bentuk-te ditambah まで. Jebakannya: までして dan てまで menunjukkan cara atau keadaan yang membuat pembicara heran, kesal, atau menyayangkan — jadi kalimat keseluruhannya bernada kritik, keraguan, atau keterkejutan.",
+            "tabel": [
+              {
+                "k": "kata benda + まで",
+                "v": "'bahkan … pun' — menekankan contoh yang ekstrem"
+              },
+              {
+                "k": "kata benda + までして / kata kerja bentuk-te + まで",
+                "v": "'sampai … pun' — menekankan cara/keadaan yang mengejutkan"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "一番に賛成してくれると思っていた母までわたしの結婚に反対した。",
+                "rd": "いちばんにさんせいしてくれるとおもっていたははまでわたしのけっこんにはんたいした。",
+                "id": "Bahkan ibuku — yang kukira akan paling mendukung — malah menentang pernikahanku."
+              },
+              {
+                "jp": "カンニングまでしていい点を取りたかったのですか。",
+                "rd": "カンニングまでしていいてんをとりたかったのですか。",
+                "id": "Apa kamu sampai ingin mencontek hanya demi nilai bagus?"
+              },
+              {
+                "jp": "遊園地では、みんな長い時間並んでまでジェットコースターに乗りたがる。",
+                "rd": "ゆうえんちでは、みんなながいじかんならんでまでジェットコースターにのりたがる。",
+                "id": "Di taman hiburan, orang-orang rela antre berjam-jam hanya untuk naik roller coaster."
+              },
+              {
+                "jp": "家族や友人を悲しませるようなことをしてまで成功したいとは思わない。",
+                "rd": "かぞくやゆうじんをかなしませるようなことをしてまでせいこうしたいとはおもわない。",
+                "id": "Aku tidak ingin sukses sampai membuat keluarga dan temanku bersedih."
+              }
+            ]
+          },
+          {
+            "pattern": "(何・だれ +) satu + kata bantu bilangan + として + kalimat negatif",
+            "arti": "tidak ada satu pun…; belum pernah sekali pun…",
+            "explain": "Pola ini dipakai untuk menegaskan 'tidak ada sama sekali' dengan cara menempel pada satuan terkecil: 'satu + kata bantu bilangan' — misalnya 一人 (satu orang), 一つ (satu buah), 一度 (satu kali). Cara sambungnya: (何・だれ +) 一 + kata bantu bilangan + として, lalu kalimatnya selalu negatif. Jadi pola ini seperti berkata 'bahkan satu pun tidak …'.",
+            "tabel": [
+              {
+                "k": "だれ一人として〜ない",
+                "v": "tidak ada satu orang pun yang …"
+              },
+              {
+                "k": "何一つとして〜ない",
+                "v": "tidak ada satu pun yang …"
+              },
+              {
+                "k": "一度として〜ない",
+                "v": "belum pernah sekali pun …"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "彼の提案にだれ一人として反対できなかった。",
+                "rd": "かれのていあんにだれひとりとしてはんたいできなかった。",
+                "id": "Tidak satu pun orang yang berani menentang usulnya."
+              },
+              {
+                "jp": "人生に無駄なものは何一つとしてない。失敗も必ず何かの役に立つはずだ。",
+                "rd": "じんせいにむだなものはなにひとつとしてない。しっぱいもかならずなにかのやくにたつはずだ。",
+                "id": "Dalam hidup, tidak ada yang sia-sia. Kegagalan pun pasti berguna untuk sesuatu."
+              },
+              {
+                "jp": "彼女はこれまで一度として練習を休んだことはない。",
+                "rd": "かのじょはこれまでいちどとしてれんしゅうをやすんだことはない。",
+                "id": "Sampai sekarang dia belum pernah sekali pun absen latihan."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda (+ partikel) + さえ",
+            "arti": "(A) bahkan… pun; (B) asalkan…",
+            "explain": "Pola ini punya dua makna. Makna A: menempel pada contoh yang ekstrem dan mengejutkan — 'kalau yang seperti … saja begitu, apalagi yang lain'. Perhatikan jebakannya: setelah makna A tidak boleh muncul kalimat yang berisi keinginan atau ajakan pembicara. Bentuk でさえ artinya であっても, dipakai misalnya menggantikan partikel が. Makna B: 'さえ〜ば/〜なら/〜たら' menunjukkan syarat minimum — 'asalkan … terpenuhi, yang lain tidak masalah'.",
+            "tabel": [
+              {
+                "k": "kata benda + さえ (makna A)",
+                "v": "'bahkan … pun' — contoh yang ekstrem"
+              },
+              {
+                "k": "kata benda + さえ〜ば/〜なら/〜たら (makna B)",
+                "v": "'asalkan …' — syarat minimum"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "日本に来たばかりのときは、ひらがなさえ読めなかった。",
+                "rd": "にほんにきたばかりのときは、ひらがなさえよめなかった。",
+                "id": "Waktu baru tiba di Jepang, hiragana saja aku tidak bisa baca."
+              },
+              {
+                "jp": "仕事がとても忙しいときは、会社に泊まることさえある。",
+                "rd": "しごとがとてもいそがしいときは、かいしゃにとまることさえある。",
+                "id": "Saat pekerjaan sangat sibuk, sampai menginap di kantor pun pernah."
+              },
+              {
+                "jp": "この料理は簡単だ。料理の苦手なわたしでさえ失敗しなかった。",
+                "rd": "このりょうりはかんたんだ。りょうりのにがてなわたしでさえしっぱいしなかった。",
+                "id": "Masakan ini mudah. Aku yang tidak bisa masak saja tidak gagal."
+              },
+              {
+                "jp": "自分さえ良ければ、ほかの人のことはどうでもいいのか。",
+                "rd": "じぶんさえよければ、ほかのひとのことはどうでもいいのか。",
+                "id": "Asalkan diri sendiri baik-baik saja, orang lain terserah — begitu maksudmu?"
+              },
+              {
+                "jp": "雨さえ降らなければ、ハイキングに出かけられますね。",
+                "rd": "あめさえふらなければ、ハイキングにでかけられますね。",
+                "id": "Asalkan tidak hujan, kita bisa pergi hiking, ya."
+              },
+              {
+                "jp": "年をとっても体さえ丈夫なら、ほかに望むことはない。",
+                "rd": "としをとってもからださえじょうぶなら、ほかにのぞむことはない。",
+                "id": "Walau sudah tua, asalkan badan tetap sehat, aku tidak menginginkan apa-apa lagi."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk-te + でも",
+            "arti": "meski harus… pun; rela sampai…",
+            "explain": "Dipakai ketika pembicara sudah bertekad memakai cara yang biasanya tidak dilakukan — maknanya 'meski harus … pun' atau 'rela sampai …'. Cara sambungnya: kata kerja bentuk-te ditambah でも, dengan kata kerja yang menunjukkan cara yang ekstrem. Perhatikan: setelah pola ini biasanya muncul kalimat yang berisi harapan atau niat kuat pembicara.",
+            "tabel": null,
+            "examples": [
+              {
+                "jp": "娘が家に帰りたくないと言ったら、引っ張ってでも連れて帰ろう。",
+                "rd": "むすめがいえにかえりたくないといったら、ひっぱってでもつれてかえろう。",
+                "id": "Kalau putriku bilang tidak mau pulang, akan kubawa pulang meski harus kuseret."
+              },
+              {
+                "jp": "熱があるが、大切な約束があるので、どんなことをしてでも行かなければならない。",
+                "rd": "ねつがあるが、たいせつなやくそくがあるので、どんなことをしてでもいかなければならない。",
+                "id": "Aku sedang demam, tapi karena ada janji penting, aku harus pergi dengan cara apa pun."
+              },
+              {
+                "jp": "2倍の金額を払ってでもそのコンサートのチケットが欲しい。",
+                "rd": "2ばいのきんがくをはらってでもそのコンサートのチケットがほしい。",
+                "id": "Aku ingin tiket konser itu meski harus membayar dua kali lipat."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 21",
+        "items": [
+          {
+            "ch": "程",
+            "kun": "ほど",
+            "on": "テイ",
+            "id": "kadar",
+            "note": "程度 (ていど) = kadar"
+          },
+          {
+            "ch": "軽",
+            "kun": "かるい",
+            "on": "ケイ",
+            "id": "ringan",
+            "note": "軽視 (けいし) = meremehkan"
+          },
+          {
+            "ch": "侮",
+            "kun": "あなどる",
+            "on": "ブ",
+            "id": "menghina",
+            "note": "侮る (あなどる) = meremehkan"
+          },
+          {
+            "ch": "謙",
+            "kun": "—",
+            "on": "ケン",
+            "id": "rendah hati",
+            "note": "謙遜 (けんそん) = rendah hati"
+          },
+          {
+            "ch": "誇",
+            "kun": "ほこる",
+            "on": "コ",
+            "id": "bangga; melebihkan",
+            "note": "誇張 (こちょう) = melebih-lebihkan"
+          },
+          {
+            "ch": "強",
+            "kun": "つよい",
+            "on": "キョウ",
+            "id": "kuat",
+            "note": "強調 (きょうちょう) = penekanan"
+          },
+          {
+            "ch": "緩",
+            "kun": "ゆるい",
+            "on": "カン",
+            "id": "longgar",
+            "note": "緩和 (かんわ) = pelonggaran"
+          },
+          {
+            "ch": "犠",
+            "kun": "—",
+            "on": "ギ",
+            "id": "korban",
+            "note": "犠牲 (ぎせい) = pengorbanan"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "この企画書、君が一人で作ったの？",
+            "id": "Proposal ini kamu yang bikin sendirian?"
+          },
+          {
+            "sp": "B",
+            "jp": "うん。三日ぐらいで仕上げたよ。",
+            "id": "Iya. Selesai dalam sekitar tiga hari."
+          },
+          {
+            "sp": "A",
+            "jp": "三日ぐらいで？普通は一週間かかるのに。",
+            "id": "Sekitar tiga hari? Padahal biasanya butuh seminggu."
+          },
+          {
+            "sp": "B",
+            "jp": "寝る時間を削ってまで頑張ったからね。",
+            "id": "Soalnya aku berjuang sampai mengorbankan waktu tidur."
+          },
+          {
+            "sp": "A",
+            "jp": "一度として手を抜いたことがないもんね。さすがだよ。",
+            "id": "Belum pernah sekalipun kamu bermalas-malasan. Hebat deh."
+          },
+          {
+            "sp": "B",
+            "jp": "私なんか、まだまだだよ。",
+            "id": "Selevel aku sih masih jauh."
+          },
+          {
+            "sp": "A",
+            "jp": "謙遜するなって。君さえいれば、この企画は成功するよ。",
+            "id": "Jangan merendah gitu. Asalkan ada kamu, proposal ini pasti sukses."
+          },
+          {
+            "sp": "B",
+            "jp": "じゃあ、今日は早く帰ってでも、明日は全力で頑張るよ。",
+            "id": "Kalau gitu, meski harus pulang cepat hari ini, besok aku gaspol."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "こんな簡単な計算___、小学生でもできる。",
+        "o": [
+          "ぐらい",
+          "など",
+          "まで",
+          "さえ"
+        ],
+        "a": 0,
+        "explain": "Meremehkan tingkat kesulitan (\"cuma...\") → ぐらい."
+      },
+      {
+        "q": "子供___に、この問題は難しすぎる。",
+        "o": [
+          "ぐらい",
+          "なんか",
+          "まで",
+          "さえ"
+        ],
+        "a": 1,
+        "explain": "Merendahkan (\"sekelas anak-anak saja\") → なんか."
+      },
+      {
+        "q": "彼は夢のために国を出て___働いている。",
+        "o": [
+          "までして",
+          "ぐらいして",
+          "などして",
+          "さえして"
+        ],
+        "a": 0,
+        "explain": "\"Bahkan sampai meninggalkan negara\" (tingkat ekstrem) → までして."
+      },
+      {
+        "q": "彼は一度___、遅刻したことがない。",
+        "o": [
+          "ぐらい",
+          "など",
+          "として",
+          "さえ"
+        ],
+        "a": 2,
+        "explain": "\"Belum pernah sekali pun\" → として + kalimat negatif."
+      },
+      {
+        "q": "忙しくて、食事をする時間___ない。",
+        "o": [
+          "ぐらい",
+          "など",
+          "まで",
+          "さえ"
+        ],
+        "a": 3,
+        "explain": "\"Bahkan waktu untuk makan pun tidak ada\" → さえ."
+      },
+      {
+        "q": "家族のためなら、命を捨て___戦う覚悟だ。",
+        "o": [
+          "ぐらいでも",
+          "てでも",
+          "などでも",
+          "さえでも"
+        ],
+        "a": 1,
+        "explain": "\"Meski harus membuang nyawa pun\" (rela berkorban) → てでも."
+      },
+      {
+        "q": "「君ぐらいできる」と最も意味が近いのはどれか。",
+        "o": [
+          "君だけができる",
+          "君しかできない",
+          "君にはできない",
+          "君でもできるはずだ"
+        ],
+        "a": 3,
+        "explain": "ぐらい = \"sekelas kamu pun (seharusnya) bisa\"."
+      },
+      {
+        "q": "水___あれば、何日かは生きていける。",
+        "o": [
+          "ぐらい",
+          "など",
+          "さえ",
+          "まで"
+        ],
+        "a": 2,
+        "explain": "\"Asalkan ada air\" (syarat minimal) → さえ."
+      },
+      {
+        "q": "この程度の傷___、病院に行く必要はない。",
+        "o": [
+          "など",
+          "ぐらい",
+          "まで",
+          "さえ"
+        ],
+        "a": 1,
+        "explain": "\"Luka sekecil ini saja\" → ぐらい."
+      },
+      {
+        "q": "「まで」と「てでも」の違いとして正しいのはどれか。",
+        "o": [
+          "「まで」は kata benda saja, 「てでも」は kata sifat saja",
+          "両者は意味も使い方も完全に同じ",
+          "「てでも」は丁寧な言い方で「まで」はくだけた言い方",
+          "「まで」は事実の極端さを表し、「てでも」は犠牲を払ってもいいという覚悟を表す"
+        ],
+        "a": 3,
+        "explain": "まで = fakta yang ekstrem; てでも = kesediaan berkorban."
+      }
+    ]
+  },
+  {
+    "id": "n2-22",
+    "bab": 22,
+    "level": "n2",
+    "title": "Dugaan & Keyakinan",
+    "desc": "Menyatakan dugaan, kekhawatiran, dan keyakinan.",
+    "icon": "🤔",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Dugaan & Keyakinan",
+        "body": "<p>Bab ini menyusun pola-pola dugaan dan keyakinan dalam <b>skala kepastian<\/b>. Dari yang paling lemah: <b>とみえる<\/b> (dugaan berdasarkan apa yang terlihat — \"tampaknya\"), naik ke <b>おそれがある<\/b> dan <b>かねない<\/b> (kekhawatiran akan hal buruk), lalu <b>まい<\/b> (dugaan negatif tentang masa depan), dan puncaknya <b>に違いない<\/b> serta <b>にきまっている<\/b> (keyakinan kuat).<\/p><p><b>かねない<\/b> dan <b>おそれがある<\/b> sama-sama mewaspadai hal buruk, tapi beda ranah. <b>かねない<\/b> menyatakan <b>kecenderungan atau risiko<\/b> (\"bisa-bisa...\") — menempel pada bentuk-masu tanpa ます. <b>おそれがある<\/b> adalah ungkapan <b>formal<\/b> untuk berita, laporan, dan pengumuman resmi. Jebakan penting: <b>かねない bukan bentuk negatif!<\/b> Meski ada ない, artinya justru \"mungkin terjadi\" — kebalikan dari dugaanmu kalau dibaca sekilas.<\/p><p><b>に違いない<\/b> dan <b>にきまっている<\/b> sama-sama \"pasti\", tapi dasarnya beda. <b>に違いない<\/b> adalah <b>keyakinan kuat berdasarkan bukti atau pengamatan<\/b> (証拠から見て、犯人は彼に違いない). <b>にきまっている<\/b> adalah <b>kepastian menurut akal sehat, aturan, atau logika umum<\/b> (努力すれば成功するときまっている). Jebakan JLPT klasik: kalau kalimatnya menyebut bukti atau petunjuk → に違いない; kalau berupa kebenaran umum → にきまっている.<\/p><p><b>とみえる<\/b> mirip ように見える, tapi lebih <b>tertulis dan formal<\/b> — sering muncul di teks bacaan N2. <b>まい<\/b> dipakai untuk <b>niat negatif<\/b> (\"tidak akan...\") atau <b>dugaan negatif<\/b> tentang masa depan (\"mungkin tidak...\"), dan bentuk retoris ではあるまいか berarti \"bukankah...?\".<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Dugaan & Keyakinan",
+        "items": [
+          {
+            "jp": "推測",
+            "kj": "推測",
+            "r": "suisoku",
+            "id": "dugaan",
+            "note": "推測する = menduga"
+          },
+          {
+            "jp": "憶測",
+            "kj": "憶測",
+            "r": "okusoku",
+            "id": "spekulasi",
+            "note": "憶測を呼ぶ = menimbulkan spekulasi"
+          },
+          {
+            "jp": "予感",
+            "kj": "予感",
+            "r": "yokan",
+            "id": "firasat",
+            "note": "嫌な予感がする = punya firasat buruk"
+          },
+          {
+            "jp": "懸念",
+            "kj": "懸念",
+            "r": "kenen",
+            "id": "kekhawatiran",
+            "note": "懸念が広がる = kekhawatiran meluas"
+          },
+          {
+            "jp": "危惧",
+            "kj": "危惧",
+            "r": "kigu",
+            "id": "kekhawatiran",
+            "note": "危惧される = dikhawatirkan"
+          },
+          {
+            "jp": "恐れ",
+            "kj": "恐れ",
+            "r": "osore",
+            "id": "ketakutan; kekhawatiran",
+            "note": "恐れがある = ada kekhawatiran"
+          },
+          {
+            "jp": "確信",
+            "kj": "確信",
+            "r": "kakushin",
+            "id": "keyakinan",
+            "note": "確信を持つ = punya keyakinan"
+          },
+          {
+            "jp": "断定",
+            "kj": "断定",
+            "r": "dantei",
+            "id": "penegasan (kesimpulan)",
+            "note": "断定はできない = tidak bisa memastikan"
+          },
+          {
+            "jp": "断言",
+            "kj": "断言",
+            "r": "dangen",
+            "id": "pernyataan tegas",
+            "note": "断言する = menyatakan dengan tegas"
+          },
+          {
+            "jp": "必然",
+            "kj": "必然",
+            "r": "hitsuzen",
+            "id": "keniscayaan",
+            "note": "必然の結果 = hasil yang niscaya"
+          },
+          {
+            "jp": "不可避",
+            "kj": "不可避",
+            "r": "fukahi",
+            "id": "tak terhindarkan",
+            "note": "不可避な事態 = keadaan yang tak terhindarkan"
+          },
+          {
+            "jp": "見込み",
+            "kj": "見込み",
+            "r": "mikomi",
+            "id": "prospek; perkiraan",
+            "note": "回復の見込み = prospek pemulihan"
+          },
+          {
+            "jp": "見通し",
+            "kj": "見通し",
+            "r": "mitooshi",
+            "id": "prospek",
+            "note": "見通しが暗い = prospeknya suram"
+          },
+          {
+            "jp": "根拠",
+            "kj": "根拠",
+            "r": "konkyo",
+            "id": "dasar; bukti",
+            "note": "根拠がない = tidak berdasar"
+          },
+          {
+            "jp": "気配",
+            "kj": "気配",
+            "r": "kehai",
+            "id": "gelagat; tanda-tanda",
+            "note": "気配を感じる = merasakan gelagat"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Dugaan & Keyakinan",
+        "items": [
+          {
+            "pattern": "kalimat bentuk biasa + とみえる",
+            "arti": "tampaknya…; sepertinya…",
+            "explain": "Dipakai untuk menyampaikan dugaan 'tampaknya …' atau 'sepertinya …' berdasarkan bukti yang dilihat — biasanya setelah mengamati keadaan atau tingkah laku orang lain. Cara sambungnya: kalimat bentuk biasa ditambah とみえる. Perhatikan jebakannya: orang yang menduga tidak ditulis di dalam kalimat; pola ini hanya melaporkan hasil pengamatan pembicara sebagai dasar dugaan.",
+            "tabel": null,
+            "examples": [
+              {
+                "jp": "朝からパチンコに行くなんて、ずいぶん暇だとみえる。",
+                "rd": "あさからパチンコにいくなんて、ずいぶんひまだとみえる。",
+                "id": "Pagi-pagi sudah pergi main pachinko — sepertinya dia sangat senggang."
+              },
+              {
+                "jp": "あまり食べないところを見ると、うちの猫はこのえさは好きではないとみえる。",
+                "rd": "あまりたべないところをみると、うちのねこはこのえさはすきではないとみえる。",
+                "id": "Melihat dia tidak makan banyak, sepertinya kucingku tidak suka makanan ini."
+              },
+              {
+                "jp": "欲しい物はなかったとみえて、客は何も買わずにすぐ店を出てしまった。",
+                "rd": "ほしいものはなかったとみえて、きゃくはなにもかわずにすぐみせをでてしまった。",
+                "id": "Rupanya tidak ada barang yang diinginkan, pelanggan itu langsung keluar dari toko tanpa membeli apa-apa."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk-masu (tanpa ます) + かねない",
+            "arti": "bisa-bisa…; mungkin saja terjadi hal buruk…",
+            "explain": "Maknanya 'bisa-bisa …' — kemungkinan hasil yang buruk akan terjadi kalau keadaan sekarang dibiarkan begitu saja. Cara sambungnya: kata kerja bentuk-masu (tanpa ます) ditambah かねない. Perhatikan: nuansanya mirip 〜おそれがある, tetapi かねない dipakai ketika penyebab hasil buruknya lebih jelas terlihat dari keadaan sekarang.",
+            "tabel": null,
+            "examples": [
+              {
+                "jp": "大事なことはみんなに相談しないと、後で文句を言われかねませんよ。",
+                "rd": "だいじなことはみんなにそうだんしないと、あとでもんくをいわれかねませんよ。",
+                "id": "Kalau hal penting tidak dibicarakan dengan semua orang, bisa-bisa nanti malah dikomplain."
+              },
+              {
+                "jp": "インターネット上では特に個人情報に注意していないと、悪用されかねない。",
+                "rd": "インターネットじょうではとくにこじんじょうほうにちゅういしていないと、あくようされかねない。",
+                "id": "Di internet, kalau tidak berhati-hati dengan data pribadi, bisa-bisa disalahgunakan."
+              },
+              {
+                "jp": "うわさはどんどん変な方向へ発展していきかねない。",
+                "rd": "うわさはどんどんへんなほうこうへはってんしていきかねない。",
+                "id": "Rumor itu bisa-bisa berkembang ke arah yang semakin aneh."
+              }
+            ]
+          },
+          {
+            "pattern": "kata benda + の + おそれがある; kata kerja bentuk kamus / bentuk negatif + おそれがある",
+            "arti": "dikhawatirkan…; ada kemungkinan hal buruk terjadi…",
+            "explain": "Maknanya 'dikhawatirkan …' atau 'ada kemungkinan hal buruk terjadi' — ini adalah ungkapan formal dan baku. Cara sambungnya: kata benda + の + おそれがある, atau kata kerja bentuk kamus / bentuk negatif + おそれがある. Perhatikan: pola ini dipakai di berita, pengumuman, dan penjelasan resmi; untuk percakapan sehari-hari lebih natural memakai かねない atau かもしれない.",
+            "tabel": [
+              {
+                "k": "kata benda + の + おそれがある",
+                "v": "misalnya 大雨のおそれがある (dikhawatirkan hujan lebat)"
+              },
+              {
+                "k": "kata kerja bentuk kamus + おそれがある",
+                "v": "misalnya 広がるおそれがある (dikhawatirkan meluas)"
+              },
+              {
+                "k": "kata kerja bentuk negatif + おそれがある",
+                "v": "misalnya 読み取れないおそれがある (dikhawatirkan tidak terbaca)"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "今夜から明日にかけて東日本で大雨のおそれがあります。",
+                "rd": "こんやからあしたにかけてひがしにほんでおおあめのおそれがあります。",
+                "id": "Dari malam ini hingga besok, wilayah Jepang timur dikhawatirkan dilanda hujan lebat."
+              },
+              {
+                "jp": "「レッドデータブック」には、絶滅のおそれがある動植物について書かれている。",
+                "rd": "「レッドデータブック」には、ぜつめつのおそれがあるどうしょくぶつについてかかれている。",
+                "id": "'Red Data Book' berisi tentang hewan dan tumbuhan yang terancam punah."
+              },
+              {
+                "jp": "機械で読み取れないおそれがあるので、郵便番号ははっきり書いてください。",
+                "rd": "きかいでよみとれないおそれがあるので、ゆうびんばんごうははっきりかいてください。",
+                "id": "Karena dikhawatirkan tidak terbaca mesin, tulislah kode pos dengan jelas."
+              },
+              {
+                "jp": "今後インフルエンザが広い範囲に広がるおそれはないだろう。",
+                "rd": "こんごインフルエンザがひろいはんいにひろがるおそれはないだろう。",
+                "id": "Kemungkinan besar flu tidak akan menyebar ke area yang luas."
+              }
+            ]
+          },
+          {
+            "pattern": "kata kerja bentuk kamus + まい; kalimat biasa + の + ではあるまいか",
+            "arti": "mungkin tidak…; bukankah…?",
+            "explain": "まい artinya 'mungkin tidak …' (〜ないだろう) dan merupakan bahasa tulis yang formal. Cara sambungnya: kata kerja bentuk kamus + まい (khusus: する→するまい atau すまい), kata sifat-i bentuk くある, kata sifat-na dan kata benda bentuk ではある + まい. Perhatikan jebakannya: tidak dipakai dalam bentuk sopan (〜ます) maupun bentuk lampau, dan jarang sekali memakai subjek orang pertama. Bentuk ではあるまいか adalah kalimat tanya yang menyampaikan dugaan atau pendapat pembicara secara tidak langsung dan halus — 'bukankah …?'.",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + まい",
+                "v": "'mungkin tidak …' (khusus: する→するまい・すまい)"
+              },
+              {
+                "k": "kalimat biasa + の + ではあるまいか",
+                "v": "'bukankah …?' — dugaan halus berbentuk tanya"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "何度も計算し直したのだから、間違いはあるまい。",
+                "rd": "なんどもけいさんしなおしたのだから、まちがいはあるまい。",
+                "id": "Karena sudah kuhitung ulang berkali-kali, pasti tidak ada yang salah."
+              },
+              {
+                "jp": "だれも信じてくれまいが、これは本当の話だ。",
+                "rd": "だれもしんじてくれまいが、これはほんとうのはなしだ。",
+                "id": "Mungkin tak seorang pun mau percaya, tapi ini kisah nyata."
+              },
+              {
+                "jp": "あの子はまだ小さいから、一人で行かせては迷子になるまいかと心配だ。",
+                "rd": "あのこはまだちいさいから、ひとりでいかせてはまいごになるまいかとしんぱいだ。",
+                "id": "Aku khawatir, jangan-jangan dia tersesat kalau dibiarkan pergi sendirian karena masih kecil."
+              },
+              {
+                "jp": "田んぼに住む生物が減ったのは、農薬の使いすぎが原因ではあるまいか。",
+                "rd": "たんぼにすむせいぶつがへったのは、のうやくのつかいすぎがげんいんではあるまいか。",
+                "id": "Berkurangnya makhluk hidup di sawah — bukankah penyebabnya penggunaan pestisida yang berlebihan?"
+              },
+              {
+                "jp": "こんなやり方では大勢の人の協力を得るのは無理なのではあるまいか。",
+                "rd": "こんなやりかたではおおぜいのひとのきょうりょくをえるのはむりなのではあるまいか。",
+                "id": "Dengan cara seperti ini, bukankah mustahil mendapatkan kerja sama dari banyak orang?"
+              },
+              {
+                "jp": "このまま何もしないでいたら、いつまでも問題は解決しないのではあるまいか。",
+                "rd": "このままなにもしないでいたら、いつまでももんだいはかいけつしないのではあるまいか。",
+                "id": "Kalau dibiarkan begini tanpa melakukan apa-apa, bukankah masalahnya tidak akan pernah selesai?"
+              }
+            ]
+          },
+          {
+            "pattern": "kalimat bentuk biasa + に違いない・に相違ない",
+            "arti": "pasti…",
+            "explain": "Maknanya 'pasti …' — pembicara yakin karena ada dasar atau bukti yang jelas. Cara sambungnya: kalimat bentuk biasa ditambah に違いない (kata sifat-i dan kata benda bentuk だ berubah menjadi である); に相違ない adalah versi formal/baku dengan arti yang sama. Perhatikan: kadang pola ini tersambung pada bentuk 'kalimat biasa + から', seperti pada contoh keempat.",
+            "tabel": [
+              {
+                "k": "bentuk biasa + に違いない",
+                "v": "'pasti …' — keyakinan yang berdasar bukti"
+              },
+              {
+                "k": "bentuk biasa + に相違ない",
+                "v": "versi formal / baku"
+              }
+            ],
+            "examples": [
+              {
+                "jp": "彼女はおしゃれだから、パーティーにはきっとすてきな服を着てくるに違いない。",
+                "rd": "かのじょはおしゃれだから、パーティーにはきっとすてきなふくをきてくるにちがいない。",
+                "id": "Dia pandai berpenampilan, jadi ke pesta nanti pasti memakai baju yang bagus."
+              },
+              {
+                "jp": "日本に1年住んでいるのだから、彼も少しは生活に慣れたに違いない。",
+                "rd": "にほんに1ねんすんでいるのだから、かれもすこしはせいかつになれたにちがいない。",
+                "id": "Karena sudah setahun tinggal di Jepang, dia pasti sudah agak terbiasa dengan kehidupan di sana."
+              },
+              {
+                "jp": "そんな山の中に住んでいて車もなかったら、生活が不便に違いない。",
+                "rd": "そんなやまのなかにすんでいてくるまもなかったら、せいかつがふべんにちがいない。",
+                "id": "Kalau tinggal di tengah gunung begitu tanpa mobil, hidup pasti tidak nyaman."
+              },
+              {
+                "jp": "彼があれだけ強く主張するのは、何かはっきりした証拠があるからに相違ない。",
+                "rd": "かれがあれだけつよくしゅちょうするのは、なにかはっきりしたしょうこがあるからにそういない。",
+                "id": "Dia bersikeras sedemikian rupa pasti karena ada bukti yang jelas."
+              }
+            ]
+          },
+          {
+            "pattern": "kalimat bentuk biasa + にきまっている",
+            "arti": "sudah pasti…",
+            "explain": "Maknanya 'sudah pasti …' — ungkapan lisan yang santai dan tegas. Cara sambungnya: kalimat bentuk biasa ditambah にきまっている. Perhatikan jebakannya: berbeda dengan に違いない yang berdasar bukti, pola ini lebih subjektif dan intuitif — nuansanya 'siapa pun pasti berpikir begitu', tanpa perlu alasan yang jelas.",
+            "tabel": null,
+            "examples": [
+              {
+                "jp": "あの子の言うことなんかうそにきまっているよ。",
+                "rd": "あのこのいうことなんかうそにきまっているよ。",
+                "id": "Omongan anak itu sudah pasti bohong."
+              },
+              {
+                "jp": "勝手にお父さんの車を使ったりしたら、しかられるにきまっている。",
+                "rd": "かってにおとうさんのくるまをつかったりしたら、しかられるにきまっている。",
+                "id": "Kalau sembarangan memakai mobil ayah, sudah pasti dimarahi."
+              },
+              {
+                "jp": "こんな派手な色のお菓子、体に悪いにきまっています。",
+                "rd": "こんなはでないろのおかし、からだにわるいにきまっています。",
+                "id": "Permen dengan warna semencolok ini sudah pasti tidak baik untuk tubuh."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 22",
+        "items": [
+          {
+            "ch": "推",
+            "kun": "おす",
+            "on": "スイ",
+            "id": "mendorong; menduga",
+            "note": "推測 (すいそく) = dugaan"
+          },
+          {
+            "ch": "測",
+            "kun": "はかる",
+            "on": "ソク",
+            "id": "mengukur",
+            "note": "予測 (よそく) = prediksi"
+          },
+          {
+            "ch": "憶",
+            "kun": "—",
+            "on": "オク",
+            "id": "ingatan",
+            "note": "憶測 (おくそく) = spekulasi"
+          },
+          {
+            "ch": "懸",
+            "kun": "かける",
+            "on": "ケン",
+            "id": "menggantung",
+            "note": "懸念 (けねん) = kekhawatiran"
+          },
+          {
+            "ch": "恐",
+            "kun": "おそれる・こわい",
+            "on": "キョウ",
+            "id": "takut",
+            "note": "恐れ (おそれ) = kekhawatiran"
+          },
+          {
+            "ch": "確",
+            "kun": "たしか・たしかめる",
+            "on": "カク",
+            "id": "pasti",
+            "note": "確信 (かくしん) = keyakinan"
+          },
+          {
+            "ch": "断",
+            "kun": "たつ・ことわる",
+            "on": "ダン",
+            "id": "memutus",
+            "note": "断定 (だんてい) = penegasan"
+          },
+          {
+            "ch": "避",
+            "kun": "さける",
+            "on": "ヒ",
+            "id": "menghindari",
+            "note": "不可避 (ふかひ) = tak terhindarkan"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "田中さん、今日は顔色が悪いね。",
+            "id": "Tanaka, hari ini wajahmu pucat ya."
+          },
+          {
+            "sp": "B",
+            "jp": "うん、昨夜あまり眠れなくて。風邪をひいたとみえる。",
+            "id": "Iya, semalam nggak bisa tidur. Sepertinya masuk angin."
+          },
+          {
+            "sp": "A",
+            "jp": "無理すると、倒れかねないよ。今日は早く帰りなよ。",
+            "id": "Kalau dipaksakan, bisa-bisa kamu roboh lho. Pulang cepat sana hari ini."
+          },
+          {
+            "sp": "B",
+            "jp": "でも、締め切りが明日なんだ。インフルエンザが流行っているから、みんなにうつすおそれもあるし。",
+            "id": "Tapi deadline-nya besok. Lagi musim flu juga, jadi ada kekhawatiran menulari yang lain."
+          },
+          {
+            "sp": "A",
+            "jp": "それならなおさらだよ。君がいないと、この企画は成功しまい。",
+            "id": "Makanya. Kalau kamu nggak ada, proposal ini mungkin nggak akan berhasil."
+          },
+          {
+            "sp": "B",
+            "jp": "そんなこと言わないでよ。休めば治るに違いないから。",
+            "id": "Jangan bilang gitu dong. Kalau istirahat pasti sembuh kok."
+          },
+          {
+            "sp": "A",
+            "jp": "そうだね。無理は禁物だ。休むのが一番にきまっているよ。",
+            "id": "Iya juga. Nggak boleh maksain diri. Sudah pasti istirahat itu yang terbaik."
+          },
+          {
+            "sp": "B",
+            "jp": "わかった。では、お先に失礼します。",
+            "id": "Baiklah. Kalau begitu saya pulang duluan."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "様子から見て、彼は試験に合格したと___。",
+        "o": [
+          "みえる",
+          "ちがいない",
+          "きまっている",
+          "おそれがある"
+        ],
+        "a": 0,
+        "explain": "Dugaan berdasarkan apa yang terlihat → とみえる."
+      },
+      {
+        "q": "このまま無理を続ければ、体を壊し___。",
+        "o": [
+          "まい",
+          "かねない",
+          "ちがいない",
+          "きまっている"
+        ],
+        "a": 1,
+        "explain": "Risiko hal buruk (\"bisa-bisa\") → かねない."
+      },
+      {
+        "q": "台風の影響で、交通機関に乱れが生じる___。",
+        "o": [
+          "かねない",
+          "まい",
+          "おそれがある",
+          "とみえる"
+        ],
+        "a": 2,
+        "explain": "Pengumuman formal ala berita → おそれがある."
+      },
+      {
+        "q": "もう夜遅いから、彼は来___。",
+        "o": [
+          "まい",
+          "かねない",
+          "ちがいない",
+          "きまっている"
+        ],
+        "a": 0,
+        "explain": "Dugaan negatif tentang masa depan (\"mungkin tidak datang\") → まい."
+      },
+      {
+        "q": "調査の結果、事故の原因は整備不良に___。",
+        "o": [
+          "きまっている",
+          "相違ない",
+          "みえる",
+          "まい"
+        ],
+        "a": 1,
+        "explain": "Keyakinan berdasar bukti, gaya formal tertulis → に相違ない."
+      },
+      {
+        "q": "努力すれば必ず成功すると___。",
+        "o": [
+          "ちがいない",
+          "みえる",
+          "きまっている",
+          "おそれがある"
+        ],
+        "a": 2,
+        "explain": "Kepastian menurut logika umum → にきまっている."
+      },
+      {
+        "q": "「遅刻しかねない」と最も意味が近いのはどれか。",
+        "o": [
+          "遅刻する可能性がある",
+          "遅刻しないだろう",
+          "遅刻したくない",
+          "遅刻してはいけない"
+        ],
+        "a": 0,
+        "explain": "かねない = ada risiko hal buruk terjadi; ない di sini bukan negasi!"
+      },
+      {
+        "q": "証拠から考えて、犯人は彼に___。",
+        "o": [
+          "きまっている",
+          "違いない",
+          "みえる",
+          "まい"
+        ],
+        "a": 1,
+        "explain": "Keyakinan kuat berdasarkan bukti → に違いない."
+      },
+      {
+        "q": "こんな時間に電話してくるなんて、何かあったに___。",
+        "o": [
+          "きまっている",
+          "みえる",
+          "違いない",
+          "おそれがある"
+        ],
+        "a": 2,
+        "explain": "Dugaan kuat berdasarkan petunjuk → に違いない."
+      },
+      {
+        "q": "「かねない」の説明として正しいのはどれか。",
+        "o": [
+          "悪いことが起こる可能性を表し、「ない」が付いても否定の意味ではない",
+          "「〜しない」という強い否定を表す",
+          "丁寧な依頼を表す",
+          "過去の後悔を表す"
+        ],
+        "a": 0,
+        "explain": "かねない = \"bisa-bisa terjadi (hal buruk)\"; ない di sini bukan negasi."
+      }
+    ]
+  },
+  {
+    "id": "n2-23",
+    "bab": 23,
+    "level": "n2",
+    "title": "Pendapat & Penegasan",
+    "desc": "Menyatakan kesan, pendapat, dan keharusan.",
+    "icon": "📢",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Pendapat & Penegasan",
+        "body": "<p>Di level N2, menyatakan pendapat tidak cukup dengan 「〜と思います」. Bab ini melatihmu memberi <b>bobot<\/b> pada ujaran: menyatakan kebenaran umum, menilai dengan tegas, membatasi makna, dan menegaskan — semuanya pola favorit soal JLPT.<\/p><p><b>ものだ<\/b> dipakai untuk kebenaran yang berlaku umum ('begitulah kodratnya'): 親は子供を守るものだ. Sementara <b>というものだ<\/b> adalah penilaian tegas dari pembicara, sering bernada kritik: 人の悪口を言うなんて、失礼というものだ ('itu namanya keterlaluan!'). Jangan tertukar: ものだ bicara fakta umum, というものだ bicara penilaianmu.<\/p><p>Dua pola pembatas yang selalu dipasangkan di soal: <b>にすぎない<\/b> ('cuma...; tidak lebih dari...') merendahkan, sedangkan <b>にほかならない<\/b> ('tidak lain adalah...') menegaskan dengan nada formal. Keduanya menempel langsung pada kata benda atau bentuk biasa.<\/p><p>Untuk keharusan ada tiga tingkat: <b>に越したことはない<\/b> ('lebih baik...', pilihan terbaik di antara opsi), <b>しかない・よりほかない<\/b> ('tidak ada jalan lain selain...', よりほかない lebih formal dan tertulis), dan <b>べきだ<\/b> ('seharusnya...', kewajiban moral). Ingat: べきだ bukan perintah langsung — memakainya untuk menyuruh orang lain terdengar menggurui.<\/p><p>Jebakan umum: しかない selalu diakhiri bentuk negatif (行くしかない, bukan 行くしかある); べきだった dipakai untuk menyesali yang tidak dilakukan (聞いておくべきだった); dan ものだ di bab ini (kebenaran umum) beda dengan ものだ nasihat di Bab 24 — bedakan dari konteks kalimatnya.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Pendapat & Penegasan",
+        "items": [
+          {
+            "jp": "主張",
+            "kj": "主張",
+            "r": "shuchou",
+            "id": "pendapat; tuntutan",
+            "note": "自分の主張を通す = mempertahankan pendapat sendiri"
+          },
+          {
+            "jp": "根拠",
+            "kj": "根拠",
+            "r": "konkyo",
+            "id": "dasar; alasan",
+            "note": "根拠を示す = menunjukkan dasar/alasan"
+          },
+          {
+            "jp": "見解",
+            "kj": "見解",
+            "r": "kenkai",
+            "id": "pandangan; pendapat",
+            "note": "見解を述べる = menyampaikan pandangan"
+          },
+          {
+            "jp": "断言",
+            "kj": "断言",
+            "r": "dangen",
+            "id": "pernyataan tegas",
+            "note": "断言する = menyatakan dengan tegas"
+          },
+          {
+            "jp": "説得",
+            "kj": "説得",
+            "r": "settoku",
+            "id": "membujuk; meyakinkan",
+            "note": "相手を説得する = meyakinkan lawan bicara"
+          },
+          {
+            "jp": "納得",
+            "kj": "納得",
+            "r": "nattoku",
+            "id": "mengerti dan menerima",
+            "note": "納得がいく = bisa diterima akal"
+          },
+          {
+            "jp": "賛成",
+            "kj": "賛成",
+            "r": "sansei",
+            "id": "setuju",
+            "note": "提案に賛成する = setuju pada usulan"
+          },
+          {
+            "jp": "反対",
+            "kj": "反対",
+            "r": "hantai",
+            "id": "menentang",
+            "note": "反対意見 = pendapat yang menentang"
+          },
+          {
+            "jp": "責任",
+            "kj": "責任",
+            "r": "sekinin",
+            "id": "tanggung jawab",
+            "note": "責任を取る = bertanggung jawab"
+          },
+          {
+            "jp": "義務",
+            "kj": "義務",
+            "r": "gimu",
+            "id": "kewajiban",
+            "note": "義務を果たす = menunaikan kewajiban"
+          },
+          {
+            "jp": "判断",
+            "kj": "判断",
+            "r": "handan",
+            "id": "penilaian; keputusan",
+            "note": "正しい判断 = penilaian yang benar"
+          },
+          {
+            "jp": "決断",
+            "kj": "決断",
+            "r": "ketsudan",
+            "id": "keputusan tegas",
+            "note": "決断を下す = mengambil keputusan"
+          },
+          {
+            "jp": "本来",
+            "kj": "本来",
+            "r": "honrai",
+            "id": "seharusnya; pada dasarnya",
+            "note": "本来の目的 = tujuan yang sebenarnya"
+          },
+          {
+            "jp": "当然",
+            "kj": "当然",
+            "r": "touzen",
+            "id": "wajar; sudah sepatutnya",
+            "note": "当然のこと = hal yang wajar"
+          },
+          {
+            "jp": "必然",
+            "kj": "必然",
+            "r": "hitsuzen",
+            "id": "keniscayaan; pasti terjadi",
+            "note": "必然の結果 = hasil yang niscaya"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Pendapat & Penegasan",
+        "items": [
+          {
+            "arti": "memang begitu; begitulah kebenarannya",
+            "examples": [
+              {
+                "id": "Walaupun sulit disadari sendiri, setiap orang memang punya kebiasaan buruk.",
+                "jp": "自分では気がつきにくいが、どんな人にもくせがあるものだ。",
+                "rd": "じぶんではきがつきにくいが、どんなひとにもくせがあるものだ。"
+              },
+              {
+                "id": "Pada dasarnya manusia memang tidak bisa hidup sendirian.",
+                "jp": "人間というのは本来一人では生きられないものだ。",
+                "rd": "にんげんというのはほんらいいちにんではいきられないものだ。"
+              },
+              {
+                "id": "Katanya dia karyawan perusahaan besar. Tidak kelihatan begitu. Memang, seseorang tidak bisa dinilai dari penampilan luarnya saja.",
+                "jp": "彼は大会社の社員なのだそうだ。そうは見えなかった。人は外見だけではわからないものだ。",
+                "rd": "かれはだいがいしゃのしゃいんなのだそうだ。そうはみえなかった。ひとはがいけんだけではわからないものだ。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk menyatakan kesan atau penilaian umum tentang hal yang dianggap kebenaran yang berlaku umum — 'ya memang begitulah'. Berbeda dengan べきだ yang bernada kewajiban atau nasihat, ものだ di sini lebih bernada kesan yang diterima umum. Kata kerja memakai bentuk kamus atau bentuk tidak, kata sifat-i bentuk biasa, dan kata sifat-na memakai な. Jebakan dari buku: jangan gunakan bentuk lampau, dan subjeknya harus sesuatu yang bersifat umum (manusia, orang tua, masyarakat) — bukan orang atau kejadian yang spesifik.",
+            "pattern": "kata kerja bentuk kamus / kata kerja bentuk tidak / kata sifat (bentuk biasa) + ものだ",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + ものだ",
+                "v": "kebenaran umum tentang perbuatan"
+              },
+              {
+                "k": "kata kerja bentuk tidak + ものだ",
+                "v": "kebenaran umum tentang perbuatan (bentuk negatif)"
+              },
+              {
+                "k": "kata sifat-i bentuk biasa + ものだ",
+                "v": "kesan umum tentang sifat"
+              },
+              {
+                "k": "kata sifat-na + な + ものだ",
+                "v": "kesan umum tentang sifat"
+              }
+            ]
+          },
+          {
+            "arti": "namanya juga…; sudah jelas…",
+            "examples": [
+              {
+                "id": "Dibilang mengirim paket ke Amerika hari ini juga — namanya juga tidak mungkin.",
+                "jp": "今日中にアメリカまで荷物を届けろと言われても、それは無理というものだ。",
+                "rd": "きょうじゅうにアメリカまでにもつをとどけろといわれても、それはむりというものだ。"
+              },
+              {
+                "id": "Memakai barang orang lain tanpa izin, itu namanya kurang ajar.",
+                "jp": "他人の物を断りもなく使うなんて、あつかましいというものだ。",
+                "rd": "たにんのものをことわりもなくつかうなんて、あつかましいというものだ。"
+              },
+              {
+                "id": "Katanya buku yang diterbitkannya laris. Jerih payahnya memang terbayar sudah.",
+                "jp": "出版した本の評判がいいそうだ。苦労したかいがあったというものだ。",
+                "rd": "しゅっぱんしたほんのひょうばんがいいそうだ。くろうしたかいがあったというものだ。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk menilai suatu situasi secara tegas berdasarkan akal sehat — 'namanya juga begitu'. Kata kerja dan kata sifat-i memakai bentuk biasa, sedangkan kata sifat-na dan kata benda memakai bentuk だ. Jebakan dari buku: pola ini dipakai untuk menilai situasi secara objektif, bukan untuk kata-kata yang mengungkapkan perasaan atau emosi pembicara sendiri.",
+            "pattern": "bentuk biasa + というものだ",
+            "tabel": [
+              {
+                "k": "kata kerja / kata sifat-i bentuk biasa + というものだ",
+                "v": "menilai perbuatan atau sifat secara tegas"
+              },
+              {
+                "k": "kata sifat-na + だ / kata benda + だ + というものだ",
+                "v": "menilai keadaan secara tegas"
+              }
+            ]
+          },
+          {
+            "arti": "hanya…; tidak lebih dari…",
+            "examples": [
+              {
+                "id": "Menurut survei, yang menjawab tidak makan nasi sama sekali hanya 1,2 persen.",
+                "jp": "調査では、お米を全く食べないと答えた人は1.2%にすぎなかった。",
+                "rd": "ちょうさでは、おこめをまったくたべないとこたえたひとは1.2パーセントにすぎなかった。"
+              },
+              {
+                "id": "Saya yang hanya karyawan biasa mana bisa memutuskan soal manajemen perusahaan.",
+                "jp": "一社員にすぎないわたしに、会社の経営のことなど決められない。",
+                "rd": "いちしゃいんにすぎないわたしに、かいしゃのけいえいのことなどきめられない。"
+              },
+              {
+                "id": "Tidak usah berterima kasih. Saya hanya melakukan hal yang sudah sewajarnya.",
+                "jp": "お礼なんてとんでもない。わたしは当たり前のことをしたにすぎません。",
+                "rd": "おれいなんてとんでもない。わたしはあたりまえのことをしたにすぎません。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk merendahkan atau mengecilkan sesuatu — 'hanya segitu saja, tidak lebih'. Kata benda langsung disambung, dan bentuk biasa dipakai untuk kata kerja serta kata sifat. Jebakan dari buku: pola ini menempel pada hal yang dianggap pembicara tidak istimewa, tidak penting, atau jumlahnya sedikit — nadanya merendahkan, bukan menyanjung.",
+            "pattern": "kata benda / bentuk biasa + にすぎない",
+            "tabel": [
+              {
+                "k": "kata benda + にすぎない",
+                "v": "merendahkan status atau jumlah"
+              },
+              {
+                "k": "kata kerja / kata sifat bentuk biasa + にすぎない",
+                "v": "merendahkan perbuatan atau sifat"
+              }
+            ]
+          },
+          {
+            "arti": "tidak lain adalah…",
+            "examples": [
+              {
+                "id": "Yang akan menopang negara ini di masa depan tidak lain adalah kalian, para pemuda.",
+                "jp": "将来この国を支えるのは、若い君たちにほかなりません。",
+                "rd": "しょうらいこのくにをささえるのは、わかいきみたちにほかなりません。"
+              },
+              {
+                "id": "Jangan lupakan bahwa manusia tidak lain adalah bagian dari alam.",
+                "jp": "人間も自然の一部にほかならないということを忘れてはならない。",
+                "rd": "にんげんもしぜんのいちぶにほかならないということをわすれてはならない。"
+              },
+              {
+                "id": "Bisa memberi kesaksian seperti ini, pasti karena yang bersangkutan memang berada di tempat kejadian.",
+                "jp": "このような証言ができるのは、本人が実際に犯行現場にいたからにほかならない。",
+                "rd": "このようなしょうげんができるのは、ほんにんがじっさいにはんこうげんばにいたからにほかならない。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk menyatakan penilaian tegas dari pembicara — 'tidak lain adalah itu'. Termasuk bahasa formal/tertulis, biasanya dipakai untuk menekankan kesimpulan yang tidak bisa dibantah. Kata benda langsung disambung; buku juga mencatat adanya pola bentuk biasa + からにほかならない.",
+            "pattern": "kata benda + にほかならない",
+            "tabel": [
+              {
+                "k": "kata benda + にほかならない",
+                "v": "kesimpulan tegas, bahasa formal"
+              },
+              {
+                "k": "bentuk biasa + からにほかならない",
+                "v": "menegaskan alasan, bahasa formal"
+              }
+            ]
+          },
+          {
+            "arti": "lebih baik…; semakin … semakin baik",
+            "examples": [
+              {
+                "id": "Saya ingin membeli barang berkualitas apa pun harganya, tapi tentu lebih baik kalau bisa beli dengan murah.",
+                "jp": "値段に関係なく質のいいものを買いたいが、安く買えるに越したことはない。",
+                "rd": "ねだんにかんけいなくしつのいいものをかいたいが、やすくかえるにこしたことはない。"
+              },
+              {
+                "id": "Koper untuk perjalanan, semakin ringan semakin baik.",
+                "jp": "旅行の荷物は軽いに越したことはない。",
+                "rd": "りょこうのにもつはかるいにこしたことはない。"
+              },
+              {
+                "id": "Cara memakai peralatan sehari-hari tentu lebih baik yang mudah.",
+                "jp": "ふだん使う道具の使い方は簡単であるに越したことはない。",
+                "rd": "ふだんつかうどうぐのつかいかたはかんたんであるにこしたことはない。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk menyatakan penilaian bahwa 'lebih baik begitu', tapi bukan keharusan mutlak. Kata kerja memakai bentuk kamus, kata sifat-i bentuk biasa, kata sifat-na memakai である. Jebakan dari buku: nadanya 'memang lebih baik kalau begitu' — bukan 'wajib begitu'. Jadi dipakai untuk saran yang santai, bukan perintah.",
+            "pattern": "bentuk biasa sekarang + に越したことはない",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + に越したことはない",
+                "v": "lebih baik melakukan itu"
+              },
+              {
+                "k": "kata sifat-i bentuk biasa + に越したことはない",
+                "v": "lebih baik keadaannya begitu"
+              },
+              {
+                "k": "kata sifat-na / kata benda + である + に越したことはない",
+                "v": "lebih baik sifatnya begitu"
+              }
+            ]
+          },
+          {
+            "arti": "tidak ada jalan lain selain…",
+            "examples": [
+              {
+                "id": "Jalan ini satu arah, jadi walaupun ingin kembali, tidak ada jalan lain selain maju terus.",
+                "jp": "この道は一方通行だから、戻りたくてもまっすぐ行くしかない。",
+                "rd": "このみちはいっぽうつうこうだから、もどりたくてもまっすぐいくしかない。"
+              },
+              {
+                "id": "Kalau rapat sudah memutuskan untuk membatalkan rencana, tidak ada jalan lain selain menerima keputusan ini.",
+                "jp": "会議で企画の中止が決まったなら、この決定を受け入れるよりほかはないでしょう。",
+                "rd": "かいぎできかくのちゅうしがきまったなら、このけっていをうけいれるよりほかないでしょう。"
+              },
+              {
+                "id": "Tas yang sudah lama kuinginkan sedang obral setengah harga. Ini harus kubeli.",
+                "jp": "ずっと欲しかったかばんがセールで半額になっている。これは買うしかない。",
+                "rd": "ずっとほしかったかばんがセールではんがくになっている。これはかうしかない。"
+              }
+            ],
+            "explain": "Pola ini dipakai ketika tidak ada pilihan, kemungkinan, atau cara lain — 'terpaksa harus itu'. Kata kerja memakai bentuk kamus, dan よりほかない lebih formal dibanding しかない. Jebakan dari buku: pola ini mengungkapkan perasaan pembicara yang 'karena tidak ada pilihan lain, ya sudah pilih ini' — tapi bisa juga dipakai dengan perasaan positif yang memilih dengan mantap (seperti contoh membeli tas).",
+            "pattern": "kata kerja bentuk kamus + しかない / よりほかない",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + しかない",
+                "v": "tidak ada pilihan lain (umum)"
+              },
+              {
+                "k": "kata kerja bentuk kamus + よりほかない",
+                "v": "tidak ada pilihan lain (formal)"
+              }
+            ]
+          },
+          {
+            "arti": "seharusnya…; tidak seharusnya…",
+            "examples": [
+              {
+                "id": "Yang bisa dikerjakan hari ini jangan ditunda sampai besok, kerjakan hari ini juga.",
+                "jp": "今日できることは明日に延ばさず今日するべきだ。",
+                "rd": "きょうできることはあしたにのばさずきょうするべきだ。"
+              },
+              {
+                "id": "Kalau sudah tidak bisa bertemu lagi, seharusnya aku menanyakan kontaknya.",
+                "jp": "もう会えないなら、彼の連絡先を聞いておくべきだった。",
+                "rd": "もうあえないなら、かれのれんらくさきをきいておくべきだった。"
+              },
+              {
+                "id": "Mengejar kebahagiaan seluruh rakyat adalah wujud politik yang seharusnya.",
+                "jp": "すべての国民の幸せを目指すのが、政治の本来あるべき姿である。",
+                "rd": "すべてのこくみんのしあわせをめざすのが、せいじのほんらいあるべきすがたである。"
+              },
+              {
+                "id": "Pertanyaan seperti itu tidak seharusnya diajukan kepada orang yang baru pertama kali ditemui.",
+                "jp": "そんな質問は、初めて会った人にすべきではない。",
+                "rd": "そんなしつもんは、はじめてあったひとにすべきではない。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk menyatakan pendapat atau tuntutan pembicara — 'seharusnya dilakukan' atau 'tidak seharusnya dilakukan'. Kata kerja memakai bentuk kamus, dengan pengecualian する menjadi するべき atau すべき. Jebakan dari buku: jangan dipakai untuk hal yang sudah diatur aturan resmi, dan sebaiknya hindari dipakai langsung kepada orang yang lebih tua/dihormati karena terdengar menggurui.",
+            "pattern": "kata kerja bentuk kamus + べきだ / べきではない",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + べきだ",
+                "v": "seharusnya dilakukan"
+              },
+              {
+                "k": "kata kerja bentuk kamus + べきではない",
+                "v": "tidak seharusnya dilakukan"
+              },
+              {
+                "k": "する → するべき・すべき",
+                "v": "pengecualian kata kerja する"
+              },
+              {
+                "k": "kata kerja bentuk kamus + べき + kata benda",
+                "v": "bentuk menerangkan kata benda (姿 yang seharusnya)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 23",
+        "items": [
+          {
+            "ch": "主",
+            "kun": "おも",
+            "on": "シュ",
+            "id": "utama; tuan",
+            "note": "主張 (しゅちょう) = pendapat; tuntutan"
+          },
+          {
+            "ch": "張",
+            "kun": "はる",
+            "on": "チョウ",
+            "id": "meregang; memasang",
+            "note": "主張 (しゅちょう) = pendapat"
+          },
+          {
+            "ch": "論",
+            "kun": "—",
+            "on": "ロン",
+            "id": "teori; pendapat",
+            "note": "議論 (ぎろん) = diskusi; perdebatan"
+          },
+          {
+            "ch": "断",
+            "kun": "たつ",
+            "on": "ダン",
+            "id": "memutus",
+            "note": "断言 (だんげん) = pernyataan tegas"
+          },
+          {
+            "ch": "決",
+            "kun": "きめる",
+            "on": "ケツ",
+            "id": "memutuskan",
+            "note": "決断 (けつだん) = keputusan tegas"
+          },
+          {
+            "ch": "責",
+            "kun": "せめる",
+            "on": "セキ",
+            "id": "tanggung jawab",
+            "note": "責任 (せきにん) = tanggung jawab"
+          },
+          {
+            "ch": "義",
+            "kun": "—",
+            "on": "ギ",
+            "id": "kebenaran; kewajiban",
+            "note": "義務 (ぎむ) = kewajiban"
+          },
+          {
+            "ch": "務",
+            "kun": "つとめる",
+            "on": "ム",
+            "id": "tugas",
+            "note": "任務 (にんむ) = tugas; misi"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "新しい企画について、皆さんの率直な意見を聞かせてください。",
+            "id": "Tolong sampaikan pendapat jujur kalian tentang rencana baru ini."
+          },
+          {
+            "sp": "B",
+            "jp": "私は、今のままでは成功するとは思えません。市場調査が不十分にすぎないからです。",
+            "id": "Menurut saya, kalau begini saja tidak akan berhasil. Karena riset pasarnya tidak lebih dari sekadar tidak memadai."
+          },
+          {
+            "sp": "A",
+            "jp": "厳しい意見ですね。でも、指摘するだけでは前に進みませんよ。",
+            "id": "Pendapat yang tajam ya. Tapi kalau cuma mengkritik, kita tidak akan maju."
+          },
+          {
+            "sp": "B",
+            "jp": "ええ。だからこそ、もう一度データを集め直すべきだと思います。安易に進めるべきではありません。",
+            "id": "Betul. Justru karena itu saya rasa kita seharusnya mengumpulkan data ulang. Tidak seharusnya maju dengan gegabah."
+          },
+          {
+            "sp": "A",
+            "jp": "確かに、準備不足のまま始めるのは危険というものだ。",
+            "id": "Memang, memulai dalam keadaan persiapan kurang itu namanya berbahaya."
+          },
+          {
+            "sp": "B",
+            "jp": "失敗してから後悔するより、今手間をかけるに越したことはありません。",
+            "id": "Daripada menyesal setelah gagal, lebih baik repot-repot sekarang."
+          },
+          {
+            "sp": "A",
+            "jp": "わかりました。では、調査をやり直すしかありませんね。",
+            "id": "Baik, saya mengerti. Kalau begitu, tidak ada jalan lain selain mengulang survei."
+          },
+          {
+            "sp": "B",
+            "jp": "はい。それが成功への近道にほかなりません。",
+            "id": "Ya. Itu tidak lain adalah jalan pintas menuju keberhasilan."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "親は子供を守る＿＿＿。",
+        "o": [
+          "わけだ",
+          "ことだ",
+          "ものだ",
+          "はずだ"
+        ],
+        "a": 2,
+        "explain": "ものだ = kebenaran umum yang berlaku ('begitulah kodratnya')."
+      },
+      {
+        "q": "人の悪口を言うなんて、失礼＿＿＿。",
+        "o": [
+          "というものだ",
+          "とのことだ",
+          "というわけだ",
+          "ということだ"
+        ],
+        "a": 0,
+        "explain": "というものだ = penilaian tegas pembicara, sering bernada kritik."
+      },
+      {
+        "q": "私は一社員＿＿＿、経営には口を出せない。",
+        "o": [
+          "に限らない",
+          "に過ぎる",
+          "にほかならない",
+          "にすぎない"
+        ],
+        "a": 3,
+        "explain": "にすぎない = 'cuma...; tidak lebih dari...' (merendahkan)."
+      },
+      {
+        "q": "この成功は、皆さんの協力＿＿＿。",
+        "o": [
+          "にほかならず",
+          "にほかならない",
+          "にほかなる",
+          "にすぎない"
+        ],
+        "a": 1,
+        "explain": "にほかならない = 'tidak lain adalah...' (penegasan formal)."
+      },
+      {
+        "q": "旅行の荷物は軽い＿＿＿。",
+        "o": [
+          "に越すことはない",
+          "に越したことはない",
+          "に越したことがない",
+          "に越したものだ"
+        ],
+        "a": 1,
+        "explain": "に越したことはない = 'lebih baik...' (pilihan terbaik)."
+      },
+      {
+        "q": "道が一本しかないから、まっすぐ行く＿＿＿。",
+        "o": [
+          "ほかない",
+          "ことはない",
+          "しかない",
+          "わけがない"
+        ],
+        "a": 2,
+        "explain": "しかない = 'tidak ada jalan lain selain...' (selalu diakhiri negatif)."
+      },
+      {
+        "q": "今日できることは今日＿＿＿。",
+        "o": [
+          "するべきだ",
+          "するものだ",
+          "するわけだ",
+          "することだ"
+        ],
+        "a": 0,
+        "explain": "べきだ = 'seharusnya...' (kewajiban moral)."
+      },
+      {
+        "q": "彼はリーダーとして、もっと責任感を持つ＿＿＿。",
+        "o": [
+          "ものだ",
+          "わけだ",
+          "ことだ",
+          "べきだ"
+        ],
+        "a": 3,
+        "explain": "べきだ untuk kewajiban moral, bukan perintah langsung."
+      },
+      {
+        "q": "この程度のミスは、誰にでもある＿＿＿。",
+        "o": [
+          "わけだ",
+          "ものか",
+          "ものだ",
+          "ことだ"
+        ],
+        "a": 2,
+        "explain": "ものだ = kebenaran umum ('begitulah hal yang biasa')."
+      },
+      {
+        "q": "状況が変わった以上、方針を変える＿＿＿。",
+        "o": [
+          "よりほかしかない",
+          "よりほかない",
+          "よりほかないだ",
+          "よりほかにない"
+        ],
+        "a": 1,
+        "explain": "よりほかない = versi formal dari しかない ('tidak ada jalan lain selain...')."
+      }
+    ]
+  },
+  {
+    "id": "n2-24",
+    "bab": 24,
+    "level": "n2",
+    "title": "Saran & Tekad",
+    "desc": "Memberi saran dan menyatakan tekad.",
+    "icon": "✊",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Saran & Tekad",
+        "body": "<p>Bab ini tentang dua sisi 'mendorong': mendorong orang lain lewat <b>saran<\/b>, dan mendorong diri sendiri lewat <b>tekad<\/b>. Pola-pola di sini kebanyakan bernada formal dan sering muncul di teks tertulis JLPT.<\/p><p>Untuk saran ada empat pola: <b>ではないか<\/b> (ajakan retoris yang halus: 'bukankah sebaiknya kita...?'), <b>ことだ<\/b> (saran tegas dan konkret: 'yang penting adalah...'), <b>ものだ<\/b> (nasihat umum yang berlaku kapan saja), dan <b>ことはない<\/b> (menenangkan: 'tidak perlu...'). Bedakan ことだ dan ものだ: ことだ = saran konkret untuk situasi ini, ものだ = nasihat moral yang umum.<\/p><p>Untuk tekad ada dua pola: <b>まい<\/b> (tekad yang dingin dan tenang: 'tidak akan...', hanya menempel bentuk kamus) dan <b>ものか<\/b> (penolakan emosional yang meledak-ledak: 'mana mungkin...!'). Ada juga pola <b>するかしまいか<\/b> ('entah melakukan atau tidak') untuk menyatakan keraguan di antara dua pilihan.<\/p><p>Jebakan umum: ものだ nasihat di bab ini beda dengan ものだ kebenaran umum di Bab 23 — bedakan dari konteks; まい tidak bisa dipakai untuk menyatakan tekad orang lain; ではないか adalah ajakan, bukan pertanyaan biasa; dan ことはない ('tidak perlu') beda dengan ことがない/ことはない bentuk pengalaman di N4.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Saran & Tekad",
+        "items": [
+          {
+            "jp": "提案",
+            "kj": "提案",
+            "r": "teian",
+            "id": "usulan",
+            "note": "提案する = mengusulkan"
+          },
+          {
+            "jp": "助言",
+            "kj": "助言",
+            "r": "jogen",
+            "id": "nasihat; saran",
+            "note": "助言を求める = meminta nasihat"
+          },
+          {
+            "jp": "忠告",
+            "kj": "忠告",
+            "r": "chuukoku",
+            "id": "nasihat peringatan",
+            "note": "忠告を無視する = mengabaikan peringatan"
+          },
+          {
+            "jp": "決意",
+            "kj": "決意",
+            "r": "ketsui",
+            "id": "tekad",
+            "note": "決意を固める = memantapkan tekad"
+          },
+          {
+            "jp": "覚悟",
+            "kj": "覚悟",
+            "r": "kakugo",
+            "id": "kesiapan mental",
+            "note": "覚悟を決める = membulatkan tekad"
+          },
+          {
+            "jp": "決心",
+            "kj": "決心",
+            "r": "kesshin",
+            "id": "kebulatan tekad",
+            "note": "決心がつく = tekad sudah bulat"
+          },
+          {
+            "jp": "意志",
+            "kj": "意志",
+            "r": "ishi",
+            "id": "kemauan",
+            "note": "意志が強い = kemauan keras"
+          },
+          {
+            "jp": "努力",
+            "kj": "努力",
+            "r": "doryoku",
+            "id": "usaha",
+            "note": "努力を続ける = terus berusaha"
+          },
+          {
+            "jp": "忍耐",
+            "kj": "忍耐",
+            "r": "nintai",
+            "id": "kesabaran; ketabahan",
+            "note": "忍耐強い = sangat sabar"
+          },
+          {
+            "jp": "協力",
+            "kj": "協力",
+            "r": "kyouryoku",
+            "id": "kerja sama",
+            "note": "協力を求める = meminta kerja sama"
+          },
+          {
+            "jp": "相談",
+            "kj": "相談",
+            "r": "soudan",
+            "id": "konsultasi",
+            "note": "相談に乗る = melayani konsultasi"
+          },
+          {
+            "jp": "励ます",
+            "kj": "励ます",
+            "r": "hagemasu",
+            "id": "menyemangati",
+            "note": "友を励ます = menyemangati teman"
+          },
+          {
+            "jp": "誓う",
+            "kj": "誓う",
+            "r": "chikau",
+            "id": "bersumpah",
+            "note": "心に誓う = bersumpah dalam hati"
+          },
+          {
+            "jp": "心がける",
+            "kj": "心がける",
+            "r": "kokorogakeru",
+            "id": "berusaha; memperhatikan",
+            "note": "健康に心がける = menjaga kesehatan"
+          },
+          {
+            "jp": "勧める",
+            "kj": "勧める",
+            "r": "susumeru",
+            "id": "menganjurkan",
+            "note": "転職を勧める = menganjurkan pindah kerja"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Saran & Tekad",
+        "items": [
+          {
+            "arti": "marilah kita…; ayo…",
+            "examples": [
+              {
+                "id": "Marilah kita pikirkan apa yang bisa kita lakukan untuk melindungi lingkungan.",
+                "jp": "環境を守るために何ができるか、考えてみようではないか。",
+                "rd": "かんきょうをまもるためになにができるか、かんがえてみようではないか。"
+              },
+              {
+                "id": "Ayo bekerja sama dan sukseskan acara ini!",
+                "jp": "みんなで協力して、このイベントを成功させようじゃないか。",
+                "rd": "みんなできょうりょくして、このイベントをせいこうさせようじゃないか。"
+              },
+              {
+                "id": "Marilah berunding demi menyelesaikan masalah ini.",
+                "jp": "問題の解決を目指し、話し合おうではありませんか。",
+                "rd": "もんだいのかいけつをめざし、はなしあおうではありませんか。"
+              }
+            ],
+            "explain": "Pola ini adalah ajakan kuat yang bersifat formal — 'marilah kita bersama-sama'. Kata kerja memakai bentuk ajakan (う・よう形) lalu disambung ではないか. Menurut buku, ini gaya bicara maskulin yang kuat dan sering muncul dalam pidato politik, sehingga jarang dipakai dalam percakapan sehari-hari, dan biasanya ditujukan untuk mengajak banyak orang.",
+            "pattern": "kata kerja bentuk ajakan + ではないか",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk ajakan + ではないか",
+                "v": "ajakan kuat, formal (pidato)"
+              },
+              {
+                "k": "kata kerja bentuk ajakan + じゃないか",
+                "v": "ajakan kuat, santai"
+              }
+            ]
+          },
+          {
+            "arti": "yang penting adalah…; sebaiknya…",
+            "examples": [
+              {
+                "id": "Untuk menemukan ide bagus, biasakan mencatat setiap hal yang terlintas dalam pikiran.",
+                "jp": "いいアイディアを見つけるためには、普段から何でも思いついたことをメモしておくことだ。",
+                "rd": "いいアイディアをみつけるためには、ふだんからなんでもおもいついたことをメモしておくことだ。"
+              },
+              {
+                "id": "Kalau tidak mau gemuk, jangan makan larut malam.",
+                "jp": "太りたくなければ、夜遅く食べないことです。",
+                "rd": "ふとりたくなければ、よるおそくたべないことです。"
+              },
+              {
+                "id": "Ketika harus mengambil keputusan penting, dengarkanlah pendapat banyak orang.",
+                "jp": "大切な決定をしなければならないときは、いろいろな人の意見を聞いてみることです。",
+                "rd": "たいせつなけっていをしなければならないときは、いろいろなひとのいけんをきいてみることです。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk memberi nasihat — 'yang penting adalah melakukan/tidak melakukan itu'. Kata kerja memakai bentuk kamus atau bentuk tidak. Jebakan dari buku: pola ini tidak punya bentuk lampau, bentuk negatif, atau bentuk tanya; hanya bisa dipakai dengan kata kerja kehendak (yang bisa dilakukan dengan niat sendiri); dan karena bernada nasihat, sebaiknya tidak dipakai kepada orang yang lebih tua.",
+            "pattern": "kata kerja bentuk kamus / kata kerja bentuk tidak + ことだ",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + ことだ",
+                "v": "nasihat untuk melakukan"
+              },
+              {
+                "k": "kata kerja bentuk tidak + ことだ",
+                "v": "nasihat untuk tidak melakukan"
+              }
+            ]
+          },
+          {
+            "arti": "sebaiknya…; jangan…",
+            "examples": [
+              {
+                "id": "Pertemuan dengan orang lain harus dijaga dengan baik.",
+                "jp": "人との出会いは大切にするものだ。",
+                "rd": "ひととのであいはたいせつにするものだ。"
+              },
+              {
+                "id": "Di Jepang, saat menjenguk orang sakit, bunga dalam pot tidak boleh diberikan.",
+                "jp": "日本では、お見舞いの時は鉢植えの花はあげないものですよ。",
+                "rd": "にほんでは、おみまいのときははちうえのはなはあげないものですよ。"
+              },
+              {
+                "id": "Jangan sembarangan meminjamkan uang kepada orang.",
+                "jp": "気軽に人にお金を貸すものではない。",
+                "rd": "きがるにひとにおかねをかすものではない。"
+              },
+              {
+                "id": "Waktu mau memotong dahan pohon, pinggangku malah terkilir. Memang, hal yang tidak biasa dilakukan sebaiknya tidak dikerjakan.",
+                "jp": "植木の枝を切ろうとして腰を痛めてしまった。やはり慣れないことはするものではないね。",
+                "rd": "うえきのえだをきろうとしてこしをいためてしまった。やはりなれないことはするものではないね。"
+              }
+            ],
+            "explain": "Pola ini menyatakan anjuran atau larangan berdasarkan akal sehat umum — 'sebaiknya begitu' atau 'jangan begitu'. Bentuk ものだ untuk anjuran, ものではない untuk larangan. Kata kerja memakai bentuk kamus (untuk ものではない) atau bentuk tidak (untuk ものだ). Jebakan dari buku: pola ini mengungkapkan akal sehat yang berlaku umum, jadi tidak dipakai untuk orang atau hal yang spesifik; dan sebaiknya tidak dipakai kepada orang yang lebih tua.",
+            "pattern": "kata kerja bentuk kamus / kata kerja bentuk tidak + ものだ",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + ものだ",
+                "v": "anjuran berdasarkan akal sehat"
+              },
+              {
+                "k": "kata kerja bentuk tidak + ものだ",
+                "v": "anjuran negatif berdasarkan akal sehat"
+              },
+              {
+                "k": "kata kerja bentuk kamus + ものではない",
+                "v": "larangan berdasarkan akal sehat"
+              }
+            ]
+          },
+          {
+            "arti": "tidak perlu…",
+            "examples": [
+              {
+                "id": "Urusan ini bisa selesai lewat telepon, jadi tidak perlu repot-repot datang.",
+                "jp": "用事は電話で済みますから、なにもわざわざ行くことはありません。",
+                "rd": "ようじはでんわですみますから、なにもわざわざいくことはありません。"
+              },
+              {
+                "id": "Tidak perlu pedulikan perkataannya. Dia memang orang yang bicaranya selalu tajam.",
+                "jp": "彼の言葉など気にすることはないよ。いつもきつい言い方をする人だから。",
+                "rd": "かれのことばなどきにすることはないよ。いつもきついいいかたをするひとだから。"
+              },
+              {
+                "id": "Ini homestay pertamaku, tapi semua orang baik padaku, jadi tidak perlu terlalu khawatir.",
+                "jp": "ホームステイは初めてだったが、みんなが親切にしてくれたので、そんなに心配することはなかった。",
+                "rd": "ホームステイははじめてだったが、みんながしんせつにしてくれたので、そんなにしんぱいすることはなかった。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk menyatakan penilaian pembicara bahwa sesuatu 'tidak perlu dilakukan'. Kata kerja memakai bentuk kamus. Jebakan dari buku: pola ini tidak bisa dibuat bentuk tanya; jarang dipakai untuk urusan pembicara sendiri; dan tidak dipakai untuk hal yang memang sudah jelas-jelas tidak perlu sejak awal.",
+            "pattern": "kata kerja bentuk kamus + ことはない",
+            "tabel": null
+          },
+          {
+            "arti": "tidak akan…; antara melakukan atau tidak",
+            "examples": [
+              {
+                "id": "Kesalahan bodoh seperti ini tidak akan kulakukan dua kali. Aku harus berhati-hati.",
+                "jp": "こんなばかな失敗は二度とするまい。気をつけよう。",
+                "rd": "こんなばかなしっぱいはにどとするまい。きをつけよう。"
+              },
+              {
+                "id": "Sepertinya ayah berniat untuk tidak mencampuri jalan yang dipilih anaknya.",
+                "jp": "父は子供が選んだ道には口を出すまいと思っているようだ。",
+                "rd": "ちちはこどもがえらんだみちにはくちをだすまいとおもっているようだ。"
+              },
+              {
+                "id": "Supaya tidak membuat keluarga khawatir, suamiku tidak menceritakan bahwa dia telah berhenti dari perusahaannya.",
+                "jp": "夫は家族に心配をかけまいとして、会社を辞めたことを話してくれなかった。",
+                "rd": "おっとはかぞくにしんぱいをかけまいとして、かいしゃをやめたことをはなしてくれなかった。"
+              },
+              {
+                "id": "Aku belum bisa memutuskan, membeli robot pembersih atau tidak.",
+                "jp": "掃除ロボットを買おうか買うまいか決心がつかない。",
+                "rd": "そうじロボットをかおうかかうまいかけっしんがつかない。"
+              },
+              {
+                "id": "Karena pekerjaannya terlihat sulit, aku sempat sangat ragu antara menerima atau tidak, tapi akhirnya aku nekat mencobanya.",
+                "jp": "難しそうな仕事なので、引き受けようか引き受けまいかだいぶ迷ったが、思い切ってやってみることにした。",
+                "rd": "むずかしそうなしごとなので、ひきうけようかひきうけまいかだいぶまよったが、おもいきってやってみることにした。"
+              }
+            ],
+            "explain": "まい dipakai untuk menyatakan tekad pembicara untuk tidak melakukan sesuatu — 'tidak akan kulakukan'. Kata kerja golongan II/III memakai bentuk kamus, dan する menjadi するまい atau すまい. Pola うか〜まいか menyatakan keraguan — 'melakukan atau tidak ya?' (kata kerja yang dipakai harus sama). Jebakan dari buku: まい untuk tekad orang lain harus diberi pembungkus seperti と思っているようだ; tanpa itu, maknanya berubah menjadi dugaan (perkiraan).",
+            "pattern": "kata kerja bentuk kamus + まい / kata kerja bentuk ajakan + か + kata kerja bentuk kamus + まいか",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + まい",
+                "v": "tekad tidak akan melakukan"
+              },
+              {
+                "k": "する → するまい・すまい",
+                "v": "pengecualian kata kerja する"
+              },
+              {
+                "k": "kata kerja bentuk ajakan + か + kata kerja bentuk kamus + まいか",
+                "v": "ragu-ragu, antara melakukan atau tidak"
+              }
+            ]
+          },
+          {
+            "arti": "mana mungkin…! (tekad tidak akan)",
+            "examples": [
+              {
+                "id": "Dengan orang yang sangat tidak bertanggung jawab seperti itu, mana mungkin aku mau bekerja sama lagi!",
+                "jp": "あんな無責任な人とはもう一緒に仕事をするものか。",
+                "rd": "あんなむせきにんなひととはもういっしょにしごとをするものか。"
+              },
+              {
+                "id": "Aku ingin sekali mewujudkan rencana ini. Apa pun kata orang, aku tidak akan menyerah!",
+                "jp": "この計画を絶対実行したい。他人に何を言われてもあきらめるものか。",
+                "rd": "このけいかくをぜったいじっこうしたい。たにんになにをいわれてもあきらめるものか。"
+              },
+              {
+                "id": "Setiap hari aku bertekad 'hari ini aku tidak akan terlambat', tapi tetap saja terlambat beberapa menit.",
+                "jp": "今日こそは遅刻するものかと毎日思うけれど、やっぱり何分か遅刻してしまう。",
+                "rd": "きょうこそはちこくするものかとまいにちおもうけれど、やっぱりなんぷんかちこくしてしまう。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk menyatakan tekad yang sangat kuat untuk TIDAK melakukan sesuatu, dengan nada emosional — 'mana mungkin aku mau!'. Kata kerja memakai bentuk kamus. Versi ものか yang lebih kasual adalah もんか. Pola ini mirip tekad ぞ/つもり, tapi nadanya lebih berapi-api dan menolak keras.",
+            "pattern": "kata kerja bentuk kamus + ものか",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk kamus + ものか",
+                "v": "tekad menolak dengan tegas, bernada emosional"
+              },
+              {
+                "k": "kata kerja bentuk kamus + もんか",
+                "v": "versi lebih kasual dari ものか"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 24",
+        "items": [
+          {
+            "ch": "提",
+            "kun": "さげる",
+            "on": "テイ",
+            "id": "mengajukan",
+            "note": "提案 (ていあん) = usulan"
+          },
+          {
+            "ch": "案",
+            "kun": "—",
+            "on": "アン",
+            "id": "rencana; ide",
+            "note": "提案 (ていあん) = usulan"
+          },
+          {
+            "ch": "忠",
+            "kun": "—",
+            "on": "チュウ",
+            "id": "kesetiaan",
+            "note": "忠告 (ちゅうこく) = nasihat peringatan"
+          },
+          {
+            "ch": "告",
+            "kun": "つげる",
+            "on": "コク",
+            "id": "memberitahukan",
+            "note": "忠告 (ちゅうこく) = nasihat peringatan"
+          },
+          {
+            "ch": "意",
+            "kun": "—",
+            "on": "イ",
+            "id": "niat; arti",
+            "note": "決意 (けつい) = tekad"
+          },
+          {
+            "ch": "志",
+            "kun": "こころざす",
+            "on": "シ",
+            "id": "cita-cita",
+            "note": "意志 (いし) = kemauan"
+          },
+          {
+            "ch": "励",
+            "kun": "はげます",
+            "on": "レイ",
+            "id": "menyemangati",
+            "note": "励ます (はげます) = menyemangati"
+          },
+          {
+            "ch": "誓",
+            "kun": "ちかう",
+            "on": "セイ",
+            "id": "bersumpah",
+            "note": "誓う (ちかう) = bersumpah"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "来月の発表会、準備は進んでいますか。",
+            "id": "Persiapan presentasi bulan depan, sudah berjalan?"
+          },
+          {
+            "sp": "B",
+            "jp": "ええ。でも、人前で話すのが苦手で緊張します。",
+            "id": "Iya. Tapi saya tidak pandai bicara di depan orang, jadi tegang."
+          },
+          {
+            "sp": "A",
+            "jp": "緊張するのは当然です。そんなことは気にすることはありませんよ。",
+            "id": "Tegang itu wajar. Tidak perlu memikirkan hal seperti itu."
+          },
+          {
+            "sp": "B",
+            "jp": "ありがとうございます。毎日鏡の前で練習することにしました。",
+            "id": "Terima kasih. Saya memutuskan berlatih tiap hari di depan cermin."
+          },
+          {
+            "sp": "A",
+            "jp": "いい心がけですね。みんなで応援しようじゃないですか。",
+            "id": "Tekad yang bagus. Bukankah sebaiknya kita dukung bersama-sama?"
+          },
+          {
+            "sp": "B",
+            "jp": "はい。こんな機会は二度とないかもしれません。絶対に失敗するものか。",
+            "id": "Ya. Kesempatan seperti ini mungkin tidak datang dua kali. Mana mungkin saya gagal."
+          },
+          {
+            "sp": "A",
+            "jp": "その意気です。困ったことがあれば、いつでも相談することだ。",
+            "id": "Semangat itu. Kalau ada kesulitan, yang penting adalah berkonsultasi kapan saja."
+          },
+          {
+            "sp": "B",
+            "jp": "はい。ご期待に応えられるよう、全力で頑張ります。",
+            "id": "Baik. Saya akan berusaha sekuat tenaga agar bisa memenuhi harapan."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "みんなで協力して、このイベントを成功させよう＿＿＿。",
+        "o": [
+          "ではないだろうか",
+          "ではないはずだ",
+          "ではないか",
+          "ではないわけだ"
+        ],
+        "a": 2,
+        "explain": "ではないか = ajakan retoris yang halus ('bukankah sebaiknya kita...?')."
+      },
+      {
+        "q": "太りたくなければ、夜遅く食べない＿＿＿。",
+        "o": [
+          "ことだ",
+          "まい",
+          "ものか",
+          "わけだ"
+        ],
+        "a": 0,
+        "explain": "ことだ = saran tegas dan konkret untuk situasi ini."
+      },
+      {
+        "q": "人との出会いは大切にする＿＿＿。",
+        "o": [
+          "ことだ",
+          "わけだ",
+          "はずだ",
+          "ものだ"
+        ],
+        "a": 3,
+        "explain": "ものだ = nasihat umum yang berlaku kapan saja."
+      },
+      {
+        "q": "用事は電話で済みますから、わざわざ行く＿＿＿。",
+        "o": [
+          "わけではありません",
+          "ことはありません",
+          "ことはあるません",
+          "ものではありません"
+        ],
+        "a": 1,
+        "explain": "ことはない = 'tidak perlu...' (menenangkan)."
+      },
+      {
+        "q": "こんなばかな失敗は二度と＿＿＿。気をつけよう。",
+        "o": [
+          "しないまい",
+          "するまい",
+          "するものだ",
+          "することだ"
+        ],
+        "a": 1,
+        "explain": "まい = tekad tenang 'tidak akan...', hanya menempel bentuk kamus."
+      },
+      {
+        "q": "あんな無責任な人と、もう一緒に仕事をする＿＿＿。",
+        "o": [
+          "ものだ",
+          "わけだ",
+          "ものか",
+          "ことだ"
+        ],
+        "a": 2,
+        "explain": "ものか = penolakan emosional ('mana mungkin...!')."
+      },
+      {
+        "q": "環境を守るために何ができるか、考えてみよう＿＿＿。",
+        "o": [
+          "ではないか",
+          "ではないはずだ",
+          "ではないわけだ",
+          "ではないだろうか"
+        ],
+        "a": 0,
+        "explain": "ではないか mengajak lawan bicara bertindak bersama."
+      },
+      {
+        "q": "彼の言葉など気にする＿＿＿よ。いつもきつい言い方をする人だから。",
+        "o": [
+          "ことはある",
+          "ものはない",
+          "わけはない",
+          "ことはない"
+        ],
+        "a": 3,
+        "explain": "ことはない = 'tidak perlu...' (menenangkan kekhawatiran)."
+      },
+      {
+        "q": "行く＿＿＿行かない＿＿＿、はっきりしなさい。",
+        "o": [
+          "しまいかするか",
+          "するかしないまいか",
+          "するかしまいか",
+          "するのかしないのか"
+        ],
+        "a": 2,
+        "explain": "するかしまいか = 'entah melakukan atau tidak' (keraguan di antara dua pilihan)."
+      },
+      {
+        "q": "この計画を絶対に成功させたい。誰に何を言われてもあきらめる＿＿＿。",
+        "o": [
+          "わけだ",
+          "ものか",
+          "ことだ",
+          "ものだ"
+        ],
+        "a": 1,
+        "explain": "ものか = tekad menolak dengan emosi ('mana mungkin menyerah!')."
+      }
+    ]
+  },
+  {
+    "id": "n2-25",
+    "bab": 25,
+    "level": "n2",
+    "title": "Perasaan Tak Tertahankan",
+    "desc": "Menyatakan perasaan yang tak bisa ditahan.",
+    "icon": "❤️‍🔥",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Perasaan Tak Tertahankan",
+        "body": "<p>Bab ini tentang perasaan yang <b>tak bisa ditahan<\/b> — pola-pola 'emosi meledak' yang lima-limanya mirip dan sangat disukai soal JLPT. Kuncinya adalah merasakan beda nuansa tiap pola, bukan sekadar hafal rumus.<\/p><p><b>てしかたがない<\/b> menyatakan perasaan subjektif yang kuat ('ingin sekali sampai tak tertahankan'), sedangkan <b>てならない<\/b> menyatakan perasaan yang muncul spontan dan tak terkendali ('teringat terus', 'khawatir terus'). Bedanya: しかたがない = dorongan dari dalam diri, ならない = sesuatu yang 'menyerang' kesadaranmu.<\/p><p>Tiga pola 'terpaksa': <b>ずにはいられない<\/b> ('tak bisa menahan diri untuk tidak...') didorong oleh hati; <b>わけにはいかない<\/b> ('tidak bisa tidak...') terhalang oleh keadaan atau kewajiban — selalu ada alasan di baliknya; <b>ざるを得ない<\/b> ('terpaksa harus...') menyatakan keterpaksaan objektif dengan nada sangat formal dan tertulis.<\/p><p>Jebakan umum: しかたがない = しょうがない (versi kasualnya); ずにはいられない dibentuk dari ない→ず (行かない→行かずに); する menjadi <b>せざる<\/b>を得ない (bentuk klasik, bukan さざる); dan わけにはいかない selalu diikuti alasan atau keadaan yang menghalangi.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Perasaan Tak Tertahankan",
+        "items": [
+          {
+            "jp": "感情",
+            "kj": "感情",
+            "r": "kanjou",
+            "id": "emosi; perasaan",
+            "note": "感情を抑える = menahan emosi"
+          },
+          {
+            "jp": "衝動",
+            "kj": "衝動",
+            "r": "shoudou",
+            "id": "dorongan hati",
+            "note": "衝動買い = belanja impulsif"
+          },
+          {
+            "jp": "我慢",
+            "kj": "我慢",
+            "r": "gaman",
+            "id": "menahan diri",
+            "note": "我慢できない = tidak bisa menahan diri"
+          },
+          {
+            "jp": "堪える",
+            "kj": "堪える",
+            "r": "taeru",
+            "id": "menahan; tahan",
+            "note": "暑さに堪える = tahan terhadap panas"
+          },
+          {
+            "jp": "抑える",
+            "kj": "抑える",
+            "r": "osaeru",
+            "id": "menekan; menahan",
+            "note": "涙を抑える = menahan air mata"
+          },
+          {
+            "jp": "憧れる",
+            "kj": "憧れる",
+            "r": "akogareru",
+            "id": "mendamba; mengagumi",
+            "note": "都会に憧れる = mendambakan kota besar"
+          },
+          {
+            "jp": "懐かしい",
+            "kj": "懐かしい",
+            "r": "natsukashii",
+            "id": "dirindukan; nostalgia",
+            "note": "懐かしい思い出 = kenangan yang dirindukan"
+          },
+          {
+            "jp": "切ない",
+            "kj": "切ない",
+            "r": "setsunai",
+            "id": "pilu; menyayat",
+            "note": "切ない気持ち = perasaan pilu"
+          },
+          {
+            "jp": "悔しい",
+            "kj": "悔しい",
+            "r": "kuyashii",
+            "id": "kesal; dongkol",
+            "note": "悔しくてならない = kesal tak tertahankan"
+          },
+          {
+            "jp": "情けない",
+            "kj": "情けない",
+            "r": "nasakenai",
+            "id": "memilukan; menyedihkan",
+            "note": "情けない姿 = penampilan yang menyedihkan"
+          },
+          {
+            "jp": "恐ろしい",
+            "kj": "恐ろしい",
+            "r": "osoroshii",
+            "id": "mengerikan",
+            "note": "恐ろしい事件 = kejadian mengerikan"
+          },
+          {
+            "jp": "惜しい",
+            "kj": "惜しい",
+            "r": "oshii",
+            "id": "sayang; disayangkan",
+            "note": "惜しいことをした = melakukan hal yang disayangkan"
+          },
+          {
+            "jp": "残念",
+            "kj": "残念",
+            "r": "zannen",
+            "id": "sayang sekali",
+            "note": "残念ながら = sayang sekali (namun)"
+          },
+          {
+            "jp": "涙",
+            "kj": "涙",
+            "r": "namida",
+            "id": "air mata",
+            "note": "涙が出る = air mata keluar"
+          },
+          {
+            "jp": "思わず",
+            "kj": "思わず",
+            "r": "omowazu",
+            "id": "tanpa sadar; spontan",
+            "note": "思わず笑う = tertawa tanpa sadar"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Perasaan Tak Tertahankan",
+        "items": [
+          {
+            "arti": "sangat… sampai tak tertahankan",
+            "examples": [
+              {
+                "id": "Toko serba ada di dekat rumah tutup, jadi rasanya sangat tidak nyaman.",
+                "jp": "近所にあったスーパーが閉店してしまって、不便でしかたがない。",
+                "rd": "きんじょにあったスーパーがへいてんしてしまって、ふべんでしかたがない。"
+              },
+              {
+                "id": "Aku ingin sekali menceritakan cerita lucu yang kudengar tadi ke seseorang.",
+                "jp": "さっき聞いたおもしろい話をだれかに話したくてしかたがない。",
+                "rd": "さっききいたおもしろいはなしをだれかにはなしたくてしかたがない。"
+              },
+              {
+                "id": "Aku senang sekali akhirnya bisa bertemu pacarku lagi setelah sekian lama.",
+                "jp": "久しぶりに彼女に会えるのがうれしくてしょうがない。",
+                "rd": "ひさしぶりにかのじょにあえるのがうれしくてしょうがない。"
+              },
+              {
+                "id": "Bayinya terlihat sangat gelisah sampai tak tertahankan ketika ibunya tidak ada, lalu mulai menangis.",
+                "jp": "赤ちゃんはお母さんがいないと不安でたまらないらしく、泣き出した。",
+                "rd": "あかちゃんはおかあさんがいないとふあんでたまらないらしく、なきだした。"
+              },
+              {
+                "id": "Aku belum makan apa-apa sejak pagi, jadi aku lapar sekali.",
+                "jp": "朝から何も食べていないので、おなかがすいてたまらない。",
+                "rd": "あさからなにもたべていないので、おなかがすいてたまらない。"
+              },
+              {
+                "id": "Bekas gigitan nyamuk ini gatal sekali sampai tak tertahankan.",
+                "jp": "蚊に刺されたところがかゆくてたまらない。",
+                "rd": "かにさされたところがかゆくてたまらない。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk mengungkapkan perasaan yang sangat kuat sampai rasanya tidak bisa ditahan — misalnya rindu, khawatir, ingin, senang, atau lapar. Ketiga bentuknya (しかたがない・しょうがない・たまらない) maknanya sama; しょうがない adalah versi yang lebih kasual, sedangkan たまらない sering dipakai untuk sensasi fisik seperti lapar, gatal, atau panas. Hati-hati: pola ini hanya untuk perasaan pembicara sendiri — kalau subjeknya orang ketiga, harus ditambah ようだ atau らしい di belakangnya.",
+            "pattern": "kata kerja bentuk -te / kata sifat-i bentuk -kute / kata sifat-na atau kata benda bentuk -de + しかたがない・しょうがない・たまらない",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk -te + しかたがない",
+                "v": "bentuk baku"
+              },
+              {
+                "k": "kata kerja bentuk -te + しょうがない",
+                "v": "lebih kasual"
+              },
+              {
+                "k": "kata kerja bentuk -te + たまらない",
+                "v": "sering untuk sensasi fisik yang tak tertahankan"
+              }
+            ]
+          },
+          {
+            "arti": "tak bisa berhenti… / sangat…",
+            "examples": [
+              {
+                "id": "Sejak tadi aku terus merasa seperti melupakan sesuatu yang penting.",
+                "jp": "さっきから何か大切なことを忘れているような気がしてならない。",
+                "rd": "さっきからなにかたいせつなことをわすれているようなきがしてならない。"
+              },
+              {
+                "id": "Setiap mendengar lagu ini, aku tak bisa berhenti teringat masa-masa sekolah.",
+                "jp": "この歌を聞くと、学生時代のことが思い出されてならない。",
+                "rd": "このうたをきくと、がくせいじだいのことがおもいだされてならない。"
+              },
+              {
+                "id": "Aku sangat khawatir apakah aku bisa berbicara dengan baik di wawancara besok.",
+                "jp": "明日の面接でうまく話せるかどうか、心配でならない。",
+                "rd": "あしたのめんせつでうまくはなせるかどうか、しんぱいでならない。"
+              },
+              {
+                "id": "Aku sangat menyesal tidak bisa mengantar Yan ke bandara.",
+                "jp": "ヤンさんを空港に見送りに行けなかったことが残念でならない。",
+                "rd": "ヤンさんをくうこうにみおくりにいけなかったことがざんねんでならない。"
+              }
+            ],
+            "explain": "Pola ini menggambarkan perasaan yang muncul secara alami dan tidak bisa dihentikan — pikiran terus terngiang-ngiang di kepala. Sering dipakai untuk perasaan negatif seperti khawatir, menyesal, atau rindu, dan menempel pada kata kerja perasaan yang muncul sendiri seperti 気がする (merasa), 思える, 感じられる, atau 思い出される (teringat). Jebakan dari buku: kalau subjeknya orang ketiga tertentu, jangan lupa tambahkan ようだ atau らしい.",
+            "pattern": "kata kerja bentuk -te / kata sifat-i bentuk -kute / kata sifat-na atau kata benda bentuk -de + ならない",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk -te + ならない",
+                "v": "mis. 気がしてならない — perasaan tak bisa berhenti"
+              },
+              {
+                "k": "kata sifat-i bentuk -kute + ならない",
+                "v": "mis. 心配でならない — sangat khawatir"
+              },
+              {
+                "k": "kata sifat-na atau kata benda bentuk -de + ならない",
+                "v": "mis. 残念でならない — sangat menyesal"
+              }
+            ]
+          },
+          {
+            "arti": "tak bisa menahan diri untuk tidak…",
+            "examples": [
+              {
+                "id": "Begitu lagu ini terdengar, badanku tak bisa menahan diri untuk tidak ikut bergerak.",
+                "jp": "この曲が聞こえてくると、体を動かさないではいられない。",
+                "rd": "このきょくがきこえてくると、からだをうごかさないではいられない。"
+              },
+              {
+                "id": "Melihat anjing ini, aku tak bisa tidak teringat wajah Yamada.",
+                "jp": "この犬を見ていると、山田さんの顔を思い出さないではいられない。",
+                "rd": "このいぬをみていると、やまださんのかおをおもいださないではいられない。"
+              },
+              {
+                "id": "Kabarnya Mika sangat suka kue, jadi kalau lewat depan toko kue dia tak bisa menahan diri untuk tidak membelinya.",
+                "jp": "ミカさんはケーキが大好きで、ケーキ屋の前を通ると買わずにはいられないそうだ。",
+                "rd": "ミカさんはケーキがだいすきで、ケーキやのまえをとおるとかわずにはいられないそうだ。"
+              },
+              {
+                "id": "Melihat kegigihan atlet itu, tak ada yang bisa menahan diri untuk tidak mendukungnya.",
+                "jp": "その選手の一生懸命な姿を見て、だれもが応援せずにはいられなかった。",
+                "rd": "そのせんしゅのいっしょうけんめいなすがたをみて、だれもがおうえんせずにはいられなかった。"
+              }
+            ],
+            "explain": "Pola ini dipakai saat dorongan atau perasaan muncul secara alami sampai tidak bisa ditahan — badan ikut bergerak, air mata keluar, atau kenangan tiba-tiba muncul. Cara sambungnya ada dua: bentuk -nai + ではいられない, atau bentuk -nai + ずにはいられない. Hati-hati dengan pengecualiannya: untuk kata kerja する bentuknya menjadi せずにはいられない, bukan しずに. Kalau subjeknya orang ketiga tertentu, tambahkan そうだ, ようだ, atau らしい.",
+            "pattern": "kata kerja bentuk -nai + ではいられない・ずにはいられない",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk -nai + ではいられない",
+                "v": "mis. 動かさないではいられない"
+              },
+              {
+                "k": "kata kerja bentuk -nai + ずにはいられない",
+                "v": "mis. 買わずにはいられない"
+              },
+              {
+                "k": "する → せずにはいられない",
+                "v": "pengecualian, bukan しずに"
+              }
+            ]
+          },
+          {
+            "arti": "tidak bisa tidak… / terpaksa harus…",
+            "examples": [
+              {
+                "id": "Ini pernikahan sahabatku, jadi sekalipun sibuk aku tidak mungkin tidak hadir.",
+                "jp": "親友の結婚式だから、忙しくても出席しないわけにはいかない。",
+                "rd": "しんゆうのけっこんしきだから、いそがしくてもしゅっせきしないわけにはいかない。"
+              },
+              {
+                "id": "Gigiku sakit begini, jadi mau tidak mau aku harus ke dokter gigi.",
+                "jp": "こんなに歯が痛くなっては、歯医者に行かないわけにはいかない。",
+                "rd": "こんなにはがいたくなっては、はいしゃにいかないわけにはいかない。"
+              },
+              {
+                "id": "Semiskin apa pun aku, aku tetap harus makan.",
+                "jp": "どんなにお金がなくても、何も食べないわけにいかない。",
+                "rd": "どんなにおかねがなくても、なにもたべないわけにいかない。"
+              },
+              {
+                "id": "Aku sebenarnya ingin cepat pulang, tapi tidak mungkin tidak membantu beres-beres sampai selesai.",
+                "jp": "早く帰りたかったが、最後まで後片付けを手伝わないわけにはいかなかった。",
+                "rd": "はやくかえりたかったが、さいごまであとかたづけをてつだわないわけにはいかなかった。"
+              }
+            ],
+            "explain": "Pola ini berarti harus melakukan sesuatu karena ada keadaan yang mengharuskannya — misalnya kewajiban sosial, akal sehat, atau alasan yang masuk akal. Kata kerjanya harus kata kerja yang bisa dikendalikan (kata kerja berkehendak). Subjeknya biasanya orang pertama dan jarang dituliskan, sedangkan kalimat yang menjelaskan situasinya sering muncul sebelum atau sesudah pola ini. Partikel は boleh dihilangkan menjadi わけにいかない.",
+            "pattern": "kata kerja bentuk -nai + わけに（は）いかない",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk -nai + わけにはいかない",
+                "v": "bentuk baku"
+              },
+              {
+                "k": "kata kerja bentuk -nai + わけにいかない",
+                "v": "は boleh dihilangkan, makna sama"
+              }
+            ]
+          },
+          {
+            "arti": "terpaksa harus…",
+            "examples": [
+              {
+                "id": "Terpaksa harus pergi kerja juga di akhir pekan.",
+                "jp": "週末も仕事で出かけざるを得ない。",
+                "rd": "しゅうまつもしごとででかけざるをえない。"
+              },
+              {
+                "id": "Dengan bukti-bukti sanggahan sebanyak ini, aku terpaksa mengakui bahwa teorinya salah.",
+                "jp": "これだけ反対の証拠が多いのだから、彼の説は間違っていたと言わざるを得ない。",
+                "rd": "これだけはんたいのしょうこがおおいのだから、かれのせつはまちがっていたといわざるをえない。"
+              },
+              {
+                "id": "Di tengah jalan kakiku sakit, sehingga aku terpaksa menyerah untuk finis.",
+                "jp": "途中で足が痛くなり、完走はあきらめざるを得ない状況になった。",
+                "rd": "とちゅうであしがいたくなり、かんそうはあきらめざるをえないじょうきょうになった。"
+              },
+              {
+                "id": "Kalau defisit terus berlanjut seperti ini, mungkin perusahaan terpaksa harus mengubah kebijakan manajemennya.",
+                "jp": "このまま赤字が続けば、経営方針を変更せざるを得ないだろう。",
+                "rd": "このままあかじがつづけば、けいえいほうしんをへんこうせざるをえないだろう。"
+              }
+            ],
+            "explain": "Pola ini dipakai saat seseorang sebenarnya tidak ingin melakukannya, tetapi karena keadaan yang tidak bisa dihindari akhirnya terpaksa melakukannya — nuansanya seperti 'mau tidak mau'. Kata kerjanya harus kata kerja yang bisa dikendalikan (kata kerja berkehendak), dan subjeknya biasanya orang pertama yang jarang disebutkan. Hati-hati dengan bentuknya: untuk する bukan しないざる melainkan せざるを得ない.",
+            "pattern": "kata kerja bentuk -nai (khusus する → せざる) + を得ない",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk -nai + ざるを得ない",
+                "v": "bentuk umum"
+              },
+              {
+                "k": "する → せざるを得ない",
+                "v": "pengecualian, bukan しないざる"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 25",
+        "items": [
+          {
+            "ch": "感",
+            "kun": "—",
+            "on": "カン",
+            "id": "rasa; perasaan",
+            "note": "感情 (かんじょう) = emosi"
+          },
+          {
+            "ch": "情",
+            "kun": "なさけ",
+            "on": "ジョウ",
+            "id": "perasaan",
+            "note": "感情 (かんじょう) = emosi"
+          },
+          {
+            "ch": "堪",
+            "kun": "たえる",
+            "on": "タン",
+            "id": "menahan",
+            "note": "堪える (たえる) = menahan; tahan"
+          },
+          {
+            "ch": "抑",
+            "kun": "おさえる",
+            "on": "ヨク",
+            "id": "menekan",
+            "note": "抑える (おさえる) = menahan"
+          },
+          {
+            "ch": "涙",
+            "kun": "なみだ",
+            "on": "ルイ",
+            "id": "air mata",
+            "note": "涙 (なみだ) = air mata"
+          },
+          {
+            "ch": "恐",
+            "kun": "おそれる",
+            "on": "キョウ",
+            "id": "takut",
+            "note": "恐ろしい (おそろしい) = mengerikan"
+          },
+          {
+            "ch": "惜",
+            "kun": "おしい",
+            "on": "セキ",
+            "id": "menyayangkan",
+            "note": "惜しい (おしい) = sayang (disayangkan)"
+          },
+          {
+            "ch": "残",
+            "kun": "のこる",
+            "on": "ザン",
+            "id": "sisa",
+            "note": "残念 (ざんねん) = sayang sekali"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "どうしたんですか。なんだか落ち着かないようですね。",
+            "id": "Ada apa? Sepertinya kamu tidak tenang."
+          },
+          {
+            "sp": "B",
+            "jp": "さっき面白い話を聞いて、誰かに話したくてしかたがないんです。",
+            "id": "Tadi dengar cerita lucu, ingin sekali menceritakannya ke seseorang sampai tak tertahankan."
+          },
+          {
+            "sp": "A",
+            "jp": "それは我慢できませんね。で、どんな話なんですか。",
+            "id": "Itu memang tidak bisa ditahan ya. Cerita apa memangnya?"
+          },
+          {
+            "sp": "B",
+            "jp": "実は、高校時代の先生に偶然会ったんです。懐かしくてならない気持ちでした。",
+            "id": "Sebenarnya, saya kebetulan bertemu guru SMA dulu. Rasanya rindu tak tertahankan."
+          },
+          {
+            "sp": "A",
+            "jp": "いい再会でしたね。私も恩師に会いたくなりました。会いに行かずにはいられませんよ。",
+            "id": "Reuni yang indah ya. Saya jadi ingin bertemu guru saya juga. Tak bisa menahan diri untuk tidak menemuinya."
+          },
+          {
+            "sp": "B",
+            "jp": "ぜひ行ってください。先生もきっと喜びますよ。",
+            "id": "Pergilah. Gurunya pasti senang."
+          },
+          {
+            "sp": "A",
+            "jp": "でも、仕事が忙しくて…。休みを取らないわけにはいきませんね。",
+            "id": "Tapi pekerjaan sibuk... Tidak bisa tidak mengambil cuti ya."
+          },
+          {
+            "sp": "B",
+            "jp": "そうですよ。会えるうちに会っておかないと、後で後悔しますよ。",
+            "id": "Betul. Selagi masih bisa bertemu, temuilah, kalau tidak nanti menyesal."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "近所の店が閉店してしまって、不便で＿＿＿。",
+        "o": [
+          "てはならない",
+          "ざるを得ない",
+          "しかたがない",
+          "ずにはいられない"
+        ],
+        "a": 2,
+        "explain": "てしかたがない = perasaan subjektif yang kuat ('tak tertahankan')."
+      },
+      {
+        "q": "この歌を聞くと、学生時代のことが思い出されて＿＿＿。",
+        "o": [
+          "ならない",
+          "得ない",
+          "いられない",
+          "しかたがない"
+        ],
+        "a": 0,
+        "explain": "てならない = perasaan yang muncul spontan tak terkendali."
+      },
+      {
+        "q": "この曲が聞こえると、体を動かさない＿＿＿。",
+        "o": [
+          "ざるを得ない",
+          "しかたがない",
+          "てはならない",
+          "ではいられない"
+        ],
+        "a": 3,
+        "explain": "ずにはいられない (di sini ではいられない) = tak bisa menahan diri untuk tidak bertindak."
+      },
+      {
+        "q": "親友の結婚式だから、忙しくても出席しない＿＿＿。",
+        "o": [
+          "てはならない",
+          "わけにはいかない",
+          "しかたがない",
+          "ざるを得ない"
+        ],
+        "a": 1,
+        "explain": "わけにはいかない = tidak bisa tidak... karena terhalang keadaan/kewajiban."
+      },
+      {
+        "q": "これだけ証拠が多いのだから、彼の説は間違っていたと言わ＿＿＿。",
+        "o": [
+          "さざるを得ない",
+          "ざるを得ない",
+          "せざるを得る",
+          "ざるを得る"
+        ],
+        "a": 1,
+        "explain": "ざるを得ない = terpaksa harus...; する menjadi せざる (bentuk klasik)."
+      },
+      {
+        "q": "合格発表が待ち遠しくて＿＿＿。",
+        "o": [
+          "ならない",
+          "ざるを得ない",
+          "しかたがない",
+          "わけにはいかない"
+        ],
+        "a": 2,
+        "explain": "てしかたがない = keinginan/perasaan kuat dari dalam diri."
+      },
+      {
+        "q": "さっきから大切なことを忘れているような気がして＿＿＿。",
+        "o": [
+          "ならない",
+          "いられない",
+          "しかたがない",
+          "得ない"
+        ],
+        "a": 0,
+        "explain": "てならない = sesuatu yang terus 'menyerang' kesadaran."
+      },
+      {
+        "q": "彼の冗談を聞いて、笑わず＿＿＿。",
+        "o": [
+          "ざるを得ない",
+          "しかたがない",
+          "てはならない",
+          "にはいられない"
+        ],
+        "a": 3,
+        "explain": "ずにはいられない = dorongan hati yang tak bisa ditahan."
+      },
+      {
+        "q": "子供が熱を出したので、会社を休まない＿＿＿。",
+        "o": [
+          "ざるを得ない",
+          "てはならない",
+          "わけにはいかない",
+          "しかたがない"
+        ],
+        "a": 2,
+        "explain": "わけにはいかない = terhalang keadaan (anak sakit), jadi tak bisa tidak libur."
+      },
+      {
+        "q": "このままでは赤字になるので、値上げを＿＿＿。",
+        "o": [
+          "せざるを得る",
+          "せざるを得ない",
+          "さざるを得ない",
+          "せずには得ない"
+        ],
+        "a": 1,
+        "explain": "せざるを得ない = bentuk benar dari する + ざるを得ない (sangat formal)."
+      }
+    ]
+  },
+  {
+    "id": "n2-26",
+    "bab": 26,
+    "level": "n2",
+    "title": "Harapan & Kekaguman",
+    "desc": "Menyatakan harapan tulus dan kekaguman.",
+    "icon": "✨",
+    "sections": [
+      {
+        "type": "penjelasan",
+        "title": "Harapan & Kekaguman",
+        "body": "<p>Bab ini tentang <b>harapan yang tulus<\/b> dan <b>kekaguman<\/b> — pola-pola puitis dan emosional yang memakai ものだ dan ことだ dengan makna khusus. Inilah bab yang paling sering menjebak di JLPT karena satu bentuk punya banyak makna.<\/p><p><b>たいものだ・ほしいものだ<\/b> menyatakan harapan yang dalam dan tulus ('ingin sekali...'), jauh lebih puitis daripada たい biasa. Sementara <b>ものだろうか<\/b> menyatakan harapan yang disertai keraguan ('andai saja...; semoga...'). Bedakan dengan ものか (penolakan, Bab 24) — beda satu huruf, beda total maknanya!<\/p><p><b>ものだ<\/b> punya dua wajah: (A) kenangan kebiasaan masa lalu ('dulu sering...': 子供のころは泳いだものだ) dan (B) kekaguman ('sungguh...': 日本の四季には驚かされるものだ). Bedakan dari konteks: ada penanda waktu masa lalu → (A), ada rasa takjub → (B).<\/p><p>Dua pola perasaan samar: <b>ものがある<\/b> ('ada rasa...': つらいものがある) dan seruan kagum <b>ことだ<\/b> ('sungguh...!': ありがたいことだ). Puncaknya adalah <b>ことだろう・ことか<\/b> ('betapa...!') untuk ketakjuban yang meluap.<\/p><p>Jebakan umum: たいものだ vs たいと思う (yang kedua jauh lebih ringan); ものがある vs ことがある (pengalaman) — jangan tertukar; dan soal favorit JLPT: satu kalimat dengan ものだ yang harus ditentukan apakah (A) kenangan atau (B) kekaguman dari konteksnya.<\/p>"
+      },
+      {
+        "type": "kotoba",
+        "title": "Kosakata: Harapan & Kekaguman",
+        "items": [
+          {
+            "jp": "願望",
+            "kj": "願望",
+            "r": "ganbou",
+            "id": "hasrat; keinginan kuat",
+            "note": "願望を叶える = mewujudkan keinginan"
+          },
+          {
+            "jp": "希望",
+            "kj": "希望",
+            "r": "kibou",
+            "id": "harapan",
+            "note": "希望を持つ = punya harapan"
+          },
+          {
+            "jp": "憧れ",
+            "kj": "憧れ",
+            "r": "akogare",
+            "id": "dambaan",
+            "note": "憧れの人 = orang yang didambakan"
+          },
+          {
+            "jp": "夢",
+            "kj": "夢",
+            "r": "yume",
+            "id": "mimpi",
+            "note": "夢が叶う = mimpi terwujud"
+          },
+          {
+            "jp": "祈る",
+            "kj": "祈る",
+            "r": "inoru",
+            "id": "berdoa",
+            "note": "成功を祈る = mendoakan keberhasilan"
+          },
+          {
+            "jp": "願う",
+            "kj": "願う",
+            "r": "negau",
+            "id": "memohon; berharap",
+            "note": "幸せを願う = mengharapkan kebahagiaan"
+          },
+          {
+            "jp": "懐かしい",
+            "kj": "懐かしい",
+            "r": "natsukashii",
+            "id": "dirindukan",
+            "note": "懐かしい故郷 = kampung halaman yang dirindukan"
+          },
+          {
+            "jp": "感動",
+            "kj": "感動",
+            "r": "kandou",
+            "id": "terharu",
+            "note": "感動する = terharu"
+          },
+          {
+            "jp": "感心",
+            "kj": "感心",
+            "r": "kanshin",
+            "id": "kagum",
+            "note": "感心する = merasa kagum"
+          },
+          {
+            "jp": "驚嘆",
+            "kj": "驚嘆",
+            "r": "kyoutan",
+            "id": "takjub",
+            "note": "驚嘆する = takjub"
+          },
+          {
+            "jp": "尊敬",
+            "kj": "尊敬",
+            "r": "sonkei",
+            "id": "hormat",
+            "note": "尊敬する = menghormati"
+          },
+          {
+            "jp": "羨ましい",
+            "kj": "羨ましい",
+            "r": "urayamashii",
+            "id": "membuat iri",
+            "note": "羨ましい限りだ = sungguh membuat iri"
+          },
+          {
+            "jp": "幸せ",
+            "kj": "幸せ",
+            "r": "shiawase",
+            "id": "bahagia",
+            "note": "幸せな家庭 = keluarga bahagia"
+          },
+          {
+            "jp": "満足",
+            "kj": "満足",
+            "r": "manzoku",
+            "id": "puas",
+            "note": "満足する = merasa puas"
+          },
+          {
+            "jp": "喜び",
+            "kj": "喜び",
+            "r": "yorokobi",
+            "id": "kegembiraan",
+            "note": "喜びを分かち合う = berbagi kegembiraan"
+          }
+        ]
+      },
+      {
+        "type": "bunpou",
+        "title": "Pola: Harapan & Kekaguman",
+        "items": [
+          {
+            "arti": "ingin sekali… / sangat berharap…",
+            "examples": [
+              {
+                "id": "Kelak aku ingin sekali tinggal di rumah seperti ini.",
+                "jp": "将来はこんな家に住みたいものだなあ。",
+                "rd": "しょうらいはこんな いえにすみたいものだなあ。"
+              },
+              {
+                "id": "Kalau lukisannya seindah itu, aku benar-benar ingin melihatnya langsung.",
+                "jp": "そんなにきれいな絵なら、ぜひ一度見てみたいものです。",
+                "rd": "そんなにきれいなえなら、ぜひいちどみてみたいものです。"
+              },
+              {
+                "id": "Kali ini aku sangat berharap eksperimennya berhasil.",
+                "jp": "今度こそ実験が成功してほしいものだ。",
+                "rd": "こんどこそじっけんがせいこうしてほしいものだ。"
+              },
+              {
+                "id": "Aku sangat berharap pemerintah tidak menghambur-hamburkan uang pajak.",
+                "jp": "国には税金の無駄遣いをしないでほしいものだ。",
+                "rd": "くににはぜいきんのむだづかいをしないでほしいものだ。"
+              }
+            ],
+            "explain": "Pola ini mengungkapkan harapan yang tulus dan kuat — 〜たいものだ untuk keinginan diri sendiri ('ingin sekali …'), sedangkan 〜てほしいものだ untuk harapan kepada orang lain ('sangat berharap …'). Perhatikan: pola ini dipakai untuk harapan umum yang diucapkan seperti gumaman hati, bukan untuk menyampaikan permintaan konkret langsung kepada lawan bicara.",
+            "pattern": "kata kerja bentuk -masu + たいものだ / kata kerja bentuk -te atau bentuk -naide + ほしいものだ",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk -masu + たいものだ",
+                "v": "keinginan diri sendiri yang kuat"
+              },
+              {
+                "k": "kata kerja bentuk -te / -naide + ほしいものだ",
+                "v": "harapan kuat kepada orang lain"
+              }
+            ]
+          },
+          {
+            "arti": "(A) dulu sering… / (B) sungguh…",
+            "examples": [
+              {
+                "id": "Waktu kecil, setiap musim panas aku selalu berenang di sungai ini.",
+                "jp": "子供のころは、夏になるとこの川で泳いだものです。",
+                "rd": "こどものころは、なつになるとこのかわでおよいだものです。"
+              },
+              {
+                "id": "Dulu ketika kakek masih hidup, setiap tahun baru keluarga besar selalu berkumpul.",
+                "jp": "祖父が生きていたころは、毎年お正月になると親戚が集まったものだ。",
+                "rd": "そふがいきていたころは、まいとおしょうがつになるとしんせきがあつまったものだ。"
+              },
+              {
+                "id": "Waktu muda aku sering pergi ke konser, tapi akhir-akhir ini sudah tidak lagi.",
+                "jp": "若いときはよくコンサートに行ったものだが、最近は行かなくなった。",
+                "rd": "わかいときはよくコンサートにいったものだが、さいきんはいかなくなった。"
+              },
+              {
+                "id": "Sudah 10 tahun sejak lulus ya. Waktu berlalu begitu cepat.",
+                "jp": "卒業してからもう10年か。時間が過ぎるのは早いものだ。",
+                "rd": "そつぎょうしてからもう10ねんか。じかんがすぎるのははやいものだ。"
+              },
+              {
+                "id": "Tanpa pergi ke perpustakaan pun bisa mengumpulkan banyak informasi lewat internet. Betapa nyamannya zaman sekarang.",
+                "jp": "図書館に行かなくてもインターネットでいろんな情報が集められる。便利な世の中になったものだ。",
+                "rd": "としょかんにいかなくてもインターネットでいろんなじょうほうがあつめられる。べんりなよのなかになったものだ。"
+              },
+              {
+                "id": "Hebat sekali bisa menemukan kesalahan sekecil ini di kamus.",
+                "jp": "辞書の中のこんな小さな間違いをよく見つけられたものだ。",
+                "rd": "じしょのなかのこんなちいさなまちがいをよくみつけられたものだ。"
+              }
+            ],
+            "explain": "Pola ini punya dua makna yang berbeda. Makna A: mengenang kebiasaan masa lalu dengan rasa rindu — memakai bentuk lampau (-ta), dan tidak dipakai untuk kejadian yang hanya terjadi sekali. Makna B: mengungkapkan perasaan yang sangat kuat — kagum, takjub, atau justru kesal — memakai bentuk biasa dan sering bersama kata sifat subjektif atau kata keterangan seperti よく dan ずいぶん. Hati-hati: makna B tidak dipakai untuk perbuatan yang disengaja oleh pembicara sendiri.",
+            "pattern": "kata kerja bentuk -ta + ものだ / kata kerja atau kata sifat bentuk biasa + ものだ",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk -ta + ものだ",
+                "v": "makna A: mengenang kebiasaan masa lalu"
+              },
+              {
+                "k": "kata kerja / kata sifat bentuk biasa + ものだ",
+                "v": "makna B: perasaan yang sangat kuat (kagum/takjub/kesal)"
+              }
+            ]
+          },
+          {
+            "arti": "andai saja… / semoga…",
+            "examples": [
+              {
+                "id": "Andai saja penyakit ibuku bisa sembuh dengan cara apa pun.",
+                "jp": "どうにかして母の病気が治らないものか。",
+                "rd": "どうにかしてははのびょうきがなおらないものか。"
+              },
+              {
+                "id": "Adakah orang yang mau mengambil alih pekerjaan ini?",
+                "jp": "だれかこの仕事を引き受けてくれる人はいないものだろうか。",
+                "rd": "だれかこのしごとをひきうけてくれるひとはいないものだろうか。"
+              },
+              {
+                "id": "Jam ini agak terlalu mahal. Semoga bisa dapat yang lebih murah di tempat lain.",
+                "jp": "この時計はちょっと高すぎる。どこかでもっと安く買えないものかな。",
+                "rd": "このとけいはちょっとたかすぎる。どこかでもっとやすくかえないものかな。"
+              }
+            ],
+            "explain": "Pola ini mengungkapkan harapan yang sulit terwujud — seperti bergumam 'seandainya saja …' atau 'semoga …'. Cara sambungnya: kata kerja bentuk -nai + ものか (atau ものだろうか yang bernuansa lebih halus dan ragu). Hati-hati dari buku: pola ini hanya menempel pada kata kerja potensial atau kata kerja yang tidak mengandung kehendak pembicara — bukan untuk menyatakan keinginan melakukan sesuatu yang bisa dikendalikan sendiri.",
+            "pattern": "kata kerja bentuk -nai + もの（だろう）か",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk -nai + ものか",
+                "v": "bentuk dasar"
+              },
+              {
+                "k": "kata kerja bentuk -nai + ものだろうか",
+                "v": "lebih halus, bernuansa ragu"
+              }
+            ]
+          },
+          {
+            "arti": "ada perasaan… / terasa…",
+            "examples": [
+              {
+                "id": "Berangkat kerja 2 jam setiap hari itu benar-benar melelahkan.",
+                "jp": "毎日2時間もかけて通勤するのは、かなりつらいものがある。",
+                "rd": "まいにち2じかんもかけてつうきんするのは、かなりつらいものがある。"
+              },
+              {
+                "id": "Rasanya sangat disayangkan harus menyerah padahal sudah sejauh ini.",
+                "jp": "ここまで完成しているのにあきらめなければならないなんて、残念なものがある。",
+                "rd": "ここまでかんせいしているのにあきらめなければならないなんて、ざんねんなものがある。"
+              },
+              {
+                "id": "Aku dipecat secara sepihak. Ada perasaan yang benar-benar tidak bisa kuterima.",
+                "jp": "一方的に仕事を辞めさせられた。どうしても納得できないものがある。",
+                "rd": "いっぽうてきにしごとをやめさせられた。どうしてもなっとくできないものがある。"
+              }
+            ],
+            "explain": "Pola ini dipakai untuk mengungkapkan kesan atau perasaan pembicara — semacam 'ada rasa …-nya'. Menempel pada ungkapan kesan atau penilaian subjektif pembicara, dan selalu memakai bentuk sekarang (bukan bentuk lampau).",
+            "pattern": "kata kerja atau kata sifat bentuk biasa sekarang + ものがある",
+            "tabel": [
+              {
+                "k": "kata kerja bentuk biasa sekarang + ものがある",
+                "v": "mis. 通勤するのはつらいものがある"
+              },
+              {
+                "k": "kata sifat-i + ものがある",
+                "v": "mis. 残念なものがある"
+              },
+              {
+                "k": "kata sifat-na bentuk -na + ものがある",
+                "v": "mis. 納得できないものがある"
+              }
+            ]
+          },
+          {
+            "arti": "sungguh…!",
+            "examples": [
+              {
+                "id": "Ada orang yang membuang hewan peliharaannya begitu saja karena terlalu besar. Sungguh keterlaluan.",
+                "jp": "大きくなりすぎたからとペットを簡単に捨てる人がいる。なんとひどいことだ。",
+                "rd": "おおきくなりすぎたからとペットをかんたんにすてるひとがいる。なんとひどいことだ。"
+              },
+              {
+                "id": "Aku punya teman yang selalu membantu saat kesusahan. Sungguh bersyukur.",
+                "jp": "困ったとき助けてくれる友達がいる。ありがたいことだ。",
+                "rd": "こまったときたすけてくれるともだちがいる。ありがたいことだ。"
+              },
+              {
+                "id": "Kutenelepon berkali-kali tidak diangkat. Sungguh menyusahkan.",
+                "jp": "いくら電話しても出ない。全く困ったことだ。",
+                "rd": "いくらでんわしてもでない。まったくこまったことだ。"
+              }
+            ],
+            "explain": "Pola ini adalah ungkapan kekaguman yang kuat — bisa berupa keterkejutan, rasa syukur, atau sindiran — semacam 'benar-benar …!'. Hanya menempel pada kata sifat yang menyatakan penilaian subjektif pembicara. Hati-hati: kata kerja bentuk lampau yang berfungsi seperti kata sifat, misalnya 困った, juga bisa dipakai di sini.",
+            "pattern": "kata sifat-i / kata sifat-na bentuk -na + ことだ",
+            "tabel": [
+              {
+                "k": "kata sifat-i + ことだ",
+                "v": "mis. ひどいことだ"
+              },
+              {
+                "k": "kata sifat-na bentuk -na + ことだ",
+                "v": "mis. ありがたいことだ"
+              },
+              {
+                "k": "kata kerja bentuk -ta yang berfungsi seperti kata sifat + ことだ",
+                "v": "mis. 困ったことだ"
+              }
+            ]
+          },
+          {
+            "arti": "betapa… / entah berapa…",
+            "examples": [
+              {
+                "id": "Berapa tahun gerangan yang dibutuhkan untuk menyelesaikan kastil ini?",
+                "jp": "この城を完成させるのに、いったい何年かかったことだろう。",
+                "rd": "このしろをかんせいさせるのに、いったいなんねんかかったことだろう。"
+              },
+              {
+                "id": "Sudah berapa kali aku menasihati anakku agar tidak boros.",
+                "jp": "「無駄遣いをするな」と子供にもう何回注意したことか。",
+                "rd": "「むだづかいをするな」とこどもにもうなんかいちゅういしたことか。"
+              },
+              {
+                "id": "Orang tuamu pasti sangat mengkhawatirkanmu yang tinggal jauh dari mereka.",
+                "jp": "離れて暮らしているあなたのことを、ご両親はどんなに心配していることか。",
+                "rd": "はなれてくらしているあなたのことを、ごりょうしんはどんなにしんぱいしていることか。"
+              }
+            ],
+            "explain": "Pola ini adalah bahasa tulis yang dipakai untuk menekankan jumlah atau kadar yang luar biasa — 'entah berapa banyak …' atau 'betapa sangat …'. Selalu dipakai bersama kata tanya penunjuk kadar seperti どんなに (betapa), 何回 (berapa kali), いったい, atau なんと. Bentuk ことだろう bernuansa merenung, sedangkan ことか bernuansa seruan yang lebih kuat.",
+            "pattern": "kata tanya penunjuk kadar + kata kerja/kata sifat/kata benda bentuk biasa + ことだろう・ことか",
+            "tabel": [
+              {
+                "k": "…ことだろう",
+                "v": "nuansa merenung"
+              },
+              {
+                "k": "…ことか",
+                "v": "nuansa seruan yang lebih kuat"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "kanji",
+        "title": "Kanji Bab 26",
+        "items": [
+          {
+            "ch": "願",
+            "kun": "ねがう",
+            "on": "ガン",
+            "id": "memohon",
+            "note": "願望 (がんぼう) = hasrat; keinginan"
+          },
+          {
+            "ch": "望",
+            "kun": "のぞむ",
+            "on": "ボウ",
+            "id": "mengharap",
+            "note": "希望 (きぼう) = harapan"
+          },
+          {
+            "ch": "祈",
+            "kun": "いのる",
+            "on": "キ",
+            "id": "berdoa",
+            "note": "祈る (いのる) = berdoa"
+          },
+          {
+            "ch": "夢",
+            "kun": "ゆめ",
+            "on": "ム",
+            "id": "mimpi",
+            "note": "夢 (ゆめ) = mimpi"
+          },
+          {
+            "ch": "懐",
+            "kun": "なつかしい",
+            "on": "カイ",
+            "id": "rindu",
+            "note": "懐かしい (なつかしい) = dirindukan"
+          },
+          {
+            "ch": "感",
+            "kun": "—",
+            "on": "カン",
+            "id": "rasa",
+            "note": "感動 (かんどう) = terharu"
+          },
+          {
+            "ch": "敬",
+            "kun": "うやまう",
+            "on": "ケイ",
+            "id": "menghormati",
+            "note": "尊敬 (そんけい) = hormat"
+          },
+          {
+            "ch": "羨",
+            "kun": "うらやましい",
+            "on": "セン",
+            "id": "iri",
+            "note": "羨ましい (うらやましい) = membuat iri"
+          }
+        ]
+      },
+      {
+        "type": "kaiwa",
+        "title": "Percakapan",
+        "lines": [
+          {
+            "sp": "A",
+            "jp": "将来の夢は何ですか。",
+            "id": "Apa impian masa depanmu?"
+          },
+          {
+            "sp": "B",
+            "jp": "世界中を旅して、色々な文化に触れてみたいものです。",
+            "id": "Saya ingin sekali berkeliling dunia dan menyentuh berbagai budaya."
+          },
+          {
+            "sp": "A",
+            "jp": "素晴らしい夢ですね。きっと叶いますよ。",
+            "id": "Impian yang luar biasa ya. Pasti terwujud."
+          },
+          {
+            "sp": "B",
+            "jp": "子供のころは、地図を眺めては旅した気分になったものです。",
+            "id": "Waktu kecil, saya sering merasa seperti berwisata sambil memandangi peta."
+          },
+          {
+            "sp": "A",
+            "jp": "なんと素敵なことでしょう。私も若いころはよく一人旅をしたものです。",
+            "id": "Betapa indahnya. Saya pun waktu muda dulu sering bepergian sendirian."
+          },
+          {
+            "sp": "B",
+            "jp": "そうなんですか。いつか一緒に行けたらいいですね。行けないものだろうか。",
+            "id": "Oh ya? Andai saja suatu hari kita bisa pergi bersama."
+          },
+          {
+            "sp": "A",
+            "jp": "ぜひ行きましょう。考えるだけでわくわくするものがあります。",
+            "id": "Ayo pergi. Hanya membayangkannya saja sudah ada rasa berdebar."
+          },
+          {
+            "sp": "B",
+            "jp": "なんとありがたいことでしょう。ぜひお願いします。",
+            "id": "Betapa baiknya kamu. Tolong ajak saya ya."
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "将来はこんな家に住んで＿＿＿なあ。",
+        "o": [
+          "みたいわけだ",
+          "みたいはずだ",
+          "みたいものだ",
+          "みたいことだ"
+        ],
+        "a": 2,
+        "explain": "たいものだ = harapan tulus yang dalam ('ingin sekali...')."
+      },
+      {
+        "q": "子供のころは、この川で泳いだ＿＿＿。",
+        "o": [
+          "ものだ",
+          "ことだ",
+          "ものか",
+          "わけだ"
+        ],
+        "a": 0,
+        "explain": "ものだ (A) = kenangan kebiasaan masa lalu ('dulu sering...')."
+      },
+      {
+        "q": "日本の四季の美しさには驚かされる＿＿＿。",
+        "o": [
+          "ことだ",
+          "はずだ",
+          "わけだ",
+          "ものだ"
+        ],
+        "a": 3,
+        "explain": "ものだ (B) = kekaguman ('sungguh...'). Bedakan dengan (A) dari konteks."
+      },
+      {
+        "q": "どうにかして母の病気が治らない＿＿＿。",
+        "o": [
+          "ことだろうか",
+          "ものだろうか",
+          "ものか",
+          "ものだろう"
+        ],
+        "a": 1,
+        "explain": "ものだろうか = harapan yang disertai keraguan ('andai saja...')."
+      },
+      {
+        "q": "毎日2時間の通勤は、かなりつらい＿＿＿。",
+        "o": [
+          "はずがある",
+          "ものがある",
+          "ことがある",
+          "わけがある"
+        ],
+        "a": 1,
+        "explain": "ものがある = ada perasaan samar yang menyertai ('ada rasa...')."
+      },
+      {
+        "q": "困ったとき助けてくれる友達がいる。ありがたい＿＿＿。",
+        "o": [
+          "ものだ",
+          "わけだ",
+          "ことだ",
+          "ことか"
+        ],
+        "a": 2,
+        "explain": "kata sifat + ことだ = seruan kagum ('sungguh...!')."
+      },
+      {
+        "q": "「無駄遣いするな」と子供にいったい何回注意した＿＿＿。",
+        "o": [
+          "ことか",
+          "ものか",
+          "ことだろう",
+          "ことだ"
+        ],
+        "a": 0,
+        "explain": "ことか = 'betapa...!' untuk ketakjuban yang meluap."
+      },
+      {
+        "q": "この巨大なダムを造るのに、いったい何年かかった＿＿＿。",
+        "o": [
+          "ことである",
+          "ものだろう",
+          "ことだった",
+          "ことだろう"
+        ],
+        "a": 3,
+        "explain": "ことだろう = ketakjuban ('betapa...!') dengan nada penegasan."
+      },
+      {
+        "q": "祖父が生きていたころは、毎年正月に親戚が集まった＿＿＿。",
+        "o": [
+          "ものか",
+          "ことだ",
+          "ものだ",
+          "ことか"
+        ],
+        "a": 2,
+        "explain": "Ada penanda masa lalu (ころは) → ものだ (A) kenangan."
+      },
+      {
+        "q": "だれかこの仕事を引き受けてくれる人はいない＿＿＿。",
+        "o": [
+          "ものだろう",
+          "ものだろうか",
+          "ことだろうか",
+          "ものか"
+        ],
+        "a": 1,
+        "explain": "ものだろうか = harapan ('semoga ada...'). Jangan tertukar dengan ものか (penolakan)."
+      }
+    ]
+  }
+],
   "n1": []
 };
