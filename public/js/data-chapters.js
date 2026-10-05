@@ -3576,13 +3576,13 @@ const CHAPTERS = {
         {
           "q": "3時___会議があります。(Rapat ada DARI jam 3)",
           "o": [
+            "から",
+            "まで",
             "より",
-            "ほうが",
-            "いちばん",
-            "まで"
+            "ほど"
           ],
           "a": 0,
-          "explain": "より juga berarti titik awal \"dari\" — bedakan dari konteks!"
+          "explain": "Titik awal \"dari\" jam 3 → pakai から. Pasangannya まで (sampai)."
         },
         {
           "q": "今週は先週ほどいそがしくありません = …",
