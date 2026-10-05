@@ -168,7 +168,7 @@ const LIB_TYPES = [
 const app = createApp({
   data: () => ({
     mode: 'login', fName: '', fEmail: '', fPass: '', fLevel: 'hiragana', fIntensity: 'sedang',
-    tab: ['home','library','quiz','kamus','games','saya'].includes(localStorage.getItem('nl_tab')) ? localStorage.getItem('nl_tab') : 'home',
+    tab: ['home','library','quiz','kamus','tanya','saya'].includes(localStorage.getItem('nl_tab')) ? localStorage.getItem('nl_tab') : 'home',
     learnLevel: 'hiragana', openLesson: null,
     libQ: '', libType: 'all',
     // modul (pusat materi)
@@ -179,9 +179,8 @@ const app = createApp({
     genQs: [], shuffledQs: [], quizResume: null,
     // chapter (jalur belajar Soumatome)
     chapterProgress: {}, openChapter: null, chQuiz: null,
-    // games
-    gTab: 'match', mCards: [], mOpen: [], mHits: 0, mMoves: 0,
-    sprintQ: null, sprintScore: 0, sprintTime: 60, sprintTimer: null, sprintOn: false, sprintStreak: 0,
+    // tanya AI (Muse Sensei)
+    askMsgs: [], askInput: '', askLoading: false,
     // kamus
     kamusQ: '', kamusTab: 'kotoba', kamusJlpt: 0, kamusResults: [], kamusLoading: false, kamusDetail: null, kamusTimer: null, kamusId: '', kamusKanjiId: '', translating: false,
     // srs
@@ -192,7 +191,7 @@ const app = createApp({
   }),
   computed: {
     pageTitle() {
-      const t = { home: 'Beranda', library: 'Modul', quiz: 'Quiz', quizrun: 'Quiz', adaptiverun: 'Quiz Adaptif', kamus: 'Kamus', games: 'Game', saya: 'Saya', srsrun: 'Review' };
+      const t = { home: 'Beranda', library: 'Modul', quiz: 'Quiz', quizrun: 'Quiz', adaptiverun: 'Quiz Adaptif', kamus: 'Kamus', tanya: 'Tanya AI', saya: 'Saya', srsrun: 'Review' };
       return t[this.tab] || '';
     },
     user() { return store.user; },
@@ -358,7 +357,7 @@ const app = createApp({
     },
     kanjisOf(j) { const m = String(j || '').match(/[一-鿿]/g); return m || []; },
 
-    saveTab() { const m = { quizrun: 'quiz', quizdone: 'quiz', adaptiverun: 'quiz', srsrun: 'saya' }; localStorage.setItem('nl_tab', m[this.tab] || this.tab); },
+    saveTab() { const m = { quizrun: 'quiz', quizdone: 'quiz', adaptiverun: 'quiz', srsrun: 'saya', games: 'tanya' }; localStorage.setItem('nl_tab', m[this.tab] || this.tab); },
     saveQuizProgress() {
       if (!['quizrun', 'adaptiverun'].includes(this.tab) || this.qDone) return;
       try {
@@ -687,50 +686,33 @@ const app = createApp({
     },
     playAudio(t) { speak(t); },
     fmt(s) { return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`; },
-    // ---- games ----
-    startMatch() {
-      const pool = [...KANA.hiragana.slice(0, 20)];
-      const pick = pool.sort(() => Math.random() - .5).slice(0, 8);
-      const cards = [];
-      pick.forEach((k, i) => { cards.push({ id: i, t: k.k, pair: i }); cards.push({ id: i, t: k.r, pair: i }); });
-      this.mCards = cards.sort(() => Math.random() - .5).map((c, i) => ({ ...c, k: i, open: false, hit: false }));
-      this.mOpen = []; this.mHits = 0; this.mMoves = 0;
+    // ---- Tanya AI (Muse Sensei) ----
+    loadAsk() {
+      try {
+        const h = JSON.parse(localStorage.getItem('nl_ask') || '[]');
+        this.askMsgs = Array.isArray(h) ? h.slice(-50) : [];
+      } catch { this.askMsgs = []; }
     },
-    flip(c) {
-      if (c.open || c.hit || this.mOpen.length === 2) return;
-      c.open = true; this.mOpen.push(c);
-      if (this.mOpen.length === 2) {
-        this.mMoves++;
-        const [a, b] = this.mOpen;
-        if (a.pair === b.pair) {
-          setTimeout(() => { a.hit = b.hit = true; this.mOpen = []; this.mHits++;
-            if (this.mHits === 8) {
-              const sc = Math.max(100 - this.mMoves * 2, 10);
-              toast(`Menang! ${this.mMoves} langkah 🎉`); this.gainXP(sc, 'kana match');
-              api('/api/game/score', { method: 'POST', body: JSON.stringify({ game: 'match', score: sc }) }).catch(() => {});
-            }
-          }, 400);
-        } else setTimeout(() => { a.open = b.open = false; this.mOpen = []; }, 800);
+    saveAsk() {
+      try { localStorage.setItem('nl_ask', JSON.stringify(this.askMsgs.slice(-50))); } catch {}
+    },
+    clearAsk() { this.askMsgs = []; this.saveAsk(); },
+    scrollAsk() { this.$nextTick(() => { const b = this.$refs.askBox; if (b) b.scrollTop = b.scrollHeight; }); },
+    async sendAsk() {
+      const q = this.askInput.trim();
+      if (!q || this.askLoading) return;
+      if (!store.token) { toast('Login dulu ya untuk tanya Muse Sensei'); return; }
+      this.askInput = '';
+      this.askMsgs.push({ role: 'user', text: q });
+      this.askLoading = true; this.scrollAsk();
+      try {
+        const hist = this.askMsgs.slice(-7, -1).map(m => ({ role: m.role, text: m.text }));
+        const d = await api('/api/ask', { method: 'POST', body: JSON.stringify({ q, hist }) });
+        this.askMsgs.push({ role: 'ai', text: d.a });
+      } catch (e) {
+        this.askMsgs.push({ role: 'ai', text: '😅 ' + (e.message || 'Sensei lagi sibuk, coba lagi ya') });
       }
-    },
-    startSprint() {
-      this.sprintScore = 0; this.sprintStreak = 0; this.sprintTime = 60; this.sprintOn = true;
-      this.nextSprint();
-      clearInterval(this.sprintTimer);
-      this.sprintTimer = setInterval(() => { this.sprintTime--; if (this.sprintTime <= 0) { clearInterval(this.sprintTimer); this.sprintOn = false; toast(`Waktu habis! Skor: ${this.sprintScore} 🎯`); this.gainXP(this.sprintScore, 'kana sprint'); api('/api/game/score', { method: 'POST', body: JSON.stringify({ game: 'sprint', score: this.sprintScore }) }).catch(() => {}); } }, 1000);
-    },
-    nextSprint() {
-      const all = KANA.hiragana.concat(KANA.katakana);
-      const k = all[Math.floor(Math.random() * all.length)];
-      const wrong = all[Math.floor(Math.random() * all.length)].r;
-      const opts = [k.r, wrong].sort(() => Math.random() - .5);
-      this.sprintQ = { k: k.k, opts, ans: k.r };
-    },
-    sprintPick(o) {
-      if (!this.sprintOn) return;
-      if (o === this.sprintQ.ans) { this.sprintScore += 10; this.sprintStreak++; speak(this.sprintQ.k); }
-      else { this.sprintScore = Math.max(0, this.sprintScore - 5); this.sprintStreak = 0; }
-      this.nextSprint();
+      this.askLoading = false; this.saveAsk(); this.scrollAsk();
     },
     // ---- kamus ----
     jlptLabel(j) { return ({ 4: 'N5', 3: 'N4', 2: 'N3', 1: 'N1' })[j] || ''; },
@@ -862,7 +844,7 @@ const app = createApp({
       document.body.appendChild(p); setTimeout(() => p.remove(), 12000);
     }, 1800);
     this.refresh().then(() => this.restoreChapterState());
-    this.startMatch();
+    this.loadAsk();
     this.applySb();
     try {
       const sq = JSON.parse(localStorage.getItem('nl_quiz') || 'null');
@@ -1330,31 +1312,34 @@ const app = createApp({
       <button class="btn" @click="tab='quiz'">Kembali</button>
     </section>
 
-    <!-- ============ GAMES ============ -->
-    <section v-if="tab==='games'" class="tabsec">
-      <h2 class="ttl"><span v-html="ic('gamepad')"></span> Games</h2>
-      <div class="mode-grid">
-        <div class="mode" :class="{on: gTab==='match'}" @click="gTab='match'"><div class="mode-e" v-html="ic('card',30)"></div><b>Kana Match</b></div>
-        <div class="mode" :class="{on: gTab==='sprint'}" @click="gTab='sprint'"><div class="mode-e" v-html="ic('sparkles',30)"></div><b>Kana Sprint</b></div>
-      </div>
-      <div v-if="gTab==='match'" class="card">
-        <div class="passage"><b>Cara main:</b> buka kartu & cocokkan <b>huruf kana</b> dengan <b>cara bacanya</b>. Temukan 8 pasang dengan langkah sesedikit mungkin!</div>
-        <p><b>{{ mHits }}/8 pasang</b> · <span class="muted small">{{ mMoves }} langkah</span></p>
-        <div class="game-board">
-          <div v-for="c in mCards" :key="c.k" class="gcard" :class="{open:c.open,hit:c.hit}" @click="flip(c)">{{ c.open||c.hit ? c.t : '?' }}</div>
+    <!-- ============ TANYA AI (Muse Sensei) ============ -->
+    <section v-if="tab==='tanya'" class="tabsec">
+      <h2 class="ttl"><span v-html="ic('chat')"></span> Tanya AI</h2>
+      <div class="card" style="padding:12px">
+        <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--pri-d));display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">🌸</div>
+          <div><b>Muse Sensei</b><div class="muted small">Sensei AI bahasa Jepangmu — tanya apa aja!</div></div>
+          <button v-if="askMsgs.length" class="mini-btn" @click="clearAsk()" title="Hapus riwayat" style="margin-left:auto">🗑️</button>
         </div>
-        <button class="btn btn-block" @click="startMatch"><span v-html="ic('refresh',16)"></span> Main lagi</button>
-      </div>
-      <div v-if="gTab==='sprint'" class="card center">
-        <div class="passage" style="text-align:left"><b>Cara main:</b> pilih <b>cara baca</b> yang benar secepat mungkin. Benar <b>+10</b>, salah <b>-5</b>. Kumpulkan skor tertinggi dalam <b>60 detik</b>!</div>
-        <button v-if="!sprintOn && sprintTime!==0" class="btn" @click="startSprint"><span v-html="ic('play',16)"></span> Mulai</button>
-        <div v-if="sprintQ && sprintOn">
-          <div class="sprint-kana">{{ sprintQ.k }}</div>
-          <div class="timer"><span v-html="ic('clock',17)"></span> {{ sprintTime }}s</div>
-          <div style="margin:6px 0"><b>Skor: {{ sprintScore }}</b> <span class="streak" v-if="sprintStreak>=3"><span v-html="ic('flame',15)"></span> x{{ sprintStreak }}</span></div>
-          <button v-for="o in sprintQ.opts" :key="o" class="opt center big" @click="sprintPick(o)">{{ o }}</button>
+        <div ref="askBox" style="max-height:55vh;overflow-y:auto;display:flex;flex-direction:column;gap:8px;margin-bottom:10px">
+          <div v-if="!askMsgs.length" class="center muted small" style="padding:16px 8px">
+            <p style="margin-bottom:10px">👋 Halo! Aku <b>Muse Sensei</b>.<br>Tanya soal tata bahasa, kosakata, kanji, JLPT, atau apa pun tentang bahasa Jepang!</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center">
+              <button v-for="s in ['Apa bedanya は dan が?','Buatkan contoh kalimat pakai て-form','Jelaskan kanji 愛','Tips lulus JLPT N5']" :key="s" class="mini-btn" @click="askInput=s;sendAsk()">{{ s }}</button>
+            </div>
+          </div>
+          <div v-for="(m,mi) in askMsgs" :key="mi" :style="{alignSelf: m.role==='user' ? 'flex-end' : 'flex-start', maxWidth: '88%'}">
+            <div :style="{background: m.role==='user' ? 'var(--pri)' : 'var(--bg2)', color: m.role==='user' ? '#fff' : 'var(--ink)', borderRadius: '14px', padding: '9px 13px', fontSize: '14px', lineHeight: 1.65, whiteSpace: 'pre-line', wordBreak: 'keep-all'}">{{ m.text }}</div>
+          </div>
+          <div v-if="askLoading" style="align-self:flex-start">
+            <div style="background:var(--bg2);border-radius:14px;padding:10px 16px;font-size:14px" class="muted">Muse Sensei mengetik<span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></div>
+          </div>
         </div>
-        <div v-if="!sprintOn && sprintTime===0" class="pop"><h2>Skor akhir: {{ sprintScore }}</h2><button class="btn" @click="startSprint">Main lagi</button></div>
+        <div style="display:flex;gap:8px">
+          <input v-model="askInput" @keyup.enter="sendAsk()" :disabled="askLoading" placeholder="Tanya apa pun tentang bahasa Jepang..." style="flex:1;padding:10px 14px;border:1px solid var(--line);border-radius:20px;font-size:14px;background:var(--bg);color:var(--ink)" maxlength="1000">
+          <button class="btn" @click="sendAsk()" :disabled="askLoading || !askInput.trim()" style="border-radius:50%;width:44px;height:44px;padding:0;flex-shrink:0" title="Kirim">➤</button>
+        </div>
+        <p class="muted small center" style="margin:8px 0 0">Maks 30 pertanyaan/jam · Riwayat tersimpan di HP ini</p>
       </div>
     </section>
 
@@ -1506,7 +1491,7 @@ const app = createApp({
       <button :class="{on:tab==='library'}" @click="tab='library'"><span v-html="ic('layers')"></span>Modul</button>
       <button :class="{on:['quiz','quizrun','adaptiverun'].includes(tab)}" @click="tab='quiz'"><span v-html="ic('clock')"></span>Quiz</button>
       <button :class="{on:tab==='kamus'}" @click="tab='kamus'"><span v-html="ic('search')"></span>Kamus</button>
-      <button :class="{on:tab==='games'}" @click="tab='games'"><span v-html="ic('gamepad')"></span>Game</button>
+      <button :class="{on:tab==='tanya'}" @click="tab='tanya'"><span v-html="ic('chat')"></span>Tanya AI</button>
       <button :class="{on:['saya','srsrun'].includes(tab)}" @click="tab='saya'"><span v-html="ic('user')"></span>Saya</button>
     </nav>
   </div>

@@ -365,6 +365,54 @@ app.get('/api/leaderboard', auth, (req, res) => {
   res.json({ board: rows, my_weekly: me });
 });
 
+// ---- Muse Sensei (Tanya AI) ----
+const GEMINI_KEY = process.env.GEMINI_API_KEY || '';
+const ASK_SYS = `Kamu adalah Muse Sensei, sensei bahasa Jepang yang asik dan ramah di aplikasi NihongoLearn. Jawab SEMUA pertanyaan dalam Bahasa Indonesia yang santai dan bersahabat (pakai "kamu").
+
+Aturan:
+- Fokus membantu belajar bahasa Jepang: tata bahasa, kosakata, kanji, pola kalimat, JLPT, JFT, SSW, percakapan sehari-hari.
+- Beri contoh kalimat Jepang + bacaan + artinya tiap menjelaskan.
+- Jawaban ringkas tapi jelas, maksimal ~250 kata. Pakai format rapi (poin-poin bila perlu).
+- Kalau pertanyaan di luar bahasa Jepang, jawab singkat lalu arahkan kembali ke belajar bahasa Jepang.
+- Jangan pernah mengaku sebagai AI lain; kamu adalah Muse Sensei.`;
+const askLimit = {}; // userId -> { n, reset }
+app.post('/api/ask', auth, async (req, res) => {
+  try {
+    if (!GEMINI_KEY) return res.status(503).json({ error: 'Layanan AI belum aktif' });
+    const q = String(req.body.q || '').trim();
+    if (!q) return res.status(400).json({ error: 'Pertanyaannya kosong' });
+    if (q.length > 1000) return res.status(400).json({ error: 'Pertanyaan terlalu panjang (maks 1000 karakter)' });
+    // rate limit: 30/jam per user
+    const uid = req.user.id, now = Date.now();
+    const l = askLimit[uid] || { n: 0, reset: now + 3600000 };
+    if (now > l.reset) { l.n = 0; l.reset = now + 3600000; }
+    if (l.n >= 30) return res.status(429).json({ error: 'Batas 30 pertanyaan/jam tercapai, coba lagi nanti ya' });
+    l.n++; askLimit[uid] = l;
+    const hist = Array.isArray(req.body.hist) ? req.body.hist.slice(-6) : [];
+    const contents = hist
+      .filter(m => m && (m.role === 'user' || m.role === 'ai') && m.text)
+      .map(m => ({ role: m.role === 'ai' ? 'model' : 'user', parts: [{ text: String(m.text).slice(0, 1000) }] }));
+    contents.push({ role: 'user', parts: [{ text: q }] });
+    const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + GEMINI_KEY, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        system_instruction: { parts: [{ text: ASK_SYS }] },
+        contents,
+        generationConfig: { maxOutputTokens: 800, temperature: 0.7 }
+      })
+    });
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok) return res.status(502).json({ error: 'Sensei lagi sibuk, coba lagi sebentar ya' });
+    const text = d.candidates && d.candidates[0] && d.candidates[0].content &&
+      d.candidates[0].content.parts.map(p => p.text || '').join('').trim();
+    if (!text) return res.status(502).json({ error: 'Sensei lagi sibuk, coba lagi sebentar ya' });
+    res.json({ a: text });
+  } catch (e) {
+    res.status(502).json({ error: 'Sensei lagi sibuk, coba lagi sebentar ya' });
+  }
+});
+
 // ---- SRS flashcards (pola WaniKani/Mazii) ----
 app.get('/api/srs', auth, (req, res) => {
   const due = db.prepare(`SELECT * FROM srs_cards WHERE user_id = ? AND date(due) <= date('now') ORDER BY due LIMIT 30`).all(req.user.id);

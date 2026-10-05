@@ -1,5 +1,5 @@
 /* NihongoLearn PWA — service worker */
-const CACHE = 'nihongolearn-v1';
+const CACHE = 'nihongolearn-v2';
 const SHELL = [
   '/',
   '/index.html',
@@ -9,7 +9,7 @@ const SHELL = [
   '/icons/maskable-512.png',
   '/icons/apple-touch-icon.png',
   '/icons/favicon-32.png',
-  '/css/style.css?v=66',
+  '/css/style.css?v=67',
   '/js/vendor-vue.js?v=55',
   '/js/data-kana.js?v=55',
   '/js/data-lessons.js?v=55',
