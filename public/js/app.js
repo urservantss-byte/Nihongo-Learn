@@ -985,7 +985,8 @@ app.component('StrokeOrder', {
       <div v-else-if="error" class="muted small center">Animasi goresan belum tersedia untuk kanji ini.</div>
       <div v-else>
         <svg viewBox="0 0 109 109" class="stroke-svg" aria-label="Animasi urutan goresan">
-          <path v-for="(d,i) in paths" :key="i" :d="d" :class="{ done: i < idx }" pathLength="1" fill="none" />
+          <path v-for="(d,i) in paths" :key="'g'+i" :d="d" class="ghost" fill="none" />
+          <path v-for="(d,i) in paths" :key="i" :d="d" class="trace" :class="{ done: i < idx }" pathLength="1" fill="none" />
         </svg>
         <p class="muted small center" style="margin:6px 0">Goresan {{ shownStroke() }} / {{ paths.length }}</p>
         <div class="btn-row center">
@@ -1064,7 +1065,8 @@ app.component('WordStrokeOrder', {
           <div v-for="(s, i) in sets" :key="s.ch" class="wstroke-item" :class="{ active: activeIdx === i }">
             <div class="wstroke-ch">{{ s.ch }}</div>
             <svg viewBox="0 0 109 109" class="stroke-svg wsm" aria-label="Animasi urutan goresan">
-              <path v-for="(d, j) in s.paths" :key="j" :d="d" :class="{ done: j < shownFor(i) }" pathLength="1" fill="none" />
+              <path v-for="(d, j) in s.paths" :key="'g'+j" :d="d" class="ghost" fill="none" />
+              <path v-for="(d, j) in s.paths" :key="j" :d="d" class="trace" :class="{ done: j < shownFor(i) }" pathLength="1" fill="none" />
             </svg>
           </div>
         </div>

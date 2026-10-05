@@ -73,8 +73,9 @@ body { font-family: var(--font-d); background: var(--bg); color: var(--ink); min
 /* ===== Animasi urutan goresan kanji ===== */
 .stroke-wrap { margin: 6px 0 4px; }
 .stroke-svg { width: 190px; height: 190px; margin: 0 auto; display: block; background: var(--bg2); border: 1px solid var(--line); border-radius: 18px; }
-.stroke-svg path { stroke: var(--ink); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .5s ease, opacity .3s; }
-.stroke-svg path.done { stroke-dashoffset: 0; opacity: .32; }
+.stroke-svg path.ghost { stroke: var(--muted); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; opacity: .5; fill: none; }
+.stroke-svg path.trace { stroke: var(--ink); stroke-width: 6.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .5s ease; fill: none; }
+.stroke-svg path.trace.done { stroke-dashoffset: 0; }
 
 /* ikon SVG */
 .svg-ic { width: 20px; height: 20px; vertical-align: -4px; flex-shrink: 0; }
