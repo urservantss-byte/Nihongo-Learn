@@ -401,6 +401,7 @@ app.post('/api/ask', auth, async (req, res) => {
             method: 'POST', headers: { 'Content-Type': 'application/json' }, body
           });
           const d = await r.json().catch(() => ({}));
+          if (!r.ok) console.log(`[ask] ${m} -> ${r.status}: ${JSON.stringify(d).slice(0, 200)}`);
           if ((r.status === 503 || r.status === 429) && attempt === 0) {
             await new Promise(r2 => setTimeout(r2, 1500));
             continue;
