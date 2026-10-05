@@ -399,7 +399,7 @@ app.post('/api/ask', auth, async (req, res) => {
       generationConfig: { maxOutputTokens: 800, temperature: 0.7 }
     });
     // Coba beberapa model berurutan + retry kalau 503/429 (server AI sibuk)
-    const models = ['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-3.8-flash'];
+    const models = ['gemini-flash-latest', 'gemini-3.8-flash'];
     let text = '';
     for (const m of models) {
       for (let attempt = 0; attempt < 2 && !text; attempt++) {
