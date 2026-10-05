@@ -781,6 +781,11 @@ const app = createApp({
               <div class="bp-head">{{ b.pattern }}</div>
               <div class="bp-body">
                 <div class="muted small bp-arti">= {{ b.arti }}</div>
+                <div v-if="b.tabel && b.tabel.length" class="bp-table">
+                  <div v-for="(t, ti) in b.tabel" :key="ti" class="bp-trow">
+                    <span class="bp-tk">{{ t.k }}</span><span class="bp-teq">=</span><span class="bp-tv">{{ t.v }}</span>
+                  </div>
+                </div>
                 <p class="small" v-html="b.explain"></p>
                 <div class="bp-ex-label">Contoh kalimat:</div>
                 <div v-for="(ex, ei) in b.examples" :key="ei" class="ex-box">

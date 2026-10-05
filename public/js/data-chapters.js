@@ -115,6 +115,16 @@ const CHAPTERS = {
                   "id": "Saya berasal dari Indonesia.",
                   "rd": "インドネシア から きました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "インドネシアからきました",
+                  "v": "saya berasal dari Indonesia"
+                },
+                {
+                  "k": "インドネシアからです",
+                  "v": "saya dari Indonesia (lebih singkat)"
+                }
               ]
             }
           ]
@@ -386,6 +396,24 @@ const CHAPTERS = {
                   "id": "Ada 3 ekor kucing.",
                   "rd": "ねこが さんびき います。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "ひとつ・ふたつ・みっつ (～つ)",
+                  "v": "buah (benda kecil umum)"
+                },
+                {
+                  "k": "ひとり・ふたり・さんにん (～にん)",
+                  "v": "orang"
+                },
+                {
+                  "k": "いちまい・にまい (～まい)",
+                  "v": "lembar (benda tipis: kertas, baju)"
+                },
+                {
+                  "k": "いっぴき・にひき (～ひき)",
+                  "v": "ekor (hewan kecil)"
+                }
               ]
             },
             {
@@ -403,6 +431,24 @@ const CHAPTERS = {
                   "id": "Sekarang jam setengah 8 (7:30).",
                   "rd": "いま しちじはんです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "4じ → よじ",
+                  "v": "jam 4 (bacaan khusus)"
+                },
+                {
+                  "k": "7じ → しちじ",
+                  "v": "jam 7 (bacaan khusus)"
+                },
+                {
+                  "k": "9じ → くじ",
+                  "v": "jam 9 (bacaan khusus)"
+                },
+                {
+                  "k": "～はん (7じはん)",
+                  "v": "setengah / lewat 30 menit"
+                }
               ]
             },
             {
@@ -419,6 +465,20 @@ const CHAPTERS = {
                   "jp": "9じから 5じまで はたらきます。",
                   "id": "Bekerja dari jam 9 sampai jam 5.",
                   "rd": "くじから ごじまで はたらきます。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "8じから",
+                  "v": "dari jam 8 (titik awal)"
+                },
+                {
+                  "k": "3じまで",
+                  "v": "sampai jam 3 (titik akhir)"
+                },
+                {
+                  "k": "8じから3じまで",
+                  "v": "dari jam 8 sampai jam 3"
                 }
               ]
             }
@@ -735,6 +795,20 @@ const CHAPTERS = {
                   "id": "Itu (di sana) adalah jam.",
                   "rd": "あれわ とけいです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "これ",
+                  "v": "ini (dekat saya)"
+                },
+                {
+                  "k": "それ",
+                  "v": "itu (dekat kamu)"
+                },
+                {
+                  "k": "あれ",
+                  "v": "itu (jauh dari kita berdua)"
+                }
               ]
             },
             {
@@ -752,6 +826,20 @@ const CHAPTERS = {
                   "id": "Mobil Tanaka berwarna merah.",
                   "rd": "たなかさんの くるまわ あかいです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "わたしのほん",
+                  "v": "bukuku (milik)"
+                },
+                {
+                  "k": "インドネシアのたべもの",
+                  "v": "makanan Indonesia (asal)"
+                },
+                {
+                  "k": "きのつくえ",
+                  "v": "meja kayu (bahan)"
+                }
               ]
             },
             {
@@ -768,6 +856,16 @@ const CHAPTERS = {
                   "jp": "このほんを ください。",
                   "id": "Tolong buku yang ini.",
                   "rd": "このほんお ください。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "～をください",
+                  "v": "tolong... (sopan)"
+                },
+                {
+                  "k": "～をちょうだい",
+                  "v": "minta... (kasual, ke teman)"
                 }
               ]
             }
@@ -1084,6 +1182,20 @@ const CHAPTERS = {
                   "id": "Pulang ke rumah.",
                   "rd": "うちに かえります。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "～へいきます",
+                  "v": "pergi ke..."
+                },
+                {
+                  "k": "～へきます",
+                  "v": "datang ke..."
+                },
+                {
+                  "k": "～へかえります",
+                  "v": "pulang ke..."
+                }
               ]
             },
             {
@@ -1100,6 +1212,16 @@ const CHAPTERS = {
                   "jp": "レストランで ひるごはんを たべます。",
                   "id": "Makan siang di restoran.",
                   "rd": "レストランで ひるごはんお たべます。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "～で＋kata kerja aksi",
+                  "v": "di... (melakukan sesuatu: belajar, makan)"
+                },
+                {
+                  "k": "～に＋いる/ある",
+                  "v": "di... (hanya ada/tinggal, tanpa aksi)"
                 }
               ]
             }
@@ -1416,6 +1538,16 @@ const CHAPTERS = {
                   "id": "Hari ini tidak terlalu dingin.",
                   "rd": "きょうわ あまり さむくないです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "あまり～ない",
+                  "v": "tidak terlalu... / jarang..."
+                },
+                {
+                  "k": "ぜんぜん～ない",
+                  "v": "sama sekali tidak..."
+                }
               ]
             },
             {
@@ -1432,6 +1564,16 @@ const CHAPTERS = {
                   "jp": "ゆうめいな ひとです。",
                   "id": "Dia orang yang terkenal.",
                   "rd": "ゆうめいな ひとです。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "きれい＋な＋はな",
+                  "v": "bunga yang cantik (na-adj pakai な)"
+                },
+                {
+                  "k": "あかい＋くるま",
+                  "v": "mobil merah (i-adj langsung, tanpa な)"
                 }
               ]
             }
@@ -1738,6 +1880,16 @@ const CHAPTERS = {
                   "id": "Tolong bicara pelan-pelan.",
                   "rd": "ゆっくり はなしてください。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "まってください",
+                  "v": "tolong tunggu (sopan)"
+                },
+                {
+                  "k": "まって",
+                  "v": "tunggu (kasual)"
+                }
               ]
             },
             {
@@ -1755,6 +1907,20 @@ const CHAPTERS = {
                   "id": "Saya ingin pergi ke Jepang.",
                   "rd": "にほんに いきたいです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "たべたいです",
+                  "v": "ingin makan"
+                },
+                {
+                  "k": "たべたくないです",
+                  "v": "tidak ingin makan"
+                },
+                {
+                  "k": "たべたかったです",
+                  "v": "dulu ingin makan"
+                }
               ]
             },
             {
@@ -1771,6 +1937,24 @@ const CHAPTERS = {
                   "jp": "あしたは いかない。",
                   "id": "Besok tidak pergi. (kasual)",
                   "rd": "あしたわ いかない。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "かく→かかない",
+                  "v": "golongan 1: ubah -u jadi -a + ない"
+                },
+                {
+                  "k": "たべる→たべない",
+                  "v": "golongan 2: buang る + ない"
+                },
+                {
+                  "k": "する→しない / くる→こない",
+                  "v": "kata kerja spesial"
+                },
+                {
+                  "k": "ある→ない",
+                  "v": "spesial: tidak ada bentuk あらない!"
                 }
               ]
             }
@@ -2091,6 +2275,24 @@ const CHAPTERS = {
                   "id": "Kadang-kadang menonton film.",
                   "rd": "ときどき えいがお みます。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "まいにち",
+                  "v": "setiap hari"
+                },
+                {
+                  "k": "ときどき",
+                  "v": "kadang-kadang"
+                },
+                {
+                  "k": "あまり～ません",
+                  "v": "jarang..."
+                },
+                {
+                  "k": "ぜんぜん～ません",
+                  "v": "tidak pernah sama sekali"
+                }
               ]
             },
             {
@@ -2108,6 +2310,16 @@ const CHAPTERS = {
                   "id": "Sama sekali tidak mengerti.",
                   "rd": "ぜんぜん わかりません。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "あまりたべません",
+                  "v": "jarang makan"
+                },
+                {
+                  "k": "ぜんぜんたべません",
+                  "v": "sama sekali tidak makan"
+                }
               ]
             },
             {
@@ -2124,6 +2336,16 @@ const CHAPTERS = {
                   "jp": "おとうさんは おいくつですか。",
                   "id": "Ayahmu berumur berapa?",
                   "rd": "おとうさんわ おいくつですか。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "ちち / はは",
+                  "v": "ayah / ibu (keluarga sendiri)"
+                },
+                {
+                  "k": "おとうさん / おかあさん",
+                  "v": "ayah / ibu (keluarga orang lain)"
                 }
               ]
             }
@@ -2443,6 +2665,16 @@ const CHAPTERS = {
                   "jp": "コーヒーは いくらですか。",
                   "id": "Kopinya berapa?",
                   "rd": "コーヒーわ いくらですか。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "いくらですか",
+                  "v": "berapa harganya? (nominal/uang)"
+                },
+                {
+                  "k": "いくつですか",
+                  "v": "ada berapa? (jumlah benda)"
                 }
               ]
             }
@@ -2851,6 +3083,24 @@ const CHAPTERS = {
                   "id": "Apakah (kamu) bisa menyetir mobil?",
                   "rd": "くるまがうんてんできますか。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "かく→かける",
+                  "v": "golongan 1: akhiran ke baris-e + る"
+                },
+                {
+                  "k": "たべる→たべられる",
+                  "v": "golongan 2: ganti る dengan られる"
+                },
+                {
+                  "k": "する→できる",
+                  "v": "spesial (jangan bilang しられる!)"
+                },
+                {
+                  "k": "くる→こられる",
+                  "v": "spesial"
+                }
               ]
             },
             {
@@ -2872,6 +3122,16 @@ const CHAPTERS = {
                   "jp": "私は左の耳がよく聞こえません。",
                   "id": "Telinga kiri saya tidak terlalu bisa mendengar.",
                   "rd": "わたしわひだりのみみがよくきこえません。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "きこえる",
+                  "v": "terdengar (spontan, tanpa usaha)"
+                },
+                {
+                  "k": "きける",
+                  "v": "bisa mendengarkan (potensial 聞く)"
                 }
               ]
             },
@@ -2912,6 +3172,16 @@ const CHAPTERS = {
                   "id": "Karena tidak memakai kacamata, saya tidak bisa melihat dengan jelas.",
                   "rd": "めがねがないから、よくみえません。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "みえる",
+                  "v": "terlihat (spontan, tanpa usaha)"
+                },
+                {
+                  "k": "みられる",
+                  "v": "bisa melihat (potensial 見る)"
+                }
               ]
             },
             {
@@ -2951,6 +3221,20 @@ const CHAPTERS = {
                   "id": "Terdengar seseorang sedang bertengkar di kamar sebelah.",
                   "rd": "となりのへやでだれかがけんかしているのがきこえます。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "～のがみえる",
+                  "v": "terlihat (seseorang) sedang..."
+                },
+                {
+                  "k": "～のをみる",
+                  "v": "melihat (seseorang) sedang..."
+                },
+                {
+                  "k": "～のがきこえる",
+                  "v": "terdengar (seseorang) sedang..."
+                }
               ]
             },
             {
@@ -2968,6 +3252,20 @@ const CHAPTERS = {
                   "id": "Saya tidak ingin makan apa-apa.",
                   "rd": "なにもたべたくないです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "いきたい",
+                  "v": "ingin pergi"
+                },
+                {
+                  "k": "いきたくない",
+                  "v": "tidak ingin pergi"
+                },
+                {
+                  "k": "いきたかった",
+                  "v": "dulu ingin pergi"
+                }
               ]
             },
             {
@@ -2984,6 +3282,16 @@ const CHAPTERS = {
                   "jp": "彼は日本へ行きたがっています。",
                   "id": "Dia (laki-laki) kelihatannya ingin pergi ke Jepang.",
                   "rd": "かれわにほんえいきたがっています。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "いきたいです",
+                  "v": "saya ingin pergi (diri sendiri)"
+                },
+                {
+                  "k": "いきたがっています",
+                  "v": "dia kelihatannya ingin pergi (orang lain)"
                 }
               ]
             }
@@ -3364,6 +3672,16 @@ const CHAPTERS = {
                   "id": "Saya lebih suka apel daripada jeruk.",
                   "rd": "りんごのほうがみかんよりすきです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "AはBより[adj]",
+                  "v": "A lebih [adj] daripada B"
+                },
+                {
+                  "k": "AのほうがBより[adj]",
+                  "v": "A lebih [adj] daripada B (A ditekankan)"
+                }
               ]
             },
             {
@@ -3386,6 +3704,16 @@ const CHAPTERS = {
                   "id": "Minggu ini juga sibuk, tetapi tidak sesibuk minggu lalu.",
                   "rd": "こんしゅうもいそがしいですが、せんしゅうほどではありません。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "N1はN2ほど～ない",
+                  "v": "N1 tidak se... N2"
+                },
+                {
+                  "k": "＝ N1よりN2のほうが～",
+                  "v": "artinya sama: N2 lebih..."
+                }
               ]
             },
             {
@@ -3402,6 +3730,20 @@ const CHAPTERS = {
                   "jp": "たんじょう日に父からも母からもプレゼントをもらいました。",
                   "id": "Pada hari ulang tahun, saya menerima hadiah dari ayah dan juga dari ibu.",
                   "rd": "たんじょうひにちちからもははからもプレゼントおもらいました。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "では",
+                  "v": "di... (kontras: kalau di sini, beda)"
+                },
+                {
+                  "k": "でも",
+                  "v": "di... juga / bahkan di..."
+                },
+                {
+                  "k": "からも",
+                  "v": "dari... juga"
                 }
               ]
             },
@@ -3420,6 +3762,20 @@ const CHAPTERS = {
                   "id": "Musim panas yang paling panas dalam setahun.",
                   "rd": "いちねんのなかでなつがいちばんあついです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "にほんのなかで",
+                  "v": "di Jepang"
+                },
+                {
+                  "k": "クラスの中で",
+                  "v": "di kelas"
+                },
+                {
+                  "k": "一年の中で",
+                  "v": "dalam setahun"
+                }
               ]
             },
             {
@@ -3436,6 +3792,20 @@ const CHAPTERS = {
                   "jp": "この本はあの本よりずっと面白いです。",
                   "id": "Buku ini jauh lebih menarik daripada buku itu.",
                   "rd": "このほんわあのほんよりずっとおもしろいです。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "もっと",
+                  "v": "lebih... lagi"
+                },
+                {
+                  "k": "ずっと",
+                  "v": "jauh lebih..."
+                },
+                {
+                  "k": "ほとんど",
+                  "v": "hampir... (mendekati 100%)"
                 }
               ]
             }
@@ -3860,6 +4230,16 @@ const CHAPTERS = {
                   "id": "Kamar sudah dibersihkan (siap dipakai).",
                   "rd": "へやがそうじしてあります。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "まどがあけてあります",
+                  "v": "jendela dibiarkan terbuka (sengaja disiapkan)"
+                },
+                {
+                  "k": "まどがあいています",
+                  "v": "jendela terbuka (keadaan saja)"
+                }
               ]
             },
             {
@@ -3877,6 +4257,20 @@ const CHAPTERS = {
                   "id": "Saya baru akan makan sekarang.",
                   "rd": "これからごはんおたべるところです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "でるところ",
+                  "v": "baru akan keluar (bentuk kamus)"
+                },
+                {
+                  "k": "でているところ",
+                  "v": "sedang keluar (bentuk -te iru)"
+                },
+                {
+                  "k": "でたところ",
+                  "v": "baru saja keluar (bentuk lampau)"
+                }
               ]
             },
             {
@@ -3893,6 +4287,20 @@ const CHAPTERS = {
                   "jp": "すみません、今電話をしているところです。",
                   "id": "Maaf, saya sedang menelepon sekarang.",
                   "rd": "すみません、いまでんわおしているところです。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "kata kerja bentuk kamus + ところ",
+                  "v": "tepat akan / baru mau melakukan"
+                },
+                {
+                  "k": "kata kerja -te iru + ところ",
+                  "v": "tepat sedang melakukan"
+                },
+                {
+                  "k": "kata kerja bentuk lampau + ところ",
+                  "v": "baru saja selesai melakukan"
                 }
               ]
             },
@@ -3928,6 +4336,24 @@ const CHAPTERS = {
                   "id": "Pintu terbuka karena angin.",
                   "rd": "かぜでドアがあきました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "ドアをあける ⇔ ドアがあく",
+                  "v": "membuka pintu ⇔ pintu terbuka"
+                },
+                {
+                  "k": "電気を消す ⇔ 電気が消える",
+                  "v": "mematikan lampu ⇔ lampu padam"
+                },
+                {
+                  "k": "コップを落とす ⇔ コップが落ちる",
+                  "v": "menjatuhkan gelas ⇔ gelas jatuh"
+                },
+                {
+                  "k": "車を止める ⇔ 車が止まる",
+                  "v": "menghentikan mobil ⇔ mobil berhenti"
+                }
               ]
             },
             {
@@ -3945,6 +4371,24 @@ const CHAPTERS = {
                   "id": "Perlahan-lahan menjadi panas (sampai sekarang).",
                   "rd": "だんだんあつくなってきました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "持ってくる",
+                  "v": "membawa (ke sini)"
+                },
+                {
+                  "k": "連れてくる",
+                  "v": "mengajak (ke sini)"
+                },
+                {
+                  "k": "走ってくる",
+                  "v": "berlari (ke sini)"
+                },
+                {
+                  "k": "だんだん寒くなってきた",
+                  "v": "makin dingin (sampai sekarang)"
+                }
               ]
             },
             {
@@ -3961,6 +4405,20 @@ const CHAPTERS = {
                   "jp": "これから寒くなっていきます。",
                   "id": "Mulai sekarang akan menjadi dingin.",
                   "rd": "これからさむくなっていきます。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "持っていく",
+                  "v": "membawa pergi"
+                },
+                {
+                  "k": "連れていく",
+                  "v": "mengajak pergi"
+                },
+                {
+                  "k": "だんだん暖かくなっていく",
+                  "v": "makin hangat (ke depannya)"
                 }
               ]
             }
@@ -4343,6 +4801,16 @@ const CHAPTERS = {
                   "id": "Karena sakit, hari ini saya istirahat.",
                   "rd": "びょうきなので、きょうわやすみます。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "〜から",
+                  "v": "karena — tegas, boleh di akhir kalimat"
+                },
+                {
+                  "k": "〜ので",
+                  "v": "karena — halus / sopan"
+                }
               ]
             },
             {
@@ -4365,6 +4833,20 @@ const CHAPTERS = {
                   "id": "Tidak ada uang, jadi tidak bisa beli.",
                   "rd": "おかねがなくて、かえない。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "驚いて遅れた",
+                  "v": "karena terkejut, jadi terlambat"
+                },
+                {
+                  "k": "かぜで休んだ",
+                  "v": "karena flu, istirahat"
+                },
+                {
+                  "k": "〜て + 〜てください ✗",
+                  "v": "larangan: setelah 〜て alasan tak boleh ada perintah"
+                }
               ]
             },
             {
@@ -4381,6 +4863,20 @@ const CHAPTERS = {
                   "jp": "家族のために働きます。",
                   "id": "Saya bekerja demi keluarga.",
                   "rd": "かぞくのためにはたらきます。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "留学するために",
+                  "v": "untuk kuliah di luar negeri"
+                },
+                {
+                  "k": "健康のために",
+                  "v": "demi kesehatan"
+                },
+                {
+                  "k": "家族のために",
+                  "v": "demi keluarga"
                 }
               ]
             },
@@ -4399,6 +4895,20 @@ const CHAPTERS = {
                   "id": "Kereta berhenti karena kebakaran.",
                   "rd": "かじのためにでんしゃがとまった。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "台風のために",
+                  "v": "karena / gara-gara taifun"
+                },
+                {
+                  "k": "病気のために",
+                  "v": "karena sakit"
+                },
+                {
+                  "k": "ために (tujuan) vs ために (alasan)",
+                  "v": "untuk vs karena — bedakan dari konteks"
+                }
               ]
             },
             {
@@ -4415,6 +4925,20 @@ const CHAPTERS = {
                   "jp": "聞こえるように、大きく話します。",
                   "id": "Agar terdengar, saya bicara keras.",
                   "rd": "きこえるように、おおきくはなします。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "忘れないように",
+                  "v": "agar tidak lupa"
+                },
+                {
+                  "k": "話せるように",
+                  "v": "agar bisa bicara"
+                },
+                {
+                  "k": "見えるように",
+                  "v": "agar terlihat"
                 }
               ]
             },
@@ -4438,6 +4962,20 @@ const CHAPTERS = {
                   "id": "Padahal komputer ini mahal, tapi sudah rusak.",
                   "rd": "このパソコンはたかかったのに、もうこわれてしまいました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "薬を飲んだのに",
+                  "v": "padahal sudah minum obat"
+                },
+                {
+                  "k": "安いのに",
+                  "v": "padahal murah"
+                },
+                {
+                  "k": "休みなのに",
+                  "v": "padahal (hari) libur"
+                }
               ]
             },
             {
@@ -4459,6 +4997,20 @@ const CHAPTERS = {
                   "jp": "この洗剤は、セーターを洗うのに使います。",
                   "id": "Deterjen ini dipakai untuk mencuci sweater.",
                   "rd": "このせんざいは、セーターをあらうのにつかいます。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "買い物に使う",
+                  "v": "dipakai untuk belanja"
+                },
+                {
+                  "k": "勉強に必要だ",
+                  "v": "diperlukan untuk belajar"
+                },
+                {
+                  "k": "使う・かかる・必要だ",
+                  "v": "hanya untuk kata kerja keperluan"
                 }
               ]
             }
@@ -4848,6 +5400,24 @@ const CHAPTERS = {
                   "id": "Upacara penerimaan siswa baru diadakan di aula ini.",
                   "rd": "にゅうがくしきは、このホールでおこなわれます。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "書く → 書かれる",
+                  "v": "ditulis"
+                },
+                {
+                  "k": "食べる → 食べられる",
+                  "v": "dimakan"
+                },
+                {
+                  "k": "する → される",
+                  "v": "dilakukan"
+                },
+                {
+                  "k": "来る → 来られる",
+                  "v": "didatangi"
+                }
               ]
             },
             {
@@ -4869,6 +5439,24 @@ const CHAPTERS = {
                   "jp": "社長は、ちこくが多い社員をやめさせました。",
                   "id": "Direktur memberhentikan karyawan yang sering terlambat.",
                   "rd": "しゃちょうは、ちこくがおおいしゃいんをやめさせました。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "書く → 書かせる",
+                  "v": "menyuruh menulis"
+                },
+                {
+                  "k": "食べる → 食べさせる",
+                  "v": "menyuruh makan"
+                },
+                {
+                  "k": "する → させる",
+                  "v": "menyuruh melakukan"
+                },
+                {
+                  "k": "来る → 来させる",
+                  "v": "menyuruh datang"
                 }
               ]
             },
@@ -4892,6 +5480,24 @@ const CHAPTERS = {
                   "id": "Tolong biarkan (saya) melakukan hal yang saya suka.",
                   "rd": "すきなことをさせてください。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "子供に野菜を食べさせる",
+                  "v": "menyuruh anak makan sayur (memaksa)"
+                },
+                {
+                  "k": "子供を遊ばせる",
+                  "v": "membiarkan anak bermain (mengizinkan)"
+                },
+                {
+                  "k": "〜に + させる",
+                  "v": "menyuruh — lebih memaksa"
+                },
+                {
+                  "k": "〜を + させる",
+                  "v": "membiarkan — memberi izin"
+                }
               ]
             },
             {
@@ -4908,6 +5514,20 @@ const CHAPTERS = {
                   "jp": "私は大きい失敗をして、会社をやめさせられました。",
                   "id": "Aku membuat kesalahan besar dan dipaksa keluar dari perusahaan.",
                   "rd": "わたしはおおきいしっぱいをして、かいしゃをやめさせられました。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "書く → 書かせられる",
+                  "v": "dipaksa menulis"
+                },
+                {
+                  "k": "食べる → 食べさせられる",
+                  "v": "dipaksa makan"
+                },
+                {
+                  "k": "する → させられる",
+                  "v": "dipaksa melakukan"
                 }
               ]
             },
@@ -4930,6 +5550,20 @@ const CHAPTERS = {
                   "jp": "疲れた。ちょっと休ませて。",
                   "id": "Capek. Izinkan aku istirahat sebentar.",
                   "rd": "つかれた。ちょっとやすませて。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "休ませてください",
+                  "v": "tolong izinkan saya istirahat"
+                },
+                {
+                  "k": "帰らせてください",
+                  "v": "tolong izinkan saya pulang"
+                },
+                {
+                  "k": "参加させてください",
+                  "v": "tolong izinkan saya ikut serta"
                 }
               ]
             }
@@ -5287,6 +5921,24 @@ const CHAPTERS = {
                   "id": "Kalau ada gempa besar, apa yang akan kamu lakukan?",
                   "rd": "もしおおきいじしんがおきたら、どうしますか。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "食べたら",
+                  "v": "kalau makan"
+                },
+                {
+                  "k": "高かったら",
+                  "v": "kalau mahal"
+                },
+                {
+                  "k": "雨だったら",
+                  "v": "kalau hujan"
+                },
+                {
+                  "k": "来なかったら",
+                  "v": "kalau tidak datang"
+                }
               ]
             },
             {
@@ -5308,6 +5960,24 @@ const CHAPTERS = {
                   "jp": "きらいなら、食べなくてもいいですよ。",
                   "id": "Kalau tidak suka, tidak usah makan juga tidak apa-apa.",
                   "rd": "きらいなら、たべなくてもいいですよ。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "食べれば",
+                  "v": "jika makan"
+                },
+                {
+                  "k": "高ければ",
+                  "v": "jika mahal"
+                },
+                {
+                  "k": "静かであれば",
+                  "v": "jika tenang"
+                },
+                {
+                  "k": "いい → よければ",
+                  "v": "jika baik (bentuk khusus!)"
                 }
               ]
             },
@@ -5331,6 +6001,20 @@ const CHAPTERS = {
                   "id": "Kalau soal ramen, kedai ramen di depan stasiun itu enak lho.",
                   "rd": "ラーメンなら、えきまえのラーメンやがおいしいですよ。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "学生なら",
+                  "v": "kalau (kamu) pelajar"
+                },
+                {
+                  "k": "行くなら",
+                  "v": "kalau (kamu) pergi"
+                },
+                {
+                  "k": "〜なら ≠ 〜と",
+                  "v": "なら tak bisa diganti と"
+                }
               ]
             },
             {
@@ -5347,6 +6031,20 @@ const CHAPTERS = {
                   "jp": "ここを右に曲がると、銀行があります。",
                   "id": "Kalau belok kanan di sini, ada bank.",
                   "rd": "ここをみぎにまがると、ぎんこうがあります。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "押すと開く",
+                  "v": "kalau ditekan, terbuka (pasti)"
+                },
+                {
+                  "k": "春になると暖かくなる",
+                  "v": "kalau musim semi tiba, jadi hangat"
+                },
+                {
+                  "k": "〜と + 〜たい / 〜てください ✗",
+                  "v": "tak boleh untuk keinginan atau perintah"
                 }
               ]
             }
@@ -5694,6 +6392,24 @@ const CHAPTERS = {
                   "id": "Silakan dimakan (hormat).",
                   "rd": "どうぞ、めしあがってください。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "おっしゃる (言う)",
+                  "v": "berkata (hormat)"
+                },
+                {
+                  "k": "なさる (する)",
+                  "v": "melakukan (hormat)"
+                },
+                {
+                  "k": "ご覧になる (見る)",
+                  "v": "melihat (hormat)"
+                },
+                {
+                  "k": "お書きになる",
+                  "v": "menulis (hormat, pola umum)"
+                }
               ]
             },
             {
@@ -5711,6 +6427,24 @@ const CHAPTERS = {
                   "id": "Saya sudah melihat dokumennya (merendah).",
                   "rd": "しりょうをはいけんしました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "申す (言う)",
+                  "v": "berkata (merendah)"
+                },
+                {
+                  "k": "いたす (する)",
+                  "v": "melakukan (merendah)"
+                },
+                {
+                  "k": "ご案内する",
+                  "v": "memandu (merendah)"
+                },
+                {
+                  "k": "お持ちする",
+                  "v": "membawa (merendah)"
+                }
               ]
             },
             {
@@ -5727,6 +6461,20 @@ const CHAPTERS = {
                   "jp": "先生の本をいただきました。",
                   "id": "Saya menerima buku dari guru (merendah).",
                   "rd": "せんせいのほんをいただきました。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "くださる ⇔ いただく",
+                  "v": "beliau memberi ⇔ saya menerima"
+                },
+                {
+                  "k": "おっしゃる ⇔ 申す",
+                  "v": "berkata (hormat) ⇔ berkata (merendah)"
+                },
+                {
+                  "k": "なさる ⇔ いたす",
+                  "v": "melakukan (hormat) ⇔ melakukan (merendah)"
                 }
               ]
             },
@@ -5754,6 +6502,20 @@ const CHAPTERS = {
                   "jp": "あの先生はいつもやさしく教えてくださいます。",
                   "id": "Guru itu selalu mengajari saya dengan ramah (hormat).",
                   "rd": "あのせんせいはいつもやさしくおしえてくださいます。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "さしあげる",
+                  "v": "saya memberi (ke atasan)"
+                },
+                {
+                  "k": "くださる",
+                  "v": "beliau memberi (ke saya)"
+                },
+                {
+                  "k": "いただく",
+                  "v": "saya menerima (dari atasan)"
                 }
               ]
             }
@@ -6091,6 +6853,20 @@ const CHAPTERS = {
                   "id": "Saya makan siang di sekolah.",
                   "rd": "がっこうでひるごはんをたべました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "学校で勉強する",
+                  "v": "belajar di sekolah (beraktivitas)"
+                },
+                {
+                  "k": "学校に行く",
+                  "v": "pergi ke sekolah (tujuan)"
+                },
+                {
+                  "k": "家で休む",
+                  "v": "istirahat di rumah (beraktivitas)"
+                }
               ]
             },
             {
@@ -6112,6 +6888,20 @@ const CHAPTERS = {
                   "jp": "この紙は木から作られています。",
                   "id": "Kertas ini dibuat dari kayu.",
                   "rd": "このかみはきからつくられています。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "ぶどうからワインを作る",
+                  "v": "membuat wine dari anggur (bahan berubah)"
+                },
+                {
+                  "k": "東京から来た",
+                  "v": "datang dari Tokyo (titik awal)"
+                },
+                {
+                  "k": "から ⇔ まで",
+                  "v": "dari ⇔ sampai"
                 }
               ]
             },
@@ -6135,6 +6925,20 @@ const CHAPTERS = {
                   "id": "Saya cek kesehatan 1 kali setahun.",
                   "rd": "1ねんに1かい、けんこうしんだんをうけます。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "1日に3回",
+                  "v": "3 kali sehari"
+                },
+                {
+                  "k": "1週間に2回",
+                  "v": "2 kali seminggu"
+                },
+                {
+                  "k": "1年に1回",
+                  "v": "1 kali setahun"
+                }
               ]
             },
             {
@@ -6156,6 +6960,20 @@ const CHAPTERS = {
                   "jp": "彼は挨拶もできません。",
                   "id": "Dia bahkan tidak bisa menyapa.",
                   "rd": "かれはあいさつもできません。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "ひらがなも書けない",
+                  "v": "bahkan hiragana pun tak bisa tulis"
+                },
+                {
+                  "k": "一円もない",
+                  "v": "bahkan 1 yen pun tak ada"
+                },
+                {
+                  "k": "子供も知っている",
+                  "v": "bahkan anak-anak pun tahu"
                 }
               ]
             },
@@ -6179,6 +6997,20 @@ const CHAPTERS = {
                   "id": "Saya memberi 3 permen kepada tiap anak.",
                   "rd": "こどもたちにあめを3つずつあげました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "1枚ずつ",
+                  "v": "masing-masing 1 lembar"
+                },
+                {
+                  "k": "1人ずつ",
+                  "v": "satu per satu (orang)"
+                },
+                {
+                  "k": "2ページずつ",
+                  "v": "2 halaman per bagian"
+                }
               ]
             },
             {
@@ -6201,6 +7033,24 @@ const CHAPTERS = {
                   "id": "Saya ingin istirahat walau hanya 5 menit.",
                   "rd": "5ふんでもいいからやすみたいです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "コーヒーでも",
+                  "v": "kopi atau semacamnya"
+                },
+                {
+                  "k": "だれでも",
+                  "v": "siapa pun"
+                },
+                {
+                  "k": "どこでも",
+                  "v": "di mana pun"
+                },
+                {
+                  "k": "いつでも",
+                  "v": "kapan pun"
+                }
               ]
             },
             {
@@ -6222,6 +7072,20 @@ const CHAPTERS = {
                   "jp": "1000円しか持っていません。",
                   "id": "Saya hanya punya 1000 yen.",
                   "rd": "1000えんしかもっていません。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "100円しかない",
+                  "v": "hanya ada 100 yen"
+                },
+                {
+                  "k": "1人しか来ない",
+                  "v": "hanya 1 orang yang datang"
+                },
+                {
+                  "k": "しか + 〜ない",
+                  "v": "wajib kalimat negatif!"
                 }
               ]
             }
@@ -6557,6 +7421,24 @@ const CHAPTERS = {
                   "id": "Saya tidak masuk sekolah karena flu.",
                   "rd": "かぜでがっこうをやすみました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "はしで食べる",
+                  "v": "makan dengan sumpit (alat)"
+                },
+                {
+                  "k": "日本で一番",
+                  "v": "paling … di Jepang (cakupan)"
+                },
+                {
+                  "k": "かぜで休む",
+                  "v": "istirahat karena flu (alasan)"
+                },
+                {
+                  "k": "1000円で買う",
+                  "v": "beli seharga 1000 yen (batas)"
+                }
               ]
             },
             {
@@ -6578,6 +7460,20 @@ const CHAPTERS = {
                   "jp": "10分も待てませんでした。",
                   "id": "Saya tidak bisa menunggu sampai 10 menit pun.",
                   "rd": "10ぷんもまてませんでした。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "3時間も待った",
+                  "v": "menunggu sampai 3 jam"
+                },
+                {
+                  "k": "5人も来た",
+                  "v": "sampai 5 orang datang"
+                },
+                {
+                  "k": "1分もかからない",
+                  "v": "tak sampai 1 menit (dengan negatif)"
                 }
               ]
             },
@@ -6601,6 +7497,20 @@ const CHAPTERS = {
                   "id": "Saya ingin pergi ke Jepang, Korea, dan sejenisnya.",
                   "rd": "にほんとかかんこくにいきたいです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "パンとか牛乳とか",
+                  "v": "roti, susu, dan sejenisnya"
+                },
+                {
+                  "k": "映画とか見たい",
+                  "v": "ingin nonton film dan semacamnya"
+                },
+                {
+                  "k": "とか ≠ と",
+                  "v": "hanya contoh, bukan daftar lengkap"
+                }
               ]
             },
             {
@@ -6622,6 +7532,20 @@ const CHAPTERS = {
                   "jp": "日本語を勉強している学生が多いです。",
                   "id": "Banyak murid yang sedang belajar bahasa Jepang.",
                   "rd": "にほんごをべんきょうしているがくせいがおおいです。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "日本で買った本",
+                  "v": "buku yang dibeli di Jepang"
+                },
+                {
+                  "k": "母が作った料理",
+                  "v": "masakan yang dibuat ibu"
+                },
+                {
+                  "k": "頭がいい人",
+                  "v": "orang yang pintar"
                 }
               ]
             },
@@ -6645,6 +7569,24 @@ const CHAPTERS = {
                   "id": "Musik seperti apa yang kamu suka?",
                   "rd": "どんなおんがくがすきですか。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "こんな本",
+                  "v": "buku seperti ini"
+                },
+                {
+                  "k": "そんなこと",
+                  "v": "hal seperti itu"
+                },
+                {
+                  "k": "あんな人",
+                  "v": "orang seperti itu (jauh)"
+                },
+                {
+                  "k": "どんな音楽",
+                  "v": "musik seperti apa"
+                }
               ]
             },
             {
@@ -6666,6 +7608,24 @@ const CHAPTERS = {
                   "jp": "あんなに速く走れるんですか。",
                   "id": "Bisa lari secepat itu ya?",
                   "rd": "あんなにはやくはしれるんですか。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "こんなに大きい",
+                  "v": "sebesar ini"
+                },
+                {
+                  "k": "そんなに高くない",
+                  "v": "tidak semahal itu"
+                },
+                {
+                  "k": "あんなに遠い",
+                  "v": "sejauh itu"
+                },
+                {
+                  "k": "どんなに忙しい",
+                  "v": "sesibuk apa pun"
                 }
               ]
             },
@@ -6689,6 +7649,24 @@ const CHAPTERS = {
                   "id": "Tolong lakukan dengan cara begitu.",
                   "rd": "そうやってください。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "こう書く",
+                  "v": "menulis begini"
+                },
+                {
+                  "k": "そうする",
+                  "v": "berbuat begitu"
+                },
+                {
+                  "k": "ああ言う",
+                  "v": "berkata begitu"
+                },
+                {
+                  "k": "どう思う",
+                  "v": "berpikir bagaimana"
+                }
               ]
             },
             {
@@ -6711,6 +7689,24 @@ const CHAPTERS = {
                   "id": "Kamu tahu restoran bernama \"Asuka\" di depan stasiun?",
                   "rd": "えきまえの「あすか」っていうレストランをしっていますか。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "〜という",
+                  "v": "bentuk baku (formal)"
+                },
+                {
+                  "k": "〜っていう",
+                  "v": "bentuk santai"
+                },
+                {
+                  "k": "〜という話",
+                  "v": "kabar bahwa ~"
+                },
+                {
+                  "k": "〜というところ",
+                  "v": "tempat bernama ~"
+                }
               ]
             },
             {
@@ -6732,6 +7728,20 @@ const CHAPTERS = {
                   "jp": "どういう人が好きですか。",
                   "id": "Orang yang seperti apa yang kamu suka?",
                   "rd": "どういうひとがすきですか。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "どういう意味ですか",
+                  "v": "apa artinya?"
+                },
+                {
+                  "k": "どういう人",
+                  "v": "orang yang seperti apa"
+                },
+                {
+                  "k": "どういうこと",
+                  "v": "maksudnya apa / hal seperti apa"
                 }
               ]
             }
@@ -7071,6 +8081,20 @@ const CHAPTERS = {
                   "id": "Saya belajar sampai jam 5.",
                   "rd": "5じまでべんきょうしました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "来週の水曜日まで",
+                  "v": "sampai hari Rabu minggu depan"
+                },
+                {
+                  "k": "夜おそくまで",
+                  "v": "sampai larut malam"
+                },
+                {
+                  "k": "いつまで",
+                  "v": "sampai kapan"
+                }
               ]
             },
             {
@@ -7092,6 +8116,20 @@ const CHAPTERS = {
                   "jp": "明日の朝までに終わらせます。",
                   "id": "Akan saya selesaikan paling lambat besok pagi.",
                   "rd": "あしたのあさまでにおわらせます。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "15日までに",
+                  "v": "paling lambat tanggal 15"
+                },
+                {
+                  "k": "明日の朝までに",
+                  "v": "paling lambat besok pagi"
+                },
+                {
+                  "k": "30歳になるまでに",
+                  "v": "sebelum berusia 30 tahun"
                 }
               ]
             },
@@ -7115,6 +8153,20 @@ const CHAPTERS = {
                   "id": "Saat libur saya melakukan hal-hal seperti menonton film dan membaca buku.",
                   "rd": "やすみはえいがをみたりほんをよんだりします。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "旅行したり、テニスをしたりする",
+                  "v": "melakukan hal seperti traveling dan bermain tenis"
+                },
+                {
+                  "k": "降ったり、やんだりする",
+                  "v": "turun lalu berhenti, bergantian"
+                },
+                {
+                  "k": "見たり、読んだりする",
+                  "v": "melakukan hal seperti menonton dan membaca"
+                }
               ]
             },
             {
@@ -7136,6 +8188,20 @@ const CHAPTERS = {
                   "jp": "安いし、近いし、便利です。",
                   "id": "Murah, dekat, dan praktis.",
                   "rd": "やすいし、ちかいし、べんりです。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "おいしいし、安いし",
+                  "v": "enak dan juga murah"
+                },
+                {
+                  "k": "近いし、便利だし",
+                  "v": "dekat dan juga praktis"
+                },
+                {
+                  "k": "かわいたし、すいたし",
+                  "v": "(tenggorokan) kering dan juga lapar"
                 }
               ]
             },
@@ -7159,6 +8225,20 @@ const CHAPTERS = {
                   "id": "Jangan makan yang manis-manis melulu.",
                   "rd": "あまいものばかりたべないでください。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "ゲームばかり",
+                  "v": "main game melulu"
+                },
+                {
+                  "k": "お酒ばかり",
+                  "v": "minum alkohol melulu"
+                },
+                {
+                  "k": "甘いものばかり",
+                  "v": "yang manis-manis melulu"
+                }
               ]
             },
             {
@@ -7180,6 +8260,20 @@ const CHAPTERS = {
                   "jp": "母が料理をしている間に宿題をします。",
                   "id": "Saya mengerjakan PR selagi ibu memasak.",
                   "rd": "ははがりょうりおしているあいだにしゅくだいをします。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "夏休みの間",
+                  "v": "selama liburan musim panas"
+                },
+                {
+                  "k": "見ている間に",
+                  "v": "ketika sedang menonton"
+                },
+                {
+                  "k": "料理をしている間に",
+                  "v": "selagi (ibu) memasak"
                 }
               ]
             },
@@ -7203,6 +8297,20 @@ const CHAPTERS = {
                   "id": "Ketika hendak pergi, saya mematikan lampu.",
                   "rd": "でかけるとき、でんきをけします。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "寝るとき",
+                  "v": "ketika hendak tidur (belum tidur)"
+                },
+                {
+                  "k": "読むとき",
+                  "v": "ketika membaca"
+                },
+                {
+                  "k": "出かけるとき",
+                  "v": "ketika hendak pergi"
+                }
               ]
             },
             {
@@ -7225,6 +8333,20 @@ const CHAPTERS = {
                   "id": "Ketika sampai di rumah, hujan mulai turun.",
                   "rd": "いえにかえったとき、あめがふりだしました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "行ったとき",
+                  "v": "setelah sampai (di Tokyo)"
+                },
+                {
+                  "k": "食べたとき",
+                  "v": "setelah makan"
+                },
+                {
+                  "k": "帰ったとき",
+                  "v": "ketika (sudah) sampai di rumah"
+                }
               ]
             },
             {
@@ -7246,6 +8368,24 @@ const CHAPTERS = {
                   "jp": "午前中に来てください。",
                   "id": "Tolong datang sepanjang pagi ini.",
                   "rd": "ごぜんちゅうにきてください。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "会議中",
+                  "v": "sedang rapat"
+                },
+                {
+                  "k": "電話中",
+                  "v": "sedang menelepon"
+                },
+                {
+                  "k": "午前中",
+                  "v": "sepanjang pagi ini"
+                },
+                {
+                  "k": "今日中",
+                  "v": "sepanjang hari ini"
                 }
               ]
             }
@@ -7585,6 +8725,20 @@ const CHAPTERS = {
                   "id": "Saya pergi tanpa membawa payung.",
                   "rd": "かさをもたないででかけました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "すわって話す",
+                  "v": "bicara sambil duduk"
+                },
+                {
+                  "k": "えんぴつを使って書く",
+                  "v": "menulis dengan pensil"
+                },
+                {
+                  "k": "持たないで出かける",
+                  "v": "pergi tanpa membawa (payung)"
+                }
               ]
             },
             {
@@ -7606,6 +8760,20 @@ const CHAPTERS = {
                   "jp": "靴を履いたまま入らないでください。",
                   "id": "Tolong jangan masuk dengan sepatu masih dipakai.",
                   "rd": "くつをはいたままはいらないでください。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "開けたまま寝る",
+                  "v": "tidur dengan (jendela) tetap terbuka"
+                },
+                {
+                  "k": "かけたまま",
+                  "v": "dengan (kacamata) masih dipakai"
+                },
+                {
+                  "k": "履いたまま入る",
+                  "v": "masuk dengan (sepatu) masih dipakai"
                 }
               ]
             },
@@ -7629,6 +8797,20 @@ const CHAPTERS = {
                   "id": "Saya lari sambil mendengarkan musik.",
                   "rd": "おんがくをききながらはしります。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "食べながら見る",
+                  "v": "menonton sambil makan"
+                },
+                {
+                  "k": "働きながら大学に行く",
+                  "v": "kuliah sambil bekerja"
+                },
+                {
+                  "k": "聞きながら走る",
+                  "v": "lari sambil mendengarkan musik"
+                }
               ]
             },
             {
@@ -7650,6 +8832,20 @@ const CHAPTERS = {
                   "jp": "すしを食べたことがありますか。",
                   "id": "Apakah kamu pernah makan sushi?",
                   "rd": "すしをたべたことがありますか。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "行ったことがある",
+                  "v": "pernah pergi"
+                },
+                {
+                  "k": "出たことがある",
+                  "v": "pernah ikut (lomba)"
+                },
+                {
+                  "k": "食べたことがある",
+                  "v": "pernah makan"
                 }
               ]
             },
@@ -7673,6 +8869,20 @@ const CHAPTERS = {
                   "id": "Kadang-kadang saya terlambat.",
                   "rd": "たまにおくれることがあります。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "ほえることがある",
+                  "v": "kadang menggonggong"
+                },
+                {
+                  "k": "食べないことがある",
+                  "v": "kadang tidak makan (siang)"
+                },
+                {
+                  "k": "遅れることがある",
+                  "v": "kadang terlambat"
+                }
               ]
             },
             {
@@ -7694,6 +8904,20 @@ const CHAPTERS = {
                   "jp": "毎朝6時に起きることにしています。",
                   "id": "Saya membiasakan diri bangun jam 6 setiap pagi.",
                   "rd": "まいあさ6じにおきることにしています。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "Aランチにする",
+                  "v": "saya pilih makan siang A"
+                },
+                {
+                  "k": "ダイエットすることにする",
+                  "v": "memutuskan untuk diet"
+                },
+                {
+                  "k": "起きることにしている",
+                  "v": "membiasakan bangun (jam 6)"
                 }
               ]
             },
@@ -7717,6 +8941,20 @@ const CHAPTERS = {
                   "id": "Telah diputuskan aturannya berubah.",
                   "rd": "ルールがかわることになりました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "中止になる",
+                  "v": "(akan) dibatalkan"
+                },
+                {
+                  "k": "出張することになった",
+                  "v": "telah diputuskan dinas"
+                },
+                {
+                  "k": "変わることになった",
+                  "v": "telah diputuskan berubah"
+                }
               ]
             },
             {
@@ -7738,6 +8976,24 @@ const CHAPTERS = {
                   "jp": "部屋をきれいにします。",
                   "id": "Saya membersihkan (membuat bersih) kamar.",
                   "rd": "へやをきれいにします。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "小さくする",
+                  "v": "mengecilkan (dengan sengaja)"
+                },
+                {
+                  "k": "きれいにする",
+                  "v": "membersihkan (membuat bersih)"
+                },
+                {
+                  "k": "さびしくなる",
+                  "v": "menjadi kesepian (alami)"
+                },
+                {
+                  "k": "暖かくなる",
+                  "v": "menjadi hangat (alami)"
                 }
               ]
             }
@@ -8056,6 +9312,16 @@ const CHAPTERS = {
                   "id": "Di Jepang, mobil harus berjalan di lajur kiri.",
                   "rd": "にほんではくるまはひだりがわをはしらなければなりません。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "起きなければならない",
+                  "v": "harus bangun (formal)"
+                },
+                {
+                  "k": "走らなければならない",
+                  "v": "harus berjalan di (lajur kiri)"
+                }
               ]
             },
             {
@@ -8072,6 +9338,16 @@ const CHAPTERS = {
                   "jp": "宿題をしなくてはいけません。",
                   "id": "Saya harus mengerjakan PR.",
                   "rd": "しゅくだいをしなくてはいけません。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "行かなくてはいけない",
+                  "v": "harus pergi (ke kantor)"
+                },
+                {
+                  "k": "しなくてはいけない",
+                  "v": "harus mengerjakan (PR)"
                 }
               ]
             },
@@ -8090,6 +9366,16 @@ const CHAPTERS = {
                   "id": "Besok kamu harus datang, ya.",
                   "rd": "あしたはこないといけないよ。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "飲まないといけない",
+                  "v": "harus minum (obat)"
+                },
+                {
+                  "k": "来ないといけない",
+                  "v": "harus datang"
+                }
               ]
             },
             {
@@ -8106,6 +9392,20 @@ const CHAPTERS = {
                   "jp": "お客さんが来るから、片づけないと。",
                   "id": "Karena ada tamu yang datang, saya harus beres-beres.",
                   "rd": "おきゃくさんがくるから、かたづけないと。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "しなきゃ",
+                  "v": "harus (mencuci) — santai"
+                },
+                {
+                  "k": "食べなくちゃ",
+                  "v": "harus (makan) — santai"
+                },
+                {
+                  "k": "片づけないと",
+                  "v": "harus (beres-beres) — santai"
                 }
               ]
             },
@@ -8124,6 +9424,16 @@ const CHAPTERS = {
                   "id": "Buku itu tidak perlu dikembalikan sekarang juga.",
                   "rd": "そのほんは、すぐにかえさなくてもいいです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "すててもいいですか",
+                  "v": "bolehkah membuang?"
+                },
+                {
+                  "k": "返さなくてもいい",
+                  "v": "tidak perlu dikembalikan (sekarang)"
+                }
               ]
             },
             {
@@ -8141,6 +9451,16 @@ const CHAPTERS = {
                   "id": "Tidak harus hari ini juga tidak apa-apa.",
                   "rd": "きょうじゃなくてもいいです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "来なくてもいい",
+                  "v": "tidak perlu datang"
+                },
+                {
+                  "k": "今日じゃなくてもいい",
+                  "v": "tidak harus hari ini"
+                }
               ]
             },
             {
@@ -8157,6 +9477,16 @@ const CHAPTERS = {
                   "jp": "その川でおよいではいけません。",
                   "id": "Tidak boleh berenang di sungai itu.",
                   "rd": "そのかわでおよいではいけません。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "使ってはいけない",
+                  "v": "tidak boleh memakai"
+                },
+                {
+                  "k": "およいではいけない",
+                  "v": "tidak boleh berenang"
                 }
               ]
             },
@@ -8179,6 +9509,20 @@ const CHAPTERS = {
                   "jp": "母の病気が早く治ればいいのですが…。",
                   "id": "Semoga penyakit ibu segera sembuh…",
                   "rd": "ははのびょうきがはやくなおればいいのですが…。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "飲むといい",
+                  "v": "sebaiknya minum (obat)"
+                },
+                {
+                  "k": "見つかったらいい",
+                  "v": "semoga (segera) mendapatkan"
+                },
+                {
+                  "k": "治ればいい",
+                  "v": "semoga (penyakit) sembuh"
                 }
               ]
             }
@@ -8502,6 +9846,20 @@ const CHAPTERS = {
                   "id": "Saya menerima sweater dari Tanaka-san.",
                   "rd": "わたしはたなかさんにセーターをもらいました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "Nをあげる",
+                  "v": "saya memberi (ke orang lain)"
+                },
+                {
+                  "k": "Nをくれる",
+                  "v": "(orang lain) memberi ke saya"
+                },
+                {
+                  "k": "Nをもらう",
+                  "v": "saya menerima (dari orang lain)"
+                }
               ]
             },
             {
@@ -8523,6 +9881,20 @@ const CHAPTERS = {
                   "jp": "英語を教えてあげましょうか。",
                   "id": "Mau saya ajari bahasa Inggris?",
                   "rd": "えいごをおしえてあげましょうか。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "かいてあげる",
+                  "v": "menggambar (peta) untuk orang lain"
+                },
+                {
+                  "k": "手伝ってあげる",
+                  "v": "membantu (pindahan)"
+                },
+                {
+                  "k": "教えてあげる",
+                  "v": "mengajari"
                 }
               ]
             },
@@ -8546,6 +9918,20 @@ const CHAPTERS = {
                   "id": "Terima kasih sudah membantu saya.",
                   "rd": "てつだってくれて、ありがとう。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "かいてくれる",
+                  "v": "(dia) menggambar untuk saya"
+                },
+                {
+                  "k": "あんでくれる",
+                  "v": "(teman) merajutkan untuk saya"
+                },
+                {
+                  "k": "手伝ってくれてありがとう",
+                  "v": "terima kasih sudah membantu"
+                }
               ]
             },
             {
@@ -8562,6 +9948,16 @@ const CHAPTERS = {
                   "jp": "友だちに東京駅まで連れて行ってもらいました。",
                   "id": "Teman saya mengantar saya sampai ke Stasiun Tokyo.",
                   "rd": "ともだちにとうきょうえきまでつれていってもらいました。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "かいてもらう",
+                  "v": "(saya) meminta digambarkan"
+                },
+                {
+                  "k": "連れて行ってもらう",
+                  "v": "(saya) diantar sampai (stasiun)"
                 }
               ]
             },
@@ -8585,6 +9981,24 @@ const CHAPTERS = {
                   "id": "Tolong biarkan pintunya tetap terbuka.",
                   "rd": "ドアをあけておいてください。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "そうじしておく",
+                  "v": "beres-beres dulu (persiapan)"
+                },
+                {
+                  "k": "読んでおく",
+                  "v": "baca dulu (persiapan)"
+                },
+                {
+                  "k": "開けておく",
+                  "v": "biarkan (pintu) tetap terbuka"
+                },
+                {
+                  "k": "〜とく",
+                  "v": "bentuk santai dari 〜ておく"
+                }
               ]
             },
             {
@@ -8606,6 +10020,20 @@ const CHAPTERS = {
                   "jp": "日本の旅館にとまってみたいです。",
                   "id": "Saya ingin mencoba menginap di penginapan Jepang.",
                   "rd": "にほんのりょかんにとまってみたいです。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "食べてみる",
+                  "v": "coba makan"
+                },
+                {
+                  "k": "はいてみる",
+                  "v": "coba pakai (sepatu)"
+                },
+                {
+                  "k": "〜てみたい",
+                  "v": "ingin mencoba ~"
                 }
               ]
             },
@@ -8629,6 +10057,20 @@ const CHAPTERS = {
                   "id": "Saya berlari ke stasiun, tapi keretanya sudah keburu pergi.",
                   "rd": "えきまではしりましたが、でんしゃはいってしまいました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "飲んでしまう",
+                  "v": "menghabiskan (sampai habis)"
+                },
+                {
+                  "k": "忘れてしまう",
+                  "v": "ketinggalan (menyesal)"
+                },
+                {
+                  "k": "行ってしまう",
+                  "v": "keburu pergi"
+                }
               ]
             },
             {
@@ -8645,6 +10087,20 @@ const CHAPTERS = {
                   "jp": "宿題を忘れちゃった。",
                   "id": "Aku lupa mengerjakan PR.",
                   "rd": "しゅくだいをわすれちゃった。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "食べちゃった",
+                  "v": "(sudah) kuhabiskan — santai"
+                },
+                {
+                  "k": "忘れちゃった",
+                  "v": "lupa — santai"
+                },
+                {
+                  "k": "〜ちゃいけない",
+                  "v": "tidak boleh ~ (larangan santai)"
                 }
               ]
             }
@@ -8973,6 +10429,20 @@ const CHAPTERS = {
                   "id": "Lapar ya. Makan sesuatu yuk.",
                   "rd": "おなかがすいたね。なにかたべよう。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "行こう",
+                  "v": "ayo pergi!"
+                },
+                {
+                  "k": "休もう",
+                  "v": "istirahat yuk"
+                },
+                {
+                  "k": "食べよう",
+                  "v": "makan yuk"
+                }
               ]
             },
             {
@@ -8994,6 +10464,20 @@ const CHAPTERS = {
                   "jp": "明日は日曜日なのでゆっくり寝ようと思います。",
                   "id": "Karena besok hari Minggu, saya berniat tidur santai.",
                   "rd": "あしたはにちようびなのでゆっくりねようとおもいます。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "行こうと思う",
+                  "v": "berniat pergi"
+                },
+                {
+                  "k": "買おうと思う",
+                  "v": "berniat membeli"
+                },
+                {
+                  "k": "寝ようと思う",
+                  "v": "berniat tidur (santai)"
                 }
               ]
             },
@@ -9017,6 +10501,20 @@ const CHAPTERS = {
                   "id": "Saya tidak berencana masuk universitas.",
                   "rd": "わたしは、だいがくにいくつもりはありません。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "帰るつもり",
+                  "v": "berencana pulang"
+                },
+                {
+                  "k": "留学するつもり",
+                  "v": "berencana kuliah (di Jepang)"
+                },
+                {
+                  "k": "〜つもりはない",
+                  "v": "tidak berniat ~"
+                }
               ]
             },
             {
@@ -9033,6 +10531,16 @@ const CHAPTERS = {
                   "jp": "毎食後、歯をみがくようにしています。",
                   "id": "Setiap selesai makan, saya selalu menyikat gigi.",
                   "rd": "まいしょくご、はをみがくようにしています。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "話すようにする",
+                  "v": "berusaha berbicara (hanya b. Jepang)"
+                },
+                {
+                  "k": "みがくようにする",
+                  "v": "membiasakan menyikat (gigi)"
                 }
               ]
             },
@@ -9056,6 +10564,24 @@ const CHAPTERS = {
                   "id": "Sejak berhenti bekerja, ayah saya menjadi tidur lebih awal.",
                   "rd": "ちちはしごとをやめてから、はやくねるようになりました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "話せるようになる",
+                  "v": "menjadi bisa bicara"
+                },
+                {
+                  "k": "歩くようになる",
+                  "v": "mulai bisa berjalan"
+                },
+                {
+                  "k": "早く寝るようになる",
+                  "v": "menjadi tidur lebih awal"
+                },
+                {
+                  "k": "飲まないようになる",
+                  "v": "menjadi tidak (lagi) minum"
+                }
               ]
             },
             {
@@ -9078,6 +10604,20 @@ const CHAPTERS = {
                   "id": "Istri selalu bilang agar saya tidak merokok di dalam rumah.",
                   "rd": "つまに、いえのなかではたばこをすわないようにいわれています。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "飲まないように言っています",
+                  "v": "(saya) bilang agar tidak minum"
+                },
+                {
+                  "k": "早く帰るように言われました",
+                  "v": "disuruh agar pulang lebih awal"
+                },
+                {
+                  "k": "吸わないように言われています",
+                  "v": "dibilang agar tidak merokok"
+                }
               ]
             },
             {
@@ -9099,6 +10639,20 @@ const CHAPTERS = {
                   "jp": "映画のチケットが2枚あるんだけど、いっしょに行かない？",
                   "id": "Saya punya dua tiket bioskop, mau pergi bareng?",
                   "rd": "えいがのチケットがにまいあるんだけど、いっしょにいかない？"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "すみませんが、…",
+                  "v": "permisi, (anu)…"
+                },
+                {
+                  "k": "田中ですが、…",
+                  "v": "halo, saya Tanaka…"
+                },
+                {
+                  "k": "あるんだけど、…",
+                  "v": "saya punya…, mau…?"
                 }
               ]
             }
@@ -9427,6 +10981,20 @@ const CHAPTERS = {
                   "id": "Kalau sedang masuk angin, sebaiknya cepat tidur.",
                   "rd": "かぜおひいたときわ、はやくねたほうがいいですよ。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "聞いたほうがいい",
+                  "v": "sebaiknya bertanya"
+                },
+                {
+                  "k": "行ったほうがいい",
+                  "v": "sebaiknya pergi"
+                },
+                {
+                  "k": "早く寝たほうがいいですよ",
+                  "v": "sebaiknya cepat tidur"
+                }
               ]
             },
             {
@@ -9443,6 +11011,16 @@ const CHAPTERS = {
                   "jp": "その川ではおよがないほうがいいでしょう。",
                   "id": "Sebaiknya tidak berenang di sungai itu.",
                   "rd": "そのかわでわおよがないほうがいいでしょう。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "行かないほうがいい",
+                  "v": "sebaiknya tidak pergi"
+                },
+                {
+                  "k": "およがないほうがいい",
+                  "v": "sebaiknya tidak berenang"
                 }
               ]
             },
@@ -9466,6 +11044,32 @@ const CHAPTERS = {
                   "id": "Jangan dicampur, berbahaya!",
                   "rd": "まぜるな、きけん！"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "書け",
+                  "v": "tulislah!"
+                },
+                {
+                  "k": "食べろ",
+                  "v": "makanlah!"
+                },
+                {
+                  "k": "しろ",
+                  "v": "lakukanlah!"
+                },
+                {
+                  "k": "来い",
+                  "v": "datanglah!"
+                },
+                {
+                  "k": "しゃべるな",
+                  "v": "jangan bicara!"
+                },
+                {
+                  "k": "混ぜるな",
+                  "v": "jangan campur!"
+                }
               ]
             },
             {
@@ -9487,6 +11091,24 @@ const CHAPTERS = {
                   "jp": "つぎのことばを漢字で書きなさい。",
                   "id": "Tulislah kata-kata berikut dalam kanji.",
                   "rd": "つぎのことばおかんじでかきなさい。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "起きなさい",
+                  "v": "bangunlah"
+                },
+                {
+                  "k": "食べなさい",
+                  "v": "makanlah"
+                },
+                {
+                  "k": "書きなさい",
+                  "v": "tulislah"
+                },
+                {
+                  "k": "しなさい",
+                  "v": "lakukanlah"
                 }
               ]
             },
@@ -9510,6 +11132,24 @@ const CHAPTERS = {
                   "id": "Maaf, bisakah diucapkan sekali lagi?",
                   "rd": "すみませんが、もういちどいっていただけませんか。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "手伝ってくれませんか",
+                  "v": "maukah membantu? (biasa)"
+                },
+                {
+                  "k": "貸してもらえませんか",
+                  "v": "bisakah meminjami? (sopan)"
+                },
+                {
+                  "k": "貸してくださいませんか",
+                  "v": "bisakah saya pinjam? (lebih sopan)"
+                },
+                {
+                  "k": "言っていただけませんか",
+                  "v": "bisakah diucapkan sekali lagi? (paling sopan)"
+                }
               ]
             },
             {
@@ -9531,6 +11171,24 @@ const CHAPTERS = {
                   "jp": "息子にいい大学に行ってもらいたいです。",
                   "id": "Saya ingin anak laki-laki saya masuk universitas yang bagus.",
                   "rd": "むすこにいいだいがくにいってもらいたいです。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "元気になってほしい",
+                  "v": "ingin (dia) cepat sembuh"
+                },
+                {
+                  "k": "忘れないでほしい",
+                  "v": "ingin (kamu) tidak melupakan"
+                },
+                {
+                  "k": "行ってもらいたい",
+                  "v": "ingin (dia) pergi"
+                },
+                {
+                  "k": "行っていただきたい",
+                  "v": "ingin (beliau) pergi (sopan)"
                 }
               ]
             },
@@ -9554,6 +11212,20 @@ const CHAPTERS = {
                   "id": "Bagaimana kalau istirahat sebentar?",
                   "rd": "すこしやすんだらいかがですか。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "調べたらどうですか",
+                  "v": "bagaimana kalau cari…?"
+                },
+                {
+                  "k": "聞いてみたらどうですか",
+                  "v": "bagaimana kalau coba tanya…?"
+                },
+                {
+                  "k": "休んだらいかがですか",
+                  "v": "bagaimana kalau istirahat…? (lebih sopan)"
+                }
               ]
             },
             {
@@ -9575,6 +11247,20 @@ const CHAPTERS = {
                   "jp": "このゲームのやり方が、まだわからない。",
                   "id": "Saya masih belum tahu cara bermain game ini.",
                   "rd": "このゲームのやりかたが、まだわからない。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "読み方",
+                  "v": "cara membaca"
+                },
+                {
+                  "k": "使い方",
+                  "v": "cara memakai"
+                },
+                {
+                  "k": "やり方",
+                  "v": "cara melakukan"
                 }
               ]
             }
@@ -9901,6 +11587,16 @@ const CHAPTERS = {
                   "id": "Kemarin hujan dan dingin. Ditambah lagi, anginnya juga kencang.",
                   "rd": "きのうわあめがふっていてさむかったです。そのうえ、かぜもつよかったです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "それに",
+                  "v": "selain itu"
+                },
+                {
+                  "k": "そのうえ",
+                  "v": "ditambah lagi (lebih formal)"
+                }
               ]
             },
             {
@@ -9917,6 +11613,16 @@ const CHAPTERS = {
                   "jp": "パソコンがこわれた。だから、新しいのを買った。",
                   "id": "Komputer saya rusak. Makanya saya beli yang baru.",
                   "rd": "パソコンがこわれた。だから、あたらしいのをかった。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "それで",
+                  "v": "oleh karena itu / makanya"
+                },
+                {
+                  "k": "だから",
+                  "v": "makanya (lebih tegas)"
                 }
               ]
             },
@@ -9957,6 +11663,28 @@ const CHAPTERS = {
                   "id": "Saya memilih apartemen sekarang karena mempertimbangkan kepraktisannya daripada luasnya.",
                   "rd": "ひろさよりもべんりさおかんがえて、いまのアパートおえらびました。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "高い → 高さ",
+                  "v": "tinggi (kata benda)"
+                },
+                {
+                  "k": "大きい → 大きさ",
+                  "v": "besar (kata benda)"
+                },
+                {
+                  "k": "広い → 広さ",
+                  "v": "luas (kata benda)"
+                },
+                {
+                  "k": "便利（な） → 便利さ",
+                  "v": "kepraktisan"
+                },
+                {
+                  "k": "いい → よさ",
+                  "v": "kebaikan (khusus!)"
+                }
               ]
             },
             {
@@ -9978,6 +11706,32 @@ const CHAPTERS = {
                   "jp": "ところで、週末は何をする予定ですか。",
                   "id": "Ngomong-ngomong, akhir pekan ada rencana apa?",
                   "rd": "ところで、しゅうまつわなにをするよていですか。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "そして",
+                  "v": "lalu / dan"
+                },
+                {
+                  "k": "それから",
+                  "v": "setelah itu"
+                },
+                {
+                  "k": "けれども",
+                  "v": "tetapi"
+                },
+                {
+                  "k": "ところで",
+                  "v": "ngomong-ngomong"
+                },
+                {
+                  "k": "たとえば",
+                  "v": "misalnya"
+                },
+                {
+                  "k": "じゃあ",
+                  "v": "kalau begitu"
                 }
               ]
             },
@@ -10001,6 +11755,20 @@ const CHAPTERS = {
                   "id": "Saya belajar bahasa Inggris, tapi seberapa pun giat belajar, tetap tidak bisa bicara dengan lancar.",
                   "rd": "えいごおならっているが、どんなにべんきょうしてもうまくはなせない。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "何回読んでも",
+                  "v": "dibaca berapa kali pun"
+                },
+                {
+                  "k": "いつ行っても",
+                  "v": "kapan pun datang"
+                },
+                {
+                  "k": "どんなに勉強しても",
+                  "v": "seberapa pun giat belajar"
+                }
               ]
             },
             {
@@ -10022,6 +11790,24 @@ const CHAPTERS = {
                   "jp": "明日雨でも、動物園に行きます。",
                   "id": "Besok walaupun hujan, saya akan pergi ke kebun binatang.",
                   "rd": "あしたあめでも、どうぶつえんにいきます。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "調べても",
+                  "v": "sudah cari tahu, tapi…"
+                },
+                {
+                  "k": "高くても",
+                  "v": "meski mahal"
+                },
+                {
+                  "k": "静かでも",
+                  "v": "meski sepi / tenang"
+                },
+                {
+                  "k": "雨でも",
+                  "v": "walaupun hujan"
                 }
               ]
             }
@@ -10359,6 +12145,20 @@ const CHAPTERS = {
                   "id": "Kanji-nya terlalu banyak sampai tidak bisa dihafal.",
                   "rd": "かんじわおおすぎておぼえられません。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "小さすぎる",
+                  "v": "terlalu kecil"
+                },
+                {
+                  "k": "飲みすぎる",
+                  "v": "minum terlalu banyak"
+                },
+                {
+                  "k": "多すぎる",
+                  "v": "terlalu banyak"
+                }
               ]
             },
             {
@@ -10381,6 +12181,20 @@ const CHAPTERS = {
                   "id": "Peta ini kecil dan sulit dipahami.",
                   "rd": "このちずわ、ちいさくてわかりにくいです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "書きやすい",
+                  "v": "mudah ditulis"
+                },
+                {
+                  "k": "わかりやすい",
+                  "v": "mudah dipahami"
+                },
+                {
+                  "k": "わかりにくい",
+                  "v": "sulit dipahami"
+                }
               ]
             },
             {
@@ -10397,6 +12211,16 @@ const CHAPTERS = {
                   "jp": "赤ちゃんが急に泣き出した。",
                   "id": "Bayi itu tiba-tiba mulai menangis.",
                   "rd": "あかちゃんがきゅうになきだした。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "降り出す",
+                  "v": "mulai turun (hujan)"
+                },
+                {
+                  "k": "泣き出す",
+                  "v": "mulai menangis"
                 }
               ]
             },
@@ -10415,6 +12239,16 @@ const CHAPTERS = {
                   "id": "Setelah selesai mengerjakan PR, saya akan pergi main.",
                   "rd": "しゅくだいおやりおわったら、あそびにいきます。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "食べ終わる",
+                  "v": "selesai makan"
+                },
+                {
+                  "k": "やり終わる",
+                  "v": "selesai mengerjakan"
+                }
               ]
             },
             {
@@ -10431,6 +12265,16 @@ const CHAPTERS = {
                   "jp": "日本語の勉強を続けています。",
                   "id": "Saya terus belajar bahasa Jepang.",
                   "rd": "にほんごのべんきょうおつづけています。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "飲み続ける",
+                  "v": "terus minum"
+                },
+                {
+                  "k": "勉強を続ける",
+                  "v": "terus belajar"
                 }
               ]
             },
@@ -10454,6 +12298,20 @@ const CHAPTERS = {
                   "id": "A: \"Tidak pergi ke pesta?\" B: \"Ada urusan sedikit.\"",
                   "rd": "A「パーティーにいかないの？」B「ちょっとようじがあるんだ。」"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "行かないんですか",
+                  "v": "kenapa tidak pergi? (bertanya)"
+                },
+                {
+                  "k": "頭がいたいんです",
+                  "v": "kepalaku sakit (menjelaskan)"
+                },
+                {
+                  "k": "用事があるんだ",
+                  "v": "ada urusan (santai)"
+                }
               ]
             },
             {
@@ -10476,6 +12334,20 @@ const CHAPTERS = {
                   "id": "Tes kanji besok lho. [info baru/penekanan]",
                   "rd": "かんじのテストわあしたですよ。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "きれいだなあ",
+                  "v": "cantik sekali ya (kagum)"
+                },
+                {
+                  "k": "いい天気ですね",
+                  "v": "cuacanya bagus ya (ajak setuju)"
+                },
+                {
+                  "k": "明日ですよ",
+                  "v": "besok lho (penekanan / info baru)"
+                }
               ]
             },
             {
@@ -10497,6 +12369,20 @@ const CHAPTERS = {
                   "jp": "明日、雨が降るかしら。",
                   "id": "Besok hujan tidak ya?",
                   "rd": "あした、あめがふるかしら。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "どこかな",
+                  "v": "di mana ya?"
+                },
+                {
+                  "k": "来ないかなあ",
+                  "v": "semoga segera datang (harapan)"
+                },
+                {
+                  "k": "降るかしら",
+                  "v": "hujan tidak ya? (gaya perempuan)"
                 }
               ]
             }
@@ -10831,6 +12717,16 @@ const CHAPTERS = {
                   "id": "Saya khawatir bisa atau tidak punya teman di sekolah yang baru.",
                   "rd": "あたらしいがっこうで、ともだちができるかどうかしんぱいです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "おいしいかどうか",
+                  "v": "(tidak tahu) enak atau tidak"
+                },
+                {
+                  "k": "本当かどうか",
+                  "v": "(cek) benar atau tidak"
+                }
               ]
             },
             {
@@ -10852,6 +12748,20 @@ const CHAPTERS = {
                   "jp": "なぜ会社をやめたか教えてください。",
                   "id": "Tolong beri tahu saya kenapa kamu keluar dari perusahaan.",
                   "rd": "なぜかいしゃおやめたかおしえてください。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "どこに住んでいるか",
+                  "v": "(tahu) di mana tinggal"
+                },
+                {
+                  "k": "どうやって帰ったか",
+                  "v": "(tidak ingat) bagaimana pulang"
+                },
+                {
+                  "k": "なぜやめたか",
+                  "v": "(beri tahu) kenapa keluar"
                 }
               ]
             },
@@ -10875,6 +12785,20 @@ const CHAPTERS = {
                   "id": "Kakak perempuan saya pandai membuat kue.",
                   "rd": "あねわケーキをつくるのがじょうずです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "すっているのが社長",
+                  "v": "yang merokok itu direktur"
+                },
+                {
+                  "k": "ほしいのは何",
+                  "v": "apa yang diinginkan"
+                },
+                {
+                  "k": "作るのが上手",
+                  "v": "pandai membuat (= こと)"
+                }
               ]
             },
             {
@@ -10896,6 +12820,20 @@ const CHAPTERS = {
                   "jp": "医者に酒は飲むなと言われました。",
                   "id": "Dokter bilang saya tidak boleh minum alkohol.",
                   "rd": "いしゃにさけわのむなといわれました。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "来ないと言っていました",
+                  "v": "katanya tidak datang"
+                },
+                {
+                  "k": "寒いと言っていました",
+                  "v": "katanya akan dingin"
+                },
+                {
+                  "k": "飲むなと言われました",
+                  "v": "dibilang jangan minum"
                 }
               ]
             },
@@ -10919,6 +12857,20 @@ const CHAPTERS = {
                   "id": "Saya rasa dia tidak akan datang.",
                   "rd": "かれわこないとおもいます。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "帰ったと思います",
+                  "v": "saya rasa sudah pulang"
+                },
+                {
+                  "k": "受かったと思います",
+                  "v": "saya rasa lulus"
+                },
+                {
+                  "k": "来ないと思います",
+                  "v": "saya rasa tidak akan datang"
+                }
               ]
             },
             {
@@ -10940,6 +12892,20 @@ const CHAPTERS = {
                   "jp": "このパソコン、変です。こわれているみたいです。",
                   "id": "Komputer ini aneh. Sepertinya rusak.",
                   "rd": "このパソコン、へんです。こわれているみたいです。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "疲れているようです",
+                  "v": "kelihatannya lelah"
+                },
+                {
+                  "k": "降ったようですね",
+                  "v": "sepertinya tadi hujan"
+                },
+                {
+                  "k": "こわれているみたいです",
+                  "v": "sepertinya rusak (kasual)"
                 }
               ]
             },
@@ -10963,6 +12929,20 @@ const CHAPTERS = {
                   "id": "Kelihatannya akan hujan.",
                   "rd": "あめがふりそうです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "元気そうな（赤ちゃん）",
+                  "v": "(bayi) yang kelihatannya sehat"
+                },
+                {
+                  "k": "よさそうです",
+                  "v": "kelihatannya bagus (いい→よさ)"
+                },
+                {
+                  "k": "降りそうです",
+                  "v": "kelihatannya akan hujan"
+                }
               ]
             },
             {
@@ -10980,6 +12960,20 @@ const CHAPTERS = {
                   "id": "Katanya ayah Tanaka sehat.",
                   "rd": "たなかさんのおとうさんはげんきだそうです。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "降りそうです",
+                  "v": "kelihatannya akan hujan (lihat sendiri)"
+                },
+                {
+                  "k": "降るそうです",
+                  "v": "katanya akan hujan (dengar orang)"
+                },
+                {
+                  "k": "元気だそうです",
+                  "v": "katanya sehat"
+                }
               ]
             },
             {
@@ -10996,6 +12990,16 @@ const CHAPTERS = {
                   "jp": "弟はもうすぐ結婚するだろう。",
                   "id": "Adikku mungkin akan segera menikah.",
                   "rd": "おとうとわもうすぐけっこんするだろう。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "受かるでしょう",
+                  "v": "mungkin akan lulus (sopan)"
+                },
+                {
+                  "k": "結婚するだろう",
+                  "v": "mungkin akan menikah (biasa)"
                 }
               ]
             },
@@ -11018,6 +13022,20 @@ const CHAPTERS = {
                   "jp": "どうしよう。さいふをどこかに落としたかもしれない。",
                   "id": "Aduh. Mungkin dompetku terjatuh di suatu tempat.",
                   "rd": "どうしよう。さいふおどこかにおとしたかもしれない。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "転勤になるかもしれません",
+                  "v": "mungkin dipindahtugaskan"
+                },
+                {
+                  "k": "降るかもしれません",
+                  "v": "mungkin turun (salju)"
+                },
+                {
+                  "k": "落としたかもしれない",
+                  "v": "mungkin terjatuh"
                 }
               ]
             }
@@ -11353,6 +13371,16 @@ const CHAPTERS = {
                   "id": "Dia kelihatannya ingin pergi ke Jepang.",
                   "rd": "かれわにほんえいきたがっています。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "行きたいです",
+                  "v": "saya ingin pergi"
+                },
+                {
+                  "k": "行きたがっています",
+                  "v": "dia kelihatannya ingin pergi"
+                }
               ]
             },
             {
@@ -11370,6 +13398,16 @@ const CHAPTERS = {
                   "id": "Agar tidak lupa, saya mencatat (pencegahan).",
                   "rd": "わすれないようにメモします。"
                 }
+              ],
+              "tabel": [
+                {
+                  "k": "合格するために",
+                  "v": "agar lulus (usaha langsung)"
+                },
+                {
+                  "k": "忘れないように",
+                  "v": "agar tidak lupa (pencegahan)"
+                }
               ]
             },
             {
@@ -11386,6 +13424,24 @@ const CHAPTERS = {
                   "jp": "ボタンを押すと、開きます。",
                   "id": "Jika tombol ditekan, terbuka (pasti → と).",
                   "rd": "ボタンおおすと、ひらきます。"
+                }
+              ],
+              "tabel": [
+                {
+                  "k": "〜たら",
+                  "v": "kalau ~ (spesifik / serbaguna)"
+                },
+                {
+                  "k": "〜ば",
+                  "v": "jika ~ (syarat umum)"
+                },
+                {
+                  "k": "〜なら",
+                  "v": "kalau ~ (menanggapi topik)"
+                },
+                {
+                  "k": "〜と",
+                  "v": "jika ~ maka pasti… (akibat pasti)"
                 }
               ]
             }

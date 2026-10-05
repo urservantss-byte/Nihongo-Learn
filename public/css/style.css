@@ -237,6 +237,14 @@ h2.ttl + .muted, h2.ttl + p { margin-bottom: 8px; }
 .ex-jp { font-weight: 700; font-size: 14.5px; word-break: keep-all; overflow-wrap: break-word; line-height: 1.7; }
 .ex-rd { font-size: 13px; margin-top: 3px; word-break: keep-all; overflow-wrap: break-word; line-height: 1.7; }
 .ex-id { font-size: 13px; margin-top: 5px; line-height: 1.6; }
+/* Tabel variasi pola ala WKWK */
+.bp-table { border: 1.5px solid var(--line); border-radius: 10px; margin: 8px 0; overflow: hidden; }
+.bp-trow { display: flex; align-items: baseline; gap: 8px; padding: 7px 12px; font-size: 13.5px; border-bottom: 1px solid var(--line); word-break: keep-all; overflow-wrap: break-word; }
+.bp-trow:last-child { border-bottom: none; }
+.bp-trow:nth-child(odd) { background: var(--bg2); }
+.bp-tk { font-weight: 700; white-space: nowrap; }
+.bp-teq { color: var(--muted); flex-shrink: 0; }
+.bp-tv { color: var(--ink); }
 .auth-card { max-width: 420px; margin: 32px auto; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px 20px; text-align: center; }
 .auth-card h2 { margin: 8px 0 4px; }
 .auth-card label, .auth-card input, .auth-card select { text-align: left; }
