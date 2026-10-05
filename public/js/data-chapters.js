@@ -326,7 +326,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "きのうの えいがは どうでしたか。",
@@ -368,122 +368,118 @@ const CHAPTERS = {
             "id": "Begitu ya."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "きのうの テストは ___ でした。(Ujian kemarin sulit.)",
+        "o": [
+          "むずかしいかった",
+          "むずかしかった",
+          "むずかしかったでした",
+          "むずかしくて"
+        ],
+        "a": 1,
+        "explain": "kata sifat-i lampau: い → かった. むずかしい → むずかしかった."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 1",
-        "items": [
-          {
-            "q": "きのうの テストは ___ でした。(Ujian kemarin sulit.)",
-            "o": [
-              "むずかしいかった",
-              "むずかしかった",
-              "むずかしかったでした",
-              "むずかしくて"
-            ],
-            "a": 1,
-            "explain": "kata sifat-i lampau: い → かった. むずかしい → むずかしかった."
-          },
-          {
-            "q": "この みせの りょうりは ___ 。(Makanan restoran ini tidak enak.)",
-            "o": [
-              "おいしくないです",
-              "おいしいないです",
-              "おいしくなかった",
-              "おいしくありませんでした"
-            ],
-            "a": 0,
-            "explain": "Negatif sekarang: い → くない. おいしい → おいしくないです."
-          },
-          {
-            "q": "きのうは とても ___ 。(Kemarin sangat dingin.)",
-            "o": [
-              "さむいでした",
-              "さむくなかったです",
-              "さむかったです",
-              "さむいかったです"
-            ],
-            "a": 2,
-            "explain": "Lampau: さむい → さむかったです."
-          },
-          {
-            "q": "コンサートは ___ 。(Konsernya bagus.)",
-            "o": [
-              "いかったです",
-              "いいでした",
-              "よくなかったです",
-              "よかったです"
-            ],
-            "a": 3,
-            "explain": "いい itu spesial: bentuk lampaunya よかった, bukan いかった."
-          },
-          {
-            "q": "へやは ___ 。(Kamarnya tidak bersih.)",
-            "o": [
-              "きれいでは ありません",
-              "きれくないです",
-              "きれいでは ないでした",
-              "きれいでした"
-            ],
-            "a": 0,
-            "explain": "kata sifat-na negatif: きれい + では ありません."
-          },
-          {
-            "q": "こうえんは ___ でした。(Tamannya tenang.)",
-            "o": [
-              "しずかかった",
-              "しずか",
-              "しずかい",
-              "しずかくなかった"
-            ],
-            "a": 1,
-            "explain": "kata sifat-na lampau: しずか + でした."
-          },
-          {
-            "q": "田中さんは きのう ___ 。(Tanaka kemarin tidak datang.)",
-            "o": [
-              "来ないでした",
-              "来ませんでしたでした",
-              "来なかったです",
-              "来るなかったです"
-            ],
-            "a": 2,
-            "explain": "来ます → 来なかったです (lampau negatif)."
-          },
-          {
-            "q": "かれは きのう 学校に ___ 。(Dia kemarin tidak pergi ke sekolah.)",
-            "o": [
-              "行きませんでした",
-              "行きなかったです",
-              "行かないでした",
-              "行きますでした"
-            ],
-            "a": 0,
-            "explain": "Lampau negatif sopan: 行きます → 行きませんでした."
-          },
-          {
-            "q": "この かばんは ___ 。(Tas ini tidak mahal.)",
-            "o": [
-              "たかくなかったです",
-              "たかいないです",
-              "たかくありませんでした",
-              "たかくないです"
-            ],
-            "a": 3,
-            "explain": "Negatif sekarang: たかい → たかくないです."
-          },
-          {
-            "q": "先週の りょこうは ___ 。(Perjalanan minggu lalu tidak menyenangkan.)",
-            "o": [
-              "たのしくないでした",
-              "たのしくなかったです",
-              "たのしいなかったです",
-              "たのしくありません"
-            ],
-            "a": 1,
-            "explain": "Lampau negatif: たのしい → たのしくなかったです."
-          }
-        ]
+        "q": "この みせの りょうりは ___ 。(Makanan restoran ini tidak enak.)",
+        "o": [
+          "おいしくないです",
+          "おいしいないです",
+          "おいしくなかった",
+          "おいしくありませんでした"
+        ],
+        "a": 0,
+        "explain": "Negatif sekarang: い → くない. おいしい → おいしくないです."
+      },
+      {
+        "q": "きのうは とても ___ 。(Kemarin sangat dingin.)",
+        "o": [
+          "さむいでした",
+          "さむくなかったです",
+          "さむかったです",
+          "さむいかったです"
+        ],
+        "a": 2,
+        "explain": "Lampau: さむい → さむかったです."
+      },
+      {
+        "q": "コンサートは ___ 。(Konsernya bagus.)",
+        "o": [
+          "いかったです",
+          "いいでした",
+          "よくなかったです",
+          "よかったです"
+        ],
+        "a": 3,
+        "explain": "いい itu spesial: bentuk lampaunya よかった, bukan いかった."
+      },
+      {
+        "q": "へやは ___ 。(Kamarnya tidak bersih.)",
+        "o": [
+          "きれいでは ありません",
+          "きれくないです",
+          "きれいでは ないでした",
+          "きれいでした"
+        ],
+        "a": 0,
+        "explain": "kata sifat-na negatif: きれい + では ありません."
+      },
+      {
+        "q": "こうえんは ___ でした。(Tamannya tenang.)",
+        "o": [
+          "しずかかった",
+          "しずか",
+          "しずかい",
+          "しずかくなかった"
+        ],
+        "a": 1,
+        "explain": "kata sifat-na lampau: しずか + でした."
+      },
+      {
+        "q": "田中さんは きのう ___ 。(Tanaka kemarin tidak datang.)",
+        "o": [
+          "来ないでした",
+          "来ませんでしたでした",
+          "来なかったです",
+          "来るなかったです"
+        ],
+        "a": 2,
+        "explain": "来ます → 来なかったです (lampau negatif)."
+      },
+      {
+        "q": "かれは きのう 学校に ___ 。(Dia kemarin tidak pergi ke sekolah.)",
+        "o": [
+          "行きませんでした",
+          "行きなかったです",
+          "行かないでした",
+          "行きますでした"
+        ],
+        "a": 0,
+        "explain": "Lampau negatif sopan: 行きます → 行きませんでした."
+      },
+      {
+        "q": "この かばんは ___ 。(Tas ini tidak mahal.)",
+        "o": [
+          "たかくなかったです",
+          "たかいないです",
+          "たかくありませんでした",
+          "たかくないです"
+        ],
+        "a": 3,
+        "explain": "Negatif sekarang: たかい → たかくないです."
+      },
+      {
+        "q": "先週の りょこうは ___ 。(Perjalanan minggu lalu tidak menyenangkan.)",
+        "o": [
+          "たのしくないでした",
+          "たのしくなかったです",
+          "たのしいなかったです",
+          "たのしくありません"
+        ],
+        "a": 1,
+        "explain": "Lampau negatif: たのしい → たのしくなかったです."
       }
     ]
   },
@@ -831,7 +827,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "だれの かさですか。",
@@ -873,122 +869,118 @@ const CHAPTERS = {
             "id": "Ya. Itu kucing saya."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "___ 車を 買いました。(Saya membeli mobil yang besar.)",
+        "o": [
+          "大きく",
+          "大きいの",
+          "大きい",
+          "大きさ"
+        ],
+        "a": 2,
+        "explain": "kata sifat-i langsung + kata benda: 大きい車."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 2",
-        "items": [
-          {
-            "q": "___ 車を 買いました。(Saya membeli mobil yang besar.)",
-            "o": [
-              "大きく",
-              "大きいの",
-              "大きい",
-              "大きさ"
-            ],
-            "a": 2,
-            "explain": "kata sifat-i langsung + kata benda: 大きい車."
-          },
-          {
-            "q": "___ いろですね。(Warna yang cantik ya.)",
-            "o": [
-              "きれいな",
-              "きれいい",
-              "きれいだ",
-              "きれいに"
-            ],
-            "a": 0,
-            "explain": "kata sifat-na + な + kata benda: きれいな色."
-          },
-          {
-            "q": "A「だれの かさですか。」B「___ です。」(— \"Milik siapa?\" — \"Milik saya.\")",
-            "o": [
-              "わたし",
-              "わたしが",
-              "わたしを",
-              "わたしの"
-            ],
-            "a": 3,
-            "explain": "の menggantikan kata benda: わたしの = milik saya."
-          },
-          {
-            "q": "A「大きい バッグですか、小さい バッグですか。」B「___ です。」(— \"Tas yang besar atau yang kecil?\" — \"Yang besar.\")",
-            "o": [
-              "大きい",
-              "大きいの",
-              "大きくて",
-              "大きさ"
-            ],
-            "a": 1,
-            "explain": "の sebagai pengganti kata benda: 大きいの = yang besar."
-          },
-          {
-            "q": "ペン___か。(Apakah ada pulpen?)",
-            "o": [
-              "が あります",
-              "が います",
-              "を あります",
-              "に います"
-            ],
-            "a": 0,
-            "explain": "Benda mati pakai あります: ペンが あります."
-          },
-          {
-            "q": "そこに ねこ___。(Di sana ada kucing.)",
-            "o": [
-              "が あります",
-              "を います",
-              "が います",
-              "に あります"
-            ],
-            "a": 2,
-            "explain": "Makhluk hidup pakai います: ねこが います."
-          },
-          {
-            "q": "ほんは つくえの 上に ___ 。(Buku ada di atas meja.)",
-            "o": [
-              "います",
-              "あります",
-              "です",
-              "ありますでした"
-            ],
-            "a": 1,
-            "explain": "Buku benda mati → あります."
-          },
-          {
-            "q": "ケーキは れいぞうこの 中に ___ 。(Kue ada di dalam kulkas.)",
-            "o": [
-              "います",
-              "ありますでした",
-              "です",
-              "あります"
-            ],
-            "a": 3,
-            "explain": "Kue benda mati → あります."
-          },
-          {
-            "q": "ねこは いす___ います。(Kucing ada di atas kursi.)",
-            "o": [
-              "の 上に",
-              "の 上を",
-              "の 上で",
-              "の 上が"
-            ],
-            "a": 0,
-            "explain": "Pola: tempat + の + posisi + に + います."
-          },
-          {
-            "q": "へやに いぬ___。(Di kamar ada anjing.)",
-            "o": [
-              "を います",
-              "が あります",
-              "が います",
-              "に います"
-            ],
-            "a": 2,
-            "explain": "Anjing makhluk hidup → いぬが います."
-          }
-        ]
+        "q": "___ いろですね。(Warna yang cantik ya.)",
+        "o": [
+          "きれいな",
+          "きれいい",
+          "きれいだ",
+          "きれいに"
+        ],
+        "a": 0,
+        "explain": "kata sifat-na + な + kata benda: きれいな色."
+      },
+      {
+        "q": "A「だれの かさですか。」B「___ です。」(— \"Milik siapa?\" — \"Milik saya.\")",
+        "o": [
+          "わたし",
+          "わたしが",
+          "わたしを",
+          "わたしの"
+        ],
+        "a": 3,
+        "explain": "の menggantikan kata benda: わたしの = milik saya."
+      },
+      {
+        "q": "A「大きい バッグですか、小さい バッグですか。」B「___ です。」(— \"Tas yang besar atau yang kecil?\" — \"Yang besar.\")",
+        "o": [
+          "大きい",
+          "大きいの",
+          "大きくて",
+          "大きさ"
+        ],
+        "a": 1,
+        "explain": "の sebagai pengganti kata benda: 大きいの = yang besar."
+      },
+      {
+        "q": "ペン___か。(Apakah ada pulpen?)",
+        "o": [
+          "が あります",
+          "が います",
+          "を あります",
+          "に います"
+        ],
+        "a": 0,
+        "explain": "Benda mati pakai あります: ペンが あります."
+      },
+      {
+        "q": "そこに ねこ___。(Di sana ada kucing.)",
+        "o": [
+          "が あります",
+          "を います",
+          "が います",
+          "に あります"
+        ],
+        "a": 2,
+        "explain": "Makhluk hidup pakai います: ねこが います."
+      },
+      {
+        "q": "ほんは つくえの 上に ___ 。(Buku ada di atas meja.)",
+        "o": [
+          "います",
+          "あります",
+          "です",
+          "ありますでした"
+        ],
+        "a": 1,
+        "explain": "Buku benda mati → あります."
+      },
+      {
+        "q": "ケーキは れいぞうこの 中に ___ 。(Kue ada di dalam kulkas.)",
+        "o": [
+          "います",
+          "ありますでした",
+          "です",
+          "あります"
+        ],
+        "a": 3,
+        "explain": "Kue benda mati → あります."
+      },
+      {
+        "q": "ねこは いす___ います。(Kucing ada di atas kursi.)",
+        "o": [
+          "の 上に",
+          "の 上を",
+          "の 上で",
+          "の 上が"
+        ],
+        "a": 0,
+        "explain": "Pola: tempat + の + posisi + に + います."
+      },
+      {
+        "q": "へやに いぬ___。(Di kamar ada anjing.)",
+        "o": [
+          "を います",
+          "が あります",
+          "が います",
+          "に います"
+        ],
+        "a": 2,
+        "explain": "Anjing makhluk hidup → いぬが います."
       }
     ]
   },
@@ -1349,7 +1341,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "わたしは カナダから 来ました。",
@@ -1391,122 +1383,118 @@ const CHAPTERS = {
             "id": "Saya juga mau ikut."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "わたし___ 学生です。(Saya adalah murid.)",
+        "o": [
+          "は",
+          "が",
+          "を",
+          "と"
+        ],
+        "a": 0,
+        "explain": "は menandai topik pembicaraan."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 3",
-        "items": [
-          {
-            "q": "わたし___ 学生です。(Saya adalah murid.)",
-            "o": [
-              "は",
-              "が",
-              "を",
-              "と"
-            ],
-            "a": 0,
-            "explain": "は menandai topik pembicaraan."
-          },
-          {
-            "q": "とうきょう___ 人が 多いです。(Tokyo, orangnya banyak.)",
-            "o": [
-              "が",
-              "を",
-              "は",
-              "に"
-            ],
-            "a": 2,
-            "explain": "Pola AはBが + kata sifat."
-          },
-          {
-            "q": "どこ___ いいですか。(Mana yang bagus?)",
-            "o": [
-              "は",
-              "が",
-              "を",
-              "に"
-            ],
-            "a": 1,
-            "explain": "Kata tanya pasangannya が: どこが."
-          },
-          {
-            "q": "まいあさ 7時に いえ___ 出ます。(Setiap pagi keluar rumah jam 7.)",
-            "o": [
-              "に",
-              "で",
-              "が",
-              "を"
-            ],
-            "a": 3,
-            "explain": "Tempat yang ditinggalkan pakai を: いえを出ます."
-          },
-          {
-            "q": "ともだち___ えいがに 行きました。(Saya pergi nonton film dengan teman.)",
-            "o": [
-              "と",
-              "や",
-              "に",
-              "を"
-            ],
-            "a": 0,
-            "explain": "Bersama seseorang pakai と."
-          },
-          {
-            "q": "あに___ せが 高いです。(Kakak laki-laki saya badannya tinggi.)",
-            "o": [
-              "が",
-              "を",
-              "は",
-              "に"
-            ],
-            "a": 2,
-            "explain": "Pola AはBが: あには せが 高いです."
-          },
-          {
-            "q": "どれ___ 田中さんの ですか。(Yang mana milik Tanaka?)",
-            "o": [
-              "は",
-              "を",
-              "に",
-              "が"
-            ],
-            "a": 3,
-            "explain": "どれ + が."
-          },
-          {
-            "q": "とうきょう駅で 電車___ おりました。(Saya turun dari kereta di Stasiun Tokyo.)",
-            "o": [
-              "に",
-              "を",
-              "で",
-              "が"
-            ],
-            "a": 1,
-            "explain": "Kendaraan yang dituruni pakai を: 電車を おります."
-          },
-          {
-            "q": "はは___ かいものを しました。(Saya berbelanja dengan ibu.)",
-            "o": [
-              "と",
-              "に",
-              "を",
-              "が"
-            ],
-            "a": 0,
-            "explain": "Bersama ibu: 母と."
-          },
-          {
-            "q": "来週___ テストが あります。(Minggu depan ada ujian.)",
-            "o": [
-              "が",
-              "に",
-              "は",
-              "を"
-            ],
-            "a": 2,
-            "explain": "来週は = topik waktu."
-          }
-        ]
+        "q": "とうきょう___ 人が 多いです。(Tokyo, orangnya banyak.)",
+        "o": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
+        "a": 2,
+        "explain": "Pola AはBが + kata sifat."
+      },
+      {
+        "q": "どこ___ いいですか。(Mana yang bagus?)",
+        "o": [
+          "は",
+          "が",
+          "を",
+          "に"
+        ],
+        "a": 1,
+        "explain": "Kata tanya pasangannya が: どこが."
+      },
+      {
+        "q": "まいあさ 7時に いえ___ 出ます。(Setiap pagi keluar rumah jam 7.)",
+        "o": [
+          "に",
+          "で",
+          "が",
+          "を"
+        ],
+        "a": 3,
+        "explain": "Tempat yang ditinggalkan pakai を: いえを出ます."
+      },
+      {
+        "q": "ともだち___ えいがに 行きました。(Saya pergi nonton film dengan teman.)",
+        "o": [
+          "と",
+          "や",
+          "に",
+          "を"
+        ],
+        "a": 0,
+        "explain": "Bersama seseorang pakai と."
+      },
+      {
+        "q": "あに___ せが 高いです。(Kakak laki-laki saya badannya tinggi.)",
+        "o": [
+          "が",
+          "を",
+          "は",
+          "に"
+        ],
+        "a": 2,
+        "explain": "Pola AはBが: あには せが 高いです."
+      },
+      {
+        "q": "どれ___ 田中さんの ですか。(Yang mana milik Tanaka?)",
+        "o": [
+          "は",
+          "を",
+          "に",
+          "が"
+        ],
+        "a": 3,
+        "explain": "どれ + が."
+      },
+      {
+        "q": "とうきょう駅で 電車___ おりました。(Saya turun dari kereta di Stasiun Tokyo.)",
+        "o": [
+          "に",
+          "を",
+          "で",
+          "が"
+        ],
+        "a": 1,
+        "explain": "Kendaraan yang dituruni pakai を: 電車を おります."
+      },
+      {
+        "q": "はは___ かいものを しました。(Saya berbelanja dengan ibu.)",
+        "o": [
+          "と",
+          "に",
+          "を",
+          "が"
+        ],
+        "a": 0,
+        "explain": "Bersama ibu: 母と."
+      },
+      {
+        "q": "来週___ テストが あります。(Minggu depan ada ujian.)",
+        "o": [
+          "が",
+          "に",
+          "は",
+          "を"
+        ],
+        "a": 2,
+        "explain": "来週は = topik waktu."
       }
     ]
   },
@@ -1871,7 +1859,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "バスに のりますか。",
@@ -1913,122 +1901,118 @@ const CHAPTERS = {
             "id": "Enak ya."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "バス___ のります。(Naik bus.)",
+        "o": [
+          "を",
+          "に",
+          "で",
+          "が"
+        ],
+        "a": 1,
+        "explain": "Kendaraan yang dinaiki pakai に: バスに のります."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 4",
-        "items": [
-          {
-            "q": "バス___ のります。(Naik bus.)",
-            "o": [
-              "を",
-              "に",
-              "で",
-              "が"
-            ],
-            "a": 1,
-            "explain": "Kendaraan yang dinaiki pakai に: バスに のります."
-          },
-          {
-            "q": "右___ まがって ください。(Tolong belok kanan.)",
-            "o": [
-              "に",
-              "を",
-              "で",
-              "が"
-            ],
-            "a": 0,
-            "explain": "Arah tujuan pakai に: 右に."
-          },
-          {
-            "q": "学校は 9時___ はじまります。(Sekolah dimulai jam 9.)",
-            "o": [
-              "を",
-              "で",
-              "に",
-              "が"
-            ],
-            "a": 2,
-            "explain": "Waktu yang pasti pakai に: 9時に."
-          },
-          {
-            "q": "月曜日___ 来て ください。(Tolong datang hari Senin.)",
-            "o": [
-              "を",
-              "が",
-              "で",
-              "に"
-            ],
-            "a": 3,
-            "explain": "Hari yang pasti pakai に: 月曜日に."
-          },
-          {
-            "q": "こうえん___ あそびました。(Bermain di taman.)",
-            "o": [
-              "で",
-              "に",
-              "を",
-              "へ"
-            ],
-            "a": 0,
-            "explain": "Tempat melakukan kegiatan pakai で."
-          },
-          {
-            "q": "ナイフ___ きります。(Memotong dengan pisau.)",
-            "o": [
-              "を",
-              "で",
-              "に",
-              "と"
-            ],
-            "a": 1,
-            "explain": "Alat yang dipakai pakai で."
-          },
-          {
-            "q": "田中さんは 25さいです。わたし___ 25さいです。(Tanaka 25 tahun. Saya juga 25 tahun.)",
-            "o": [
-              "は",
-              "が",
-              "を",
-              "も"
-            ],
-            "a": 3,
-            "explain": "も = juga."
-          },
-          {
-            "q": "わたし___ パーティーに 行きます。(Saya juga pergi ke pesta.)",
-            "o": [
-              "は",
-              "を",
-              "も",
-              "に"
-            ],
-            "a": 2,
-            "explain": "わたしも = saya juga."
-          },
-          {
-            "q": "先生___ しつもんします。(Bertanya kepada guru.)",
-            "o": [
-              "に",
-              "を",
-              "で",
-              "と"
-            ],
-            "a": 0,
-            "explain": "Orang yang dituju pakai に: 先生に."
-          },
-          {
-            "q": "きっさてんで コーヒー___ のみました。(Minum kopi di kafe.)",
-            "o": [
-              "に",
-              "を",
-              "で",
-              "が"
-            ],
-            "a": 1,
-            "explain": "Objek yang diminum pakai を."
-          }
-        ]
+        "q": "右___ まがって ください。(Tolong belok kanan.)",
+        "o": [
+          "に",
+          "を",
+          "で",
+          "が"
+        ],
+        "a": 0,
+        "explain": "Arah tujuan pakai に: 右に."
+      },
+      {
+        "q": "学校は 9時___ はじまります。(Sekolah dimulai jam 9.)",
+        "o": [
+          "を",
+          "で",
+          "に",
+          "が"
+        ],
+        "a": 2,
+        "explain": "Waktu yang pasti pakai に: 9時に."
+      },
+      {
+        "q": "月曜日___ 来て ください。(Tolong datang hari Senin.)",
+        "o": [
+          "を",
+          "が",
+          "で",
+          "に"
+        ],
+        "a": 3,
+        "explain": "Hari yang pasti pakai に: 月曜日に."
+      },
+      {
+        "q": "こうえん___ あそびました。(Bermain di taman.)",
+        "o": [
+          "で",
+          "に",
+          "を",
+          "へ"
+        ],
+        "a": 0,
+        "explain": "Tempat melakukan kegiatan pakai で."
+      },
+      {
+        "q": "ナイフ___ きります。(Memotong dengan pisau.)",
+        "o": [
+          "を",
+          "で",
+          "に",
+          "と"
+        ],
+        "a": 1,
+        "explain": "Alat yang dipakai pakai で."
+      },
+      {
+        "q": "田中さんは 25さいです。わたし___ 25さいです。(Tanaka 25 tahun. Saya juga 25 tahun.)",
+        "o": [
+          "は",
+          "が",
+          "を",
+          "も"
+        ],
+        "a": 3,
+        "explain": "も = juga."
+      },
+      {
+        "q": "わたし___ パーティーに 行きます。(Saya juga pergi ke pesta.)",
+        "o": [
+          "は",
+          "を",
+          "も",
+          "に"
+        ],
+        "a": 2,
+        "explain": "わたしも = saya juga."
+      },
+      {
+        "q": "先生___ しつもんします。(Bertanya kepada guru.)",
+        "o": [
+          "に",
+          "を",
+          "で",
+          "と"
+        ],
+        "a": 0,
+        "explain": "Orang yang dituju pakai に: 先生に."
+      },
+      {
+        "q": "きっさてんで コーヒー___ のみました。(Minum kopi di kafe.)",
+        "o": [
+          "に",
+          "を",
+          "で",
+          "が"
+        ],
+        "a": 1,
+        "explain": "Objek yang diminum pakai を."
       }
     ]
   },
@@ -2402,7 +2386,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "のどが かわきましたね。何か 飲みましょう。",
@@ -2444,122 +2428,118 @@ const CHAPTERS = {
             "id": "Ya, hanya hari Minggu."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "まいあさ、コーヒー ___ こうちゃを 飲みます。(kopi atau teh)",
+        "o": [
+          "か",
+          "や",
+          "も",
+          "と"
+        ],
+        "a": 0,
+        "explain": "か = \"atau\" untuk pilihan yang tegas."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 5",
-        "items": [
-          {
-            "q": "まいあさ、コーヒー ___ こうちゃを 飲みます。(kopi atau teh)",
-            "o": [
-              "か",
-              "や",
-              "も",
-              "と"
-            ],
-            "a": 0,
-            "explain": "か = \"atau\" untuk pilihan yang tegas."
-          },
-          {
-            "q": "パン ___ ごはんを 食べます。(roti, nasi, dan lain-lain)",
-            "o": [
-              "と",
-              "や",
-              "か",
-              "も"
-            ],
-            "a": 1,
-            "explain": "や = menyebut contoh yang tidak lengkap (\"dan sebagainya\")."
-          },
-          {
-            "q": "うちから 学校 ___ 1時間 かかります。(dari rumah sampai sekolah)",
-            "o": [
-              "から",
-              "へ",
-              "に",
-              "まで"
-            ],
-            "a": 3,
-            "explain": "から〜まで = \"dari ... sampai ...\"."
-          },
-          {
-            "q": "テストは 15日 ___ 18日までです。(dari tanggal 15)",
-            "o": [
-              "まで",
-              "から",
-              "だけ",
-              "ごろ"
-            ],
-            "a": 1,
-            "explain": "Pasangan まで adalah から."
-          },
-          {
-            "q": "7時 ___ もういちど 電話します。(sekitar jam 7)",
-            "o": [
-              "ごろ",
-              "だけ",
-              "まで",
-              "か"
-            ],
-            "a": 0,
-            "explain": "ごろ = \"sekitar\" untuk perkiraan waktu."
-          },
-          {
-            "q": "休みは 日よう日 ___ です。(hanya hari Minggu)",
-            "o": [
-              "ごろ",
-              "まで",
-              "だけ",
-              "しか"
-            ],
-            "a": 2,
-            "explain": "だけ = \"hanya\"."
-          },
-          {
-            "q": "この クラスで 中国人は トムさん ___ です。(hanya Tom)",
-            "o": [
-              "だけ",
-              "ごろ",
-              "や",
-              "しか"
-            ],
-            "a": 0,
-            "explain": "だけ menempel tepat setelah kata yang dibatasi."
-          },
-          {
-            "q": "電車 ___ 5時間 かかります。(naik kereta butuh 5 jam)",
-            "o": [
-              "は",
-              "ごろ",
-              "では",
-              "だけ"
-            ],
-            "a": 2,
-            "explain": "では = partikel で + は, penekanan \"dengan kereta (bukan yang lain)\"."
-          },
-          {
-            "q": "東京駅 ___ 何で 行きますか。(ke Stasiun Tokyo naik apa?)",
-            "o": [
-              "まで",
-              "へは",
-              "へ",
-              "は"
-            ],
-            "a": 1,
-            "explain": "へ + は = penekanan arah tujuan."
-          },
-          {
-            "q": "あした ___ あさって、田中さんに 電話します。(besok atau lusa)",
-            "o": [
-              "や",
-              "と",
-              "ごろ",
-              "か"
-            ],
-            "a": 3,
-            "explain": "Pilihan dua waktu yang tegas → か."
-          }
-        ]
+        "q": "パン ___ ごはんを 食べます。(roti, nasi, dan lain-lain)",
+        "o": [
+          "と",
+          "や",
+          "か",
+          "も"
+        ],
+        "a": 1,
+        "explain": "や = menyebut contoh yang tidak lengkap (\"dan sebagainya\")."
+      },
+      {
+        "q": "うちから 学校 ___ 1時間 かかります。(dari rumah sampai sekolah)",
+        "o": [
+          "から",
+          "へ",
+          "に",
+          "まで"
+        ],
+        "a": 3,
+        "explain": "から〜まで = \"dari ... sampai ...\"."
+      },
+      {
+        "q": "テストは 15日 ___ 18日までです。(dari tanggal 15)",
+        "o": [
+          "まで",
+          "から",
+          "だけ",
+          "ごろ"
+        ],
+        "a": 1,
+        "explain": "Pasangan まで adalah から."
+      },
+      {
+        "q": "7時 ___ もういちど 電話します。(sekitar jam 7)",
+        "o": [
+          "ごろ",
+          "だけ",
+          "まで",
+          "か"
+        ],
+        "a": 0,
+        "explain": "ごろ = \"sekitar\" untuk perkiraan waktu."
+      },
+      {
+        "q": "休みは 日よう日 ___ です。(hanya hari Minggu)",
+        "o": [
+          "ごろ",
+          "まで",
+          "だけ",
+          "しか"
+        ],
+        "a": 2,
+        "explain": "だけ = \"hanya\"."
+      },
+      {
+        "q": "この クラスで 中国人は トムさん ___ です。(hanya Tom)",
+        "o": [
+          "だけ",
+          "ごろ",
+          "や",
+          "しか"
+        ],
+        "a": 0,
+        "explain": "だけ menempel tepat setelah kata yang dibatasi."
+      },
+      {
+        "q": "電車 ___ 5時間 かかります。(naik kereta butuh 5 jam)",
+        "o": [
+          "は",
+          "ごろ",
+          "では",
+          "だけ"
+        ],
+        "a": 2,
+        "explain": "では = partikel で + は, penekanan \"dengan kereta (bukan yang lain)\"."
+      },
+      {
+        "q": "東京駅 ___ 何で 行きますか。(ke Stasiun Tokyo naik apa?)",
+        "o": [
+          "まで",
+          "へは",
+          "へ",
+          "は"
+        ],
+        "a": 1,
+        "explain": "へ + は = penekanan arah tujuan."
+      },
+      {
+        "q": "あした ___ あさって、田中さんに 電話します。(besok atau lusa)",
+        "o": [
+          "や",
+          "と",
+          "ごろ",
+          "か"
+        ],
+        "a": 3,
+        "explain": "Pilihan dua waktu yang tegas → か."
       }
     ]
   },
@@ -2874,7 +2854,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "はじめまして。わたしは スミスです。",
@@ -2916,122 +2896,118 @@ const CHAPTERS = {
             "id": "Oh ya. Senang berkenalan."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "あの 人は ___ ですか。(orang itu siapa?)",
+        "o": [
+          "どなた",
+          "なに",
+          "どこ",
+          "いつ"
+        ],
+        "a": 0,
+        "explain": "どなた = \"siapa\" (bentuk sopan)."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 6",
-        "items": [
-          {
-            "q": "あの 人は ___ ですか。(orang itu siapa?)",
-            "o": [
-              "どなた",
-              "なに",
-              "どこ",
-              "いつ"
-            ],
-            "a": 0,
-            "explain": "どなた = \"siapa\" (bentuk sopan)."
-          },
-          {
-            "q": "お国は ___ ですか。(dari negara mana?)",
-            "o": [
-              "いつ",
-              "だれ",
-              "どちら",
-              "どこ"
-            ],
-            "a": 2,
-            "explain": "どちら = \"mana\" (sopan, untuk tempat/arah)."
-          },
-          {
-            "q": "たまごが ___ ありますか。(telur ada berapa?)",
-            "o": [
-              "いくら",
-              "いくつ",
-              "どこ",
-              "だれ"
-            ],
-            "a": 1,
-            "explain": "いくつ = menanyakan jumlah."
-          },
-          {
-            "q": "お ___ ですか。(umur berapa? — sopan)",
-            "o": [
-              "いくつ",
-              "いくら",
-              "なんさい",
-              "どこ"
-            ],
-            "a": 0,
-            "explain": "Bentuk sopan menanyakan umur: おいくつですか."
-          },
-          {
-            "q": "___ は リンさんです。(ini Rin — memperkenalkan orang)",
-            "o": [
-              "この",
-              "これ",
-              "こちら",
-              "ここ"
-            ],
-            "a": 2,
-            "explain": "Untuk orang pakai こちらは; これ untuk benda."
-          },
-          {
-            "q": "___ は トムさんの お父さんです。(itu ayah Tom)",
-            "o": [
-              "それ",
-              "その",
-              "そこ",
-              "そちら"
-            ],
-            "a": 3,
-            "explain": "そちら = \"beliau/itu\" (sopan, di dekat lawan bicara)."
-          },
-          {
-            "q": "これは ほんです。___ は リンさんです。(ini buku. Ini Rin.)",
-            "o": [
-              "ここ",
-              "そこで",
-              "これ",
-              "こちら"
-            ],
-            "a": 3,
-            "explain": "Orang → こちら; benda → これ."
-          },
-          {
-            "q": "りんごを ___ 買いましたか。(apelnya beli berapa?)",
-            "o": [
-              "だれが",
-              "いくら",
-              "どこで",
-              "いくつ"
-            ],
-            "a": 3,
-            "explain": "いくつ menanyakan jumlah benda."
-          },
-          {
-            "q": "お仕事は ___ ですか。(pekerjaannya apa?)",
-            "o": [
-              "どこ",
-              "いつ",
-              "だれ",
-              "何"
-            ],
-            "a": 3,
-            "explain": "何 (なに) = \"apa\"."
-          },
-          {
-            "q": "先生の お名前は ___ ですか。(nama guru ...?)",
-            "o": [
-              "どなた",
-              "何",
-              "どちら",
-              "いくつ"
-            ],
-            "a": 1,
-            "explain": "お名前はなんですか = \"namanya siapa?\"."
-          }
-        ]
+        "q": "お国は ___ ですか。(dari negara mana?)",
+        "o": [
+          "いつ",
+          "だれ",
+          "どちら",
+          "どこ"
+        ],
+        "a": 2,
+        "explain": "どちら = \"mana\" (sopan, untuk tempat/arah)."
+      },
+      {
+        "q": "たまごが ___ ありますか。(telur ada berapa?)",
+        "o": [
+          "いくら",
+          "いくつ",
+          "どこ",
+          "だれ"
+        ],
+        "a": 1,
+        "explain": "いくつ = menanyakan jumlah."
+      },
+      {
+        "q": "お ___ ですか。(umur berapa? — sopan)",
+        "o": [
+          "いくつ",
+          "いくら",
+          "なんさい",
+          "どこ"
+        ],
+        "a": 0,
+        "explain": "Bentuk sopan menanyakan umur: おいくつですか."
+      },
+      {
+        "q": "___ は リンさんです。(ini Rin — memperkenalkan orang)",
+        "o": [
+          "この",
+          "これ",
+          "こちら",
+          "ここ"
+        ],
+        "a": 2,
+        "explain": "Untuk orang pakai こちらは; これ untuk benda."
+      },
+      {
+        "q": "___ は トムさんの お父さんです。(itu ayah Tom)",
+        "o": [
+          "それ",
+          "その",
+          "そこ",
+          "そちら"
+        ],
+        "a": 3,
+        "explain": "そちら = \"beliau/itu\" (sopan, di dekat lawan bicara)."
+      },
+      {
+        "q": "これは ほんです。___ は リンさんです。(ini buku. Ini Rin.)",
+        "o": [
+          "ここ",
+          "そこで",
+          "これ",
+          "こちら"
+        ],
+        "a": 3,
+        "explain": "Orang → こちら; benda → これ."
+      },
+      {
+        "q": "りんごを ___ 買いましたか。(apelnya beli berapa?)",
+        "o": [
+          "だれが",
+          "いくら",
+          "どこで",
+          "いくつ"
+        ],
+        "a": 3,
+        "explain": "いくつ menanyakan jumlah benda."
+      },
+      {
+        "q": "お仕事は ___ ですか。(pekerjaannya apa?)",
+        "o": [
+          "どこ",
+          "いつ",
+          "だれ",
+          "何"
+        ],
+        "a": 3,
+        "explain": "何 (なに) = \"apa\"."
+      },
+      {
+        "q": "先生の お名前は ___ ですか。(nama guru ...?)",
+        "o": [
+          "どなた",
+          "何",
+          "どちら",
+          "いくつ"
+        ],
+        "a": 1,
+        "explain": "お名前はなんですか = \"namanya siapa?\"."
       }
     ]
   },
@@ -3382,7 +3358,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "おなかが すきましたね。何か 食べましょう。",
@@ -3424,122 +3400,118 @@ const CHAPTERS = {
             "id": "Kalau begitu, tolong datang sekitar siang besok."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "おなかが すきましたね。___ 食べましょう。(makan sesuatu)",
+        "o": [
+          "何",
+          "何か",
+          "何でも",
+          "何も"
+        ],
+        "a": 1,
+        "explain": "何か = \"sesuatu\"."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 7",
-        "items": [
-          {
-            "q": "おなかが すきましたね。___ 食べましょう。(makan sesuatu)",
-            "o": [
-              "何",
-              "何か",
-              "何でも",
-              "何も"
-            ],
-            "a": 1,
-            "explain": "何か = \"sesuatu\"."
-          },
-          {
-            "q": "あした、___ へ 行きましょう。(ke suatu tempat)",
-            "o": [
-              "どこか",
-              "どこ",
-              "どこも",
-              "どこでも"
-            ],
-            "a": 0,
-            "explain": "どこか = \"di suatu tempat\"."
-          },
-          {
-            "q": "あしたは ___ 来ません。(tidak seorang pun datang)",
-            "o": [
-              "だれも",
-              "だれか",
-              "だれ",
-              "だれでも"
-            ],
-            "a": 0,
-            "explain": "だれも + negatif = \"tidak seorang pun\"."
-          },
-          {
-            "q": "きのうは ___ 行きませんでした。(tidak ke mana-mana)",
-            "o": [
-              "どこへ",
-              "どこへでも",
-              "どこへも",
-              "どこかへ"
-            ],
-            "a": 2,
-            "explain": "どこへも + negatif = \"tidak ke mana-mana\"."
-          },
-          {
-            "q": "わたしは ___ 食べます。(makan apa saja)",
-            "o": [
-              "なんでも",
-              "なにか",
-              "なにを",
-              "なにも"
-            ],
-            "a": 0,
-            "explain": "なんでも = \"apa pun/apa saja\"."
-          },
-          {
-            "q": "___ 100円です。(yang mana pun 100 yen)",
-            "o": [
-              "どれも",
-              "どれ",
-              "どれか",
-              "どれでも"
-            ],
-            "a": 3,
-            "explain": "どれでも = \"yang mana pun\"."
-          },
-          {
-            "q": "今日の テストは ___。(bagaimana ujian hari ini?)",
-            "o": [
-              "どうやって",
-              "どうぞ",
-              "どうでしたか",
-              "どうも"
-            ],
-            "a": 2,
-            "explain": "どうでしたか menanyakan kesan/pendapat (bentuk lampau)."
-          },
-          {
-            "q": "新しい 会社は ___。(bagaimana perusahaan barunya?)",
-            "o": [
-              "いかがでしたも",
-              "いかに",
-              "いかがですか",
-              "いくつですか"
-            ],
-            "a": 2,
-            "explain": "いかがですか = \"bagaimana?\" (sopan)."
-          },
-          {
-            "q": "だれ ___ わかります。(siapa pun paham)",
-            "o": [
-              "でも",
-              "が",
-              "か",
-              "も"
-            ],
-            "a": 0,
-            "explain": "だれでも = \"siapa pun\"."
-          },
-          {
-            "q": "何 ___ 食べませんでした。(tidak makan sama sekali)",
-            "o": [
-              "か",
-              "も",
-              "を",
-              "でも"
-            ],
-            "a": 1,
-            "explain": "何も〜ない = \"tidak ... sama sekali\"."
-          }
-        ]
+        "q": "あした、___ へ 行きましょう。(ke suatu tempat)",
+        "o": [
+          "どこか",
+          "どこ",
+          "どこも",
+          "どこでも"
+        ],
+        "a": 0,
+        "explain": "どこか = \"di suatu tempat\"."
+      },
+      {
+        "q": "あしたは ___ 来ません。(tidak seorang pun datang)",
+        "o": [
+          "だれも",
+          "だれか",
+          "だれ",
+          "だれでも"
+        ],
+        "a": 0,
+        "explain": "だれも + negatif = \"tidak seorang pun\"."
+      },
+      {
+        "q": "きのうは ___ 行きませんでした。(tidak ke mana-mana)",
+        "o": [
+          "どこへ",
+          "どこへでも",
+          "どこへも",
+          "どこかへ"
+        ],
+        "a": 2,
+        "explain": "どこへも + negatif = \"tidak ke mana-mana\"."
+      },
+      {
+        "q": "わたしは ___ 食べます。(makan apa saja)",
+        "o": [
+          "なんでも",
+          "なにか",
+          "なにを",
+          "なにも"
+        ],
+        "a": 0,
+        "explain": "なんでも = \"apa pun/apa saja\"."
+      },
+      {
+        "q": "___ 100円です。(yang mana pun 100 yen)",
+        "o": [
+          "どれも",
+          "どれ",
+          "どれか",
+          "どれでも"
+        ],
+        "a": 3,
+        "explain": "どれでも = \"yang mana pun\"."
+      },
+      {
+        "q": "今日の テストは ___。(bagaimana ujian hari ini?)",
+        "o": [
+          "どうやって",
+          "どうぞ",
+          "どうでしたか",
+          "どうも"
+        ],
+        "a": 2,
+        "explain": "どうでしたか menanyakan kesan/pendapat (bentuk lampau)."
+      },
+      {
+        "q": "新しい 会社は ___。(bagaimana perusahaan barunya?)",
+        "o": [
+          "いかがでしたも",
+          "いかに",
+          "いかがですか",
+          "いくつですか"
+        ],
+        "a": 2,
+        "explain": "いかがですか = \"bagaimana?\" (sopan)."
+      },
+      {
+        "q": "だれ ___ わかります。(siapa pun paham)",
+        "o": [
+          "でも",
+          "が",
+          "か",
+          "も"
+        ],
+        "a": 0,
+        "explain": "だれでも = \"siapa pun\"."
+      },
+      {
+        "q": "何 ___ 食べませんでした。(tidak makan sama sekali)",
+        "o": [
+          "か",
+          "も",
+          "を",
+          "でも"
+        ],
+        "a": 1,
+        "explain": "何も〜ない = \"tidak ... sama sekali\"."
       }
     ]
   },
@@ -3866,7 +3838,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "まいあさ 何時に おきますか。",
@@ -3908,122 +3880,118 @@ const CHAPTERS = {
             "id": "Ya, semangat!"
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "この バッグは いろも ___、かたちも いいです。(warnanya bagus dan)",
+        "o": [
+          "よくって",
+          "よく",
+          "よい",
+          "よくて"
+        ],
+        "a": 3,
+        "explain": "Kata sifat-i よい → よくて."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 8",
-        "items": [
-          {
-            "q": "この バッグは いろも ___、かたちも いいです。(warnanya bagus dan)",
-            "o": [
-              "よくって",
-              "よく",
-              "よい",
-              "よくて"
-            ],
-            "a": 3,
-            "explain": "Kata sifat-i よい → よくて."
-          },
-          {
-            "q": "あの 人は 先生 ___、学生です。(bukan guru, melainkan murid)",
-            "o": [
-              "じゃなくて",
-              "じゃない",
-              "ではありません",
-              "じゃなく"
-            ],
-            "a": 0,
-            "explain": "じゃない → じゃなくて (bentuk -te)."
-          },
-          {
-            "q": "あさ ___、あさごはんを 食べて、さんぽに 行きます。(bangun, lalu...)",
-            "o": [
-              "おきる",
-              "おきて",
-              "おきた",
-              "おきます"
-            ],
-            "a": 1,
-            "explain": "Rangkaian aksi pakai bentuk -te: 起きる → 起きて."
-          },
-          {
-            "q": "パーティーは 6時に ___、今、おわりました。(dimulai jam 6 dan)",
-            "o": [
-              "はじまって",
-              "はじまった",
-              "はじまります",
-              "はじまる"
-            ],
-            "a": 0,
-            "explain": "始まる → 始まって."
-          },
-          {
-            "q": "手を ___ ごはんを 食べましょう。(setelah cuci tangan)",
-            "o": [
-              "あらって",
-              "あらってから",
-              "あらうから",
-              "あらいますから"
-            ],
-            "a": 1,
-            "explain": "-te + から = \"setelah ...\"."
-          },
-          {
-            "q": "ごはんを ___ はを みがきます。(setelah makan)",
-            "o": [
-              "食べて",
-              "食べてから",
-              "食べるから",
-              "食べますから"
-            ],
-            "a": 1,
-            "explain": "食べてから = \"setelah makan\"."
-          },
-          {
-            "q": "ピザを おねがいします。___、コーヒーも おねがいします。(lalu)",
-            "o": [
-              "それは",
-              "そして",
-              "それで",
-              "それから"
-            ],
-            "a": 3,
-            "explain": "それから = \"lalu\" untuk urutan aksi/pesanan."
-          },
-          {
-            "q": "あには あたまが いいです。___、やさしいです。(dan juga)",
-            "o": [
-              "そして",
-              "それで",
-              "それは",
-              "それから"
-            ],
-            "a": 0,
-            "explain": "そして = \"dan\" untuk menambah informasi."
-          },
-          {
-            "q": "この へやは ___ きれいです。(besar dan bersih)",
-            "o": [
-              "大きくて",
-              "大きさ",
-              "大きい",
-              "大きく"
-            ],
-            "a": 0,
-            "explain": "Kata sifat-i 大きい → 大きくて."
-          },
-          {
-            "q": "きのうの ばんごはんは ___ おいしかったです。(murah dan enak)",
-            "o": [
-              "やすい",
-              "やすさ",
-              "やすくて",
-              "やすく"
-            ],
-            "a": 2,
-            "explain": "安い → 安くて."
-          }
-        ]
+        "q": "あの 人は 先生 ___、学生です。(bukan guru, melainkan murid)",
+        "o": [
+          "じゃなくて",
+          "じゃない",
+          "ではありません",
+          "じゃなく"
+        ],
+        "a": 0,
+        "explain": "じゃない → じゃなくて (bentuk -te)."
+      },
+      {
+        "q": "あさ ___、あさごはんを 食べて、さんぽに 行きます。(bangun, lalu...)",
+        "o": [
+          "おきる",
+          "おきて",
+          "おきた",
+          "おきます"
+        ],
+        "a": 1,
+        "explain": "Rangkaian aksi pakai bentuk -te: 起きる → 起きて."
+      },
+      {
+        "q": "パーティーは 6時に ___、今、おわりました。(dimulai jam 6 dan)",
+        "o": [
+          "はじまって",
+          "はじまった",
+          "はじまります",
+          "はじまる"
+        ],
+        "a": 0,
+        "explain": "始まる → 始まって."
+      },
+      {
+        "q": "手を ___ ごはんを 食べましょう。(setelah cuci tangan)",
+        "o": [
+          "あらって",
+          "あらってから",
+          "あらうから",
+          "あらいますから"
+        ],
+        "a": 1,
+        "explain": "-te + から = \"setelah ...\"."
+      },
+      {
+        "q": "ごはんを ___ はを みがきます。(setelah makan)",
+        "o": [
+          "食べて",
+          "食べてから",
+          "食べるから",
+          "食べますから"
+        ],
+        "a": 1,
+        "explain": "食べてから = \"setelah makan\"."
+      },
+      {
+        "q": "ピザを おねがいします。___、コーヒーも おねがいします。(lalu)",
+        "o": [
+          "それは",
+          "そして",
+          "それで",
+          "それから"
+        ],
+        "a": 3,
+        "explain": "それから = \"lalu\" untuk urutan aksi/pesanan."
+      },
+      {
+        "q": "あには あたまが いいです。___、やさしいです。(dan juga)",
+        "o": [
+          "そして",
+          "それで",
+          "それは",
+          "それから"
+        ],
+        "a": 0,
+        "explain": "そして = \"dan\" untuk menambah informasi."
+      },
+      {
+        "q": "この へやは ___ きれいです。(besar dan bersih)",
+        "o": [
+          "大きくて",
+          "大きさ",
+          "大きい",
+          "大きく"
+        ],
+        "a": 0,
+        "explain": "Kata sifat-i 大きい → 大きくて."
+      },
+      {
+        "q": "きのうの ばんごはんは ___ おいしかったです。(murah dan enak)",
+        "o": [
+          "やすい",
+          "やすさ",
+          "やすくて",
+          "やすく"
+        ],
+        "a": 2,
+        "explain": "安い → 安くて."
       }
     ]
   },
@@ -4398,7 +4366,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "すみません。ペンを かして ください。",
@@ -4440,122 +4408,118 @@ const CHAPTERS = {
             "id": "Saya juga ingin minum."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "わたしは あたらしい くるまが ___ です。",
+        "o": [
+          "たべたい",
+          "ほしい",
+          "ください",
+          "います"
+        ],
+        "a": 1,
+        "explain": "ほしい = ingin (benda). Mobil adalah benda, jadi pakai ほしい."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 9",
-        "items": [
-          {
-            "q": "わたしは あたらしい くるまが ___ です。",
-            "o": [
-              "たべたい",
-              "ほしい",
-              "ください",
-              "います"
-            ],
-            "a": 1,
-            "explain": "ほしい = ingin (benda). Mobil adalah benda, jadi pakai ほしい."
-          },
-          {
-            "q": "すしが ___ です。",
-            "o": [
-              "たべます",
-              "たべる",
-              "たべたい",
-              "たべて"
-            ],
-            "a": 2,
-            "explain": "〜たい = ingin melakukan. \"Ingin makan sushi\" = すしが たべたいです."
-          },
-          {
-            "q": "いま、ともだちは てがみを ___ います。",
-            "o": [
-              "かいて",
-              "かきます",
-              "かく",
-              "かきたい"
-            ],
-            "a": 0,
-            "explain": "〜ています = sedang …. \"Sedang menulis surat\" = てがみを かいて います."
-          },
-          {
-            "q": "ちょっと ___ ください。",
-            "o": [
-              "まちます",
-              "まつ",
-              "まちたい",
-              "まって"
-            ],
-            "a": 3,
-            "explain": "〜てください = tolong …. \"Tolong tunggu sebentar\" = ちょっと まって ください."
-          },
-          {
-            "q": "ここで たばこを ___ ください。",
-            "o": [
-              "すいます",
-              "すわないで",
-              "すう",
-              "すいたい"
-            ],
-            "a": 1,
-            "explain": "〜ないでください = tolong jangan …. \"Tolong jangan merokok di sini\" = すわないで ください."
-          },
-          {
-            "q": "きょうは あつい___ですね。",
-            "o": [
-              "よ",
-              "か",
-              "ね",
-              "ほしい"
-            ],
-            "a": 2,
-            "explain": "ね di akhir kalimat = mengajak setuju (\"… ya?\")."
-          },
-          {
-            "q": "あめが ふっています___。",
-            "o": [
-              "よ",
-              "ね",
-              "か",
-              "たい"
-            ],
-            "a": 0,
-            "explain": "よ di akhir kalimat = memberi tahu info baru (\"… lho!\")."
-          },
-          {
-            "q": "こどものとき、せんせいに ___ でした。",
-            "o": [
-              "なりたい",
-              "ほしい",
-              "なります",
-              "なりたかった"
-            ],
-            "a": 3,
-            "explain": "Bentuk lampau dari 〜たい adalah 〜たかった. \"Dulu ingin menjadi guru\" = なりたかったです."
-          },
-          {
-            "q": "いもうとは ピアノを ___ います。",
-            "o": [
-              "ひきます",
-              "ひいて",
-              "ひく",
-              "ひきたい"
-            ],
-            "a": 1,
-            "explain": "\"Sedang main piano\" = ピアノを ひいて います (bentuk -te + います)."
-          },
-          {
-            "q": "この ほんが ___ です。",
-            "o": [
-              "たべたい",
-              "のみたい",
-              "ほしい",
-              "いきたい"
-            ],
-            "a": 2,
-            "explain": "Buku adalah benda, jadi \"ingin buku ini\" = ほんが ほしいです."
-          }
-        ]
+        "q": "すしが ___ です。",
+        "o": [
+          "たべます",
+          "たべる",
+          "たべたい",
+          "たべて"
+        ],
+        "a": 2,
+        "explain": "〜たい = ingin melakukan. \"Ingin makan sushi\" = すしが たべたいです."
+      },
+      {
+        "q": "いま、ともだちは てがみを ___ います。",
+        "o": [
+          "かいて",
+          "かきます",
+          "かく",
+          "かきたい"
+        ],
+        "a": 0,
+        "explain": "〜ています = sedang …. \"Sedang menulis surat\" = てがみを かいて います."
+      },
+      {
+        "q": "ちょっと ___ ください。",
+        "o": [
+          "まちます",
+          "まつ",
+          "まちたい",
+          "まって"
+        ],
+        "a": 3,
+        "explain": "〜てください = tolong …. \"Tolong tunggu sebentar\" = ちょっと まって ください."
+      },
+      {
+        "q": "ここで たばこを ___ ください。",
+        "o": [
+          "すいます",
+          "すわないで",
+          "すう",
+          "すいたい"
+        ],
+        "a": 1,
+        "explain": "〜ないでください = tolong jangan …. \"Tolong jangan merokok di sini\" = すわないで ください."
+      },
+      {
+        "q": "きょうは あつい___ですね。",
+        "o": [
+          "よ",
+          "か",
+          "ね",
+          "ほしい"
+        ],
+        "a": 2,
+        "explain": "ね di akhir kalimat = mengajak setuju (\"… ya?\")."
+      },
+      {
+        "q": "あめが ふっています___。",
+        "o": [
+          "よ",
+          "ね",
+          "か",
+          "たい"
+        ],
+        "a": 0,
+        "explain": "よ di akhir kalimat = memberi tahu info baru (\"… lho!\")."
+      },
+      {
+        "q": "こどものとき、せんせいに ___ でした。",
+        "o": [
+          "なりたい",
+          "ほしい",
+          "なります",
+          "なりたかった"
+        ],
+        "a": 3,
+        "explain": "Bentuk lampau dari 〜たい adalah 〜たかった. \"Dulu ingin menjadi guru\" = なりたかったです."
+      },
+      {
+        "q": "いもうとは ピアノを ___ います。",
+        "o": [
+          "ひきます",
+          "ひいて",
+          "ひく",
+          "ひきたい"
+        ],
+        "a": 1,
+        "explain": "\"Sedang main piano\" = ピアノを ひいて います (bentuk -te + います)."
+      },
+      {
+        "q": "この ほんが ___ です。",
+        "o": [
+          "たべたい",
+          "のみたい",
+          "ほしい",
+          "いきたい"
+        ],
+        "a": 2,
+        "explain": "Buku adalah benda, jadi \"ingin buku ini\" = ほんが ほしいです."
       }
     ]
   },
@@ -4871,7 +4835,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "たんじょうび おめでとう! これ、あげる。",
@@ -4913,122 +4877,118 @@ const CHAPTERS = {
             "id": "Iya, yuk minum."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "わたしは ともだちに ほんを ___。",
+        "o": [
+          "あげます",
+          "くれます",
+          "もらいます",
+          "たべます"
+        ],
+        "a": 0,
+        "explain": "Aku memberi ke teman = あげます (arah: aku → orang lain)."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 10",
-        "items": [
-          {
-            "q": "わたしは ともだちに ほんを ___。",
-            "o": [
-              "あげます",
-              "くれます",
-              "もらいます",
-              "たべます"
-            ],
-            "a": 0,
-            "explain": "Aku memberi ke teman = あげます (arah: aku → orang lain)."
-          },
-          {
-            "q": "せんせいが わたしに ペンを ___。",
-            "o": [
-              "あげました",
-              "もらいました",
-              "くれました",
-              "かきました"
-            ],
-            "a": 2,
-            "explain": "Guru memberi ke aku = くれました (arah: orang lain → aku)."
-          },
-          {
-            "q": "わたしは ははに セーターを ___。",
-            "o": [
-              "あげました",
-              "もらいました",
-              "くれました",
-              "かいました"
-            ],
-            "a": 1,
-            "explain": "Aku menerima dari ibu = もらいました."
-          },
-          {
-            "q": "ちかいから、___。",
-            "o": [
-              "あるきます",
-              "あるきたい",
-              "あるいて",
-              "あるきましょう"
-            ],
-            "a": 3,
-            "explain": "ましょう = \"yuk …\". \"Yuk jalan kaki\" = あるきましょう."
-          },
-          {
-            "q": "にもつが おもいですね。___ か。",
-            "o": [
-              "てつだいましょう",
-              "てつだいます",
-              "てつだって",
-              "てつだいたい"
-            ],
-            "a": 0,
-            "explain": "\"Maukah kubantu?\" = てつだいましょうか."
-          },
-          {
-            "q": "いい てんきですね。こうえんに ___ か。",
-            "o": [
-              "いきます",
-              "いきません",
-              "いきたい",
-              "いって"
-            ],
-            "a": 1,
-            "explain": "〜ませんか = ajakan sopan \"bagaimana kalau …?\"."
-          },
-          {
-            "q": "あねが わたしに バッグを ___。",
-            "o": [
-              "あげました",
-              "もらいました",
-              "くれました",
-              "ほしいです"
-            ],
-            "a": 2,
-            "explain": "Kakak memberi ke aku = くれました (penerimanya aku)."
-          },
-          {
-            "q": "いもうとに この スカートを ___。",
-            "o": [
-              "あげます",
-              "くれます",
-              "もらいます",
-              "ほしいです"
-            ],
-            "a": 0,
-            "explain": "Memberi ke adik (orang lain) = あげます."
-          },
-          {
-            "q": "あした、どこで ___ か。",
-            "o": [
-              "あいます",
-              "あいたい",
-              "あって",
-              "あいましょう"
-            ],
-            "a": 3,
-            "explain": "\"Bagaimana kalau kita bertemu di mana?\" = どこで あいましょうか."
-          },
-          {
-            "q": "ちちから とけいを ___。",
-            "o": [
-              "あげました",
-              "もらいました",
-              "くれました",
-              "ほしいです"
-            ],
-            "a": 1,
-            "explain": "Menerima jam dari ayah = とけいを もらいました."
-          }
-        ]
+        "q": "せんせいが わたしに ペンを ___。",
+        "o": [
+          "あげました",
+          "もらいました",
+          "くれました",
+          "かきました"
+        ],
+        "a": 2,
+        "explain": "Guru memberi ke aku = くれました (arah: orang lain → aku)."
+      },
+      {
+        "q": "わたしは ははに セーターを ___。",
+        "o": [
+          "あげました",
+          "もらいました",
+          "くれました",
+          "かいました"
+        ],
+        "a": 1,
+        "explain": "Aku menerima dari ibu = もらいました."
+      },
+      {
+        "q": "ちかいから、___。",
+        "o": [
+          "あるきます",
+          "あるきたい",
+          "あるいて",
+          "あるきましょう"
+        ],
+        "a": 3,
+        "explain": "ましょう = \"yuk …\". \"Yuk jalan kaki\" = あるきましょう."
+      },
+      {
+        "q": "にもつが おもいですね。___ か。",
+        "o": [
+          "てつだいましょう",
+          "てつだいます",
+          "てつだって",
+          "てつだいたい"
+        ],
+        "a": 0,
+        "explain": "\"Maukah kubantu?\" = てつだいましょうか."
+      },
+      {
+        "q": "いい てんきですね。こうえんに ___ か。",
+        "o": [
+          "いきます",
+          "いきません",
+          "いきたい",
+          "いって"
+        ],
+        "a": 1,
+        "explain": "〜ませんか = ajakan sopan \"bagaimana kalau …?\"."
+      },
+      {
+        "q": "あねが わたしに バッグを ___。",
+        "o": [
+          "あげました",
+          "もらいました",
+          "くれました",
+          "ほしいです"
+        ],
+        "a": 2,
+        "explain": "Kakak memberi ke aku = くれました (penerimanya aku)."
+      },
+      {
+        "q": "いもうとに この スカートを ___。",
+        "o": [
+          "あげます",
+          "くれます",
+          "もらいます",
+          "ほしいです"
+        ],
+        "a": 0,
+        "explain": "Memberi ke adik (orang lain) = あげます."
+      },
+      {
+        "q": "あした、どこで ___ か。",
+        "o": [
+          "あいます",
+          "あいたい",
+          "あって",
+          "あいましょう"
+        ],
+        "a": 3,
+        "explain": "\"Bagaimana kalau kita bertemu di mana?\" = どこで あいましょうか."
+      },
+      {
+        "q": "ちちから とけいを ___。",
+        "o": [
+          "あげました",
+          "もらいました",
+          "くれました",
+          "ほしいです"
+        ],
+        "a": 1,
+        "explain": "Menerima jam dari ayah = とけいを もらいました."
       }
     ]
   },
@@ -5423,7 +5383,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "この ちかくに やすくて おいしい レストランが ありますか。",
@@ -5465,122 +5425,118 @@ const CHAPTERS = {
             "id": "Begitu ya. Kalau begitu, sampai besok."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "えきの ___ ほんやで かいました。",
+        "o": [
+          "ちかくの",
+          "ちかい",
+          "ちかくて",
+          "ちかくに"
+        ],
+        "a": 0,
+        "explain": "\"Toko buku yang dekat stasiun\" = えきの ちかくの ほんや (frasa penjelas + kata benda)."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 11",
-        "items": [
-          {
-            "q": "えきの ___ ほんやで かいました。",
-            "o": [
-              "ちかくの",
-              "ちかい",
-              "ちかくて",
-              "ちかくに"
-            ],
-            "a": 0,
-            "explain": "\"Toko buku yang dekat stasiun\" = えきの ちかくの ほんや (frasa penjelas + kata benda)."
-          },
-          {
-            "q": "その ほんを ___ か。",
-            "o": [
-              "なにします",
-              "どうです",
-              "どうします",
-              "なにが"
-            ],
-            "a": 2,
-            "explain": "\"Mau diapakan buku itu?\" = その ほんを どうしますか."
-          },
-          {
-            "q": "あつい___、まどを あけましょう。",
-            "o": [
-              "でも",
-              "から",
-              "けれど",
-              "では"
-            ],
-            "a": 1,
-            "explain": "から = karena. \"Karena panas, yuk buka jendela\" = あついから."
-          },
-          {
-            "q": "あしたは テストです。___、きょうは べんきょうします。",
-            "o": [
-              "しかし",
-              "けれど",
-              "から",
-              "だから"
-            ],
-            "a": 3,
-            "explain": "だから = jadi / makanya (memulai kalimat kesimpulan)."
-          },
-          {
-            "q": "にほんごは むずかしいです。___、おもしろいです。",
-            "o": [
-              "でも",
-              "から",
-              "だから",
-              "では"
-            ],
-            "a": 0,
-            "explain": "でも = tapi (di awal kalimat)."
-          },
-          {
-            "q": "せんせいに きいた___、まだ わかりません。",
-            "o": [
-              "から",
-              "けれど",
-              "ので",
-              "では"
-            ],
-            "a": 1,
-            "explain": "けれど = tapi / namun (di tengah kalimat)."
-          },
-          {
-            "q": "じかんが ないですよ。___、タクシーで いきましょう。",
-            "o": [
-              "でも",
-              "から",
-              "じゃ",
-              "けれど"
-            ],
-            "a": 2,
-            "explain": "じゃ (dari それじゃ) = kalau begitu."
-          },
-          {
-            "q": "うたが へた___、カラオケに いきません。",
-            "o": [
-              "だから",
-              "でも",
-              "けれど",
-              "では"
-            ],
-            "a": 0,
-            "explain": "\"Karena tidak pandai bernyanyi\" = うたが へただから."
-          },
-          {
-            "q": "しずか___ まち",
-            "o": [
-              "い",
-              "くて",
-              "の",
-              "な"
-            ],
-            "a": 3,
-            "explain": "Kata sifat-na + kata benda memakai な: しずかな まち = kota yang tenang."
-          },
-          {
-            "q": "きょうは ここまでです。___、また らいしゅう。",
-            "o": [
-              "でも",
-              "それでは",
-              "から",
-              "けれど"
-            ],
-            "a": 1,
-            "explain": "それでは = kalau begitu / baiklah (penutup sopan)."
-          }
-        ]
+        "q": "その ほんを ___ か。",
+        "o": [
+          "なにします",
+          "どうです",
+          "どうします",
+          "なにが"
+        ],
+        "a": 2,
+        "explain": "\"Mau diapakan buku itu?\" = その ほんを どうしますか."
+      },
+      {
+        "q": "あつい___、まどを あけましょう。",
+        "o": [
+          "でも",
+          "から",
+          "けれど",
+          "では"
+        ],
+        "a": 1,
+        "explain": "から = karena. \"Karena panas, yuk buka jendela\" = あついから."
+      },
+      {
+        "q": "あしたは テストです。___、きょうは べんきょうします。",
+        "o": [
+          "しかし",
+          "けれど",
+          "から",
+          "だから"
+        ],
+        "a": 3,
+        "explain": "だから = jadi / makanya (memulai kalimat kesimpulan)."
+      },
+      {
+        "q": "にほんごは むずかしいです。___、おもしろいです。",
+        "o": [
+          "でも",
+          "から",
+          "だから",
+          "では"
+        ],
+        "a": 0,
+        "explain": "でも = tapi (di awal kalimat)."
+      },
+      {
+        "q": "せんせいに きいた___、まだ わかりません。",
+        "o": [
+          "から",
+          "けれど",
+          "ので",
+          "では"
+        ],
+        "a": 1,
+        "explain": "けれど = tapi / namun (di tengah kalimat)."
+      },
+      {
+        "q": "じかんが ないですよ。___、タクシーで いきましょう。",
+        "o": [
+          "でも",
+          "から",
+          "じゃ",
+          "けれど"
+        ],
+        "a": 2,
+        "explain": "じゃ (dari それじゃ) = kalau begitu."
+      },
+      {
+        "q": "うたが へた___、カラオケに いきません。",
+        "o": [
+          "だから",
+          "でも",
+          "けれど",
+          "では"
+        ],
+        "a": 0,
+        "explain": "\"Karena tidak pandai bernyanyi\" = うたが へただから."
+      },
+      {
+        "q": "しずか___ まち",
+        "o": [
+          "い",
+          "くて",
+          "の",
+          "な"
+        ],
+        "a": 3,
+        "explain": "Kata sifat-na + kata benda memakai な: しずかな まち = kota yang tenang."
+      },
+      {
+        "q": "きょうは ここまでです。___、また らいしゅう。",
+        "o": [
+          "でも",
+          "それでは",
+          "から",
+          "けれど"
+        ],
+        "a": 1,
+        "explain": "それでは = kalau begitu / baiklah (penutup sopan)."
       }
     ]
   },
@@ -5954,7 +5910,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "にほんごが とても じょうずですね。",
@@ -5996,122 +5952,118 @@ const CHAPTERS = {
             "id": "Kadang-kadang makan bareng."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "きのうは ___ さむかったです。",
+        "o": [
+          "とても",
+          "あまり",
+          "ぜんぜん",
+          "ときどき"
+        ],
+        "a": 0,
+        "explain": "とても = sangat. \"Kemarin sangat dingin\" = とても さむかったです."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 12",
-        "items": [
-          {
-            "q": "きのうは ___ さむかったです。",
-            "o": [
-              "とても",
-              "あまり",
-              "ぜんぜん",
-              "ときどき"
-            ],
-            "a": 0,
-            "explain": "とても = sangat. \"Kemarin sangat dingin\" = とても さむかったです."
-          },
-          {
-            "q": "テストは ___ できませんでした。",
-            "o": [
-              "とても",
-              "よく",
-              "ぜんぜん",
-              "いつも"
-            ],
-            "a": 2,
-            "explain": "ぜんぜん + negatif = sama sekali tidak …."
-          },
-          {
-            "q": "きょうは ___ さむく ありません。",
-            "o": [
-              "とても",
-              "あまり",
-              "ぜんぜん",
-              "ときどき"
-            ],
-            "a": 1,
-            "explain": "あまり + negatif = tidak begitu …."
-          },
-          {
-            "q": "あの みせは ___ こんで います。",
-            "o": [
-              "ときどき",
-              "あまり",
-              "ぜんぜん",
-              "いつも"
-            ],
-            "a": 3,
-            "explain": "いつも = selalu. \"Toko itu selalu ramai\" = いつも こんで います."
-          },
-          {
-            "q": "___ えきで せんせいに あいます。",
-            "o": [
-              "ときどき",
-              "いつも",
-              "とても",
-              "ぜんぜん"
-            ],
-            "a": 0,
-            "explain": "ときどき = kadang-kadang."
-          },
-          {
-            "q": "にほんごの べんきょうは ___ です。",
-            "o": [
-              "あまり",
-              "ぜんぜん",
-              "たいへん",
-              "ときどき"
-            ],
-            "a": 2,
-            "explain": "たいへんです = berat / sulit."
-          },
-          {
-            "q": "おさけを ___ のみません。",
-            "o": [
-              "とても",
-              "あまり",
-              "よく",
-              "いつも"
-            ],
-            "a": 1,
-            "explain": "\"Tidak begitu minum sake\" = あまり のみません."
-          },
-          {
-            "q": "___ だめです。",
-            "o": [
-              "とても",
-              "あまり",
-              "ときどき",
-              "ぜんぜん"
-            ],
-            "a": 3,
-            "explain": "\"Sama sekali tidak bisa\" = ぜんぜん だめです."
-          },
-          {
-            "q": "母が びょうきです。___ ですね。",
-            "o": [
-              "それは たいへん",
-              "それは とても",
-              "それは あまり",
-              "それは ぜんぜん"
-            ],
-            "a": 0,
-            "explain": "\"Itu berat ya\" = それは たいへんですね."
-          },
-          {
-            "q": "___ テレビを みます。",
-            "o": [
-              "あまり",
-              "ぜんぜん",
-              "よく",
-              "とても"
-            ],
-            "a": 2,
-            "explain": "よく = sering. \"Sering menonton TV\" = よく テレビを みます."
-          }
-        ]
+        "q": "テストは ___ できませんでした。",
+        "o": [
+          "とても",
+          "よく",
+          "ぜんぜん",
+          "いつも"
+        ],
+        "a": 2,
+        "explain": "ぜんぜん + negatif = sama sekali tidak …."
+      },
+      {
+        "q": "きょうは ___ さむく ありません。",
+        "o": [
+          "とても",
+          "あまり",
+          "ぜんぜん",
+          "ときどき"
+        ],
+        "a": 1,
+        "explain": "あまり + negatif = tidak begitu …."
+      },
+      {
+        "q": "あの みせは ___ こんで います。",
+        "o": [
+          "ときどき",
+          "あまり",
+          "ぜんぜん",
+          "いつも"
+        ],
+        "a": 3,
+        "explain": "いつも = selalu. \"Toko itu selalu ramai\" = いつも こんで います."
+      },
+      {
+        "q": "___ えきで せんせいに あいます。",
+        "o": [
+          "ときどき",
+          "いつも",
+          "とても",
+          "ぜんぜん"
+        ],
+        "a": 0,
+        "explain": "ときどき = kadang-kadang."
+      },
+      {
+        "q": "にほんごの べんきょうは ___ です。",
+        "o": [
+          "あまり",
+          "ぜんぜん",
+          "たいへん",
+          "ときどき"
+        ],
+        "a": 2,
+        "explain": "たいへんです = berat / sulit."
+      },
+      {
+        "q": "おさけを ___ のみません。",
+        "o": [
+          "とても",
+          "あまり",
+          "よく",
+          "いつも"
+        ],
+        "a": 1,
+        "explain": "\"Tidak begitu minum sake\" = あまり のみません."
+      },
+      {
+        "q": "___ だめです。",
+        "o": [
+          "とても",
+          "あまり",
+          "ときどき",
+          "ぜんぜん"
+        ],
+        "a": 3,
+        "explain": "\"Sama sekali tidak bisa\" = ぜんぜん だめです."
+      },
+      {
+        "q": "母が びょうきです。___ ですね。",
+        "o": [
+          "それは たいへん",
+          "それは とても",
+          "それは あまり",
+          "それは ぜんぜん"
+        ],
+        "a": 0,
+        "explain": "\"Itu berat ya\" = それは たいへんですね."
+      },
+      {
+        "q": "___ テレビを みます。",
+        "o": [
+          "あまり",
+          "ぜんぜん",
+          "よく",
+          "とても"
+        ],
+        "a": 2,
+        "explain": "よく = sering. \"Sering menonton TV\" = よく テレビを みます."
       }
     ]
   },
@@ -6500,7 +6452,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "宿題はもう終わりましたか。",
@@ -6542,122 +6494,118 @@ const CHAPTERS = {
             "id": "Kebanyakan sudah selesai."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "もう昼ご飯を ___ 。(Saya sudah makan siang.)",
+        "o": [
+          "食べます",
+          "食べません",
+          "食べました",
+          "食べていません"
+        ],
+        "a": 2,
+        "explain": "もう + bentuk lampau = sudah. Jadi 食べました."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 13",
-        "items": [
-          {
-            "q": "もう昼ご飯を ___ 。(Saya sudah makan siang.)",
-            "o": [
-              "食べます",
-              "食べません",
-              "食べました",
-              "食べていません"
-            ],
-            "a": 2,
-            "explain": "もう + bentuk lampau = sudah. Jadi 食べました."
-          },
-          {
-            "q": "宿題はまだ ___ 。(PR belum selesai.)",
-            "o": [
-              "終わっていません",
-              "終わりました",
-              "終わります",
-              "終わっています"
-            ],
-            "a": 0,
-            "explain": "まだ + bentuk negatif = belum. Jadi 終わっていません."
-          },
-          {
-            "q": "日本語を ___ 勉強します。(Saya belajar bahasa Jepang dengan baik.)",
-            "o": [
-              "さっき",
-              "まあまあ",
-              "もうすぐ",
-              "よく"
-            ],
-            "a": 3,
-            "explain": "よく = dengan baik/seksama."
-          },
-          {
-            "q": "テストは ___ でした。(Ujiannya lumayan.)",
-            "o": [
-              "すぐに",
-              "まあまあ",
-              "よく",
-              "さっき"
-            ],
-            "a": 1,
-            "explain": "まあまあ = lumayan/biasa saja."
-          },
-          {
-            "q": "___ 来てください。(Tolong segera datang.)",
-            "o": [
-              "すぐに",
-              "まあまあ",
-              "だいたい",
-              "ほとんど"
-            ],
-            "a": 0,
-            "explain": "すぐに = segera; langsung."
-          },
-          {
-            "q": "___ 桜が咲きます。(Sebentar lagi bunga sakura mekar.)",
-            "o": [
-              "さっき",
-              "まだ",
-              "もうすぐ",
-              "よく"
-            ],
-            "a": 2,
-            "explain": "もうすぐ = sebentar lagi."
-          },
-          {
-            "q": "___ 食べました。(Tadi sudah makan.)",
-            "o": [
-              "もうすぐ",
-              "さっき",
-              "まあまあ",
-              "だいたい"
-            ],
-            "a": 1,
-            "explain": "さっき = tadi (baru saja terjadi)."
-          },
-          {
-            "q": "___ わかりました。(Kebanyakan sudah paham.)",
-            "o": [
-              "すぐに",
-              "さっき",
-              "もう",
-              "だいたい"
-            ],
-            "a": 3,
-            "explain": "だいたい = kebanyakan; kira-kira."
-          },
-          {
-            "q": "肉を ___ 食べません。(Saya hampir tidak makan daging.)",
-            "o": [
-              "ほとんど",
-              "もっと",
-              "よく",
-              "まあまあ"
-            ],
-            "a": 0,
-            "explain": "ほとんど + negatif = hampir tidak."
-          },
-          {
-            "q": "___ ください。(Minta tambah lagi.)",
-            "o": [
-              "さっき",
-              "まだ",
-              "もっと",
-              "もう"
-            ],
-            "a": 2,
-            "explain": "もっと = lebih (lagi)."
-          }
-        ]
+        "q": "宿題はまだ ___ 。(PR belum selesai.)",
+        "o": [
+          "終わっていません",
+          "終わりました",
+          "終わります",
+          "終わっています"
+        ],
+        "a": 0,
+        "explain": "まだ + bentuk negatif = belum. Jadi 終わっていません."
+      },
+      {
+        "q": "日本語を ___ 勉強します。(Saya belajar bahasa Jepang dengan baik.)",
+        "o": [
+          "さっき",
+          "まあまあ",
+          "もうすぐ",
+          "よく"
+        ],
+        "a": 3,
+        "explain": "よく = dengan baik/seksama."
+      },
+      {
+        "q": "テストは ___ でした。(Ujiannya lumayan.)",
+        "o": [
+          "すぐに",
+          "まあまあ",
+          "よく",
+          "さっき"
+        ],
+        "a": 1,
+        "explain": "まあまあ = lumayan/biasa saja."
+      },
+      {
+        "q": "___ 来てください。(Tolong segera datang.)",
+        "o": [
+          "すぐに",
+          "まあまあ",
+          "だいたい",
+          "ほとんど"
+        ],
+        "a": 0,
+        "explain": "すぐに = segera; langsung."
+      },
+      {
+        "q": "___ 桜が咲きます。(Sebentar lagi bunga sakura mekar.)",
+        "o": [
+          "さっき",
+          "まだ",
+          "もうすぐ",
+          "よく"
+        ],
+        "a": 2,
+        "explain": "もうすぐ = sebentar lagi."
+      },
+      {
+        "q": "___ 食べました。(Tadi sudah makan.)",
+        "o": [
+          "もうすぐ",
+          "さっき",
+          "まあまあ",
+          "だいたい"
+        ],
+        "a": 1,
+        "explain": "さっき = tadi (baru saja terjadi)."
+      },
+      {
+        "q": "___ わかりました。(Kebanyakan sudah paham.)",
+        "o": [
+          "すぐに",
+          "さっき",
+          "もう",
+          "だいたい"
+        ],
+        "a": 3,
+        "explain": "だいたい = kebanyakan; kira-kira."
+      },
+      {
+        "q": "肉を ___ 食べません。(Saya hampir tidak makan daging.)",
+        "o": [
+          "ほとんど",
+          "もっと",
+          "よく",
+          "まあまあ"
+        ],
+        "a": 0,
+        "explain": "ほとんど + negatif = hampir tidak."
+      },
+      {
+        "q": "___ ください。(Minta tambah lagi.)",
+        "o": [
+          "さっき",
+          "まだ",
+          "もっと",
+          "もう"
+        ],
+        "a": 2,
+        "explain": "もっと = lebih (lagi)."
       }
     ]
   },
@@ -7013,7 +6961,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "へやをきれいにしましたか。",
@@ -7055,122 +7003,118 @@ const CHAPTERS = {
             "id": "Bilangnya \"Thank you\"."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "部屋を ___ します。(Saya membuat kamar menjadi bersih.)",
+        "o": [
+          "きれいく",
+          "きれいに",
+          "きれいな",
+          "きれいだ"
+        ],
+        "a": 1,
+        "explain": "Kata sifat-na + に. Jadi きれいにします."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 14",
-        "items": [
-          {
-            "q": "部屋を ___ します。(Saya membuat kamar menjadi bersih.)",
-            "o": [
-              "きれいく",
-              "きれいに",
-              "きれいな",
-              "きれいだ"
-            ],
-            "a": 1,
-            "explain": "Kata sifat-na + に. Jadi きれいにします."
-          },
-          {
-            "q": "___ 書いてください。(Tolong tulis dengan besar.)",
-            "o": [
-              "おおきいに",
-              "おおきい",
-              "おおきな",
-              "おおきく"
-            ],
-            "a": 3,
-            "explain": "Kata sifat-i + く. Jadi おおきく書いてください."
-          },
-          {
-            "q": "冬になって、___ なりました。(Setelah musim dingin, menjadi dingin.)",
-            "o": [
-              "さむくなりました",
-              "さむになりました",
-              "さむいなりました",
-              "さむななりました"
-            ],
-            "a": 0,
-            "explain": "さむい → さむく + なります = menjadi dingin."
-          },
-          {
-            "q": "信号が ___ なりました。(Lampunya menjadi hijau.)",
-            "o": [
-              "みどりく",
-              "みどり",
-              "みどりになりました",
-              "みどりに"
-            ],
-            "a": 3,
-            "explain": "みどり (kata benda) + に + なります."
-          },
-          {
-            "q": "ジュースにしますか、コーヒーにしますか。— ___ 。(— Saya pilih jus.)",
-            "o": [
-              "ジュースにします",
-              "ジュースになります",
-              "ジュースをします",
-              "ジュースがなります"
-            ],
-            "a": 0,
-            "explain": "にします = memutuskan/memilih."
-          },
-          {
-            "q": "___ 歩きます。(Berjalan dengan cepat.)",
-            "o": [
-              "はやい",
-              "はやな",
-              "はやに",
-              "はやく"
-            ],
-            "a": 3,
-            "explain": "はやい → はやく (kata sifat-i + く)."
-          },
-          {
-            "q": "図書館では ___ 話します。(Di perpustakaan bicara dengan pelan.)",
-            "o": [
-              "しずか",
-              "しずかに",
-              "しずかく",
-              "しずかな"
-            ],
-            "a": 1,
-            "explain": "しずか (kata sifat-na) + に."
-          },
-          {
-            "q": "これは日本語で ___ 言いますか。(Ini bahasa Jepangnya bilangnya bagaimana?)",
-            "o": [
-              "なに",
-              "どれ",
-              "どう",
-              "どの"
-            ],
-            "a": 2,
-            "explain": "どう言いますか = bilangnya bagaimana?"
-          },
-          {
-            "q": "「さくら」は英語で ___ 言いますか。(\"Sakura\" bahasa Inggrisnya apa bilangnya?)",
-            "o": [
-              "なんと",
-              "なに",
-              "どうして",
-              "いくら"
-            ],
-            "a": 0,
-            "explain": "なんと言いますか = apa bilangnya?"
-          },
-          {
-            "q": "毎日運動して、___ なりました。(Olahraga tiap hari, menjadi sehat.)",
-            "o": [
-              "げんき",
-              "げんきな",
-              "げんきく",
-              "げんきに"
-            ],
-            "a": 3,
-            "explain": "げんき (kata sifat-na) + に + なります."
-          }
-        ]
+        "q": "___ 書いてください。(Tolong tulis dengan besar.)",
+        "o": [
+          "おおきいに",
+          "おおきい",
+          "おおきな",
+          "おおきく"
+        ],
+        "a": 3,
+        "explain": "Kata sifat-i + く. Jadi おおきく書いてください."
+      },
+      {
+        "q": "冬になって、___ なりました。(Setelah musim dingin, menjadi dingin.)",
+        "o": [
+          "さむくなりました",
+          "さむになりました",
+          "さむいなりました",
+          "さむななりました"
+        ],
+        "a": 0,
+        "explain": "さむい → さむく + なります = menjadi dingin."
+      },
+      {
+        "q": "信号が ___ なりました。(Lampunya menjadi hijau.)",
+        "o": [
+          "みどりく",
+          "みどり",
+          "みどりになりました",
+          "みどりに"
+        ],
+        "a": 3,
+        "explain": "みどり (kata benda) + に + なります."
+      },
+      {
+        "q": "ジュースにしますか、コーヒーにしますか。— ___ 。(— Saya pilih jus.)",
+        "o": [
+          "ジュースにします",
+          "ジュースになります",
+          "ジュースをします",
+          "ジュースがなります"
+        ],
+        "a": 0,
+        "explain": "にします = memutuskan/memilih."
+      },
+      {
+        "q": "___ 歩きます。(Berjalan dengan cepat.)",
+        "o": [
+          "はやい",
+          "はやな",
+          "はやに",
+          "はやく"
+        ],
+        "a": 3,
+        "explain": "はやい → はやく (kata sifat-i + く)."
+      },
+      {
+        "q": "図書館では ___ 話します。(Di perpustakaan bicara dengan pelan.)",
+        "o": [
+          "しずか",
+          "しずかに",
+          "しずかく",
+          "しずかな"
+        ],
+        "a": 1,
+        "explain": "しずか (kata sifat-na) + に."
+      },
+      {
+        "q": "これは日本語で ___ 言いますか。(Ini bahasa Jepangnya bilangnya bagaimana?)",
+        "o": [
+          "なに",
+          "どれ",
+          "どう",
+          "どの"
+        ],
+        "a": 2,
+        "explain": "どう言いますか = bilangnya bagaimana?"
+      },
+      {
+        "q": "「さくら」は英語で ___ 言いますか。(\"Sakura\" bahasa Inggrisnya apa bilangnya?)",
+        "o": [
+          "なんと",
+          "なに",
+          "どうして",
+          "いくら"
+        ],
+        "a": 0,
+        "explain": "なんと言いますか = apa bilangnya?"
+      },
+      {
+        "q": "毎日運動して、___ なりました。(Olahraga tiap hari, menjadi sehat.)",
+        "o": [
+          "げんき",
+          "げんきな",
+          "げんきく",
+          "げんきに"
+        ],
+        "a": 3,
+        "explain": "げんき (kata sifat-na) + に + なります."
       }
     ]
   },
@@ -7517,7 +7461,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "食べる前に手を洗いますか。",
@@ -7559,122 +7503,118 @@ const CHAPTERS = {
             "id": "Boleh."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "食べる ___ 手を洗います。(Cuci tangan sebelum makan.)",
+        "o": [
+          "あとで",
+          "とき",
+          "前に",
+          "あと"
+        ],
+        "a": 2,
+        "explain": "前に + bentuk る = sebelum. Jadi 食べる前に."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 15",
-        "items": [
-          {
-            "q": "食べる ___ 手を洗います。(Cuci tangan sebelum makan.)",
-            "o": [
-              "あとで",
-              "とき",
-              "前に",
-              "あと"
-            ],
-            "a": 2,
-            "explain": "前に + bentuk る = sebelum. Jadi 食べる前に."
-          },
-          {
-            "q": "食べた ___ 歯をみがきます。(Sikat gigi sesudah makan.)",
-            "o": [
-              "あとで",
-              "前に",
-              "とき",
-              "まえ"
-            ],
-            "a": 0,
-            "explain": "あとで + bentuk た = sesudah. Jadi 食べたあとで."
-          },
-          {
-            "q": "子どもの ___ 、よく遊びました。(Waktu kecil, sering bermain.)",
-            "o": [
-              "とき",
-              "前に",
-              "あとで",
-              "あと"
-            ],
-            "a": 0,
-            "explain": "子どものとき = waktu kecil/ketika kecil."
-          },
-          {
-            "q": "映画を ___ 行きます。(Pergi untuk menonton film.)",
-            "o": [
-              "見て",
-              "見る",
-              "見",
-              "見に"
-            ],
-            "a": 3,
-            "explain": "bentuk -masu + に + 行きます = pergi untuk ~."
-          },
-          {
-            "q": "パンを ___ 行きます。(Pergi untuk membeli roti.)",
-            "o": [
-              "買って",
-              "買う",
-              "買いに",
-              "買い"
-            ],
-            "a": 2,
-            "explain": "bentuk -masu (買い) + に + 行きます."
-          },
-          {
-            "q": "寝る ___ シャワーをあびます。(Mandi sebelum tidur.)",
-            "o": [
-              "前に",
-              "あとで",
-              "とき",
-              "に"
-            ],
-            "a": 0,
-            "explain": "Sebelum tidur = 寝る前に (bentuk る + 前に)."
-          },
-          {
-            "q": "仕事の ___ ビールを飲みます。(Minum bir sesudah kerja.)",
-            "o": [
-              "前に",
-              "あとで",
-              "とき",
-              "ごろ"
-            ],
-            "a": 1,
-            "explain": "Sesudah kerja = 仕事のあとで."
-          },
-          {
-            "q": "友だちの家に ___ 来ます。(Datang untuk bermain ke rumah teman.)",
-            "o": [
-              "遊んで",
-              "遊ぶ",
-              "遊び",
-              "遊びに"
-            ],
-            "a": 3,
-            "explain": "bentuk -masu (遊び) + に + 来ます = datang untuk bermain."
-          },
-          {
-            "q": "若い ___ 、日本へ行きました。(Waktu muda, pergi ke Jepang.)",
-            "o": [
-              "とき",
-              "前に",
-              "あとで",
-              "ごろ"
-            ],
-            "a": 0,
-            "explain": "若いとき = ketika/waktu muda."
-          },
-          {
-            "q": "出かける ___ 電話します。(Telepon sebelum pergi.)",
-            "o": [
-              "あとで",
-              "とき",
-              "前に",
-              "から"
-            ],
-            "a": 2,
-            "explain": "Sebelum pergi = 出かける前に."
-          }
-        ]
+        "q": "食べた ___ 歯をみがきます。(Sikat gigi sesudah makan.)",
+        "o": [
+          "あとで",
+          "前に",
+          "とき",
+          "まえ"
+        ],
+        "a": 0,
+        "explain": "あとで + bentuk た = sesudah. Jadi 食べたあとで."
+      },
+      {
+        "q": "子どもの ___ 、よく遊びました。(Waktu kecil, sering bermain.)",
+        "o": [
+          "とき",
+          "前に",
+          "あとで",
+          "あと"
+        ],
+        "a": 0,
+        "explain": "子どものとき = waktu kecil/ketika kecil."
+      },
+      {
+        "q": "映画を ___ 行きます。(Pergi untuk menonton film.)",
+        "o": [
+          "見て",
+          "見る",
+          "見",
+          "見に"
+        ],
+        "a": 3,
+        "explain": "bentuk -masu + に + 行きます = pergi untuk ~."
+      },
+      {
+        "q": "パンを ___ 行きます。(Pergi untuk membeli roti.)",
+        "o": [
+          "買って",
+          "買う",
+          "買いに",
+          "買い"
+        ],
+        "a": 2,
+        "explain": "bentuk -masu (買い) + に + 行きます."
+      },
+      {
+        "q": "寝る ___ シャワーをあびます。(Mandi sebelum tidur.)",
+        "o": [
+          "前に",
+          "あとで",
+          "とき",
+          "に"
+        ],
+        "a": 0,
+        "explain": "Sebelum tidur = 寝る前に (bentuk る + 前に)."
+      },
+      {
+        "q": "仕事の ___ ビールを飲みます。(Minum bir sesudah kerja.)",
+        "o": [
+          "前に",
+          "あとで",
+          "とき",
+          "ごろ"
+        ],
+        "a": 1,
+        "explain": "Sesudah kerja = 仕事のあとで."
+      },
+      {
+        "q": "友だちの家に ___ 来ます。(Datang untuk bermain ke rumah teman.)",
+        "o": [
+          "遊んで",
+          "遊ぶ",
+          "遊び",
+          "遊びに"
+        ],
+        "a": 3,
+        "explain": "bentuk -masu (遊び) + に + 来ます = datang untuk bermain."
+      },
+      {
+        "q": "若い ___ 、日本へ行きました。(Waktu muda, pergi ke Jepang.)",
+        "o": [
+          "とき",
+          "前に",
+          "あとで",
+          "ごろ"
+        ],
+        "a": 0,
+        "explain": "若いとき = ketika/waktu muda."
+      },
+      {
+        "q": "出かける ___ 電話します。(Telepon sebelum pergi.)",
+        "o": [
+          "あとで",
+          "とき",
+          "前に",
+          "から"
+        ],
+        "a": 2,
+        "explain": "Sebelum pergi = 出かける前に."
       }
     ]
   },
@@ -8031,7 +7971,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "日本の 夏は 暑いですか。",
@@ -8073,122 +8013,118 @@ const CHAPTERS = {
             "id": "Melakukan hal-hal seperti pergi ke kolam renang atau menonton film bersama teman."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "わたしは おとうと___ せが 高いです。(Saya lebih tinggi daripada adik.)",
+        "o": [
+          "のほうが",
+          "いちばん",
+          "より",
+          "どちら"
+        ],
+        "a": 2,
+        "explain": "Pola [A] は [B] より + kata sifat = A lebih ~ daripada B."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 16",
-        "items": [
-          {
-            "q": "わたしは おとうと___ せが 高いです。(Saya lebih tinggi daripada adik.)",
-            "o": [
-              "のほうが",
-              "いちばん",
-              "より",
-              "どちら"
-            ],
-            "a": 2,
-            "explain": "Pola [A] は [B] より + kata sifat = A lebih ~ daripada B."
-          },
-          {
-            "q": "きのう___ 今日のほうが さむいです。(Hari ini lebih dingin daripada kemarin.)",
-            "o": [
-              "は",
-              "より",
-              "が",
-              "と"
-            ],
-            "a": 1,
-            "explain": "[Benda pertama] より [benda kedua] のほうが = benda kedua lebih ~."
-          },
-          {
-            "q": "ぎゅうにくと ぶたにくと ___が 高いですか。(Daging sapi dan babi, mana yang lebih mahal?)",
-            "o": [
-              "いちばん",
-              "より",
-              "たり",
-              "どちら"
-            ],
-            "a": 3,
-            "explain": "どちら dipakai untuk bertanya 'yang mana' di antara dua pilihan."
-          },
-          {
-            "q": "三つの中で これ___ いちばん 大きいです。(Di antara tiga, ini yang paling besar.)",
-            "o": [
-              "より",
-              "どっち",
-              "が",
-              "たり"
-            ],
-            "a": 2,
-            "explain": "いちばん + が menandai yang paling ~ di antara banyak pilihan."
-          },
-          {
-            "q": "日本で ___ 高い 山は ふじ山です。(Gunung paling tinggi di Jepang adalah Fuji.)",
-            "o": [
-              "いちばん",
-              "より",
-              "どっち",
-              "たり"
-            ],
-            "a": 0,
-            "explain": "いちばん = paling. Sering diawali ruang lingkupnya (日本で)."
-          },
-          {
-            "q": "休みは 本を 読ん___、テレビを 見___ します。",
-            "o": [
-              "だり、だり",
-              "ます、ます",
-              "て、て",
-              "たり、たり"
-            ],
-            "a": 3,
-            "explain": "Pola 〜たり〜たりします: kata kerja bentuk -ta + り untuk menyebut contoh kegiatan."
-          },
-          {
-            "q": "父は 母___ わかいです。(Ayah lebih muda daripada ibu.)",
-            "o": [
-              "のほうが",
-              "より",
-              "が",
-              "いちばん"
-            ],
-            "a": 1,
-            "explain": "父は 母より わかいです = ayah lebih muda daripada ibu."
-          },
-          {
-            "q": "どれが いちばん ___ですか。(Mana yang paling ~?)",
-            "o": [
-              "より",
-              "たり",
-              "すき",
-              "どちら"
-            ],
-            "a": 2,
-            "explain": "Setelah いちばん dipakai kata sifat: いちばん すきです (paling suka)."
-          },
-          {
-            "q": "ペンと えんぴつと どっちを よく ___か。(Pulpen dan pensil, mana yang sering dipakai?)",
-            "o": [
-              "つかいます",
-              "つかいたり",
-              "より",
-              "いちばん"
-            ],
-            "a": 0,
-            "explain": "どっち = yang mana (kasual). Kalimat tanya biasa diakhiri kata kerja: つかいますか."
-          },
-          {
-            "q": "わたしより 妹___ せが 高いです。(Adik perempuan lebih tinggi daripada saya.)",
-            "o": [
-              "より",
-              "のほうが",
-              "が",
-              "と"
-            ],
-            "a": 1,
-            "explain": "わたしより 妹のほうが = adik perempuan lebih ~ daripada saya."
-          }
-        ]
+        "q": "きのう___ 今日のほうが さむいです。(Hari ini lebih dingin daripada kemarin.)",
+        "o": [
+          "は",
+          "より",
+          "が",
+          "と"
+        ],
+        "a": 1,
+        "explain": "[Benda pertama] より [benda kedua] のほうが = benda kedua lebih ~."
+      },
+      {
+        "q": "ぎゅうにくと ぶたにくと ___が 高いですか。(Daging sapi dan babi, mana yang lebih mahal?)",
+        "o": [
+          "いちばん",
+          "より",
+          "たり",
+          "どちら"
+        ],
+        "a": 3,
+        "explain": "どちら dipakai untuk bertanya 'yang mana' di antara dua pilihan."
+      },
+      {
+        "q": "三つの中で これ___ いちばん 大きいです。(Di antara tiga, ini yang paling besar.)",
+        "o": [
+          "より",
+          "どっち",
+          "が",
+          "たり"
+        ],
+        "a": 2,
+        "explain": "いちばん + が menandai yang paling ~ di antara banyak pilihan."
+      },
+      {
+        "q": "日本で ___ 高い 山は ふじ山です。(Gunung paling tinggi di Jepang adalah Fuji.)",
+        "o": [
+          "いちばん",
+          "より",
+          "どっち",
+          "たり"
+        ],
+        "a": 0,
+        "explain": "いちばん = paling. Sering diawali ruang lingkupnya (日本で)."
+      },
+      {
+        "q": "休みは 本を 読ん___、テレビを 見___ します。",
+        "o": [
+          "だり、だり",
+          "ます、ます",
+          "て、て",
+          "たり、たり"
+        ],
+        "a": 3,
+        "explain": "Pola 〜たり〜たりします: kata kerja bentuk -ta + り untuk menyebut contoh kegiatan."
+      },
+      {
+        "q": "父は 母___ わかいです。(Ayah lebih muda daripada ibu.)",
+        "o": [
+          "のほうが",
+          "より",
+          "が",
+          "いちばん"
+        ],
+        "a": 1,
+        "explain": "父は 母より わかいです = ayah lebih muda daripada ibu."
+      },
+      {
+        "q": "どれが いちばん ___ですか。(Mana yang paling ~?)",
+        "o": [
+          "より",
+          "たり",
+          "すき",
+          "どちら"
+        ],
+        "a": 2,
+        "explain": "Setelah いちばん dipakai kata sifat: いちばん すきです (paling suka)."
+      },
+      {
+        "q": "ペンと えんぴつと どっちを よく ___か。(Pulpen dan pensil, mana yang sering dipakai?)",
+        "o": [
+          "つかいます",
+          "つかいたり",
+          "より",
+          "いちばん"
+        ],
+        "a": 0,
+        "explain": "どっち = yang mana (kasual). Kalimat tanya biasa diakhiri kata kerja: つかいますか."
+      },
+      {
+        "q": "わたしより 妹___ せが 高いです。(Adik perempuan lebih tinggi daripada saya.)",
+        "o": [
+          "より",
+          "のほうが",
+          "が",
+          "と"
+        ],
+        "a": 1,
+        "explain": "わたしより 妹のほうが = adik perempuan lebih ~ daripada saya."
       }
     ]
   },
@@ -8539,7 +8475,7 @@ const CHAPTERS = {
       {
         "type": "kaiwa",
         "title": "Percakapan",
-        "items": [
+        "lines": [
           {
             "sp": "A",
             "jp": "しゅみは 何ですか。",
@@ -8581,122 +8517,118 @@ const CHAPTERS = {
             "id": "Boleh, bagus tuh."
           }
         ]
+      }
+    ],
+    "quiz": [
+      {
+        "q": "わたしの しゅみは えいがを 見る ___です。(Hobi saya menonton film.)",
+        "o": [
+          "の",
+          "ます",
+          "こと",
+          "できる"
+        ],
+        "a": 2,
+        "explain": "V-kamus + こと = hal ~. わたしの しゅみは 〜ことです menerangkan hobi."
       },
       {
-        "type": "quiz",
-        "title": "Quiz Bab 17",
-        "items": [
-          {
-            "q": "わたしの しゅみは えいがを 見る ___です。(Hobi saya menonton film.)",
-            "o": [
-              "の",
-              "ます",
-              "こと",
-              "できる"
-            ],
-            "a": 2,
-            "explain": "V-kamus + こと = hal ~. わたしの しゅみは 〜ことです menerangkan hobi."
-          },
-          {
-            "q": "およぐ___が できますか。(Bisa berenang?)",
-            "o": [
-              "の",
-              "を",
-              "は",
-              "こと"
-            ],
-            "a": 3,
-            "explain": "V-kamus + ことが できます = bisa ~. Polanya pakai こと, bukan の."
-          },
-          {
-            "q": "わたしは 日本語を 話す ことが ___.(Saya bisa berbahasa Jepang.)",
-            "o": [
-              "できます",
-              "します",
-              "あります",
-              "です"
-            ],
-            "a": 0,
-            "explain": "〜ことが できます = bisa ~."
-          },
-          {
-            "q": "ひらがなは 書けますが、かんじは ___.(Hiragana bisa ditulis, tapi kanji tidak bisa.)",
-            "o": [
-              "書きません",
-              "書けません",
-              "書きます",
-              "書けます"
-            ],
-            "a": 1,
-            "explain": "Bentuk potensial negatif: 書く → 書ける → 書けません (tidak bisa menulis)."
-          },
-          {
-            "q": "ケンさんは ギターが ___か。(Ken bisa main gitar?)",
-            "o": [
-              "弾きます",
-              "弾くこと",
-              "弾けます",
-              "弾く"
-            ],
-            "a": 2,
-            "explain": "弾く → 弾ける (bisa memainkan). Bentuk potensial golongan 1: -u jadi -eru."
-          },
-          {
-            "q": "する → ___(bisa melakukan)",
-            "o": [
-              "します",
-              "させる",
-              "しよう",
-              "できる"
-            ],
-            "a": 3,
-            "explain": "する → できる adalah bentuk khusus, wajib dihafal."
-          },
-          {
-            "q": "話す → ___(bisa berbicara)",
-            "o": [
-              "話します",
-              "話せる",
-              "話さない",
-              "話そう"
-            ],
-            "a": 1,
-            "explain": "話す → 話せる. Golongan 1: akhiran -su jadi -seru."
-          },
-          {
-            "q": "わたしは およ___ません。(Saya tidak bisa berenang.)",
-            "o": [
-              "げ",
-              "ぎ",
-              "ぐ",
-              "ご"
-            ],
-            "a": 0,
-            "explain": "およぐ → およげる → およげません (tidak bisa berenang)."
-          },
-          {
-            "q": "来る → ___(bisa datang)",
-            "o": [
-              "来ます",
-              "来ない",
-              "来られる",
-              "来よう"
-            ],
-            "a": 2,
-            "explain": "来る → 来られる adalah bentuk khusus, wajib dihafal."
-          },
-          {
-            "q": "りょうり___ することが できます。(Bisa memasak.)",
-            "o": [
-              "が",
-              "を",
-              "は",
-              "の"
-            ],
-            "a": 1,
-            "explain": "りょうりを する = memasak. Kata kerja する dipasangi を pada objeknya."
-          }
-        ]
+        "q": "およぐ___が できますか。(Bisa berenang?)",
+        "o": [
+          "の",
+          "を",
+          "は",
+          "こと"
+        ],
+        "a": 3,
+        "explain": "V-kamus + ことが できます = bisa ~. Polanya pakai こと, bukan の."
+      },
+      {
+        "q": "わたしは 日本語を 話す ことが ___.(Saya bisa berbahasa Jepang.)",
+        "o": [
+          "できます",
+          "します",
+          "あります",
+          "です"
+        ],
+        "a": 0,
+        "explain": "〜ことが できます = bisa ~."
+      },
+      {
+        "q": "ひらがなは 書けますが、かんじは ___.(Hiragana bisa ditulis, tapi kanji tidak bisa.)",
+        "o": [
+          "書きません",
+          "書けません",
+          "書きます",
+          "書けます"
+        ],
+        "a": 1,
+        "explain": "Bentuk potensial negatif: 書く → 書ける → 書けません (tidak bisa menulis)."
+      },
+      {
+        "q": "ケンさんは ギターが ___か。(Ken bisa main gitar?)",
+        "o": [
+          "弾きます",
+          "弾くこと",
+          "弾けます",
+          "弾く"
+        ],
+        "a": 2,
+        "explain": "弾く → 弾ける (bisa memainkan). Bentuk potensial golongan 1: -u jadi -eru."
+      },
+      {
+        "q": "する → ___(bisa melakukan)",
+        "o": [
+          "します",
+          "させる",
+          "しよう",
+          "できる"
+        ],
+        "a": 3,
+        "explain": "する → できる adalah bentuk khusus, wajib dihafal."
+      },
+      {
+        "q": "話す → ___(bisa berbicara)",
+        "o": [
+          "話します",
+          "話せる",
+          "話さない",
+          "話そう"
+        ],
+        "a": 1,
+        "explain": "話す → 話せる. Golongan 1: akhiran -su jadi -seru."
+      },
+      {
+        "q": "わたしは およ___ません。(Saya tidak bisa berenang.)",
+        "o": [
+          "げ",
+          "ぎ",
+          "ぐ",
+          "ご"
+        ],
+        "a": 0,
+        "explain": "およぐ → およげる → およげません (tidak bisa berenang)."
+      },
+      {
+        "q": "来る → ___(bisa datang)",
+        "o": [
+          "来ます",
+          "来ない",
+          "来られる",
+          "来よう"
+        ],
+        "a": 2,
+        "explain": "来る → 来られる adalah bentuk khusus, wajib dihafal."
+      },
+      {
+        "q": "りょうり___ することが できます。(Bisa memasak.)",
+        "o": [
+          "が",
+          "を",
+          "は",
+          "の"
+        ],
+        "a": 1,
+        "explain": "りょうりを する = memasak. Kata kerja する dipasangi を pada objeknya."
       }
     ]
   }
