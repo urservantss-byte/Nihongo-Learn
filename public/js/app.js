@@ -762,7 +762,7 @@ const app = createApp({
       </div>
       </div>
 
-      <div v-if="openChapter && !chQuiz" class="card pop">
+      <div v-if="openChapter && !chQuiz" class="card pop ch-detail">
         <div class="back-row"><button class="btn ghost sm" @click="openChapter=null"><span v-html="ic('back',15)"></span> Jalur Belajar</button></div>
         <h2>{{ openChapter.icon }} Bab {{ openChapter.bab }}: {{ openChapter.title }}</h2>
         <p class="muted small">{{ openChapter.desc }}</p>
