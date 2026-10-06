@@ -742,31 +742,34 @@ app.delete('/api/admin/kanji/:ch', admin, (req, res) => {
 // ---- 4. Bank Soal (file-based) ----
 const BANK_DIR = path.join(__dirname, 'public', 'js');
 function loadAllPackages() {
-  const ctx = { BANK_PACKAGES: [] };
-  vmx.createContext(ctx);
+  const allPkgs = [];
+  const pkgFiles = {};
   const files = fss.readdirSync(BANK_DIR).filter(f => f.startsWith('data-banksoal') && f.endsWith('.js')).sort();
-  const pkgFiles = {}; // pkgId -> filename
   for (const f of files) {
     try {
-      let code = fss.readFileSync(path.join(BANK_DIR, f), 'utf8');
-      const before = ctx.BANK_PACKAGES.length;
-      // Tangkap push langsung juga
-      vmx.runInContext(code, ctx, { filename: f });
-      for (let i = before; i < ctx.BANK_PACKAGES.length; i++) {
-        const p = ctx.BANK_PACKAGES[i];
-        if (p && p.id && !pkgFiles[p.id]) pkgFiles[p.id] = f;
-      }
-      // Tangkap juga const BANK_PACKAGES_xxx yang belum di-push (jaga-jaga)
-      const m = code.match(/const (BANK_PACKAGES_\w+) =/);
-      if (m) {
+      const code = fss.readFileSync(path.join(BANK_DIR, f), 'utf8');
+      const ctx = { BANK_PACKAGES: [] };
+      vmx.createContext(ctx);
+      vmx.runInContext(code, ctx);
+      // Kumpulkan dari semua pola: push ke BANK_PACKAGES + const array
+      let pkgs = [];
+      try { const bp = vmx.runInContext('BANK_PACKAGES', ctx); if (Array.isArray(bp)) pkgs = pkgs.concat(bp); } catch {}
+      const mAll = [...code.matchAll(/const (BANK_PACKAGES\w*) =/g)];
+      for (const m of mAll) {
         try {
           const arr = vmx.runInContext(m[1], ctx);
-          if (Array.isArray(arr)) for (const p of arr) if (p && p.id && !pkgFiles[p.id]) pkgFiles[p.id] = f;
+          if (Array.isArray(arr)) for (const p of arr) if (p && p.id && !pkgs.find(x => x.id === p.id)) pkgs.push(p);
         } catch {}
+      }
+      for (const p of pkgs) {
+        if (p && p.id) {
+          if (!allPkgs.find(x => x.id === p.id)) allPkgs.push(p);
+          if (!pkgFiles[p.id]) pkgFiles[p.id] = f;
+        }
       }
     } catch (e) { console.log('[admin] gagal load', f, e.message); }
   }
-  return { packages: ctx.BANK_PACKAGES, pkgFiles };
+  return { packages: allPkgs, pkgFiles };
 }
 
 app.get('/api/admin/banksoal', admin, (req, res) => {
@@ -928,8 +931,10 @@ app.put('/api/admin/chapters/:level/:bab', admin, (req, res) => {
   const allowed = ['title', 'desc', 'icon', 'sections', 'quiz'];
   for (const k of allowed) if (b[k] !== undefined) arr[idx][k] = b[k];
   const code = fss.readFileSync(file, 'utf8');
-  const newCode = code.replace(/const CHAPTERS = \{[\s\S]*?\n\};/, `const CHAPTERS = ${JSON.stringify(chapters, null, 2)};`);
-  if (newCode === code) return res.status(500).json({ error: 'Gagal menemukan blok CHAPTERS' });
+  const startIdx = code.indexOf('const CHAPTERS =');
+  if (startIdx < 0) return res.status(500).json({ error: 'Gagal menemukan blok CHAPTERS' });
+  // File hanya berisi CHAPTERS, replace dari deklarasi sampai akhir
+  const newCode = code.slice(0, startIdx) + `const CHAPTERS = ${JSON.stringify(chapters, null, 2)};\n`;
   fss.writeFileSync(file, newCode);
   try { loadChapters(); } catch (e) { return res.status(500).json({ error: 'File rusak: ' + e.message }); }
   res.json({ ok: true });
