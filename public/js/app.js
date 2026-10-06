@@ -1970,7 +1970,7 @@ app.component('StrokeOrder', {
     },
     async load() {
       try {
-      for (const u of this.urls()) {
+      for (const u of this.urls) {
         try {
           const r = await fetch(u);
           const t = await r.text();
