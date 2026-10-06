@@ -526,6 +526,7 @@ const app = createApp({
       this.$nextTick(() => window.scrollTo({ top: 0 }));
     },
     lvName(lv) { const l = LEVELS.find(x => x.id === lv); return l ? l.name : lv.toUpperCase(); },
+    jlptLabel(n) { return 'N' + n; },
     libCount(t) { return ALL_LESSONS.filter(l => l.level === this.learnLevel && (t === 'all' || l.type === t)).length; },
     libLessonSub(l) {
       const L = LESSONS[l.level] || {};
