@@ -192,9 +192,9 @@ const app = createApp({
     adminTab: 'dashboard',
     admStats: null, admStatsLoading: false,
     admUsers: [], admUsersLoading: false, admUserQ: '',
-    admKotoba: [], admKotobaQ: '', admKotobaLoading: false, admKotobaForm: null, admKotobaEdit: null,
+    admKotoba: [], admKotobaQ: '', admKotobaLoading: false, admKotobaForm: null, admKotobaEdit: null, admKotobaT: null,
     admKanji: [], admKanjiQ: '', admKanjiJlpt: 0, admKanjiLoading: false, admKanjiForm: null, admKanjiEdit: null,
-    admPkgs: [], admPkgsLoading: false, admPkgForm: null, admPkgEdit: null, admPkgQs: null, admPkgQsLoading: false,
+    admPkgs: [], admPkgsLoading: false, admPkgForm: null, admPkgEdit: null, admPkgQs: null, admPkgQsLoading: false, admPkgQsId: null, admQForm: null, admQEdit: null,
     admChLevel: 'n5', admChapters: [], admChaptersLoading: false, admChEdit: null, admChForm: null,
   }),
   computed: {
@@ -902,6 +902,12 @@ const app = createApp({
       this.admLoadStats();
       this.admLoadUsers();
       this.admLoadPkgs();
+      this.admLoadChapters();
+      // Load kotoba awal (20 terbaru)
+      this.admKotobaLoading = true;
+      try { const d = await api('/api/admin/kotoba?limit=20'); this.admKotoba = d.results || []; } catch { this.admKotoba = []; }
+      this.admKotobaLoading = false;
+      this.admSearchKanji();
     },
     async admLoadStats() {
       this.admStatsLoading = true;
@@ -993,9 +999,39 @@ const app = createApp({
       try { await api(`/api/admin/banksoal/${encodeURIComponent(p.id)}`, { method: 'DELETE' }); toast('Dihapus ✅'); this.admLoadPkgs(); } catch (e) { toast(e.message); }
     },
     async admPkgViewQs(p) {
-      this.admPkgQsLoading = true;
+      this.admPkgQsLoading = true; this.admPkgQsId = p.id; this.admQForm = null;
       try { const d = await api(`/api/admin/banksoal/${encodeURIComponent(p.id)}/questions`); this.admPkgQs = d.questions || []; } catch { this.admPkgQs = []; }
       this.admPkgQsLoading = false;
+    },
+    admQNew() { this.admQEdit = null; this.admQForm = { sec: 'goi', q: '', o: ['', '', '', ''], a: 0, ex: '' }; },
+    admQOpen(qi) {
+      const q = this.admPkgQs[qi];
+      this.admQEdit = qi;
+      this.admQForm = { sec: q.sec || 'goi', q: q.q || '', o: [...(q.o || []), '', '', '', ''].slice(0, 4), a: q.a ?? 0, ex: q.ex || '' };
+    },
+    async admQSave() {
+      const f = this.admQForm;
+      const opts = f.o.map(s => (s || '').trim()).filter(Boolean);
+      if (!f.q.trim() || opts.length < 2) { toast('Soal & min 2 opsi wajib diisi'); return; }
+      const body = { sec: f.sec, q: f.q.trim(), o: opts, a: parseInt(f.a), ex: f.ex.trim() };
+      try {
+        const pid = encodeURIComponent(this.admPkgQsId);
+        if (this.admQEdit !== null) await api(`/api/admin/banksoal/${pid}/questions/${this.admQEdit}`, { method: 'PUT', body: JSON.stringify(body) });
+        else await api(`/api/admin/banksoal/${pid}/questions`, { method: 'POST', body: JSON.stringify(body) });
+        toast('Soal tersimpan \u2705'); this.admQForm = null; this.admQEdit = null;
+        const p = this.admPkgs.find(x => x.id === this.admPkgQsId);
+        if (p) this.admPkgViewQs(p);
+      } catch (e) { toast(e.message); }
+    },
+    async admQDel(qi) {
+      const q = this.admPkgQs[qi];
+      if (!confirm(`Hapus soal no.${q.no}?`)) return;
+      try {
+        await api(`/api/admin/banksoal/${encodeURIComponent(this.admPkgQsId)}/questions/${qi}`, { method: 'DELETE' });
+        toast('Soal dihapus \u2705');
+        const p = this.admPkgs.find(x => x.id === this.admPkgQsId);
+        if (p) this.admPkgViewQs(p);
+      } catch (e) { toast(e.message); }
     },
     // --- Chapters ---
     async admLoadChapters() {
@@ -1003,7 +1039,15 @@ const app = createApp({
       try { const d = await api(`/api/admin/chapters?level=${this.admChLevel}`); this.admChapters = d.chapters || []; } catch { this.admChapters = []; }
       this.admChaptersLoading = false;
     },
-    admChOpen(ch) { this.admChEdit = ch.id; this.admChForm = { title: ch.title || '', desc: ch.desc || '', penjelasan: ch.penjelasan || '' }; },
+    async admChOpen(ch) {
+      this.admChEdit = ch.id;
+      this.admChForm = { title: ch.title || '', desc: ch.desc || '', penjelasan: '' };
+      try {
+        const d = await api(`/api/admin/chapters/${encodeURIComponent(ch.id)}`);
+        const full = d.chapter || {};
+        this.admChForm = { title: full.title || '', desc: full.desc || '', penjelasan: full.penjelasan || '' };
+      } catch (e) { toast('Gagal memuat detail: ' + e.message); }
+    },
     async admChSave() {
       const f = this.admChForm;
       if (!f.title.trim()) { toast('Judul wajib diisi'); return; }
@@ -1793,10 +1837,26 @@ const app = createApp({
           </div>
           <div v-if="admPkgQs" class="card pop">
             <h3 class="ttl-sm">Soal paket ({{ admPkgQs.length }})</h3>
-            <button class="btn ghost sm" @click="admPkgQs=null">Tutup</button>
+            <div class="btn-row"><button class="btn sm" @click="admQNew()">+ Tambah Soal</button><button class="btn ghost sm" @click="admPkgQs=null">Tutup</button></div>
+            <div v-if="admQForm" class="card pop" style="margin-top:10px">
+              <h3 class="ttl-sm">{{ admQEdit !== null ? 'Edit' : 'Tambah' }} Soal</h3>
+              <label class="lbl">Section</label><input v-model="admQForm.sec" placeholder="goi">
+              <label class="lbl">Pertanyaan</label><textarea v-model="admQForm.q" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Tulis soal..."></textarea>
+              <label class="lbl">Opsi jawaban (min 2)</label>
+              <div v-for="(op, oi) in admQForm.o" :key="oi" style="display:flex;gap:8px;margin-bottom:6px;align-items:center">
+                <span class="muted small" style="min-width:20px">{{ oi + 1 }}.</span>
+                <input v-model="admQForm.o[oi]" :placeholder="'Opsi ' + (oi + 1)" style="flex:1">
+              </div>
+              <label class="lbl">Kunci jawaban (nomor opsi, mulai dari 0)</label><input v-model.number="admQForm.a" type="number" min="0" max="3" placeholder="0">
+              <label class="lbl">Pembahasan</label><textarea v-model="admQForm.ex" rows="2" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Penjelasan jawaban..."></textarea>
+              <div class="btn-row"><button class="btn sm" @click="admQSave()">Simpan Soal</button><button class="btn ghost sm" @click="admQForm=null">Batal</button></div>
+            </div>
             <div v-if="admPkgQsLoading" class="muted">Memuat...</div>
-            <div v-for="q in admPkgQs.slice(0,50)" :key="q.no" class="rowline"><span>No.{{ q.no }} [{{ q.sec }}]</span><b>{{ q.a !== null && q.a !== undefined ? '🔑' : '❓' }}</b></div>
-            <p v-if="admPkgQs.length > 50" class="muted small">...dan {{ admPkgQs.length - 50 }} soal lainnya</p>
+            <div v-for="(q, qi) in admPkgQs" :key="qi" class="lvl" style="margin-top:6px">
+              <div class="lvl-body"><b>No.{{ q.no }} [{{ q.sec }}]</b><div class="muted small">{{ (q.q || '').slice(0, 100) }}{{ (q.q || '').length > 100 ? '...' : '' }}</div><div class="muted small">{{ q.a !== null && q.a !== undefined ? 'Kunci: opsi ' + (q.a + 1) : 'Belum ada kunci' }}</div></div>
+              <button class="btn ghost sm" @click="admQOpen(qi)">Edit</button>
+              <button class="btn ghost sm" @click="admQDel(qi)">Hapus</button>
+            </div>
           </div>
         </div>
 

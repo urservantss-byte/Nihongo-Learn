@@ -117,7 +117,15 @@ function auth(req, res, next) {
 }
 function admin(req, res, next) {
   auth(req, res, () => {
-    if (req.user.role !== 'admin') return res.status(403).json({ error: 'Khusus admin' });
+    // Cek role dari JWT dulu, fallback ke database (untuk token lama)
+    let role = req.user.role;
+    if (role !== 'admin') {
+      try {
+        const u = db.prepare('SELECT role FROM users WHERE id = ?').get(req.user.id);
+        role = u?.role;
+      } catch {}
+    }
+    if (role !== 'admin') return res.status(403).json({ error: 'Khusus admin' });
     next();
   });
 }
@@ -156,7 +164,8 @@ app.post('/api/admin/bootstrap', auth, (req, res) => {
   const c = db.prepare(`SELECT COUNT(*) c FROM users WHERE role = 'admin'`).get().c;
   if (c > 0) return res.status(403).json({ error: 'Admin sudah ada' });
   db.prepare(`UPDATE users SET role = 'admin' WHERE id = ?`).run(req.user.id);
-  res.json({ ok: true, message: 'Kamu sekarang admin!' });
+  const u = db.prepare('SELECT * FROM users WHERE id = ?').get(req.user.id);
+  res.json({ ok: true, message: 'Kamu sekarang admin!', token: sign(u) });
 });
 
 app.patch('/api/me', auth, (req, res) => {
@@ -926,6 +935,65 @@ app.delete('/api/admin/banksoal/:id', admin, (req, res) => {
   res.json({ ok: true });
 });
 
+// ---- Per-soal CRUD ----
+function getPkgQuestions(pkgId) {
+  const { packages, pkgFiles } = loadAllPackages();
+  const cur = packages.find(p => p.id === pkgId);
+  if (!cur) return { error: 'Paket tidak ketemu', status: 404 };
+  const file = pkgFiles[pkgId];
+  if (!file) return { error: 'File sumber tidak ketemu', status: 500 };
+  return { pkg: cur, file, questions: cur.questions || [] };
+}
+function savePkgQuestions(pkgId, pkg, file, questions) {
+  const updated = { ...pkg, questions };
+  if (!rewritePackageFile(file, pkgId, updated)) return false;
+  try { loadAllPackages(); } catch { return false; }
+  return true;
+}
+app.get('/api/admin/banksoal/:id/questions', admin, (req, res) => {
+  const r = getPkgQuestions(req.params.id);
+  if (r.error) return res.status(r.status).json({ error: r.error });
+  res.json({ questions: r.questions });
+});
+app.post('/api/admin/banksoal/:id/questions', admin, (req, res) => {
+  const r = getPkgQuestions(req.params.id);
+  if (r.error) return res.status(r.status).json({ error: r.error });
+  const b = req.body || {};
+  if (!b.q || !Array.isArray(b.o) || b.o.length < 2) return res.status(400).json({ error: 'q (soal) dan o (opsi, min 2) wajib' });
+  const qs = [...r.questions];
+  const no = b.no || (qs.length ? Math.max(...qs.map(q => q.no || 0)) + 1 : 1);
+  qs.push({ no, sec: b.sec || 'goi', q: String(b.q), o: b.o.map(String), a: b.a ?? null, ex: String(b.ex || '') });
+  if (!savePkgQuestions(req.params.id, r.pkg, r.file, qs)) return res.status(500).json({ error: 'Gagal simpan' });
+  res.status(201).json({ ok: true, no });
+});
+app.put('/api/admin/banksoal/:id/questions/:qi', admin, (req, res) => {
+  const r = getPkgQuestions(req.params.id);
+  if (r.error) return res.status(r.status).json({ error: r.error });
+  const qi = parseInt(req.params.qi);
+  if (isNaN(qi) || qi < 0 || qi >= r.questions.length) return res.status(404).json({ error: 'Soal tidak ketemu' });
+  const b = req.body || {};
+  const qs = [...r.questions];
+  const cur = { ...qs[qi] };
+  if (b.q !== undefined) cur.q = String(b.q);
+  if (b.o !== undefined) { if (!Array.isArray(b.o) || b.o.length < 2) return res.status(400).json({ error: 'o harus array min 2 opsi' }); cur.o = b.o.map(String); }
+  if (b.a !== undefined) cur.a = b.a;
+  if (b.ex !== undefined) cur.ex = String(b.ex);
+  if (b.sec !== undefined) cur.sec = String(b.sec);
+  if (b.no !== undefined) cur.no = parseInt(b.no) || cur.no;
+  qs[qi] = cur;
+  if (!savePkgQuestions(req.params.id, r.pkg, r.file, qs)) return res.status(500).json({ error: 'Gagal simpan' });
+  res.json({ ok: true });
+});
+app.delete('/api/admin/banksoal/:id/questions/:qi', admin, (req, res) => {
+  const r = getPkgQuestions(req.params.id);
+  if (r.error) return res.status(r.status).json({ error: r.error });
+  const qi = parseInt(req.params.qi);
+  if (isNaN(qi) || qi < 0 || qi >= r.questions.length) return res.status(404).json({ error: 'Soal tidak ketemu' });
+  const qs = r.questions.filter((_, i) => i !== qi);
+  if (!savePkgQuestions(req.params.id, r.pkg, r.file, qs)) return res.status(500).json({ error: 'Gagal hapus' });
+  res.json({ ok: true });
+});
+
 // ---- 5. Chapters ----
 function loadChapters() {
   const fp = path.join(BANK_DIR, 'data-chapters.js');
@@ -938,34 +1006,51 @@ function loadChapters() {
 
 app.get('/api/admin/chapters', admin, (req, res) => {
   const { chapters } = loadChapters();
+  const lv = (req.query.level || '').toLowerCase();
   const list = [];
-  for (const lv of Object.keys(chapters)) {
-    for (const ch of chapters[lv]) list.push({ level: lv, bab: ch.bab, id: ch.id, title: ch.title });
+  const levels = lv ? [lv] : Object.keys(chapters);
+  for (const l of levels) {
+    if (!chapters[l]) continue;
+    for (const ch of chapters[l]) list.push({ level: l, bab: ch.bab, id: ch.id, title: ch.title, desc: ch.desc || '' });
   }
   res.json({ chapters: list });
 });
 
-app.get('/api/admin/chapters/:level/:bab', admin, (req, res) => {
+app.get('/api/admin/chapters/:id', admin, (req, res) => {
   const { chapters } = loadChapters();
-  const lv = req.params.level.toLowerCase();
-  const arr = chapters[lv];
-  if (!arr) return res.status(404).json({ error: 'Level tidak ketemu' });
-  const ch = arr.find(c => String(c.bab) === String(req.params.bab));
-  if (!ch) return res.status(404).json({ error: 'Bab tidak ketemu' });
-  res.json({ chapter: ch });
+  const id = req.params.id;
+  for (const lv of Object.keys(chapters)) {
+    const ch = chapters[lv].find(c => c.id === id);
+    if (ch) {
+      const pen = (ch.sections || []).find(s => s.type === 'penjelasan');
+      return res.json({ chapter: { ...ch, penjelasan: pen ? pen.body : '' } });
+    }
+  }
+  res.status(404).json({ error: 'Bab tidak ketemu' });
 });
 
-app.put('/api/admin/chapters/:level/:bab', admin, (req, res) => {
+app.put('/api/admin/chapters/:id', admin, (req, res) => {
   const { chapters, file } = loadChapters();
-  const lv = req.params.level.toLowerCase();
-  const arr = chapters[lv];
-  if (!arr) return res.status(404).json({ error: 'Level tidak ketemu' });
-  const idx = arr.findIndex(c => String(c.bab) === String(req.params.bab));
-  if (idx < 0) return res.status(404).json({ error: 'Bab tidak ketemu' });
+  const id = req.params.id;
+  let target = null;
+  for (const lv of Object.keys(chapters)) {
+    const i = chapters[lv].findIndex(c => c.id === id);
+    if (i >= 0) { target = { lv, i }; break; }
+  }
+  if (!target) return res.status(404).json({ error: 'Bab tidak ketemu' });
+  const ch = chapters[target.lv][target.i];
   const b = req.body || {};
-  // Hanya boleh update field yang aman
-  const allowed = ['title', 'desc', 'icon', 'sections', 'quiz'];
-  for (const k of allowed) if (b[k] !== undefined) arr[idx][k] = b[k];
+  if (b.title !== undefined) ch.title = String(b.title).slice(0, 200);
+  if (b.desc !== undefined) ch.desc = String(b.desc).slice(0, 500);
+  if (b.icon !== undefined) ch.icon = String(b.icon).slice(0, 10);
+  if (b.penjelasan !== undefined) {
+    if (!ch.sections) ch.sections = [];
+    let pen = ch.sections.find(s => s.type === 'penjelasan');
+    if (!pen) { pen = { type: 'penjelasan', title: ch.title, body: '' }; ch.sections.unshift(pen); }
+    pen.body = String(b.penjelasan);
+    pen.title = ch.title;
+  }
+  if (b.sections !== undefined && Array.isArray(b.sections)) ch.sections = b.sections;
   const code = fss.readFileSync(file, 'utf8');
   const startIdx = code.indexOf('const CHAPTERS =');
   if (startIdx < 0) return res.status(500).json({ error: 'Gagal menemukan blok CHAPTERS' });
