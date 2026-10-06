@@ -201,6 +201,23 @@ app.post('/api/quiz/result', auth, (req, res) => {
   res.json({ ok: true });
 });
 
+// Mock Test result
+app.post('/api/mocktest/result', auth, (req, res) => {
+  const { level, section, score, total } = req.body || {};
+  if (!level || !section || score == null || !total) return res.status(400).json({ error: 'Data tidak lengkap' });
+  
+  // Simpan ke quiz_results dengan format khusus untuk mock test
+  const mockLabel = `${level.toUpperCase()}-Mock-${section}`;
+  db.prepare('INSERT INTO quiz_results (user_id,level,score,total) VALUES (?,?,?,?)').run(req.user.id, mockLabel, score, total);
+  
+  // Award XP untuk mock test
+  const xpGain = Math.floor(total * 2); // 2 XP per soal
+  db.prepare('UPDATE users SET xp = xp + ? WHERE id = ?').run(xpGain, req.user.id);
+  db.prepare('INSERT INTO xp_log (user_id, amount, reason) VALUES (?,?,?)').run(req.user.id, xpGain, `Mock test ${mockLabel}`);
+  
+  res.json({ ok: true, xp: xpGain });
+});
+
 app.get('/api/quiz/history', auth, (req, res) => {
   const rows = db.prepare('SELECT level, score, total, created_at FROM quiz_results WHERE user_id = ? ORDER BY id DESC LIMIT 20').all(req.user.id);
   res.json({ history: rows });

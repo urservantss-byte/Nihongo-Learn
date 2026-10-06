@@ -176,6 +176,8 @@ const app = createApp({
     sswKaigoTab: 'materi', sswKaigoCh: null,
     mockLevel: null,
     simPkg: null, sim: null,
+    // mock test interaktif
+    mockSection: null, mockQs: [], mockIdx: 0, mockAns: [], mockTimer: null, mockTime: 0, mockDone: false, mockPaused: false,
     // quiz
     quizMode: 'acak', qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0, secScores: [],
     genQs: [], shuffledQs: [], quizResume: null,
@@ -201,7 +203,7 @@ const app = createApp({
   }),
   computed: {
     pageTitle() {
-      const t = { home: 'Beranda', library: 'Modul', quiz: 'Quiz', quizrun: 'Quiz', adaptiverun: 'Quiz Adaptif', kamus: 'Kamus', tanya: 'Tanya AI', saya: 'Saya', srsrun: 'Review', admin: 'Admin Panel' };
+      const t = { home: 'Beranda', library: 'Modul', quiz: 'Quiz', quizrun: 'Quiz', adaptiverun: 'Quiz Adaptif', mockrun: 'Mock Test', mockdone: 'Mock Test', kamus: 'Kamus', tanya: 'Tanya AI', saya: 'Saya', srsrun: 'Review', admin: 'Admin Panel' };
       return t[this.tab] || '';
     },
     user() { return store.user; },
@@ -424,6 +426,93 @@ const app = createApp({
     finishSim() { this.stopSimTimer(); this.sim.done = true; },
     closeSim() { this.stopSimTimer(); this.sim = null; this.simPkg = null; },
     clearQuizProgress() { localStorage.removeItem('nl_quiz'); this.quizResume = null; },
+    
+    // ---- Mock Test Interaktif ----
+    startMockTest(level, section) {
+      if (!MOCKTEST_QUESTIONS || !MOCKTEST_QUESTIONS[level] || !MOCKTEST_QUESTIONS[level][section]) {
+        toast('Soal belum tersedia'); return;
+      }
+      const data = MOCKTEST_QUESTIONS[level][section];
+      if (!data.questions || !data.questions.length) {
+        toast('Section ini belum ada soal'); return;
+      }
+      this.mockSection = { level, section, title: data.title, duration: data.duration };
+      this.mockQs = data.questions;
+      this.mockIdx = 0;
+      this.mockAns = new Array(this.mockQs.length).fill(null);
+      this.mockDone = false;
+      this.mockPaused = false;
+      this.mockTime = data.duration * 60; // convert to seconds
+      this.tab = 'mockrun';
+      this.startMockTimer();
+      this.navPush();
+    },
+    startMockTimer() {
+      this.stopMockTimer();
+      this.mockTimer = setInterval(() => {
+        if (this.mockPaused || this.mockDone) return;
+        this.mockTime--;
+        if (this.mockTime <= 0) this.finishMockTest();
+      }, 1000);
+    },
+    stopMockTimer() {
+      if (this.mockTimer) { clearInterval(this.mockTimer); this.mockTimer = null; }
+    },
+    mockAnswer(idx, optionIdx) {
+      if (this.mockDone) return;
+      this.mockAns[idx] = optionIdx;
+    },
+    mockJumpTo(idx) {
+      if (idx >= 0 && idx < this.mockQs.length) this.mockIdx = idx;
+    },
+    mockNext() {
+      if (this.mockIdx < this.mockQs.length - 1) this.mockIdx++;
+    },
+    mockPrev() {
+      if (this.mockIdx > 0) this.mockIdx--;
+    },
+    toggleMockPause() {
+      this.mockPaused = !this.mockPaused;
+    },
+    finishMockTest() {
+      this.stopMockTimer();
+      this.mockDone = true;
+      this.tab = 'mockdone';
+      this.navPush();
+      // Hitung skor
+      let correct = 0;
+      for (let i = 0; i < this.mockQs.length; i++) {
+        if (this.mockAns[i] === this.mockQs[i].answer) correct++;
+      }
+      // Simpan hasil ke backend
+      if (store.user) {
+        api('/api/mocktest/result', {
+          method: 'POST',
+          body: JSON.stringify({
+            level: this.mockSection.level,
+            section: this.mockSection.section,
+            score: correct,
+            total: this.mockQs.length
+          })
+        }).catch(e => console.error('Save mock result failed:', e));
+      }
+    },
+    closeMockTest() {
+      this.stopMockTimer();
+      this.mockSection = null;
+      this.mockQs = [];
+      this.mockAns = [];
+      this.mockIdx = 0;
+      this.mockDone = false;
+      this.mockPaused = false;
+      this.tab = 'quiz';
+      this.navPush();
+    },
+    mockTimeStr() {
+      const m = Math.floor(this.mockTime / 60);
+      const s = this.mockTime % 60;
+      return m + ':' + String(s).padStart(2, '0');
+    },
     _modPat(ch, it, k, lv) {
       return { level: lv || this.modulLevel, bab: ch.bab, chTitle: ch.title, pattern: it.pattern, arti: String(it.arti || '').replace(/<[^>]+>/g, ''), item: it, kaiwa: k ? k.lines : [] };
     },
@@ -1572,11 +1661,11 @@ const app = createApp({
       <div v-if="!store.quizHist.length" class="muted small">Belum ada riwayat quiz.</div>
 
       <h2 class="ttl"><span v-html="ic('target')"></span> Mock Test JLPT</h2>
-      <p class="muted small" style="margin-bottom:10px">Soal latihan lengkap per level: PDF soal + audio listening + kunci jawaban.</p>
+      <p class="muted small" style="margin-bottom:10px">Simulasi ujian interaktif — langsung jawab di web, ada timer & scoring.</p>
       <div v-if="!mockLevel" class="lib-grid">
         <div v-for="m in MOCKTEST_LEVELS" :key="m.id" class="lvl" @click="mockLevel=m.id">
           <div class="badge"><span style="font-size:22px">{{ m.icon }}</span></div>
-          <div class="lvl-body"><b>JLPT {{ m.name }}</b><div class="muted small">{{ m.pdfs.length }} PDF &middot; {{ m.audios.length }} audio</div></div>
+          <div class="lvl-body"><b>JLPT {{ m.name }}</b><div class="muted small">Simulasi ujian lengkap</div></div>
           <span v-html="ic('play',16)"></span>
         </div>
       </div>
@@ -1584,7 +1673,18 @@ const app = createApp({
         <button class="btn ghost sm" style="margin-bottom:10px" @click="mockLevel=null"><span v-html="ic('back',15)"></span> Pilih level</button>
         <div v-for="m in [MOCKTEST_LEVELS.find(x=>x.id===mockLevel)]" :key="m.id">
           <h3 class="ttl-sm">{{ m.icon }} JLPT {{ m.name }} Mock Test</h3>
-          <h4 class="ttl-sm" style="margin-top:12px">📄 Soal PDF</h4>
+          
+          <h4 class="ttl-sm" style="margin-top:12px">📝 Simulasi Interaktif</h4>
+          <div v-for="sec in ['vocab','grammar','reading','listening']" :key="sec" class="rowline">
+            <span>{{ {vocab:'言語知識（文字・語彙）',grammar:'言語知識（文法）',reading:'読解',listening:'聴解'}[sec] }}</span>
+            <button class="btn ghost sm" @click="startMockTest(m.id, sec)" 
+              v-if="MOCKTEST_QUESTIONS && MOCKTEST_QUESTIONS[m.id] && MOCKTEST_QUESTIONS[m.id][sec] && MOCKTEST_QUESTIONS[m.id][sec].questions.length">
+              <span v-html="ic('play',15)"></span> Mulai ({{ MOCKTEST_QUESTIONS[m.id][sec].questions.length }} soal)
+            </button>
+            <span v-else class="muted small">Belum tersedia</span>
+          </div>
+          
+          <h4 class="ttl-sm" style="margin-top:12px">📄 Soal PDF (Referensi)</h4>
           <div v-for="p in m.pdfs" :key="p.id" class="rowline">
             <span>{{ p.title }}</span>
             <a :href="'mocktest/'+m.id+'/'+p.file" target="_blank" class="btn ghost sm">Buka</a>
@@ -1641,6 +1741,91 @@ const app = createApp({
         <div v-else class="card ok-card"><b><span v-html="ic('sparkles',16)"></span> Semua seksi lolos! Pertahankan!</b></div>
       </div>
       <button class="btn" @click="tab='quiz'">Kembali</button>
+    </section>
+
+    <!-- ============ MOCK TEST RUN ============ -->
+    <section v-if="tab==='mockrun' && mockQs.length" class="card pop tabsec">
+      <div class="q-head">
+        <b>{{ mockSection.title }} ({{ mockSection.level.toUpperCase() }})</b>
+        <span class="timer" :class="{low: mockTime<300}"><span v-html="ic('clock',17)"></span> {{ mockTimeStr() }}</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+        <div class="muted small">Soal {{ mockIdx+1 }}/{{ mockQs.length }}</div>
+        <button class="mini-btn" @click="toggleMockPause()">{{ mockPaused ? '▶️ Lanjut' : '⏸️ Pause' }}</button>
+      </div>
+      <div class="qbar"><i :style="{width: ((mockIdx)/mockQs.length*100)+'%'}"></i></div>
+      
+      <div v-if="mockQs[mockIdx].instruction" class="muted small" style="margin:10px 0;white-space:pre-line">{{ mockQs[mockIdx].instruction }}</div>
+      
+      <div v-if="mockQs[mockIdx].passage" class="passage" style="background:var(--bg2);padding:12px;border-radius:8px;margin:10px 0;white-space:pre-line">{{ mockQs[mockIdx].passage }}</div>
+      
+      <h3 class="q-text" style="white-space:pre-line">
+        <span v-if="mockQs[mockIdx].underline" v-html="mockQs[mockIdx].question.replace(mockQs[mockIdx].underline, '<u style=\\'text-decoration:underline;text-underline-offset:3px\\'>' + mockQs[mockIdx].underline + '</u>')"></span>
+        <span v-else>{{ mockQs[mockIdx].question }}</span>
+      </h3>
+      
+      <button v-if="mockQs[mockIdx].audio" class="btn ghost sm" @click="new Audio(mockQs[mockIdx].audio).play()"><span v-html="ic('volume',15)"></span> Putar audio</button>
+      
+      <button v-for="(o,i) in mockQs[mockIdx].options" :key="i" class="opt"
+        :class="{pick: mockAns[mockIdx]===i}"
+        @click="mockAnswer(mockIdx, i)"><b>{{ i+1 }}.</b> {{ o }}</button>
+      
+      <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+        <button class="btn ghost sm" @click="mockPrev()" :disabled="mockIdx===0"><span v-html="ic('back',15)"></span> Sebelumnya</button>
+        <button class="btn ghost sm" @click="mockNext()" :disabled="mockIdx===mockQs.length-1">Berikutnya <span v-html="ic('play',15)"></span></button>
+        <button class="btn sm" @click="finishMockTest()" style="margin-left:auto">Selesai & Lihat Nilai</button>
+      </div>
+      
+      <div style="margin-top:12px">
+        <details>
+          <summary class="muted small" style="cursor:pointer">📋 Navigasi Soal</summary>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+            <button v-for="(q,i) in mockQs" :key="i" 
+              @click="mockJumpTo(i)"
+              :class="mockIdx===i ? 'mini-btn' : 'mini-btn ghost'"
+              :style="{background: mockAns[i]!==null ? 'var(--ok)' : '', color: mockAns[i]!==null ? '#fff' : ''}">
+              {{ i+1 }}
+            </button>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ MOCK TEST DONE ============ -->
+    <section v-if="tab==='mockdone'" class="card center tabsec">
+      <div v-html="illus('trophy')"></div>
+      <h2>{{ mockSection.title }}</h2>
+      <h3>{{ mockSection.level.toUpperCase() }}</h3>
+      <div style="margin:20px 0">
+        <div style="font-size:48px;font-weight:900;color:var(--pri)">
+          {{ mockQs.filter((q,i) => mockAns[i] === q.answer).length }}/{{ mockQs.length }}
+        </div>
+        <div class="muted">{{ Math.round(mockQs.filter((q,i) => mockAns[i] === q.answer).length / mockQs.length * 100) }}%</div>
+      </div>
+      <p class="muted">
+        {{ mockQs.filter((q,i) => mockAns[i] === q.answer).length / mockQs.length >= .7 ? 'Sugoi! Lanjutkan ke section berikutnya! 🎉' : 
+           mockQs.filter((q,i) => mockAns[i] === q.answer).length / mockQs.length >= .4 ? 'Lumayan! Pelajari lagi materinya 💪' : 
+           'Ayo belajar lebih giat lagi! 📚' }}
+      </p>
+      
+      <div style="text-align:left;margin-top:20px">
+        <h3><span v-html="ic('filetext',18)"></span> Review Jawaban</h3>
+        <div v-for="(q,i) in mockQs" :key="i" class="card small" style="margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <b>Soal {{ i+1 }}</b>
+            <span v-if="mockAns[i] === q.answer" style="color:var(--ok)">✓ Benar</span>
+            <span v-else-if="mockAns[i] === null" style="color:var(--muted)">— Tidak dijawab</span>
+            <span v-else style="color:var(--bad)">✗ Salah</span>
+          </div>
+          <div class="muted small" style="margin-top:4px">{{ q.question.substring(0,80) }}{{ q.question.length > 80 ? '...' : '' }}</div>
+          <div v-if="mockAns[i] !== q.answer" style="margin-top:6px">
+            <div class="muted small">Jawaban benar: <b>{{ q.options[q.answer] }}</b></div>
+            <div v-if="mockAns[i] !== null" class="muted small">Jawaban kamu: <span style="text-decoration:line-through">{{ q.options[mockAns[i]] }}</span></div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="btn" @click="closeMockTest()">Kembali</button>
     </section>
 
     <!-- ============ TANYA AI (Muse Sensei) ============ -->
