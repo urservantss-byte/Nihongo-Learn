@@ -1343,7 +1343,7 @@ const app = createApp({
           <input v-model="askInput" @keyup.enter="sendAsk()" :disabled="askLoading" placeholder="Tanya apa pun tentang bahasa Jepang..." style="flex:1;padding:10px 14px;border:1px solid var(--line);border-radius:20px;font-size:14px;background:var(--bg);color:var(--ink)" maxlength="1000">
           <button class="btn" @click="sendAsk()" :disabled="askLoading || !askInput.trim()" style="border-radius:50%;width:44px;height:44px;padding:0;flex-shrink:0" title="Kirim">➤</button>
         </div>
-        <p class="muted small center" style="margin:8px 0 0">Maks 30 pertanyaan/jam · Riwayat tersimpan di HP ini</p>
+        <p class="muted small center" style="margin:8px 0 0">Maks 30 pertanyaan/jam · Riwayat tersimpan di akunmu</p>
       </div>
     </section>
 
