@@ -631,6 +631,35 @@ function ftsSyncWord(id, keb, reb, gloss, isDelete) {
 }
 
 // ---- 1. User management ----
+app.get('/api/admin/stats', admin, (req, res) => {
+  try {
+    const users = db.prepare('SELECT COUNT(*) c FROM users').get().c;
+    let kotoba = 0, kanji = 0;
+    try { kotoba = kdb.prepare('SELECT COUNT(*) c FROM words').get().c; } catch {}
+    try { kanji = kdb.prepare('SELECT COUNT(*) c FROM kanji').get().c; } catch {}
+    let soal = 0, pkgs = 0;
+    try {
+      const dir = path.join(__dirname, 'public/js');
+      for (const f of fs.readdirSync(dir)) {
+        if (!f.startsWith('data-banksoal') || !f.endsWith('.js')) continue;
+        const txt = fs.readFileSync(path.join(dir, f), 'utf8');
+        const m = txt.match(/BANK_PACKAGES\s*=\s*(\[[\s\S]*?\]);/);
+        if (m) {
+          const arr = eval(m[1]);
+          pkgs += arr.length;
+          for (const p of arr) soal += (p.questions || []).length;
+        }
+      }
+    } catch {}
+    let chapters = 0;
+    try {
+      const txt = fs.readFileSync(path.join(__dirname, 'public/js/data-chapters.js'), 'utf8');
+      const m = txt.match(/CHAPTERS\s*=\s*(\{[\s\S]*?\});/);
+      if (m) { const o = eval('(' + m[1] + ')'); for (const k in o) chapters += o[k].length; }
+    } catch {}
+    res.json({ users, kotoba, kanji, soal, pkgs, chapters });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
 app.get('/api/admin/users', admin, (req, res) => {
   const rows = db.prepare('SELECT id, name, email, level, role, xp, coins, created_at FROM users ORDER BY id DESC LIMIT 200').all();
   res.json({ users: rows });
