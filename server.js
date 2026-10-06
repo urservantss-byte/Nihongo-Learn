@@ -147,9 +147,16 @@ app.post('/api/auth/login', (req, res) => {
 });
 
 app.get('/api/me', auth, (req, res) => {
-  const u = db.prepare('SELECT id,name,email,level,intensity,theme,xp,coins FROM users WHERE id = ?').get(req.user.id);
+  const u = db.prepare('SELECT id,name,email,level,intensity,theme,xp,coins,role FROM users WHERE id = ?').get(req.user.id);
   if (!u) return res.status(404).json({ error: 'User tidak ditemukan' });
   res.json({ user: u });
+});
+// Bootstrap admin pertama (hanya jika belum ada admin sama sekali)
+app.post('/api/admin/bootstrap', auth, (req, res) => {
+  const c = db.prepare(`SELECT COUNT(*) c FROM users WHERE role = 'admin'`).get().c;
+  if (c > 0) return res.status(403).json({ error: 'Admin sudah ada' });
+  db.prepare(`UPDATE users SET role = 'admin' WHERE id = ?`).run(req.user.id);
+  res.json({ ok: true, message: 'Kamu sekarang admin!' });
 });
 
 app.patch('/api/me', auth, (req, res) => {
