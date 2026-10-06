@@ -407,6 +407,15 @@ app.get('/api/ask/result/:id', auth, (req, res) => {
   if (!row) return res.status(404).json({ error: 'Tidak ketemu' });
   res.json({ status: row.status, answer: row.answer || '' });
 });
+// ---- Riwayat chat Tanya AI per akun (ganti localStorage) ----
+app.get('/api/ask/history', auth, (req, res) => {
+  const rows = db.prepare(`SELECT question q, answer a FROM ask_queue WHERE user_id = ? AND status = 'done' AND answer IS NOT NULL AND answer != '' ORDER BY id DESC LIMIT 25`).all(req.user.id);
+  res.json({ history: rows.reverse() });
+});
+app.delete('/api/ask/history', auth, (req, res) => {
+  const r = db.prepare(`DELETE FROM ask_queue WHERE user_id = ?`).run(req.user.id);
+  res.json({ ok: true, deleted: r.changes });
+});
 function workerAuth(req, res, next) {
   if (!ASK_WORKER_SECRET || req.headers['x-worker-secret'] !== ASK_WORKER_SECRET)
     return res.status(403).json({ error: 'forbidden' });
