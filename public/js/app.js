@@ -503,7 +503,23 @@ const app = createApp({
       try {
         const d = await api('/api/chapters/complete', { method: 'POST', body: JSON.stringify({ chapter_id: cq.chapter.id, score, total }) });
         await this.loadChapterProgress();
-        if (d.passed) { try { this.gainXP(50, 'chapter ' + cq.chapter.id); } catch {} toast('Bab lulus! 🎉 +50 XP'); }
+        if (d.passed) {
+          try { this.gainXP(50, 'chapter ' + cq.chapter.id); } catch {}
+          // semua bab di level ini lulus → naik level otomatis
+          const allDone = this.myChapters.length > 0 && this.myChapters.every(c => this.chapterState(c) === 'done');
+          if (allDone) {
+            const order = ['n5','n4','n3','n2','n1'];
+            const curIdx = order.indexOf((store.user?.level || 'n5').toLowerCase());
+            if (curIdx >= 0 && curIdx < order.length - 1) {
+              const nextLv = order[curIdx + 1];
+              try {
+                const dd = await api('/api/me', { method: 'PATCH', body: JSON.stringify({ level: nextLv }) });
+                store.user = dd.user;
+                toast('🎊 Semua bab ' + order[curIdx].toUpperCase() + ' tuntas! Naik ke level ' + nextLv.toUpperCase() + '!');
+              } catch (e) { toast('Bab lulus! 🎉 +50 XP'); }
+            } else toast('Bab lulus! 🎉 +50 XP');
+          } else toast('Bab lulus! 🎉 +50 XP');
+        }
         else toast('Belum lulus, coba lagi! 💪');
       } catch {}
       this.$nextTick(() => window.scrollTo({ top: 0 }));
