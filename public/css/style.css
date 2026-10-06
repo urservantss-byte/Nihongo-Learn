@@ -7,11 +7,12 @@
   --font-d: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;
 }
 :root[data-theme="zen"] {
-  --bg: #faf8f2; --bg2: #f2ecdf; --card: #fffdf8; --ink: #2e2822; --muted: #8d8478;
-  --pri: #b23a2e; --pri-d: #93301f; --acc: #2f4858;
-  --line: #e7ddc9; --gold: #b98f2c; --ok: #5d8a5d; --bad: #b23a2e; --warn: #faf3e3;
-  --shadow: 0 2px 12px rgba(60,50,40,.08); --radius: 10px;
-  --font-d: 'Noto Serif JP', 'Hiragino Mincho ProN', serif;
+  /* "Tsuki" — zen gelap premium: arang hangat + putih bulan + vermillion */
+  --bg: #12100d; --bg2: #1c1814; --card: #1f1b17; --ink: #ede8db; --muted: #a29a8b;
+  --pri: #e0573f; --pri-d: #ff8f75; --acc: #8fbf9f;
+  --line: #2e2822; --gold: #d9a648; --ok: #7bc496; --bad: #e0705f; --warn: #2b2317;
+  --shadow: 0 4px 24px rgba(0,0,0,.45); --radius: 14px;
+  --font-d: 'Zen Kaku Gothic New', 'Noto Sans JP', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
@@ -19,6 +20,7 @@ body { font-family: var(--font-d); background: var(--bg); color: var(--ink); min
 h2 { font-size: 21px; line-height: 1.35; }
 h3 { font-size: 16px; line-height: 1.4; }
 [data-theme="sakura"] body { background-image: radial-gradient(circle at 15% 5%, #ffe4ee 0, transparent 35%), radial-gradient(circle at 90% 90%, #e4e9ff 0, transparent 35%); }
+[data-theme="zen"] body { background-image: radial-gradient(circle at 85% -5%, rgba(224,87,63,.10) 0, transparent 42%), radial-gradient(circle at 8% 108%, rgba(217,166,72,.07) 0, transparent 42%); }
 #app { max-width: 720px; margin: 0 auto; padding: 0 16px 120px; position: relative; z-index: 2; }
 .center { text-align: center; }
 .small { font-size: 12.5px; }
@@ -154,7 +156,7 @@ h2.ttl + .muted, h2.ttl + p { margin-bottom: 8px; }
 .lvl { display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); margin: 8px 0; cursor: pointer; box-shadow: var(--shadow); }
 .lvl.locked { opacity: .5; }
 .lvl .badge { width: 46px; height: 46px; border-radius: 50%; background: var(--pri); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 19px; font-weight: 800; flex-shrink: 0; }
-[data-theme="zen"] .lvl .badge { border-radius: 8px; }
+[data-theme="zen"] .lvl .badge { border-radius: 10px; }
 .lvl .badge.sm { width: 38px; height: 38px; font-size: 16px; }
 .lvl-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
 .lvl-body > b.big { line-height: 1.35; }
@@ -329,7 +331,7 @@ h2.ttl + .muted, h2.ttl + p { margin-bottom: 8px; }
 .opt.pick { border-color: var(--acc); background: color-mix(in srgb, var(--acc) 10%, var(--card)); }
 /* Animasi cara tulis kanji (KanjiVG) */
 .kvg-box { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 8px; text-align: center; }
-.kvg-svg { width: 148px; height: 148px; background: #fff; border-radius: 12px; border: 1px solid var(--line); color: var(--ink); }
+.kvg-svg { width: 148px; height: 148px; background: var(--bg2); border-radius: 12px; border: 1px solid var(--line); color: var(--ink); }
 .kvg-stroke { stroke-dasharray: 1; stroke-dashoffset: 1; animation: kvgdraw .55s ease-out forwards; }
 @keyframes kvgdraw { to { stroke-dashoffset: 0; } }
 .lvl .badge.bab-pill { border-radius: 14px; width: auto; min-width: 46px; padding: 0 12px; white-space: nowrap; font-size: 14px; }
