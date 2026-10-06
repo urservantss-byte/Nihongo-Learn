@@ -173,6 +173,7 @@ const app = createApp({
     libQ: '', libType: 'all',
     // modul (pusat materi)
     modulQ: '', modulCat: null, modulLevel: 'n5', modulSub: null, modulCh: null, modulPat: null, kvgOpen: {},
+    sswKaigoTab: 'materi', sswKaigoCh: null,
     simPkg: null, sim: null,
     // quiz
     quizMode: 'acak', qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0, secScores: [],
@@ -1461,6 +1462,43 @@ const app = createApp({
             </div>
             <div v-else>
               <button class="btn ghost sm" style="margin-bottom:10px" @click="modulSub=null"><span v-html="ic('back',15)"></span> Pilih bidang</button>
+              <div v-if="modulSub==='kaigo'">
+                <div class="pill-row" style="margin-bottom:12px">
+                  <button class="pill" :class="{on:sswKaigoTab==='materi'}" @click="sswKaigoTab='materi'">📖 Materi</button>
+                  <button class="pill" :class="{on:sswKaigoTab==='soal'}" @click="sswKaigoTab='soal'">🎯 Bank Soal</button>
+                </div>
+                <div v-if="sswKaigoTab==='materi'">
+                  <div v-if="!sswKaigoCh" class="lib-grid">
+                    <div v-for="c in SSW_KAIGO" :key="c.id" class="lvl" @click="sswKaigoCh=c.id">
+                      <div class="badge"><span style="font-size:22px">{{ c.icon }}</span></div>
+                      <div class="lvl-body"><b>{{ c.title }}</b><div class="muted small">{{ c.desc }}</div></div>
+                      <span v-html="ic('play',16)"></span>
+                    </div>
+                  </div>
+                  <div v-else>
+                    <button class="btn ghost sm" style="margin-bottom:10px" @click="sswKaigoCh=null"><span v-html="ic('back',15)"></span> Daftar materi</button>
+                    <div v-for="c in [SSW_KAIGO.find(x=>x.id===sswKaigoCh)]" :key="c.id">
+                      <h2 class="ttl">{{ c.icon }} {{ c.title }}</h2>
+                      <p class="muted small" style="margin-bottom:12px">{{ c.desc }}</p>
+                      <div v-for="(s,si) in c.sections" :key="si" class="card" style="margin-bottom:10px">
+                        <h3 class="ttl-sm">{{ s.title }}</h3>
+                        <div class="penjelasan-text" v-html="s.body"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div v-if="sswKaigoTab==='soal'">
+                  <div v-if="sswPkgs.length" class="lib-grid">
+                    <div v-for="p in sswPkgs" :key="p.id" class="lvl" @click="simPkg=p">
+                      <div class="badge"><span style="font-size:22px">&#127919;</span></div>
+                      <div class="lvl-body"><b>{{ p.title }}</b><div class="muted small">{{ p.questions.length }} soal &middot; {{ p.source }}</div></div>
+                      <span v-html="ic('play',16)"></span>
+                    </div>
+                  </div>
+                  <div v-else class="card center pop"><div style="font-size:40px">&#128269;</div><b>Bank soal Kaigo segera hadir</b><p class="muted small">Soal-soal sedang diriset &amp; diverifikasi. &#128591;</p></div>
+                </div>
+              </div>
+              <div v-else>
               <div v-if="sswPkgs.length" class="lib-grid">
                 <div v-for="p in sswPkgs" :key="p.id" class="lvl" @click="simPkg=p">
                   <div class="badge"><span style="font-size:22px">&#127919;</span></div>
@@ -1469,6 +1507,7 @@ const app = createApp({
                 </div>
               </div>
               <div v-else class="card center pop"><div style="font-size:40px">&#128269;</div><b>Materi {{ (SSW_FIELDS.find(f=>f.id===modulSub)||{}).name }} segera hadir</b><p class="muted small">Materi &amp; soal bidang ini sedang diriset &amp; diverifikasi. &#128591;</p></div>
+              </div>
             </div>
           </div>
         </div>
@@ -2242,6 +2281,7 @@ app.config.globalProperties.LIB_TYPES = LIB_TYPES;
 app.config.globalProperties.TYPE_ICON = TYPE_ICON;
 app.config.globalProperties.MODUL_CATS = MODUL_CATS;
 app.config.globalProperties.SSW_FIELDS = SSW_FIELDS;
+app.config.globalProperties.SSW_KAIGO = (typeof SSW_KAIGO !== 'undefined') ? SSW_KAIGO : [];
 app.config.globalProperties.BANK_YEARS = BANK_YEARS;
 app.config.globalProperties.ALL_LESSONS = ALL_LESSONS;
 app.config.globalProperties.LEVEL_ORDER = LEVEL_ORDER;
