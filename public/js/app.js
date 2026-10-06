@@ -763,6 +763,16 @@ const app = createApp({
       } catch { this.kamusResults = []; }
       this.kamusLoading = false;
     },
+    async browseKanji() {
+      this.kamusDetail = null;
+      this.kamusQ = '';
+      this.kamusLoading = true;
+      try {
+        const d = await api(`/api/kanji/search?jlpt=${this.kamusJlpt}&limit=50`);
+        this.kamusResults = d.results || [];
+      } catch { this.kamusResults = []; }
+      this.kamusLoading = false;
+    },
     async openWord(id) {
       try {
         const d = await api(`/api/dict/word/${id}`);

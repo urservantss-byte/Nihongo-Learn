@@ -339,9 +339,14 @@ app.get('/api/kanji/:ch/translate', async (req, res) => {
 app.get('/api/kanji/search', (req, res) => {
   if (!kdb) return res.status(503).json({ error: 'Kamus belum tersedia' });
   const q = (req.query.q || '').trim().slice(0, 20);
-  if (!q) return res.json({ results: [] });
+  const jlpt = parseInt(req.query.jlpt || '0', 10);
+  const limit = Math.min(50, Math.max(1, parseInt(req.query.limit || '20', 10)));
   let rows;
-  if (/[\u4e00-\u9faf]/.test(q)) {
+  if (jlpt >= 1 && jlpt <= 5 && !q) {
+    rows = kdb.prepare('SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes FROM kanji WHERE jlpt = ? ORDER BY COALESCE(freq, 999999) LIMIT ?').all(jlpt, limit);
+  } else if (!q) {
+    return res.json({ results: [] });
+  } else if (/[\u4e00-\u9faf]/.test(q)) {
     rows = kdb.prepare('SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes FROM kanji WHERE ch = ? LIMIT 5').all(q[0]);
   } else {
     // whole-word match dulu ("eat" cocok utuh, bukan "wheat"/"heating"), freq NULL ke belakang
