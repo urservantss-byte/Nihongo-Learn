@@ -433,67 +433,6 @@ app.post('/api/ask/answer', workerAuth, (req, res) => {
   res.json({ ok: true });
 });
 
-// ---- Muse Worker (inline) — proses antrean ask_queue langsung via Gemini ----
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
-const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
-const MUSE_SYSTEM = `Kamu adalah "Muse Sensei", asisten belajar bahasa Jepang di aplikasi NihongoLearn.
-- Ramah, hangat, sabar — seperti sempai yang menyenangkan.
-- Fokus: bahasa Jepang (bunpou, kosakata, kanji), persiapan JLPT/JFT/SSW, dan budaya Jepang.
-- Saat menjelaskan grammar, beri contoh kalimat + romaji + arti Indonesia.
-- Untuk kanji, sebutkan onyomi/kunyomi bila relevan.
-- Pertanyaan di luar bahasa Jepang tetap dijawab dengan senang hati, singkat dan membantu.
-- Jawab dalam bahasa Indonesia (atau bahasa yang dipakai user). Format jawaban rapi, tidak terlalu panjang.`;
-
-async function museAskGemini(question, history) {
-  const contents = history.map(m => ({
-    role: m.role === 'ai' ? 'model' : 'user',
-    parts: [{ text: String(m.text || '') }],
-  }));
-  contents.push({ role: 'user', parts: [{ text: question }] });
-  const body = {
-    system_instruction: { parts: [{ text: MUSE_SYSTEM }] },
-    contents,
-    generationConfig: { temperature: 0.8, maxOutputTokens: 1024 },
-  };
-  const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  });
-  const d = await r.json();
-  const reply = d?.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!reply) throw new Error(d?.error?.message || 'AI tidak merespon');
-  return reply.slice(0, 4000);
-}
-
-if (GEMINI_API_KEY) {
-  console.log('[muse] worker aktif (Gemini:', GEMINI_MODEL + ')');
-  let museBusy = false;
-  setInterval(async () => {
-    if (museBusy) return;
-    museBusy = true;
-    try {
-      const jobs = db.prepare(`SELECT id, question, history FROM ask_queue WHERE status = 'pending' ORDER BY id LIMIT 3`).all();
-      for (const j of jobs) {
-        db.prepare(`UPDATE ask_queue SET status = 'processing' WHERE id = ?`).run(j.id);
-        try {
-          let hist = [];
-          try { hist = JSON.parse(j.history || '[]'); } catch {}
-          const answer = await museAskGemini(j.question, Array.isArray(hist) ? hist : []);
-          db.prepare(`UPDATE ask_queue SET status = 'done', answer = ?, answered_at = datetime('now') WHERE id = ?`).run(answer, j.id);
-        } catch (e) {
-          console.log('[muse] gagal jawab #' + j.id + ':', e.message);
-          db.prepare(`UPDATE ask_queue SET status = 'done', answer = ?, answered_at = datetime('now') WHERE id = ?`)
-            .run('😅 Muse Sensei sedang tidak bisa menjawab (layanan AI bermasalah). Coba lagi sebentar lagi ya!', j.id);
-        }
-      }
-    } catch (e) { console.log('[muse] worker error:', e.message); }
-    museBusy = false;
-  }, 3000);
-} else {
-  console.log('[muse] GEMINI_API_KEY tidak diset — worker Tanya AI tidak aktif');
-}
-
 // ---- SRS flashcards (pola WaniKani/Mazii) ----
 app.get('/api/srs', auth, (req, res) => {
   const due = db.prepare(`SELECT * FROM srs_cards WHERE user_id = ? AND date(due) <= date('now') ORDER BY due LIMIT 30`).all(req.user.id);
