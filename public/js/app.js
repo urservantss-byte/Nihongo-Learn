@@ -940,7 +940,6 @@ const app = createApp({
       </div>
 
       <div v-if="!openChapter && !chQuiz">
-      <div v-if="myChapters.length">
       <h2 class="ttl"><span v-html="ic('layers')"></span> Jalur Belajar {{ (store.user?.level || 'n5').toUpperCase() }}</h2>
       <p class="muted small">Belajar berurutan ala Soumatome — dari termudah ke tersulit. Lulus quiz (≥70) untuk membuka bab berikutnya.</p>
       <div v-if="!myChapters.length" class="card center muted small">Materi untuk level ini segera hadir! 🚧</div>
