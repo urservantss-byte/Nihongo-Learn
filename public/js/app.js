@@ -331,11 +331,20 @@ const app = createApp({
     },
   },
   watch: {
-    tab() { this.saveTab(); if (this.tab !== 'library') this.closeSim(); window.scrollTo({ top: 0, behavior: 'smooth' }); },
-    openChapter() { this.saveChapterState(); },
+    tab() { this.saveTab(); if (this.tab !== 'library') this.closeSim(); window.scrollTo({ top: 0, behavior: 'smooth' }); if (!this._popping) this.navPush(); },
+    openChapter() { this.saveChapterState(); if (this.openChapter && !this._popping) this.navPush(); },
+    openLesson() { if (this.openLesson && !this._popping) this.navPush(); },
+    kamusDetail() { if (this.kamusDetail && !this._popping) this.navPush(); },
     chQuiz: { deep: true, handler() { this.saveChapterState(); } },
   },
   methods: {
+    _navState() {
+      return { nl: 1, t: this.tab, c: !!(this.openChapter), q: !!(this.chQuiz), l: !!(this.openLesson), k: !!(this.kamusDetail) };
+    },
+    navPush() {
+      if (this._popping) return;
+      try { history.pushState(this._navState(), ''); } catch {}
+    },
     fmtQ(t) {
       if (!t) return '';
       var lines = String(t).split('\n');
@@ -868,6 +877,22 @@ const app = createApp({
     },
   },
   mounted() {
+    // Tombol back HP/browser: kembali ke halaman sebelumnya dalam app
+    this._navInit = false;
+    window.addEventListener('popstate', (e) => {
+      const s = e.state;
+      if (!s || !s.nl) return;
+      this._popping = true;
+      this.tab = s.t || 'home';
+      // tutup sub-view sesuai state
+      if (!s.c) this.openChapter = null;
+      if (!s.q) this.chQuiz = null;
+      if (!s.l) this.openLesson = null;
+      if (!s.k) this.kamusDetail = null;
+      this.$nextTick(() => { this._popping = false; });
+    });
+    // state awal
+    history.replaceState(this._navState(), '');
     setInterval(() => {
       if (store.theme !== 'sakura' || document.hidden) return;
       if (document.querySelectorAll('.petal').length > 12) return;
