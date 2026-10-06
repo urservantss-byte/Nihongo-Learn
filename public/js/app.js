@@ -687,16 +687,31 @@ const app = createApp({
     playAudio(t) { speak(t); },
     fmt(s) { return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`; },
     // ---- Tanya AI (Muse Sensei) ----
-    loadAsk() {
+    async loadAsk() {
+      // cache lokal dulu biar instan, lalu sinkron dari server (per akun)
       try {
         const h = JSON.parse(localStorage.getItem('nl_ask') || '[]');
         this.askMsgs = Array.isArray(h) ? h.slice(-50) : [];
       } catch { this.askMsgs = []; }
+      if (!store.token) return;
+      try {
+        const d = await api('/api/ask/history');
+        if (Array.isArray(d.history) && d.history.length) {
+          this.askMsgs = d.history.flatMap(m => [
+            { role: 'user', text: m.q },
+            { role: 'ai', text: m.a },
+          ]);
+          this.saveAsk(); this.scrollAsk();
+        }
+      } catch {}
     },
     saveAsk() {
       try { localStorage.setItem('nl_ask', JSON.stringify(this.askMsgs.slice(-50))); } catch {}
     },
-    clearAsk() { this.askMsgs = []; this.saveAsk(); },
+    async clearAsk() {
+      this.askMsgs = []; this.saveAsk();
+      if (store.token) { try { await api('/api/ask/history', { method: 'DELETE' }); } catch {} }
+    },
     scrollAsk() { this.$nextTick(() => { const b = this.$refs.askBox; if (b) b.scrollTop = b.scrollHeight; }); },
     async sendAsk() {
       const q = this.askInput.trim();
