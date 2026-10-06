@@ -1678,7 +1678,6 @@ const app = createApp({
         </select>
       </div>
       <button class="btn ghost btn-block" @click="logout">Keluar</button>
-      <button v-if="store.user?.role!=='admin'" class="btn btn-block" @click="becomeAdmin" style="margin-top:8px">🔑 Jadikan saya admin</button>
     </section>
 
     <!-- ============ ADMIN PANEL ============ -->
