@@ -574,6 +574,13 @@ const app = createApp({
       } catch (e) { toast(e.message); }
     },
     logout() { saveToken(''); store.user = null; this.tab = 'home'; this.openChapter = null; this.chQuiz = null; localStorage.removeItem('nl_chapter'); },
+    async becomeAdmin() {
+      try {
+        const d = await api('/api/admin/bootstrap', { method: 'POST' });
+        if (d.ok) { toast('Kamu sekarang admin! 🎉'); this.refresh(); }
+        else toast(d.error || 'Gagal');
+      } catch (e) { toast(e.message); }
+    },
     async refresh() {
       if (!store.token) { store.authChecked = true; return; }
       try {
@@ -1671,6 +1678,7 @@ const app = createApp({
         </select>
       </div>
       <button class="btn ghost btn-block" @click="logout">Keluar</button>
+      <button v-if="store.user?.role!=='admin'" class="btn btn-block" @click="becomeAdmin" style="margin-top:8px">🔑 Jadikan saya admin</button>
     </section>
 
     <!-- ============ ADMIN PANEL ============ -->
