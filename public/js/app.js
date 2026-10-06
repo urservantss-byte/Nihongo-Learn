@@ -709,6 +709,7 @@ const app = createApp({
       try { localStorage.setItem('nl_ask', JSON.stringify(this.askMsgs.slice(-50))); } catch {}
     },
     async clearAsk() {
+      if (!confirm('Hapus semua riwayat chat Tanya AI?\nTindakan ini tidak bisa dibatalkan.')) return;
       this.askMsgs = []; this.saveAsk();
       if (store.token) { try { await api('/api/ask/history', { method: 'DELETE' }); } catch {} }
     },
