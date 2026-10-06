@@ -14,7 +14,7 @@
   --shadow: 0 4px 24px rgba(0,0,0,.45); --radius: 14px;
   --font-d: 'Zen Kaku Gothic New', 'Noto Sans JP', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body { font-family: var(--font-d); background: var(--bg); color: var(--ink); min-height: 100vh; line-height: 1.6; font-size: 15px; }
 h2 { font-size: 21px; line-height: 1.35; }
