@@ -927,20 +927,24 @@ const app = createApp({
       </div>
       </div>
 
-      <div v-if="!openChapter && !chQuiz && !openLesson">
+      <div v-if="!openChapter && !chQuiz && !openLesson && (store.user?.level==='hiragana' || store.user?.level==='katakana')">
       <h2 class="ttl"><span v-html="ic('book')"></span> Hiragana & Katakana</h2>
       <p class="muted small">Huruf dasar bahasa Jepang — klik untuk belajar bentuk & dengar cara bacanya.</p>
+      <div v-if="store.user?.level==='hiragana'">
       <h3 class="ttl-sm" style="color:var(--pri-d)">あ Hiragana</h3>
       <div v-for="les in kanaLessons('hiragana')" :key="les.key" class="lvl" @click="openLesson=les">
         <div class="badge sm" :class="{ done: doneSet.has(les.key) }">{{ doneSet.has(les.key) ? '✓' : 'あ' }}</div>
         <div class="lvl-body"><b>{{ les.title }}</b><div v-if="doneSet.has(les.key)" class="muted small">✅ Tuntas</div></div>
         <span v-html="ic('play', 18)"></span>
       </div>
+      </div>
+      <div v-if="store.user?.level==='katakana'">
       <h3 class="ttl-sm" style="color:var(--pri-d)">ア Katakana</h3>
       <div v-for="les in kanaLessons('katakana')" :key="les.key" class="lvl" @click="openLesson=les">
         <div class="badge sm" :class="{ done: doneSet.has(les.key) }">{{ doneSet.has(les.key) ? '✓' : 'ア' }}</div>
         <div class="lvl-body"><b>{{ les.title }}</b><div v-if="doneSet.has(les.key)" class="muted small">✅ Tuntas</div></div>
         <span v-html="ic('play', 18)"></span>
+      </div>
       </div>
       </div>
 
