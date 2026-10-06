@@ -174,6 +174,7 @@ const app = createApp({
     // modul (pusat materi)
     modulQ: '', modulCat: null, modulLevel: 'n5', modulSub: null, modulCh: null, modulPat: null, kvgOpen: {},
     sswKaigoTab: 'materi', sswKaigoCh: null,
+    mockLevel: null,
     simPkg: null, sim: null,
     // quiz
     quizMode: 'acak', qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0, secScores: [],
@@ -1569,6 +1570,33 @@ const app = createApp({
       <h2 class="ttl"><span v-html="ic('filetext')"></span> Riwayat</h2>
       <div v-for="h in store.quizHist" :key="h.created_at+h.level" class="rowline"><span><b>{{ h.level.toUpperCase() }}</b> — {{ h.score }}/{{ h.total }}</span><b>{{ Math.round(h.score/h.total*100) }}%</b></div>
       <div v-if="!store.quizHist.length" class="muted small">Belum ada riwayat quiz.</div>
+
+      <h2 class="ttl"><span v-html="ic('target')"></span> Mock Test JLPT</h2>
+      <p class="muted small" style="margin-bottom:10px">Soal latihan lengkap per level: PDF soal + audio listening + kunci jawaban.</p>
+      <div v-if="!mockLevel" class="lib-grid">
+        <div v-for="m in MOCKTEST_LEVELS" :key="m.id" class="lvl" @click="mockLevel=m.id">
+          <div class="badge"><span style="font-size:22px">{{ m.icon }}</span></div>
+          <div class="lvl-body"><b>JLPT {{ m.name }}</b><div class="muted small">{{ m.pdfs.length }} PDF &middot; {{ m.audios.length }} audio</div></div>
+          <span v-html="ic('play',16)"></span>
+        </div>
+      </div>
+      <div v-else>
+        <button class="btn ghost sm" style="margin-bottom:10px" @click="mockLevel=null"><span v-html="ic('back',15)"></span> Pilih level</button>
+        <div v-for="m in [MOCKTEST_LEVELS.find(x=>x.id===mockLevel)]" :key="m.id">
+          <h3 class="ttl-sm">{{ m.icon }} JLPT {{ m.name }} Mock Test</h3>
+          <h4 class="ttl-sm" style="margin-top:12px">📄 Soal PDF</h4>
+          <div v-for="p in m.pdfs" :key="p.id" class="rowline">
+            <span>{{ p.title }}</span>
+            <a :href="'mocktest/'+m.id+'/'+p.file" target="_blank" class="btn ghost sm">Buka</a>
+          </div>
+          <h4 class="ttl-sm" style="margin-top:12px">🎧 Audio Listening</h4>
+          <div v-for="a in m.audios" :key="a.id" class="card small" style="margin-bottom:8px">
+            <div><b>{{ a.title }}</b></div>
+            <audio :src="'audio/'+a.file" controls preload="none" style="width:100%;margin-top:6px"></audio>
+          </div>
+          <p class="muted small" style="margin-top:10px">Sumber: JLPT Sensei Practice Test (berdasarkan soal contoh resmi JLPT).</p>
+        </div>
+      </div>
     </section>
 
     <!-- ============ QUIZ RUN ============ -->
@@ -2282,6 +2310,7 @@ app.config.globalProperties.TYPE_ICON = TYPE_ICON;
 app.config.globalProperties.MODUL_CATS = MODUL_CATS;
 app.config.globalProperties.SSW_FIELDS = SSW_FIELDS;
 app.config.globalProperties.SSW_KAIGO = (typeof SSW_KAIGO !== 'undefined') ? SSW_KAIGO : [];
+app.config.globalProperties.MOCKTEST_LEVELS = (typeof MOCKTEST_LEVELS !== 'undefined') ? MOCKTEST_LEVELS : [];
 app.config.globalProperties.BANK_YEARS = BANK_YEARS;
 app.config.globalProperties.ALL_LESSONS = ALL_LESSONS;
 app.config.globalProperties.LEVEL_ORDER = LEVEL_ORDER;
