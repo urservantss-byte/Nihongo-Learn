@@ -104,14 +104,22 @@ CREATE TABLE IF NOT EXISTS quiz_item_stats (
   PRIMARY KEY (user_id, qid)
 );
 `);
+// Migrasi: tambah kolom role jika belum ada
+try { db.exec(`ALTER TABLE users ADD COLUMN role TEXT DEFAULT 'user'`); } catch {}
 
-function sign(u) { return jwt.sign({ id: u.id, email: u.email }, JWT_SECRET, { expiresIn: '30d' }); }
+function sign(u) { return jwt.sign({ id: u.id, email: u.email, role: u.role || 'user' }, JWT_SECRET, { expiresIn: '30d' }); }
 function auth(req, res, next) {
   const h = req.headers.authorization || '';
   const t = h.startsWith('Bearer ') ? h.slice(7) : null;
   if (!t) return res.status(401).json({ error: 'Login dulu ya' });
   try { req.user = jwt.verify(t, JWT_SECRET); next(); }
   catch { return res.status(401).json({ error: 'Sesi habis, login lagi' }); }
+}
+function admin(req, res, next) {
+  auth(req, res, () => {
+    if (req.user.role !== 'admin') return res.status(403).json({ error: 'Khusus admin' });
+    next();
+  });
 }
 
 // ---- Auth ----
@@ -134,7 +142,7 @@ app.post('/api/auth/login', (req, res) => {
   const { email, password } = req.body || {};
   const u = db.prepare('SELECT * FROM users WHERE email = ?').get((email || '').toLowerCase());
   if (!u || !bcrypt.compareSync(password || '', u.password)) return res.status(401).json({ error: 'Email/password salah' });
-  const safe = { id: u.id, name: u.name, email: u.email, level: u.level, intensity: u.intensity, theme: u.theme };
+  const safe = { id: u.id, name: u.name, email: u.email, level: u.level, intensity: u.intensity, theme: u.theme, role: u.role || 'user' };
   res.json({ user: safe, token: sign(u) });
 });
 
@@ -375,7 +383,7 @@ app.get('/api/leaderboard', auth, (req, res) => {
   const rows = db.prepare(`
     SELECT u.name, COALESCE(SUM(x.amount),0) wxp
     FROM users u LEFT JOIN xp_log x ON x.user_id = u.id AND x.created_at >= date('now','-6 days')
-    GROUP BY u.id ORDER BY wxp DESC LIMIT 10`).all();
+    GROUP BY u.id ORDER BY wxp DESC LIMIT 5`).all();
   const me = db.prepare(`SELECT COALESCE(SUM(amount),0) wxp FROM xp_log WHERE user_id = ? AND created_at >= date('now','-6 days')`).get(req.user.id).wxp;
   res.json({ board: rows, my_weekly: me });
 });
@@ -577,6 +585,354 @@ app.get('/api/stats', auth, (req, res) => {
   const srs = db.prepare('SELECT COUNT(*) c FROM srs_cards WHERE user_id = ?').get(req.user.id).c;
   const srsDue = db.prepare(`SELECT COUNT(*) c FROM srs_cards WHERE user_id = ? AND date(due) <= date('now')`).get(req.user.id).c;
   res.json({ lessons_done: lessons, quiz_count: quizzes.c, quiz_avg: Math.round(quizzes.avg || 0), streak_days: streak, xp: ux.xp || 0, coins: ux.coins || 0, srs_total: srs, srs_due: srsDue });
+});
+
+// ==== ADMIN PANEL API ====
+const fss = require('fs');
+const vmx = require('vm');
+
+// Koneksi writable ke kamus.db untuk admin (kdb yang ada readonly)
+let kdbw = null;
+try {
+  const kpath = path.join(__dirname, 'data', 'kamus.db');
+  if (fss.existsSync(kpath)) { kdbw = new Database(kpath); console.log('[admin] kamus writable loaded'); }
+} catch (e) { console.log('[admin] kamus writable gagal:', e.message); }
+
+// Kana -> romaji sederhana (untuk FTS)
+function kanaToRomajiAdmin(kana) {
+  const map = {'あ':'a','い':'i','う':'u','え':'e','お':'o','か':'ka','き':'ki','く':'ku','け':'ke','こ':'ko','さ':'sa','し':'shi','す':'su','せ':'se','そ':'so','た':'ta','ち':'chi','つ':'tsu','て':'te','と':'to','な':'na','に':'ni','ぬ':'nu','ね':'ne','の':'no','は':'ha','ひ':'hi','ふ':'fu','へ':'he','ほ':'ho','ま':'ma','み':'mi','む':'mu','め':'me','も':'mo','や':'ya','ゆ':'yu','よ':'yo','ら':'ra','り':'ri','る':'ru','れ':'re','ろ':'ro','わ':'wa','を':'wo','ん':'n','が':'ga','ぎ':'gi','ぐ':'gu','げ':'ge','ご':'go','ざ':'za','じ':'ji','ず':'zu','ぜ':'ze','ぞ':'zo','だ':'da','ぢ':'ji','づ':'zu','で':'de','ど':'do','ば':'ba','び':'bi','ぶ':'bu','べ':'be','ぼ':'bo','ぱ':'pa','ぴ':'pi','ぷ':'pu','ぺ':'pe','ぽ':'po','きゃ':'kya','きゅ':'kyu','きょ':'kyo','しゃ':'sha','しゅ':'shu','しょ':'sho','ちゃ':'cha','ちゅ':'chu','ちょ':'cho','にゃ':'nya','にゅ':'nyu','にょ':'nyo','ひゃ':'hya','ひゅ':'hyu','ひょ':'hyo','みゃ':'mya','みゅ':'myu','みょ':'myo','りゃ':'rya','りゅ':'ryu','りょ':'ryo','ぎゃ':'gya','ぎゅ':'gyu','ぎょ':'gyo','じゃ':'ja','じゅ':'ju','じょ':'jo','びゃ':'bya','びゅ':'byu','びょ':'byo','ぴゃ':'pya','ぴゅ':'pyu','ぴょ':'pyo','ア':'a','イ':'i','ウ':'u','エ':'e','オ':'o','カ':'ka','キ':'ki','ク':'ku','ケ':'ke','コ':'ko','サ':'sa','シ':'shi','ス':'su','セ':'se','ソ':'so','タ':'ta','チ':'chi','ツ':'tsu','テ':'te','ト':'to','ナ':'na','ニ':'ni','ヌ':'nu','ネ':'ne','ノ':'no','ハ':'ha','ヒ':'hi','フ':'fu','ヘ':'he','ホ':'ho','マ':'ma','ミ':'mi','ム':'mu','メ':'me','モ':'mo','ヤ':'ya','ユ':'yu','ヨ':'yo','ラ':'ra','リ':'ri','ル':'ru','レ':'re','ロ':'ro','ワ':'wa','ヲ':'wo','ン':'n','ガ':'ga','ギ':'gi','グ':'gu','ゲ':'ge','ゴ':'go','ザ':'za','ジ':'ji','ズ':'zu','ゼ':'ze','ゾ':'zo','ダ':'da','ヂ':'ji','ヅ':'zu','デ':'de','ド':'do','バ':'ba','ビ':'bi','ブ':'bu','ベ':'be','ボ':'bo','パ':'pa','ピ':'pi','プ':'pu','ペ':'pe','ポ':'po','キャ':'kya','キュ':'kyu','キョ':'kyo','シャ':'sha','シュ':'shu','ショ':'sho','チャ':'cha','チュ':'chu','チョ':'cho','ニャ':'nya','ニュ':'nyu','ニョ':'nyo','ヒャ':'hya','ヒュ':'hyu','ヒョ':'hyo','ミャ':'mya','ミュ':'myu','ミョ':'myo','リャ':'rya','リュ':'ryu','リョ':'ryo','ギャ':'gya','ギュ':'gyu','ギョ':'gyo','ジャ':'ja','ジュ':'ju','ジョ':'jo','ビャ':'bya','ビュ':'byu','ビョ':'byo','ピャ':'pya','ピュ':'pyu','ピョ':'pyo','ー':'-','っ':'','ッ':''};
+  let out = '', i = 0;
+  while (i < kana.length) {
+    const two = kana.slice(i, i+2);
+    if (map[two]) { out += map[two]; i += 2; continue; }
+    const one = kana[i];
+    out += map[one] !== undefined ? map[one] : one;
+    i++;
+  }
+  return out;
+}
+
+// Sync FTS untuk words
+function ftsSyncWord(id, keb, reb, gloss, isDelete) {
+  if (!kdbw) return;
+  const romaji = JSON.parse(reb || '[]').map(kanaToRomajiAdmin).join(' ');
+  if (isDelete) {
+    kdbw.prepare(`INSERT INTO words_fts(words_fts, rowid, keb, reb, romaji, gloss) VALUES('delete', ?, ?, ?, ?, ?)`).run(id, keb, reb, romaji, gloss);
+  } else {
+    kdbw.prepare(`INSERT INTO words_fts(rowid, keb, reb, romaji, gloss) VALUES(?, ?, ?, ?, ?)`).run(id, keb, reb, romaji, gloss);
+  }
+}
+
+// ---- 1. User management ----
+app.get('/api/admin/users', admin, (req, res) => {
+  const rows = db.prepare('SELECT id, name, email, level, role, xp, coins, created_at FROM users ORDER BY id DESC LIMIT 200').all();
+  res.json({ users: rows });
+});
+
+app.post('/api/admin/users/:id/role', admin, (req, res) => {
+  const { role } = req.body || {};
+  if (!['admin', 'user'].includes(role)) return res.status(400).json({ error: 'role harus admin atau user' });
+  const u = db.prepare('SELECT id FROM users WHERE id = ?').get(req.params.id);
+  if (!u) return res.status(404).json({ error: 'User tidak ketemu' });
+  db.prepare('UPDATE users SET role = ? WHERE id = ?').run(role, req.params.id);
+  res.json({ ok: true });
+});
+
+// ---- 2. Kamus Kotoba ----
+app.get('/api/admin/kotoba', admin, (req, res) => {
+  if (!kdbw) return res.status(503).json({ error: 'Kamus tidak tersedia' });
+  const q = (req.query.q || '').trim().slice(0, 50);
+  const lim = Math.min(parseInt(req.query.limit) || 20, 100);
+  let rows;
+  if (q) {
+    rows = kdbw.prepare(`SELECT id, keb, reb, gloss, pos FROM words WHERE keb LIKE ? OR reb LIKE ? OR gloss LIKE ? LIMIT ?`).all(`%${q}%`, `%${q}%`, `%${q}%`, lim);
+  } else {
+    rows = kdbw.prepare(`SELECT id, keb, reb, gloss, pos FROM words ORDER BY id DESC LIMIT ?`).all(lim);
+  }
+  res.json({ results: rows.map(r => ({ ...r, keb: JSON.parse(r.keb || '[]'), reb: JSON.parse(r.reb || '[]') })) });
+});
+
+app.post('/api/admin/kotoba', admin, (req, res) => {
+  if (!kdbw) return res.status(503).json({ error: 'Kamus tidak tersedia' });
+  const { keb, reb, gloss, pos } = req.body || {};
+  if (!reb || !gloss) return res.status(400).json({ error: 'reb (kana) dan gloss (arti) wajib' });
+  const kebS = JSON.stringify(Array.isArray(keb) ? keb : [String(keb || '')].filter(Boolean));
+  const rebS = JSON.stringify(Array.isArray(reb) ? reb : [String(reb)]);
+  const info = kdbw.prepare('INSERT INTO words (keb, reb, gloss, pos) VALUES (?, ?, ?, ?)').run(kebS, rebS, String(gloss).slice(0, 500), String(pos || '').slice(0, 50));
+  ftsSyncWord(info.lastInsertRowid, kebS, rebS, String(gloss).slice(0, 500), false);
+  res.status(201).json({ ok: true, id: info.lastInsertRowid });
+});
+
+app.put('/api/admin/kotoba/:id', admin, (req, res) => {
+  if (!kdbw) return res.status(503).json({ error: 'Kamus tidak tersedia' });
+  const cur = kdbw.prepare('SELECT * FROM words WHERE id = ?').get(req.params.id);
+  if (!cur) return res.status(404).json({ error: 'Kata tidak ketemu' });
+  const { keb, reb, gloss, pos } = req.body || {};
+  const kebS = keb !== undefined ? JSON.stringify(Array.isArray(keb) ? keb : [String(keb)].filter(Boolean)) : cur.keb;
+  const rebS = reb !== undefined ? JSON.stringify(Array.isArray(reb) ? reb : [String(reb)]) : cur.reb;
+  const glossS = gloss !== undefined ? String(gloss).slice(0, 500) : cur.gloss;
+  const posS = pos !== undefined ? String(pos).slice(0, 50) : cur.pos;
+  ftsSyncWord(cur.id, cur.keb, cur.reb, cur.gloss, true);
+  kdbw.prepare('UPDATE words SET keb = ?, reb = ?, gloss = ?, pos = ? WHERE id = ?').run(kebS, rebS, glossS, posS, req.params.id);
+  ftsSyncWord(cur.id, kebS, rebS, glossS, false);
+  res.json({ ok: true });
+});
+
+app.delete('/api/admin/kotoba/:id', admin, (req, res) => {
+  if (!kdbw) return res.status(503).json({ error: 'Kamus tidak tersedia' });
+  const cur = kdbw.prepare('SELECT * FROM words WHERE id = ?').get(req.params.id);
+  if (!cur) return res.status(404).json({ error: 'Kata tidak ketemu' });
+  ftsSyncWord(cur.id, cur.keb, cur.reb, cur.gloss, true);
+  kdbw.prepare('DELETE FROM words WHERE id = ?').run(req.params.id);
+  res.json({ ok: true });
+});
+
+// ---- 3. Kamus Kanji ----
+app.get('/api/admin/kanji', admin, (req, res) => {
+  if (!kdbw) return res.status(503).json({ error: 'Kamus tidak tersedia' });
+  const q = (req.query.q || '').trim().slice(0, 20);
+  const jlpt = parseInt(req.query.jlpt || '0');
+  const lim = Math.min(parseInt(req.query.limit) || 50, 200);
+  let rows;
+  if (q) {
+    rows = kdbw.prepare('SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes FROM kanji WHERE ch = ? OR meaning LIKE ? LIMIT ?').all(q[0], `%${q}%`, lim);
+  } else if (jlpt >= 1 && jlpt <= 5) {
+    rows = kdbw.prepare('SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes FROM kanji WHERE jlpt = ? LIMIT ?').all(jlpt, lim);
+  } else {
+    rows = kdbw.prepare('SELECT ch, onyomi, kunyomi, meaning, jlpt, strokes FROM kanji LIMIT ?').all(lim);
+  }
+  res.json({ results: rows.map(r => ({ ...r, onyomi: JSON.parse(r.onyomi || '[]'), kunyomi: JSON.parse(r.kunyomi || '[]') })) });
+});
+
+app.post('/api/admin/kanji', admin, (req, res) => {
+  if (!kdbw) return res.status(503).json({ error: 'Kamus tidak tersedia' });
+  const { ch, onyomi, kunyomi, meaning, jlpt, strokes } = req.body || {};
+  if (!ch || !meaning) return res.status(400).json({ error: 'ch (kanji) dan meaning wajib' });
+  const exists = kdbw.prepare('SELECT ch FROM kanji WHERE ch = ?').get(ch);
+  if (exists) return res.status(400).json({ error: 'Kanji sudah ada' });
+  kdbw.prepare('INSERT INTO kanji (ch, onyomi, kunyomi, meaning, jlpt, strokes) VALUES (?, ?, ?, ?, ?, ?)')
+    .run(String(ch).slice(0, 5), JSON.stringify(onyomi || []), JSON.stringify(kunyomi || []), String(meaning).slice(0, 500), parseInt(jlpt) || null, parseInt(strokes) || null);
+  res.status(201).json({ ok: true });
+});
+
+app.put('/api/admin/kanji/:ch', admin, (req, res) => {
+  if (!kdbw) return res.status(503).json({ error: 'Kamus tidak tersedia' });
+  const cur = kdbw.prepare('SELECT * FROM kanji WHERE ch = ?').get(req.params.ch);
+  if (!cur) return res.status(404).json({ error: 'Kanji tidak ketemu' });
+  const { onyomi, kunyomi, meaning, jlpt, strokes } = req.body || {};
+  kdbw.prepare('UPDATE kanji SET onyomi = ?, kunyomi = ?, meaning = ?, jlpt = ?, strokes = ? WHERE ch = ?').run(
+    onyomi !== undefined ? JSON.stringify(onyomi) : cur.onyomi,
+    kunyomi !== undefined ? JSON.stringify(kunyomi) : cur.kunyomi,
+    meaning !== undefined ? String(meaning).slice(0, 500) : cur.meaning,
+    jlpt !== undefined ? parseInt(jlpt) || null : cur.jlpt,
+    strokes !== undefined ? parseInt(strokes) || null : cur.strokes,
+    req.params.ch
+  );
+  res.json({ ok: true });
+});
+
+app.delete('/api/admin/kanji/:ch', admin, (req, res) => {
+  if (!kdbw) return res.status(503).json({ error: 'Kamus tidak tersedia' });
+  const cur = kdbw.prepare('SELECT ch FROM kanji WHERE ch = ?').get(req.params.ch);
+  if (!cur) return res.status(404).json({ error: 'Kanji tidak ketemu' });
+  kdbw.prepare('DELETE FROM kanji WHERE ch = ?').run(req.params.ch);
+  res.json({ ok: true });
+});
+
+// ---- 4. Bank Soal (file-based) ----
+const BANK_DIR = path.join(__dirname, 'public', 'js');
+function loadAllPackages() {
+  const ctx = { BANK_PACKAGES: [] };
+  vmx.createContext(ctx);
+  const files = fss.readdirSync(BANK_DIR).filter(f => f.startsWith('data-banksoal') && f.endsWith('.js')).sort();
+  const pkgFiles = {}; // pkgId -> filename
+  for (const f of files) {
+    try {
+      let code = fss.readFileSync(path.join(BANK_DIR, f), 'utf8');
+      const before = ctx.BANK_PACKAGES.length;
+      // Tangkap push langsung juga
+      vmx.runInContext(code, ctx, { filename: f });
+      for (let i = before; i < ctx.BANK_PACKAGES.length; i++) {
+        const p = ctx.BANK_PACKAGES[i];
+        if (p && p.id && !pkgFiles[p.id]) pkgFiles[p.id] = f;
+      }
+      // Tangkap juga const BANK_PACKAGES_xxx yang belum di-push (jaga-jaga)
+      const m = code.match(/const (BANK_PACKAGES_\w+) =/);
+      if (m) {
+        try {
+          const arr = vmx.runInContext(m[1], ctx);
+          if (Array.isArray(arr)) for (const p of arr) if (p && p.id && !pkgFiles[p.id]) pkgFiles[p.id] = f;
+        } catch {}
+      }
+    } catch (e) { console.log('[admin] gagal load', f, e.message); }
+  }
+  return { packages: ctx.BANK_PACKAGES, pkgFiles };
+}
+
+app.get('/api/admin/banksoal', admin, (req, res) => {
+  const { packages, pkgFiles } = loadAllPackages();
+  res.json({ packages: packages.map(p => ({ id: p.id, title: p.title, level: p.level, cat: p.cat, year: p.year, session: p.session, soal: (p.questions || []).length, file: pkgFiles[p.id] || '?' })) });
+});
+
+app.get('/api/admin/banksoal/:id', admin, (req, res) => {
+  const { packages } = loadAllPackages();
+  const p = packages.find(x => x.id === req.params.id);
+  if (!p) return res.status(404).json({ error: 'Paket tidak ketemu' });
+  res.json({ package: p });
+});
+
+app.post('/api/admin/banksoal', admin, (req, res) => {
+  const { id, title, level, cat, year, session, sections, questions } = req.body || {};
+  if (!id || !title || !questions) return res.status(400).json({ error: 'id, title, questions wajib' });
+  if (!/^[a-z0-9-]+$/.test(id)) return res.status(400).json({ error: 'id hanya boleh huruf kecil, angka, strip' });
+  const { packages } = loadAllPackages();
+  if (packages.find(p => p.id === id)) return res.status(400).json({ error: 'id sudah dipakai' });
+  // Validasi questions
+  if (!Array.isArray(questions) || !questions.length) return res.status(400).json({ error: 'questions harus array tidak kosong' });
+  for (const qq of questions) {
+    if (!qq.q || !Array.isArray(qq.o) || qq.o.length < 2) return res.status(400).json({ error: 'Setiap soal butuh q dan minimal 2 opsi' });
+  }
+  const pkg = { id, cat: cat || 'jlpt', field: null, level: level || 'n5', year: year || null, session: session || null, title, source: 'admin panel', note: '', sections: sections || [], questions };
+  const customFile = path.join(BANK_DIR, 'data-banksoal-custom.js');
+  let arr = [];
+  if (fss.existsSync(customFile)) {
+    try {
+      const ctx = { BANK_PACKAGES: [] };
+      vmx.createContext(ctx);
+      vmx.runInContext(fss.readFileSync(customFile, 'utf8'), ctx);
+      const m = fss.readFileSync(customFile, 'utf8').match(/const (BANK_PACKAGES_\w+) =/);
+      if (m) { const a = vmx.runInContext(m[1], ctx); if (Array.isArray(a)) arr = a; }
+    } catch {}
+  }
+  arr.push(pkg);
+  const out = `// Bank soal custom — via admin panel.\nconst BANK_PACKAGES_CUSTOM = ${JSON.stringify(arr, null, 2)};\nBANK_PACKAGES.push(...BANK_PACKAGES_CUSTOM);\n`;
+  fss.writeFileSync(customFile, out);
+  try { vmx.runInContext(out, vmx.createContext({ BANK_PACKAGES: [] })); } catch (e) { return res.status(500).json({ error: 'Gagal validasi: ' + e.message }); }
+  res.status(201).json({ ok: true, id });
+});
+
+function rewritePackageFile(filename, pkgId, newPkg) {
+  // newPkg = object (update) atau null (hapus)
+  const fp = path.join(BANK_DIR, filename);
+  let code = fss.readFileSync(fp, 'utf8');
+  // Coba pola array: const XXX = [...]
+  const arrMatch = code.match(/const (BANK_PACKAGES_\w+|BANK_PACKAGES) = (\[[\s\S]*?\n\]);/);
+  if (arrMatch) {
+    const ctx = { BANK_PACKAGES: [] };
+    vmx.createContext(ctx);
+    // Evaluasi hanya bagian array
+    const arr = vmx.runInContext(arrMatch[2], ctx);
+    let found = false;
+    const updated = arr.map(p => {
+      if (p && p.id === pkgId) { found = true; return newPkg; }
+      return p;
+    }).filter(Boolean);
+    if (!found) return false;
+    const newCode = code.replace(arrMatch[0], `const ${arrMatch[1]} = ${JSON.stringify(updated, null, 2)};`);
+    fss.writeFileSync(fp, newCode);
+    return true;
+  }
+  // Pola push langsung: BANK_PACKAGES.push({...}); — cari objek dengan id tersebut
+  // Gunakan pendekatan: parse semua push, rebuild file
+  const pushRe = /BANK_PACKAGES\.push\(\s*(\{[\s\S]*?\n\})\s*\);/g;
+  const pushes = [];
+  let m, lastIdx = 0, header = '';
+  const parts = [];
+  while ((m = pushRe.exec(code)) !== null) {
+    if (!header) header = code.slice(0, m.index);
+    try {
+      const obj = vmx.runInContext('(' + m[1] + ')', vmx.createContext({}));
+      pushes.push({ obj, raw: m[0] });
+    } catch { pushes.push({ obj: null, raw: m[0] }); }
+  }
+  if (!pushes.length) return false;
+  let found = false;
+  const newPushes = [];
+  for (const p of pushes) {
+    if (p.obj && p.obj.id === pkgId) {
+      found = true;
+      if (newPkg) newPushes.push(`BANK_PACKAGES.push(\n${JSON.stringify(newPkg, null, 2)}\n);`);
+    } else {
+      newPushes.push(p.raw);
+    }
+  }
+  if (!found) return false;
+  fss.writeFileSync(fp, header + newPushes.join('\n') + '\n');
+  return true;
+}
+
+app.put('/api/admin/banksoal/:id', admin, (req, res) => {
+  const { packages, pkgFiles } = loadAllPackages();
+  const cur = packages.find(p => p.id === req.params.id);
+  if (!cur) return res.status(404).json({ error: 'Paket tidak ketemu' });
+  const file = pkgFiles[req.params.id];
+  if (!file) return res.status(500).json({ error: 'File sumber tidak ketemu' });
+  const b = req.body || {};
+  const updated = { ...cur, ...b, id: cur.id };
+  if (b.questions) {
+    if (!Array.isArray(b.questions) || !b.questions.length) return res.status(400).json({ error: 'questions harus array tidak kosong' });
+  }
+  if (!rewritePackageFile(file, req.params.id, updated)) return res.status(500).json({ error: 'Gagal update file' });
+  try { loadAllPackages(); } catch (e) { return res.status(500).json({ error: 'File rusak setelah update: ' + e.message }); }
+  res.json({ ok: true });
+});
+
+app.delete('/api/admin/banksoal/:id', admin, (req, res) => {
+  const { packages, pkgFiles } = loadAllPackages();
+  const cur = packages.find(p => p.id === req.params.id);
+  if (!cur) return res.status(404).json({ error: 'Paket tidak ketemu' });
+  const file = pkgFiles[req.params.id];
+  if (!file) return res.status(500).json({ error: 'File sumber tidak ketemu' });
+  if (!rewritePackageFile(file, req.params.id, null)) return res.status(500).json({ error: 'Gagal hapus dari file' });
+  res.json({ ok: true });
+});
+
+// ---- 5. Chapters ----
+function loadChapters() {
+  const fp = path.join(BANK_DIR, 'data-chapters.js');
+  const code = fss.readFileSync(fp, 'utf8');
+  const ctx = {};
+  vmx.createContext(ctx);
+  vmx.runInContext(code, ctx);
+  return { chapters: vmx.runInContext('CHAPTERS', ctx), file: fp };
+}
+
+app.get('/api/admin/chapters', admin, (req, res) => {
+  const { chapters } = loadChapters();
+  const list = [];
+  for (const lv of Object.keys(chapters)) {
+    for (const ch of chapters[lv]) list.push({ level: lv, bab: ch.bab, id: ch.id, title: ch.title });
+  }
+  res.json({ chapters: list });
+});
+
+app.get('/api/admin/chapters/:level/:bab', admin, (req, res) => {
+  const { chapters } = loadChapters();
+  const lv = req.params.level.toLowerCase();
+  const arr = chapters[lv];
+  if (!arr) return res.status(404).json({ error: 'Level tidak ketemu' });
+  const ch = arr.find(c => String(c.bab) === String(req.params.bab));
+  if (!ch) return res.status(404).json({ error: 'Bab tidak ketemu' });
+  res.json({ chapter: ch });
+});
+
+app.put('/api/admin/chapters/:level/:bab', admin, (req, res) => {
+  const { chapters, file } = loadChapters();
+  const lv = req.params.level.toLowerCase();
+  const arr = chapters[lv];
+  if (!arr) return res.status(404).json({ error: 'Level tidak ketemu' });
+  const idx = arr.findIndex(c => String(c.bab) === String(req.params.bab));
+  if (idx < 0) return res.status(404).json({ error: 'Bab tidak ketemu' });
+  const b = req.body || {};
+  // Hanya boleh update field yang aman
+  const allowed = ['title', 'desc', 'icon', 'sections', 'quiz'];
+  for (const k of allowed) if (b[k] !== undefined) arr[idx][k] = b[k];
+  const code = fss.readFileSync(file, 'utf8');
+  const newCode = code.replace(/const CHAPTERS = \{[\s\S]*?\n\};/, `const CHAPTERS = ${JSON.stringify(chapters, null, 2)};`);
+  if (newCode === code) return res.status(500).json({ error: 'Gagal menemukan blok CHAPTERS' });
+  fss.writeFileSync(file, newCode);
+  try { loadChapters(); } catch (e) { return res.status(500).json({ error: 'File rusak: ' + e.message }); }
+  res.json({ ok: true });
 });
 
 app.get(/.*/, (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
