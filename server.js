@@ -1079,4 +1079,108 @@ app.put('/api/admin/chapters/:id', admin, (req, res) => {
 });
 
 app.get(/.*/, (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
-app.listen(PORT, () => console.log(`[nihongo] jalan di http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`[nihongo] server http://localhost:${PORT}`));
+
+// ---- Admin: Mock Test Management ----
+const MOCK_DATA_FILE = path.join(__dirname, 'public', 'js', 'data-mocktest-questions.js');
+
+function readMockTestData() {
+  try {
+    const content = require('fs').readFileSync(MOCK_DATA_FILE, 'utf8');
+    const match = content.match(/const MOCKTEST_QUESTIONS = ({[\s\S]*?});/);
+    if (!match) return {};
+    return eval('(' + match[1] + ')');
+  } catch (e) {
+    console.error('[mocktest] read error:', e.message);
+    return {};
+  }
+}
+
+function writeMockTestData(data) {
+  const content = `// ===== Interactive Mock Test Questions =====
+// Format soal untuk simulasi ujian interaktif
+// Managed via Admin Panel
+
+const MOCKTEST_QUESTIONS = ${JSON.stringify(data, null, 2)};
+`;
+  require('fs').writeFileSync(MOCK_DATA_FILE, content, 'utf8');
+}
+
+app.get('/api/admin/mocktest/:level/:section', admin, (req, res) => {
+  try {
+    const { level, section } = req.params;
+    const data = readMockTestData();
+    const questions = data[level]?.[section]?.questions || [];
+    res.json({ questions });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.post('/api/admin/mocktest', admin, (req, res) => {
+  try {
+    const { level, section, question } = req.body;
+    if (!level || !section || !question) return res.status(400).json({ error: 'Data tidak lengkap' });
+    
+    const data = readMockTestData();
+    if (!data[level]) data[level] = {};
+    if (!data[level][section]) {
+      data[level][section] = {
+        title: { vocab: '言語知識（文字・語彙）', grammar: '言語知識（文法）', reading: '読解', listening: '聴解' }[section] || section,
+        duration: { vocab: 20, grammar: 25, reading: 30, listening: 30 }[section] || 30,
+        questions: []
+      };
+    }
+    
+    data[level][section].questions.push(question);
+    writeMockTestData(data);
+    
+    res.json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.put('/api/admin/mocktest/:level/:section/:idx', admin, (req, res) => {
+  try {
+    const { level, section, idx } = req.params;
+    const { question } = req.body;
+    if (!question) return res.status(400).json({ error: 'Question data required' });
+    
+    const data = readMockTestData();
+    if (!data[level]?.[section]?.questions) return res.status(404).json({ error: 'Section not found' });
+    
+    const qIdx = parseInt(idx);
+    if (qIdx < 0 || qIdx >= data[level][section].questions.length) {
+      return res.status(404).json({ error: 'Question index out of range' });
+    }
+    
+    data[level][section].questions[qIdx] = question;
+    writeMockTestData(data);
+    
+    res.json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.delete('/api/admin/mocktest/:level/:section/:idx', admin, (req, res) => {
+  try {
+    const { level, section, idx } = req.params;
+    
+    const data = readMockTestData();
+    if (!data[level]?.[section]?.questions) return res.status(404).json({ error: 'Section not found' });
+    
+    const qIdx = parseInt(idx);
+    if (qIdx < 0 || qIdx >= data[level][section].questions.length) {
+      return res.status(404).json({ error: 'Question index out of range' });
+    }
+    
+    data[level][section].questions.splice(qIdx, 1);
+    writeMockTestData(data);
+    
+    res.json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});

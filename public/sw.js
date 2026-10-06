@@ -23,7 +23,7 @@ const SHELL = [
   '/js/data-ssw-kaigo.js?v=1',
   '/js/data-mocktest.js?v=1',
   '/js/data-mocktest-questions.js?v=1',
-  '/js/app.js?v=100'
+  '/js/app.js?v=101'
 ];
 
 self.addEventListener('install', (e) => {

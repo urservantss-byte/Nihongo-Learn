@@ -200,6 +200,8 @@ const app = createApp({
     admKanji: [], admKanjiQ: '', admKanjiJlpt: 0, admKanjiLoading: false, admKanjiForm: null, admKanjiEdit: null,
     admPkgs: [], admPkgsLoading: false, admPkgForm: null, admPkgEdit: null, admPkgQs: null, admPkgQsLoading: false, admPkgQsId: null, admQForm: null, admQEdit: null,
     admChLevel: 'n5', admChapters: [], admChaptersLoading: false, admChEdit: null, admChForm: null,
+    // Mock Test Admin
+    admMockLevel: 'n5', admMockSection: 'vocab', admMockQs: [], admMockQsLoading: false, admMockQForm: null, admMockQEdit: null,
   }),
   computed: {
     pageTitle() {
@@ -1147,6 +1149,91 @@ const app = createApp({
         toast('Bab tersimpan ✅'); this.admChEdit = null; this.admLoadChapters();
       } catch (e) { toast(e.message); }
     },
+    
+    // ---- Admin Mock Test ----
+    async admLoadMockTest() {
+      this.admMockQsLoading = true;
+      try {
+        const res = await api(`/api/admin/mocktest/${this.admMockLevel}/${this.admMockSection}`);
+        this.admMockQs = res.questions || [];
+      } catch (e) {
+        toast('Gagal load: ' + e.message);
+        this.admMockQs = [];
+      } finally {
+        this.admMockQsLoading = false;
+      }
+    },
+    admMockQNew() {
+      this.admMockQEdit = null;
+      this.admMockQForm = {
+        id: this.admMockQs.length + 1,
+        type: 'kanji-reading',
+        instruction: '',
+        question: '',
+        underline: '',
+        passage: '',
+        audio: '',
+        options: ['', '', '', ''],
+        answer: 0
+      };
+    },
+    admMockQOpen(idx) {
+      this.admMockQEdit = idx;
+      const q = this.admMockQs[idx];
+      this.admMockQForm = {
+        id: q.id,
+        type: q.type || 'kanji-reading',
+        instruction: q.instruction || '',
+        question: q.question || '',
+        underline: q.underline || '',
+        passage: q.passage || '',
+        audio: q.audio || '',
+        options: [...(q.options || ['','','',''])],
+        answer: q.answer || 0
+      };
+    },
+    async admMockQSave() {
+      if (!this.admMockQForm) return;
+      try {
+        const payload = {
+          level: this.admMockLevel,
+          section: this.admMockSection,
+          question: this.admMockQForm
+        };
+        
+        if (this.admMockQEdit !== null) {
+          await api(`/api/admin/mocktest/${this.admMockLevel}/${this.admMockSection}/${this.admMockQEdit}`, {
+            method: 'PUT',
+            body: JSON.stringify(payload)
+          });
+          toast('Soal diupdate ✅');
+        } else {
+          await api('/api/admin/mocktest', {
+            method: 'POST',
+            body: JSON.stringify(payload)
+          });
+          toast('Soal ditambahkan ✅');
+        }
+        
+        this.admMockQForm = null;
+        this.admMockQEdit = null;
+        this.admLoadMockTest();
+      } catch (e) {
+        toast('Gagal simpan: ' + e.message);
+      }
+    },
+    async admMockQDel(idx) {
+      if (!confirm('Hapus soal ini?')) return;
+      try {
+        await api(`/api/admin/mocktest/${this.admMockLevel}/${this.admMockSection}/${idx}`, {
+          method: 'DELETE'
+        });
+        toast('Soal dihapus ✅');
+        this.admLoadMockTest();
+      } catch (e) {
+        toast('Gagal hapus: ' + e.message);
+      }
+    },
   },
   mounted() {
     // Tombol back HP/browser: kembali ke halaman sebelumnya dalam app
@@ -1988,6 +2075,7 @@ const app = createApp({
           <button class="pill" :class="{on:adminTab==='kanji'}" @click="adminTab='kanji'">✏️ Kanji</button>
           <button class="pill" :class="{on:adminTab==='banksoal'}" @click="adminTab='banksoal';admLoadPkgs()">📚 Bank Soal</button>
           <button class="pill" :class="{on:adminTab==='chapters'}" @click="adminTab='chapters';admLoadChapters()">📖 Chapters</button>
+          <button class="pill" :class="{on:adminTab==='mocktest'}" @click="adminTab='mocktest';admLoadMockTest()">🎯 Mock Test</button>
         </div>
 
         <!-- DASHBOARD -->
@@ -2130,6 +2218,93 @@ const app = createApp({
             <label class="lbl">Deskripsi</label><input v-model="admChForm.desc" placeholder="Deskripsi singkat">
             <label class="lbl">Penjelasan (boleh panjang)</label><textarea v-model="admChForm.penjelasan" rows="10" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Isi penjelasan bab..."></textarea>
             <div class="btn-row"><button class="btn sm" @click="admChSave()">💾 Simpan</button><button class="btn ghost sm" @click="admChEdit=null">Batal</button></div>
+          </div>
+        </div>
+
+        <!-- MOCK TEST -->
+        <div v-if="adminTab==='mocktest'">
+          <h3 class="ttl-sm">Manage Mock Test Questions</h3>
+          <div class="btn-row">
+            <div style="flex:1">
+              <label class="lbl">Level</label>
+              <select v-model="admMockLevel" @change="admLoadMockTest()">
+                <option v-for="l in ['n5','n4','n3','n2','n1']" :value="l">{{ l.toUpperCase() }}</option>
+              </select>
+            </div>
+            <div style="flex:1">
+              <label class="lbl">Section</label>
+              <select v-model="admMockSection" @change="admLoadMockTest()">
+                <option value="vocab">Vocab (文字・語彙)</option>
+                <option value="grammar">Grammar (文法)</option>
+                <option value="reading">Reading (読解)</option>
+                <option value="listening">Listening (聴解)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="btn-row">
+            <button class="btn sm" @click="admMockQNew()">＋ Tambah Soal</button>
+            <span class="muted small" style="margin-left:auto">Total: {{ admMockQs.length }} soal</span>
+          </div>
+          
+          <div v-if="admMockQForm" class="card pop">
+            <h3 class="ttl-sm">{{ admMockQEdit !== null ? 'Edit' : 'Tambah' }} Soal Mock Test</h3>
+            
+            <label class="lbl">Type</label>
+            <select v-model="admMockQForm.type">
+              <option value="kanji-reading">Kanji Reading</option>
+              <option value="kanji-writing">Kanji Writing</option>
+              <option value="context">Context Fill</option>
+              <option value="grammar-fill">Grammar Fill</option>
+              <option value="sentence-order">Sentence Order</option>
+              <option value="short-passage">Short Passage</option>
+              <option value="task-based">Task Based (Listening)</option>
+            </select>
+            
+            <label class="lbl">Instruction</label>
+            <textarea v-model="admMockQForm.instruction" rows="2" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="＿の　ことばの　読み方として　最もよいものを..."></textarea>
+            
+            <label class="lbl">Question</label>
+            <textarea v-model="admMockQForm.question" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Pertanyaan soal..."></textarea>
+            
+            <label class="lbl">Underline (opsional, untuk tipe kanji)</label>
+            <input v-model="admMockQForm.underline" placeholder="Kata yang diberi garis bawah">
+            
+            <label class="lbl">Passage (opsional, untuk reading)</label>
+            <textarea v-model="admMockQForm.passage" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Teks bacaan..."></textarea>
+            
+            <label class="lbl">Audio Path (opsional, untuk listening)</label>
+            <input v-model="admMockQForm.audio" placeholder="/audio/n5-mock-q1.mp3">
+            
+            <label class="lbl">Options (4 pilihan)</label>
+            <div v-for="(op, oi) in admMockQForm.options" :key="oi" style="display:flex;gap:8px;margin-bottom:6px;align-items:center">
+              <span class="muted small" style="min-width:20px">{{ oi + 1 }}.</span>
+              <input v-model="admMockQForm.options[oi]" :placeholder="'Option ' + (oi + 1)" style="flex:1">
+            </div>
+            
+            <label class="lbl">Correct Answer (0-3)</label>
+            <input v-model.number="admMockQForm.answer" type="number" min="0" max="3" placeholder="0">
+            
+            <div class="btn-row">
+              <button class="btn sm" @click="admMockQSave()">💾 Simpan</button>
+              <button class="btn ghost sm" @click="admMockQForm=null">Batal</button>
+            </div>
+          </div>
+          
+          <div v-if="admMockQsLoading" class="muted">Memuat...</div>
+          
+          <div v-for="(q, qi) in admMockQs" :key="qi" class="lvl" style="margin-top:6px">
+            <div class="lvl-body">
+              <b>No. {{ qi + 1 }} [{{ q.type }}]</b>
+              <div class="muted small">{{ (q.question || '').slice(0, 100) }}{{ (q.question || '').length > 100 ? '...' : '' }}</div>
+              <div class="muted small">Answer: {{ q.options && q.options[q.answer] ? q.options[q.answer] : 'N/A' }}</div>
+            </div>
+            <button class="btn ghost sm" @click="admMockQEdit = qi; admMockQOpen(qi)">Edit</button>
+            <button class="btn ghost sm" @click="admMockQDel(qi)">🗑️</button>
+          </div>
+          
+          <div v-if="!admMockQs.length && !admMockQsLoading" class="muted center" style="padding:20px">
+            Belum ada soal untuk {{ admMockLevel.toUpperCase() }} - {{ admMockSection }}
           </div>
         </div>
       </div>
