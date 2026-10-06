@@ -1963,6 +1963,11 @@ app.component('StrokeOrder', {
   beforeUnmount() { clearTimeout(this.timer); },
   methods: {
     reset() { clearTimeout(this.timer); this.strokes = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
+    strokeStart(d) {
+      const m = String(d || '').match(/^[Mm]\s*(-?[\d.]+)[,\s]+(-?[\d.]+)/);
+      if (m) return { x: parseFloat(m[1]), y: parseFloat(m[2]) };
+      return { x: 54, y: 54 };
+    },
     async load() {
       try {
       for (const u of this.urls()) {
@@ -2044,6 +2049,11 @@ app.component('WordStrokeOrder', {
   beforeUnmount() { clearTimeout(this.timer); },
   methods: {
     reset() { clearTimeout(this.timer); this.sets = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
+    strokeStart(d) {
+      const m = String(d || '').match(/^[Mm]\s*(-?[\d.]+)[,\s]+(-?[\d.]+)/);
+      if (m) return { x: parseFloat(m[1]), y: parseFloat(m[2]) };
+      return { x: 54, y: 54 };
+    },
     svgUrls(ch) { const hex = String(ch).codePointAt(0).toString(16).padStart(5, '0'); return ['kanjivg/' + hex + '.svg', 'https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/' + hex + '.svg']; },
     async load() {
       try {
