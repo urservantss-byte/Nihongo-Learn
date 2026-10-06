@@ -167,7 +167,7 @@ const LIB_TYPES = [
 
 const app = createApp({
   data: () => ({
-    mode: 'login', fName: '', fEmail: '', fPass: '', fLevel: 'hiragana', fIntensity: 'sedang',
+    mode: 'login', fName: '', fEmail: '', fPass: '', fLevel: 'hiragana',
     tab: ['home','library','quiz','kamus','tanya','saya'].includes(localStorage.getItem('nl_tab')) ? localStorage.getItem('nl_tab') : 'home',
     learnLevel: 'hiragana', openLesson: null,
     libQ: '', libType: 'all',
@@ -212,7 +212,7 @@ const app = createApp({
     dailyLessons() {
       // antrean harian: mulai dari level user saat daftar, lewati yang sudah tuntas (tidak mengulang),
       // lanjut ke materi baru; berhenti di level yang masih terkunci
-      const n = { sedikit: 3, sedang: 6, banyak: 10 }[store.user?.intensity || 'sedang'];
+      const n = 6;
       const out = [];
       const startIdx = Math.max(0, LEVEL_ORDER.indexOf(store.user?.level || 'hiragana'));
       for (let i = startIdx; i < LEVEL_ORDER.length; i++) {
@@ -521,7 +521,7 @@ const app = createApp({
     async doAuth() {
       try {
         if (this.mode === 'register') {
-          const d = await api('/api/auth/register', { method: 'POST', body: JSON.stringify({ name: this.fName, email: this.fEmail, password: this.fPass, level: this.fLevel, intensity: this.fIntensity }) });
+          const d = await api('/api/auth/register', { method: 'POST', body: JSON.stringify({ name: this.fName, email: this.fEmail, password: this.fPass, level: this.fLevel }) });
           saveToken(d.token); store.user = d.user;
         } else {
           const d = await api('/api/auth/login', { method: 'POST', body: JSON.stringify({ email: this.fEmail, password: this.fPass }) });
@@ -572,6 +572,7 @@ const app = createApp({
         toast('Materi tuntas! +20 XP 🎉');
       } catch (e) { toast(e.message); }
     },
+    kanaLessons(type) { return ALL_LESSONS.filter(l => l.kanaType === type); },
     // ---- quiz ----
     async startQuiz() {
       this.clearQuizProgress();
@@ -883,8 +884,6 @@ const app = createApp({
       <label class="lbl">Nama</label><input v-model="fName" placeholder="Namamu">
       <label class="lbl">Level saat ini</label>
       <select v-model="fLevel"><option v-for="l in ['hiragana','katakana','n5','n4','n3','n2','n1']" :value="l">{{ l.toUpperCase() }}</option></select>
-      <label class="lbl">Porsi harian</label>
-      <select v-model="fIntensity"><option value="sedikit">Sedikit (3 materi)</option><option value="sedang">Sedang (6 materi)</option><option value="banyak">Banyak (10 materi)</option></select>
     </div>
     <label class="lbl">Email</label><input v-model="fEmail" type="email" placeholder="email@contoh.com">
     <label class="lbl">Password</label><input v-model="fPass" type="password" placeholder="••••••" @keyup.enter="doAuth">
@@ -926,6 +925,29 @@ const app = createApp({
         </div>
         <span v-html="ic(chapterState(ch)==='locked' ? 'x' : 'play', 18)"></span>
       </div>
+      </div>
+
+      <div v-if="!openChapter && !chQuiz && !openLesson">
+      <h2 class="ttl"><span v-html="ic('book')"></span> Hiragana & Katakana</h2>
+      <p class="muted small">Huruf dasar bahasa Jepang — klik untuk belajar bentuk & dengar cara bacanya.</p>
+      <h3 class="ttl-sm" style="color:var(--pri-d)">あ Hiragana</h3>
+      <div v-for="les in kanaLessons('hiragana')" :key="les.key" class="lvl" @click="openLesson=les">
+        <div class="badge sm" :class="{ done: doneSet.has(les.key) }">{{ doneSet.has(les.key) ? '✓' : 'あ' }}</div>
+        <div class="lvl-body"><b>{{ les.title }}</b><div v-if="doneSet.has(les.key)" class="muted small">✅ Tuntas</div></div>
+        <span v-html="ic('play', 18)"></span>
+      </div>
+      <h3 class="ttl-sm" style="color:var(--pri-d)">ア Katakana</h3>
+      <div v-for="les in kanaLessons('katakana')" :key="les.key" class="lvl" @click="openLesson=les">
+        <div class="badge sm" :class="{ done: doneSet.has(les.key) }">{{ doneSet.has(les.key) ? '✓' : 'ア' }}</div>
+        <div class="lvl-body"><b>{{ les.title }}</b><div v-if="doneSet.has(les.key)" class="muted small">✅ Tuntas</div></div>
+        <span v-html="ic('play', 18)"></span>
+      </div>
+      </div>
+
+      <div v-if="openLesson" class="card pop">
+        <div class="back-row"><button class="btn ghost sm" @click="openLesson=null"><span v-html="ic('back',15)"></span> Kembali</button></div>
+        <h2>{{ openLesson.title }}</h2>
+        <lesson-view :les="openLesson" :done="doneSet.has(openLesson.key)" @done="completeLesson(openLesson.key)" @savecard="saveCard"></lesson-view>
       </div>
 
       <div v-if="openChapter && !chQuiz" class="card pop ch-detail">
@@ -1456,10 +1478,6 @@ const app = createApp({
 
       <h2 class="ttl"><span v-html="ic('sliders')"></span> Pengaturan</h2>
       <div class="card">
-        <label class="lbl">Porsi harian</label>
-        <select :value="user.intensity" @change="saveSetting('intensity', $event.target.value)">
-          <option value="sedikit">Sedikit (3 materi)</option><option value="sedang">Sedang (6 materi)</option><option value="banyak">Banyak (10 materi)</option>
-        </select>
         <label class="lbl">Level</label>
         <select :value="user.level" @change="saveSetting('level', $event.target.value)">
           <option v-for="l in LEVEL_ORDER" :value="l">{{ lvName(l) }}</option>
