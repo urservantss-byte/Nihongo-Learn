@@ -1830,7 +1830,7 @@ const app = createApp({
           </div>
           <div v-if="admPkgsLoading" class="muted">Memuat...</div>
           <div v-for="p in admPkgs" :key="p.id" class="lvl">
-            <div class="lvl-body"><b>{{ p.title }}</b><div class="muted small">{{ p.id }} · {{ p.questions || 0 }} soal</div></div>
+            <div class="lvl-body"><b>{{ p.title }}</b><div class="muted small">{{ p.id }} · {{ p.soal || 0 }} soal</div></div>
             <button class="btn ghost sm" @click="admPkgOpen(p);admPkgViewQs(p)">👁️ Soal</button>
             <button class="btn ghost sm" @click="admPkgOpen(p)">Edit</button>
             <button class="btn ghost sm" @click="admPkgDel(p)">🗑️</button>
@@ -1853,7 +1853,7 @@ const app = createApp({
             </div>
             <div v-if="admPkgQsLoading" class="muted">Memuat...</div>
             <div v-for="(q, qi) in admPkgQs" :key="qi" class="lvl" style="margin-top:6px">
-              <div class="lvl-body"><b>No.{{ q.no }} [{{ q.sec }}]</b><div class="muted small">{{ (q.q || '').slice(0, 100) }}{{ (q.q || '').length > 100 ? '...' : '' }}</div><div class="muted small">{{ q.a !== null && q.a !== undefined ? 'Kunci: opsi ' + (q.a + 1) : 'Belum ada kunci' }}</div></div>
+              <div class="lvl-body"><b>No. {{ qi + 1 }}{{ q.sec ? ' [' + q.sec + ']' : '' }}</b><div class="muted small">{{ (q.q || '').slice(0, 100) }}{{ (q.q || '').length > 100 ? '...' : '' }}</div><div class="muted small">{{ q.a !== null && q.a !== undefined ? 'Kunci: opsi ' + (q.a + 1) : 'Belum ada kunci' }}</div></div>
               <button class="btn ghost sm" @click="admQOpen(qi)">Edit</button>
               <button class="btn ghost sm" @click="admQDel(qi)">Hapus</button>
             </div>
