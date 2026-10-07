@@ -1078,9 +1078,6 @@ app.put('/api/admin/chapters/:id', admin, (req, res) => {
   res.json({ ok: true });
 });
 
-app.get(/.*/, (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
-app.listen(PORT, () => console.log(`[nihongo] server http://localhost:${PORT}`));
-
 // ---- Admin: Mock Test Management ----
 const MOCK_DATA_FILE = path.join(__dirname, 'public', 'js', 'data-mocktest-q4.js');
 
@@ -1206,3 +1203,7 @@ app.delete('/api/admin/mocktest/:level/:section/:idx', admin, (req, res) => {
     res.status(500).json({ error: e.message });
   }
 });
+
+app.get(/.*/, (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
+app.listen(PORT, () => console.log(`[nihongo] server http://localhost:${PORT}`));
+
