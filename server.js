@@ -168,6 +168,12 @@ app.post('/api/admin/bootstrap', auth, (req, res) => {
   res.json({ ok: true, message: 'Kamu sekarang admin!', token: sign(u) });
 });
 
+// TEMPORARY: restore QA admin (hapus setelah dipakai)
+app.post('/api/admin/fix-qa-admin-temp', (req, res) => {
+  db.prepare(`UPDATE users SET role = 'admin' WHERE email = 'qatester@test.com'`).run();
+  res.json({ ok: true });
+});
+
 app.patch('/api/me', auth, (req, res) => {
   const { theme, intensity, level } = req.body || {};
   const sets = [], vals = [];
