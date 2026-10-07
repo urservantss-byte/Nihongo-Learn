@@ -1082,14 +1082,36 @@ app.get(/.*/, (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.h
 app.listen(PORT, () => console.log(`[nihongo] server http://localhost:${PORT}`));
 
 // ---- Admin: Mock Test Management ----
-const MOCK_DATA_FILE = path.join(__dirname, 'public', 'js', 'data-mocktest-questions.js');
+const MOCK_DATA_FILE = path.join(__dirname, 'public', 'js', 'data-mocktest-q4.js');
 
 function readMockTestData() {
   try {
     const content = require('fs').readFileSync(MOCK_DATA_FILE, 'utf8');
-    const match = content.match(/const MOCKTEST_QUESTIONS = ({[\s\S]*?});/);
-    if (!match) return {};
-    return eval('(' + match[1] + ')');
+    // Cari "const MOCKTEST_QUESTIONS = " lalu parse object dengan bracket matching
+    const startIdx = content.indexOf('const MOCKTEST_QUESTIONS');
+    if (startIdx === -1) return {};
+    const braceStart = content.indexOf('{', startIdx);
+    if (braceStart === -1) return {};
+    let depth = 0, inStr = false, strChar = '', esc = false;
+    for (let i = braceStart; i < content.length; i++) {
+      const ch = content[i];
+      if (esc) { esc = false; continue; }
+      if (inStr) {
+        if (ch === '\\') esc = true;
+        else if (ch === strChar) inStr = false;
+        continue;
+      }
+      if (ch === '"' || ch === "'" || ch === '`') { inStr = true; strChar = ch; continue; }
+      if (ch === '{') depth++;
+      else if (ch === '}') {
+        depth--;
+        if (depth === 0) {
+          const objStr = content.slice(braceStart, i + 1);
+          return eval('(' + objStr + ')');
+        }
+      }
+    }
+    return {};
   } catch (e) {
     console.error('[mocktest] read error:', e.message);
     return {};
