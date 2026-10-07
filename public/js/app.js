@@ -168,12 +168,16 @@ const LIB_TYPES = [
 const app = createApp({
   data: () => ({
     mode: 'login', fName: '', fEmail: '', fPass: '', fLevel: 'hiragana',
-    tab: ['home','library','quiz','kamus','tanya','saya'].includes(localStorage.getItem('nl_tab')) ? localStorage.getItem('nl_tab') : 'home',
+    tab: ['home','library','quiz','kamus','tanya','saya','admin'].includes(localStorage.getItem('nl_tab')) ? localStorage.getItem('nl_tab') : 'home',
     learnLevel: 'hiragana', openLesson: null,
     libQ: '', libType: 'all',
     // modul (pusat materi)
     modulQ: '', modulCat: null, modulLevel: 'n5', modulSub: null, modulCh: null, modulPat: null, kvgOpen: {},
+    sswKaigoTab: 'materi', sswKaigoCh: null,
+    mockLevel: null,
     simPkg: null, sim: null,
+    // mock test interaktif
+    mockSection: null, mockQs: [], mockIdx: 0, mockAns: [], mockTimer: null, mockTime: 0, mockDone: false, mockPaused: false,
     // quiz
     quizMode: 'flashcard', qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0, secScores: [],
     genQs: [], shuffledQs: [], quizResume: null,
@@ -190,11 +194,234 @@ const app = createApp({
     // saya
     myWeekly: 0,
     sbHidden: localStorage.getItem('nl_sb') === '1',
+    // admin panel
+    adminTab: 'dashboard',
+    admStats: null, admStatsLoading: false,
+    admUsers: [], admUsersLoading: false, admUserQ: '',
+    admKotoba: [], admKotobaQ: '', admKotobaLoading: false, admKotobaForm: null, admKotobaEdit: null, admKotobaT: null,
+    admKotobaSearch: '', admKotobaSort: 'kanji', admKotobaSortDir: 'asc', admKotobaPage: 1, admKotobaPerPage: 10, admKotobaSelected: [],
+    admKanji: [], admKanjiQ: '', admKanjiJlpt: 0, admKanjiLoading: false, admKanjiForm: null, admKanjiEdit: null,
+    admKanjiSearch: '', admKanjiSort: 'kanji', admKanjiSortDir: 'asc', admKanjiPage: 1, admKanjiPerPage: 10, admKanjiSelected: [],
+    admPkgs: [], admPkgsLoading: false, admPkgForm: null, admPkgEdit: null, admPkgQs: null, admPkgQsLoading: false, admPkgQsId: null, admQForm: null, admQEdit: null,
+    admPkgSearch: '', admPkgSort: 'title', admPkgSortDir: 'asc', admPkgPage: 1, admPkgPerPage: 10, admPkgSelected: [],
+    admQSearch: '', admQSort: 'no', admQSortDir: 'asc', admQPage: 1, admQPerPage: 10, admQSelected: [],
+    admChLevel: 'n5', admChapters: [], admChaptersLoading: false, admChEdit: null, admChForm: null,
+    admChSearch: '', admChSort: 'bab', admChSortDir: 'asc', admChPage: 1, admChPerPage: 10,
+    // Mock Test Admin (Advanced)
+    admMockLevel: 'n5', admMockSection: 'vocab', admMockQs: [], admMockQsLoading: false, admMockQForm: null, admMockQEdit: null,
+    admMockSearch: '', admMockSort: 'id', admMockSortDir: 'asc', admMockPage: 1, admMockPerPage: 10,
+    admMockSelected: [], admMockViewMode: 'table', admMockFilter: 'all', admMockStats: null,
   }),
   computed: {
     pageTitle() {
-      const t = { home: 'Beranda', library: 'Modul', quiz: 'Quiz', quizrun: 'Quiz', adaptiverun: 'Quiz Adaptif', kamus: 'Kamus', tanya: 'Tanya AI', saya: 'Saya', srsrun: 'Review' };
+      const t = { home: 'Beranda', library: 'Modul', quiz: 'Quiz', quizrun: 'Quiz', adaptiverun: 'Quiz Adaptif', mockrun: 'Mock Test', mockdone: 'Mock Test', kamus: 'Kamus', tanya: 'Tanya AI', saya: 'Saya', srsrun: 'Review', admin: 'Admin Panel' };
       return t[this.tab] || '';
+    },
+    // Advanced Admin - Filtered & Sorted MockTest Questions
+    admMockQsFiltered() {
+      let qs = this.admMockQs || [];
+      
+      // Search filter
+      if (this.admMockSearch.trim()) {
+        const search = this.admMockSearch.toLowerCase();
+        qs = qs.filter(q => 
+          (q.question || '').toLowerCase().includes(search) ||
+          (q.instruction || '').toLowerCase().includes(search) ||
+          (q.type || '').toLowerCase().includes(search) ||
+          (q.options || []).some(o => (o || '').toLowerCase().includes(search))
+        );
+      }
+      
+      // Type filter
+      if (this.admMockFilter !== 'all') {
+        qs = qs.filter(q => q.type === this.admMockFilter);
+      }
+      
+      // Sort
+      qs = [...qs].sort((a, b) => {
+        let valA = a[this.admMockSort];
+        let valB = b[this.admMockSort];
+        
+        if (this.admMockSort === 'id') {
+          valA = parseInt(valA) || 0;
+          valB = parseInt(valB) || 0;
+        }
+        
+        if (valA < valB) return this.admMockSortDir === 'asc' ? -1 : 1;
+        if (valA > valB) return this.admMockSortDir === 'asc' ? 1 : -1;
+        return 0;
+      });
+      
+      return qs;
+    },
+    admMockQsPaginated() {
+      const start = (this.admMockPage - 1) * this.admMockPerPage;
+      const end = start + this.admMockPerPage;
+      return this.admMockQsFiltered.slice(start, end);
+    },
+    admMockTotalPages() {
+      return Math.ceil(this.admMockQsFiltered.length / this.admMockPerPage);
+    },
+    admMockAllSelected() {
+      return this.admMockQsPaginated.length > 0 && 
+             this.admMockQsPaginated.every(q => this.admMockSelected.includes(q.id));
+    },
+    // ===== KOTOBA Advanced =====
+    admKotobaFiltered() {
+      let ws = this.admKotoba || [];
+      if (this.admKotobaSearch.trim()) {
+        const s = this.admKotobaSearch.toLowerCase();
+        ws = ws.filter(w =>
+          ((w.keb || []).join(' ').toLowerCase().includes(s)) ||
+          ((w.reb || []).join(' ').toLowerCase().includes(s)) ||
+          ((w.gloss || '').toLowerCase().includes(s))
+        );
+      }
+      ws = [...ws].sort((a, b) => {
+        let va, vb;
+        if (this.admKotobaSort === 'kanji') { va = (a.keb || [])[0] || ''; vb = (b.keb || [])[0] || ''; }
+        else { va = a.gloss || ''; vb = b.gloss || ''; }
+        if (va < vb) return this.admKotobaSortDir === 'asc' ? -1 : 1;
+        if (va > vb) return this.admKotobaSortDir === 'asc' ? 1 : -1;
+        return 0;
+      });
+      return ws;
+    },
+    admKotobaPaginated() {
+      const s = (this.admKotobaPage - 1) * this.admKotobaPerPage;
+      return this.admKotobaFiltered.slice(s, s + this.admKotobaPerPage);
+    },
+    admKotobaTotalPages() {
+      return Math.max(1, Math.ceil(this.admKotobaFiltered.length / this.admKotobaPerPage));
+    },
+    admKotobaAllSelected() {
+      return this.admKotobaPaginated.length > 0 &&
+        this.admKotobaPaginated.every(w => this.admKotobaSelected.includes(w.id));
+    },
+    // ===== KANJI Advanced =====
+    admKanjiFiltered() {
+      let ks = this.admKanji || [];
+      if (this.admKanjiSearch.trim()) {
+        const s = this.admKanjiSearch.toLowerCase();
+        ks = ks.filter(k =>
+          ((k.ch || '').toLowerCase().includes(s)) ||
+          ((k.meaning || '').toLowerCase().includes(s)) ||
+          ((k.onyomi || []).join(' ').toLowerCase().includes(s)) ||
+          ((k.kunyomi || []).join(' ').toLowerCase().includes(s))
+        );
+      }
+      ks = [...ks].sort((a, b) => {
+        let va, vb;
+        if (this.admKanjiSort === 'kanji') { va = a.ch || ''; vb = b.ch || ''; }
+        else if (this.admKanjiSort === 'strokes') { va = parseInt(a.strokes) || 0; vb = parseInt(b.strokes) || 0; }
+        else { va = parseInt(a.jlpt) || 9; vb = parseInt(b.jlpt) || 9; }
+        if (va < vb) return this.admKanjiSortDir === 'asc' ? -1 : 1;
+        if (va > vb) return this.admKanjiSortDir === 'asc' ? 1 : -1;
+        return 0;
+      });
+      return ks;
+    },
+    admKanjiPaginated() {
+      const s = (this.admKanjiPage - 1) * this.admKanjiPerPage;
+      return this.admKanjiFiltered.slice(s, s + this.admKanjiPerPage);
+    },
+    admKanjiTotalPages() {
+      return Math.max(1, Math.ceil(this.admKanjiFiltered.length / this.admKanjiPerPage));
+    },
+    admKanjiAllSelected() {
+      return this.admKanjiPaginated.length > 0 &&
+        this.admKanjiPaginated.every(k => this.admKanjiSelected.includes(k.ch));
+    },
+    // ===== BANK SOAL Packages Advanced =====
+    admPkgFiltered() {
+      let ps = this.admPkgs || [];
+      if (this.admPkgSearch.trim()) {
+        const s = this.admPkgSearch.toLowerCase();
+        ps = ps.filter(p =>
+          ((p.title || '').toLowerCase().includes(s)) ||
+          ((p.id || '').toLowerCase().includes(s)) ||
+          ((p.level || '').toLowerCase().includes(s))
+        );
+      }
+      ps = [...ps].sort((a, b) => {
+        let va = a[this.admPkgSort] || '';
+        let vb = b[this.admPkgSort] || '';
+        if (this.admPkgSort === 'soal') { va = parseInt(va) || 0; vb = parseInt(vb) || 0; }
+        if (va < vb) return this.admPkgSortDir === 'asc' ? -1 : 1;
+        if (va > vb) return this.admPkgSortDir === 'asc' ? 1 : -1;
+        return 0;
+      });
+      return ps;
+    },
+    admPkgPaginated() {
+      const s = (this.admPkgPage - 1) * this.admPkgPerPage;
+      return this.admPkgFiltered.slice(s, s + this.admPkgPerPage);
+    },
+    admPkgTotalPages() {
+      return Math.max(1, Math.ceil(this.admPkgFiltered.length / this.admPkgPerPage));
+    },
+    admPkgAllSelected() {
+      return this.admPkgPaginated.length > 0 &&
+        this.admPkgPaginated.every(p => this.admPkgSelected.includes(p.id));
+    },
+    // ===== BANK SOAL Questions Advanced =====
+    admQFiltered() {
+      let qs = this.admPkgQs || [];
+      if (this.admQSearch.trim()) {
+        const s = this.admQSearch.toLowerCase();
+        qs = qs.filter(q =>
+          ((q.question || q.q || '').toLowerCase().includes(s)) ||
+          ((q.instruction || '').toLowerCase().includes(s)) ||
+          ((q.type || q.sec || '').toLowerCase().includes(s)) ||
+          ((q.options || q.o || []).join(' ').toLowerCase().includes(s))
+        );
+      }
+      qs = [...qs].map((q, i) => ({ ...q, _idx: i }));
+      qs.sort((a, b) => {
+        let va = a._idx, vb = b._idx;
+        if (this.admQSort === 'sec') { va = a.sec || ''; vb = b.sec || ''; }
+        if (va < vb) return this.admQSortDir === 'asc' ? -1 : 1;
+        if (va > vb) return this.admQSortDir === 'asc' ? 1 : -1;
+        return 0;
+      });
+      return qs;
+    },
+    admQPaginated() {
+      const s = (this.admQPage - 1) * this.admQPerPage;
+      return this.admQFiltered.slice(s, s + this.admQPerPage);
+    },
+    admQTotalPages() {
+      return Math.max(1, Math.ceil(this.admQFiltered.length / this.admQPerPage));
+    },
+    admQAllSelected() {
+      return this.admQPaginated.length > 0 &&
+        this.admQPaginated.every(q => this.admQSelected.includes(q._idx));
+    },
+    // ===== CHAPTERS Advanced =====
+    admChFiltered() {
+      let cs = this.admChapters || [];
+      if (this.admChSearch.trim()) {
+        const s = this.admChSearch.toLowerCase();
+        cs = cs.filter(c =>
+          ((c.title || '').toLowerCase().includes(s)) ||
+          ((c.desc || '').toLowerCase().includes(s))
+        );
+      }
+      cs = [...cs].sort((a, b) => {
+        let va = parseInt(a.bab) || 0, vb = parseInt(b.bab) || 0;
+        if (this.admChSort === 'title') { va = a.title || ''; vb = b.title || ''; }
+        if (va < vb) return this.admChSortDir === 'asc' ? -1 : 1;
+        if (va > vb) return this.admChSortDir === 'asc' ? 1 : -1;
+        return 0;
+      });
+      return cs;
+    },
+    admChPaginated() {
+      const s = (this.admChPage - 1) * this.admChPerPage;
+      return this.admChFiltered.slice(s, s + this.admChPerPage);
+    },
+    admChTotalPages() {
+      return Math.max(1, Math.ceil(this.admChFiltered.length / this.admChPerPage));
     },
     user() { return store.user; },
     myChapters() {
@@ -203,6 +430,12 @@ const app = createApp({
       return CHAPTERS[lv] || CHAPTERS['n5'] || [];
     },
     mascot() { return mascotFor(store.user?.xp); },
+    greeting() {
+      const h = new Date().getHours();
+      if (h >= 5 && h < 10) return 'Ohayou';
+      if (h >= 10 && h < 18) return 'Konnichiwa';
+      return 'Konbanwa';
+    },
     doneSet() { return new Set(store.done); },
     levelProgress() {
       const o = {};
@@ -331,11 +564,20 @@ const app = createApp({
     },
   },
   watch: {
-    tab() { this.saveTab(); if (this.tab !== 'library') this.closeSim(); window.scrollTo({ top: 0, behavior: 'smooth' }); },
-    openChapter() { this.saveChapterState(); },
+    tab() { this.saveTab(); if (this.tab !== 'library') this.closeSim(); window.scrollTo({ top: 0, behavior: 'smooth' }); if (!this._popping) this.navPush(); if (this.tab === 'admin') this.admLoad(); },
+    openChapter() { this.saveChapterState(); if (this.openChapter && !this._popping) this.navPush(); },
+    openLesson() { if (this.openLesson && !this._popping) this.navPush(); },
+    kamusDetail() { if (this.kamusDetail && !this._popping) this.navPush(); },
     chQuiz: { deep: true, handler() { this.saveChapterState(); } },
   },
   methods: {
+    _navState() {
+      return { nl: 1, t: this.tab, c: !!(this.openChapter), q: !!(this.chQuiz), l: !!(this.openLesson), k: !!(this.kamusDetail) };
+    },
+    navPush() {
+      if (this._popping) return;
+      try { history.pushState(this._navState(), ''); } catch {}
+    },
     fmtQ(t) {
       if (!t) return '';
       var lines = String(t).split('\n');
@@ -399,6 +641,93 @@ const app = createApp({
     finishSim() { this.stopSimTimer(); this.sim.done = true; },
     closeSim() { this.stopSimTimer(); this.sim = null; this.simPkg = null; },
     clearQuizProgress() { localStorage.removeItem('nl_quiz'); this.quizResume = null; },
+    
+    // ---- Mock Test Interaktif ----
+    startMockTest(level, section) {
+      if (!MOCKTEST_QUESTIONS || !MOCKTEST_QUESTIONS[level] || !MOCKTEST_QUESTIONS[level][section]) {
+        toast('Soal belum tersedia'); return;
+      }
+      const data = MOCKTEST_QUESTIONS[level][section];
+      if (!data.questions || !data.questions.length) {
+        toast('Section ini belum ada soal'); return;
+      }
+      this.mockSection = { level, section, title: data.title, duration: data.duration };
+      this.mockQs = data.questions;
+      this.mockIdx = 0;
+      this.mockAns = new Array(this.mockQs.length).fill(null);
+      this.mockDone = false;
+      this.mockPaused = false;
+      this.mockTime = data.duration * 60; // convert to seconds
+      this.tab = 'mockrun';
+      this.startMockTimer();
+      this.navPush();
+    },
+    startMockTimer() {
+      this.stopMockTimer();
+      this.mockTimer = setInterval(() => {
+        if (this.mockPaused || this.mockDone) return;
+        this.mockTime--;
+        if (this.mockTime <= 0) this.finishMockTest();
+      }, 1000);
+    },
+    stopMockTimer() {
+      if (this.mockTimer) { clearInterval(this.mockTimer); this.mockTimer = null; }
+    },
+    mockAnswer(idx, optionIdx) {
+      if (this.mockDone) return;
+      this.mockAns[idx] = optionIdx;
+    },
+    mockJumpTo(idx) {
+      if (idx >= 0 && idx < this.mockQs.length) this.mockIdx = idx;
+    },
+    mockNext() {
+      if (this.mockIdx < this.mockQs.length - 1) this.mockIdx++;
+    },
+    mockPrev() {
+      if (this.mockIdx > 0) this.mockIdx--;
+    },
+    toggleMockPause() {
+      this.mockPaused = !this.mockPaused;
+    },
+    finishMockTest() {
+      this.stopMockTimer();
+      this.mockDone = true;
+      this.tab = 'mockdone';
+      this.navPush();
+      // Hitung skor
+      let correct = 0;
+      for (let i = 0; i < this.mockQs.length; i++) {
+        if (this.mockAns[i] === this.mockQs[i].answer) correct++;
+      }
+      // Simpan hasil ke backend
+      if (store.user) {
+        api('/api/mocktest/result', {
+          method: 'POST',
+          body: JSON.stringify({
+            level: this.mockSection.level,
+            section: this.mockSection.section,
+            score: correct,
+            total: this.mockQs.length
+          })
+        }).catch(e => console.error('Save mock result failed:', e));
+      }
+    },
+    closeMockTest() {
+      this.stopMockTimer();
+      this.mockSection = null;
+      this.mockQs = [];
+      this.mockAns = [];
+      this.mockIdx = 0;
+      this.mockDone = false;
+      this.mockPaused = false;
+      this.tab = 'quiz';
+      this.navPush();
+    },
+    mockTimeStr() {
+      const m = Math.floor(this.mockTime / 60);
+      const s = this.mockTime % 60;
+      return m + ':' + String(s).padStart(2, '0');
+    },
     _modPat(ch, it, k, lv) {
       return { level: lv || this.modulLevel, bab: ch.bab, chTitle: ch.title, pattern: it.pattern, arti: String(it.arti || '').replace(/<[^>]+>/g, ''), item: it, kaiwa: k ? k.lines : [] };
     },
@@ -551,6 +880,13 @@ const app = createApp({
       } catch (e) { toast(e.message); }
     },
     logout() { saveToken(''); store.user = null; this.tab = 'home'; this.openChapter = null; this.chQuiz = null; localStorage.removeItem('nl_chapter'); },
+    async becomeAdmin() {
+      try {
+        const d = await api('/api/admin/bootstrap', { method: 'POST' });
+        if (d.ok) { toast('Kamu sekarang admin! 🎉'); this.refresh(); }
+        else toast(d.error || 'Gagal');
+      } catch (e) { toast(e.message); }
+    },
     async refresh() {
       if (!store.token) { store.authChecked = true; return; }
       try {
@@ -607,7 +943,7 @@ const app = createApp({
           qs = shuffled(qs.filter(q => !seen.has(q._qid))).concat(shuffled(qs.filter(q => seen.has(q._qid))));
         } catch { qs = shuffled(qs); }
         this.shuffledQs = qs;
-      
+      }
       this.tab = 'quizrun'; this.$nextTick(() => this.runSec());
     },
     async startAdaptive() {
@@ -850,6 +1186,16 @@ const app = createApp({
       } catch { this.kamusResults = []; }
       this.kamusLoading = false;
     },
+    async browseKanji() {
+      this.kamusDetail = null;
+      this.kamusQ = '';
+      this.kamusLoading = true;
+      try {
+        const d = await api(`/api/kanji/search?jlpt=${this.kamusJlpt}&limit=50`);
+        this.kamusResults = d.results || [];
+      } catch { this.kamusResults = []; }
+      this.kamusLoading = false;
+    },
     async openWord(id) {
       try {
         const d = await api(`/api/dict/word/${id}`);
@@ -943,8 +1289,651 @@ const app = createApp({
       this.srsIdx++; this.srsShow = false; this.srsTyped = ''; this.srsDone++;
       if (this.srsIdx >= this.srsDue.length) { toast('Review selesai! 🎉'); this.refresh(); this.tab = 'saya'; }
     },
+    // ===== ADMIN PANEL =====
+    async admLoad() {
+      if (store.user?.role !== 'admin') return;
+      this.admLoadStats();
+      this.admLoadUsers();
+      this.admLoadPkgs();
+      this.admLoadChapters();
+      this.admKotobaLoadAll();
+      this.admKanjiLoadAll();
+    },
+    async admLoadStats() {
+      this.admStatsLoading = true;
+      try { this.admStats = await api('/api/admin/stats'); } catch { this.admStats = null; }
+      this.admStatsLoading = false;
+    },
+    async admLoadUsers() {
+      this.admUsersLoading = true;
+      try { const d = await api('/api/admin/users'); this.admUsers = d.users || []; } catch { this.admUsers = []; }
+      this.admUsersLoading = false;
+    },
+    async admSetRole(u, role) {
+      if (!confirm(`Jadikan ${u.name} sebagai ${role === 'admin' ? 'admin' : 'user biasa'}?`)) return;
+      try {
+        await api(`/api/admin/users/${u.id}/role`, { method: 'POST', body: JSON.stringify({ role }) });
+        toast('Role diperbarui ✅'); this.admLoadUsers();
+      } catch (e) { toast(e.message); }
+    },
+    // --- Kotoba ---
+    async admSearchKotoba() {
+      const q = this.admKotobaQ.trim();
+      if (q.length < 1) { this.admKotoba = []; return; }
+      this.admKotobaLoading = true;
+      try { const d = await api(`/api/admin/kotoba?q=${encodeURIComponent(q)}&limit=30`); this.admKotoba = d.results || []; } catch { this.admKotoba = []; }
+      this.admKotobaLoading = false;
+    },
+    admKotobaNew() { this.admKotobaEdit = null; this.admKotobaForm = { keb: '', reb: '', gloss: '' }; },
+    admKotobaOpen(w) { this.admKotobaEdit = w.id; this.admKotobaForm = { keb: (w.keb || []).join(', '), reb: (w.reb || []).join(', '), gloss: (w.gloss || '').slice(0, 500) }; },
+    async admKotobaSave() {
+      const f = this.admKotobaForm;
+      if (!f.keb.trim() || !f.reb.trim()) { toast('Kanji/kana & bacaan wajib diisi'); return; }
+      const body = { keb: f.keb.split(',').map(s => s.trim()).filter(Boolean), reb: f.reb.split(',').map(s => s.trim()).filter(Boolean), gloss: f.gloss.trim() };
+      try {
+        if (this.admKotobaEdit) await api(`/api/admin/kotoba/${this.admKotobaEdit}`, { method: 'PUT', body: JSON.stringify(body) });
+        else await api('/api/admin/kotoba', { method: 'POST', body: JSON.stringify(body) });
+        toast('Kotoba tersimpan ✅'); this.admKotobaForm = null; this.admKotobaLoadAll();
+      } catch (e) { toast(e.message); }
+    },
+    async admKotobaDel(w) {
+      if (!confirm(`Hapus "${(w.keb || [])[0] || w.id}"?`)) return;
+      try { await api(`/api/admin/kotoba/${w.id}`, { method: 'DELETE' }); toast('Dihapus ✅'); this.admKotobaLoadAll(); } catch (e) { toast(e.message); }
+    },
+    // --- Kanji ---
+    async admSearchKanji() {
+      this.admKanjiLoading = true;
+      try {
+        const p = new URLSearchParams({ limit: 30 });
+        if (this.admKanjiQ.trim()) p.set('q', this.admKanjiQ.trim());
+        if (this.admKanjiJlpt) p.set('jlpt', this.admKanjiJlpt);
+        const d = await api(`/api/admin/kanji?${p}`); this.admKanji = d.results || [];
+      } catch { this.admKanji = []; }
+      this.admKanjiLoading = false;
+    },
+    admKanjiNew() { this.admKanjiEdit = null; this.admKanjiForm = { ch: '', onyomi: '', kunyomi: '', meaning: '', jlpt: 5, strokes: '' }; },
+    admKanjiOpen(k) { this.admKanjiEdit = k.ch; this.admKanjiForm = { ch: k.ch, onyomi: (k.onyomi || []).join(', '), kunyomi: (k.kunyomi || []).join(', '), meaning: k.meaning || '', jlpt: k.jlpt || 5, strokes: k.strokes || '' }; },
+    async admKanjiSave() {
+      const f = this.admKanjiForm;
+      if (!f.ch.trim()) { toast('Kanji wajib diisi'); return; }
+      const body = { ch: f.ch.trim(), onyomi: f.onyomi.split(',').map(s => s.trim()).filter(Boolean), kunyomi: f.kunyomi.split(',').map(s => s.trim()).filter(Boolean), meaning: f.meaning.trim(), jlpt: parseInt(f.jlpt) || 5, strokes: parseInt(f.strokes) || 0 };
+      try {
+        if (this.admKanjiEdit) await api(`/api/admin/kanji/${encodeURIComponent(this.admKanjiEdit)}`, { method: 'PUT', body: JSON.stringify(body) });
+        else await api('/api/admin/kanji', { method: 'POST', body: JSON.stringify(body) });
+        toast('Kanji tersimpan ✅'); this.admKanjiForm = null; this.admKanjiLoadAll();
+      } catch (e) { toast(e.message); }
+    },
+    async admKanjiDel(k) {
+      if (!confirm(`Hapus kanji "${k.ch}"?`)) return;
+      try { await api(`/api/admin/kanji/${encodeURIComponent(k.ch)}`, { method: 'DELETE' }); toast('Dihapus ✅'); this.admKanjiLoadAll(); } catch (e) { toast(e.message); }
+    },
+    // --- Bank Soal ---
+    async admLoadPkgs() {
+      this.admPkgsLoading = true;
+      this.admPkgSearch = ''; this.admPkgPage = 1; this.admPkgSelected = [];
+      try { const d = await api('/api/admin/banksoal'); this.admPkgs = d.packages || []; } catch { this.admPkgs = []; }
+      this.admPkgsLoading = false;
+    },
+    admPkgNew() { this.admPkgEdit = null; this.admPkgForm = { id: '', title: '', cat: 'jlpt', level: 'n5', year: new Date().getFullYear(), session: '12', source: '', note: '' }; },
+    admPkgOpen(p) { this.admPkgEdit = p.id; this.admPkgForm = { ...p }; this.admPkgQs = null; },
+    async admPkgSave() {
+      const f = this.admPkgForm;
+      if (!f.id.trim() || !f.title.trim()) { toast('ID & judul wajib diisi'); return; }
+      try {
+        if (this.admPkgEdit) await api(`/api/admin/banksoal/${encodeURIComponent(this.admPkgEdit)}`, { method: 'PUT', body: JSON.stringify(f) });
+        else await api('/api/admin/banksoal', { method: 'POST', body: JSON.stringify(f) });
+        toast('Paket tersimpan ✅'); this.admPkgForm = null; this.admLoadPkgs();
+      } catch (e) { toast(e.message); }
+    },
+    async admPkgDel(p) {
+      if (!confirm(`Hapus paket "${p.title}" beserta semua soalnya?`)) return;
+      try { await api(`/api/admin/banksoal/${encodeURIComponent(p.id)}`, { method: 'DELETE' }); toast('Dihapus ✅'); this.admLoadPkgs(); } catch (e) { toast(e.message); }
+    },
+    async admPkgViewQs(p) {
+      this.admPkgQsLoading = true; this.admPkgQsId = p.id; this.admQForm = null;
+      this.admQSearch = ''; this.admQPage = 1; this.admQSelected = [];
+      try { const d = await api(`/api/admin/banksoal/${encodeURIComponent(p.id)}/questions`); this.admPkgQs = d.questions || []; } catch { this.admPkgQs = []; }
+      this.admPkgQsLoading = false;
+    },
+    admQNew() { this.admQEdit = null; this.admQForm = { type: 'context', instruction: '', question: '', underline: '', passage: '', audio: '', options: ['', '', '', ''], answer: 0, ex: '' }; },
+    admQOpen(qi) {
+      const q = this.admPkgQs[qi];
+      this.admQEdit = qi;
+      // Support format lama (sec/q/o/a) dan baru (type/question/options/answer)
+      this.admQForm = {
+        type: q.type || q.sec || 'context',
+        instruction: q.instruction || '',
+        question: q.question || q.q || '',
+        underline: q.underline || '',
+        passage: q.passage || '',
+        audio: q.audio || '',
+        options: [...(q.options || q.o || []), '', '', '', ''].slice(0, 4),
+        answer: q.answer ?? q.a ?? 0,
+        ex: q.ex || ''
+      };
+    },
+    async admQSave() {
+      const f = this.admQForm;
+      const opts = f.options.map(s => (s || '').trim()).filter(Boolean);
+      if (!f.question.trim() || opts.length < 2) { toast('Soal & min 2 opsi wajib diisi'); return; }
+      const body = { type: f.type, instruction: (f.instruction || '').trim(), question: f.question.trim(), underline: (f.underline || '').trim(), passage: (f.passage || '').trim(), audio: (f.audio || '').trim(), options: opts, answer: parseInt(f.answer), ex: (f.ex || '').trim() };
+      try {
+        const pid = encodeURIComponent(this.admPkgQsId);
+        if (this.admQEdit !== null) await api(`/api/admin/banksoal/${pid}/questions/${this.admQEdit}`, { method: 'PUT', body: JSON.stringify(body) });
+        else await api(`/api/admin/banksoal/${pid}/questions`, { method: 'POST', body: JSON.stringify(body) });
+        toast('Soal tersimpan \u2705'); this.admQForm = null; this.admQEdit = null;
+        const p = this.admPkgs.find(x => x.id === this.admPkgQsId);
+        if (p) this.admPkgViewQs(p);
+      } catch (e) { toast(e.message); }
+    },
+    async admQDel(qi) {
+      const q = this.admPkgQs[qi];
+      if (!confirm(`Hapus soal no.${q.no}?`)) return;
+      try {
+        await api(`/api/admin/banksoal/${encodeURIComponent(this.admPkgQsId)}/questions/${qi}`, { method: 'DELETE' });
+        toast('Soal dihapus \u2705');
+        const p = this.admPkgs.find(x => x.id === this.admPkgQsId);
+        if (p) this.admPkgViewQs(p);
+      } catch (e) { toast(e.message); }
+    },
+    // --- Chapters ---
+    async admLoadChapters() {
+      this.admChaptersLoading = true;
+      this.admChSearch = ''; this.admChPage = 1;
+      try { const d = await api(`/api/admin/chapters?level=${this.admChLevel}`); this.admChapters = d.chapters || []; } catch { this.admChapters = []; }
+      this.admChaptersLoading = false;
+    },
+    async admChOpen(ch) {
+      this.admChEdit = ch.id;
+      this.admChForm = { title: ch.title || '', desc: ch.desc || '', penjelasan: '' };
+      try {
+        const d = await api(`/api/admin/chapters/${encodeURIComponent(ch.id)}`);
+        const full = d.chapter || {};
+        this.admChForm = { title: full.title || '', desc: full.desc || '', penjelasan: full.penjelasan || '' };
+      } catch (e) { toast('Gagal memuat detail: ' + e.message); }
+    },
+    async admChSave() {
+      const f = this.admChForm;
+      if (!f.title.trim()) { toast('Judul wajib diisi'); return; }
+      try {
+        await api(`/api/admin/chapters/${encodeURIComponent(this.admChEdit)}`, { method: 'PUT', body: JSON.stringify({ title: f.title.trim(), desc: f.desc.trim(), penjelasan: f.penjelasan }) });
+        toast('Bab tersimpan ✅'); this.admChEdit = null; this.admLoadChapters();
+      } catch (e) { toast(e.message); }
+    },
+    
+    // ---- Admin Mock Test ----
+    async admLoadMockTest() {
+      this.admMockQsLoading = true;
+      this.admMockSearch = '';
+      this.admMockPage = 1;
+      this.admMockSelected = [];
+      try {
+        const res = await api(`/api/admin/mocktest/${this.admMockLevel}/${this.admMockSection}`);
+        this.admMockQs = res.questions || [];
+        this.admMockStats = this.calculateMockStats();
+      } catch (e) {
+        toast('Gagal load: ' + e.message);
+        this.admMockQs = [];
+      } finally {
+        this.admMockQsLoading = false;
+      }
+    },
+    calculateMockStats() {
+      const types = {};
+      this.admMockQs.forEach(q => {
+        types[q.type] = (types[q.type] || 0) + 1;
+      });
+      return {
+        total: this.admMockQs.length,
+        byType: types
+      };
+    },
+    admMockSortBy(field) {
+      if (this.admMockSort === field) {
+        this.admMockSortDir = this.admMockSortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        this.admMockSort = field;
+        this.admMockSortDir = 'asc';
+      }
+    },
+    admMockToggleSelect(id) {
+      const idx = this.admMockSelected.indexOf(id);
+      if (idx > -1) {
+        this.admMockSelected.splice(idx, 1);
+      } else {
+        this.admMockSelected.push(id);
+      }
+    },
+    admMockToggleAll() {
+      if (this.admMockAllSelected) {
+        this.admMockQsPaginated.forEach(q => {
+          const idx = this.admMockSelected.indexOf(q.id);
+          if (idx > -1) this.admMockSelected.splice(idx, 1);
+        });
+      } else {
+        this.admMockQsPaginated.forEach(q => {
+          if (!this.admMockSelected.includes(q.id)) {
+            this.admMockSelected.push(q.id);
+          }
+        });
+      }
+    },
+    async admMockBulkDelete() {
+      if (this.admMockSelected.length === 0) {
+        toast('Pilih soal yang ingin dihapus');
+        return;
+      }
+      if (!confirm(`Hapus ${this.admMockSelected.length} soal yang dipilih?`)) return;
+      
+      try {
+        for (const id of this.admMockSelected) {
+          const idx = this.admMockQs.findIndex(q => q.id === id);
+          if (idx > -1) {
+            await api(`/api/admin/mocktest/${this.admMockLevel}/${this.admMockSection}/${idx}`, {
+              method: 'DELETE'
+            });
+          }
+        }
+        toast(`${this.admMockSelected.length} soal dihapus ✅`);
+        this.admMockSelected = [];
+        this.admLoadMockTest();
+      } catch (e) {
+        toast('Gagal hapus: ' + e.message);
+      }
+    },
+    admMockClone(idx) {
+      const q = this.admMockQs[idx];
+      this.admMockQEdit = null;
+      this.admMockQForm = {
+        id: this.admMockQs.length + 1,
+        type: q.type,
+        instruction: q.instruction,
+        question: q.question + ' (copy)',
+        underline: q.underline,
+        passage: q.passage,
+        audio: q.audio,
+        options: [...(q.options || ['', '', '', ''])],
+        answer: q.answer
+      };
+    },
+    admMockExportJSON() {
+      const data = {
+        level: this.admMockLevel,
+        section: this.admMockSection,
+        exported: new Date().toISOString(),
+        questions: this.admMockQs
+      };
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `mocktest-${this.admMockLevel}-${this.admMockSection}-${Date.now()}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toast('Exported ✅');
+    },
+    admMockExportCSV() {
+      const headers = ['ID', 'Type', 'Question', 'Option1', 'Option2', 'Option3', 'Option4', 'Answer'];
+      const rows = this.admMockQs.map(q => [
+        q.id,
+        q.type,
+        `"${(q.question || '').replace(/"/g, '""')}"`,
+        `"${((q.options && q.options[0]) || '').replace(/"/g, '""')}"`,
+        `"${((q.options && q.options[1]) || '').replace(/"/g, '""')}"`,
+        `"${((q.options && q.options[2]) || '').replace(/"/g, '""')}"`,
+        `"${((q.options && q.options[3]) || '').replace(/"/g, '""')}"`,
+        q.answer
+      ]);
+      const csv = [headers, ...rows].map(r => r.join(',')).join('\n');
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `mocktest-${this.admMockLevel}-${this.admMockSection}-${Date.now()}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toast('Exported ✅');
+    },
+    admMockQNew() {
+      this.admMockQEdit = null;
+      this.admMockQForm = {
+        id: this.admMockQs.length + 1,
+        type: 'kanji-reading',
+        instruction: '',
+        question: '',
+        underline: '',
+        passage: '',
+        audio: '',
+        options: ['', '', '', ''],
+        answer: 0
+      };
+    },
+    admMockQOpen(idx) {
+      this.admMockQEdit = idx;
+      const q = this.admMockQs[idx];
+      this.admMockQForm = {
+        id: q.id,
+        type: q.type || 'kanji-reading',
+        instruction: q.instruction || '',
+        question: q.question || '',
+        underline: q.underline || '',
+        passage: q.passage || '',
+        audio: q.audio || '',
+        options: [...(q.options || ['','','',''])],
+        answer: q.answer || 0
+      };
+    },
+    async admMockQSave() {
+      if (!this.admMockQForm) return;
+      try {
+        const payload = {
+          level: this.admMockLevel,
+          section: this.admMockSection,
+          question: this.admMockQForm
+        };
+        
+        if (this.admMockQEdit !== null) {
+          await api(`/api/admin/mocktest/${this.admMockLevel}/${this.admMockSection}/${this.admMockQEdit}`, {
+            method: 'PUT',
+            body: JSON.stringify(payload)
+          });
+          toast('Soal diupdate ✅');
+        } else {
+          await api('/api/admin/mocktest', {
+            method: 'POST',
+            body: JSON.stringify(payload)
+          });
+          toast('Soal ditambahkan ✅');
+        }
+        
+        this.admMockQForm = null;
+        this.admMockQEdit = null;
+        this.admLoadMockTest();
+      } catch (e) {
+        toast('Gagal simpan: ' + e.message);
+      }
+    },
+    async admMockQDel(idx) {
+      if (!confirm('Hapus soal ini?')) return;
+      try {
+        await api(`/api/admin/mocktest/${this.admMockLevel}/${this.admMockSection}/${idx}`, {
+          method: 'DELETE'
+        });
+        toast('Soal dihapus ✅');
+        this.admLoadMockTest();
+      } catch (e) {
+        toast('Gagal hapus: ' + e.message);
+      }
+    },
+    // ===== KOTOBA Advanced =====
+    async admKotobaLoadAll() {
+      this.admKotobaLoading = true;
+      this.admKotobaSearch = ''; this.admKotobaPage = 1; this.admKotobaSelected = [];
+      try { const d = await api('/api/admin/kotoba?limit=500'); this.admKotoba = d.results || []; } catch { this.admKotoba = []; }
+      this.admKotobaLoading = false;
+    },
+    admKotobaSortBy(field) {
+      if (this.admKotobaSort === field) this.admKotobaSortDir = this.admKotobaSortDir === 'asc' ? 'desc' : 'asc';
+      else { this.admKotobaSort = field; this.admKotobaSortDir = 'asc'; }
+    },
+    admKotobaToggleSelect(id) {
+      const i = this.admKotobaSelected.indexOf(id);
+      if (i > -1) this.admKotobaSelected.splice(i, 1); else this.admKotobaSelected.push(id);
+    },
+    admKotobaToggleAll() {
+      if (this.admKotobaAllSelected) {
+        this.admKotobaPaginated.forEach(w => { const i = this.admKotobaSelected.indexOf(w.id); if (i > -1) this.admKotobaSelected.splice(i, 1); });
+      } else {
+        this.admKotobaPaginated.forEach(w => { if (!this.admKotobaSelected.includes(w.id)) this.admKotobaSelected.push(w.id); });
+      }
+    },
+    async admKotobaBulkDelete() {
+      if (!this.admKotobaSelected.length) { toast('Pilih kotoba yang ingin dihapus'); return; }
+      if (!confirm(`Hapus ${this.admKotobaSelected.length} kotoba?`)) return;
+      try {
+        for (const id of this.admKotobaSelected) await api(`/api/admin/kotoba/${id}`, { method: 'DELETE' });
+        toast(`${this.admKotobaSelected.length} kotoba dihapus ✅`);
+        this.admKotobaSelected = []; this.admKotobaLoadAll();
+      } catch (e) { toast('Gagal: ' + e.message); }
+    },
+    admKotobaClone(w) {
+      this.admKotobaEdit = null;
+      this.admKotobaForm = { keb: ((w.keb || []).join(', ')) + ' (copy)', reb: (w.reb || []).join(', '), gloss: (w.gloss || '').slice(0, 500) };
+      toast('Form duplikat siap — klik Simpan');
+    },
+    admKotobaExportJSON() {
+      const data = { exported: new Date().toISOString(), count: this.admKotobaFiltered.length, kotoba: this.admKotobaFiltered };
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+      a.download = `kotoba-${Date.now()}.json`; a.click();
+      toast('Exported ✅');
+    },
+    admKotobaExportCSV() {
+      const rows = [['Kanji/Kana', 'Bacaan', 'Arti']];
+      this.admKotobaFiltered.forEach(w => rows.push([
+        `"${((w.keb || []).join('; ')).replace(/"/g, '""')}"`,
+        `"${((w.reb || []).join('; ')).replace(/"/g, '""')}"`,
+        `"${(w.gloss || '').replace(/"/g, '""')}"`
+      ]));
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([rows.map(r => r.join(',')).join('\n')], { type: 'text/csv' }));
+      a.download = `kotoba-${Date.now()}.csv`; a.click();
+      toast('Exported ✅');
+    },
+    // ===== KANJI Advanced =====
+    async admKanjiLoadAll() {
+      this.admKanjiLoading = true;
+      this.admKanjiSearch = ''; this.admKanjiPage = 1; this.admKanjiSelected = [];
+      try {
+        const p = new URLSearchParams({ limit: 500 });
+        if (this.admKanjiJlpt) p.set('jlpt', this.admKanjiJlpt);
+        const d = await api(`/api/admin/kanji?${p}`); this.admKanji = d.results || [];
+      } catch { this.admKanji = []; }
+      this.admKanjiLoading = false;
+    },
+    admKanjiSortBy(field) {
+      if (this.admKanjiSort === field) this.admKanjiSortDir = this.admKanjiSortDir === 'asc' ? 'desc' : 'asc';
+      else { this.admKanjiSort = field; this.admKanjiSortDir = 'asc'; }
+    },
+    admKanjiToggleSelect(ch) {
+      const i = this.admKanjiSelected.indexOf(ch);
+      if (i > -1) this.admKanjiSelected.splice(i, 1); else this.admKanjiSelected.push(ch);
+    },
+    admKanjiToggleAll() {
+      if (this.admKanjiAllSelected) {
+        this.admKanjiPaginated.forEach(k => { const i = this.admKanjiSelected.indexOf(k.ch); if (i > -1) this.admKanjiSelected.splice(i, 1); });
+      } else {
+        this.admKanjiPaginated.forEach(k => { if (!this.admKanjiSelected.includes(k.ch)) this.admKanjiSelected.push(k.ch); });
+      }
+    },
+    async admKanjiBulkDelete() {
+      if (!this.admKanjiSelected.length) { toast('Pilih kanji yang ingin dihapus'); return; }
+      if (!confirm(`Hapus ${this.admKanjiSelected.length} kanji?`)) return;
+      try {
+        for (const ch of this.admKanjiSelected) await api(`/api/admin/kanji/${encodeURIComponent(ch)}`, { method: 'DELETE' });
+        toast(`${this.admKanjiSelected.length} kanji dihapus ✅`);
+        this.admKanjiSelected = []; this.admKanjiLoadAll();
+      } catch (e) { toast('Gagal: ' + e.message); }
+    },
+    admKanjiClone(k) {
+      this.admKanjiEdit = null;
+      this.admKanjiForm = { ch: k.ch, onyomi: (k.onyomi || []).join(', '), kunyomi: (k.kunyomi || []).join(', '), meaning: (k.meaning || '') + ' (copy)', jlpt: k.jlpt || 5, strokes: k.strokes || '' };
+      toast('Form duplikat siap — ubah kanji lalu Simpan');
+    },
+    admKanjiExportJSON() {
+      const data = { exported: new Date().toISOString(), count: this.admKanjiFiltered.length, kanji: this.admKanjiFiltered };
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+      a.download = `kanji-${Date.now()}.json`; a.click();
+      toast('Exported ✅');
+    },
+    admKanjiExportCSV() {
+      const rows = [['Kanji', 'Onyomi', 'Kunyomi', 'Arti', 'JLPT', 'Goresan']];
+      this.admKanjiFiltered.forEach(k => rows.push([
+        k.ch || '',
+        `"${((k.onyomi || []).join('; ')).replace(/"/g, '""')}"`,
+        `"${((k.kunyomi || []).join('; ')).replace(/"/g, '""')}"`,
+        `"${(k.meaning || '').replace(/"/g, '""')}"`,
+        k.jlpt || '', k.strokes || ''
+      ]));
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([rows.map(r => r.join(',')).join('\n')], { type: 'text/csv' }));
+      a.download = `kanji-${Date.now()}.csv`; a.click();
+      toast('Exported ✅');
+    },
+    // ===== BANK SOAL Packages Advanced =====
+    admPkgSortBy(field) {
+      if (this.admPkgSort === field) this.admPkgSortDir = this.admPkgSortDir === 'asc' ? 'desc' : 'asc';
+      else { this.admPkgSort = field; this.admPkgSortDir = 'asc'; }
+    },
+    admPkgToggleSelect(id) {
+      const i = this.admPkgSelected.indexOf(id);
+      if (i > -1) this.admPkgSelected.splice(i, 1); else this.admPkgSelected.push(id);
+    },
+    admPkgToggleAll() {
+      if (this.admPkgAllSelected) {
+        this.admPkgPaginated.forEach(p => { const i = this.admPkgSelected.indexOf(p.id); if (i > -1) this.admPkgSelected.splice(i, 1); });
+      } else {
+        this.admPkgPaginated.forEach(p => { if (!this.admPkgSelected.includes(p.id)) this.admPkgSelected.push(p.id); });
+      }
+    },
+    async admPkgBulkDelete() {
+      if (!this.admPkgSelected.length) { toast('Pilih paket yang ingin dihapus'); return; }
+      if (!confirm(`Hapus ${this.admPkgSelected.length} paket beserta soalnya?`)) return;
+      try {
+        for (const id of this.admPkgSelected) await api(`/api/admin/banksoal/${encodeURIComponent(id)}`, { method: 'DELETE' });
+        toast(`${this.admPkgSelected.length} paket dihapus ✅`);
+        this.admPkgSelected = []; this.admLoadPkgs();
+      } catch (e) { toast('Gagal: ' + e.message); }
+    },
+    admPkgClone(p) {
+      this.admPkgEdit = null;
+      this.admPkgForm = { ...p, id: p.id + '-copy', title: p.title + ' (copy)' };
+      toast('Form duplikat siap — klik Simpan');
+    },
+    admPkgExportJSON() {
+      const data = { exported: new Date().toISOString(), count: this.admPkgFiltered.length, packages: this.admPkgFiltered };
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+      a.download = `banksoal-paket-${Date.now()}.json`; a.click();
+      toast('Exported ✅');
+    },
+    admPkgExportCSV() {
+      const rows = [['ID', 'Judul', 'Kategori', 'Level', 'Tahun', 'Sesi', 'Jml Soal']];
+      this.admPkgFiltered.forEach(p => rows.push([
+        p.id || '', `"${(p.title || '').replace(/"/g, '""')}"`, p.cat || '', p.level || '', p.year || '', p.session || '', p.soal || 0
+      ]));
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([rows.map(r => r.join(',')).join('\n')], { type: 'text/csv' }));
+      a.download = `banksoal-paket-${Date.now()}.csv`; a.click();
+      toast('Exported ✅');
+    },
+    // ===== BANK SOAL Questions Advanced =====
+    admQSortBy(field) {
+      if (this.admQSort === field) this.admQSortDir = this.admQSortDir === 'asc' ? 'desc' : 'asc';
+      else { this.admQSort = field; this.admQSortDir = 'asc'; }
+    },
+    admQToggleSelect(idx) {
+      const i = this.admQSelected.indexOf(idx);
+      if (i > -1) this.admQSelected.splice(i, 1); else this.admQSelected.push(idx);
+    },
+    admQToggleAll() {
+      if (this.admQAllSelected) {
+        this.admQPaginated.forEach(q => { const i = this.admQSelected.indexOf(q._idx); if (i > -1) this.admQSelected.splice(i, 1); });
+      } else {
+        this.admQPaginated.forEach(q => { if (!this.admQSelected.includes(q._idx)) this.admQSelected.push(q._idx); });
+      }
+    },
+    async admQBulkDelete() {
+      if (!this.admQSelected.length) { toast('Pilih soal yang ingin dihapus'); return; }
+      if (!confirm(`Hapus ${this.admQSelected.length} soal?`)) return;
+      try {
+        const sorted = [...this.admQSelected].sort((a, b) => b - a);
+        for (const qi of sorted) await api(`/api/admin/banksoal/${encodeURIComponent(this.admPkgQsId)}/questions/${qi}`, { method: 'DELETE' });
+        toast(`${this.admQSelected.length} soal dihapus ✅`);
+        this.admQSelected = [];
+        const p = this.admPkgs.find(x => x.id === this.admPkgQsId);
+        if (p) this.admPkgViewQs(p);
+      } catch (e) { toast('Gagal: ' + e.message); }
+    },
+    admQClone(q) {
+      this.admQEdit = null;
+      this.admQForm = {
+        type: q.type || q.sec || 'context',
+        instruction: q.instruction || '',
+        question: (q.question || q.q || '') + ' (copy)',
+        underline: q.underline || '',
+        passage: q.passage || '',
+        audio: q.audio || '',
+        options: [...(q.options || q.o || []), '', '', '', ''].slice(0, 4),
+        answer: q.answer ?? q.a ?? 0,
+        ex: q.ex || ''
+      };
+      toast('Form duplikat siap — klik Simpan');
+    },
+    admQExportJSON() {
+      const data = { exported: new Date().toISOString(), package: this.admPkgQsId, count: this.admQFiltered.length, questions: this.admQFiltered };
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+      a.download = `banksoal-${this.admPkgQsId}-${Date.now()}.json`; a.click();
+      toast('Exported ✅');
+    },
+    admQExportCSV() {
+      const rows = [['No', 'Section', 'Soal', 'Opsi1', 'Opsi2', 'Opsi3', 'Opsi4', 'Kunci']];
+      this.admQFiltered.forEach((q, i) => rows.push([
+        i + 1, q.sec || '',
+        `"${(q.q || '').replace(/"/g, '""')}"`,
+        `"${((q.o && q.o[0]) || '').replace(/"/g, '""')}"`,
+        `"${((q.o && q.o[1]) || '').replace(/"/g, '""')}"`,
+        `"${((q.o && q.o[2]) || '').replace(/"/g, '""')}"`,
+        `"${((q.o && q.o[3]) || '').replace(/"/g, '""')}"`,
+        (q.a ?? '') === '' ? '' : (q.a + 1)
+      ]));
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([rows.map(r => r.join(',')).join('\n')], { type: 'text/csv' }));
+      a.download = `banksoal-${this.admPkgQsId}-${Date.now()}.csv`; a.click();
+      toast('Exported ✅');
+    },
+    // ===== CHAPTERS Advanced =====
+    admChSortBy(field) {
+      if (this.admChSort === field) this.admChSortDir = this.admChSortDir === 'asc' ? 'desc' : 'asc';
+      else { this.admChSort = field; this.admChSortDir = 'asc'; }
+    },
+    admChExportJSON() {
+      const data = { exported: new Date().toISOString(), level: this.admChLevel, count: this.admChFiltered.length, chapters: this.admChFiltered };
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+      a.download = `chapters-${this.admChLevel}-${Date.now()}.json`; a.click();
+      toast('Exported ✅');
+    },
+    admChExportCSV() {
+      const rows = [['Bab', 'Judul', 'Deskripsi']];
+      this.admChFiltered.forEach(c => rows.push([
+        c.bab || '', `"${(c.title || '').replace(/"/g, '""')}"`, `"${(c.desc || '').replace(/"/g, '""')}"`
+      ]));
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([rows.map(r => r.join(',')).join('\n')], { type: 'text/csv' }));
+      a.download = `chapters-${this.admChLevel}-${Date.now()}.csv`; a.click();
+      toast('Exported ✅');
+    },
   },
   mounted() {
+    // Tombol back HP/browser: kembali ke halaman sebelumnya dalam app
+    this._navInit = false;
+    window.addEventListener('popstate', (e) => {
+      const s = e.state;
+      if (!s || !s.nl) return;
+      this._popping = true;
+      this.tab = s.t || 'home';
+      // tutup sub-view sesuai state
+      if (!s.c) this.openChapter = null;
+      if (!s.q) this.chQuiz = null;
+      if (!s.l) this.openLesson = null;
+      if (!s.k) this.kamusDetail = null;
+      this.$nextTick(() => { this._popping = false; });
+    });
+    // state awal
+    history.replaceState(this._navState(), '');
     setInterval(() => {
       if (store.theme !== 'sakura' || document.hidden) return;
       if (document.querySelectorAll('.petal').length > 12) return;
@@ -1002,7 +1991,7 @@ const app = createApp({
       <div class="card hero">
         <div class="hero-mascot">{{ mascot.e }}</div>
         <div class="hero-info">
-          <h2>Konnichiwa, {{ user.name }}</h2>
+          <h2>{{ greeting }}, {{ user.name }}</h2>
           <p class="muted">{{ mascot.t }} · Lv.{{ user.level.toUpperCase() }}</p>
           <div class="xpbar"><i :style="{width: (mascot.next ? Math.min(100, Math.round(user.xp/mascot.next*100)) : 100)+'%'}"></i></div>
           <p class="muted small">{{ mascot.next ? (mascot.next - user.xp) + ' XP menuju level berikutnya' : 'Maskot max!' }} · <b>{{ user.xp }}</b> XP</p>
@@ -1017,7 +2006,6 @@ const app = createApp({
       </div>
 
       <div v-if="!openChapter && !chQuiz">
-      <div v-if="myChapters.length">
       <h2 class="ttl"><span v-html="ic('layers')"></span> Jalur Belajar {{ (store.user?.level || 'n5').toUpperCase() }}</h2>
       <p class="muted small">Belajar berurutan ala Soumatome — dari termudah ke tersulit. Lulus quiz (≥70) untuk membuka bab berikutnya.</p>
       <div v-if="!myChapters.length" class="card center muted small">Materi untuk level ini segera hadir! 🚧</div>
@@ -1333,6 +2321,43 @@ const app = createApp({
             </div>
             <div v-else>
               <button class="btn ghost sm" style="margin-bottom:10px" @click="modulSub=null"><span v-html="ic('back',15)"></span> Pilih bidang</button>
+              <div v-if="modulSub==='kaigo'">
+                <div class="pill-row" style="margin-bottom:12px">
+                  <button class="pill" :class="{on:sswKaigoTab==='materi'}" @click="sswKaigoTab='materi'">📖 Materi</button>
+                  <button class="pill" :class="{on:sswKaigoTab==='soal'}" @click="sswKaigoTab='soal'">🎯 Bank Soal</button>
+                </div>
+                <div v-if="sswKaigoTab==='materi'">
+                  <div v-if="!sswKaigoCh" class="lib-grid">
+                    <div v-for="c in SSW_KAIGO" :key="c.id" class="lvl" @click="sswKaigoCh=c.id">
+                      <div class="badge"><span style="font-size:22px">{{ c.icon }}</span></div>
+                      <div class="lvl-body"><b>{{ c.title }}</b><div class="muted small">{{ c.desc }}</div></div>
+                      <span v-html="ic('play',16)"></span>
+                    </div>
+                  </div>
+                  <div v-else>
+                    <button class="btn ghost sm" style="margin-bottom:10px" @click="sswKaigoCh=null"><span v-html="ic('back',15)"></span> Daftar materi</button>
+                    <div v-for="c in [SSW_KAIGO.find(x=>x.id===sswKaigoCh)]" :key="c.id">
+                      <h2 class="ttl">{{ c.icon }} {{ c.title }}</h2>
+                      <p class="muted small" style="margin-bottom:12px">{{ c.desc }}</p>
+                      <div v-for="(s,si) in c.sections" :key="si" class="card" style="margin-bottom:10px">
+                        <h3 class="ttl-sm">{{ s.title }}</h3>
+                        <div class="penjelasan-text" v-html="s.body"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div v-if="sswKaigoTab==='soal'">
+                  <div v-if="sswPkgs.length" class="lib-grid">
+                    <div v-for="p in sswPkgs" :key="p.id" class="lvl" @click="simPkg=p">
+                      <div class="badge"><span style="font-size:22px">&#127919;</span></div>
+                      <div class="lvl-body"><b>{{ p.title }}</b><div class="muted small">{{ p.questions.length }} soal &middot; {{ p.source }}</div></div>
+                      <span v-html="ic('play',16)"></span>
+                    </div>
+                  </div>
+                  <div v-else class="card center pop"><div style="font-size:40px">&#128269;</div><b>Bank soal Kaigo segera hadir</b><p class="muted small">Soal-soal sedang diriset &amp; diverifikasi. &#128591;</p></div>
+                </div>
+              </div>
+              <div v-else>
               <div v-if="sswPkgs.length" class="lib-grid">
                 <div v-for="p in sswPkgs" :key="p.id" class="lvl" @click="simPkg=p">
                   <div class="badge"><span style="font-size:22px">&#127919;</span></div>
@@ -1341,6 +2366,7 @@ const app = createApp({
                 </div>
               </div>
               <div v-else class="card center pop"><div style="font-size:40px">&#128269;</div><b>Materi {{ (SSW_FIELDS.find(f=>f.id===modulSub)||{}).name }} segera hadir</b><p class="muted small">Materi &amp; soal bidang ini sedang diriset &amp; diverifikasi. &#128591;</p></div>
+              </div>
             </div>
           </div>
         </div>
@@ -1407,6 +2433,44 @@ const app = createApp({
       <h2 class="ttl"><span v-html="ic('filetext')"></span> Riwayat</h2>
       <div v-for="h in store.quizHist" :key="h.created_at+h.level" class="rowline"><span><b>{{ h.level.toUpperCase() }}</b> — {{ h.score }}/{{ h.total }}</span><b>{{ Math.round(h.score/h.total*100) }}%</b></div>
       <div v-if="!store.quizHist.length" class="muted small">Belum ada riwayat quiz.</div>
+
+      <h2 class="ttl"><span v-html="ic('target')"></span> Mock Test JLPT</h2>
+      <p class="muted small" style="margin-bottom:10px">Simulasi ujian interaktif — langsung jawab di web, ada timer & scoring.</p>
+      <div v-if="!mockLevel" class="lib-grid">
+        <div v-for="m in MOCKTEST_LEVELS" :key="m.id" class="lvl" @click="mockLevel=m.id">
+          <div class="badge"><span style="font-size:22px">{{ m.icon }}</span></div>
+          <div class="lvl-body"><b>JLPT {{ m.name }}</b><div class="muted small">Simulasi ujian lengkap</div></div>
+          <span v-html="ic('play',16)"></span>
+        </div>
+      </div>
+      <div v-else>
+        <button class="btn ghost sm" style="margin-bottom:10px" @click="mockLevel=null"><span v-html="ic('back',15)"></span> Pilih level</button>
+        <div v-for="m in [MOCKTEST_LEVELS.find(x=>x.id===mockLevel)]" :key="m.id">
+          <h3 class="ttl-sm">{{ m.icon }} JLPT {{ m.name }} Mock Test</h3>
+          
+          <h4 class="ttl-sm" style="margin-top:12px">📝 Simulasi Interaktif</h4>
+          <div v-for="sec in ['vocab','grammar','reading','listening']" :key="sec" class="rowline">
+            <span>{{ {vocab:'言語知識（文字・語彙）',grammar:'言語知識（文法）',reading:'読解',listening:'聴解'}[sec] }}</span>
+            <button class="btn ghost sm" @click="startMockTest(m.id, sec)" 
+              v-if="MOCKTEST_QUESTIONS && MOCKTEST_QUESTIONS[m.id] && MOCKTEST_QUESTIONS[m.id][sec] && MOCKTEST_QUESTIONS[m.id][sec].questions.length">
+              <span v-html="ic('play',15)"></span> Mulai ({{ MOCKTEST_QUESTIONS[m.id][sec].questions.length }} soal)
+            </button>
+            <span v-else class="muted small">Belum tersedia</span>
+          </div>
+          
+          <h4 class="ttl-sm" style="margin-top:12px">📄 Soal PDF (Referensi)</h4>
+          <div v-for="p in m.pdfs" :key="p.id" class="rowline">
+            <span>{{ p.title }}</span>
+            <a :href="'mocktest/'+m.id+'/'+p.file" target="_blank" class="btn ghost sm">Buka</a>
+          </div>
+          <h4 class="ttl-sm" style="margin-top:12px">🎧 Audio Listening</h4>
+          <div v-for="a in m.audios" :key="a.id" class="card small" style="margin-bottom:8px">
+            <div><b>{{ a.title }}</b></div>
+            <audio :src="'audio/'+a.file" controls preload="none" style="width:100%;margin-top:6px"></audio>
+          </div>
+          <p class="muted small" style="margin-top:10px">Sumber: JLPT Sensei Practice Test (berdasarkan soal contoh resmi JLPT).</p>
+        </div>
+      </div>
     </section>
 
     <!-- ============ QUIZ RUN ============ -->
@@ -1513,6 +2577,91 @@ const app = createApp({
         <div v-else class="card ok-card"><b><span v-html="ic('sparkles',16)"></span> Semua seksi lolos! Pertahankan!</b></div>
       </div>
       <button class="btn" @click="tab='quiz'">Kembali</button>
+    </section>
+
+    <!-- ============ MOCK TEST RUN ============ -->
+    <section v-if="tab==='mockrun' && mockQs.length" class="card pop tabsec">
+      <div class="q-head">
+        <b>{{ mockSection.title }} ({{ mockSection.level.toUpperCase() }})</b>
+        <span class="timer" :class="{low: mockTime<300}"><span v-html="ic('clock',17)"></span> {{ mockTimeStr() }}</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+        <div class="muted small">Soal {{ mockIdx+1 }}/{{ mockQs.length }}</div>
+        <button class="mini-btn" @click="toggleMockPause()">{{ mockPaused ? '▶️ Lanjut' : '⏸️ Pause' }}</button>
+      </div>
+      <div class="qbar"><i :style="{width: ((mockIdx)/mockQs.length*100)+'%'}"></i></div>
+      
+      <div v-if="mockQs[mockIdx].instruction" class="muted small" style="margin:10px 0;white-space:pre-line">{{ mockQs[mockIdx].instruction }}</div>
+      
+      <div v-if="mockQs[mockIdx].passage" class="passage" style="background:var(--bg2);padding:12px;border-radius:8px;margin:10px 0;white-space:pre-line">{{ mockQs[mockIdx].passage }}</div>
+      
+      <h3 class="q-text" style="white-space:pre-line">
+        <span v-if="mockQs[mockIdx].underline" v-html="mockQs[mockIdx].question.replace(mockQs[mockIdx].underline, '<u style=\\'text-decoration:underline;text-underline-offset:3px\\'>' + mockQs[mockIdx].underline + '</u>')"></span>
+        <span v-else>{{ mockQs[mockIdx].question }}</span>
+      </h3>
+      
+      <button v-if="mockQs[mockIdx].audio" class="btn ghost sm" @click="new Audio(mockQs[mockIdx].audio).play()"><span v-html="ic('volume',15)"></span> Putar audio</button>
+      
+      <button v-for="(o,i) in mockQs[mockIdx].options" :key="i" class="opt"
+        :class="{pick: mockAns[mockIdx]===i}"
+        @click="mockAnswer(mockIdx, i)"><b>{{ i+1 }}.</b> {{ o }}</button>
+      
+      <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+        <button class="btn ghost sm" @click="mockPrev()" :disabled="mockIdx===0"><span v-html="ic('back',15)"></span> Sebelumnya</button>
+        <button class="btn ghost sm" @click="mockNext()" :disabled="mockIdx===mockQs.length-1">Berikutnya <span v-html="ic('play',15)"></span></button>
+        <button class="btn sm" @click="finishMockTest()" style="margin-left:auto">Selesai & Lihat Nilai</button>
+      </div>
+      
+      <div style="margin-top:12px">
+        <details>
+          <summary class="muted small" style="cursor:pointer">📋 Navigasi Soal</summary>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+            <button v-for="(q,i) in mockQs" :key="i" 
+              @click="mockJumpTo(i)"
+              :class="mockIdx===i ? 'mini-btn' : 'mini-btn ghost'"
+              :style="{background: mockAns[i]!==null ? 'var(--ok)' : '', color: mockAns[i]!==null ? '#fff' : ''}">
+              {{ i+1 }}
+            </button>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ MOCK TEST DONE ============ -->
+    <section v-if="tab==='mockdone'" class="card center tabsec">
+      <div v-html="illus('trophy')"></div>
+      <h2>{{ mockSection.title }}</h2>
+      <h3>{{ mockSection.level.toUpperCase() }}</h3>
+      <div style="margin:20px 0">
+        <div style="font-size:48px;font-weight:900;color:var(--pri)">
+          {{ mockQs.filter((q,i) => mockAns[i] === q.answer).length }}/{{ mockQs.length }}
+        </div>
+        <div class="muted">{{ Math.round(mockQs.filter((q,i) => mockAns[i] === q.answer).length / mockQs.length * 100) }}%</div>
+      </div>
+      <p class="muted">
+        {{ mockQs.filter((q,i) => mockAns[i] === q.answer).length / mockQs.length >= .7 ? 'Sugoi! Lanjutkan ke section berikutnya! 🎉' : 
+           mockQs.filter((q,i) => mockAns[i] === q.answer).length / mockQs.length >= .4 ? 'Lumayan! Pelajari lagi materinya 💪' : 
+           'Ayo belajar lebih giat lagi! 📚' }}
+      </p>
+      
+      <div style="text-align:left;margin-top:20px">
+        <h3><span v-html="ic('filetext',18)"></span> Review Jawaban</h3>
+        <div v-for="(q,i) in mockQs" :key="i" class="card small" style="margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <b>Soal {{ i+1 }}</b>
+            <span v-if="mockAns[i] === q.answer" style="color:var(--ok)">✓ Benar</span>
+            <span v-else-if="mockAns[i] === null" style="color:var(--muted)">— Tidak dijawab</span>
+            <span v-else style="color:var(--bad)">✗ Salah</span>
+          </div>
+          <div class="muted small" style="margin-top:4px">{{ q.question.substring(0,80) }}{{ q.question.length > 80 ? '...' : '' }}</div>
+          <div v-if="mockAns[i] !== q.answer" style="margin-top:6px">
+            <div class="muted small">Jawaban benar: <b>{{ q.options[q.answer] }}</b></div>
+            <div v-if="mockAns[i] !== null" class="muted small">Jawaban kamu: <span style="text-decoration:line-through">{{ q.options[mockAns[i]] }}</span></div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="btn" @click="closeMockTest()">Kembali</button>
     </section>
 
     <!-- ============ TANYA AI (Muse Sensei) ============ -->
@@ -1663,6 +2812,477 @@ const app = createApp({
       <button class="btn ghost btn-block" @click="logout">Keluar</button>
     </section>
 
+    <!-- ============ ADMIN PANEL ============ -->
+    <section v-if="tab==='admin'" class="tabsec">
+      <div v-if="store.user?.role!=='admin'" class="card center muted">🔒 Khusus admin.</div>
+      <div v-else>
+        <h2 class="ttl"><span v-html="ic('sliders')"></span> Admin Panel</h2>
+        <div class="pill-row">
+          <button class="pill" :class="{on:adminTab==='dashboard'}" @click="adminTab='dashboard';admLoadStats()">📊 Dashboard</button>
+          <button class="pill" :class="{on:adminTab==='users'}" @click="adminTab='users';admLoadUsers()">👥 Users</button>
+          <button class="pill" :class="{on:adminTab==='kotoba'}" @click="adminTab='kotoba';admKotobaLoadAll()">📝 Kotoba</button>
+          <button class="pill" :class="{on:adminTab==='kanji'}" @click="adminTab='kanji';admKanjiLoadAll()">✏️ Kanji</button>
+          <button class="pill" :class="{on:adminTab==='banksoal'}" @click="adminTab='banksoal';admLoadPkgs()">📚 Bank Soal</button>
+          <button class="pill" :class="{on:adminTab==='chapters'}" @click="adminTab='chapters';admLoadChapters()">📖 Chapters</button>
+          <button class="pill" :class="{on:adminTab==='mocktest'}" @click="adminTab='mocktest';admLoadMockTest()">🎯 Mock Test</button>
+        </div>
+
+        <!-- DASHBOARD -->
+        <div v-if="adminTab==='dashboard'">
+          <div v-if="admStatsLoading" class="muted">Memuat...</div>
+          <div v-else-if="admStats" class="stat-row">
+            <div class="stat"><div class="stat-n">{{ admStats.users || 0 }}</div><div class="muted small">Users</div></div>
+            <div class="stat"><div class="stat-n">{{ admStats.questions || 0 }}</div><div class="muted small">Soal</div></div>
+            <div class="stat"><div class="stat-n">{{ admStats.kanji || 0 }}</div><div class="muted small">Kanji</div></div>
+            <div class="stat"><div class="stat-n">{{ admStats.kotoba || 0 }}</div><div class="muted small">Kotoba</div></div>
+          </div>
+          <div v-else class="card muted small">Statistik belum tersedia (backend admin belum aktif).</div>
+        </div>
+
+        <!-- USERS -->
+        <div v-if="adminTab==='users'">
+          <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="admUserQ" placeholder="Cari nama/email..."></div>
+          <div v-if="admUsersLoading" class="muted">Memuat...</div>
+          <div v-for="u in admUsers.filter(x => !admUserQ || (x.name+x.email).toLowerCase().includes(admUserQ.toLowerCase()))" :key="u.id" class="lvl">
+            <div class="badge sm">{{ (u.name||'?')[0].toUpperCase() }}</div>
+            <div class="lvl-body"><b>{{ u.name }}</b><div class="muted small">{{ u.email }} · <span class="chip">{{ u.role || 'user' }}</span></div></div>
+            <button v-if="u.role!=='admin'" class="btn ghost sm" @click="admSetRole(u,'admin')">Jadikan Admin</button>
+            <button v-else class="btn ghost sm" @click="admSetRole(u,'user')">Cabut Admin</button>
+          </div>
+        </div>
+
+        <!-- KOTOBA -->
+        <div v-if="adminTab==='kotoba'">
+          <div class="btn-row">
+            <button class="btn sm" @click="admKotobaNew()">＋ Tambah Kotoba</button>
+            <button class="btn ghost sm" @click="admKotobaExportJSON()">📤 JSON</button>
+            <button class="btn ghost sm" @click="admKotobaExportCSV()">📤 CSV</button>
+            <button v-if="admKotobaSelected.length" class="btn ghost sm" @click="admKotobaBulkDelete()" style="color:var(--danger)">🗑️ Hapus {{ admKotobaSelected.length }}</button>
+            <span class="muted small" style="margin-left:auto">Total: {{ admKotobaFiltered.length }} kotoba</span>
+          </div>
+          <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="admKotobaSearch" @input="admKotobaPage=1" placeholder="Cari kotoba (kanji/bacaan/arti)..."></div>
+          <div class="btn-row" style="align-items:center">
+            <span class="muted small">Sort:</span>
+            <button class="pill sm" :class="{on:admKotobaSort==='kanji'}" @click="admKotobaSortBy('kanji')">Kanji {{ admKotobaSort==='kanji' ? (admKotobaSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <button class="pill sm" :class="{on:admKotobaSort==='arti'}" @click="admKotobaSortBy('arti')">Arti {{ admKotobaSort==='arti' ? (admKotobaSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <span class="muted small" style="margin-left:auto"></span>
+            <select v-model.number="admKotobaPerPage" @change="admKotobaPage=1" style="width:auto">
+              <option :value="10">10</option><option :value="25">25</option><option :value="50">50</option><option :value="100">100</option>
+            </select>
+            <span class="muted small">/hal</span>
+          </div>
+          <div v-if="admKotobaForm" class="card pop">
+            <h3 class="ttl-sm">{{ admKotobaEdit ? 'Edit' : 'Tambah' }} Kotoba</h3>
+            <label class="lbl">Kanji/Kana (pisahkan koma)</label><input v-model="admKotobaForm.keb" placeholder="食べる, たべる">
+            <label class="lbl">Bacaan (pisahkan koma)</label><input v-model="admKotobaForm.reb" placeholder="たべる">
+            <label class="lbl">Arti (Indonesia)</label><textarea v-model="admKotobaForm.gloss" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="makan"></textarea>
+            <div class="btn-row"><button class="btn sm" @click="admKotobaSave()">💾 Simpan</button><button class="btn ghost sm" @click="admKotobaForm=null">Batal</button></div>
+          </div>
+          <div v-if="admKotobaLoading" class="muted">Memuat...</div>
+          <div v-else>
+            <div class="lvl" style="background:var(--bg2)">
+              <input type="checkbox" :checked="admKotobaAllSelected" @change="admKotobaToggleAll()" class="adm-chk" style="margin-right:8px">
+              <div class="lvl-body muted small" style="white-space:nowrap"><b>Pilih semua</b></div>
+            </div>
+            <div v-for="w in admKotobaPaginated" :key="w.id" class="lvl">
+              <input type="checkbox" :checked="admKotobaSelected.includes(w.id)" @change="admKotobaToggleSelect(w.id)" class="adm-chk">
+              <div class="lvl-body"><b class="big adm-ellipsis">{{ (w.keb||[])[0] }}</b><div class="muted small adm-ellipsis">{{ (w.reb||[]).join('、') }}</div><div class="muted small adm-ellipsis">{{ w.gloss||'' }}</div></div>
+              <div class="adm-actions">
+                <button class="btn ghost sm" @click="admKotobaClone(w)" title="Clone">📋</button>
+                <button class="btn ghost sm" @click="admKotobaOpen(w)" title="Edit">✏️</button>
+                <button class="btn ghost sm" @click="admKotobaDel(w)" title="Hapus">🗑️</button>
+              </div>
+            </div>
+            <div v-if="!admKotobaFiltered.length" class="muted center" style="padding:20px">Tidak ada kotoba yang cocok</div>
+            <div v-if="admKotobaTotalPages > 1" class="btn-row" style="justify-content:center;margin-top:10px">
+              <button class="btn ghost sm" :disabled="admKotobaPage<=1" @click="admKotobaPage--">‹ Prev</button>
+              <span class="muted small">Hal {{ admKotobaPage }} / {{ admKotobaTotalPages }}</span>
+              <button class="btn ghost sm" :disabled="admKotobaPage>=admKotobaTotalPages" @click="admKotobaPage++">Next ›</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- KANJI -->
+        <div v-if="adminTab==='kanji'">
+          <div class="btn-row">
+            <button class="btn sm" @click="admKanjiNew()">＋ Tambah Kanji</button>
+            <button class="btn ghost sm" @click="admKanjiExportJSON()">📤 JSON</button>
+            <button class="btn ghost sm" @click="admKanjiExportCSV()">📤 CSV</button>
+            <button v-if="admKanjiSelected.length" class="btn ghost sm" @click="admKanjiBulkDelete()" style="color:var(--danger)">🗑️ Hapus {{ admKanjiSelected.length }}</button>
+            <span class="muted small" style="margin-left:auto">Total: {{ admKanjiFiltered.length }} kanji</span>
+          </div>
+          <div class="pill-row">
+            <button v-for="j in [0,5,4,3,2,1]" :key="'ak'+j" class="pill" :class="{on:admKanjiJlpt===j}" @click="admKanjiJlpt=j;admKanjiLoadAll()">{{ j===0 ? 'Semua' : 'N'+j }}</button>
+          </div>
+          <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="admKanjiSearch" @input="admKanjiPage=1" placeholder="Cari kanji/arti..."></div>
+          <div class="btn-row" style="align-items:center">
+            <span class="muted small">Sort:</span>
+            <button class="pill sm" :class="{on:admKanjiSort==='kanji'}" @click="admKanjiSortBy('kanji')">Kanji {{ admKanjiSort==='kanji' ? (admKanjiSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <button class="pill sm" :class="{on:admKanjiSort==='strokes'}" @click="admKanjiSortBy('strokes')">Goresan {{ admKanjiSort==='strokes' ? (admKanjiSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <button class="pill sm" :class="{on:admKanjiSort==='jlpt'}" @click="admKanjiSortBy('jlpt')">JLPT {{ admKanjiSort==='jlpt' ? (admKanjiSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <span class="muted small" style="margin-left:auto"></span>
+            <select v-model.number="admKanjiPerPage" @change="admKanjiPage=1" style="width:auto">
+              <option :value="10">10</option><option :value="25">25</option><option :value="50">50</option><option :value="100">100</option>
+            </select>
+            <span class="muted small">/hal</span>
+          </div>
+          <div v-if="admKanjiForm" class="card pop">
+            <h3 class="ttl-sm">{{ admKanjiEdit ? 'Edit' : 'Tambah' }} Kanji</h3>
+            <label class="lbl">Kanji</label><input v-model="admKanjiForm.ch" placeholder="食" maxlength="1">
+            <label class="lbl">Onyomi (pisahkan koma)</label><input v-model="admKanjiForm.onyomi" placeholder="ショク">
+            <label class="lbl">Kunyomi (pisahkan koma)</label><input v-model="admKanjiForm.kunyomi" placeholder="たべる">
+            <label class="lbl">Arti</label><input v-model="admKanjiForm.meaning" placeholder="makan">
+            <div class="btn-row">
+              <div style="flex:1"><label class="lbl">JLPT</label><select v-model="admKanjiForm.jlpt"><option v-for="n in [5,4,3,2,1]" :value="n">N{{ n }}</option></select></div>
+              <div style="flex:1"><label class="lbl">Goresan</label><input v-model="admKanjiForm.strokes" type="number" placeholder="9"></div>
+            </div>
+            <div class="btn-row"><button class="btn sm" @click="admKanjiSave()">💾 Simpan</button><button class="btn ghost sm" @click="admKanjiForm=null">Batal</button></div>
+          </div>
+          <div v-if="admKanjiLoading" class="muted">Memuat...</div>
+          <div v-else>
+            <div class="lvl" style="background:var(--bg2)">
+              <input type="checkbox" :checked="admKanjiAllSelected" @change="admKanjiToggleAll()" class="adm-chk" style="margin-right:8px">
+              <div class="lvl-body muted small" style="white-space:nowrap"><b>Pilih semua</b></div>
+            </div>
+            <div v-for="k in admKanjiPaginated" :key="k.ch" class="lvl">
+              <input type="checkbox" :checked="admKanjiSelected.includes(k.ch)" @change="admKanjiToggleSelect(k.ch)" class="adm-chk">
+              <div class="badge adm-badge-sm">{{ k.ch }}</div>
+              <div class="lvl-body"><b class="adm-ellipsis">{{ k.meaning }}</b><div class="muted small"><span class="chip">N{{ k.jlpt }}</span> {{ k.strokes }} goresan</div></div>
+              <div class="adm-actions">
+                <button class="btn ghost sm" @click="admKanjiClone(k)" title="Clone">📋</button>
+                <button class="btn ghost sm" @click="admKanjiOpen(k)" title="Edit">✏️</button>
+                <button class="btn ghost sm" @click="admKanjiDel(k)" title="Hapus">🗑️</button>
+              </div>
+            </div>
+            <div v-if="!admKanjiFiltered.length" class="muted center" style="padding:20px">Tidak ada kanji yang cocok</div>
+            <div v-if="admKanjiTotalPages > 1" class="btn-row" style="justify-content:center;margin-top:10px">
+              <button class="btn ghost sm" :disabled="admKanjiPage<=1" @click="admKanjiPage--">‹ Prev</button>
+              <span class="muted small">Hal {{ admKanjiPage }} / {{ admKanjiTotalPages }}</span>
+              <button class="btn ghost sm" :disabled="admKanjiPage>=admKanjiTotalPages" @click="admKanjiPage++">Next ›</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- BANK SOAL -->
+        <div v-if="adminTab==='banksoal'">
+          <div class="btn-row">
+            <button class="btn sm" @click="admPkgNew()">＋ Tambah Paket</button>
+            <button class="btn ghost sm" @click="admPkgExportJSON()">📤 JSON</button>
+            <button class="btn ghost sm" @click="admPkgExportCSV()">📤 CSV</button>
+            <button v-if="admPkgSelected.length" class="btn ghost sm" @click="admPkgBulkDelete()" style="color:var(--danger)">🗑️ Hapus {{ admPkgSelected.length }}</button>
+            <span class="muted small" style="margin-left:auto">Total: {{ admPkgFiltered.length }} paket</span>
+          </div>
+          <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="admPkgSearch" @input="admPkgPage=1" placeholder="Cari paket (judul/id/level)..."></div>
+          <div class="btn-row" style="align-items:center">
+            <span class="muted small">Sort:</span>
+            <button class="pill sm" :class="{on:admPkgSort==='title'}" @click="admPkgSortBy('title')">Judul {{ admPkgSort==='title' ? (admPkgSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <button class="pill sm" :class="{on:admPkgSort==='soal'}" @click="admPkgSortBy('soal')">Jml Soal {{ admPkgSort==='soal' ? (admPkgSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <button class="pill sm" :class="{on:admPkgSort==='level'}" @click="admPkgSortBy('level')">Level {{ admPkgSort==='level' ? (admPkgSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <span class="muted small" style="margin-left:auto"></span>
+            <select v-model.number="admPkgPerPage" @change="admPkgPage=1" style="width:auto">
+              <option :value="10">10</option><option :value="25">25</option><option :value="50">50</option><option :value="100">100</option>
+            </select>
+            <span class="muted small">/hal</span>
+          </div>
+          <div v-if="admPkgForm" class="card pop">
+            <h3 class="ttl-sm">{{ admPkgEdit ? 'Edit' : 'Tambah' }} Paket Soal</h3>
+            <label class="lbl">ID Paket</label><input v-model="admPkgForm.id" placeholder="jlpt-n3-202407" :disabled="!!admPkgEdit">
+            <label class="lbl">Judul</label><input v-model="admPkgForm.title" placeholder="JLPT N3 · Juli 2024">
+            <div class="btn-row">
+              <div style="flex:1"><label class="lbl">Kategori</label><select v-model="admPkgForm.cat"><option value="jlpt">JLPT</option><option value="jft">JFT</option><option value="ssw">SSW</option></select></div>
+              <div style="flex:1"><label class="lbl">Level</label><select v-model="admPkgForm.level"><option v-for="l in ['n5','n4','n3','n2','n1']" :value="l">{{ l.toUpperCase() }}</option></select></div>
+            </div>
+            <div class="btn-row">
+              <div style="flex:1"><label class="lbl">Tahun</label><input v-model="admPkgForm.year" type="number"></div>
+              <div style="flex:1"><label class="lbl">Sesi</label><select v-model="admPkgForm.session"><option value="07">07 (Juli)</option><option value="12">12 (Des)</option></select></div>
+            </div>
+            <label class="lbl">Sumber</label><input v-model="admPkgForm.source" placeholder="berkas user">
+            <label class="lbl">Catatan</label><input v-model="admPkgForm.note" placeholder="klaim pengunggah">
+            <div class="btn-row"><button class="btn sm" @click="admPkgSave()">💾 Simpan</button><button class="btn ghost sm" @click="admPkgForm=null">Batal</button></div>
+          </div>
+          <div v-if="admPkgsLoading" class="muted">Memuat...</div>
+          <div v-else>
+            <div class="lvl" style="background:var(--bg2)">
+              <input type="checkbox" :checked="admPkgAllSelected" @change="admPkgToggleAll()" class="adm-chk" style="margin-right:8px">
+              <div class="lvl-body muted small" style="white-space:nowrap"><b>Pilih semua</b></div>
+            </div>
+            <div v-for="p in admPkgPaginated" :key="p.id" class="lvl">
+              <input type="checkbox" :checked="admPkgSelected.includes(p.id)" @change="admPkgToggleSelect(p.id)" class="adm-chk">
+              <div class="lvl-body"><b class="adm-ellipsis">{{ p.title }}</b><div class="muted small adm-ellipsis">{{ p.id }} · {{ p.soal || 0 }} soal</div></div>
+              <div class="adm-actions">
+                <button class="btn ghost sm" @click="admPkgOpen(p);admPkgViewQs(p)" title="Lihat soal">👁️</button>
+                <button class="btn ghost sm" @click="admPkgClone(p)" title="Clone">📋</button>
+                <button class="btn ghost sm" @click="admPkgOpen(p)" title="Edit">✏️</button>
+                <button class="btn ghost sm" @click="admPkgDel(p)" title="Hapus">🗑️</button>
+              </div>
+            </div>
+            <div v-if="!admPkgFiltered.length" class="muted center" style="padding:20px">Tidak ada paket yang cocok</div>
+            <div v-if="admPkgTotalPages > 1" class="btn-row" style="justify-content:center;margin-top:10px">
+              <button class="btn ghost sm" :disabled="admPkgPage<=1" @click="admPkgPage--">‹ Prev</button>
+              <span class="muted small">Hal {{ admPkgPage }} / {{ admPkgTotalPages }}</span>
+              <button class="btn ghost sm" :disabled="admPkgPage>=admPkgTotalPages" @click="admPkgPage++">Next ›</button>
+            </div>
+          </div>
+          <div v-if="admPkgQs" class="card pop">
+            <h3 class="ttl-sm">Soal paket ({{ admQFiltered.length }})</h3>
+            <div class="btn-row">
+              <button class="btn sm" @click="admQNew()">+ Tambah Soal</button>
+              <button class="btn ghost sm" @click="admQExportJSON()">📤 JSON</button>
+              <button class="btn ghost sm" @click="admQExportCSV()">📤 CSV</button>
+              <button v-if="admQSelected.length" class="btn ghost sm" @click="admQBulkDelete()" style="color:var(--danger)">🗑️ {{ admQSelected.length }}</button>
+              <button class="btn ghost sm" @click="admPkgQs=null">Tutup</button>
+            </div>
+            <div class="searchbar" style="margin-top:8px"><span v-html="ic('search',17)"></span><input v-model="admQSearch" @input="admQPage=1" placeholder="Cari soal..."></div>
+            <div class="btn-row" style="align-items:center">
+              <span class="muted small">Sort:</span>
+              <button class="pill sm" :class="{on:admQSort==='no'}" @click="admQSortBy('no')">No {{ admQSort==='no' ? (admQSortDir==='asc'?'↑':'↓') : '' }}</button>
+              <button class="pill sm" :class="{on:admQSort==='sec'}" @click="admQSortBy('sec')">Section {{ admQSort==='sec' ? (admQSortDir==='asc'?'↑':'↓') : '' }}</button>
+              <span class="muted small" style="margin-left:auto"></span>
+              <select v-model.number="admQPerPage" @change="admQPage=1" style="width:auto">
+                <option :value="10">10</option><option :value="25">25</option><option :value="50">50</option><option :value="100">100</option>
+              </select>
+              <span class="muted small">/hal</span>
+            </div>
+            <div v-if="admQForm" class="card pop" style="margin-top:10px">
+              <h3 class="ttl-sm">{{ admQEdit !== null ? 'Edit' : 'Tambah' }} Soal</h3>
+              <label class="lbl">Type</label>
+              <select v-model="admQForm.type">
+                <option value="kanji-reading">Kanji Reading</option>
+                <option value="kanji-writing">Kanji Writing</option>
+                <option value="context">Context Fill</option>
+                <option value="grammar-fill">Grammar Fill</option>
+                <option value="sentence-order">Sentence Order</option>
+                <option value="short-passage">Short Passage</option>
+                <option value="task-based">Task Based (Listening)</option>
+              </select>
+              <label class="lbl">Instruction</label>
+              <textarea v-model="admQForm.instruction" rows="2" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="＿の　ことばの　読み方として　最もよいものを..."></textarea>
+              <label class="lbl">Question</label>
+              <textarea v-model="admQForm.question" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Pertanyaan soal..."></textarea>
+              <label class="lbl">Underline (opsional, untuk tipe kanji)</label>
+              <input v-model="admQForm.underline" placeholder="Kata yang diberi garis bawah">
+              <label class="lbl">Passage (opsional, untuk reading)</label>
+              <textarea v-model="admQForm.passage" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Teks bacaan..."></textarea>
+              <label class="lbl">Audio Path (opsional, untuk listening)</label>
+              <input v-model="admQForm.audio" placeholder="/audio/n5-mock-q1.mp3">
+              <label class="lbl">Options (4 pilihan)</label>
+              <div v-for="(op, oi) in admQForm.options" :key="oi" style="display:flex;gap:8px;margin-bottom:6px;align-items:center">
+                <span class="muted small" style="min-width:20px">{{ oi + 1 }}.</span>
+                <input v-model="admQForm.options[oi]" :placeholder="'Option ' + (oi + 1)" style="flex:1">
+              </div>
+              <label class="lbl">Correct Answer (0-3)</label>
+              <input v-model.number="admQForm.answer" type="number" min="0" max="3" placeholder="0">
+              <label class="lbl">Pembahasan</label>
+              <textarea v-model="admQForm.ex" rows="2" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Penjelasan jawaban..."></textarea>
+              <div class="btn-row"><button class="btn sm" @click="admQSave()">💾 Simpan</button><button class="btn ghost sm" @click="admQForm=null">Batal</button></div>
+            </div>
+            <div v-if="admPkgQsLoading" class="muted">Memuat...</div>
+            <div v-else>
+              <div class="lvl" style="margin-top:6px;background:var(--bg2)">
+                <input type="checkbox" :checked="admQAllSelected" @change="admQToggleAll()" class="adm-chk" style="margin-right:8px">
+                <div class="lvl-body muted small" style="white-space:nowrap"><b>Pilih semua</b></div>
+              </div>
+              <div v-for="q in admQPaginated" :key="q._idx" class="lvl">
+                <input type="checkbox" :checked="admQSelected.includes(q._idx)" @change="admQToggleSelect(q._idx)" class="adm-chk">
+                <div class="lvl-body"><b>No. {{ q._idx + 1 }} [{{ q.type || q.sec || '-' }}]</b><div class="muted small adm-ellipsis">{{ q.question || q.q || '' }}</div><div class="muted small">{{ (q.answer ?? q.a) !== null && (q.answer ?? q.a) !== undefined ? 'Kunci: opsi ' + ((q.answer ?? q.a) + 1) : 'Belum ada kunci' }}</div></div>
+                <div class="adm-actions">
+                  <button class="btn ghost sm" @click="admQClone(q)" title="Clone">📋</button>
+                  <button class="btn ghost sm" @click="admQOpen(q._idx)" title="Edit">✏️</button>
+                  <button class="btn ghost sm" @click="admQDel(q._idx)" title="Hapus">🗑️</button>
+                </div>
+              </div>
+              <div v-if="!admQFiltered.length" class="muted center" style="padding:20px">Tidak ada soal yang cocok</div>
+              <div v-if="admQTotalPages > 1" class="btn-row" style="justify-content:center;margin-top:10px">
+                <button class="btn ghost sm" :disabled="admQPage<=1" @click="admQPage--">‹ Prev</button>
+                <span class="muted small">Hal {{ admQPage }} / {{ admQTotalPages }}</span>
+                <button class="btn ghost sm" :disabled="admQPage>=admQTotalPages" @click="admQPage++">Next ›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHAPTERS -->
+        <div v-if="adminTab==='chapters'">
+          <div class="btn-row">
+            <span class="muted small">Total: {{ admChFiltered.length }} bab</span>
+            <button class="btn ghost sm" @click="admChExportJSON()">📤 JSON</button>
+            <button class="btn ghost sm" @click="admChExportCSV()">📤 CSV</button>
+          </div>
+          <label class="lbl">Level</label>
+          <select v-model="admChLevel" @change="admLoadChapters()">
+            <option v-for="l in ['n5','n4','n3','n2','n1']" :value="l">{{ l.toUpperCase() }}</option>
+          </select>
+          <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="admChSearch" @input="admChPage=1" placeholder="Cari bab/judul..."></div>
+          <div class="btn-row" style="align-items:center">
+            <span class="muted small">Sort:</span>
+            <button class="pill sm" :class="{on:admChSort==='bab'}" @click="admChSortBy('bab')">Bab {{ admChSort==='bab' ? (admChSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <button class="pill sm" :class="{on:admChSort==='title'}" @click="admChSortBy('title')">Judul {{ admChSort==='title' ? (admChSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <span class="muted small" style="margin-left:auto"></span>
+            <select v-model.number="admChPerPage" @change="admChPage=1" style="width:auto">
+              <option :value="10">10</option><option :value="25">25</option><option :value="50">50</option><option :value="100">100</option>
+            </select>
+            <span class="muted small">/hal</span>
+          </div>
+          <div v-if="admChaptersLoading" class="muted">Memuat...</div>
+          <div v-else>
+            <div v-for="ch in admChPaginated" :key="ch.id" class="lvl" @click="admChOpen(ch)">
+              <div class="badge adm-badge-sm">{{ ch.bab }}</div>
+              <div class="lvl-body"><b class="adm-ellipsis">Bab {{ ch.bab }}: {{ ch.title }}</b><div class="muted small adm-ellipsis">{{ ch.desc||'' }}</div></div>
+              <span v-html="ic('pen',17)"></span>
+            </div>
+            <div v-if="!admChFiltered.length" class="muted center" style="padding:20px">Tidak ada bab yang cocok</div>
+            <div v-if="admChTotalPages > 1" class="btn-row" style="justify-content:center;margin-top:10px">
+              <button class="btn ghost sm" :disabled="admChPage<=1" @click="admChPage--">‹ Prev</button>
+              <span class="muted small">Hal {{ admChPage }} / {{ admChTotalPages }}</span>
+              <button class="btn ghost sm" :disabled="admChPage>=admChTotalPages" @click="admChPage++">Next ›</button>
+            </div>
+          </div>
+          <div v-if="admChEdit" class="card pop">
+            <h3 class="ttl-sm">Edit Bab</h3>
+            <label class="lbl">Judul</label><input v-model="admChForm.title" placeholder="Judul bab">
+            <label class="lbl">Deskripsi</label><input v-model="admChForm.desc" placeholder="Deskripsi singkat">
+            <label class="lbl">Penjelasan (boleh panjang)</label><textarea v-model="admChForm.penjelasan" rows="10" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Isi penjelasan bab..."></textarea>
+            <div class="btn-row"><button class="btn sm" @click="admChSave()">💾 Simpan</button><button class="btn ghost sm" @click="admChEdit=null">Batal</button></div>
+          </div>
+        </div>
+
+        <!-- MOCK TEST -->
+        <div v-if="adminTab==='mocktest'">
+          <h3 class="ttl-sm">Manage Mock Test Questions</h3>
+          <div class="btn-row">
+            <div style="flex:1">
+              <label class="lbl">Level</label>
+              <select v-model="admMockLevel" @change="admLoadMockTest()">
+                <option v-for="l in ['n5','n4','n3','n2','n1']" :value="l">{{ l.toUpperCase() }}</option>
+              </select>
+            </div>
+            <div style="flex:1">
+              <label class="lbl">Section</label>
+              <select v-model="admMockSection" @change="admLoadMockTest()">
+                <option value="vocab">Vocab (文字・語彙)</option>
+                <option value="grammar">Grammar (文法)</option>
+                <option value="reading">Reading (読解)</option>
+                <option value="listening">Listening (聴解)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="btn-row">
+            <button class="btn sm" @click="admMockQNew()">＋ Tambah Soal</button>
+            <button class="btn ghost sm" @click="admMockExportJSON()">📤 JSON</button>
+            <button class="btn ghost sm" @click="admMockExportCSV()">📤 CSV</button>
+            <button v-if="admMockSelected.length" class="btn ghost sm" @click="admMockBulkDelete()" style="color:var(--danger)">🗑️ Hapus {{ admMockSelected.length }}</button>
+            <span class="muted small" style="margin-left:auto">Total: {{ admMockQsFiltered.length }} soal</span>
+          </div>
+
+          <div class="searchbar"><span v-html="ic('search',17)"></span><input v-model="admMockSearch" @input="admMockPage=1" placeholder="Cari soal (pertanyaan/instruksi/opsi)..."></div>
+
+          <div class="btn-row" style="align-items:center">
+            <span class="muted small">Tipe:</span>
+            <select v-model="admMockFilter" @change="admMockPage=1" style="width:auto">
+              <option value="all">Semua</option>
+              <option value="kanji-reading">Kanji Reading</option>
+              <option value="kanji-writing">Kanji Writing</option>
+              <option value="context">Context</option>
+              <option value="grammar-fill">Grammar Fill</option>
+              <option value="sentence-order">Sentence Order</option>
+              <option value="short-passage">Short Passage</option>
+              <option value="task-based">Task Based</option>
+            </select>
+            <span class="muted small">Sort:</span>
+            <button class="pill sm" :class="{on:admMockSort==='id'}" @click="admMockSortBy('id')">ID {{ admMockSort==='id' ? (admMockSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <button class="pill sm" :class="{on:admMockSort==='type'}" @click="admMockSortBy('type')">Tipe {{ admMockSort==='type' ? (admMockSortDir==='asc'?'↑':'↓') : '' }}</button>
+            <span class="muted small" style="margin-left:auto"></span>
+            <select v-model.number="admMockPerPage" @change="admMockPage=1" style="width:auto">
+              <option :value="10">10</option><option :value="25">25</option><option :value="50">50</option><option :value="100">100</option>
+            </select>
+            <span class="muted small">/hal</span>
+          </div>
+
+          <div v-if="admMockStats" class="btn-row" style="margin-top:8px">
+            <div class="card small" style="flex:1;text-align:center"><b>{{ admMockStats.total }}</b><div class="muted small">Total</div></div>
+            <div v-for="(c, t) in admMockStats.byType" :key="t" class="card small" style="flex:1;text-align:center"><b>{{ c }}</b><div class="muted small">{{ t }}</div></div>
+          </div>
+          
+          <div v-if="admMockQForm" class="card pop">
+            <h3 class="ttl-sm">{{ admMockQEdit !== null ? 'Edit' : 'Tambah' }} Soal Mock Test</h3>
+            
+            <label class="lbl">Type</label>
+            <select v-model="admMockQForm.type">
+              <option value="kanji-reading">Kanji Reading</option>
+              <option value="kanji-writing">Kanji Writing</option>
+              <option value="context">Context Fill</option>
+              <option value="grammar-fill">Grammar Fill</option>
+              <option value="sentence-order">Sentence Order</option>
+              <option value="short-passage">Short Passage</option>
+              <option value="task-based">Task Based (Listening)</option>
+            </select>
+            
+            <label class="lbl">Instruction</label>
+            <textarea v-model="admMockQForm.instruction" rows="2" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="＿の　ことばの　読み方として　最もよいものを..."></textarea>
+            
+            <label class="lbl">Question</label>
+            <textarea v-model="admMockQForm.question" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Pertanyaan soal..."></textarea>
+            
+            <label class="lbl">Underline (opsional, untuk tipe kanji)</label>
+            <input v-model="admMockQForm.underline" placeholder="Kata yang diberi garis bawah">
+            
+            <label class="lbl">Passage (opsional, untuk reading)</label>
+            <textarea v-model="admMockQForm.passage" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Teks bacaan..."></textarea>
+            
+            <label class="lbl">Audio Path (opsional, untuk listening)</label>
+            <input v-model="admMockQForm.audio" placeholder="/audio/n5-mock-q1.mp3">
+            
+            <label class="lbl">Options (4 pilihan)</label>
+            <div v-for="(op, oi) in admMockQForm.options" :key="oi" style="display:flex;gap:8px;margin-bottom:6px;align-items:center">
+              <span class="muted small" style="min-width:20px">{{ oi + 1 }}.</span>
+              <input v-model="admMockQForm.options[oi]" :placeholder="'Option ' + (oi + 1)" style="flex:1">
+            </div>
+            
+            <label class="lbl">Correct Answer (0-3)</label>
+            <input v-model.number="admMockQForm.answer" type="number" min="0" max="3" placeholder="0">
+            
+            <div class="btn-row">
+              <button class="btn sm" @click="admMockQSave()">💾 Simpan</button>
+              <button class="btn ghost sm" @click="admMockQForm=null">Batal</button>
+            </div>
+          </div>
+          
+          <div v-if="admMockQsLoading" class="muted">Memuat...</div>
+
+          <div v-else>
+            <div class="lvl" style="margin-top:6px;background:var(--bg2)">
+              <input type="checkbox" :checked="admMockAllSelected" @change="admMockToggleAll()" class="adm-chk" style="margin-right:8px">
+              <div class="lvl-body muted small" style="white-space:nowrap"><b>Pilih semua</b></div>
+            </div>
+            <div v-for="q in admMockQsPaginated" :key="q.id" class="lvl">
+              <input type="checkbox" :checked="admMockSelected.includes(q.id)" @change="admMockToggleSelect(q.id)" class="adm-chk">
+              <div class="lvl-body">
+                <b>No. {{ q.id }} [{{ q.type }}]</b>
+                <div class="muted small adm-ellipsis">{{ q.question || '' }}</div>
+                <div class="muted small adm-ellipsis" style="color:var(--success)">✓ {{ q.options && q.options[q.answer] ? q.options[q.answer] : 'N/A' }}</div>
+              </div>
+              <div class="adm-actions">
+                <button class="btn ghost sm" @click="admMockClone(admMockQs.indexOf(q))" title="Clone">📋</button>
+                <button class="btn ghost sm" @click="admMockQEdit = admMockQs.indexOf(q); admMockQOpen(admMockQs.indexOf(q))" title="Edit">✏️</button>
+                <button class="btn ghost sm" @click="admMockQDel(admMockQs.indexOf(q))" title="Hapus">🗑️</button>
+              </div>
+            </div>
+
+            <div v-if="!admMockQsFiltered.length" class="muted center" style="padding:20px">
+              Belum ada soal untuk {{ admMockLevel.toUpperCase() }} - {{ admMockSection }}
+            </div>
+
+            <div v-if="admMockTotalPages > 1" class="btn-row" style="justify-content:center;margin-top:10px">
+              <button class="btn ghost sm" :disabled="admMockPage<=1" @click="admMockPage--">‹ Prev</button>
+              <span class="muted small">Hal {{ admMockPage }} / {{ admMockTotalPages }}</span>
+              <button class="btn ghost sm" :disabled="admMockPage>=admMockTotalPages" @click="admMockPage++">Next ›</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ SRS RUN ============ -->
     <section v-if="tab==='srsrun' && srsDue[srsIdx]" class="card pop center tabsec">
       <p class="muted small">Flashcard {{ srsIdx+1 }}/{{ srsDue.length }} · {{ srsDone }} selesai</p>
@@ -1692,6 +3312,7 @@ const app = createApp({
       <button :class="{on:tab==='kamus'}" @click="tab='kamus'"><span v-html="ic('search')"></span>Kamus</button>
       <button :class="{on:tab==='tanya'}" @click="tab='tanya'"><span v-html="ic('chat')"></span>Tanya AI</button>
       <button :class="{on:['saya','srsrun'].includes(tab)}" @click="tab='saya'"><span v-html="ic('user')"></span>Saya</button>
+      <button v-if="store.user?.role==='admin'" :class="{on:tab==='admin'}" @click="tab='admin'"><span v-html="ic('sliders')"></span>Admin</button>
     </nav>
   </div>
 </div>
@@ -1742,9 +3363,14 @@ app.component('StrokeOrder', {
   beforeUnmount() { clearTimeout(this.timer); },
   methods: {
     reset() { clearTimeout(this.timer); this.strokes = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
+    strokeStart(d) {
+      const m = String(d || '').match(/^[Mm]\s*(-?[\d.]+)[,\s]+(-?[\d.]+)/);
+      if (m) return { x: parseFloat(m[1]), y: parseFloat(m[2]) };
+      return { x: 54, y: 54 };
+    },
     async load() {
       try {
-      for (const u of this.urls()) {
+      for (const u of this.urls) {
         try {
           const r = await fetch(u);
           const t = await r.text();
@@ -1823,6 +3449,11 @@ app.component('WordStrokeOrder', {
   beforeUnmount() { clearTimeout(this.timer); },
   methods: {
     reset() { clearTimeout(this.timer); this.sets = []; this.idx = 0; this.playing = false; this.error = false; this.loading = true; },
+    strokeStart(d) {
+      const m = String(d || '').match(/^[Mm]\s*(-?[\d.]+)[,\s]+(-?[\d.]+)/);
+      if (m) return { x: parseFloat(m[1]), y: parseFloat(m[2]) };
+      return { x: 54, y: 54 };
+    },
     svgUrls(ch) { const hex = String(ch).codePointAt(0).toString(16).padStart(5, '0'); return ['kanjivg/' + hex + '.svg', 'https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/' + hex + '.svg']; },
     async load() {
       try {
@@ -2011,6 +3642,9 @@ app.config.globalProperties.LIB_TYPES = LIB_TYPES;
 app.config.globalProperties.TYPE_ICON = TYPE_ICON;
 app.config.globalProperties.MODUL_CATS = MODUL_CATS;
 app.config.globalProperties.SSW_FIELDS = SSW_FIELDS;
+app.config.globalProperties.SSW_KAIGO = (typeof SSW_KAIGO !== 'undefined') ? SSW_KAIGO : [];
+app.config.globalProperties.MOCKTEST_LEVELS = (typeof MOCKTEST_LEVELS !== 'undefined') ? MOCKTEST_LEVELS : [];
+app.config.globalProperties.MOCKTEST_QUESTIONS = (typeof MOCKTEST_QUESTIONS !== 'undefined') ? MOCKTEST_QUESTIONS : {};
 app.config.globalProperties.BANK_YEARS = BANK_YEARS;
 app.config.globalProperties.ALL_LESSONS = ALL_LESSONS;
 app.config.globalProperties.LEVEL_ORDER = LEVEL_ORDER;

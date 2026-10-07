@@ -1,5 +1,5 @@
 /* NihongoLearn PWA — service worker */
-const CACHE = 'nihongolearn-v2';
+const CACHE = 'nihongolearn-v4';
 const SHELL = [
   '/',
   '/index.html',
@@ -9,7 +9,7 @@ const SHELL = [
   '/icons/maskable-512.png',
   '/icons/apple-touch-icon.png',
   '/icons/favicon-32.png',
-  '/css/style.css?v=67',
+  '/css/style.css?v=69',
   '/js/vendor-vue.js?v=55',
   '/js/data-kana.js?v=55',
   '/js/data-lessons.js?v=55',
@@ -20,7 +20,10 @@ const SHELL = [
   '/js/data-banksoal-n3.js?v=1',
   '/js/data-banksoal-cleaning.js?v=1',
   '/js/data-banksoal-jft2.js?v=1',
-  '/js/app.js?v=78'
+  '/js/data-ssw-kaigo.js?v=1',
+  '/js/data-mocktest.js?v=1',
+  '/js/data-mocktest-questions.js?v=1',
+  '/js/app.js?v=101'
 ];
 
 self.addEventListener('install', (e) => {
