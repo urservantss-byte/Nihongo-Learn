@@ -368,9 +368,10 @@ const app = createApp({
       if (this.admQSearch.trim()) {
         const s = this.admQSearch.toLowerCase();
         qs = qs.filter(q =>
-          ((q.q || '').toLowerCase().includes(s)) ||
-          ((q.sec || '').toLowerCase().includes(s)) ||
-          ((q.o || []).join(' ').toLowerCase().includes(s))
+          ((q.question || q.q || '').toLowerCase().includes(s)) ||
+          ((q.instruction || '').toLowerCase().includes(s)) ||
+          ((q.type || q.sec || '').toLowerCase().includes(s)) ||
+          ((q.options || q.o || []).join(' ').toLowerCase().includes(s))
         );
       }
       qs = [...qs].map((q, i) => ({ ...q, _idx: i }));
@@ -1307,17 +1308,28 @@ const app = createApp({
       try { const d = await api(`/api/admin/banksoal/${encodeURIComponent(p.id)}/questions`); this.admPkgQs = d.questions || []; } catch { this.admPkgQs = []; }
       this.admPkgQsLoading = false;
     },
-    admQNew() { this.admQEdit = null; this.admQForm = { sec: 'goi', q: '', o: ['', '', '', ''], a: 0, ex: '' }; },
+    admQNew() { this.admQEdit = null; this.admQForm = { type: 'context', instruction: '', question: '', underline: '', passage: '', audio: '', options: ['', '', '', ''], answer: 0, ex: '' }; },
     admQOpen(qi) {
       const q = this.admPkgQs[qi];
       this.admQEdit = qi;
-      this.admQForm = { sec: q.sec || 'goi', q: q.q || '', o: [...(q.o || []), '', '', '', ''].slice(0, 4), a: q.a ?? 0, ex: q.ex || '' };
+      // Support format lama (sec/q/o/a) dan baru (type/question/options/answer)
+      this.admQForm = {
+        type: q.type || q.sec || 'context',
+        instruction: q.instruction || '',
+        question: q.question || q.q || '',
+        underline: q.underline || '',
+        passage: q.passage || '',
+        audio: q.audio || '',
+        options: [...(q.options || q.o || []), '', '', '', ''].slice(0, 4),
+        answer: q.answer ?? q.a ?? 0,
+        ex: q.ex || ''
+      };
     },
     async admQSave() {
       const f = this.admQForm;
-      const opts = f.o.map(s => (s || '').trim()).filter(Boolean);
-      if (!f.q.trim() || opts.length < 2) { toast('Soal & min 2 opsi wajib diisi'); return; }
-      const body = { sec: f.sec, q: f.q.trim(), o: opts, a: parseInt(f.a), ex: f.ex.trim() };
+      const opts = f.options.map(s => (s || '').trim()).filter(Boolean);
+      if (!f.question.trim() || opts.length < 2) { toast('Soal & min 2 opsi wajib diisi'); return; }
+      const body = { type: f.type, instruction: (f.instruction || '').trim(), question: f.question.trim(), underline: (f.underline || '').trim(), passage: (f.passage || '').trim(), audio: (f.audio || '').trim(), options: opts, answer: parseInt(f.answer), ex: (f.ex || '').trim() };
       try {
         const pid = encodeURIComponent(this.admPkgQsId);
         if (this.admQEdit !== null) await api(`/api/admin/banksoal/${pid}/questions/${this.admQEdit}`, { method: 'PUT', body: JSON.stringify(body) });
@@ -1759,8 +1771,18 @@ const app = createApp({
     },
     admQClone(q) {
       this.admQEdit = null;
-      this.admQForm = { sec: q.sec || 'goi', q: (q.q || '') + ' (copy)', o: [...(q.o || []), '', '', '', ''].slice(0, 4), a: q.a ?? 0, ex: q.ex || '' };
-      toast('Form duplikat siap — klik Simpan Soal');
+      this.admQForm = {
+        type: q.type || q.sec || 'context',
+        instruction: q.instruction || '',
+        question: (q.question || q.q || '') + ' (copy)',
+        underline: q.underline || '',
+        passage: q.passage || '',
+        audio: q.audio || '',
+        options: [...(q.options || q.o || []), '', '', '', ''].slice(0, 4),
+        answer: q.answer ?? q.a ?? 0,
+        ex: q.ex || ''
+      };
+      toast('Form duplikat siap — klik Simpan');
     },
     admQExportJSON() {
       const data = { exported: new Date().toISOString(), package: this.admPkgQsId, count: this.admQFiltered.length, questions: this.admQFiltered };
@@ -2869,16 +2891,36 @@ const app = createApp({
             </div>
             <div v-if="admQForm" class="card pop" style="margin-top:10px">
               <h3 class="ttl-sm">{{ admQEdit !== null ? 'Edit' : 'Tambah' }} Soal</h3>
-              <label class="lbl">Section</label><input v-model="admQForm.sec" placeholder="goi">
-              <label class="lbl">Pertanyaan</label><textarea v-model="admQForm.q" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Tulis soal..."></textarea>
-              <label class="lbl">Opsi jawaban (min 2)</label>
-              <div v-for="(op, oi) in admQForm.o" :key="oi" style="display:flex;gap:8px;margin-bottom:6px;align-items:center">
+              <label class="lbl">Type</label>
+              <select v-model="admQForm.type">
+                <option value="kanji-reading">Kanji Reading</option>
+                <option value="kanji-writing">Kanji Writing</option>
+                <option value="context">Context Fill</option>
+                <option value="grammar-fill">Grammar Fill</option>
+                <option value="sentence-order">Sentence Order</option>
+                <option value="short-passage">Short Passage</option>
+                <option value="task-based">Task Based (Listening)</option>
+              </select>
+              <label class="lbl">Instruction</label>
+              <textarea v-model="admQForm.instruction" rows="2" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="＿の　ことばの　読み方として　最もよいものを..."></textarea>
+              <label class="lbl">Question</label>
+              <textarea v-model="admQForm.question" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Pertanyaan soal..."></textarea>
+              <label class="lbl">Underline (opsional, untuk tipe kanji)</label>
+              <input v-model="admQForm.underline" placeholder="Kata yang diberi garis bawah">
+              <label class="lbl">Passage (opsional, untuk reading)</label>
+              <textarea v-model="admQForm.passage" rows="3" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Teks bacaan..."></textarea>
+              <label class="lbl">Audio Path (opsional, untuk listening)</label>
+              <input v-model="admQForm.audio" placeholder="/audio/n5-mock-q1.mp3">
+              <label class="lbl">Options (4 pilihan)</label>
+              <div v-for="(op, oi) in admQForm.options" :key="oi" style="display:flex;gap:8px;margin-bottom:6px;align-items:center">
                 <span class="muted small" style="min-width:20px">{{ oi + 1 }}.</span>
-                <input v-model="admQForm.o[oi]" :placeholder="'Opsi ' + (oi + 1)" style="flex:1">
+                <input v-model="admQForm.options[oi]" :placeholder="'Option ' + (oi + 1)" style="flex:1">
               </div>
-              <label class="lbl">Kunci jawaban (nomor opsi, mulai dari 0)</label><input v-model.number="admQForm.a" type="number" min="0" max="3" placeholder="0">
-              <label class="lbl">Pembahasan</label><textarea v-model="admQForm.ex" rows="2" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Penjelasan jawaban..."></textarea>
-              <div class="btn-row"><button class="btn sm" @click="admQSave()">Simpan Soal</button><button class="btn ghost sm" @click="admQForm=null">Batal</button></div>
+              <label class="lbl">Correct Answer (0-3)</label>
+              <input v-model.number="admQForm.answer" type="number" min="0" max="3" placeholder="0">
+              <label class="lbl">Pembahasan</label>
+              <textarea v-model="admQForm.ex" rows="2" style="width:100%;font-family:inherit;font-size:14px;padding:10px 13px;border-radius:12px;border:1.5px solid var(--line)" placeholder="Penjelasan jawaban..."></textarea>
+              <div class="btn-row"><button class="btn sm" @click="admQSave()">💾 Simpan</button><button class="btn ghost sm" @click="admQForm=null">Batal</button></div>
             </div>
             <div v-if="admPkgQsLoading" class="muted">Memuat...</div>
             <div v-else>
@@ -2888,7 +2930,7 @@ const app = createApp({
               </div>
               <div v-for="q in admQPaginated" :key="q._idx" class="lvl">
                 <input type="checkbox" :checked="admQSelected.includes(q._idx)" @change="admQToggleSelect(q._idx)" class="adm-chk">
-                <div class="lvl-body"><b>No. {{ q._idx + 1 }}{{ q.sec ? ' [' + q.sec + ']' : '' }}</b><div class="muted small adm-ellipsis">{{ q.q || '' }}</div><div class="muted small">{{ q.a !== null && q.a !== undefined ? 'Kunci: opsi ' + (q.a + 1) : 'Belum ada kunci' }}</div></div>
+                <div class="lvl-body"><b>No. {{ q._idx + 1 }} [{{ q.type || q.sec || '-' }}]</b><div class="muted small adm-ellipsis">{{ q.question || q.q || '' }}</div><div class="muted small">{{ (q.answer ?? q.a) !== null && (q.answer ?? q.a) !== undefined ? 'Kunci: opsi ' + ((q.answer ?? q.a) + 1) : 'Belum ada kunci' }}</div></div>
                 <div class="adm-actions">
                   <button class="btn ghost sm" @click="admQClone(q)" title="Clone">📋</button>
                   <button class="btn ghost sm" @click="admQOpen(q._idx)" title="Edit">✏️</button>
