@@ -120,6 +120,346 @@ const MOCKTEST_QUESTIONS = {
           instruction: '＿の　ことばの　読み方として　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
           question: '時間が　ありません。',
           underline: '時間',
+          options: ['じかん', 'じげん', 'ときかん', 'じか'],
+          answer: 0
+        },
+        {
+          id: 14,
+          type: 'kanji-writing',
+          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: 'みずを　飲みます。',
+          underline: 'みず',
+          options: ['水', '氷', '泉', '米'],
+          answer: 0
+        },
+        {
+          id: 15,
+          type: 'kanji-writing',
+          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: 'ひるごはんを　食べます。',
+          underline: 'ひる',
+          options: ['昼', '晩', '朝', '夕'],
+          answer: 0
+        },
+        {
+          id: 16,
+          type: 'kanji-writing',
+          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: 'よる　早く　寝ます。',
+          underline: 'よる',
+          options: ['夜', '昼', '朝', '夕'],
+          answer: 0
+        },
+        {
+          id: 17,
+          type: 'kanji-writing',
+          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: 'あめが　ふります。',
+          underline: 'あめ',
+          options: ['雨', '雪', '雲', '雷'],
+          answer: 0
+        },
+        {
+          id: 18,
+          type: 'kanji-writing',
+          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: 'はなが　きれいです。',
+          underline: 'はな',
+          options: ['花', '草', '木', '葉'],
+          answer: 0
+        },
+        {
+          id: 19,
+          type: 'kanji-writing',
+          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: 'うみで　およぎます。',
+          underline: 'うみ',
+          options: ['海', '池', '川', '湖'],
+          answer: 0
+        },
+        {
+          id: 20,
+          type: 'kanji-writing',
+          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: 'そらが　青いです。',
+          underline: 'そら',
+          options: ['空', '雲', '星', '月'],
+          answer: 0
+        },
+        {
+          id: 21,
+          type: 'context',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'この　（　　）は　おいしいですね。',
+          options: ['りょうり', 'くるま', 'かばん', 'とけい'],
+          answer: 0
+        },
+        {
+          id: 22,
+          type: 'context',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'でんわばんごうは　（　　）ですか。',
+          options: ['なんばん', 'いくつ', 'なん', 'どれ'],
+          answer: 0
+        },
+        {
+          id: 23,
+          type: 'context',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'A：「おなまえは？」\nB：「わたしは　（　　）です。」',
+          options: ['たなか', 'せんせい', 'がくせい', 'ともだち'],
+          answer: 0
+        },
+        {
+          id: 24,
+          type: 'context',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'きょうは　さむいですから、（　　）を　きてください。',
+          options: ['コート', 'めがね', 'とけい', 'かさ'],
+          answer: 0
+        },
+        {
+          id: 25,
+          type: 'context',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'つくえの　（　　）に　本が　あります。',
+          options: ['上', '下', '中', '外'],
+          answer: 0
+        }
+      ]
+    },
+    grammar: {
+      title: '言語知識（文法）',
+      duration: 25,
+      questions: [
+        {
+          id: 1,
+          type: 'grammar-fill',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: '毎朝　コーヒー（　　）飲みます。',
+          options: ['を', 'が', 'に', 'で'],
+          answer: 0
+        },
+        {
+          id: 2,
+          type: 'grammar-fill',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: '図書館（　　）本を　借ります。',
+          options: ['を', 'に', 'が', 'で'],
+          answer: 3
+        },
+        {
+          id: 3,
+          type: 'sentence-order',
+          instruction: '＿★＿の　ところに　入る　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: 'わたしは　＿＿　＿★＿　＿＿　好きです。',
+          parts: ['音楽', 'を', '聞くのが', 'すき'],
+          options: ['音楽', 'を', '聞くのが', 'すき'],
+          answer: 2, // 聞くのが
+          correctOrder: ['音楽', 'を', '聞くのが', '好きです']
+        },
+        {
+          id: 4,
+          type: 'grammar-fill',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'わたし（　　）田中です。',
+          options: ['は', 'が', 'を', 'に'],
+          answer: 0
+        },
+        {
+          id: 5,
+          type: 'grammar-fill',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'きのう　えいが（　　）見ました。',
+          options: ['が', 'に', 'を', 'で'],
+          answer: 2
+        },
+        {
+          id: 6,
+          type: 'grammar-fill',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'ともだち（　　）いっしょに　行きました。',
+          options: ['を', 'と', 'に', 'が'],
+          answer: 1
+        },
+        {
+          id: 7,
+          type: 'grammar-fill',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'まいばん　十時（　　）寝ます。',
+          options: ['を', 'が', 'に', 'で'],
+          answer: 2
+        },
+        {
+          id: 8,
+          type: 'grammar-fill',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'だれ（　　）来ましたか。',
+          options: ['を', 'が', 'に', 'で'],
+          answer: 1
+        },
+        {
+          id: 9,
+          type: 'grammar-fill',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'えきの　ちかく（　　）住んでいます。',
+          options: ['を', 'が', 'に', 'で'],
+          answer: 2
+        },
+        {
+          id: 10,
+          type: 'grammar-fill',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'コーヒー（　　）ミルクを　入れます。',
+          options: ['を', 'に', 'が', 'で'],
+          answer: 1
+        },
+        {
+          id: 11,
+          type: 'grammar-fill',
+          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          question: 'しゅくだい（　　）しましたか。',
+          options: ['を', 'が', 'に', 'で'],
+          answer: 0
+        },
+        {
+          id: 12,
+          type: 'sentence-order',
+          instruction: '＿★＿の　ところに　入る　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: 'わたしは　＿＿　＿★＿　＿＿　飲みます。',
+          parts: ['まいあさ', 'コーヒーを', 'ぎゅうにゅうを', 'おちゃを'],
+          options: ['まいあさ', 'コーヒーを', 'ぎゅうにゅうを', 'おちゃを'],
+          answer: 0,
+          correctOrder: ['まいあさ', 'コーヒーを', '飲みます']
+        },
+        {
+          id: 13,
+          type: 'sentence-order',
+          instruction: '＿★＿の　ところに　入る　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: '＿＿　＿★＿　＿＿　たべます。',
+          parts: ['わたしは', 'ひるごはんを', 'あさごはんを', 'ばんごはんを'],
+          options: ['わたしは', 'ひるごはんを', 'あさごはんを', 'ばんごはんを'],
+          answer: 0,
+          correctOrder: ['わたしは', 'ひるごはんを', 'たべます']
+        },
+        {
+          id: 14,
+          type: 'sentence-order',
+          instruction: '＿★＿の　ところに　入る　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: 'ともだちは　＿＿　＿★＿　＿＿　きました。',
+          parts: ['きのう', 'うちに', 'がっこうに', 'あした'],
+          options: ['きのう', 'うちに', 'がっこうに', 'あした'],
+          answer: 0,
+          correctOrder: ['きのう', 'うちに', 'きました']
+        },
+        {
+          id: 15,
+          type: 'sentence-order',
+          instruction: '＿★＿の　ところに　入る　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
+          question: '＿＿　＿★＿　＿＿　ありますか。',
+          parts: ['つくえの', 'うえに', 'したに', 'なかに'],
+          options: ['つくえの', 'うえに', 'したに', 'なかに'],
+          answer: 1,
+          correctOrder: ['つくえの', 'うえに', 'なにが', 'ありますか']
+        }
+      ]
+    },
+    reading: {
+      title: '読解',
+      duration: 30,
+      questions: [
+        {
+          id: 1,
+          type: 'short-passage',
+          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          passage: 'わたしは　毎朝　六時に　起きます。それから、公園を　走ります。走った　あとで、シャワーを　あびます。朝ごはんは　パンと　コーヒーです。八時に　会社へ　行きます。',
+          question: 'この　人は　朝ごはんの　前に　何を　しますか。',
+          options: ['会社へ　行きます', 'パンを　食べます', '公園を　走ります', 'コーヒーを　飲みます'],
+          answer: 2
+        },
+        {
+          id: 2,
+          type: 'short-passage',
+          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          passage: 'わたしは　毎朝　六時に　起きます。それから、公園を　走ります。走った　あとで、シャワーを　あびます。朝ごはんは　パンと　コーヒーです。八時に　会社へ　行きます。',
+          question: 'この　人は　何時に　会社へ　行きますか。',
+          options: ['六時に', '七時に', '八時に', '九時に'],
+          answer: 2
+        },
+        {
+          id: 3,
+          type: 'short-passage',
+          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          passage: 'きょうは　土曜日です。わたしは　ともだちと　デパートへ　行きました。デパートで　シャツを　買いました。シャツは　二千円でした。それから、レストランで　カレーを　食べました。カレーは　おいしかったです。',
+          question: 'この　人は　デパートで　何を　買いましたか。',
+          options: ['カレー', 'シャツ', 'ズボン', 'くつ'],
+          answer: 1
+        },
+        {
+          id: 4,
+          type: 'short-passage',
+          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          passage: 'きょうは　土曜日です。わたしは　ともだちと　デパートへ　行きました。デパートで　シャツを　買いました。シャツは　二千円でした。それから、レストランで　カレーを　食べました。カレーは　おいしかったです。',
+          question: 'シャツは　いくらでしたか。',
+          options: ['千円', '二千円', '三千円', '四千円'],
+          answer: 1
+        },
+        {
+          id: 5,
+          type: 'short-passage',
+          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          passage: 'わたしの　かぞくは　四人です。父と　母と　妹と　わたしです。父は　会社員です。母は　しゅふです。妹は　高校生です。わたしは　大学生です。妹は　テニスが　すきです。わたしは　サッカーが　すきです。',
+          question: 'この　人の　かぞくは　何人ですか。',
+          options: ['三人', '四人', '五人', '六人'],
+          answer: 1
+        },
+        {
+          id: 6,
+          type: 'short-passage',
+          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          passage: 'わたしの　かぞくは　四人です。父と　母と　妹と　わたしです。父は　会社員です。母は　しゅふです。妹は　高校生です。わたしは　大学生です。妹は　テニスが　すきです。わたしは　サッカーが　すきです。',
+          question: '妹は　何が　すきですか。',
+          options: ['サッカー', 'テニス', 'バスケットボール', 'やきゅう'],
+          answer: 1
+        },
+        {
+          id: 7,
+          type: 'short-passage',
+          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          passage: '田中さんは　まいあさ　七時に　起きます。朝ごはんを　食べて、八時に　うちを　出ます。でんしゃで　会社へ　行きます。会社は　九時から　五時までです。ひるやすみは　十二時から　一時までです。',
+          question: '田中さんは　何時に　うちを　出ますか。',
+          options: ['七時に', '八時に', '九時に', '十時に'],
+          answer: 1
+        },
+        {
+          id: 8,
+          type: 'short-passage',
+          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
+          passage: '田中さんは　まいあさ　七時に　起きます。朝ごはんを　食べて、八時に　うちを　出ます。でんしゃで　会社へ　行きます。会社は　九時から　五時までです。ひるやすみは　十二時から　一時までです。',
+          question: 'ひるやすみは　何時から　何時までですか。',
+          options: ['十一時から　十二時まで', '十二時から　一時まで', '一時から　二時まで', '九時から　五時まで'],
+          answer: 1
+        }
+      ]
+    },
+    listening: {
+      title: '聴解',
+      duration: 30,
+      questions: [
+        {
+          id: 1,
+          type: 'task-based',
+          instruction: '問題１では、まず　質問を　聞いて　ください。それから　話を　聞いて、問題用紙の　１から４の　中から、最もよいものを　一つ　えらんで　ください。',
+          audio: '/audio/n5-mock-listening-q1.mp3',
+          question: '男の　人は　何を　買いますか。',
+          options: ['りんご', 'バナナ', 'みかん', 'いちご'],
+          answer: 0,
+          // Untuk development, text transcript
+          transcript: '女：何か　買いますか。\n男：ええ、りんごを　三つ　ください。'
+        }
+      ]
+    }
+  },
   n4: {
     vocab: {
       title: '言語知識（文字・語彙）',
@@ -560,345 +900,6 @@ const MOCKTEST_QUESTIONS = {
       ]
     },
     listening: { title: '聴解', duration: 35, questions: [] }
-  },
-          answer: 0
-        },
-        {
-          id: 14,
-          type: 'kanji-writing',
-          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: 'みずを　飲みます。',
-          underline: 'みず',
-          options: ['水', '氷', '泉', '米'],
-          answer: 0
-        },
-        {
-          id: 15,
-          type: 'kanji-writing',
-          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: 'ひるごはんを　食べます。',
-          underline: 'ひる',
-          options: ['昼', '晩', '朝', '夕'],
-          answer: 0
-        },
-        {
-          id: 16,
-          type: 'kanji-writing',
-          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: 'よる　早く　寝ます。',
-          underline: 'よる',
-          options: ['夜', '昼', '朝', '夕'],
-          answer: 0
-        },
-        {
-          id: 17,
-          type: 'kanji-writing',
-          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: 'あめが　ふります。',
-          underline: 'あめ',
-          options: ['雨', '雪', '雲', '雷'],
-          answer: 0
-        },
-        {
-          id: 18,
-          type: 'kanji-writing',
-          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: 'はなが　きれいです。',
-          underline: 'はな',
-          options: ['花', '草', '木', '葉'],
-          answer: 0
-        },
-        {
-          id: 19,
-          type: 'kanji-writing',
-          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: 'うみで　およぎます。',
-          underline: 'うみ',
-          options: ['海', '池', '川', '湖'],
-          answer: 0
-        },
-        {
-          id: 20,
-          type: 'kanji-writing',
-          instruction: '＿の　ことばを　漢字で　書くとき、最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: 'そらが　青いです。',
-          underline: 'そら',
-          options: ['空', '雲', '星', '月'],
-          answer: 0
-        },
-        {
-          id: 21,
-          type: 'context',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'この　（　　）は　おいしいですね。',
-          options: ['りょうり', 'くるま', 'かばん', 'とけい'],
-          answer: 0
-        },
-        {
-          id: 22,
-          type: 'context',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'でんわばんごうは　（　　）ですか。',
-          options: ['なんばん', 'いくつ', 'なん', 'どれ'],
-          answer: 0
-        },
-        {
-          id: 23,
-          type: 'context',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'A：「おなまえは？」\nB：「わたしは　（　　）です。」',
-          options: ['たなか', 'せんせい', 'がくせい', 'ともだち'],
-          answer: 0
-        },
-        {
-          id: 24,
-          type: 'context',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'きょうは　さむいですから、（　　）を　きてください。',
-          options: ['コート', 'めがね', 'とけい', 'かさ'],
-          answer: 0
-        },
-        {
-          id: 25,
-          type: 'context',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'つくえの　（　　）に　本が　あります。',
-          options: ['上', '下', '中', '外'],
-          answer: 0
-        }
-      ]
-    },
-    grammar: {
-      title: '言語知識（文法）',
-      duration: 25,
-      questions: [
-        {
-          id: 1,
-          type: 'grammar-fill',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: '毎朝　コーヒー（　　）飲みます。',
-          options: ['を', 'が', 'に', 'で'],
-          answer: 0
-        },
-        {
-          id: 2,
-          type: 'grammar-fill',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: '図書館（　　）本を　借ります。',
-          options: ['を', 'に', 'が', 'で'],
-          answer: 3
-        },
-        {
-          id: 3,
-          type: 'sentence-order',
-          instruction: '＿★＿の　ところに　入る　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: 'わたしは　＿＿　＿★＿　＿＿　好きです。',
-          parts: ['音楽', 'を', '聞くのが', 'すき'],
-          options: ['音楽', 'を', '聞くのが', 'すき'],
-          answer: 2, // 聞くのが
-          correctOrder: ['音楽', 'を', '聞くのが', '好きです']
-        },
-        {
-          id: 4,
-          type: 'grammar-fill',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'わたし（　　）田中です。',
-          options: ['は', 'が', 'を', 'に'],
-          answer: 0
-        },
-        {
-          id: 5,
-          type: 'grammar-fill',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'きのう　えいが（　　）見ました。',
-          options: ['が', 'に', 'を', 'で'],
-          answer: 2
-        },
-        {
-          id: 6,
-          type: 'grammar-fill',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'ともだち（　　）いっしょに　行きました。',
-          options: ['を', 'と', 'に', 'が'],
-          answer: 1
-        },
-        {
-          id: 7,
-          type: 'grammar-fill',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'まいばん　十時（　　）寝ます。',
-          options: ['を', 'が', 'に', 'で'],
-          answer: 2
-        },
-        {
-          id: 8,
-          type: 'grammar-fill',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'だれ（　　）来ましたか。',
-          options: ['を', 'が', 'に', 'で'],
-          answer: 1
-        },
-        {
-          id: 9,
-          type: 'grammar-fill',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'えきの　ちかく（　　）住んでいます。',
-          options: ['を', 'が', 'に', 'で'],
-          answer: 2
-        },
-        {
-          id: 10,
-          type: 'grammar-fill',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'コーヒー（　　）ミルクを　入れます。',
-          options: ['を', 'に', 'が', 'で'],
-          answer: 1
-        },
-        {
-          id: 11,
-          type: 'grammar-fill',
-          instruction: '（　　）に　何を　入れますか。１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          question: 'しゅくだい（　　）しましたか。',
-          options: ['を', 'が', 'に', 'で'],
-          answer: 0
-        },
-        {
-          id: 12,
-          type: 'sentence-order',
-          instruction: '＿★＿の　ところに　入る　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: 'わたしは　＿＿　＿★＿　＿＿　飲みます。',
-          parts: ['まいあさ', 'コーヒーを', 'ぎゅうにゅうを', 'おちゃを'],
-          options: ['まいあさ', 'コーヒーを', 'ぎゅうにゅうを', 'おちゃを'],
-          answer: 0,
-          correctOrder: ['まいあさ', 'コーヒーを', '飲みます']
-        },
-        {
-          id: 13,
-          type: 'sentence-order',
-          instruction: '＿★＿の　ところに　入る　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: '＿＿　＿★＿　＿＿　たべます。',
-          parts: ['わたしは', 'ひるごはんを', 'あさごはんを', 'ばんごはんを'],
-          options: ['わたしは', 'ひるごはんを', 'あさごはんを', 'ばんごはんを'],
-          answer: 0,
-          correctOrder: ['わたしは', 'ひるごはんを', 'たべます']
-        },
-        {
-          id: 14,
-          type: 'sentence-order',
-          instruction: '＿★＿の　ところに　入る　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: 'ともだちは　＿＿　＿★＿　＿＿　きました。',
-          parts: ['きのう', 'うちに', 'がっこうに', 'あした'],
-          options: ['きのう', 'うちに', 'がっこうに', 'あした'],
-          answer: 0,
-          correctOrder: ['きのう', 'うちに', 'きました']
-        },
-        {
-          id: 15,
-          type: 'sentence-order',
-          instruction: '＿★＿の　ところに　入る　最もよいものを、１・２・３・４から　一つ　えらびなさい。',
-          question: '＿＿　＿★＿　＿＿　ありますか。',
-          parts: ['つくえの', 'うえに', 'したに', 'なかに'],
-          options: ['つくえの', 'うえに', 'したに', 'なかに'],
-          answer: 1,
-          correctOrder: ['つくえの', 'うえに', 'なにが', 'ありますか']
-        }
-      ]
-    },
-    reading: {
-      title: '読解',
-      duration: 30,
-      questions: [
-        {
-          id: 1,
-          type: 'short-passage',
-          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          passage: 'わたしは　毎朝　六時に　起きます。それから、公園を　走ります。走った　あとで、シャワーを　あびます。朝ごはんは　パンと　コーヒーです。八時に　会社へ　行きます。',
-          question: 'この　人は　朝ごはんの　前に　何を　しますか。',
-          options: ['会社へ　行きます', 'パンを　食べます', '公園を　走ります', 'コーヒーを　飲みます'],
-          answer: 2
-        },
-        {
-          id: 2,
-          type: 'short-passage',
-          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          passage: 'わたしは　毎朝　六時に　起きます。それから、公園を　走ります。走った　あとで、シャワーを　あびます。朝ごはんは　パンと　コーヒーです。八時に　会社へ　行きます。',
-          question: 'この　人は　何時に　会社へ　行きますか。',
-          options: ['六時に', '七時に', '八時に', '九時に'],
-          answer: 2
-        },
-        {
-          id: 3,
-          type: 'short-passage',
-          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          passage: 'きょうは　土曜日です。わたしは　ともだちと　デパートへ　行きました。デパートで　シャツを　買いました。シャツは　二千円でした。それから、レストランで　カレーを　食べました。カレーは　おいしかったです。',
-          question: 'この　人は　デパートで　何を　買いましたか。',
-          options: ['カレー', 'シャツ', 'ズボン', 'くつ'],
-          answer: 1
-        },
-        {
-          id: 4,
-          type: 'short-passage',
-          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          passage: 'きょうは　土曜日です。わたしは　ともだちと　デパートへ　行きました。デパートで　シャツを　買いました。シャツは　二千円でした。それから、レストランで　カレーを　食べました。カレーは　おいしかったです。',
-          question: 'シャツは　いくらでしたか。',
-          options: ['千円', '二千円', '三千円', '四千円'],
-          answer: 1
-        },
-        {
-          id: 5,
-          type: 'short-passage',
-          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          passage: 'わたしの　かぞくは　四人です。父と　母と　妹と　わたしです。父は　会社員です。母は　しゅふです。妹は　高校生です。わたしは　大学生です。妹は　テニスが　すきです。わたしは　サッカーが　すきです。',
-          question: 'この　人の　かぞくは　何人ですか。',
-          options: ['三人', '四人', '五人', '六人'],
-          answer: 1
-        },
-        {
-          id: 6,
-          type: 'short-passage',
-          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          passage: 'わたしの　かぞくは　四人です。父と　母と　妹と　わたしです。父は　会社員です。母は　しゅふです。妹は　高校生です。わたしは　大学生です。妹は　テニスが　すきです。わたしは　サッカーが　すきです。',
-          question: '妹は　何が　すきですか。',
-          options: ['サッカー', 'テニス', 'バスケットボール', 'やきゅう'],
-          answer: 1
-        },
-        {
-          id: 7,
-          type: 'short-passage',
-          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          passage: '田中さんは　まいあさ　七時に　起きます。朝ごはんを　食べて、八時に　うちを　出ます。でんしゃで　会社へ　行きます。会社は　九時から　五時までです。ひるやすみは　十二時から　一時までです。',
-          question: '田中さんは　何時に　うちを　出ますか。',
-          options: ['七時に', '八時に', '九時に', '十時に'],
-          answer: 1
-        },
-        {
-          id: 8,
-          type: 'short-passage',
-          instruction: '次の　文章を　読んで、質問に　答えなさい。答えは、１・２・３・４から　最もよいものを　一つ　えらびなさい。',
-          passage: '田中さんは　まいあさ　七時に　起きます。朝ごはんを　食べて、八時に　うちを　出ます。でんしゃで　会社へ　行きます。会社は　九時から　五時までです。ひるやすみは　十二時から　一時までです。',
-          question: 'ひるやすみは　何時から　何時までですか。',
-          options: ['十一時から　十二時まで', '十二時から　一時まで', '一時から　二時まで', '九時から　五時まで'],
-          answer: 1
-        }
-      ]
-    },
-    listening: {
-      title: '聴解',
-      duration: 30,
-      questions: [
-        {
-          id: 1,
-          type: 'task-based',
-          instruction: '問題１では、まず　質問を　聞いて　ください。それから　話を　聞いて、問題用紙の　１から４の　中から、最もよいものを　一つ　えらんで　ください。',
-          audio: '/audio/n5-mock-listening-q1.mp3',
-          question: '男の　人は　何を　買いますか。',
-          options: ['りんご', 'バナナ', 'みかん', 'いちご'],
-          answer: 0,
-          // Untuk development, text transcript
-          transcript: '女：何か　買いますか。\n男：ええ、りんごを　三つ　ください。'
-        }
-      ]
-    }
   },
   
   // Placeholder untuk level lain (akan diisi nanti)
