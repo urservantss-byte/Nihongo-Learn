@@ -175,8 +175,10 @@ const app = createApp({
     modulQ: '', modulCat: null, modulLevel: 'n5', modulSub: null, modulCh: null, modulPat: null, kvgOpen: {},
     simPkg: null, sim: null,
     // quiz
-    quizMode: 'acak', qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0, secScores: [],
+    quizMode: 'flashcard', qLevel: 'n5', qSec: 0, qIdx: 0, qAns: [], qTime: 0, qTimer: null, qDone: false, qScore: 0, secScores: [],
     genQs: [], shuffledQs: [], quizResume: null,
+    // flashcard
+    flashcardType: 'kotoba', flashcardLevel: 'n5', flashcardCards: [], flashcardIdx: 0, flashcardFlipped: false, flashcardKnown: [],
     // chapter (jalur belajar Soumatome)
     chapterProgress: {}, openChapter: null, chQuiz: null,
     // tanya AI (Muse Sensei)
@@ -318,11 +320,9 @@ const app = createApp({
       return { ok, tot, pct: tot ? Math.round(ok / tot * 100) : 0 };
     },
     quizQs() {
-      if (this.quizMode === 'acak') return this.genQs;
       return this.shuffledQs.length ? this.shuffledQs : (QUIZ[this.qLevel] || []);
     },
     quizSecs() {
-      if (this.quizMode === 'acak') return [{ id: 'goi', name: 'Kuis Acak', time: 600 }];
       return QUIZ_RULES[this.qLevel].sections;
     },
     secQs() { return this.quizQs.filter(q => q.s === this.quizSecs[this.qSec].id); },
@@ -363,7 +363,7 @@ const app = createApp({
       if (!['quizrun', 'adaptiverun'].includes(this.tab) || this.qDone) return;
       try {
         const data = { tab: this.tab, quizMode: this.quizMode, qLevel: this.qLevel, qSec: this.qSec, qIdx: this.qIdx, qTime: this.qTime, qAns: this.qAns, savedAt: Date.now() };
-        data.questions = this.tab === 'quizrun' ? (this.quizMode === 'acak' ? this.genQs : this.shuffledQs) : this.adaptiveQs;
+        data.questions = this.tab === 'quizrun' ? this.shuffledQs : this.adaptiveQs;
         if (!data.questions || !data.questions.length) return;
         localStorage.setItem('nl_quiz', JSON.stringify(data));
       } catch {}
@@ -444,7 +444,7 @@ const app = createApp({
       this.qIdx = sq.qIdx; this.qTime = sq.qTime; this.qAns = sq.qAns || [];
       this.qDone = false; this.qScore = 0; this.secScores = [];
       if (sq.tab === 'quizrun') {
-        if (sq.quizMode === 'acak') { this.genQs = sq.questions; this.shuffledQs = []; }
+        if (sq.quizMode === 'flashcard') { this.genQs = sq.questions; this.shuffledQs = []; }
         else { this.shuffledQs = sq.questions; this.genQs = []; }
         this.tab = 'quizrun'; this.$nextTick(() => this.resumeTimer());
       } else {
@@ -595,14 +595,9 @@ const app = createApp({
     async startQuiz() {
       this.clearQuizProgress();
       this.qSec = 0; this.qIdx = 0; this.qAns = []; this.qDone = false; this.qScore = 0; this.secScores = [];
-      if (this.quizMode === 'acak') {
-        // soal baru tiap main: dibuat server dari materi, yang sudah pernah dikerjakan disingkirkan dulu
-        try {
-          const d = await api(`/api/quiz/gen?level=${this.qLevel}&count=20`);
-          if (!d.questions || !d.questions.length) { toast('Gagal menyusun soal, coba lagi'); return; }
-          this.genQs = d.questions; this.shuffledQs = [];
-        } catch (e) { toast(e.message); return; }
-      } else {
+      {
+        // Flashcard no longer uses startQuiz - this branch removed
+
         this.genQs = [];
         // acak urutan soal & pilihan jawaban tiap permainan; soal baru diprioritaskan
         let qs = (QUIZ[this.qLevel] || []).map((q, i) => ({ ...shuffleQuestion(q), _qid: `${this.qLevel}:${i}` }));
@@ -612,7 +607,7 @@ const app = createApp({
           qs = shuffled(qs.filter(q => !seen.has(q._qid))).concat(shuffled(qs.filter(q => seen.has(q._qid))));
         } catch { qs = shuffled(qs); }
         this.shuffledQs = qs;
-      }
+      
       this.tab = 'quizrun'; this.$nextTick(() => this.runSec());
     },
     async startAdaptive() {
@@ -639,6 +634,85 @@ const app = createApp({
         this.tab = 'adaptiverun';
       } catch (e) { toast(e.message); }
     },
+    // ---- flashcard ----
+    startFlashcard() {
+      const type = this.flashcardType;
+      const level = this.flashcardLevel;
+      let cards = [];
+      
+      if (type === 'kotoba') {
+        // Get kotoba from LESSONS
+        const L = LESSONS[level];
+        if (L && L.kotoba) {
+          cards = L.kotoba.map(w => ({
+            front: w.kj || w.jp,
+            back: w.id,
+            reading: w.r,
+            type: 'kotoba'
+          }));
+        }
+      } else if (type === 'kanji') {
+        // Get kanji from KANJI_NC
+        if (typeof KANJI_NC !== 'undefined' && KANJI_NC[level]) {
+          for (const lesson of KANJI_NC[level]) {
+            for (const k of lesson.kanji) {
+              cards.push({
+                front: k.kj,
+                back: k.id,
+                reading: `On: ${k.on} · Kun: ${k.kun}`,
+                examples: k.ex ? k.ex.slice(0, 2) : [],
+                type: 'kanji'
+              });
+            }
+          }
+        }
+      }
+      
+      if (!cards.length) {
+        toast('Data tidak tersedia untuk level ini');
+        return;
+      }
+      
+      // Shuffle cards
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+      
+      this.flashcardCards = cards;
+      this.flashcardIdx = 0;
+      this.flashcardFlipped = false;
+      this.flashcardKnown = [];
+      this.tab = 'flashcardrun';
+    },
+    flipCard() {
+      this.flashcardFlipped = !this.flashcardFlipped;
+    },
+    markCard(known) {
+      this.flashcardKnown.push(known);
+      this.nextCard();
+    },
+    nextCard() {
+      if (this.flashcardIdx < this.flashcardCards.length - 1) {
+        this.flashcardIdx++;
+        this.flashcardFlipped = false;
+      } else {
+        this.finishFlashcard();
+      }
+    },
+    prevCard() {
+      if (this.flashcardIdx > 0) {
+        this.flashcardIdx--;
+        this.flashcardFlipped = false;
+        if (this.flashcardKnown.length > 0) {
+          this.flashcardKnown.pop();
+        }
+      }
+    },
+    finishFlashcard() {
+      this.tab = 'flashcarddone';
+    },
+
     runSec() {
       clearInterval(this.qTimer);
       this.qTime = this.quizSecs[this.qSec].time; this.qIdx = 0;
@@ -705,6 +779,19 @@ const app = createApp({
     },
     playAudio(t) { speak(t); },
     fmt(s) { return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`; },
+    // ---- flashcard ----
+    flipFlashcard() {
+      this.flashcardFlipped = !this.flashcardFlipped;
+    },
+    markFlashcard(known) {
+      this.flashcardKnown.push(known);
+      if (this.flashcardIdx + 1 < this.flashcardCards.length) {
+        this.flashcardIdx++;
+        this.flashcardFlipped = false;
+      } else {
+        this.finishFlashcard();
+      }
+    },
     // ---- Tanya AI (Muse Sensei) ----
     async loadAsk() {
       // cache lokal dulu biar instan, lalu sinkron dari server (per akun)
@@ -1289,23 +1376,28 @@ const app = createApp({
     <section v-if="tab==='quiz'" class="tabsec">
       <div v-if="quizResume" class="card warn pop">
         <b>📝 Ada quiz yang belum selesai!</b>
-        <p class="muted small">{{ quizResume.quizMode === 'cerdas' ? 'Review Cerdas' : (quizResume.quizMode === 'simulasi' ? 'Simulasi Ujian' : 'Kuis Acak') }} · soal {{ quizResume.qIdx + 1 }}/{{ quizResume.questions.length }} · {{ quizResume.qAns.filter(a => a.ok).length }} benar</p>
+        <p class="muted small">{{ quizResume.quizMode === 'cerdas' ? 'Review Cerdas' : (quizResume.quizMode === 'simulasi' ? 'Simulasi Ujian' : (quizResume.quizMode === 'flashcard' ? 'Flashcard' : 'Quiz')) }} · soal {{ quizResume.qIdx + 1 }}/{{ quizResume.questions.length }} · {{ quizResume.qAns.filter(a => a.ok).length }} benar</p>
         <div class="btn-row"><button class="btn sm" @click="resumeSavedQuiz">Lanjutkan</button><button class="btn ghost sm" @click="discardSavedQuiz">Buang</button></div>
       </div>
       <h2 class="ttl"><span v-html="ic('clock')"></span> Quiz</h2>
       <div class="mode-grid">
-        <div class="mode" :class="{on: quizMode==='acak'}" @click="quizMode='acak'"><div class="mode-e" v-html="ic('shuffle',30)"></div><b>Kuis Acak</b><div class="muted small">Soal baru tiap main</div></div>
+        <div class="mode" :class="{on: quizMode==='flashcard'}" @click="quizMode='flashcard'"><div class="mode-e" v-html="ic('layers',30)"></div><b>Flashcard</b><div class="muted small">Belajar dengan kartu</div></div>
         <div class="mode" @click="closeSim();modulCat='bank';modulSub=null;modulQ='';tab='library'"><div class="mode-e" v-html="ic('target',30)"></div><b>Simulasi Ujian</b><div class="muted small">Soal asli + format asli</div></div>
         <div class="mode" :class="{on: quizMode==='cerdas'}" @click="quizMode='cerdas'"><div class="mode-e" v-html="ic('sparkles',30)"></div><b>Review Cerdas</b><div class="muted small">Fokus soal yang lemah</div></div>
       </div>
-      <div v-if="quizMode!=='cerdas'">
-        <label class="lbl">Pilih level</label>
-        <select v-model="qLevel"><option v-for="lv in ['n5','n4','n3','n2','n1']" :value="lv">{{ lv.toUpperCase() }}</option></select>
-        <div class="card">
-          <p><b>20 soal acak</b> disusun dari bank soal + materi level {{ qLevel.toUpperCase() }}.</p>
-          <p class="muted small">Soal yang sudah pernah kamu kerjakan tidak akan muncul lagi sampai semua soal baru habis. Urutan soal & pilihan jawaban diacak setiap permainan.</p>
+      <div v-if="quizMode==='flashcard'">
+        <label class="lbl">Jenis</label>
+        <div class="btn-row">
+          <button class="btn" :class="{ghost: flashcardType!=='kotoba'}" @click="flashcardType='kotoba'">Kotoba</button>
+          <button class="btn" :class="{ghost: flashcardType!=='kanji'}" @click="flashcardType='kanji'">Kanji</button>
         </div>
-        <button class="btn btn-block" @click="startQuiz"><span v-html="ic('play',16)"></span> Mulai Kuis Acak</button>
+        <label class="lbl">Level</label>
+        <select v-model="flashcardLevel"><option v-for="lv in ['n5','n4','n3','n2','n1']" :value="lv">{{ lv.toUpperCase() }}</option></select>
+        <div class="card">
+          <p><b>Flashcard {{ flashcardType === 'kotoba' ? 'Kotoba' : 'Kanji' }}</b> level {{ flashcardLevel.toUpperCase() }}. Kartu diacak tiap sesi.</p>
+          <p class="muted small">Tap kartu untuk membalik. Tandai Tahu/Belum untuk melacak progress.</p>
+        </div>
+        <button class="btn btn-block" @click="startFlashcard"><span v-html="ic('play',16)"></span> Mulai Flashcard</button>
       </div>
       <div v-else class="card">
         <div v-html="illus('quiz')"></div>
@@ -1342,6 +1434,68 @@ const app = createApp({
         :class="{pick: qAns[qAns.length-1]?.q===adaptiveQs[qIdx] && qAns[qAns.length-1].pick===i, right: qAns[qAns.length-1]?.q===adaptiveQs[qIdx] && i===adaptiveQs[qIdx].a, wrong: qAns[qAns.length-1]?.q===adaptiveQs[qIdx] && qAns[qAns.length-1].pick===i && i!==adaptiveQs[qIdx].a}"
         @click="adaptAnswer(i)"><b>{{ ['A','B','C','D'][i] }}.</b> {{ o }}</button>
     </section>
+    <!-- ============ FLASHCARD RUN ============ -->
+    <section v-if="tab==='flashcardrun' && flashcardCards.length" class="card pop tabsec">
+      <div class="q-head">
+        <b>📇 Flashcard {{ flashcardType === 'kotoba' ? 'Kotoba' : 'Kanji' }} ({{ flashcardLevel.toUpperCase() }})</b>
+        <span class="muted small">{{ flashcardIdx + 1 }}/{{ flashcardCards.length }}</span>
+      </div>
+      <div class="qbar"><i :style="{width: ((flashcardIdx)/flashcardCards.length*100)+'%'}"></i></div>
+      
+      <div class="flashcard" :class="{flipped: flashcardFlipped}" @click="flipCard" style="min-height:200px;cursor:pointer;perspective:1000px;margin:20px 0">
+        <div v-if="!flashcardFlipped" style="display:flex;align-items:center;justify-content:center;min-height:200px;font-size:48px;font-weight:bold;background:var(--bg);border:2px solid var(--border);border-radius:12px;padding:20px">
+          {{ flashcardCards[flashcardIdx].front }}
+        </div>
+        <div v-else style="min-height:200px;background:var(--card-bg);border:2px solid var(--pri);border-radius:12px;padding:20px">
+          <div style="font-size:28px;font-weight:bold;margin-bottom:10px">{{ flashcardCards[flashcardIdx].front }}</div>
+          <div v-if="flashcardCards[flashcardIdx].reading" class="muted" style="margin-bottom:10px">{{ flashcardCards[flashcardIdx].reading }}</div>
+          <div style="font-size:20px;margin-bottom:10px">{{ flashcardCards[flashcardIdx].back }}</div>
+          <div v-if="flashcardCards[flashcardIdx].examples && flashcardCards[flashcardIdx].examples.length" style="margin-top:10px;font-size:14px">
+            <div v-for="(ex, i) in flashcardCards[flashcardIdx].examples" :key="i" class="muted small" style="margin-top:4px">
+              {{ ex.j }} ({{ ex.r }}) - {{ ex.i }}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="muted small center">Tap kartu untuk membalik</p>
+      
+      <div v-if="flashcardFlipped" class="btn-row" style="margin-top:20px">
+        <button class="btn" style="background:#e74c3c" @click.stop="markCard(false)">❌ Belum</button>
+        <button class="btn" style="background:#27ae60" @click.stop="markCard(true)">✅ Tahu</button>
+      </div>
+      
+      <div class="btn-row" style="margin-top:10px">
+        <button class="btn ghost sm" @click="prevCard" :disabled="flashcardIdx === 0">
+          <span v-html="ic('back',15)"></span> Sebelumnya
+        </button>
+        <button class="btn ghost sm" @click="nextCard">
+          Berikutnya <span v-html="ic('forward',15)"></span>
+        </button>
+      </div>
+      
+      <button class="btn ghost sm" @click="tab='quiz'" style="margin-top:10px">Keluar</button>
+    </section>
+
+    <!-- ============ FLASHCARD DONE ============ -->
+    <section v-if="tab==='flashcarddone'" class="card center tabsec">
+      <div v-html="illus('trophy')"></div>
+      <h2>Flashcard Selesai!</h2>
+      <p class="muted">{{ flashcardCards.length }} kartu selesai dipelajari</p>
+      <div v-if="flashcardKnown.length" style="margin:20px 0">
+        <div class="rowline">
+          <span>✅ Sudah Tahu</span>
+          <b>{{ flashcardKnown.filter(k => k).length }}/{{ flashcardKnown.length }}</b>
+        </div>
+        <div class="rowline">
+          <span>❌ Belum Tahu</span>
+          <b>{{ flashcardKnown.filter(k => !k).length }}/{{ flashcardKnown.length }}</b>
+        </div>
+      </div>
+      <button class="btn" @click="tab='quiz'">Kembali</button>
+    </section>
+
+
 
     <!-- ============ QUIZ DONE ============ -->
     <section v-if="tab==='quizdone'" class="card center tabsec">
