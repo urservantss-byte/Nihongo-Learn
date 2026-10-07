@@ -2708,10 +2708,10 @@ const app = createApp({
               <input type="checkbox" :checked="admKotobaAllSelected" @change="admKotobaToggleAll()" style="margin-right:8px">
               <div class="lvl-body muted small" style="white-space:nowrap"><b>Pilih semua</b></div>
             </div>
-            <div v-for="w in admKotobaPaginated" :key="w.id" class="lvl" style="align-items:center">
-              <input type="checkbox" :checked="admKotobaSelected.includes(w.id)" @change="admKotobaToggleSelect(w.id)" style="margin-right:6px;flex-shrink:0">
-              <div class="lvl-body" style="min-width:0"><b class="big" style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ (w.keb||[])[0] }}</b><div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ (w.reb||[]).join('、') }}</div><div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ w.gloss||'' }}</div></div>
-              <div style="display:flex;gap:4px;flex-shrink:0">
+            <div v-for="w in admKotobaPaginated" :key="w.id" style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:8px 0;box-shadow:var(--shadow)">
+              <input type="checkbox" :checked="admKotobaSelected.includes(w.id)" @change="admKotobaToggleSelect(w.id)" style="flex:0 0 auto">
+              <div style="flex:1 1 auto;min-width:0;overflow:hidden"><b class="big" style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ (w.keb||[])[0] }}</b><div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ (w.reb||[]).join('、') }}</div><div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ w.gloss||'' }}</div></div>
+              <div style="flex:0 0 auto;display:flex;gap:4px">
                 <button class="btn ghost sm" @click="admKotobaClone(w)" title="Clone" style="padding:6px 8px">📋</button>
                 <button class="btn ghost sm" @click="admKotobaOpen(w)" title="Edit" style="padding:6px 8px">✏️</button>
                 <button class="btn ghost sm" @click="admKotobaDel(w)" title="Hapus" style="padding:6px 8px">🗑️</button>
@@ -2768,11 +2768,11 @@ const app = createApp({
               <input type="checkbox" :checked="admKanjiAllSelected" @change="admKanjiToggleAll()" style="margin-right:8px">
               <div class="lvl-body muted small" style="white-space:nowrap"><b>Pilih semua</b></div>
             </div>
-            <div v-for="k in admKanjiPaginated" :key="k.ch" class="lvl" style="align-items:center">
-              <input type="checkbox" :checked="admKanjiSelected.includes(k.ch)" @change="admKanjiToggleSelect(k.ch)" style="margin-right:6px;flex-shrink:0">
-              <div class="badge" style="width:44px;height:44px;font-size:22px;flex-shrink:0">{{ k.ch }}</div>
-              <div class="lvl-body" style="min-width:0"><b style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ k.meaning }}</b><div class="muted small"><span class="chip">N{{ k.jlpt }}</span> {{ k.strokes }} goresan</div></div>
-              <div style="display:flex;gap:4px;flex-shrink:0">
+            <div v-for="k in admKanjiPaginated" :key="k.ch" style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:8px 0;box-shadow:var(--shadow)">
+              <input type="checkbox" :checked="admKanjiSelected.includes(k.ch)" @change="admKanjiToggleSelect(k.ch)" style="flex:0 0 auto">
+              <div class="badge" style="width:40px;height:40px;font-size:20px;flex:0 0 auto">{{ k.ch }}</div>
+              <div style="flex:1 1 auto;min-width:0;overflow:hidden"><b style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px">{{ k.meaning }}</b><div class="muted small" style="font-size:12px"><span class="chip">N{{ k.jlpt }}</span> {{ k.strokes }} goresan</div></div>
+              <div style="flex:0 0 auto;display:flex;gap:4px">
                 <button class="btn ghost sm" @click="admKanjiClone(k)" title="Clone" style="padding:6px 8px">📋</button>
                 <button class="btn ghost sm" @click="admKanjiOpen(k)" title="Edit" style="padding:6px 8px">✏️</button>
                 <button class="btn ghost sm" @click="admKanjiDel(k)" title="Hapus" style="padding:6px 8px">🗑️</button>
@@ -2830,10 +2830,10 @@ const app = createApp({
               <input type="checkbox" :checked="admPkgAllSelected" @change="admPkgToggleAll()" style="margin-right:8px">
               <div class="lvl-body muted small" style="white-space:nowrap"><b>Pilih semua</b></div>
             </div>
-            <div v-for="p in admPkgPaginated" :key="p.id" class="lvl" style="align-items:center">
-              <input type="checkbox" :checked="admPkgSelected.includes(p.id)" @change="admPkgToggleSelect(p.id)" style="margin-right:6px;flex-shrink:0">
-              <div class="lvl-body" style="min-width:0"><b style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ p.title }}</b><div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ p.id }} · {{ p.soal || 0 }} soal</div></div>
-              <div style="display:flex;gap:4px;flex-shrink:0">
+            <div v-for="p in admPkgPaginated" :key="p.id" style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:8px 0;box-shadow:var(--shadow)">
+              <input type="checkbox" :checked="admPkgSelected.includes(p.id)" @change="admPkgToggleSelect(p.id)" style="flex:0 0 auto">
+              <div style="flex:1 1 auto;min-width:0;overflow:hidden"><b style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px">{{ p.title }}</b><div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px">{{ p.id }} · {{ p.soal || 0 }} soal</div></div>
+              <div style="flex:0 0 auto;display:flex;gap:4px">
                 <button class="btn ghost sm" @click="admPkgOpen(p);admPkgViewQs(p)" title="Lihat soal" style="padding:6px 8px">👁️</button>
                 <button class="btn ghost sm" @click="admPkgClone(p)" title="Clone" style="padding:6px 8px">📋</button>
                 <button class="btn ghost sm" @click="admPkgOpen(p)" title="Edit" style="padding:6px 8px">✏️</button>
@@ -2886,10 +2886,10 @@ const app = createApp({
                 <input type="checkbox" :checked="admQAllSelected" @change="admQToggleAll()" style="margin-right:8px">
                 <div class="lvl-body muted small" style="white-space:nowrap"><b>Pilih semua</b></div>
               </div>
-              <div v-for="q in admQPaginated" :key="q._idx" class="lvl" style="margin-top:6px;align-items:center">
-                <input type="checkbox" :checked="admQSelected.includes(q._idx)" @change="admQToggleSelect(q._idx)" style="margin-right:6px;flex-shrink:0">
-                <div class="lvl-body" style="min-width:0"><b>No. {{ q._idx + 1 }}{{ q.sec ? ' [' + q.sec + ']' : '' }}</b><div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ q.q || '' }}</div><div class="muted small">{{ q.a !== null && q.a !== undefined ? 'Kunci: opsi ' + (q.a + 1) : 'Belum ada kunci' }}</div></div>
-                <div style="display:flex;gap:4px;flex-shrink:0">
+              <div v-for="q in admQPaginated" :key="q._idx" style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:8px 0;box-shadow:var(--shadow)">
+                <input type="checkbox" :checked="admQSelected.includes(q._idx)" @change="admQToggleSelect(q._idx)" style="flex:0 0 auto">
+                <div style="flex:1 1 auto;min-width:0;overflow:hidden"><b style="font-size:14px">No. {{ q._idx + 1 }}{{ q.sec ? ' [' + q.sec + ']' : '' }}</b><div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px">{{ q.q || '' }}</div><div class="muted small" style="font-size:12px">{{ q.a !== null && q.a !== undefined ? 'Kunci: opsi ' + (q.a + 1) : 'Belum ada kunci' }}</div></div>
+                <div style="flex:0 0 auto;display:flex;gap:4px">
                   <button class="btn ghost sm" @click="admQClone(q)" title="Clone" style="padding:6px 8px">📋</button>
                   <button class="btn ghost sm" @click="admQOpen(q._idx)" title="Edit" style="padding:6px 8px">✏️</button>
                   <button class="btn ghost sm" @click="admQDel(q._idx)" title="Hapus" style="padding:6px 8px">🗑️</button>
@@ -2929,10 +2929,10 @@ const app = createApp({
           </div>
           <div v-if="admChaptersLoading" class="muted">Memuat...</div>
           <div v-else>
-            <div v-for="ch in admChPaginated" :key="ch.id" class="lvl" @click="admChOpen(ch)" style="align-items:center">
-              <div class="badge" style="width:40px;height:40px;font-size:15px;flex-shrink:0">{{ ch.bab }}</div>
-              <div class="lvl-body" style="min-width:0"><b style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Bab {{ ch.bab }}: {{ ch.title }}</b><div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ ch.desc||'' }}</div></div>
-              <span v-html="ic('pen',17)" style="flex-shrink:0"></span>
+            <div v-for="ch in admChPaginated" :key="ch.id" @click="admChOpen(ch)" style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:8px 0;box-shadow:var(--shadow);cursor:pointer">
+              <div class="badge" style="width:38px;height:38px;font-size:14px;flex:0 0 auto">{{ ch.bab }}</div>
+              <div style="flex:1 1 auto;min-width:0;overflow:hidden"><b style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px">Bab {{ ch.bab }}: {{ ch.title }}</b><div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px">{{ ch.desc||'' }}</div></div>
+              <span v-html="ic('pen',17)" style="flex:0 0 auto"></span>
             </div>
             <div v-if="!admChFiltered.length" class="muted center" style="padding:20px">Tidak ada bab yang cocok</div>
             <div v-if="admChTotalPages > 1" class="btn-row" style="justify-content:center;margin-top:10px">
@@ -3059,14 +3059,14 @@ const app = createApp({
               <input type="checkbox" :checked="admMockAllSelected" @change="admMockToggleAll()" style="margin-right:8px">
               <div class="lvl-body muted small" style="white-space:nowrap"><b>Pilih semua</b></div>
             </div>
-            <div v-for="q in admMockQsPaginated" :key="q.id" class="lvl" style="margin-top:6px;align-items:center">
-              <input type="checkbox" :checked="admMockSelected.includes(q.id)" @change="admMockToggleSelect(q.id)" style="margin-right:6px;flex-shrink:0">
-              <div class="lvl-body" style="min-width:0">
-                <b>No. {{ q.id }} [{{ q.type }}]</b>
-                <div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ q.question || '' }}</div>
-                <div class="muted small" style="color:var(--success);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">✓ {{ q.options && q.options[q.answer] ? q.options[q.answer] : 'N/A' }}</div>
+            <div v-for="q in admMockQsPaginated" :key="q.id" style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);margin:8px 0;box-shadow:var(--shadow)">
+              <input type="checkbox" :checked="admMockSelected.includes(q.id)" @change="admMockToggleSelect(q.id)" style="flex:0 0 auto">
+              <div style="flex:1 1 auto;min-width:0;overflow:hidden">
+                <b style="font-size:14px">No. {{ q.id }} [{{ q.type }}]</b>
+                <div class="muted small" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px">{{ q.question || '' }}</div>
+                <div class="muted small" style="color:var(--success);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px">✓ {{ q.options && q.options[q.answer] ? q.options[q.answer] : 'N/A' }}</div>
               </div>
-              <div style="display:flex;gap:4px;flex-shrink:0">
+              <div style="flex:0 0 auto;display:flex;gap:4px">
                 <button class="btn ghost sm" @click="admMockClone(admMockQs.indexOf(q))" title="Clone" style="padding:6px 8px">📋</button>
                 <button class="btn ghost sm" @click="admMockQEdit = admMockQs.indexOf(q); admMockQOpen(admMockQs.indexOf(q))" title="Edit" style="padding:6px 8px">✏️</button>
                 <button class="btn ghost sm" @click="admMockQDel(admMockQs.indexOf(q))" title="Hapus" style="padding:6px 8px">🗑️</button>
