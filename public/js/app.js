@@ -2671,6 +2671,7 @@ app.config.globalProperties.MODUL_CATS = MODUL_CATS;
 app.config.globalProperties.SSW_FIELDS = SSW_FIELDS;
 app.config.globalProperties.SSW_KAIGO = (typeof SSW_KAIGO !== 'undefined') ? SSW_KAIGO : [];
 app.config.globalProperties.MOCKTEST_LEVELS = (typeof MOCKTEST_LEVELS !== 'undefined') ? MOCKTEST_LEVELS : [];
+app.config.globalProperties.MOCKTEST_QUESTIONS = (typeof MOCKTEST_QUESTIONS !== 'undefined') ? MOCKTEST_QUESTIONS : {};
 app.config.globalProperties.BANK_YEARS = BANK_YEARS;
 app.config.globalProperties.ALL_LESSONS = ALL_LESSONS;
 app.config.globalProperties.LEVEL_ORDER = LEVEL_ORDER;
