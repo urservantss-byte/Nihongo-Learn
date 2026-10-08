@@ -897,15 +897,19 @@ const app = createApp({
         const d = await api('/api/me'); store.user = d.user; setTheme(d.user.theme || 'sakura');
       } catch { this.logout(); store.authChecked = true; return; }
       store.authChecked = true;
-      const [p, s, h, b, sr] = await Promise.allSettled([
+      const [p, s, h, b, sr, fc] = await Promise.allSettled([
         api('/api/progress'), api('/api/stats'), api('/api/quiz/history'),
-        api('/api/leaderboard'), api('/api/srs'),
+        api('/api/leaderboard'), api('/api/srs'), api('/api/fc/sessions'),
       ]);
       if (p.status === 'fulfilled') store.done = p.value.done;
       if (s.status === 'fulfilled') store.stats = s.value;
       if (h.status === 'fulfilled') store.quizHist = h.value.history;
       if (b.status === 'fulfilled') { store.board = b.value.board; this.myWeekly = b.value.my_weekly; }
       if (sr.status === 'fulfilled') { this.srsDue = sr.value.due; this.srsTotal = sr.value.total; }
+      if (fc.status === 'fulfilled') {
+        this.flashcardSaved = fc.value.sessions || [];
+        this.migrateLocalFcSessions(); // pindahkan sesi lama localStorage -> SQLite (sekali jalan per sesi baru)
+      }
       this.loadChapterProgress();
     },
     toggleTheme() { setTheme(store.theme === 'sakura' ? 'zen' : 'sakura'); toast(store.theme === 'sakura' ? '🌸 Tema Sakura' : '⛩️ Tema Zen'); },
@@ -1105,7 +1109,7 @@ const app = createApp({
       this.flashcardKnown = [];
       this.tab = 'flashcardrun';
     },
-    fcSaveSession() {
+    async fcSaveSession() {
       const wrong = this.fcRepeatCards ? [] : this.flashcardCards.filter((c, i) => this.flashcardKnown[i] === false).map(c => c.front);
       const entry = {
         id: 'fc_' + Date.now(),
@@ -1116,10 +1120,41 @@ const app = createApp({
         wrongMarks: wrong,
         created: Date.now()
       };
+      // kalau sudah login: simpan ke SQLite via server agar persist antar device (Menu Saya)
+      if (store.user) {
+        try {
+          const d = await api('/api/fc/sessions', { method: 'POST', body: JSON.stringify({
+            name: entry.name, type: entry.type, level: entry.level,
+            cards: entry.cards, wrongMarks: entry.wrongMarks }) });
+          entry.id = d.id;
+          entry.created = new Date().toISOString().slice(0, 19).replace('T', ' ');
+        } catch (e) { toast('Server sibuk — sesi disimpan lokal dulu'); }
+      }
       this.flashcardSaved.unshift(entry);
       if (this.flashcardSaved.length > 20) this.flashcardSaved = this.flashcardSaved.slice(0, 20);
       try { localStorage.setItem('nl_fc_saved', JSON.stringify(this.flashcardSaved)); } catch {}
       toast('Flashcard sesi ini tersimpan di Menu Saya ✅');
+    },
+    async migrateLocalFcSessions() {
+      // pindahkan sesi yang masih bertengger di localStorage (id 'fc_...') ke SQLite, yang gagal tetap lokal
+      try {
+        const local = JSON.parse(localStorage.getItem('nl_fc_saved') || '[]');
+        const unsynced = local.filter(e => e && typeof e.id === 'string' && Array.isArray(e.cards) && e.cards.length);
+        if (!unsynced.length) return;
+        const done = new Set();
+        for (const e of unsynced.slice().reverse()) {
+          try {
+            await api('/api/fc/sessions', { method: 'POST', body: JSON.stringify({
+              name: e.name, type: e.type, level: e.level, cards: e.cards, wrongMarks: e.wrongMarks }) });
+            done.add(e.id);
+          } catch {}
+        }
+        const rest = local.filter(e => !(e && typeof e.id === 'string' && done.has(e.id)));
+        if (rest.length) localStorage.setItem('nl_fc_saved', JSON.stringify(rest));
+        else localStorage.removeItem('nl_fc_saved');
+        const d = await api('/api/fc/sessions');
+        this.flashcardSaved = d.sessions || [];
+      } catch {}
     },
     fcPlaySaved(idx) {
       const s = this.flashcardSaved[idx];
@@ -1133,7 +1168,13 @@ const app = createApp({
       this.fcRepeatCards = null;
       this.tab = 'flashcardrun';
     },
-    fcDeleteSaved(idx) {
+    async fcDeleteSaved(idx) {
+      const s = this.flashcardSaved[idx];
+      // entri dari server (id angka): hapus juga di SQLite
+      if (s && store.user && typeof s.id === 'number') {
+        try { await api(`/api/fc/sessions/${s.id}`, { method: 'DELETE' }); }
+        catch (e) { toast(e.message); return; }
+      }
       this.flashcardSaved.splice(idx, 1);
       try { localStorage.setItem('nl_fc_saved', JSON.stringify(this.flashcardSaved)); } catch {}
       toast('Flashcard dihapus');

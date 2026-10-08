@@ -103,6 +103,17 @@ CREATE TABLE IF NOT EXISTS quiz_item_stats (
   correct INTEGER DEFAULT 0,
   PRIMARY KEY (user_id, qid)
 );
+CREATE TABLE IF NOT EXISTS flashcard_sessions (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL,
+  name TEXT DEFAULT '',
+  type TEXT DEFAULT 'kanji',
+  level TEXT DEFAULT 'n3',
+  cards TEXT DEFAULT '[]',
+  wrong_marks TEXT DEFAULT '[]',
+  created_at TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_fc_sessions_user ON flashcard_sessions(user_id);
 `);
 // Migrasi: tambah kolom role jika belum ada
 try { db.exec(`ALTER TABLE users ADD COLUMN role TEXT DEFAULT 'user'`); } catch {}
@@ -507,6 +518,43 @@ app.post('/api/srs/review', auth, (req, res) => {
 });
 app.delete('/api/srs/:id', auth, (req, res) => {
   db.prepare('DELETE FROM srs_cards WHERE id = ? AND user_id = ?').run(req.params.id, req.user.id);
+  res.json({ ok: true });
+});
+
+// ---- Sesi flashcard tersimpan (Menu Saya) — persist di SQLite per user ----
+app.get('/api/fc/sessions', auth, (req, res) => {
+  const rows = db.prepare(`SELECT id, name, type, level, cards, wrong_marks, created_at
+    FROM flashcard_sessions WHERE user_id = ? ORDER BY id DESC LIMIT 20`).all(req.user.id);
+  res.json({ sessions: rows.map(r => ({
+    id: r.id, name: r.name, type: r.type, level: r.level,
+    cards: JSON.parse(r.cards || '[]'), wrongMarks: JSON.parse(r.wrong_marks || '[]'),
+    created: r.created_at
+  })) });
+});
+app.post('/api/fc/sessions', auth, (req, res) => {
+  const { name, type, level, cards, wrongMarks } = req.body || {};
+  if (!Array.isArray(cards) || !cards.length) return res.status(400).json({ error: 'cards kosong' });
+  const clean = cards.slice(0, 60).map(c => ({
+    front: String((c && c.front) || '').slice(0, 60),
+    back: String((c && c.back) || '').slice(0, 160),
+    reading: String((c && c.reading) || '').slice(0, 160),
+    examples: Array.isArray(c && c.examples) ? c.examples.slice(0, 3) : []
+  })).filter(c => c.front);
+  if (!clean.length) return res.status(400).json({ error: 'cards kosong' });
+  const wm = (Array.isArray(wrongMarks) ? wrongMarks : []).slice(0, 60).map(x => String(x).slice(0, 60));
+  const r = db.prepare(`INSERT INTO flashcard_sessions (user_id, name, type, level, cards, wrong_marks)
+    VALUES (?,?,?,?,?,?)`).run(
+    req.user.id,
+    String(name || 'Sesi Flashcard').slice(0, 80),
+    ['kanji', 'kotoba'].includes(type) ? type : 'kanji',
+    String(level || 'n3').slice(0, 10),
+    JSON.stringify(clean), JSON.stringify(wm));
+  db.prepare(`DELETE FROM flashcard_sessions WHERE user_id = ? AND id NOT IN
+    (SELECT id FROM flashcard_sessions WHERE user_id = ? ORDER BY id DESC LIMIT 20)`).run(req.user.id, req.user.id);
+  res.json({ ok: true, id: r.lastInsertRowid });
+});
+app.delete('/api/fc/sessions/:id', auth, (req, res) => {
+  db.prepare('DELETE FROM flashcard_sessions WHERE id = ? AND user_id = ?').run(req.params.id, req.user.id);
   res.json({ ok: true });
 });
 
