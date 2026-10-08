@@ -185,8 +185,8 @@ const app = createApp({
     flashcardType: 'kotoba', flashcardLevel: 'n5', flashcardCards: [], flashcardIdx: 0, flashcardFlipped: false, flashcardKnown: [],
     flashcardSaved: (() => { try { return JSON.parse(localStorage.getItem('nl_fc_saved') || '[]'); } catch { return []; } })(),
     fcRepeatCards: null,
-    fcLastN3: (() => { try { return JSON.parse(localStorage.getItem('nl_fc_last_n3') || '{"last":[],"prev":[]}').last; } catch { return []; } })(),
-    fcPrevN3: (() => { try { return JSON.parse(localStorage.getItem('nl_fc_last_n3') || '{"last":[],"prev":[]}').prev; } catch { return []; } })(),
+    fcLastN3: (() => { try { return JSON.parse(localStorage.getItem('nl_fc_last_n3') || '{"last":[],"prev":[]}'); } catch { return { last: [], prev: [] }; } })(),
+    fcLastN3Kotoba: (() => { try { return JSON.parse(localStorage.getItem('nl_fc_last_n3_kotoba') || '{"last":[],"prev":[]}'); } catch { return { last: [], prev: [] }; } })(),
     // chapter (jalur belajar Soumatome)
     chapterProgress: {}, openChapter: null, chQuiz: null,
     // tanya AI (Muse Sensei)
@@ -991,6 +991,17 @@ const app = createApp({
             type: 'kotoba'
           }));
         }
+        // N3: pakai dataset KOTOBA_N3 (1659 kosakata, arti Indonesia)
+        if (level === 'n3' && typeof KOTOBA_N3 !== 'undefined') {
+          cards = KOTOBA_N3.map(w => ({
+            front: w.jp,
+            back: w.id,
+            reading: w.r + (w.romaji ? ' (' + w.romaji + ')' : ''),
+            examples: (w.sentence ? [{ j: w.sentence, r: '', i: w.sentence_id || '' }] : []),
+            type: 'kotoba',
+            level: 'n3'
+          }));
+        }
       } else if (type === 'kanji') {
         // Get kanji from KANJI_NC
         if (typeof KANJI_NC !== 'undefined' && KANJI_NC[level]) {
@@ -1024,19 +1035,19 @@ const app = createApp({
         return;
       }
       
-      // N3 kanji: maksimal 30 kartu per sesi, acak & hindari kartu sesi sebelumnya
-      if (level === 'n3' && type === 'kanji' && cards.length > 30) {
-        const seen = [...(this.fcLastN3 || []), ...(this.fcPrevN3 || [])];
+      // N3 (kanji & kotoba): maksimal 30 kartu per sesi, acak & hindari kartu sesi sebelumnya
+      if ((type === 'kanji' || type === 'kotoba') && level === 'n3' && cards.length > 30) {
+        const key = type === 'kotoba' ? 'fcLastN3Kotoba' : 'fcLastN3';
+        const seen = [...(this[key].last || []), ...(this[key].prev || [])];
         let pool = cards.filter(c => !seen.includes(c.front));
-        if (pool.length < 30) pool = cards.slice(); // semua kanji pernah keluar -> reset
+        if (pool.length < 30) pool = cards.slice(); // semua kartu pernah keluar -> reset
         for (let i = pool.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [pool[i], pool[j]] = [pool[j], pool[i]];
         }
         cards = pool.slice(0, 30);
-        this.fcPrevN3 = this.fcLastN3 || [];
-        this.fcLastN3 = cards.map(c => c.front);
-        localStorage.setItem('nl_fc_last_n3', JSON.stringify({ last: this.fcLastN3, prev: this.fcPrevN3 }));
+        this[key] = { last: cards.map(c => c.front), prev: this[key].last || [] };
+        localStorage.setItem(key === 'fcLastN3' ? 'nl_fc_last_n3' : 'nl_fc_last_n3_kotoba', JSON.stringify(this[key]));
       } else {
         // Shuffle cards
         for (let i = cards.length - 1; i > 0; i--) {
