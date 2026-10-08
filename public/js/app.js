@@ -183,6 +183,10 @@ const app = createApp({
     genQs: [], shuffledQs: [], quizResume: null,
     // flashcard
     flashcardType: 'kotoba', flashcardLevel: 'n5', flashcardCards: [], flashcardIdx: 0, flashcardFlipped: false, flashcardKnown: [],
+    flashcardSaved: (() => { try { return JSON.parse(localStorage.getItem('nl_fc_saved') || '[]'); } catch { return []; } })(),
+    fcRepeatCards: null,
+    fcLastN3: (() => { try { return JSON.parse(localStorage.getItem('nl_fc_last_n3') || '{"last":[],"prev":[]}').last; } catch { return []; } })(),
+    fcPrevN3: (() => { try { return JSON.parse(localStorage.getItem('nl_fc_last_n3') || '{"last":[],"prev":[]}').prev; } catch { return []; } })(),
     // chapter (jalur belajar Soumatome)
     chapterProgress: {}, openChapter: null, chQuiz: null,
     // tanya AI (Muse Sensei)
@@ -1002,6 +1006,17 @@ const app = createApp({
             }
           }
         }
+        // N3: pakai dataset KANJI_N3 (387 kanji, urut frekuensi)
+        if (level === 'n3' && typeof KANJI_N3 !== 'undefined') {
+          cards = KANJI_N3.map(k => ({
+            front: k.kj,
+            back: k.id,
+            reading: (k.on ? 'On: ' + k.on : '') + (k.on && k.kun ? ' · ' : '') + (k.kun ? 'Kun: ' + k.kun : ''),
+            examples: k.ex ? k.ex.slice(0, 3) : [],
+            type: 'kanji',
+            level: 'n3'
+          }));
+        }
       }
       
       if (!cards.length) {
@@ -1009,10 +1024,25 @@ const app = createApp({
         return;
       }
       
-      // Shuffle cards
-      for (let i = cards.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [cards[i], cards[j]] = [cards[j], cards[i]];
+      // N3 kanji: maksimal 30 kartu per sesi, acak & hindari kartu sesi sebelumnya
+      if (level === 'n3' && type === 'kanji' && cards.length > 30) {
+        const seen = [...(this.fcLastN3 || []), ...(this.fcPrevN3 || [])];
+        let pool = cards.filter(c => !seen.includes(c.front));
+        if (pool.length < 30) pool = cards.slice(); // semua kanji pernah keluar -> reset
+        for (let i = pool.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [pool[i], pool[j]] = [pool[j], pool[i]];
+        }
+        cards = pool.slice(0, 30);
+        this.fcPrevN3 = this.fcLastN3 || [];
+        this.fcLastN3 = cards.map(c => c.front);
+        localStorage.setItem('nl_fc_last_n3', JSON.stringify({ last: this.fcLastN3, prev: this.fcPrevN3 }));
+      } else {
+        // Shuffle cards
+        for (let i = cards.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [cards[i], cards[j]] = [cards[j], cards[i]];
+        }
       }
       
       this.flashcardCards = cards;
@@ -1047,6 +1077,55 @@ const app = createApp({
     },
     finishFlashcard() {
       this.tab = 'flashcarddone';
+    },
+    fcWrongCount() { return this.flashcardKnown.filter(k => !k).length; },
+    fcRepeatWrong() {
+      // Ulangi hanya kartu yang belum tahu, urutan acak
+      const wrong = this.flashcardCards.filter((c, i) => this.flashcardKnown[i] === false);
+      if (!wrong.length) { toast('Semua kartu sudah tahu! 🎉'); return; }
+      for (let i = wrong.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [wrong[i], wrong[j]] = [wrong[j], wrong[i]];
+      }
+      this.fcRepeatCards = wrong;
+      this.flashcardCards = wrong;
+      this.flashcardIdx = 0;
+      this.flashcardFlipped = false;
+      this.flashcardKnown = [];
+      this.tab = 'flashcardrun';
+    },
+    fcSaveSession() {
+      const wrong = this.fcRepeatCards ? [] : this.flashcardCards.filter((c, i) => this.flashcardKnown[i] === false).map(c => c.front);
+      const entry = {
+        id: 'fc_' + Date.now(),
+        name: `Kanji ${this.flashcardLevel.toUpperCase()} · ${new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}`,
+        type: this.flashcardType,
+        level: this.flashcardLevel,
+        cards: this.fcRepeatCards || this.flashcardCards,
+        wrongMarks: wrong,
+        created: Date.now()
+      };
+      this.flashcardSaved.unshift(entry);
+      if (this.flashcardSaved.length > 20) this.flashcardSaved = this.flashcardSaved.slice(0, 20);
+      try { localStorage.setItem('nl_fc_saved', JSON.stringify(this.flashcardSaved)); } catch {}
+      toast('Flashcard sesi ini tersimpan di Menu Saya ✅');
+    },
+    fcPlaySaved(idx) {
+      const s = this.flashcardSaved[idx];
+      if (!s || !s.cards || !s.cards.length) { toast('Sesi kosong'); return; }
+      this.flashcardType = s.type || 'kanji';
+      this.flashcardLevel = s.level || 'n3';
+      this.flashcardCards = s.cards;
+      this.flashcardIdx = 0;
+      this.flashcardFlipped = false;
+      this.flashcardKnown = [];
+      this.fcRepeatCards = null;
+      this.tab = 'flashcardrun';
+    },
+    fcDeleteSaved(idx) {
+      this.flashcardSaved.splice(idx, 1);
+      try { localStorage.setItem('nl_fc_saved', JSON.stringify(this.flashcardSaved)); } catch {}
+      toast('Flashcard dihapus');
     },
 
     runSec() {
@@ -2556,7 +2635,11 @@ const app = createApp({
           <b>{{ flashcardKnown.filter(k => !k).length }}/{{ flashcardKnown.length }}</b>
         </div>
       </div>
-      <button class="btn" @click="tab='quiz'">Kembali</button>
+      <div class="btn-row" style="justify-content:center;flex-wrap:wrap">
+        <button v-if="fcWrongCount() > 0" class="btn" @click="fcRepeatWrong">🔁 Ulangi yang Belum Hafal ({{ fcWrongCount() }})</button>
+        <button class="btn ghost" @click="fcSaveSession">💾 Simpan Sesi Ini</button>
+      </div>
+      <button class="btn ghost btn-block" @click="tab='quiz'" style="margin-top:8px">Kembali</button>
     </section>
 
 
@@ -2784,6 +2867,22 @@ const app = createApp({
         <p class="muted small">Tap untuk mulai review (ketik jawaban untuk kanji)</p>
       </div>
       <div class="card muted small" v-else><span v-html="ic('card',15)"></span> {{ srsTotal }} flashcard tersimpan. Tambah dari materi/kamus, review muncul di sini.</div>
+
+      <h2 class="ttl"><span v-html="ic('card')"></span> Flashcard Tersimpan</h2>
+      <div v-if="flashcardSaved.length" class="card">
+        <div v-for="(s, i) in flashcardSaved" :key="s.id" class="lvl">
+          <div class="badge sm">📇</div>
+          <div class="lvl-body">
+            <b>{{ s.name }}</b>
+            <div class="muted small">{{ s.cards.length }} kartu · {{ s.level.toUpperCase() }} · {{ s.type === 'kotoba' ? 'Kotoba' : 'Kanji' }}</div>
+          </div>
+          <div class="adm-actions">
+            <button class="btn sm" @click="fcPlaySaved(i)">▶ Mainkan</button>
+            <button class="btn ghost sm" @click="fcDeleteSaved(i)" title="Hapus">🗑️</button>
+          </div>
+        </div>
+      </div>
+      <div v-else class="card muted small">Belum ada flashcard tersimpan. Selesaikan sesi flashcard lalu pilih "Simpan Sesi Ini".</div>
 
       <h2 class="ttl"><span v-html="ic('trophy')"></span> Liga Mingguan</h2>
       <p class="muted small">Kumpulkan XP minggu ini! <b>Kamu: {{ myWeekly }} XP</b></p>

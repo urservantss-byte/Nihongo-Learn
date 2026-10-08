@@ -1,5 +1,5 @@
 /* NihongoLearn PWA — service worker */
-const CACHE = 'nihongolearn-v4';
+const CACHE = 'nihongolearn-v5';
 const SHELL = [
   '/',
   '/index.html',
